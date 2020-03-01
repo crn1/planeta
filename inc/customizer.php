@@ -1,0 +1,51 @@
+<?php
+
+Kirki::add_config('kirki_config', array(
+	'capability'	=> 'edit_theme_options',
+	'option_type'	=> 'theme_mod',
+));
+
+Kirki::add_field('kirki_config', array());
+
+Kirki::add_panel('theme_options_panel', array(
+	'title'       => esc_html__('Theme Options', 'kirki'),
+));
+
+Kirki::add_panel('modules_panel', array(
+	'title'       => esc_html__('Modules', 'kirki'),
+));
+
+Kirki::add_panel('blocks_panel', array(
+	'title'       => esc_html__('Homepage Blocks', 'kirki'),
+));
+
+//Theme Options
+require_once(get_template_directory() . '/inc/customizer/theme_background.php');
+require_once(get_template_directory() . '/inc/customizer/theme_container.php');
+require_once(get_template_directory() . '/inc/customizer/theme_typography.php');
+require_once(get_template_directory() . '/inc/customizer/theme_colors.php');
+require_once(get_template_directory() . '/inc/customizer/theme_effects.php');
+require_once(get_template_directory() . '/inc/customizer/theme_cursor.php');
+
+//Modules
+require_once(get_template_directory() . '/inc/customizer/module_page.php');
+require_once(get_template_directory() . '/inc/customizer/module_header.php');
+require_once(get_template_directory() . '/inc/customizer/module_footer.php');
+require_once(get_template_directory() . '/inc/customizer/module_blog.php');
+require_once(get_template_directory() . '/inc/customizer/module_card.php');
+require_once(get_template_directory() . '/inc/customizer/module_personal_sidebar.php');
+require_once(get_template_directory() . '/inc/customizer/module_social_media.php');
+
+//Homepage sections
+require_once(get_template_directory() . '/inc/customizer/block_homepage.php');
+require_once(get_template_directory() . '/inc/customizer/block_layout.php');
+require_once(get_template_directory() . '/inc/customizer/block_header.php');
+require_once(get_template_directory() . '/inc/customizer/block_portfolio.php');
+require_once(get_template_directory() . '/inc/customizer/block_services.php');
+require_once(get_template_directory() . '/inc/customizer/block_clients.php');
+require_once(get_template_directory() . '/inc/customizer/block_experience.php');
+require_once(get_template_directory() . '/inc/customizer/block_testimonials.php');
+require_once(get_template_directory() . '/inc/customizer/block_posts.php');
+require_once(get_template_directory() . '/inc/customizer/block_mini_sections.php');
+
+?>
