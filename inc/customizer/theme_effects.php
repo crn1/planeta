@@ -6,13 +6,6 @@ Kirki::add_section('effects_section', array(
 ));
 
 Kirki::add_field('kirki_config', array(
-	'type' 				=> 'toggle',
-	'settings'		=> 'enable_parallax',
-	'label'				=> esc_html__('Global Parallax', 'kirki'),
-	'section'			=> 'effects_section',
-));
-
-Kirki::add_field('kirki_config', array(
 	'type' 				=> 'radio-buttonset',
 	'settings'		=> 'scroll_direction',
 	'label'				=> esc_html__('Scroll Direction', 'kirki'),

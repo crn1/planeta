@@ -1,5 +1,5 @@
 <?php
-	$url = esc_url_raw( trailingslashit( home_url() ) );
+	$url = esc_url_raw(trailingslashit(home_url()));
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> xmlns:fb='http://ogp.me/ns/fb#'>
@@ -19,6 +19,11 @@
 				<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 		<body <?php body_class(); ?>>
+			<?php get_header(); ?>
+			<p class='sass-test'>
+				hello world!
+			</p>
+			<?php get_footer(); ?>
 			<?php wp_footer(); ?>
     </body>
 </html>

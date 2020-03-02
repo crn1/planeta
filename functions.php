@@ -82,6 +82,8 @@ add_filter( 'excerpt_length', function($length){ return 25; });
 function init_scripts()
 {
 	wp_enqueue_style('wordpress-required-style', get_stylesheet_uri());
+	wp_enqueue_style('main-style', get_template_directory_uri() . '/css/style.css', false, '1.0.0', 'all');
+	wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'init_scripts');

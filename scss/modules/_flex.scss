@@ -1,0 +1,11 @@
+@mixin flexContainer(
+		$justify: center,
+		$align: center,
+		$direction: row,
+		$display: flex)
+{
+	display: $display;
+	align-items: $align;
+	justify-content: $justify;
+	flex-direction: $direction;
+}

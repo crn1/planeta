@@ -1,0 +1,40 @@
+@import 'modules/flex';
+
+header {
+	z-index: 99900;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	width: 100%;
+	background-color: transparent;
+	@include flexContainer();
+
+	.default-container {
+		@include flexContainer();
+
+		#logo {
+			@include flexContainer($display: inline-flex, $justify: space-between);
+			flex-grow: 1;
+		}
+
+		#menu-button {
+			z-index: 99999;
+		}
+
+		i {
+			cursor: pointer;
+		}
+	}
+}
+
+#top-menu {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99990;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.84);
+	text-align: center;
+	@include flexContainer($direction: column);
+}
