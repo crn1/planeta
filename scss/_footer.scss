@@ -1,9 +1,7 @@
-@import 'modules/colors';
 @import 'modules/flex';
 
 footer {
 	background-color: transparent;
-	color: $text;
 	padding: 2rem;
 	@include flexContainer();
 

@@ -4,9 +4,9 @@ jQuery(document).ready(function($)
 		$('#top-menu').toggleClass('hidden');
 		if($('#top-menu').hasClass('hidden'))
 		{
-			$('#menu-button').html('menu');
+			$('#menu-button').children('i').html('menu');
 		}else{
-			$('#menu-button').html('close');
+			$('#menu-button').children('i').html('close');
 		}
 	})
 })

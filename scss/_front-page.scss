@@ -1,0 +1,17 @@
+@import 'modules/flex';
+
+main {
+	section {
+		@include flexContainer($direction: column);
+
+		.default-container {
+			header {
+				display: block;
+
+				h2 .fullscreen-title {
+					height: 100vh;
+				}
+			}
+		}
+	}
+}

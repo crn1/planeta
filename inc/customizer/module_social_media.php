@@ -14,16 +14,21 @@ Kirki::add_field('kirki_config', array(
 ));
 
 Kirki::add_field('kirki_config', array(
-	'type' 						=> 'dimension',
-	'settings'				=> 'social_menu_size',
-	'label'						=> esc_html__('Icon Size', 'kirki'),
-	'section'					=> 'social_menu_section',
-	'default'					=> '16px',
+	'type' 				=> 'slider',
+	'settings'		=> 'social_menu_size',
+	'label'				=> esc_html__('Icon Size (rem)', 'kirki'),
+	'section'			=> 'social_menu_section',
+	'default'			=> 1,
+	'choices'     => array(
+		'min'					=> 0.1,
+		'max'					=> 10,
+		'step'				=> 0.1,
+	),
 	'active_callback'	=> array(
 		array(
-			'setting'				=> 'enable_social_menu',
-			'operator'			=> '==',
-			'value'					=> '1',
+			'setting'		=> 'enable_social_menu',
+			'operator'	=> '==',
+			'value'			=> '1',
 		),
 	),
 ));

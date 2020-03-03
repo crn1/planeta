@@ -44,26 +44,6 @@ function supplier_add_homepage_blocks_section(
 		));
 
 		Kirki::add_field('kirki_config', array(
-			'type'			=> 'slider',
-			'label'			=> esc_html__('Title Padding Down', 'kirki'),
-			'section'		=> "${section_name}_section${suffix}",
-			'settings'	=> "${section_name}_title_padding_down${suffix}",
-			'default'		=> 5,
-			'choices'		=> array(
-				'min'			=> 0,
-				'max'			=> 100,
-				'step'		=> 1,
-			),
-			'active_callback' => array(
-				array(
-					'setting'		=> "${section_name}_is_fullscreen${suffix}",
-					'operator'	=> '===',
-					'value'			=> false,
-				),
-			)
-		));
-
-		Kirki::add_field('kirki_config', array(
 			'type'			=> 'editor',
 			'label'			=> esc_html__('Subtitle/Content', 'kirki'),
 			'section'		=> "${section_name}_section${suffix}",
@@ -87,7 +67,7 @@ function supplier_add_homepage_blocks_section(
 			'type'						=> 'link',
 			'label'						=> esc_html__('Video URL', 'kirki'),
 			'section'					=> "${section_name}_section${suffix}",
-			'settings'				=> "${section_name}_bg_video${suffix}",
+			'settings'				=> "${section_name}_video${suffix}",
 			'default'					=> 'http://example.org/video-url',
 			'active_callback'	=> array(
 				array(
@@ -114,7 +94,7 @@ function supplier_add_homepage_blocks_section(
 			'transport'							=> 'auto',
 			'output'								=>	array(
 				array(
-					'element'								=> "#${section_name}-bg",
+					'element'								=> ".${section_name}-bg${suffix}",
 				)
 			),
 			'active_callback'				=> array(

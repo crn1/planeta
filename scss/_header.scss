@@ -16,14 +16,18 @@ header {
 			flex-grow: 1;
 		}
 
-		#menu-button {
-			z-index: 99999;
-		}
-
 		i {
 			cursor: pointer;
 		}
 	}
+}
+
+#menu-button {
+	z-index: 99999;
+	cursor: pointer;
+	border: none;
+	border-radius: 50%;
+	@include flexContainer($direction: column);
 }
 
 #top-menu {

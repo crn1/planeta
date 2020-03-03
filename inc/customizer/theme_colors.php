@@ -14,6 +14,12 @@ Kirki::add_field('kirki_config', array(
 	'choices'		=> array(
 		'alpha'			=> true,
 	),
+	'output'		=> array(
+		array(
+			'element' 	=> '#menu-button',
+			'property' 	=> 'background-color',
+		),
+	)
 ));
 
 Kirki::add_field('kirki_config', array(
@@ -25,6 +31,8 @@ Kirki::add_field('kirki_config', array(
 	'choices'		=> array(
 		'alpha'			=> true,
 	),
+	'output'		=> array(
+	)
 ));
 
 ?>

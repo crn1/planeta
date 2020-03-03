@@ -31,6 +31,7 @@ Kirki::add_field('kirki_config', array(
 	'label'				=> esc_html__('Layout', 'kirki'),
 	'section'			=> 'footer_section',
 	'default'			=> array(
+		'widgets',
 		'menu',
 		'copyright'
 	),

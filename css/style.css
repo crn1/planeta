@@ -4,6 +4,16 @@
   padding-left: 1rem;
   padding-right: 1rem; }
 
+main section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  main section .default-container header {
+    display: block; }
+    main section .default-container header h2 .fullscreen-title {
+      height: 100vh; }
+
 header {
   z-index: 99900;
   padding-top: 2rem;
@@ -25,10 +35,18 @@ header {
       justify-content: space-between;
       flex-direction: row;
       flex-grow: 1; }
-    header .default-container #menu-button {
-      z-index: 99999; }
     header .default-container i {
       cursor: pointer; }
+
+#menu-button {
+  z-index: 99999;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
 
 #top-menu {
   height: 100vh;
@@ -47,7 +65,6 @@ header {
 
 footer {
   background-color: transparent;
-  color: #FFFFFF;
   padding: 2rem;
   display: flex;
   align-items: center;

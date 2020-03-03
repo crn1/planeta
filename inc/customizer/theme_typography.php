@@ -22,6 +22,11 @@ Kirki::add_field('kirki_config', array(
 		array(
 			'element' => array('body'),
 		),
+		array(
+			'element'			=> '.material-icons',
+			'property'		=> 'color',
+			'choice'			=> 'color',
+		),
 	),
 ));
 
@@ -40,6 +45,47 @@ Kirki::add_field('kirki_config', array(
 	'output'      => array(
 		array(
 			'element'			=> 'a',
+		),
+	),
+));
+
+Kirki::add_field('kirki_config', array(
+	'type'        => 'typography',
+	'label'       => esc_html__('Top Menu Links', 'kirki'),
+	'section'     => 'typography_section',
+	'settings'    => 'typography_top_menu_heading',
+	'default'     => array(
+		'font-family'    => 'Roboto',
+		'variant'        => 'regular',
+		'line-height'    => '1.5',
+		'letter-spacing' => '0',
+		'color'          => '#FFFFFF',
+		'text-align'     => 'center',
+		'text-transform' => 'uppercase',
+	),
+	'output'      => array(
+		array(
+			'element'			=> array('#top-menu', '#top-menu a'),
+		),
+	),
+));
+
+Kirki::add_field('kirki_config', array(
+	'type'        => 'slider',
+	'label'       => esc_html__('Top Menu Links Size (rem)', 'kirki'),
+	'section'     => 'typography_section',
+	'settings'    => 'typography_top_menu_size',
+	'default'     => 3,
+	'choices'     => array(
+		'min'					=> 0.1,
+		'max'					=> 10,
+		'step'				=> 0.1,
+	),
+	'output'			=> array(
+		array(
+			'element'			=> '#top-menu a',
+			'units'				=> 'rem',
+			'property'		=> 'font-size',
 		),
 	),
 ));
@@ -81,6 +127,16 @@ Kirki::add_field('kirki_config', array(
 			'element'			=> '.main-heading',
 			'units'				=> 'rem',
 			'property'		=> 'font-size',
+		),
+		array(
+			'element'			=> '.main-heading-button',
+			'units'				=> 'rem',
+			'property'		=> 'width',
+		),
+		array(
+			'element'			=> '.main-heading-button',
+			'units'				=> 'rem',
+			'property'		=> 'height',
 		),
 	),
 ));
@@ -208,45 +264,5 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
-	'type'        => 'typography',
-	'label'       => esc_html__('Top Menu Links Heading', 'kirki'),
-	'section'     => 'typography_section',
-	'settings'    => 'typography_top_menu_heading',
-	'default'     => array(
-		'font-family'    => 'Roboto',
-		'variant'        => 'regular',
-		'line-height'    => '1.5',
-		'letter-spacing' => '0',
-		'color'          => '#FFFFFF',
-		'text-align'     => 'center',
-		'text-transform' => 'uppercase',
-	),
-	'output'      => array(
-		array(
-			'element'			=> array('#top-menu', '#top-menu a'),
-		),
-	),
-));
-
-Kirki::add_field('kirki_config', array(
-	'type'        => 'slider',
-	'label'       => esc_html__('Top Menu Links Size (rem)', 'kirki'),
-	'section'     => 'typography_section',
-	'settings'    => 'typography_top_menu_size',
-	'default'     => 3,
-	'choices'     => array(
-		'min'					=> 0.1,
-		'max'					=> 10,
-		'step'				=> 0.1,
-	),
-	'output'			=> array(
-		array(
-			'element'			=> '#top-menu a',
-			'units'				=> 'rem',
-			'property'		=> 'font-size',
-		),
-	),
-));
 
 ?>
