@@ -9,5 +9,15 @@
 				<?php comments_template(); ?>
 			<?php endwhile; endif; ?>
 		</article>
+		<?php if(is_active_sidebar('blog-left-sidebar')): ?>
+			<aside>
+				<?php dynamic_sidebar('blog-left-sidebar'); ?>
+			</aside>
+		<?php endif; ?>
+		<?php if(is_active_sidebar('blog-right-sidebar')): ?>
+			<aside>
+				<?php dynamic_sidebar('blog-right-sidebar'); ?>
+			</aside>
+		<?php endif; ?>
 	</main>
 <?php get_footer(); ?>

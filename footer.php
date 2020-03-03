@@ -1,4 +1,9 @@
 <footer class='default-container'>
+	<?php if(is_active_sidebar('promotion')): ?>
+		<aside>
+			<?php dynamic_sidebar('promotion'); ?>
+		</aside>
+	<?php endif; ?>
 	<small class='footer-notice'>
 		Project SigmaRed
 	</small>

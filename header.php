@@ -18,6 +18,11 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
+		<?php if(is_active_sidebar('promotion')): ?>
+			<aside>
+				<?php dynamic_sidebar('promotion'); ?>
+			</aside>
+		<?php endif; ?>
 		<header class='default-container'>
 			<h1 class='main-heading' id='logo'><?php bloginfo('name'); ?></h1>
 			<span id='menu-button' class='main-heading-button'>
