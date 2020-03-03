@@ -15,13 +15,13 @@ Kirki::add_field('kirki_config', array(
 	'section'			=> 'blocks_layout_section',
 	'settings'		=> 'blocks_layout',
 	'default'			=> array(
-		'header',
+		'landing',
 		'portfolio',
 		'services',
 		'clients',
 	),
 	'choices'			=> array(
-		'header'					=> esc_html__('Header', 'kirki'),
+		'landing'					=> esc_html__('Landing', 'kirki'),
 		'portfolio'				=> esc_html__('Portfolio/Projects', 'kirki'),
 		'services'				=> esc_html__('Services', 'kirki'),
 		'clients'					=> esc_html__('Clients', 'kirki'),

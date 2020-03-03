@@ -22,7 +22,7 @@ function supplier_add_homepage_blocks_section(
 			$num_suffix = ' #' . $index;
 		}
 
-		Kirki::add_section("${section_name}_section${suffix}", array(
+		Kirki::add_section("${section_name}${suffix}_section", array(
 			'title' => esc_html__($section_title . $num_suffix, 'kirki'),
 			'panel' => 'blocks_panel',
 		));
@@ -30,32 +30,32 @@ function supplier_add_homepage_blocks_section(
 		Kirki::add_field('kirki_config', array(
 			'type'			=> 'text',
 			'label'			=> esc_html__('Title', 'kirki'),
-			'section'		=> "${section_name}_section${suffix}",
-			'settings'	=> "${section_name}_title${suffix}",
+			'section'		=> "${section_name}${suffix}_section",
+			'settings'	=> "${section_name}${suffix}_title",
 			'default'		=> esc_html__('Block Title', 'kirki'),
 		));
 
 		Kirki::add_field('kirki_config', array(
 			'type'			=> 'toggle',
 			'label'			=> esc_html__('Fullscreen Title', 'kirki'),
-			'section'		=> "${section_name}_section${suffix}",
-			'settings'	=> "${section_name}_is_fullscreen${suffix}",
+			'section'		=> "${section_name}${suffix}_section",
+			'settings'	=> "${section_name}${suffix}_is_fullscreen",
 			'default'		=> true,
 		));
 
 		Kirki::add_field('kirki_config', array(
 			'type'			=> 'editor',
 			'label'			=> esc_html__('Subtitle/Content', 'kirki'),
-			'section'		=> "${section_name}_section${suffix}",
-			'settings'	=> "${section_name}_subtitle${suffix}",
+			'section'		=> "${section_name}${suffix}_section",
+			'settings'	=> "${section_name}${suffix}_subtitle",
 			'default'		=> esc_html__('Lorem ipsum dolor sit amet', 'kirki'),
 		));
 
 		Kirki::add_field('kirki_config', array(
 			'type'			=> 'radio-buttonset',
 			'label'			=> esc_html__('Background Type', 'kirki'),
-			'section'		=> "${section_name}_section${suffix}",
-			'settings'	=> "${section_name}_bg_type${suffix}",
+			'section'		=> "${section_name}${suffix}_section",
+			'settings'	=> "${section_name}${suffix}_bg_type",
 			'default'		=> 'static',
 			'choices'		=> array(
 				'static'		=> esc_html__('Static', 'kirki'),
@@ -66,12 +66,12 @@ function supplier_add_homepage_blocks_section(
 		Kirki::add_field('kirki_config', array(
 			'type'						=> 'link',
 			'label'						=> esc_html__('Video URL', 'kirki'),
-			'section'					=> "${section_name}_section${suffix}",
-			'settings'				=> "${section_name}_video${suffix}",
+			'section'					=> "${section_name}${suffix}_section",
+			'settings'				=> "${section_name}${suffix}_video",
 			'default'					=> 'http://example.org/video-url',
 			'active_callback'	=> array(
 				array(
-					'setting'				=> "${section_name}_bg_type${suffix}",
+					'setting'				=> "${section_name}${suffix}_bg_type",
 					'operator'			=> '==',
 					'value'					=> 'video',
 				),
@@ -81,8 +81,8 @@ function supplier_add_homepage_blocks_section(
 		Kirki::add_field('kirki_config', array(
 			'type'									=> 'background',
 			'label'									=> esc_html__('Background', 'kirki'),
-			'section'								=> "${section_name}_section${suffix}",
-			'settings'							=> "${section_name}_bg${suffix}",
+			'section'								=> "${section_name}${suffix}_section",
+			'settings'							=> "${section_name}${suffix}_bg",
 			'default'								=> array(
 				'background-color'			=> 'rgba(0, 0, 0, 0)',
 				'background-image'			=> '',
@@ -94,12 +94,12 @@ function supplier_add_homepage_blocks_section(
 			'transport'							=> 'auto',
 			'output'								=>	array(
 				array(
-					'element'								=> ".${section_name}-bg${suffix}",
+					'element'								=> ".${section_name}${suffix}-bg",
 				)
 			),
 			'active_callback'				=> array(
 				array(
-					'setting'							=> "${section_name}_bg_type${suffix}",
+					'setting'							=> "${section_name}${suffix}_bg_type",
 					'operator'						=> '===',
 					'value'								=> 'static',
 				),
@@ -110,8 +110,8 @@ function supplier_add_homepage_blocks_section(
 		{
 			Kirki::add_field('kirki_config', array_merge(
 				array(
-					'section'		=> "${section_name}_section${suffix}",
-					'settings'	=> "${section_name}_${key}${suffix}",
+					'section'		=> "${section_name}${suffix}_section",
+					'settings'	=> "${section_name}${suffix}_${key}",
 				), $field
 			));
 		}
@@ -120,8 +120,8 @@ function supplier_add_homepage_blocks_section(
 		{
 			Kirki::add_field('kirki_config', array(
 				'type'			=> 'repeater',
-				'section'		=> "${section_name}_section${suffix}",
-				'settings'	=> "${section_name}_items${suffix}",
+				'section'		=> "${section_name}${suffix}_section",
+				'settings'	=> "${section_name}${suffix}_items",
 				'label'			=> esc_html__('Items', 'kirki'),
 				'row_label'	=> array(
 					'type'			=> 'field',

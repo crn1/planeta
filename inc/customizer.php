@@ -39,7 +39,7 @@ require_once(get_template_directory() . '/inc/customizer/module_social_media.php
 //Homepage sections
 require_once(get_template_directory() . '/inc/customizer/block_homepage.php');
 require_once(get_template_directory() . '/inc/customizer/block_layout.php');
-require_once(get_template_directory() . '/inc/customizer/block_header.php');
+require_once(get_template_directory() . '/inc/customizer/block_landing.php');
 require_once(get_template_directory() . '/inc/customizer/block_portfolio.php');
 require_once(get_template_directory() . '/inc/customizer/block_services.php');
 require_once(get_template_directory() . '/inc/customizer/block_clients.php');
