@@ -3,7 +3,7 @@
 footer {
 	background-color: transparent;
 	padding: 2rem;
-	@include flexContainer();
+	@include flexContainer($direction: column);
 
 	.footer-notice {
 		display: block;

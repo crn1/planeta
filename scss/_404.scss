@@ -1,8 +1,0 @@
-@import 'modules/flex';
-
-main {
-	@include flexContainer($direction: column);
-
-	article {
-	}
-}

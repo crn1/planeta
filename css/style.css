@@ -2,29 +2,13 @@
   width: 100%;
   text-align: center;
   padding-left: 1rem;
-  padding-right: 1rem; }
+  padding-right: 1rem;
+  margin: 0 auto; }
 
-main section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; }
-  main section .default-container header {
-    display: block; }
-    main section .default-container header h2 .fullscreen-title {
-      height: 100vh; }
-
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; }
-
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; }
+main .default-container header {
+  display: block; }
+  main .default-container header h2 .fullscreen-title {
+    height: 100vh; }
 
 header {
   z-index: 99900;
@@ -36,19 +20,14 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: row; }
-  header .default-container {
-    display: flex;
+  header #logo {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: row; }
-    header .default-container #logo {
-      display: inline-flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-direction: row;
-      flex-grow: 1; }
-    header .default-container i {
-      cursor: pointer; }
+    justify-content: space-between;
+    flex-direction: row;
+    flex-grow: 1; }
+  header i {
+    cursor: pointer; }
 
 #menu-button {
   z-index: 99999;
@@ -81,7 +60,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row; }
+  flex-direction: column; }
   footer .footer-notice {
     display: block;
     width: 100%;

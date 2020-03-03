@@ -20,14 +20,12 @@ get_header();
 			<?php endif; ?>
 
 			<div class='default-container'>
-				<header>
-					<h2 class='title-heading<?php echo get_theme_mod("${section}_is_fullscreen", false) ? ' fullscreen-title' : ''; ?>'>
-						<?php echo get_theme_mod("${section}_title", 'Block Title') ?>
-					</h2>
-					<h3 class='subtitle-heading'>
-						<?php echo get_theme_mod("${section}_subtitle", 'Block Subtitle') ?>
-					</h3>
-				</header>
+				<h2 class='title-heading<?php echo get_theme_mod("${section}_is_fullscreen", false) ? ' fullscreen-title' : ''; ?>'>
+					<?php echo get_theme_mod("${section}_title", 'Block Title') ?>
+				</h2>
+				<h3 class='subtitle-heading'>
+					<?php echo get_theme_mod("${section}_subtitle", 'Block Subtitle') ?>
+				</h3>
 				<?php
 
 					if(!has_prefix($section, 'landing'))

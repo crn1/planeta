@@ -18,21 +18,19 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<header>
-			<div class='default-container'>
-				<h1 class='main-heading' id='logo'><?php bloginfo('name'); ?></h1>
-				<span id='menu-button' class='main-heading-button'>
-					<i class='material-icons'>menu</i>
-				</span>
-				<nav id='top-menu' class='hidden'>
-					<?php
-						$params = array(
-							'theme_location' 	=> 'top-menu',
-							'items_wrap'      => '%3$s',
-							'echo'						=> false,
-						);
-						echo strip_tags(wp_nav_menu($params), '<a>');
-					?>
-				</nav>
-			</div>
+		<header class='default-container'>
+			<h1 class='main-heading' id='logo'><?php bloginfo('name'); ?></h1>
+			<span id='menu-button' class='main-heading-button'>
+				<i class='material-icons'>menu</i>
+			</span>
+			<nav id='top-menu' class='hidden'>
+				<?php
+					$params = array(
+						'theme_location' 	=> 'top-menu',
+						'items_wrap'      => '%3$s',
+						'echo'						=> false,
+					);
+					echo strip_tags(wp_nav_menu($params), '<a>');
+				?>
+			</nav>
 		</header>
