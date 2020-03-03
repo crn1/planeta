@@ -20,6 +20,12 @@ main {
   justify-content: center;
   flex-direction: column; }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
 header {
   z-index: 99900;
   padding-top: 2rem;
