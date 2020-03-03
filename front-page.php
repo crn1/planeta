@@ -21,8 +21,35 @@
 						<?php echo get_theme_mod("${item}_subtitle", 'Block Subtitle') ?>
 					</h3>
 				</header>
-			</div>
 
+					<?php switch($item):
+						case 'portfolio': ?>
+
+							<div id='<?php echo $item; ?>-items-container'>
+								<?php foreach(get_theme_mod('portfolio_items', array()) as $item): ?>
+									<div>
+										<img src='https://i.ytimg.com/vi/RHLknisJ-Sg/maxresdefault.jpg' />
+									</div>
+								<?php endforeach; ?>
+							</div>
+
+							<script>
+								var macyInstancePortfolio = Macy({
+									container: '#portfolio-items-container',
+									columns: <?php echo get_theme_mod('portfolio_masonry_num', 3); ?>,
+									breakAt: {
+										960: <?php echo get_theme_mod('portfolio_masonry_num', 3) == 1 ? 1: 2; ?>,
+										768: 1,
+									},
+									margin: 16,
+								});
+							</script>
+
+					<?php break; ?>
+
+					<?php endswitch; ?>
+
+			</div>
 		</section>
 	<?php endforeach; ?>
 </main>

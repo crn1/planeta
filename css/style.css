@@ -102,5 +102,8 @@ a {
 a:hover::before {
 	height: calc(100% + 0.5rem);
 }*/
+img {
+  width: 100%;
+  object-fit: cover; }
 
 /*# sourceMappingURL=style.css.map */

@@ -16,7 +16,7 @@ supplier_add_homepage_blocks_section(
 			),
 		),
 	),
-	array(
+	$items_fields = array(
 		'title'			=> array(
 			'type'					=> 'text',
 			'label'  		   	=> esc_html__('Title', 'kirki'),
