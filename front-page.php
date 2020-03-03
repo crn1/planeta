@@ -34,35 +34,7 @@ get_header();
 
 						if(has_prefix($section, 'posts'))
 						{
-							if(have_posts())
-							{
-								while(have_posts())
-								{
-									the_post();
-									$title = get_the_title();
-									$excerpt = get_the_excerpt();
-									$author = get_the_author();
-									$date = get_the_date();
-									$url = get_permalink();
-									$avatar = get_avatar_url($post->ID);
-									echo "<div>";
-									if(has_post_thumbnail($post->ID))
-									{
-										$img_src = wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'large');
-										echo "<img class='posts-image' src='${img_src}' />";
-									}
-									echo "<h3 class='posts-title'>${title}</h3>";
-									echo "<p class='posts-excerpt'>${excerpt}</p>";
-									echo "<p class='posts-author'>${author}</p>";
-									echo "<img class='posts-avatar' src='${avatar}' />";
-									echo "<p class='posts-date'>${date}</p>";
-									echo "<a href='${url}' class='posts-url'>Promeni me!</a>";
-									echo "</div>";
-								}
-							}else{
-								echo 'there are no posts sorey';
-							}
-
+							echo get_template_part('template-parts/content', 'postcards');
 						}else{
 							foreach(get_theme_mod("${section}_items", array()) as $item)
 							{
