@@ -22,30 +22,30 @@ supplier_add_homepage_blocks_section(
 		),
 	),
 	$items_fields = array(
-		'title'					=> array(
-			'type'					=> 'text',
-			'label'					=> esc_html__('Author', 'kirki'),
-			'default'				=> 'John Doe',
+		'title'							=> array(
+			'type'							=> 'textarea',
+			'label'							=> esc_html__('Comment Title', 'kirki'),
+			'default'						=> 'Lorem ispum dolor sit amet',
 		),
-		'profession'		=> array(
-			'type'					=> 'text',
-			'label'					=> esc_html__('Author Profession', 'kirki'),
-			'default'				=> 'Front-end Developer',
+		'description'				=> array(
+			'type'							=> 'textarea',
+			'label'							=> esc_html__('Comment', 'kirki'),
+			'default'						=> 'Lorem ispum dolor sit amet',
 		),
-		'author_image'	=> array(
-			'type'					=> 'image',
-			'label'					=> esc_html__('Author Image', 'kirki'),
-			'default'				=> 0,
+		'image'							=> array(
+			'type'							=> 'image',
+			'label'							=> esc_html__('Author Image', 'kirki'),
+			'default'						=> 0,
 		),
-		'comment_title'	=> array(
-			'type'					=> 'textarea',
-			'label'					=> esc_html__('Comment Title', 'kirki'),
-			'default'				=> 'Lorem ispum dolor sit amet',
+		'author'						=> array(
+			'type'							=> 'text',
+			'label'							=> esc_html__('Author', 'kirki'),
+			'default'						=> 'John Doe',
 		),
-		'comment_content'	=> array(
-			'type'						=> 'textarea',
-			'label'						=> esc_html__('Comment', 'kirki'),
-			'default'					=> 'Lorem ispum dolor sit amet',
+		'author_profession'	=> array(
+			'type'							=> 'text',
+			'label'							=> esc_html__('Author Profession', 'kirki'),
+			'default'						=> 'Front-end Developer',
 		),
 	)
 );

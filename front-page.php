@@ -21,52 +21,84 @@
 						<?php echo get_theme_mod("${section}_subtitle", 'Block Subtitle') ?>
 					</h3>
 				</header>
+				<?php
 
-					<?php switch($section):
-						case 'portfolio': ?>
+					if($section !== 'blog')
+					{
+						echo "<div id='${section}-items-container'>";
 
-							<div id='<?php echo $section; ?>-items-container'>
-								<?php foreach(get_theme_mod('portfolio_items', array(
-									'title' 			=> 'Block Title',
-									'description' => 'Lorem ipsum dolor sit amet',
-									'url' 				=> 'http://example.org',
-									'img'					=> '',
-								)) as $item): ?>
-									<div>
-										<?php if($item['image'] !== ''): ?>
-											<img src='<?php echo wp_get_attachment_image_src($item['image'], 'large')[0]; ?>' />
-										<?php endif; ?>
-										<h3 class='subtitle-heading'>
-											<?php echo $item['title']; ?>
-										</h3>
-										<p>
-											<?php echo $item['description']; ?>
-										</p>
-										<?php if($item['url'] !== ''): ?>
-											<a href='<?php echo $item['url']; ?>'
-												target='<?php echo $item['url_tab'] ? '_blank' : ''; ?>'>
-												Read More!
-											</a>
-										<?php endif ?>
-									</div>
-								<?php endforeach; ?>
-							</div>
+						foreach(get_theme_mod("${section}_items", array(
+							'title'							=> 'Block Title',
+							'description'				=> 'Lorem ipsum dolor sit amet',
+							'url'								=> 'http://example.org',
+							'image'							=> '',
+							'date_span'					=> '',
+							'author'						=> '',
+							'author_profession' => '',
+						)) as $item)
+						{
+							$item = array_merge(array(
+								'title'							=> 'Block Title',
+								'description'				=> 'Lorem ipsum dolor sit amet',
+								'url'								=> 'http://example.org',
+								'image'							=> '',
+								'date_span'					=> '',
+								'author'						=> '',
+								'author_profession' => '',
+							), $item);
 
-							<script>
-								var macyInstancePortfolio = Macy({
-									container: '#portfolio-items-container',
-									columns: <?php echo get_theme_mod('portfolio_masonry_num', 3); ?>,
-									breakAt: {
-										960: <?php echo get_theme_mod('portfolio_masonry_num', 3) == 1 ? 1: 2; ?>,
-										768: 1,
-									},
-									margin: 16,
-								});
-							</script>
+							echo '<div>';
 
-					<?php break; ?>
+							if($item['image'] !== '')
+							{
+								$image_url = wp_get_attachment_image_src($item['image'], 'large')[0];
+								echo "<img src='${item['image']}' />";
+							}
 
-					<?php endswitch; ?>
+							echo "<h3 class='${section}-title subtitle-heading'>${item['title']}</h3>";
+
+							if($item['date_span'] !== '')
+							{
+								echo "<p class='${section}-date-span'>${item['date_span']}</p>";
+							}
+
+							echo "<p class='${section}-description'>${item['description']}</p>";
+
+							if($item['url'] !== '')
+							{
+								$url_tab = $item['url_tab'] ? '_blank' : '';
+								echo "<a href='${item['url']}' target='${url_tab}>' class='url'>Promeni me!</a>";
+							}
+
+							if($item['author'] !== '')
+							{
+								echo "<p class='${section}-author'>${item['author']}</p>";
+							}
+
+							if($item['author_profession'] !== '')
+							{
+								echo "<p class='${section}-author-profession'>${item['author_profession']}</p>";
+							}
+
+							echo '</div>';
+						}
+
+						echo '</div>';
+					}
+				?>
+				<?php if($section !== 'header'): ?>
+					<script>
+						Macy({
+							container: '#<?php echo $section; ?>-items-container',
+							columns: <?php echo get_theme_mod("${section}_masonry_num", 3); ?>,
+							breakAt: {
+								960: <?php echo get_theme_mod("${section}_masonry_num", 3) == 1 ? 1: 2; ?>,
+								768: 1,
+							},
+							margin: 16,
+						});
+					</script>
+				<?php endif; ?>
 
 			</div>
 		</section>

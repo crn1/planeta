@@ -22,15 +22,10 @@ supplier_add_homepage_blocks_section(
 			'label'					=> esc_html__('Description', 'kirki'),
 			'default'				=> 'Front-end Developer',
 		),
-		'date_from'	=> array(
+		'date_span'			=> array(
 			'type'					=> 'text',
-			'label'					=> esc_html__('Date From', 'kirki'),
-			'default'				=> 'May 2019',
-		),
-		'date_to'	=> array(
-			'type'					=> 'text',
-			'label'					=> esc_html__('Date To', 'kirki'),
-			'default'				=> 'Today',
+			'label'					=> esc_html__('Date', 'kirki'),
+			'default'				=> 'May 2019 - July 2020',
 		),
 	)
 );

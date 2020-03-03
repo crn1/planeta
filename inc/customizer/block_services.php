@@ -27,30 +27,9 @@ supplier_add_homepage_blocks_section(
 			'label'						=> esc_html__('Description', 'kirki'),
 		),
 
-		'align'						=> array(
-			'type'						=> 'select',
-			'label'     			=> esc_html__('Align', 'kirki'),
-			'choices'					=> array(
-				'left'						=> esc_html__('Left (default)', 'kirki'),
-				'center'					=> esc_html__('Center', 'kirki'),
-				'right'						=> esc_html__('Right', 'kirki'),
-			),
-		),
-
 		'image'						=> array(
 			'type'						=> 'image',
 			'label'						=> esc_html__('Image', 'kirki'),
-		),
-
-		'image_position'	=> array(
-			'type'						=> 'select',
-			'label'     			=> esc_html__('Image Position', 'kirki'),
-			'choices'					=> array(
-				'left'						=> esc_html__('Left (default)', 'kirki'),
-				'center_bellow'		=> esc_html__('Center (below description)', 'kirki'),
-				'center_above'		=> esc_html__('Center (above description)', 'kirki'),
-				'right'						=> esc_html__('Right', 'kirki'),
-			),
 		),
 	)
 );
