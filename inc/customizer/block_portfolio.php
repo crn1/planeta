@@ -17,50 +17,29 @@ supplier_add_homepage_blocks_section(
 		),
 	),
 	$items_fields = array(
-		'title'			=> array(
-			'type'					=> 'text',
-			'label'  		   	=> esc_html__('Title', 'kirki'),
+		'title'				=> array(
+			'type'				=> 'text',
+			'label'  	   	=> esc_html__('Title', 'kirki'),
 		),
 
-		'description'			=> array(
-			'type'						=> 'text',
-			'label'						=> esc_html__('Description', 'kirki'),
+		'description'	=> array(
+			'type'				=> 'text',
+			'label'				=> esc_html__('Description', 'kirki'),
 		),
 
-		'align'						=> array(
-			'type'						=> 'select',
-			'label'     			=> esc_html__('Align', 'kirki'),
-			'choices'					=> array(
-				'left'						=> esc_html__('Left (default)', 'kirki'),
-				'center'					=> esc_html__('Center', 'kirki'),
-				'right'						=> esc_html__('Right', 'kirki'),
-			),
+		'image'				=> array(
+			'type'				=> 'image',
+			'label'				=> esc_html__('Image', 'kirki'),
 		),
 
-		'image'						=> array(
-			'type'						=> 'image',
-			'label'						=> esc_html__('Image', 'kirki'),
+		'url'					=> array(
+			'type'				=> 'text',
+			'label'				=> esc_html__('Item URL', 'kirki'),
 		),
 
-		'image_position'	=> array(
-			'type'						=> 'select',
-			'label'     			=> esc_html__('Image Position', 'kirki'),
-			'choices'					=> array(
-				'left'						=> esc_html__('Left (default)', 'kirki'),
-				'center_bellow'		=> esc_html__('Center (below description)', 'kirki'),
-				'center_above'		=> esc_html__('Center (above description)', 'kirki'),
-				'right'						=> esc_html__('Right', 'kirki'),
-			),
-		),
-
-		'item_link'						=> array(
-			'type'						=> 'text',
-			'label'						=> esc_html__('Item URL', 'kirki'),
-		),
-
-		'item_link'						=> array(
-			'type'						=> 'checkbox',
-			'label'						=> esc_html__('Open URL in a new tab', 'kirki'),
+		'url_tab'			=> array(
+			'type'				=> 'checkbox',
+			'label'				=> esc_html__('Open URL in a new tab', 'kirki'),
 		),
 	)
 );
