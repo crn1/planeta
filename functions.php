@@ -5,26 +5,8 @@ include_once get_theme_file_path( 'inc/customizer.php' );
 
 //Theme support
 add_theme_support('post-thumbnails');
-add_theme_support('menus');
 add_theme_support('title-tag');
-
-//Remove WordPress junk
-remove_action('wp_head', 'print_emoji_detection_script', 7);
-remove_action('wp_print_styles', 'print_emoji_styles');
-remove_action('admin_print_scripts', 'print_emoji_detection_script');
-remove_action('admin_print_styles', 'print_emoji_styles');
-remove_action('wp_head', 'wp_resource_hints', 2);
-remove_action('template_redirect', 'rest_output_link_header', 11, 0);
-remove_action('wp_head', 'rest_output_link_wp_head', 10);
-remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
-remove_action('wp_head', 'wp_shortlink_wp_head');
-remove_action('wp_head', 'rsd_link');
-remove_action( 'wp_head', 'wlwmanifest_link');
-
-function deregister_scripts(){
-	wp_deregister_script('wp-embed');
-}
-add_action('wp_footer', 'deregister_scripts');
+add_theme_support('automatic-feed-links');
 
 //Register all menus
 function register_menus()

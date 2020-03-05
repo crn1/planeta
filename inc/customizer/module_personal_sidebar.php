@@ -6,14 +6,6 @@ Kirki::add_section('personal_sidebar_section', array(
 ));
 
 Kirki::add_field('kirki_config', array(
-	'type' 				=> 'toggle',
-	'settings'		=> 'enable_personal_sidebar',
-	'label'				=> esc_html__('Enable Personal Sidebar', 'kirki'),
-	'section'			=> 'personal_sidebar_section',
-	'default'			=> 0,
-));
-
-Kirki::add_field('kirki_config', array(
 	'type' 									=> 'background',
 	'settings'							=> 'personal_sidebar_background',
 	'label'									=> esc_html__('Background', 'kirki'),
@@ -31,13 +23,6 @@ Kirki::add_field('kirki_config', array(
 			'element'								=> '.personal-sidebar-background',
 		),
 	),
-	'active_callback'	=> array(
-		array(
-			'setting'			=> 'enable_personal_sidebar',
-			'operator'		=> '==',
-			'value'				=> '1',
-		),
-	),
 ));
 
 Kirki::add_field('kirki_config', array(
@@ -49,13 +34,6 @@ Kirki::add_field('kirki_config', array(
 	'choices'			=> array(
 		'left'				=> esc_html__('Left', 'kirki'),
 		'right'				=> esc_html__('Right', 'kirki'),
-	),
-	'active_callback'	=> array(
-		array(
-			'setting'			=> 'enable_personal_sidebar',
-			'operator'		=> '==',
-			'value'				=> '1',
-		),
 	),
 ));
 

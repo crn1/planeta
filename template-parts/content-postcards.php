@@ -1,13 +1,11 @@
 <?php
 
-if(have_posts()): while(have_posts()): the_post();
-
-$img_src = wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'large'); ?>
+if(have_posts()): while(have_posts()): the_post(); ?>
 
 <div>
 
 	<?php if(has_post_thumbnail($post->ID)): ?>
-		<img class='posts-image' src='<?php echo $img_src; ?>' />
+		<img class='posts-image' src='<?php the_post_thumbnail_url(); ?>' />
 	<?php endif; ?>
 
 	<h3 class='posts-title'>
