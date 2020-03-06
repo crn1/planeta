@@ -6,25 +6,24 @@ function has_prefix($string, $prefix)
 
 get_header();
 ?>
-<main>
+<main id='frontpage-main'>
 	<?php
 		$layout = get_theme_mod('blocks_layout', array());
 		foreach($layout as $section):
+			$bg_type = get_theme_mod($section . '_bg_type', 'static') === 'static' ? $section . '-bg' : '';
+			$is_fullscreen = get_theme_mod("${section}_is_fullscreen", false) ? 'fullscreen-title' : '';
+			$section_title = get_theme_mod("${section}_title", 'Block Title');
+			$section_subtitle = get_theme_mod("${section}_subtitle", 'Block Subtitle');
 	?>
-		<section class='<?php echo get_theme_mod("${section}_bg_type", 'static') === 'static' ? "${section}-bg" : ''; ?>'>
-
-			<?php if(2==3)/*get_theme_mod("${section}_bg_type", 'static') === 'video')*/: ?>
-				<video class='section-video' autoplay muted loop>
-					<source src="<?php echo get_theme_mod("${section}_video", ''); ?>" />
-				</video>
-			<?php endif; ?>
+		<section class='scrollify-section <?php echo $bg_type ?>' data-section-name='<?php echo strtolower($section_title); ?>'>
 
 			<div class='default-container'>
-				<h2 class='title-heading<?php echo get_theme_mod("${section}_is_fullscreen", false) ? ' fullscreen-title' : ''; ?>'>
-					<?php echo get_theme_mod("${section}_title", 'Block Title') ?>
+
+				<h2 class='title-heading <?php echo $is_fullscreen; ?>'>
+					<?php echo $section_title; ?>
 				</h2>
 				<h3 class='subtitle-heading'>
-					<?php echo get_theme_mod("${section}_subtitle", 'Block Subtitle') ?>
+					<?php echo $section_subtitle; ?>
 				</h3>
 				<?php
 
@@ -104,6 +103,7 @@ get_header();
 				<?php endif; ?>
 
 			</div>
+
 		</section>
 	<?php endforeach; ?>
 </main>

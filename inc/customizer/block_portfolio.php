@@ -4,18 +4,7 @@ supplier_add_homepage_blocks_section(
 	$module_name = 'portfolio',
 	$module_title = 'Portfolio/Projects',
 	$num_of_instances = 1,
-	$section_fileds = array(
-		'masonry_num' 	=> array(
-			'type'					=> 'slider',
-			'label'					=> esc_html__('Number of columns for items', 'kirki'),
-			'default'				=> 3,
-			'choices'				=> array(
-				'min'						=> 1,
-				'max'						=> 6,
-				'step'					=> 1,
-			),
-		),
-	),
+	$section_fields = array(),
 	$items_fields = array(
 		'title'				=> array(
 			'type'				=> 'text',

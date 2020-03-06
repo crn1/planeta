@@ -10,16 +10,6 @@ supplier_add_homepage_blocks_section(
 			'label'				=> esc_html__('Show Quotes', 'kirki'),
 			'default'			=> false,
 		),
-		'masonry_num' => array(
-			'type'				=> 'slider',
-			'label'				=> esc_html__('Number of columns', 'kirki'),
-			'default'			=> 3,
-			'choices'			=> array(
-				'min'					=> 1,
-				'max'					=> 6,
-				'step'				=> 1,
-			),
-		),
 	),
 	$items_fields = array(
 		'title'							=> array(

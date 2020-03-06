@@ -5,6 +5,17 @@ Kirki::add_section('page_section', array(
 	'panel'	=> 'modules_panel',
 ));
 
+/*Kirki::add_field('kirki_config', array(
+	'type' 						=> 'select',
+	'settings'				=> 'page_scrollbar_type',
+	'label'						=> esc_html__('Scrollbar Type', 'kirki'),
+	'section'					=> 'page_section',
+	'default'					=> 'system',
+	'choices'					=> array(
+		'system'						=> esc_html__('System (default)', 'kirki'),
+	),
+));*/
+
 Kirki::add_field('kirki_config', array(
 	'type' 						=> 'toggle',
 	'settings'				=> 'page_title_is_fullscreen',

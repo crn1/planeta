@@ -47,6 +47,11 @@ function register_widgets()
 	));
 
 	register_sidebar(array(
+		'name'	=> 'Extended Header',
+		'id'		=> 'extended-header',
+	));
+
+	register_sidebar(array(
 		'name'	=> 'Portfolio',
 		'id'		=> 'portfolio-sidebar',
 	));
@@ -63,9 +68,17 @@ add_filter( 'excerpt_length', function($length){ return 25; });
 
 function init_scripts()
 {
+	// Wordpress Required Styles
 	wp_enqueue_style('wordpress-required-style', get_stylesheet_uri());
-	wp_enqueue_style('main-style', get_template_directory_uri() . '/css/style.css', false, '1.0.0', 'all');
+
+	// Macy Masonry
 	wp_enqueue_script('masonry-script', get_template_directory_uri() . '/js/macy.min.js', array(), '2.5.1');
+
+	// Laxxx
+	wp_enqueue_script('lax-script', get_template_directory_uri() . '/js/lax.min.js');
+
+	// Main Styles
+	wp_enqueue_style('main-style', get_template_directory_uri() . '/css/style.css', false, '1.0.0', 'all');
 	wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true);
 }
 

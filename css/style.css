@@ -5,10 +5,12 @@
   padding-right: 1rem;
   margin: 0 auto; }
 
-main .default-container header {
-  display: block; }
-  main .default-container header h2 .fullscreen-title {
-    height: 100vh; }
+#frontpage-main section {
+  min-height: 100vh; }
+  #frontpage-main section header {
+    display: block; }
+    #frontpage-main section header h2 .fullscreen-title {
+      height: 100vh; }
 
 header {
   z-index: 99900;
@@ -56,17 +58,13 @@ header {
 
 footer {
   background-color: transparent;
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; }
+  padding: 2rem; }
   footer .footer-notice {
     display: block;
     width: 100%;
     text-align: center; }
 
-body {
+html, body {
   margin: 0;
   padding: 0; }
 

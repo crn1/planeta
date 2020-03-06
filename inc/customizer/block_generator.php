@@ -36,15 +36,7 @@ function supplier_add_homepage_blocks_section(
 		));
 
 		Kirki::add_field('kirki_config', array(
-			'type'			=> 'toggle',
-			'label'			=> esc_html__('Fullscreen Title', 'kirki'),
-			'section'		=> "${section_name}${suffix}_section",
-			'settings'	=> "${section_name}${suffix}_is_fullscreen",
-			'default'		=> true,
-		));
-
-		Kirki::add_field('kirki_config', array(
-			'type'			=> 'editor',
+			'type'			=> 'textarea',
 			'label'			=> esc_html__('Subtitle/Content', 'kirki'),
 			'section'		=> "${section_name}${suffix}_section",
 			'settings'	=> "${section_name}${suffix}_subtitle",
@@ -118,6 +110,32 @@ function supplier_add_homepage_blocks_section(
 
 		if(sizeof($items_fields) > 0)
 		{
+			Kirki::add_field('kirki_config', array(
+				'type'					=> 'slider',
+				'label'					=> esc_html__('Number of columns for items', 'kirki'),
+				'section'				=> "${section_name}${suffix}_section",
+				'settings'			=> "${section_name}${suffix}_masonry_num",
+				'default'				=> 2,
+				'choices'				=> array(
+					'min'						=> 1,
+					'max'						=> 6,
+					'step'					=> 1,
+				),
+			));
+
+			Kirki::add_field('kirki_config', array(
+				'type'					=> 'select',
+				'label'					=> esc_html__('Items Card Type', 'kirki'),
+				'section'				=> "${section_name}${suffix}_section",
+				'settings'			=> "${section_name}${suffix}_card_type",
+				'default'				=> 'classic',
+				'choices'				=> array(
+					'classic'					=> esc_html__('Classic (default)', 'kirki'),
+					'3d'							=> esc_html__('3D', 'kirki'),
+					'3d-parallax'			=> esc_html__('3D Parallax', 'kirki'),
+				),
+			));
+
 			Kirki::add_field('kirki_config', array(
 				'type'			=> 'repeater',
 				'section'		=> "${section_name}${suffix}_section",
