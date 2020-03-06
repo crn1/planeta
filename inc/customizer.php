@@ -24,16 +24,16 @@ require_once(get_template_directory() . '/inc/customizer/theme_background.php');
 require_once(get_template_directory() . '/inc/customizer/theme_container.php');
 require_once(get_template_directory() . '/inc/customizer/theme_typography.php');
 require_once(get_template_directory() . '/inc/customizer/theme_colors.php');
-require_once(get_template_directory() . '/inc/customizer/theme_cursor.php');
+//require_once(get_template_directory() . '/inc/customizer/theme_cursor.php');
 
 //Modules
-require_once(get_template_directory() . '/inc/customizer/module_page.php');
+//require_once(get_template_directory() . '/inc/customizer/module_page.php');
 require_once(get_template_directory() . '/inc/customizer/module_frontpage.php');
 require_once(get_template_directory() . '/inc/customizer/module_header.php');
 require_once(get_template_directory() . '/inc/customizer/module_footer.php');
-require_once(get_template_directory() . '/inc/customizer/module_blog.php');
+//require_once(get_template_directory() . '/inc/customizer/module_blog.php');
 require_once(get_template_directory() . '/inc/customizer/module_personal_sidebar.php');
-require_once(get_template_directory() . '/inc/customizer/module_social_media.php');
+//require_once(get_template_directory() . '/inc/customizer/module_social_media.php');
 
 //Homepage sections
 require_once(get_template_directory() . '/inc/customizer/block_generator.php');

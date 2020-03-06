@@ -10,10 +10,12 @@ get_header();
 	<?php
 		$layout = get_theme_mod('blocks_layout', array());
 		foreach($layout as $section):
+
 			$bg_type = get_theme_mod($section . '_bg_type', 'static') === 'static' ? $section . '-bg' : '';
 			$is_fullscreen = get_theme_mod("${section}_is_fullscreen", false) ? 'fullscreen-title' : '';
 			$section_title = get_theme_mod("${section}_title", 'Block Title');
 			$section_subtitle = get_theme_mod("${section}_subtitle", 'Block Subtitle');
+			$section_items = get_theme_mod("${section}_items", array());
 	?>
 		<section class='scrollify-section <?php echo $bg_type ?>' data-section-name='<?php echo strtolower($section_title); ?>'>
 
@@ -35,7 +37,7 @@ get_header();
 						{
 							echo get_template_part('template-parts/content', 'postcards');
 						}else{
-							foreach(get_theme_mod("${section}_items", array()) as $item)
+							foreach($section_items as $item)
 							{
 								$item = array_merge(array(
 									'title'							=> 'Block Title',
@@ -58,10 +60,7 @@ get_header();
 
 								echo "<h3 class='${section}-title subtitle-heading'>${item['title']}</h3>";
 
-								if($item['date_span'])
-								{
-									echo "<p class='${section}-date-span'>${item['date_span']}</p>";
-								}
+								echo $item['date_span'] && "<p class='${section}-date-span'>${item['date_span']}</p>";
 
 								echo "<p class='${section}-description'>${item['description']}</p>";
 
@@ -71,15 +70,9 @@ get_header();
 									echo "<a href='${item['url']}' target='${url_tab}>' class='url'>Promeni me!</a>";
 								}
 
-								if($item['author'])
-								{
-									echo "<p class='${section}-author'>${item['author']}</p>";
-								}
+								echo $item['author'] && "<p class='${section}-author'>${item['author']}</p>";
 
-								if($item['author_profession'])
-								{
-									echo "<p class='${section}-author-profession'>${item['author_profession']}</p>";
-								}
+								echo $item['author_profession'] &&  "<p class='${section}-author-profession'>${item['author_profession']}</p>";
 
 								echo '</div>';
 							}
