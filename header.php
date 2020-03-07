@@ -12,7 +12,7 @@
 				<?php dynamic_sidebar('promotion'); ?>
 			</aside>
 		<?php endif; ?>
-		<header id='main-header' class='default-container'>
+		<header id='main-header' class='header-container'>
 			<h1 class='heading-main' id='logo'><?php bloginfo('name'); ?></h1>
 			<span id='menu-button' class='heading-main-button'>
 				<i class='material-icons'>menu</i>

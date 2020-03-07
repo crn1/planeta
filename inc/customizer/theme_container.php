@@ -7,10 +7,10 @@ Kirki::add_section('container_section', array(
 
 Kirki::add_field('planeta_config', array(
 	'type' 						=> 'slider',
-	'settings'				=> 'container_columns',
+	'settings'				=> 'default_container_width',
 	'label'						=> esc_html__('Width (in rems)', 'planeta'),
 	'section'					=> 'container_section',
-	'default'					=> 90,
+	'default'					=> 70,
 	'choices'					=> array(
 		'min'							=> 1,
 		'max'							=> 125,
@@ -19,6 +19,26 @@ Kirki::add_field('planeta_config', array(
 	'output'					=> array(
 		array(
 			'element'			=> '.default-container',
+			'property'		=> 'max-width',
+			'units'				=> 'rem',
+		),
+	),
+));
+
+Kirki::add_field('planeta_config', array(
+	'type' 						=> 'slider',
+	'settings'				=> 'header_container_width',
+	'label'						=> esc_html__('Width (in rems)', 'planeta'),
+	'section'					=> 'container_section',
+	'default'					=> 100,
+	'choices'					=> array(
+		'min'							=> 1,
+		'max'							=> 125,
+		'step'						=> 1,
+	),
+	'output'					=> array(
+		array(
+			'element'			=> '.header-container',
 			'property'		=> 'max-width',
 			'units'				=> 'rem',
 		),

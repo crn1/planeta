@@ -1,8 +1,15 @@
-.default-container {
+.default-container, .header-container {
   width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin: 0 auto; }
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin: 0 auto;
+  box-sizing: border-box; }
+  .default-container:before, .header-container:before {
+    content: '';
+    padding-left: 1em; }
+  .default-container:after, .header-container:after {
+    content: '';
+    padding-right: 1em; }
 
 .heading-subtitle {
   margin-bottom: 0;
@@ -19,7 +26,6 @@ header {
   z-index: 99900;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  width: 100%;
   background-color: transparent;
   display: flex;
   align-items: center;
