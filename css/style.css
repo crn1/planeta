@@ -1,16 +1,15 @@
 .default-container {
   width: 100%;
-  text-align: center;
   padding-left: 1rem;
   padding-right: 1rem;
   margin: 0 auto; }
 
-#frontpage-main section {
-  min-height: 100vh; }
-  #frontpage-main section header {
-    display: block; }
-    #frontpage-main section header h2 .fullscreen-title {
-      height: 100vh; }
+.frontpage-title {
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0; }
 
 header {
   z-index: 99900;
@@ -35,6 +34,8 @@ header {
   z-index: 99999;
   cursor: pointer;
   border: none;
+  height: 48px;
+  width: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -63,10 +64,6 @@ footer {
     display: block;
     width: 100%;
     text-align: center; }
-
-html, body {
-  margin: 0;
-  padding: 0; }
 
 .hidden {
   display: none !important; }

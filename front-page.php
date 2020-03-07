@@ -6,25 +6,23 @@ function has_prefix($string, $prefix)
 
 get_header();
 ?>
-<main id='frontpage-main'>
+<main id='main-frontpage'>
 	<?php
 		$layout = get_theme_mod('blocks_layout', array());
 		foreach($layout as $section):
-
 			$bg_type = get_theme_mod($section . '_bg_type', 'static') === 'static' ? $section . '-bg' : '';
-			$is_fullscreen = get_theme_mod("${section}_is_fullscreen", false) ? 'fullscreen-title' : '';
 			$section_title = get_theme_mod("${section}_title", 'Block Title');
 			$section_subtitle = get_theme_mod("${section}_subtitle", 'Block Subtitle');
 			$section_items = get_theme_mod("${section}_items", array());
 	?>
-		<section class='scrollify-section <?php echo $bg_type ?>' data-section-name='<?php echo strtolower($section_title); ?>'>
+		<section class='<?php echo $bg_type ?>'>
 
 			<div class='default-container'>
 
-				<h2 class='title-heading <?php echo $is_fullscreen; ?>'>
+				<h2 class='heading-title frontpage-title'>
 					<?php echo $section_title; ?>
 				</h2>
-				<h3 class='subtitle-heading'>
+				<h3 class='lax heading-subtitle frontpage-subtitle' data-lax-translate-y='0 0, vh -vh'>
 					<?php echo $section_subtitle; ?>
 				</h3>
 				<?php
@@ -35,7 +33,7 @@ get_header();
 
 						if(has_prefix($section, 'posts'))
 						{
-							echo get_template_part('template-parts/content', 'postcards');
+							get_template_part('template-parts/content', 'postcards');
 						}else{
 							foreach($section_items as $item)
 							{
@@ -58,7 +56,7 @@ get_header();
 									echo "<img src='${image_url}' />";
 								}
 
-								echo "<h3 class='${section}-title subtitle-heading'>${item['title']}</h3>";
+								echo "<h3 class='heading-subtitle'>${item['title']}</h3>";
 
 								echo $item['date_span'] && "<p class='${section}-date-span'>${item['date_span']}</p>";
 

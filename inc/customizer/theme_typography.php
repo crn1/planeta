@@ -11,21 +11,15 @@ Kirki::add_field('kirki_config', array(
 	'section'     => 'typography_section',
 	'settings'    => 'typography_main',
 	'default'     => array(
-		'font-family'    => 'Roboto',
+		'font-family'    => 'Rubik',
 		'variant'        => 'regular',
 		'font-size'      => '16px',
 		'line-height'    => '1.5',
 		'letter-spacing' => '0',
-		'color'          => '#FFFFFF',
 	),
 	'output'      => array(
 		array(
 			'element' => array('body'),
-		),
-		array(
-			'element'			=> '.material-icons',
-			'property'		=> 'color',
-			'choice'			=> 'color',
 		),
 	),
 ));
@@ -36,10 +30,9 @@ Kirki::add_field('kirki_config', array(
 	'section'     => 'typography_section',
 	'settings'    => 'typography_links',
 	'default'     => array(
-		'font-family'    => 'Roboto',
+		'font-family'    => 'Rubik',
 		'variant'        => '600',
 		'letter-spacing' => '0',
-		'color'          => '#FFFFFF',
 		'text-transform' => 'none',
 	),
 	'output'      => array(
@@ -55,11 +48,10 @@ Kirki::add_field('kirki_config', array(
 	'section'     => 'typography_section',
 	'settings'    => 'typography_top_menu_heading',
 	'default'     => array(
-		'font-family'    => 'Roboto',
+		'font-family'    => 'Rubik',
 		'variant'        => 'regular',
 		'line-height'    => '1.5',
 		'letter-spacing' => '0',
-		'color'          => '#FFFFFF',
 		'text-align'     => 'center',
 		'text-transform' => 'uppercase',
 	),
@@ -96,17 +88,16 @@ Kirki::add_field('kirki_config', array(
 	'section'     => 'typography_section',
 	'settings'    => 'typography_main_heading',
 	'default'     => array(
-		'font-family'    => 'Roboto',
-		'variant'        => 'regular',
+		'font-family'    => 'Rubik',
+		'variant'        => '700',
 		'line-height'    => '1.5',
 		'letter-spacing' => '0',
-		'color'          => '#FFFFFF',
 		'text-align'     => 'left',
 		'text-transform' => 'none',
 	),
 	'output'      => array(
 		array(
-			'element'			=> '.main-heading',
+			'element'			=> '.heading-main',
 		),
 	),
 ));
@@ -124,19 +115,28 @@ Kirki::add_field('kirki_config', array(
 	),
 	'output'			=> array(
 		array(
-			'element'			=> '.main-heading',
+			'element'			=> '.heading-main',
 			'units'				=> 'rem',
 			'property'		=> 'font-size',
 		),
+	),
+));
+
+Kirki::add_field('kirki_config', array(
+	'type'        => 'slider',
+	'label'       => esc_html__('Main Heading Opacity', 'kirki'),
+	'settings'    => 'typography_main_heading_opacity',
+	'section'     => 'typography_section',
+	'default'     => 1,
+	'choices'     => array(
+		'min'					=> 0,
+		'max'					=> 1,
+		'step'				=> 0.01,
+	),
+	'output'			=> array(
 		array(
-			'element'			=> '.main-heading-button',
-			'units'				=> 'rem',
-			'property'		=> 'width',
-		),
-		array(
-			'element'			=> '.main-heading-button',
-			'units'				=> 'rem',
-			'property'		=> 'height',
+			'element'			=> '.heading-main',
+			'property'		=> 'opacity',
 		),
 	),
 ));
@@ -147,17 +147,35 @@ Kirki::add_field('kirki_config', array(
 	'section'     => 'typography_section',
 	'settings'    => 'typography_title_heading',
 	'default'     => array(
-		'font-family'    => 'Roboto',
-		'variant'        => 'regular',
+		'font-family'    => 'Rubik',
+		'variant'        => '900',
 		'line-height'    => '1.5',
 		'letter-spacing' => '0',
-		'color'          => '#FFFFFF',
 		'text-align'     => 'left',
 		'text-transform' => 'none',
 	),
 	'output'      => array(
 		array(
-			'element'			=> '.title-heading',
+			'element'			=> '.heading-title',
+		),
+	),
+));
+
+Kirki::add_field('kirki_config', array(
+	'type'        => 'slider',
+	'label'       => esc_html__('Title Heading Opacity', 'kirki'),
+	'settings'    => 'typography_title_heading_opacity',
+	'section'     => 'typography_section',
+	'default'     => 1,
+	'choices'     => array(
+		'min'					=> 0,
+		'max'					=> 1,
+		'step'				=> 0.01,
+	),
+	'output'			=> array(
+		array(
+			'element'			=> '.heading-title',
+			'property'		=> 'opacity',
 		),
 	),
 ));
@@ -175,7 +193,7 @@ Kirki::add_field('kirki_config', array(
 	),
 	'output'			=> array(
 		array(
-			'element'			=> '.title-heading',
+			'element'			=> '.heading-title',
 			'units'				=> 'rem',
 			'property'		=> 'font-size',
 		),
@@ -188,17 +206,16 @@ Kirki::add_field('kirki_config', array(
 	'section'     => 'typography_section',
 	'settings'    => 'typography_subtitle_heading',
 	'default'     => array(
-		'font-family'    => 'Roboto',
+		'font-family'    => 'Rubik',
 		'variant'        => 'regular',
 		'line-height'    => '1.5',
 		'letter-spacing' => '0',
-		'color'          => '#FFFFFF',
 		'text-align'     => 'left',
 		'text-transform' => 'none',
 	),
 	'output'      => array(
 		array(
-			'element'			=> '.subtitle-heading',
+			'element'			=> '.heading-subtitle',
 		),
 	),
 ));
@@ -216,7 +233,7 @@ Kirki::add_field('kirki_config', array(
 	),
 	'output'			=> array(
 		array(
-			'element'			=> '.subtitle-heading',
+			'element'			=> '.heading-subtitle',
 			'units'				=> 'rem',
 			'property'		=> 'font-size',
 		),
@@ -229,17 +246,16 @@ Kirki::add_field('kirki_config', array(
 	'section'     => 'typography_section',
 	'settings'    => 'typography_caption_heading',
 	'default'     => array(
-		'font-family'    => 'Roboto',
+		'font-family'    => 'Rubik',
 		'variant'        => 'regular',
 		'line-height'    => '1.5',
 		'letter-spacing' => '0',
-		'color'          => '#FFFFFF',
 		'text-align'     => 'left',
 		'text-transform' => 'none',
 	),
 	'output'      => array(
 		array(
-			'element'			=> array('small', 'caption', '.caption-heading'),
+			'element'			=> array('small', 'caption', '.heading-caption'),
 		),
 	),
 ));
@@ -257,7 +273,7 @@ Kirki::add_field('kirki_config', array(
 	),
 	'output'			=> array(
 		array(
-			'element'			=> array('small', 'caption', '.caption-heading'),
+			'element'			=> array('small', 'caption', '.heading-caption'),
 			'units'				=> 'rem',
 			'property'		=> 'font-size',
 		),

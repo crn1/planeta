@@ -71,6 +71,9 @@ function init_scripts()
 	// Wordpress Required Styles
 	wp_enqueue_style('wordpress-required-style', get_stylesheet_uri());
 
+	// Normalize CSS
+	wp_enqueue_style('normalize-css', get_template_directory_uri() . '/css/normalize.min.css', false, '8.0.1', 'all');
+
 	// Macy Masonry
 	wp_enqueue_script('masonry-script', get_template_directory_uri() . '/js/macy.min.js', array(), '2.5.1');
 

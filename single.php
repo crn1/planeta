@@ -7,7 +7,7 @@
 		<?php endif; ?>
 		<?php if(have_posts()): while(have_posts()) : the_post(); ?>
 			<article <?php post_class(); ?>>
-				<h2 class='title-heading'>
+				<h2 class='heading-title'>
 					<?php the_title(); ?>
 				</h2>
 				<?php if(has_post_thumbnail()): ?>

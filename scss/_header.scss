@@ -22,6 +22,8 @@ header {
 	z-index: 99999;
 	cursor: pointer;
 	border: none;
+	height: 48px;
+	width: 48px;
 	border-radius: 50%;
 	@include flexContainer($direction: column);
 }
