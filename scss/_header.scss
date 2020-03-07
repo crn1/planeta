@@ -1,9 +1,9 @@
 @import 'modules/flex';
 
-header {
+#main-header {
 	z-index: 99900;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	background-color: transparent;
 	@include flexContainer();
 
@@ -38,4 +38,8 @@ header {
 	background-color: rgba(0, 0, 0, 0.84);
 	text-align: center;
 	@include flexContainer($direction: column);
+}
+
+.sticky {
+	position: fixed;
 }

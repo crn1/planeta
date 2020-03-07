@@ -1,13 +1,13 @@
-.default-container, .header-container {
+.default-container, #main-header {
   width: 100%;
   margin-left: 1rem;
   margin-right: 1rem;
   margin: 0 auto;
   box-sizing: border-box; }
-  .default-container:before, .header-container:before {
+  .default-container:before, #main-header:before {
     content: '';
     padding-left: 1em; }
-  .default-container:after, .header-container:after {
+  .default-container:after, #main-header:after {
     content: '';
     padding-right: 1em; }
 
@@ -22,22 +22,22 @@
   padding-top: 0;
   padding-bottom: 0; }
 
-header {
+#main-header {
   z-index: 99900;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row; }
-  header #logo {
+  #main-header #logo {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
     flex-grow: 1; }
-  header i {
+  #main-header i {
     cursor: pointer; }
 
 #menu-button {
@@ -66,6 +66,9 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column; }
+
+.sticky {
+  position: fixed; }
 
 footer {
   background-color: transparent;
@@ -98,7 +101,7 @@ a {
 a:hover::before {
 	height: calc(100% + 0.5rem);
 }*/
-img {
+.image {
   width: 100%;
   object-fit: cover; }
 

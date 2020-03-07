@@ -8,7 +8,7 @@ get_header();
 ?>
 <main id='main-frontpage'>
 	<?php
-		$layout = get_theme_mod('blocks_layout', array());
+		$layout = get_theme_mod('blocks_layout', array('landing', 'portfolio', 'clients', 'testemonials'));
 
 		$title_classes = '';
 		$title_lax = '';
@@ -83,7 +83,7 @@ get_header();
 								if($item['image'])
 								{
 									$image_url = wp_get_attachment_image_src($item['image'], 'large')[0];
-									echo "<img src='${image_url}' />";
+									echo "<img src='${image_url}' class='image' />";
 								}
 
 								echo "<h3 class='heading-subtitle'>${item['title']}</h3>";
