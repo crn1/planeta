@@ -75,7 +75,7 @@ function init_scripts()
 	wp_enqueue_style('normalize-css', get_template_directory_uri() . '/css/normalize.min.css', false, '8.0.1', 'all');
 
 	// Animate CSS
-	if(get_theme_mod('frontpage_title_type', 'none') == 'reveal' || get_theme_mod('frontpage_title_type', 'none') == 'reveal')
+	if(get_theme_mod('frontpage_title_type', 'none') == 'reveal' || get_theme_mod('frontpage_subtitle_type', 'none') == 'reveal')
 	{
 		wp_enqueue_style('animate-css', get_template_directory_uri() . '/css/animate.min.css', false, '3.7.2', 'all');
 	}
@@ -84,7 +84,10 @@ function init_scripts()
 	wp_enqueue_script('masonry-script', get_template_directory_uri() . '/js/macy.min.js', array(), '2.5.1');
 
 	// Laxxx
-	wp_enqueue_script('lax-script', get_template_directory_uri() . '/js/lax.min.js');
+	if(get_theme_mod('frontpage_title_type', 'none') == 'scroll' || get_theme_mod('frontpage_subtitle_type', 'none') == 'scroll')
+	{
+		wp_enqueue_script('lax-script', get_template_directory_uri() . '/js/lax.min.js');
+	}
 
 	// Main Styles
 	wp_enqueue_style('main-style', get_template_directory_uri() . '/css/style.css', false, '1.0.0', 'all');

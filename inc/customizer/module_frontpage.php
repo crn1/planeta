@@ -1,78 +1,11 @@
 <?php
 
-$animate_css_list = array(
-	'bounce'							=> esc_html__('Bounce', 'kirki'),
-	'flash'								=> esc_html__('Flash', 'kirki'),
-	'pulse'								=> esc_html__('Pulse', 'kirki'),
-	'rubberBand'					=> esc_html__('Rubber Band', 'kirki'),
-	'shake'								=> esc_html__('Shake', 'kirki'),
-	'swing'								=> esc_html__('Swing', 'kirki'),
-	'tada'								=> esc_html__('Tada', 'kirki'),
-	'wobble'							=> esc_html__('Wobble', 'kirki'),
-	'jello'								=> esc_html__('Jello', 'kirki'),
-	'heartBeat'						=> esc_html__('Heart Beat', 'kirki'),
-	'bounceIn'						=> esc_html__('Bounce In', 'kirki'),
-	'bounceInDown'				=> esc_html__('Bounce In Down', 'kirki'),
-	'bounceInLeft'				=> esc_html__('Bounce In Left', 'kirki'),
-	'bounceInRight'				=> esc_html__('Bounce In Right', 'kirki'),
-	'bounceInUp'					=> esc_html__('Bounce In Up', 'kirki'),
-	'fadeIn'							=> esc_html__('Fade In', 'kirki'),
-	'fadeInDown'					=> esc_html__('Fade In Down', 'kirki'),
-	'fadeInDownBig'				=> esc_html__('Fade In Down Big', 'kirki'),
-	'fadeInLeft'					=> esc_html__('Fade In Left', 'kirki'),
-	'fadeInLeftBig'				=> esc_html__('Fade In Left Big', 'kirki'),
-	'fadeInRight'					=> esc_html__('Fade In Right', 'kirki'),
-	'fadeInRightBig'			=> esc_html__('Fade In Right Big', 'kirki'),
-	'fadeInUp'						=> esc_html__('Fade In Up', 'kirki'),
-	'fadeInUpBig'					=> esc_html__('Fade In Up Big', 'kirki'),
-	'flip'								=> esc_html__('Flip', 'kirki'),
-	'flipInX'							=> esc_html__('Flip In X', 'kirki'),
-	'flipInY'							=> esc_html__('Flip In Y', 'kirki'),
-	'lightSpeedIn'				=> esc_html__('Lightspeed', 'kirki'),
-	'rotateIn'						=> esc_html__('Rotate In', 'kirki'),
-	'rotateInDownLeft'		=> esc_html__('Rotate In Down Left', 'kirki'),
-	'rotateInDownRight'		=> esc_html__('Rotate In Down Right', 'kirki'),
-	'rotateInUpLeft'			=> esc_html__('Rotate In Up Left', 'kirki'),
-	'rotateInUpRight'			=> esc_html__('Rotate In Up Right', 'kirki'),
-	'slideInDown'					=> esc_html__('Slide In Down', 'kirki'),
-	'slideInLeft'					=> esc_html__('Slide In Left', 'kirki'),
-	'slideInRight'				=> esc_html__('Slide In Right', 'kirki'),
-	'slideInUp'						=> esc_html__('Slide In Up', 'kirki'),
-	'zoomIn'							=> esc_html__('Zoom In', 'kirki'),
-	'zoomInDown'					=> esc_html__('Zoom In Down', 'kirki'),
-	'zoomInLeft'					=> esc_html__('Zoom In Left', 'kirki'),
-	'zoomInRight'					=> esc_html__('Zoom In Right', 'kirki'),
-	'zoomInUp'						=> esc_html__('Zoom In Up', 'kirki'),
-	'jackInTheBox'				=> esc_html__('Jack In The Box', 'kirki'),
-	'rollIn'							=> esc_html__('Roll In', 'kirki'),
-);
+require_once(get_template_directory() . '/inc/customizer/misc_animate.php');
+require_once(get_template_directory() . '/inc/customizer/misc_lax.php');
 
 Kirki::add_section('frontpage_section', array(
 	'title'       => esc_html__('Frontpage', 'kirki'),
 	'panel'       => 'modules_panel',
-));
-
-Kirki::add_field('kirki_config', array(
-	'type'			=> 'toggle',
-	'label'			=> esc_html__('Use Parallax', 'kirki'),
-	'section'		=> 'frontpage_section',
-	'settings'	=> 'frontpage_parallax',
-	'default'		=> false,
-));
-
-Kirki::add_field('kirki_config', array(
-	'type'			=> 'toggle',
-	'label'			=> esc_html__('Random Parallax Speed', 'kirki'),
-	'section'		=> 'frontpage_section',
-	'settings'	=> 'frontpage_parallax_random',
-	'default'		=> false,
-	'active_callback' => array(
-		array(
-			'setting'				=> 'frontpage_parallax',
-			'operator'			=> '==',
-			'value'					=> true,
-		),
-	),
 ));
 
 Kirki::add_field('kirki_config', array(
@@ -109,23 +42,40 @@ Kirki::add_field('kirki_config', array(
 	'label'					=> esc_html__('Effect Type', 'kirki'),
 	'section'				=> 'frontpage_section',
 	'settings'			=> 'frontpage_title_effect_scroll',
-	'default'				=> 'fade_in',
-	'choices'				=> array(
-		'fade_in'				=> esc_html__('Fade in (default)', 'kirki'),
-		'rise_top'			=> esc_html__('Rise from Top', 'kirki'),
-		'rise_bottom'		=> esc_html__('Rise from Bottom', 'kirki'),
-		'grow'					=> esc_html__('Grow/Shrink', 'kirki'),
-		'rotate'				=> esc_html__('Rotate (3D)', 'kirki'),
-	),
+	'default'				=> 'blurOut',
+	'choices'				=> $lax_js_list_labels,
 	'active_callback'	=> array(
 		array(
 			'setting'				=> 'frontpage_title_type',
 			'operator'			=> '==',
 			'value'					=> 'scroll'
 		),
-
 	),
 ));
+
+foreach($lax_js_list as $key => $lax_item)
+{
+	Kirki::add_field('kirki_config', array(
+		'type'					=> 'slider',
+		'label'					=> esc_html__('Effect Strength', 'kirki'),
+		'section'				=> 'frontpage_section',
+		'settings'			=> 'frontpage_title_strength_' . $key,
+		'default'				=> $lax_item['default'],
+		'choices'				=> $lax_item['choices'],
+		'active_callback'	=> array(
+			array(
+				'setting'				=> 'frontpage_title_type',
+				'operator'			=> '==',
+				'value'					=> 'scroll'
+			),
+			array(
+				'setting'				=> 'frontpage_title_effect_scroll',
+				'operator'			=> '==',
+				'value'					=> $key,
+			),
+		),
+	));
+}
 
 Kirki::add_field('kirki_config', array(
 	'type' 						=> 'slider',
@@ -221,14 +171,8 @@ Kirki::add_field('kirki_config', array(
 	'label'					=> esc_html__('Effect Type', 'kirki'),
 	'section'				=> 'frontpage_section',
 	'settings'			=> 'frontpage_subtitle_effect_scroll',
-	'default'				=> 'fade_in',
-	'choices'				=> array(
-		'fade_in'				=> esc_html__('Fade in (default)', 'kirki'),
-		'rise_top'			=> esc_html__('Rise from Top', 'kirki'),
-		'rise_bottom'		=> esc_html__('Rise from Bottom', 'kirki'),
-		'grow'					=> esc_html__('Grow/Shrink', 'kirki'),
-		'rotate'				=> esc_html__('Rotate (3D)', 'kirki'),
-	),
+	'default'				=> 'blurOut',
+	'choices'				=> $lax_js_list_labels,
 	'active_callback'	=> array(
 		array(
 			'setting'				=> 'frontpage_subtitle_type',
@@ -237,6 +181,30 @@ Kirki::add_field('kirki_config', array(
 		),
 	),
 ));
+
+foreach($lax_js_list as $key => $lax_item)
+{
+	Kirki::add_field('kirki_config', array(
+		'type'					=> 'slider',
+		'label'					=> esc_html__('Effect Strength', 'kirki'),
+		'section'				=> 'frontpage_section',
+		'settings'			=> 'frontpage_subtitle_strength_' . $key,
+		'default'				=> $lax_item['default'],
+		'choices'				=> $lax_item['choices'],
+		'active_callback'	=> array(
+			array(
+				'setting'				=> 'frontpage_subtitle_type',
+				'operator'			=> '==',
+				'value'					=> 'scroll'
+			),
+			array(
+				'setting'				=> 'frontpage_subtitle_effect_scroll',
+				'operator'			=> '==',
+				'value'					=> $key,
+			),
+		),
+	));
+}
 
 Kirki::add_field('kirki_config', array(
 	'type' 						=> 'slider',

@@ -9,29 +9,50 @@ get_header();
 <main id='main-frontpage'>
 	<?php
 		$layout = get_theme_mod('blocks_layout', array());
+
+		$title_classes = '';
+		$title_lax = '';
+		if(get_theme_mod('frontpage_title_type', 'none') == 'reveal')
+		{
+			$title_effect = get_theme_mod('frontpage_title_effect_reveal', 'fadeIn');
+			$title_classes = ' animated ' . $title_effect;
+		}else if(get_theme_mod('frontpage_title_type', 'none') == 'scroll')
+		{
+			$title_effect = get_theme_mod('frontpage_title_effect_scroll', 'blurOut');
+			$title_classes = ' lax';
+			$title_strength = get_theme_mod("frontpage_title_strength_${title_effect}", -1);
+			$title_strength = $title_strength != -1 ? '-' . $title_strength : '';
+			$title_lax = "data-lax-preset='${title_effect}${title_strength}'";
+		}
+
+		$subtitle_classes = '';
+		$subtitle_lax = '';
+		if(get_theme_mod('frontpage_subtitle_type', 'none') == 'reveal')
+		{
+			$subtitle_effect = get_theme_mod('frontpage_subtitle_effect_reveal', 'fadeIn');
+			$subtitle_classes = ' animated ' . $subtitle_effect;
+		}else if(get_theme_mod('frontpage_subtitle_type', 'none') == 'scroll')
+		{
+			$subtitle_effect = get_theme_mod('frontpage_subtitle_effect_scroll', 'blurOut');
+			$subtitle_classes = ' lax';
+			$subtitle_strength = get_theme_mod("frontpage_title_strength_${subtitle_effect}", -1);
+			$subtitle_strength = $subtitle_strength != -1 ? '-' . $subtitle_strength : '';
+			$subtitle_lax = "data-lax-preset='${subtitle_effect}${subtitle_strength}'";
+		}
+
 		foreach($layout as $section):
 			$bg_type = get_theme_mod($section . '_bg_type', 'static') === 'static' ? $section . '-bg' : '';
 			$section_title = get_theme_mod("${section}_title", 'Block Title');
 			$section_subtitle = get_theme_mod("${section}_subtitle", 'Block Subtitle');
 			$section_items = get_theme_mod("${section}_items", array());
-
-			//Animate CSS
-			$title_type = get_theme_mod('frontpage_title_type', 'none');
-			$title_effect_reveal = get_theme_mod('frontpage_title_effect_reveal', 'fadeIn');
-			$title_reveal_classes = $title_type == 'reveal' ? ' animated ' . $title_effect_reveal : '';
-
-			$subtitle_type = get_theme_mod('frontpage_subtitle_type', 'none');
-			$subtitle_effect_reveal = get_theme_mod('frontpage_subtitle_effect_reveal', 'fadeIn');
-			$subtitle_reveal_classes = $subtitle_type == 'reveal' ? ' animated ' . $subtitle_effect_reveal : '';
 	?>
 		<section class='<?php echo $bg_type ?>'>
 
 			<div class='default-container'>
-
-				<h2 class='heading-title frontpage-title<?php echo $title_reveal_classes; ?>'>
+				<h2 class='heading-title frontpage-title<?php echo $title_classes; ?>' <?php echo $title_lax; ?>>
 					<?php echo $section_title; ?>
 				</h2>
-				<h3 class='heading-subtitle frontpage-subtitle<?php echo $subtitle_reveal_classes; ?>'>
+				<h3 class='heading-subtitle frontpage-subtitle<?php echo $subtitle_classes; ?>' <?php echo $subtitle_lax; ?>>
 					<?php echo $section_subtitle; ?>
 				</h3>
 				<?php
