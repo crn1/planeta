@@ -1,22 +1,22 @@
 <?php
 
-Kirki::add_config('kirki_config', array(
+Kirki::add_config('planeta_config', array(
 	'capability'	=> 'edit_theme_options',
 	'option_type'	=> 'theme_mod',
 ));
 
-Kirki::add_field('kirki_config', array());
+Kirki::add_field('planeta_config', array());
 
 Kirki::add_panel('theme_options_panel', array(
-	'title'       => esc_html__('Theme Options', 'kirki'),
+	'title'       => esc_html__('Theme Options', 'planeta'),
 ));
 
 Kirki::add_panel('modules_panel', array(
-	'title'       => esc_html__('Modules', 'kirki'),
+	'title'       => esc_html__('Modules', 'planeta'),
 ));
 
 Kirki::add_panel('blocks_panel', array(
-	'title'       => esc_html__('Homepage Blocks', 'kirki'),
+	'title'       => esc_html__('Homepage Blocks', 'planeta'),
 ));
 
 //Theme Options

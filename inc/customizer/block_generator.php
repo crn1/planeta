@@ -23,41 +23,41 @@ function supplier_add_homepage_blocks_section(
 		}
 
 		Kirki::add_section("${section_name}${suffix}_section", array(
-			'title' => esc_html__($section_title . $num_suffix, 'kirki'),
+			'title' => esc_html__($section_title . $num_suffix, 'planeta'),
 			'panel' => 'blocks_panel',
 		));
 
-		Kirki::add_field('kirki_config', array(
+		Kirki::add_field('planeta_config', array(
 			'type'			=> 'text',
-			'label'			=> esc_html__('Title', 'kirki'),
+			'label'			=> esc_html__('Title', 'planeta'),
 			'section'		=> "${section_name}${suffix}_section",
 			'settings'	=> "${section_name}${suffix}_title",
-			'default'		=> esc_html__('Block Title', 'kirki'),
+			'default'		=> esc_html__('Block Title', 'planeta'),
 		));
 
-		Kirki::add_field('kirki_config', array(
+		Kirki::add_field('planeta_config', array(
 			'type'			=> 'textarea',
-			'label'			=> esc_html__('Subtitle/Content', 'kirki'),
+			'label'			=> esc_html__('Subtitle/Content', 'planeta'),
 			'section'		=> "${section_name}${suffix}_section",
 			'settings'	=> "${section_name}${suffix}_subtitle",
-			'default'		=> esc_html__('Lorem ipsum dolor sit amet', 'kirki'),
+			'default'		=> esc_html__('Lorem ipsum dolor sit amet', 'planeta'),
 		));
 
-		Kirki::add_field('kirki_config', array(
+		Kirki::add_field('planeta_config', array(
 			'type'			=> 'radio-buttonset',
-			'label'			=> esc_html__('Background Type', 'kirki'),
+			'label'			=> esc_html__('Background Type', 'planeta'),
 			'section'		=> "${section_name}${suffix}_section",
 			'settings'	=> "${section_name}${suffix}_bg_type",
 			'default'		=> 'static',
 			'choices'		=> array(
-				'static'		=> esc_html__('Static', 'kirki'),
-				'video'			=> esc_html__('Video', 'kirki'),
+				'static'		=> esc_html__('Static', 'planeta'),
+				'video'			=> esc_html__('Video', 'planeta'),
 			),
 		));
 
-		Kirki::add_field('kirki_config', array(
+		Kirki::add_field('planeta_config', array(
 			'type'						=> 'link',
-			'label'						=> esc_html__('Video URL', 'kirki'),
+			'label'						=> esc_html__('Video URL', 'planeta'),
 			'section'					=> "${section_name}${suffix}_section",
 			'settings'				=> "${section_name}${suffix}_video",
 			'default'					=> 'http://example.org/video-url',
@@ -70,9 +70,9 @@ function supplier_add_homepage_blocks_section(
 			)
 		));
 
-		Kirki::add_field('kirki_config', array(
+		Kirki::add_field('planeta_config', array(
 			'type'									=> 'background',
-			'label'									=> esc_html__('Background', 'kirki'),
+			'label'									=> esc_html__('Background', 'planeta'),
 			'section'								=> "${section_name}${suffix}_section",
 			'settings'							=> "${section_name}${suffix}_bg",
 			'default'								=> array(
@@ -100,7 +100,7 @@ function supplier_add_homepage_blocks_section(
 
 		foreach($section_fields as $key => $field)
 		{
-			Kirki::add_field('kirki_config', array_merge(
+			Kirki::add_field('planeta_config', array_merge(
 				array(
 					'section'		=> "${section_name}${suffix}_section",
 					'settings'	=> "${section_name}${suffix}_${key}",
@@ -110,9 +110,9 @@ function supplier_add_homepage_blocks_section(
 
 		if(sizeof($items_fields) > 0)
 		{
-			Kirki::add_field('kirki_config', array(
+			Kirki::add_field('planeta_config', array(
 				'type'					=> 'slider',
-				'label'					=> esc_html__('Number of columns for items', 'kirki'),
+				'label'					=> esc_html__('Number of columns for items', 'planeta'),
 				'section'				=> "${section_name}${suffix}_section",
 				'settings'			=> "${section_name}${suffix}_masonry_num",
 				'default'				=> 2,
@@ -123,28 +123,28 @@ function supplier_add_homepage_blocks_section(
 				),
 			));
 
-			Kirki::add_field('kirki_config', array(
+			Kirki::add_field('planeta_config', array(
 				'type'					=> 'select',
-				'label'					=> esc_html__('Items Card Type', 'kirki'),
+				'label'					=> esc_html__('Items Card Type', 'planeta'),
 				'section'				=> "${section_name}${suffix}_section",
 				'settings'			=> "${section_name}${suffix}_card_type",
 				'default'				=> 'classic',
 				'choices'				=> array(
-					'classic'					=> esc_html__('Classic (default)', 'kirki'),
-					'3d'							=> esc_html__('3D', 'kirki'),
-					'3d-parallax'			=> esc_html__('3D Parallax', 'kirki'),
+					'classic'					=> esc_html__('Classic (default)', 'planeta'),
+					'3d'							=> esc_html__('3D', 'planeta'),
+					'3d-parallax'			=> esc_html__('3D Parallax', 'planeta'),
 				),
 			));
 
-			Kirki::add_field('kirki_config', array(
+			Kirki::add_field('planeta_config', array(
 				'type'			=> 'repeater',
 				'section'		=> "${section_name}${suffix}_section",
 				'settings'	=> "${section_name}${suffix}_items",
-				'label'			=> esc_html__('Items', 'kirki'),
+				'label'			=> esc_html__('Items', 'planeta'),
 				'row_label'	=> array(
 					'type'			=> 'field',
 					'field'			=> 'title',
-					'value'   	=> esc_html__('Item', 'kirki'),
+					'value'   	=> esc_html__('Item', 'planeta'),
 				),
 				'default'		=> array(),
 				'fields'		=> $items_fields,

@@ -8,17 +8,17 @@ supplier_add_homepage_blocks_section(
 	$items_fields = array(
 		'title'			=> array(
 			'type'					=> 'text',
-			'label'  		   	=> esc_html__('Title', 'kirki'),
+			'label'  		   	=> esc_html__('Title', 'planeta'),
 		),
 
 		'description'			=> array(
 			'type'						=> 'textarea',
-			'label'						=> esc_html__('Description', 'kirki'),
+			'label'						=> esc_html__('Description', 'planeta'),
 		),
 
 		'image'						=> array(
 			'type'						=> 'image',
-			'label'						=> esc_html__('Image', 'kirki'),
+			'label'						=> esc_html__('Image', 'planeta'),
 		),
 	)
 );

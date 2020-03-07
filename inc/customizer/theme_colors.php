@@ -1,14 +1,14 @@
 <?php
 
 Kirki::add_section('colors_section', array(
-	'title'	=> esc_html__('Colors', 'kirki'),
+	'title'	=> esc_html__('Colors', 'planeta'),
 	'panel'	=> 'theme_options_panel',
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'			=> 'color',
 	'settings'	=> 'colors_primary',
-	'label'			=> esc_html__('Primary', 'kirki'),
+	'label'			=> esc_html__('Primary', 'planeta'),
 	'section'		=> 'colors_section',
 	'default'		=> '#D50000',
 	'choices'		=> array(
@@ -26,10 +26,10 @@ Kirki::add_field('kirki_config', array(
 	)
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'			=> 'color',
 	'settings'	=> 'colors_border',
-	'label'			=> esc_html__('Border/Seperator', 'kirki'),
+	'label'			=> esc_html__('Border/Seperator', 'planeta'),
 	'section'		=> 'colors_section',
 	'default'		=> '#616161',
 	'choices'		=> array(
@@ -39,10 +39,10 @@ Kirki::add_field('kirki_config', array(
 	)
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'			=> 'color',
 	'settings'	=> 'colors_text',
-	'label'			=> esc_html__('Text', 'kirki'),
+	'label'			=> esc_html__('Text', 'planeta'),
 	'section'		=> 'colors_section',
 	'default'		=> '#FFFFFF',
 	'choices'		=> array(

@@ -1,13 +1,13 @@
 <?php
 
 Kirki::add_section('typography_section', array(
-	'title'       => esc_html__('Typography', 'kirki' ),
+	'title'       => esc_html__('Typography', 'planeta' ),
 	'panel'       => 'theme_options_panel',
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'        => 'typography',
-	'label'       => esc_html__('Main Typography', 'kirki'),
+	'label'       => esc_html__('Main Typography', 'planeta'),
 	'section'     => 'typography_section',
 	'settings'    => 'typography_main',
 	'default'     => array(
@@ -24,9 +24,9 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'        => 'typography',
-	'label'       => esc_html__('Links', 'kirki'),
+	'label'       => esc_html__('Links', 'planeta'),
 	'section'     => 'typography_section',
 	'settings'    => 'typography_links',
 	'default'     => array(
@@ -42,9 +42,9 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'        => 'typography',
-	'label'       => esc_html__('Top Menu Links', 'kirki'),
+	'label'       => esc_html__('Top Menu Links', 'planeta'),
 	'section'     => 'typography_section',
 	'settings'    => 'typography_top_menu_heading',
 	'default'     => array(
@@ -62,9 +62,9 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'        => 'slider',
-	'label'       => esc_html__('Top Menu Links Size (rem)', 'kirki'),
+	'label'       => esc_html__('Top Menu Links Size (rem)', 'planeta'),
 	'section'     => 'typography_section',
 	'settings'    => 'typography_top_menu_size',
 	'default'     => 3,
@@ -82,9 +82,9 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'        => 'typography',
-	'label'       => esc_html__('Main Heading', 'kirki'),
+	'label'       => esc_html__('Main Heading', 'planeta'),
 	'section'     => 'typography_section',
 	'settings'    => 'typography_main_heading',
 	'default'     => array(
@@ -102,9 +102,9 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'        => 'slider',
-	'label'       => esc_html__('Main Heading Size (rem)', 'kirki'),
+	'label'       => esc_html__('Main Heading Size (rem)', 'planeta'),
 	'settings'    => 'typography_main_heading_size',
 	'section'     => 'typography_section',
 	'default'     => 2,
@@ -122,9 +122,9 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'        => 'slider',
-	'label'       => esc_html__('Main Heading Opacity', 'kirki'),
+	'label'       => esc_html__('Main Heading Opacity', 'planeta'),
 	'settings'    => 'typography_main_heading_opacity',
 	'section'     => 'typography_section',
 	'default'     => 1,
@@ -141,9 +141,9 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'        => 'typography',
-	'label'       => esc_html__('Title Heading', 'kirki'),
+	'label'       => esc_html__('Title Heading', 'planeta'),
 	'section'     => 'typography_section',
 	'settings'    => 'typography_title_heading',
 	'default'     => array(
@@ -161,9 +161,9 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'        => 'slider',
-	'label'       => esc_html__('Title Heading Opacity', 'kirki'),
+	'label'       => esc_html__('Title Heading Opacity', 'planeta'),
 	'settings'    => 'typography_title_heading_opacity',
 	'section'     => 'typography_section',
 	'default'     => 1,
@@ -180,9 +180,9 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'        => 'slider',
-	'label'       => esc_html__('Title Heading Size (rem)', 'kirki'),
+	'label'       => esc_html__('Title Heading Size (rem)', 'planeta'),
 	'section'     => 'typography_section',
 	'settings'    => 'typography_title_size',
 	'default'     => 10,
@@ -200,9 +200,9 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'        => 'typography',
-	'label'       => esc_html__('Subtitle Heading', 'kirki'),
+	'label'       => esc_html__('Subtitle Heading', 'planeta'),
 	'section'     => 'typography_section',
 	'settings'    => 'typography_subtitle_heading',
 	'default'     => array(
@@ -220,9 +220,9 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'        => 'slider',
-	'label'       => esc_html__('Subtitle Heading Size (rem)', 'kirki'),
+	'label'       => esc_html__('Subtitle Heading Size (rem)', 'planeta'),
 	'section'     => 'typography_section',
 	'settings'    => 'typography_subtitle_size',
 	'default'     => 2,
@@ -240,9 +240,9 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'        => 'typography',
-	'label'       => esc_html__('Caption Heading', 'kirki'),
+	'label'       => esc_html__('Caption Heading', 'planeta'),
 	'section'     => 'typography_section',
 	'settings'    => 'typography_caption_heading',
 	'default'     => array(
@@ -260,9 +260,9 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'        => 'slider',
-	'label'       => esc_html__('Caption Size (rem)', 'kirki'),
+	'label'       => esc_html__('Caption Size (rem)', 'planeta'),
 	'section'     => 'typography_section',
 	'settings'    => 'typography_caption_size',
 	'default'     => 0.8,

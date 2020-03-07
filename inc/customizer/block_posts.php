@@ -7,7 +7,7 @@ supplier_add_homepage_blocks_section(
 	$section_fields = array(
 		'masonry_num' 	=> array(
 			'type'					=> 'slider',
-			'label'					=> esc_html__('Number of columns for items', 'kirki'),
+			'label'					=> esc_html__('Number of columns for items', 'planeta'),
 			'default'				=> 3,
 			'choices'				=> array(
 				'min'						=> 1,

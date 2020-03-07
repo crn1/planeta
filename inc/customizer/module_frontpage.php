@@ -4,26 +4,26 @@ require_once(get_template_directory() . '/inc/customizer/misc_animate.php');
 require_once(get_template_directory() . '/inc/customizer/misc_lax.php');
 
 Kirki::add_section('frontpage_section', array(
-	'title'       => esc_html__('Frontpage', 'kirki'),
+	'title'       => esc_html__('Frontpage', 'planeta'),
 	'panel'       => 'modules_panel',
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type' 						=> 'radio-buttonset',
 	'settings'				=> 'frontpage_title_type',
-	'label'						=> esc_html__('Section Title Type', 'kirki'),
+	'label'						=> esc_html__('Section Title Type', 'planeta'),
 	'section'					=> 'frontpage_section',
 	'default'					=> 'none',
 	'choices'					=> array(
-		'none'						=> esc_html__('None', 'kirki'),
-		'reveal'					=> esc_html__('Reveal', 'kirki'),
-		'scroll'					=> esc_html__('Scroll', 'kirki'),
+		'none'						=> esc_html__('None', 'planeta'),
+		'reveal'					=> esc_html__('Reveal', 'planeta'),
+		'scroll'					=> esc_html__('Scroll', 'planeta'),
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'					=> 'select',
-	'label'					=> esc_html__('Effect Type', 'kirki'),
+	'label'					=> esc_html__('Effect Type', 'planeta'),
 	'section'				=> 'frontpage_section',
 	'settings'			=> 'frontpage_title_effect_reveal',
 	'default'				=> 'fadeIn',
@@ -37,9 +37,9 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'					=> 'select',
-	'label'					=> esc_html__('Effect Type', 'kirki'),
+	'label'					=> esc_html__('Effect Type', 'planeta'),
 	'section'				=> 'frontpage_section',
 	'settings'			=> 'frontpage_title_effect_scroll',
 	'default'				=> 'blurOut',
@@ -55,9 +55,9 @@ Kirki::add_field('kirki_config', array(
 
 foreach($lax_js_list as $key => $lax_item)
 {
-	Kirki::add_field('kirki_config', array(
+	Kirki::add_field('planeta_config', array(
 		'type'					=> 'slider',
-		'label'					=> esc_html__('Effect Strength', 'kirki'),
+		'label'					=> esc_html__('Effect Strength', 'planeta'),
 		'section'				=> 'frontpage_section',
 		'settings'			=> 'frontpage_title_strength_' . $key,
 		'default'				=> $lax_item['default'],
@@ -77,10 +77,10 @@ foreach($lax_js_list as $key => $lax_item)
 	));
 }
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type' 						=> 'slider',
 	'settings'				=> 'frontpage_title_timing',
-	'label'						=> esc_html__('Timing (in seconds)', 'kirki'),
+	'label'						=> esc_html__('Timing (in seconds)', 'planeta'),
 	'section'					=> 'frontpage_section',
 	'default'					=> 1,
 	'choices'					=> array(
@@ -104,9 +104,9 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'			=> 'slider',
-	'label'			=> esc_html__('Section Title Padding Top & Bottom (vh)', 'kirki'),
+	'label'			=> esc_html__('Section Title Padding Top & Bottom (vh)', 'planeta'),
 	'section'		=> 'frontpage_section',
 	'settings'	=> 'frontpage_title_padding',
 	'default'		=> 0,
@@ -136,22 +136,22 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type' 						=> 'radio-buttonset',
 	'settings'				=> 'frontpage_subtitle_type',
-	'label'						=> esc_html__('Section Subtitle Type', 'kirki'),
+	'label'						=> esc_html__('Section Subtitle Type', 'planeta'),
 	'section'					=> 'frontpage_section',
 	'default'					=> 'none',
 	'choices'					=> array(
-		'none'						=> esc_html__('None', 'kirki'),
-		'reveal'					=> esc_html__('Reveal', 'kirki'),
-		'scroll'					=> esc_html__('Scroll', 'kirki'),
+		'none'						=> esc_html__('None', 'planeta'),
+		'reveal'					=> esc_html__('Reveal', 'planeta'),
+		'scroll'					=> esc_html__('Scroll', 'planeta'),
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'					=> 'select',
-	'label'					=> esc_html__('Effect Type', 'kirki'),
+	'label'					=> esc_html__('Effect Type', 'planeta'),
 	'section'				=> 'frontpage_section',
 	'settings'			=> 'frontpage_subtitle_effect_reveal',
 	'default'				=> 'fadeIn',
@@ -166,9 +166,9 @@ Kirki::add_field('kirki_config', array(
 	),
 ));
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'					=> 'select',
-	'label'					=> esc_html__('Effect Type', 'kirki'),
+	'label'					=> esc_html__('Effect Type', 'planeta'),
 	'section'				=> 'frontpage_section',
 	'settings'			=> 'frontpage_subtitle_effect_scroll',
 	'default'				=> 'blurOut',
@@ -184,9 +184,9 @@ Kirki::add_field('kirki_config', array(
 
 foreach($lax_js_list as $key => $lax_item)
 {
-	Kirki::add_field('kirki_config', array(
+	Kirki::add_field('planeta_config', array(
 		'type'					=> 'slider',
-		'label'					=> esc_html__('Effect Strength', 'kirki'),
+		'label'					=> esc_html__('Effect Strength', 'planeta'),
 		'section'				=> 'frontpage_section',
 		'settings'			=> 'frontpage_subtitle_strength_' . $key,
 		'default'				=> $lax_item['default'],
@@ -206,10 +206,10 @@ foreach($lax_js_list as $key => $lax_item)
 	));
 }
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type' 						=> 'slider',
 	'settings'				=> 'frontpage_subtitle_timing',
-	'label'						=> esc_html__('Timing (in seconds)', 'kirki'),
+	'label'						=> esc_html__('Timing (in seconds)', 'planeta'),
 	'section'					=> 'frontpage_section',
 	'default'					=> 1,
 	'choices'					=> array(
@@ -234,9 +234,9 @@ Kirki::add_field('kirki_config', array(
 ));
 
 
-Kirki::add_field('kirki_config', array(
+Kirki::add_field('planeta_config', array(
 	'type'			=> 'slider',
-	'label'			=> esc_html__('Section Subtitle Padding Bottom (vh)', 'kirki'),
+	'label'			=> esc_html__('Section Subtitle Padding Bottom (vh)', 'planeta'),
 	'section'		=> 'frontpage_section',
 	'settings'	=> 'frontpage_subtitle_padding',
 	'default'		=> 15,
