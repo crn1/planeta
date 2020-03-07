@@ -12,7 +12,7 @@ supplier_add_homepage_blocks_section(
 		),
 
 		'description'	=> array(
-			'type'				=> 'text',
+			'type'				=> 'textarea',
 			'label'				=> esc_html__('Description', 'kirki'),
 		),
 

@@ -1,7 +1,7 @@
 <?php
 
-include_once get_theme_file_path( 'inc/kirki-installer.php' );
-include_once get_theme_file_path( 'inc/customizer.php' );
+include_once get_theme_file_path('inc/kirki-installer.php');
+include_once get_theme_file_path('inc/customizer.php');
 
 //Theme support
 add_theme_support('post-thumbnails');
@@ -73,6 +73,12 @@ function init_scripts()
 
 	// Normalize CSS
 	wp_enqueue_style('normalize-css', get_template_directory_uri() . '/css/normalize.min.css', false, '8.0.1', 'all');
+
+	// Animate CSS
+	if(get_theme_mod('frontpage_title_type', 'none') == 'reveal' || get_theme_mod('frontpage_title_type', 'none') == 'reveal')
+	{
+		wp_enqueue_style('animate-css', get_template_directory_uri() . '/css/animate.min.css', false, '3.7.2', 'all');
+	}
 
 	// Macy Masonry
 	wp_enqueue_script('masonry-script', get_template_directory_uri() . '/js/macy.min.js', array(), '2.5.1');

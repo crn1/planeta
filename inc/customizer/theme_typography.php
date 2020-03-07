@@ -13,7 +13,7 @@ Kirki::add_field('kirki_config', array(
 	'default'     => array(
 		'font-family'    => 'Rubik',
 		'variant'        => 'regular',
-		'font-size'      => '16px',
+		'font-size'      => '22px',
 		'line-height'    => '1.5',
 		'letter-spacing' => '0',
 	),
@@ -152,7 +152,7 @@ Kirki::add_field('kirki_config', array(
 		'line-height'    => '1.5',
 		'letter-spacing' => '0',
 		'text-align'     => 'left',
-		'text-transform' => 'none',
+		'text-transform' => 'uppercase',
 	),
 	'output'      => array(
 		array(
@@ -185,7 +185,7 @@ Kirki::add_field('kirki_config', array(
 	'label'       => esc_html__('Title Heading Size (rem)', 'kirki'),
 	'section'     => 'typography_section',
 	'settings'    => 'typography_title_size',
-	'default'     => 5,
+	'default'     => 10,
 	'choices'     => array(
 		'min'					=> 0.1,
 		'max'					=> 10,

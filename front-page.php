@@ -14,15 +14,24 @@ get_header();
 			$section_title = get_theme_mod("${section}_title", 'Block Title');
 			$section_subtitle = get_theme_mod("${section}_subtitle", 'Block Subtitle');
 			$section_items = get_theme_mod("${section}_items", array());
+
+			//Animate CSS
+			$title_type = get_theme_mod('frontpage_title_type', 'none');
+			$title_effect_reveal = get_theme_mod('frontpage_title_effect_reveal', 'fadeIn');
+			$title_reveal_classes = $title_type == 'reveal' ? ' animated ' . $title_effect_reveal : '';
+
+			$subtitle_type = get_theme_mod('frontpage_subtitle_type', 'none');
+			$subtitle_effect_reveal = get_theme_mod('frontpage_subtitle_effect_reveal', 'fadeIn');
+			$subtitle_reveal_classes = $subtitle_type == 'reveal' ? ' animated ' . $subtitle_effect_reveal : '';
 	?>
 		<section class='<?php echo $bg_type ?>'>
 
 			<div class='default-container'>
 
-				<h2 class='heading-title frontpage-title'>
+				<h2 class='heading-title frontpage-title<?php echo $title_reveal_classes; ?>'>
 					<?php echo $section_title; ?>
 				</h2>
-				<h3 class='lax heading-subtitle frontpage-subtitle' data-lax-translate-y='0 0, vh -vh'>
+				<h3 class='heading-subtitle frontpage-subtitle<?php echo $subtitle_reveal_classes; ?>'>
 					<?php echo $section_subtitle; ?>
 				</h3>
 				<?php

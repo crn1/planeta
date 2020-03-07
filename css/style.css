@@ -4,8 +4,12 @@
   padding-right: 1rem;
   margin: 0 auto; }
 
-.frontpage-title {
-  line-height: 1;
+.heading-subtitle {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+
+.frontpage-title, .frontpage-subtitle {
+  line-height: 1 !important;
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0;
