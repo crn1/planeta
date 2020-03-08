@@ -21,7 +21,7 @@ Kirki::add_panel('blocks_panel', array(
 
 //Theme Options
 require_once(get_template_directory() . '/inc/customizer/theme_background.php');
-require_once(get_template_directory() . '/inc/customizer/theme_container.php');
+require_once(get_template_directory() . '/inc/customizer/theme_containers.php');
 require_once(get_template_directory() . '/inc/customizer/theme_typography.php');
 require_once(get_template_directory() . '/inc/customizer/theme_colors.php');
 //require_once(get_template_directory() . '/inc/customizer/theme_cursor.php');
@@ -32,14 +32,14 @@ require_once(get_template_directory() . '/inc/customizer/module_frontpage.php');
 require_once(get_template_directory() . '/inc/customizer/module_header.php');
 require_once(get_template_directory() . '/inc/customizer/module_footer.php');
 //require_once(get_template_directory() . '/inc/customizer/module_blog.php');
-require_once(get_template_directory() . '/inc/customizer/module_personal_sidebar.php');
+require_once(get_template_directory() . '/inc/customizer/module_portfolio.php');
 //require_once(get_template_directory() . '/inc/customizer/module_social_media.php');
 
 //Homepage sections
 require_once(get_template_directory() . '/inc/customizer/block_generator.php');
 require_once(get_template_directory() . '/inc/customizer/block_layout.php');
 require_once(get_template_directory() . '/inc/customizer/block_landing.php');
-require_once(get_template_directory() . '/inc/customizer/block_portfolio.php');
+require_once(get_template_directory() . '/inc/customizer/block_projects.php');
 require_once(get_template_directory() . '/inc/customizer/block_services.php');
 require_once(get_template_directory() . '/inc/customizer/block_clients.php');
 require_once(get_template_directory() . '/inc/customizer/block_experience.php');

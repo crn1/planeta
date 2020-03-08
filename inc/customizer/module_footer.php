@@ -26,35 +26,11 @@ Kirki::add_field('planeta_config', array(
 ));
 
 Kirki::add_field('planeta_config', array(
-	'type' 				=> 'sortable',
-	'settings'		=> 'footer_main_layout',
-	'label'				=> esc_html__('Layout', 'planeta'),
-	'section'			=> 'footer_section',
-	'default'			=> array(
-		'widgets',
-		'menu',
-		'copyright'
-	),
-	'choices'			=> array(
-		'widgets'			=> esc_html__('Widgets', 'planeta'),
-		'menu'				=> esc_html__('Menu', 'planeta'),
-		'copyright'		=> esc_html__('Copyright', 'planeta'),
-	),
-));
-
-Kirki::add_field('planeta_config', array(
 	'type' 						=> 'editor',
 	'settings'				=> 'footer_copyright',
 	'label'						=> esc_html__('Copyright', 'planeta'),
 	'section'					=> 'footer_section',
 	'default'					=> 'Copyright (C) 2020 Lorem Ipsum. All rights reserved.',
-	'active_callback' => array(
-		array(
-			'setting'					=> 'footer_main_layout',
-			'operator'				=> 'contains',
-			'value'						=> 'copyright',
-		),
-	),
 ));
 
 ?>

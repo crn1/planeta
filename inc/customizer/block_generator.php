@@ -67,7 +67,7 @@ function supplier_add_homepage_blocks_section(
 					'operator'			=> '==',
 					'value'					=> 'video',
 				),
-			)
+			),
 		));
 
 		Kirki::add_field('planeta_config', array(
@@ -95,7 +95,7 @@ function supplier_add_homepage_blocks_section(
 					'operator'						=> '===',
 					'value'								=> 'static',
 				),
-			)
+			),
 		));
 
 		foreach($section_fields as $key => $field)

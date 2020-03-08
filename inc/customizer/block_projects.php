@@ -1,7 +1,7 @@
 <?php
 
 supplier_add_homepage_blocks_section(
-	$module_name = 'portfolio',
+	$module_name = 'projects',
 	$module_title = 'Portfolio/Projects',
 	$num_of_instances = 1,
 	$section_fields = array(),
