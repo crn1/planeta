@@ -1,0 +1,41 @@
+<div class='card'>
+
+<?php
+	$item = get_query_var('item');
+	$item = array_merge(array(
+		'title'							=> 'Block Title',
+		'description'				=> 'Lorem ipsum dolor sit amet',
+		'url'								=> 'http://example.org',
+		'url_tab'						=> '',
+		'image'							=> '',
+		'date_span'					=> '',
+		'author'						=> '',
+		'author_profession' => '',
+	), $item);
+
+
+	if($item['image'])
+	{
+		$image_url = wp_get_attachment_image_src($item['image'], 'large')[0];
+		echo "<img src='${image_url}' class='image' />";
+	}
+
+	echo "<h3 class='heading-subtitle'>${item['title']}</h3>";
+
+	echo $item['date_span'] && "<p class='${section}-date-span'>${item['date_span']}</p>";
+
+	echo "<p class='${section}-description'>${item['description']}</p>";
+
+	if($item['url'])
+	{
+		$url_tab = $item['url_tab'] ? '_blank' : '';
+		echo "<a href='${item['url']}' target='${url_tab}>' class='url'>Promeni me!</a>";
+	}
+
+	echo $item['author'] && "<p class='${section}-author'>${item['author']}</p>";
+
+	echo $item['author_profession'] &&  "<p class='${section}-author-profession'>${item['author_profession']}</p>";
+
+?>
+
+</div>

@@ -1,4 +1,4 @@
-<footer class='default-container'>
+<footer id='footer' class='default-container'>
 	<?php if(is_active_sidebar('footer-sidebar')): ?>
 		<div id='footer-sidebar'>
 			<?php dynamic_sidebar('footer-sidebar'); ?>

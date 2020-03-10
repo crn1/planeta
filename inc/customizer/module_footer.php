@@ -20,13 +20,13 @@ Kirki::add_field('planeta_config', array(
 	),
 	'output'								=> array(
 		array(
-			'element'								=> '.footer-background',
+			'element'								=> '#footer',
 		),
 	),
 ));
 
 Kirki::add_field('planeta_config', array(
-	'type' 						=> 'editor',
+	'type' 						=> 'textarea',
 	'settings'				=> 'footer_copyright',
 	'label'						=> esc_html__('Copyright', 'planeta'),
 	'section'					=> 'footer_section',

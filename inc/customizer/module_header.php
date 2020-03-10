@@ -8,9 +8,23 @@ Kirki::add_section('header_section', array(
 Kirki::add_field('planeta_config', array(
 	'type' 				=> 'toggle',
 	'settings'		=> 'header_sticky',
-	'label'				=> esc_html__('Sticky Header', 'planeta'),
+	'label'				=> esc_html__('Fixed Header', 'planeta'),
 	'section'			=> 'header_section',
 	'default'			=> false,
+	'output'			=> array(
+		array(
+			'element'				=> '#main-header',
+			'property'			=> 'position',
+			'value_pattern'	=> 'fixed',
+			'exclude'				=> array(false),
+		),
+		array(
+			'element'				=> '#main-header',
+			'property'			=> 'position',
+			'value_pattern'	=> 'static',
+			'exclude'				=> array(true),
+		),
+	)
 ));
 
 Kirki::add_field('planeta_config', array(

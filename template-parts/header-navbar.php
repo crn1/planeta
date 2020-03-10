@@ -1,10 +1,9 @@
 <?php
-	$sticky = get_theme_mod('header_sticky', false) ? 'sticky' : '';
 	$header_class = get_theme_mod('header_type', 'header-classic');
 	$logo_url = get_theme_mod('header_logo', '');
 ?>
 
-<header id='main-header' class='<?php echo $sticky; ?> <?php echo $header_class; ?>'>
+<header id='main-header' class='<?php echo $header_class; ?>'>
 	<?php if(is_active_sidebar('promotion')): ?>
 		<aside>
 			<?php dynamic_sidebar('promotion'); ?>
