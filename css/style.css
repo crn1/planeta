@@ -14,6 +14,11 @@
     content: '';
     padding-right: 1em; }
 
+.content-container {
+  display: grid;
+  grid-column-gap: 3rem;
+  grid-template-columns: 22% 56% 22%; }
+
 .heading-subtitle {
   margin-bottom: 0;
   padding-bottom: 0; }
@@ -38,6 +43,15 @@
     #sidebar-portfolio #sidebar-portfolio-info:after {
       content: '';
       padding-right: 1em; }
+
+.sidebar-left {
+  display: inline-grid; }
+
+.page-content {
+  display: inline-grid; }
+
+.sidebar-right {
+  display: inline-grid; }
 
 .frontpage-title, .frontpage-subtitle {
   line-height: 1 !important;
@@ -126,5 +140,8 @@ a:hover::before {
 .image {
   width: 100%;
   object-fit: cover; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
 
 /*# sourceMappingURL=style.css.map */

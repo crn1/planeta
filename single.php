@@ -1,30 +1,35 @@
 <?php get_header(); ?>
-	<main class='default-container'>
-		<?php if(is_active_sidebar('blog-left-sidebar')): ?>
-			<aside>
-				<?php dynamic_sidebar('blog-left-sidebar'); ?>
-			</aside>
-		<?php endif; ?>
+<?php get_template_part('template-parts/header', 'navbar'); ?>
+<main>
+	<article class='default-container'>
 		<?php if(have_posts()): while(have_posts()) : the_post(); ?>
-			<article <?php post_class(); ?>>
-				<h2 class='heading-title'>
-					<?php the_title(); ?>
-				</h2>
-				<?php if(has_post_thumbnail()): ?>
-					<img src='<?php the_post_thumbnail_url(); ?>' />
-				<?php endif; ?>
-				<?php the_content(); ?>
-				<?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?>
-				<?php previous_posts_link(); ?>
-				<?php next_posts_link(); ?>
-				<?php comments_template(); ?>
-			</article>
+			<?php if(has_post_thumbnail()): ?>
+				<img src='<?php the_post_thumbnail_url(); ?>' />
+			<?php endif; ?>
+			<h2 class='heading-title'>
+				<?php the_title(); ?>
+			</h2>
+
+			<div class='content-container'>
+				<aside class='sidebar-left'>
+				<?php if(is_active_sidebar('page-left-sidebar')) {
+					dynamic_sidebar('blog-left-sidebar');
+				} ?>
+				</aside>
+				<div class='page-content'>
+					<?php the_content(); ?>
+					<?php wp_link_pages(); ?>
+				</div>
+				<aside class='sidebar-right'>
+				<?php if(is_active_sidebar('page-right-sidebar')) {
+					dynamic_sidebar('blog-right-sidebar');
+				} ?>
+				</aside>
+			</div>
+
+			<?php comments_template(); ?>
 		<?php endwhile; endif; ?>
-		<?php if(is_active_sidebar('blog-right-sidebar')): ?>
-			<aside>
-				<?php dynamic_sidebar('blog-right-sidebar'); ?>
-			</aside>
-		<?php endif; ?>
-		<?php wp_link_pages(); ?>
-	</main>
+	</article>
+</main>
+<?php get_template_part('template-parts/footer', 'notice'); ?>
 <?php get_footer(); ?>

@@ -43,7 +43,7 @@ function register_widgets()
 
 	register_sidebar(array(
 		'name'	=> 'Promotion',
-		'id'		=> 'promotion-sidebar',
+		'id'		=> 'promotion',
 	));
 
 	register_sidebar(array(
@@ -57,8 +57,8 @@ function register_widgets()
 	));
 
 	register_sidebar(array(
-		'name'	=> 'Footer',
-		'id'		=> 'footer-sidebar',
+		'name'	=> 'Extended Footer',
+		'id'		=> 'extended-footer',
 	));
 }
 add_action('widgets_init', 'register_widgets');

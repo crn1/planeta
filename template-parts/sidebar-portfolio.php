@@ -25,9 +25,9 @@
 				<?php echo $profession; ?>
 			</p>
 		<?php endif; ?>
-		<?php if(is_active_sidebar('portfolio-sidebar')): ?>
+		<?php if(is_active_sidebar('sidebar-portfolio')): ?>
 			<div id='portfolio-sidebar-widgets'>
-				<?php dynamic_sidebar('portfolio-sidebar'); ?>
+				<?php dynamic_sidebar('sidebar-portfolio'); ?>
 			</div>
 		<?php endif; ?>
 
