@@ -41,3 +41,8 @@
 .sidebar-right {
 	display: inline-grid;
 }
+
+.sidebar-left,
+.sidebar-right {
+	list-style-type: none;
+}

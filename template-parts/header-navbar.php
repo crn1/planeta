@@ -3,12 +3,24 @@
 	$logo_url = get_theme_mod('header_logo', '');
 ?>
 
+<?php if(is_active_sidebar('promotion')): ?>
+	<div id='promotion' class='default-container'>
+		<?php dynamic_sidebar('promotion'); ?>
+	</div>
+	<script>
+		Macy({
+			container: '#promotion',
+			columns: <?php echo get_theme_mod('promotion_container', 3); ?>,
+			breakAt: {
+				960: <?php echo get_theme_mod('promotion_container', 3) == 1 ? 1: 2; ?>,
+				768: 1,
+			},
+			margin: 16,
+		});
+	</script>
+<?php endif; ?>
+
 <header id='main-header' class='<?php echo $header_class; ?>'>
-	<?php if(is_active_sidebar('promotion')): ?>
-		<aside>
-			<?php dynamic_sidebar('promotion'); ?>
-		</aside>
-	<?php endif; ?>
 
 	<?php if($logo_url != ''): ?>
 		<img src='<?php echo $logo_url; ?>' />
@@ -32,9 +44,21 @@
 		?>
 	</nav>
 
-	<?php if(is_active_sidebar('extended-header')): ?>
-		<div>
-			<?php dynamic_sidebar('extended-header'); ?>
-		</div>
-	<?php endif; ?>
 </header>
+
+<?php if(is_active_sidebar('extended-header')): ?>
+	<div id='extended-header' class='default-container'>
+		<?php dynamic_sidebar('extended-header'); ?>
+	</div>
+	<script>
+		Macy({
+			container: '#extended-header',
+			columns: <?php echo get_theme_mod('extended_header_container', 3); ?>,
+			breakAt: {
+				960: <?php echo get_theme_mod('extended_header_container', 3) == 1 ? 1: 2; ?>,
+				768: 1,
+			},
+			margin: 16,
+		});
+	</script>
+<?php endif; ?>

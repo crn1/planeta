@@ -1,3 +1,15 @@
+.alignleft {
+  text-align: left;
+  align: left; }
+
+.alignright {
+  text-align: right;
+  align: right; }
+
+.aligncenter {
+  text-align: center;
+  align: center; }
+
 .default-container,
 #main-header {
   width: 100%;
@@ -19,7 +31,7 @@
   grid-column-gap: 3rem;
   grid-template-columns: 22% 56% 22%; }
 
-.heading-subtitle {
+.heading-subtitle, .widgettitle {
   margin-bottom: 0;
   padding-bottom: 0; }
 
@@ -52,6 +64,10 @@
 
 .sidebar-right {
   display: inline-grid; }
+
+.sidebar-left,
+.sidebar-right {
+  list-style-type: none; }
 
 .frontpage-title, .frontpage-subtitle {
   line-height: 1 !important;

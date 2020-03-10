@@ -12,7 +12,7 @@
 
 			<div class='content-container'>
 				<aside class='sidebar-left'>
-				<?php if(is_active_sidebar('page-left-sidebar')) {
+				<?php if(is_active_sidebar('blog-left-sidebar')) {
 					dynamic_sidebar('blog-left-sidebar');
 				} ?>
 				</aside>
@@ -21,7 +21,7 @@
 					<?php wp_link_pages(); ?>
 				</div>
 				<aside class='sidebar-right'>
-				<?php if(is_active_sidebar('page-right-sidebar')) {
+				<?php if(is_active_sidebar('blog-right-sidebar')) {
 					dynamic_sidebar('blog-right-sidebar');
 				} ?>
 				</aside>
