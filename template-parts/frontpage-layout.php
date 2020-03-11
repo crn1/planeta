@@ -1,6 +1,6 @@
 <?php
 
-$layout = get_theme_mod('blocks_layout', array());
+$layout = get_theme_mod('sections_layout', array());
 
 get_template_part('template-parts/frontpage', 'effects');
 $title_classes = get_query_var('title_classes');
@@ -8,13 +8,13 @@ $title_lax = get_query_var('title_lax');
 $subtitle_classes = get_query_var('subtitle_classes');
 $subtitle_lax = get_query_var('subtitle_lax');
 
-for($index = 1; $index <= 15; $index++):
-	set_query_var('index', $index);
-	$section_title = get_theme_mod("section_${index}_title", 'Block Title');
-	$section_subtitle = get_theme_mod("section_${index}_subtitle", 'Block Subtitle');
+foreach($layout as $section):
+	set_query_var('section', $section);
+	$section_title = get_theme_mod("${section}_title", 'Block Title');
+	$section_subtitle = get_theme_mod("${section}_subtitle", 'Block Subtitle');
 
-	$section_type = get_theme_mod("section_${index}_card_preset", 'none');
-	$section_items = get_theme_mod("section_${index}_${section_type}_items", array());
+	$section_type = get_theme_mod("${section}_card_preset", 'none');
+	$section_items = get_theme_mod("${section}_${section_type}_items", array());
 ?>
 
 	<section id='<?php echo "section-${index}"; ?>'>
@@ -49,4 +49,4 @@ for($index = 1; $index <= 15; $index++):
 		</div>
 	</section>
 
-<?php endfor; ?>
+<?php endforeach; ?>

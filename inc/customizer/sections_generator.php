@@ -30,27 +30,6 @@ function supplier_add_frontpage_sections($num_sections = 15, $card_types = array
 		));
 
 		Kirki::add_field('planeta_config', array(
-			'type'									=> 'background',
-			'label'									=> esc_html__('Background', 'planeta'),
-			'section'								=> "section_${index}",
-			'settings'							=> "section_${index}_bg",
-			'default'								=> array(
-				'background-color'			=> 'rgba(0, 0, 0, 0)',
-				'background-image'			=> '',
-				'background-repeat'			=> 'repeat',
-				'background-positio'		=> 'center center',
-				'background-size'				=> 'cover',
-				'background-attachment'	=> 'scroll',
-			),
-			'transport'							=> 'auto',
-			'output'								=>	array(
-				array(
-					'element'								=> "#section-${index}",
-				)
-			),
-		));
-
-		Kirki::add_field('planeta_config', array(
 			'type'					=> 'select',
 			'label'					=> esc_html__('Items Preset', 'planeta'),
 			'section'				=> "section_${index}",
@@ -141,6 +120,27 @@ function supplier_add_frontpage_sections($num_sections = 15, $card_types = array
 				),
 			));
 		}
+
+		Kirki::add_field('planeta_config', array(
+			'type'									=> 'background',
+			'label'									=> esc_html__('Background', 'planeta'),
+			'section'								=> "section_${index}",
+			'settings'							=> "section_${index}_bg",
+			'default'								=> array(
+				'background-color'			=> 'rgba(0, 0, 0, 0)',
+				'background-image'			=> '',
+				'background-repeat'			=> 'repeat',
+				'background-positio'		=> 'center center',
+				'background-size'				=> 'cover',
+				'background-attachment'	=> 'scroll',
+			),
+			'transport'							=> 'auto',
+			'output'								=>	array(
+				array(
+					'element'								=> "#section-${index}",
+				)
+			),
+		));
 
 	}
 }
