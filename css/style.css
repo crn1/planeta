@@ -1,3 +1,9 @@
+.projects-classic-card .heading-subtitle, .projects-classic-card .widgettitle {
+  text-align: center; }
+.projects-classic-card .description:before {
+  content: ' ';
+  border-top: 1px solid white; }
+
 .alignleft {
   text-align: left;
   align: left; }

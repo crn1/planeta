@@ -1,54 +1,20 @@
 <?php
 
+$link_types = array(
+	'classic'							=> esc_html__('Classic (default)', 'planeta'),
+);
+
 $card_types = array(
-	'clients'							=> array(
-		'classic'							=> esc_html__('Default', 'planeta'),
-		'modern'							=> esc_html__('Modern', 'planeta'),
-	),
-	'posts'								=> array(
-		'classic'							=> esc_html__('Default', 'planeta'),
-		'modern'							=> esc_html__('Modern', 'planeta'),
-	),
-	'testimonials'				=> array(
-		'classic'							=> esc_html__('Default', 'planeta'),
-		'modern'							=> esc_html__('Modern', 'planeta'),
-	),
-	'services'						=> array(
-		'classic'							=> esc_html__('Default', 'planeta'),
-		'modern'							=> esc_html__('Modern', 'planeta'),
-	),
-	'projects'						=> array(
-		'classic'							=> esc_html__('Default', 'planeta'),
-		'modern'							=> esc_html__('Modern', 'planeta'),
-	),
-	'experience'					=> array(
-		'classic'							=> esc_html__('Default', 'planeta'),
-		'modern'							=> esc_html__('Modern', 'planeta'),
-	),
-	'mini_sections'				=> array(
-		'classic'							=> esc_html__('Default', 'planeta'),
-		'modern'							=> esc_html__('Modern', 'planeta'),
-	),
+	'services'						=> $link_types,
+	'projects'						=> $link_types,
+	'experience'					=> $link_types,
+	'clients'							=> $link_types,
+	'testimonials'				=> $link_types,
+	'posts'								=> $link_types,
+	'mini_sections'				=> $link_types,
 );
 
 $items_fields = array(
-	'clients'							=> array(),
-
-	'posts'								=> array(),
-
-	'testimonials' 				=> array(
-		'author'							=> array(
-			'type'								=> 'text',
-			'label'								=> esc_html__('Author', 'planeta'),
-			'default'							=> 'John Doe',
-		),
-		'author_profession'		=> array(
-			'type'								=> 'text',
-			'label'								=> esc_html__('Author Profession', 'planeta'),
-			'default'							=> 'Front-end Developer',
-		),
-	),
-
 	'services'						=> array(
 		'author'							=> array(
 			'type'								=> 'text',
@@ -81,7 +47,24 @@ $items_fields = array(
 		),
 	),
 
-	'mini_sectrions'			=> array(
+	'clients'							=> array(),
+
+	'testimonials' 				=> array(
+		'author'							=> array(
+			'type'								=> 'text',
+			'label'								=> esc_html__('Author', 'planeta'),
+			'default'							=> 'John Doe',
+		),
+		'author_profession'		=> array(
+			'type'								=> 'text',
+			'label'								=> esc_html__('Author Profession', 'planeta'),
+			'default'							=> 'Front-end Developer',
+		),
+	),
+
+	'posts'								=> array(),
+
+	'mini_sections'				=> array(
 		'url'									=> array(
 			'type'								=> 'text',
 			'label'								=> esc_html__('Item URL', 'planeta'),

@@ -1,7 +1,6 @@
-<div class='card'>
-
 <?php
 	$item = get_query_var('item');
+	$card_class = get_query_var('card_class');
 	$item = array_merge(array(
 		'title'							=> 'Block Title',
 		'description'				=> 'Lorem ipsum dolor sit amet',
@@ -13,6 +12,7 @@
 		'author_profession' => '',
 	), $item);
 
+	echo "<div class='${card_class}'>";
 
 	if($item['image'])
 	{
@@ -36,6 +36,6 @@
 
 	echo $item['author_profession'] &&  "<p class='author-profession'>${item['author_profession']}</p>";
 
+	echo "</div>"
 ?>
 
-</div>

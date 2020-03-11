@@ -13,11 +13,14 @@ foreach($layout as $section):
 	$section_title = get_theme_mod("${section}_title", 'Block Title');
 	$section_subtitle = get_theme_mod("${section}_subtitle", 'Block Subtitle');
 
-	$section_type = get_theme_mod("${section}_card_preset", 'none');
-	$section_items = get_theme_mod("${section}_${section_type}_items", array());
+	$section_preset = get_theme_mod("${section}_card_preset", 'none');
+	$section_type = get_theme_mod("${section}_${section_preset}_card_type", 'classic');
+	$card_class = "${section_preset}-${section_type}-card";
+
+	$section_items = get_theme_mod("${section}_${section_preset}_items", array());
 ?>
 
-	<section id='<?php echo "section-${index}"; ?>'>
+	<section id='<?php echo $section; ?>'>
 		<div class='default-container'>
 
 			<h2 class='heading-title frontpage-title<?php echo $title_classes; ?>' <?php echo $title_lax; ?>>
@@ -29,7 +32,7 @@ foreach($layout as $section):
 			</h3>
 
 			<?php if($section_type != 'none'): ?>
-				<div id='section-<?php echo $index; ?>-items'>
+				<div id='<?php echo $section; ?>-items'>
 				<?php
 					if($section_type == 'posts')
 					{
@@ -38,6 +41,7 @@ foreach($layout as $section):
 						foreach($section_items as $item)
 						{
 							set_query_var('item', $item);
+							set_query_var('card_class', $card_class);
 							get_template_part('template-parts/frontpage', 'card');
 						}
 					}

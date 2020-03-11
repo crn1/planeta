@@ -1,0 +1,14 @@
+.projects {
+	&-classic-card {
+		.heading-subtitle {
+			text-align: center;
+		}
+
+		.description {
+			&:before {
+				content: ' ';
+				border-top: 1px solid white;
+			}
+		}
+	}
+}
