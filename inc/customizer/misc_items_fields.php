@@ -1,5 +1,36 @@
 <?php
 
+$card_types = array(
+	'clients'							=> array(
+		'classic'							=> esc_html__('Default', 'planeta'),
+		'modern'							=> esc_html__('Modern', 'planeta'),
+	),
+	'posts'								=> array(
+		'classic'							=> esc_html__('Default', 'planeta'),
+		'modern'							=> esc_html__('Modern', 'planeta'),
+	),
+	'testimonials'				=> array(
+		'classic'							=> esc_html__('Default', 'planeta'),
+		'modern'							=> esc_html__('Modern', 'planeta'),
+	),
+	'services'						=> array(
+		'classic'							=> esc_html__('Default', 'planeta'),
+		'modern'							=> esc_html__('Modern', 'planeta'),
+	),
+	'projects'						=> array(
+		'classic'							=> esc_html__('Default', 'planeta'),
+		'modern'							=> esc_html__('Modern', 'planeta'),
+	),
+	'experience'					=> array(
+		'classic'							=> esc_html__('Default', 'planeta'),
+		'modern'							=> esc_html__('Modern', 'planeta'),
+	),
+	'mini_sections'				=> array(
+		'classic'							=> esc_html__('Default', 'planeta'),
+		'modern'							=> esc_html__('Modern', 'planeta'),
+	),
+);
+
 $items_fields = array(
 	'clients'							=> array(),
 

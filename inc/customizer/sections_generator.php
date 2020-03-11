@@ -4,7 +4,7 @@ $number_of_frontpage_sections = 15;
 
 require_once(get_template_directory() . '/inc/customizer/misc_items_fields.php');
 
-function supplier_add_frontpage_sections($num_sections = 15, $items_fields = array())
+function supplier_add_frontpage_sections($num_sections = 15, $card_types = array(), $items_fields = array())
 {
 	for($index = 1; $index <= $num_sections; $index++)
 	{
@@ -52,7 +52,7 @@ function supplier_add_frontpage_sections($num_sections = 15, $items_fields = arr
 
 		Kirki::add_field('planeta_config', array(
 			'type'					=> 'select',
-			'label'					=> esc_html__('Items Card Preset', 'planeta'),
+			'label'					=> esc_html__('Items Preset', 'planeta'),
 			'section'				=> "section_${index}",
 			'settings'			=> "section_${index}_card_preset",
 			'default'				=> 'none',
@@ -62,6 +62,25 @@ function supplier_add_frontpage_sections($num_sections = 15, $items_fields = arr
 				'testimonials'	=> esc_html__('Testimonials', 'planeta'),
 			),
 		));
+
+		foreach($card_types as $key => $types)
+		{
+			Kirki::add_field('planeta_config', array(
+				'type'						=> 'select',
+				'label'						=> esc_html__('Items Type', 'planeta'),
+				'section'					=> "section_${index}",
+				'settings'				=> "section_${index}_${key}_card_type",
+				'default'					=> 'classic',
+				'choices'					=> $types,
+				'active_callback' => array(
+					array(
+						'setting'					=> "section_${index}_card_preset",
+						'operator'				=> '==',
+						'value'						=> $key,
+					),
+				),
+			));
+		}
 
 		Kirki::add_field('planeta_config', array(
 			'type'					=> 'slider',
@@ -126,6 +145,6 @@ function supplier_add_frontpage_sections($num_sections = 15, $items_fields = arr
 	}
 }
 
-supplier_add_frontpage_sections($number_of_frontpage_sections, $items_fields);
+supplier_add_frontpage_sections($number_of_frontpage_sections, $card_types, $items_fields);
 
 ?>
