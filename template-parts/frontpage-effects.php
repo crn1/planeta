@@ -35,7 +35,7 @@
 		$subtitle_strength = $subtitle_strength != -1 ? '-' . $subtitle_strength : '';
 		$subtitle_lax = "data-lax-preset='${subtitle_effect}${subtitle_strength}'";
 	}
-	set_query_var('subtitle_classes', $title_classes);
-	set_query_var('subtitle_lax', $title_lax);
+	set_query_var('subtitle_classes', $subtitle_classes);
+	set_query_var('subtitle_lax', $subtitle_lax);
 
 ?>

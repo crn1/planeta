@@ -28,7 +28,7 @@ require_once(get_template_directory() . '/inc/customizer/theme_colors.php');
 
 //Modules
 //require_once(get_template_directory() . '/inc/customizer/module_page.php');
-require_once(get_template_directory() . '/inc/customizer/module_frontpage.php');
+require_once(get_template_directory() . '/inc/customizer/module_section.php');
 require_once(get_template_directory() . '/inc/customizer/module_header.php');
 require_once(get_template_directory() . '/inc/customizer/module_footer.php');
 //require_once(get_template_directory() . '/inc/customizer/module_blog.php');

@@ -4,7 +4,7 @@ require_once(get_template_directory() . '/inc/customizer/misc_animate.php');
 require_once(get_template_directory() . '/inc/customizer/misc_lax.php');
 
 Kirki::add_section('frontpage_section', array(
-	'title'       => esc_html__('Block (Section)', 'planeta'),
+	'title'       => esc_html__('Frontpage Section', 'planeta'),
 	'panel'       => 'modules_panel',
 ));
 
