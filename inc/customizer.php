@@ -15,8 +15,8 @@ Kirki::add_panel('modules_panel', array(
 	'title'       => esc_html__('Modules', 'planeta'),
 ));
 
-Kirki::add_panel('blocks_panel', array(
-	'title'       => esc_html__('Homepage Blocks', 'planeta'),
+Kirki::add_panel('sections_panel', array(
+	'title'       => esc_html__('Frontpage Sections', 'planeta'),
 ));
 
 //Theme Options
@@ -36,15 +36,7 @@ require_once(get_template_directory() . '/inc/customizer/module_portfolio.php');
 //require_once(get_template_directory() . '/inc/customizer/module_social_media.php');
 
 //Homepage sections
-require_once(get_template_directory() . '/inc/customizer/block_generator.php');
-require_once(get_template_directory() . '/inc/customizer/block_layout.php');
-require_once(get_template_directory() . '/inc/customizer/block_landing.php');
-require_once(get_template_directory() . '/inc/customizer/block_projects.php');
-require_once(get_template_directory() . '/inc/customizer/block_services.php');
-require_once(get_template_directory() . '/inc/customizer/block_clients.php');
-require_once(get_template_directory() . '/inc/customizer/block_experience.php');
-require_once(get_template_directory() . '/inc/customizer/block_testimonials.php');
-require_once(get_template_directory() . '/inc/customizer/block_posts.php');
-require_once(get_template_directory() . '/inc/customizer/block_mini_sections.php');
+require_once(get_template_directory() . '/inc/customizer/sections_generator.php');
+require_once(get_template_directory() . '/inc/customizer/sections_layout.php');
 
 ?>

@@ -12,15 +12,17 @@ $title_lax = get_query_var('title_lax');
 $subtitle_classes = get_query_var('subtitle_classes');
 $subtitle_lax = get_query_var('subtitle_lax');
 
-foreach($layout as $section):
-	set_query_var('section', $section);
-	$bg_type = get_theme_mod($section . '_bg_type', 'static') === 'static' ? $section . '-bg' : '';
-	$section_title = get_theme_mod("${section}_title", 'Block Title');
-	$section_subtitle = get_theme_mod("${section}_subtitle", 'Block Subtitle');
-	$section_items = get_theme_mod("${section}_items", array());
+for($index = 1; $index <= 15; $index++):
+	set_query_var('index', $index);
+	$section_title = get_theme_mod("section_${index}_title", 'Block Title');
+	$section_subtitle = get_theme_mod("section_${index}_subtitle", 'Block Subtitle');
+
+	//$section_type =
+
+	$section_items = get_theme_mod("section_${index}_items", array());
 ?>
 
-	<section class='<?php echo $bg_type ?>'>
+	<section id='<?php echo "section-${index}"; ?>'>
 
 		<div class='default-container'>
 			<h2 class='heading-title frontpage-title<?php echo $title_classes; ?>' <?php echo $title_lax; ?>>
@@ -33,7 +35,7 @@ foreach($layout as $section):
 
 				if(!has_prefix($section, 'landing'))
 				{
-					echo "<div id='${section}-items-container'>";
+					echo "<div id='${section}-items'>";
 
 					if(has_prefix($section, 'posts'))
 					{

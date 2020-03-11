@@ -22,9 +22,9 @@
 
 	echo "<h3 class='heading-subtitle'>${item['title']}</h3>";
 
-	echo $item['date_span'] && "<p class='${section}-date-span'>${item['date_span']}</p>";
+	echo $item['date_span'] && "<p class='date-span'>${item['date_span']}</p>";
 
-	echo "<p class='${section}-description'>${item['description']}</p>";
+	echo "<p class='description'>${item['description']}</p>";
 
 	if($item['url'])
 	{
@@ -32,9 +32,9 @@
 		echo "<a href='${item['url']}' target='${url_tab}>' class='url'>Promeni me!</a>";
 	}
 
-	echo $item['author'] && "<p class='${section}-author'>${item['author']}</p>";
+	echo $item['author'] && "<p class='author'>${item['author']}</p>";
 
-	echo $item['author_profession'] &&  "<p class='${section}-author-profession'>${item['author_profession']}</p>";
+	echo $item['author_profession'] &&  "<p class='author-profession'>${item['author_profession']}</p>";
 
 ?>
 

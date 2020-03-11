@@ -1,19 +1,17 @@
 <?php
 
-Kirki::add_section('blocks_layout_section', array(
-	'title'       => esc_html__('Layout', 'planeta'),
-	'panel'       => 'blocks_panel',
+// SMISLITI RESELJE ZA OVO
+//
+/*Kirki::add_section('sections_layout', array(
+	'title'       => esc_html__('Frontpage Layout', 'planeta'),
+	'panel'       => 'sections_panel',
 ));
-
-//
-// TODO: Videti ovaj kurac za mini sectionse (vrvt for petlja)
-//
 
 Kirki::add_field('planeta_config', array(
 	'type'				=> 'sortable',
 	'label'       => esc_html__('Layout', 'planeta'),
-	'section'			=> 'blocks_layout_section',
-	'settings'		=> 'blocks_layout',
+	'section'			=> 'sections_layout',
+	'settings'		=> 'sections_layout',
 	'default'			=> array(
 		'landing',
 		'portfolio',
@@ -35,6 +33,6 @@ Kirki::add_field('planeta_config', array(
 		'mini_sections_4'	=> esc_html__('Mini Sections #4', 'planeta'),
 		'mini_sections_5'	=> esc_html__('Mini Sections #5', 'planeta'),
 	),
-));
+));*/
 
 ?>
