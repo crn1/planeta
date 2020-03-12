@@ -13,178 +13,58 @@ Kirki::add_field('planeta_config', array(
 	'default'     => array(
 		'font-family'    => 'Rubik',
 		'variant'        => 'regular',
-		'font-size'      => '22px',
 		'line-height'    => '1.5',
 		'letter-spacing' => '0',
 	),
 	'output'      => array(
 		array(
-			'element' => array('body'),
+			'element'				=> array('html', 'body'),
+		),
+	),
+));
+
+Kirki::add_field('planeta_config', array(
+	'type'        => 'slider',
+	'label'       => esc_html__('Main Typography Size (px)', 'planeta'),
+	'section'     => 'typography_section',
+	'settings'    => 'typography_main_size',
+	'default'     => 16,
+	'choices'     => array(
+		'min'					=> 16,
+		'max'					=> 72,
+		'step'				=> 1,
+	),
+	'output'			=> array(
+		array(
+			'element'				=> array('html', 'body'),
+			'property'			=> 'font-size',
+			'value_pattern' => 'calc(16px + ($ - 16) * (100vw - 320px) / 640)',
 		),
 	),
 ));
 
 Kirki::add_field('planeta_config', array(
 	'type'        => 'typography',
-	'label'       => esc_html__('Links', 'planeta'),
+	'label'       => esc_html__('Section Title', 'planeta'),
 	'section'     => 'typography_section',
-	'settings'    => 'typography_links',
+	'settings'    => 'typography_section_title',
+	'default'			=> 'none',
 	'default'     => array(
-		'font-family'    => 'Rubik',
-		'variant'        => '600',
-		'letter-spacing' => '0',
-		'text-transform' => 'none',
+		'text-transform'    => 'none',
+		'text-align'    		=> 'left',
 	),
 	'output'      => array(
 		array(
-			'element'			=> 'a',
-		),
-	),
-));
-
-Kirki::add_field('planeta_config', array(
-	'type'        => 'typography',
-	'label'       => esc_html__('Top Menu Links', 'planeta'),
-	'section'     => 'typography_section',
-	'settings'    => 'typography_top_menu_heading',
-	'default'     => array(
-		'font-family'    => 'Rubik',
-		'variant'        => 'regular',
-		'line-height'    => '1.5',
-		'letter-spacing' => '0',
-		'text-align'     => 'center',
-		'text-transform' => 'uppercase',
-	),
-	'output'      => array(
-		array(
-			'element'			=> array('#top-menu', '#top-menu a'),
+			'element' 		=> '.section-title',
 		),
 	),
 ));
 
 Kirki::add_field('planeta_config', array(
 	'type'        => 'slider',
-	'label'       => esc_html__('Top Menu Links Size (rem)', 'planeta'),
+	'label'       => esc_html__('Section Title Size (rem)', 'planeta'),
 	'section'     => 'typography_section',
-	'settings'    => 'typography_top_menu_size',
-	'default'     => 3,
-	'choices'     => array(
-		'min'					=> 0.1,
-		'max'					=> 10,
-		'step'				=> 0.1,
-	),
-	'output'			=> array(
-		array(
-			'element'			=> '#top-menu a',
-			'units'				=> 'rem',
-			'property'		=> 'font-size',
-		),
-	),
-));
-
-Kirki::add_field('planeta_config', array(
-	'type'        => 'typography',
-	'label'       => esc_html__('Main Heading', 'planeta'),
-	'section'     => 'typography_section',
-	'settings'    => 'typography_main_heading',
-	'default'     => array(
-		'font-family'    => 'Rubik',
-		'variant'        => '700',
-		'line-height'    => '1.5',
-		'letter-spacing' => '0',
-		'text-align'     => 'left',
-		'text-transform' => 'none',
-	),
-	'output'      => array(
-		array(
-			'element'			=> '.heading-main',
-		),
-	),
-));
-
-Kirki::add_field('planeta_config', array(
-	'type'        => 'slider',
-	'label'       => esc_html__('Main Heading Size (rem)', 'planeta'),
-	'settings'    => 'typography_main_heading_size',
-	'section'     => 'typography_section',
-	'default'     => 2,
-	'choices'     => array(
-		'min'					=> 0.1,
-		'max'					=> 10,
-		'step'				=> 0.1,
-	),
-	'output'			=> array(
-		array(
-			'element'			=> '.heading-main',
-			'units'				=> 'rem',
-			'property'		=> 'font-size',
-		),
-	),
-));
-
-Kirki::add_field('planeta_config', array(
-	'type'        => 'slider',
-	'label'       => esc_html__('Main Heading Opacity', 'planeta'),
-	'settings'    => 'typography_main_heading_opacity',
-	'section'     => 'typography_section',
-	'default'     => 1,
-	'choices'     => array(
-		'min'					=> 0,
-		'max'					=> 1,
-		'step'				=> 0.01,
-	),
-	'output'			=> array(
-		array(
-			'element'			=> '.heading-main',
-			'property'		=> 'opacity',
-		),
-	),
-));
-
-Kirki::add_field('planeta_config', array(
-	'type'        => 'typography',
-	'label'       => esc_html__('Title Heading', 'planeta'),
-	'section'     => 'typography_section',
-	'settings'    => 'typography_title_heading',
-	'default'     => array(
-		'font-family'    => 'Rubik',
-		'variant'        => '900',
-		'line-height'    => '1.5',
-		'letter-spacing' => '0',
-		'text-align'     => 'left',
-		'text-transform' => 'uppercase',
-	),
-	'output'      => array(
-		array(
-			'element'			=> '.heading-title',
-		),
-	),
-));
-
-Kirki::add_field('planeta_config', array(
-	'type'        => 'slider',
-	'label'       => esc_html__('Title Heading Opacity', 'planeta'),
-	'settings'    => 'typography_title_heading_opacity',
-	'section'     => 'typography_section',
-	'default'     => 1,
-	'choices'     => array(
-		'min'					=> 0,
-		'max'					=> 1,
-		'step'				=> 0.01,
-	),
-	'output'			=> array(
-		array(
-			'element'			=> '.heading-title',
-			'property'		=> 'opacity',
-		),
-	),
-));
-
-Kirki::add_field('planeta_config', array(
-	'type'        => 'slider',
-	'label'       => esc_html__('Title Heading Size (rem)', 'planeta'),
-	'section'     => 'typography_section',
-	'settings'    => 'typography_title_size',
+	'settings'    => 'typography_section_title_size',
 	'default'     => 10,
 	'choices'     => array(
 		'min'					=> 0.1,
@@ -193,7 +73,7 @@ Kirki::add_field('planeta_config', array(
 	),
 	'output'			=> array(
 		array(
-			'element'			=> '.heading-title',
+			'element'			=> '.section-title',
 			'units'				=> 'rem',
 			'property'		=> 'font-size',
 		),
@@ -202,29 +82,26 @@ Kirki::add_field('planeta_config', array(
 
 Kirki::add_field('planeta_config', array(
 	'type'        => 'typography',
-	'label'       => esc_html__('Subtitle Heading', 'planeta'),
+	'label'       => esc_html__('Section Subtitle', 'planeta'),
 	'section'     => 'typography_section',
-	'settings'    => 'typography_subtitle_heading',
+	'settings'    => 'typography_section_subtitle',
+	'default'			=> 'none',
 	'default'     => array(
-		'font-family'    => 'Rubik',
-		'variant'        => 'regular',
-		'line-height'    => '1.5',
-		'letter-spacing' => '0',
-		'text-align'     => 'left',
-		'text-transform' => 'none',
+		'text-transform'    => 'none',
+		'text-align'    		=> 'left',
 	),
 	'output'      => array(
 		array(
-			'element'			=> '.heading-subtitle',
+			'element' 		=> '.section-subtitle',
 		),
 	),
 ));
 
 Kirki::add_field('planeta_config', array(
 	'type'        => 'slider',
-	'label'       => esc_html__('Subtitle Heading Size (rem)', 'planeta'),
+	'label'       => esc_html__('Section Subtitle Size (rem)', 'planeta'),
 	'section'     => 'typography_section',
-	'settings'    => 'typography_subtitle_size',
+	'settings'    => 'typography_section_subtitle_size',
 	'default'     => 2,
 	'choices'     => array(
 		'min'					=> 0.1,
@@ -233,7 +110,7 @@ Kirki::add_field('planeta_config', array(
 	),
 	'output'			=> array(
 		array(
-			'element'			=> '.heading-subtitle',
+			'element'			=> '.section-subtitle',
 			'units'				=> 'rem',
 			'property'		=> 'font-size',
 		),
@@ -242,30 +119,27 @@ Kirki::add_field('planeta_config', array(
 
 Kirki::add_field('planeta_config', array(
 	'type'        => 'typography',
-	'label'       => esc_html__('Caption Heading', 'planeta'),
+	'label'       => esc_html__('Page Title', 'planeta'),
 	'section'     => 'typography_section',
-	'settings'    => 'typography_caption_heading',
+	'settings'    => 'typography_page_title',
+	'default'			=> 'none',
 	'default'     => array(
-		'font-family'    => 'Rubik',
-		'variant'        => 'regular',
-		'line-height'    => '1.5',
-		'letter-spacing' => '0',
-		'text-align'     => 'left',
-		'text-transform' => 'none',
+		'text-transform'    => 'none',
+		'text-align'    		=> 'left',
 	),
 	'output'      => array(
 		array(
-			'element'			=> array('small', 'caption', '.heading-caption'),
+			'element' 		=> '.page-subtitle',
 		),
 	),
 ));
 
 Kirki::add_field('planeta_config', array(
 	'type'        => 'slider',
-	'label'       => esc_html__('Caption Size (rem)', 'planeta'),
+	'label'       => esc_html__('Page Title Size (rem)', 'planeta'),
 	'section'     => 'typography_section',
-	'settings'    => 'typography_caption_size',
-	'default'     => 0.8,
+	'settings'    => 'typography_page_title_size',
+	'default'     => 10,
 	'choices'     => array(
 		'min'					=> 0.1,
 		'max'					=> 10,
@@ -273,12 +147,11 @@ Kirki::add_field('planeta_config', array(
 	),
 	'output'			=> array(
 		array(
-			'element'			=> array('small', 'caption', '.heading-caption'),
+			'element'			=> '.page-title',
 			'units'				=> 'rem',
 			'property'		=> 'font-size',
 		),
 	),
 ));
-
 
 ?>

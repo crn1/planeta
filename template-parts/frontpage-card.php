@@ -20,7 +20,7 @@
 		echo "<img src='${image_url}' class='image' />";
 	}
 
-	echo "<h3 class='heading-subtitle'>${item['title']}</h3>";
+	echo "<h3 class='title'>${item['title']}</h3>";
 
 	echo $item['date_span'] && "<p class='date-span'>${item['date_span']}</p>";
 

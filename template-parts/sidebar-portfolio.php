@@ -16,7 +16,7 @@
 		<?php endif; ?>
 
 		<?php if($name != ''): ?>
-			<h2 class='heading-subtitle' id='sidebar-portfolio-name'>
+			<h2 id='sidebar-portfolio-name'>
 				<?php echo $name; ?>
 			</h2>
 		<?php endif; ?>

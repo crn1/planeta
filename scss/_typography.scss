@@ -1,4 +1,16 @@
-.heading-subtitle {
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+.section-title, .section-subtitle {
+	line-height: 1 !important;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.section-subtitle {
 	margin-bottom: 0;
 	padding-bottom: 0;
 }

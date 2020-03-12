@@ -25,7 +25,7 @@
 	<?php if($logo_url != ''): ?>
 		<img src='<?php echo $logo_url; ?>' />
 	<?php endif; ?>
-	<h1 class='heading-main' id='logo'>
+	<h1 id='logo'>
 	<?php if(get_bloginfo('name') != ''): ?>
 		<p><?php bloginfo('name'); ?></p>
 	<?php endif; ?>

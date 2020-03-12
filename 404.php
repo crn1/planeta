@@ -2,11 +2,11 @@
 	<main>
 		<article class='default-container'>
 			<header>
-				<h2 class='title-heading'>
+				<h2 class='page-title'>
 					404
 				</h2>
 			</header>
-			<p class='subtitle-heading'>
+			<h3>
 				Page Not Found!
 			</p>
 		</article>

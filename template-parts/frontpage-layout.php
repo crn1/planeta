@@ -23,11 +23,11 @@ foreach($layout as $section):
 	<section id='<?php echo $section; ?>'>
 		<div class='default-container'>
 
-			<h2 class='heading-title frontpage-title<?php echo $title_classes; ?>' <?php echo $title_lax; ?>>
+			<h2 class='section-title <?php echo $title_classes; ?>' <?php echo $title_lax; ?>>
 				<?php echo $section_title; ?>
 			</h2>
 
-			<h3 class='heading-subtitle frontpage-subtitle<?php echo $subtitle_classes; ?>' <?php echo $subtitle_lax; ?>>
+			<h3 class='section-subtitle<?php echo $subtitle_classes; ?>' <?php echo $subtitle_lax; ?>>
 				<?php echo $section_subtitle; ?>
 			</h3>
 

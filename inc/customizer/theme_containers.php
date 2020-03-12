@@ -8,19 +8,19 @@ Kirki::add_section('containers_section', array(
 Kirki::add_field('planeta_config', array(
 	'type' 						=> 'slider',
 	'settings'				=> 'default_container',
-	'label'						=> esc_html__('Main Container Width (in rems)', 'planeta'),
+	'label'						=> esc_html__('Main Container Width (px)', 'planeta'),
 	'section'					=> 'containers_section',
-	'default'					=> 70,
+	'default'					=> 1920,
 	'choices'					=> array(
-		'min'							=> 1,
-		'max'							=> 125,
-		'step'						=> 1,
+		'min'							=> 600,
+		'max'							=> 1920,
+		'step'						=> 10,
 	),
 	'output'					=> array(
 		array(
 			'element'			=> '.default-container',
 			'property'		=> 'max-width',
-			'units'				=> 'rem',
+			'units'				=> 'px',
 		),
 	),
 ));
@@ -28,19 +28,19 @@ Kirki::add_field('planeta_config', array(
 Kirki::add_field('planeta_config', array(
 	'type' 						=> 'slider',
 	'settings'				=> 'header_container',
-	'label'						=> esc_html__('Header Container Width (in rems)', 'planeta'),
+	'label'						=> esc_html__('Header Container Width (px)', 'planeta'),
 	'section'					=> 'containers_section',
-	'default'					=> 100,
+	'default'					=> 1440,
 	'choices'					=> array(
-		'min'							=> 1,
-		'max'							=> 125,
-		'step'						=> 1,
+		'min'							=> 600,
+		'max'							=> 1920,
+		'step'						=> 10,
 	),
 	'output'					=> array(
 		array(
 			'element'			=> '#main-header',
 			'property'		=> 'max-width',
-			'units'				=> 'rem',
+			'units'				=> 'px',
 		),
 	),
 ));

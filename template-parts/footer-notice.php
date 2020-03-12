@@ -15,10 +15,10 @@
 			});
 		</script>
 	<?php endif; ?>
-	<small class='footer-notice'>
+	<small class='notice'>
 		Project SigmaRed
 	</small>
-	<small class='footer-notice'>
+	<small class='notice'>
 		Made by neurotic sleepless fanatic nicked <a href='http://github.com/crn1'>crn1</a>
 	</small>
 </footer>

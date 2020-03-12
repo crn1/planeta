@@ -90,7 +90,7 @@ Kirki::add_field('planeta_config', array(
 	),
 	'output'					=> array(
 		array(
-			'element'					=> '.frontpage-title',
+			'element'					=> '.section-title',
 			'property'				=> 'animation-duration',
 			'units'						=> 's',
 		),
@@ -124,12 +124,12 @@ Kirki::add_field('planeta_config', array(
 	),
 	'output'		=> array(
 		array(
-			'element'		=> '.frontpage-title',
+			'element'		=> '.section-title',
 			'units'			=> 'vh',
 			'property'	=> 'padding-top',
 		),
 		array(
-			'element'		=> '.frontpage-title',
+			'element'		=> '.section-title',
 			'units'			=> 'vh',
 			'property'	=> 'padding-bottom',
 		),
@@ -219,7 +219,7 @@ Kirki::add_field('planeta_config', array(
 	),
 	'output'					=> array(
 		array(
-			'element'					=> '.frontpage-subtitle',
+			'element'					=> '.section-subtitle',
 			'property'				=> 'animation-duration',
 			'units'						=> 's',
 		),
@@ -247,7 +247,7 @@ Kirki::add_field('planeta_config', array(
 	),
 	'output'		=> array(
 		array(
-			'element'		=> '.frontpage-subtitle',
+			'element'		=> '.section-subtitle',
 			'units'			=> 'vh',
 			'property'	=> 'padding-bottom',
 		),
