@@ -14,8 +14,8 @@ foreach($layout as $section):
 	$section_subtitle = get_theme_mod("${section}_subtitle", 'Block Subtitle');
 
 	$section_preset = get_theme_mod("${section}_card_preset", 'none');
-	$section_type = get_theme_mod("${section}_${section_preset}_card_type", 'classic');
-	$card_class = "${section_preset}-${section_type}-card";
+	$section_type = get_theme_mod("${section}_${section_preset}_card_type", 'default');
+	$card_class = "${section_preset}-${section_type}";
 
 	$section_items = get_theme_mod("${section}_${section_preset}_items", array());
 ?>

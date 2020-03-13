@@ -11,6 +11,9 @@ jQuery(document).ready(function($)
 		}
 	})
 
+	//Fittext
+	//$('.section-title').fitText();
+
 	//Laxxx
 	lax.setup()
 	const updateLax = () => {

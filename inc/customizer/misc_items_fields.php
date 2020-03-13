@@ -1,7 +1,9 @@
 <?php
 
 $link_types = array(
-	'classic'							=> esc_html__('Classic (default)', 'planeta'),
+	'default'							=> esc_html__('Default', 'planeta'),
+	'default-left'				=> esc_html__('Default Left', 'planeta'),
+	'default-right'				=> esc_html__('Default Right', 'planeta'),
 );
 
 $card_types = array(

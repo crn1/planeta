@@ -29,7 +29,7 @@
 	if($item['url'])
 	{
 		$url_tab = $item['url_tab'] ? '_blank' : '';
-		echo "<a href='${item['url']}' target='${url_tab}>' class='url'>Promeni me!</a>";
+		echo "<p><a href='${item['url']}' class='url' target='${url_tab}'>Promeni me!</a></p>";
 	}
 
 	echo $item['author'] && "<p class='author'>${item['author']}</p>";

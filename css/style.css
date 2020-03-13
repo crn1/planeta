@@ -1,8 +1,11 @@
-.projects-classic-card .card-subtitle {
+.projects-default .title, .projects-default .url {
   text-align: center; }
-.projects-classic-card .description:before {
-  content: ' ';
-  border-top: 1px solid white; }
+.projects-default-left .title, .projects-default-left .url {
+  text-align: left; }
+.projects-default-right .title, .projects-default-right .url {
+  text-align: right; }
+.projects-default .image, .projects-default-left .image, .projects-default-right .image {
+  cursor: pointer; }
 
 .alignleft {
   text-align: left;

@@ -54,7 +54,7 @@ function supplier_add_frontpage_sections($num_sections = 15, $card_types = array
 				'label'						=> esc_html__('Items Type', 'planeta'),
 				'section'					=> "section_${index}",
 				'settings'				=> "section_${index}_${key}_card_type",
-				'default'					=> 'classic',
+				'default'					=> 'default',
 				'choices'					=> $types,
 				'active_callback' => array(
 					array(

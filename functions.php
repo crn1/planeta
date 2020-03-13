@@ -83,14 +83,18 @@ function init_scripts()
 	// Macy Masonry
 	wp_enqueue_script('masonry-script', get_template_directory_uri() . '/js/macy.min.js', array(), '2.5.1');
 
+	// Fittext
+	//wp_enqueue_script('fittext-script', get_template_directory_uri() . '/js/fittext.min.js', array('jquery'), '1.2.0');
+
 	// Laxxx
 	if(get_theme_mod('frontpage_title_type', 'none') == 'scroll' || get_theme_mod('frontpage_subtitle_type', 'none') == 'scroll')
 	{
 		wp_enqueue_script('lax-script', get_template_directory_uri() . '/js/lax.min.js');
 	}
 
-	// Main Styles
+	// Main Styles and Scripts
 	wp_enqueue_style('main-style', get_template_directory_uri() . '/css/style.css', false, '1.0.0', 'all');
+	wp_enqueue_script('cards-script', get_template_directory_uri() . '/js/cards.js', array('jquery'), '1.0.0', true);
 	wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true);
 }
 

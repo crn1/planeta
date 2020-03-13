@@ -1,14 +1,29 @@
 .projects {
-	&-classic-card {
-		.card-subtitle {
+
+	&-default {
+		.title, .url {
 			text-align: center;
 		}
+	}
 
-		.description {
-			&:before {
-				content: ' ';
-				border-top: 1px solid white;
-			}
+	&-default-left {
+		.title, .url {
+			text-align: left;
 		}
 	}
+
+	&-default-right {
+		.title, .url {
+			text-align: right;
+		}
+	}
+
+	&-default,
+	&-default-left,
+	&-default-right {
+		.image {
+			cursor: pointer;
+		}
+	}
+
 }
