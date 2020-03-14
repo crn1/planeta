@@ -47,7 +47,10 @@ foreach($layout as $section):
 					}
 				?>
 				</div>
-				<?php get_template_part('template-parts/frontpage', 'macy'); ?>
+				<?php
+					set_query_var('preset', $section_preset);
+					get_template_part('template-parts/frontpage', 'macy');
+				?>
 			<?php endif; ?>
 
 		</div>

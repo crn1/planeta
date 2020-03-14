@@ -1,8 +1,9 @@
 <?php
 
 $section = get_query_var('section');
+$preset = get_query_var('preset');
 
-if(!in_array($section, array('none', 'experience')):
+if(!in_array($preset, array('none', 'experience'))):
 
 	$masonry_num = get_theme_mod("${section}_masonry_num", 3);
 
