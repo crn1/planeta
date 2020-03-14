@@ -1,18 +1,6 @@
 @import 'modules/flex';
 
-.projects {
-	&-zigzag-left,
-	&-zigzag-right,
-	&-perspective-left,
-	&-perspective-right {
-		.image:hover {
-			transform: perspective(0px) rotateY(0deg) !important;
-		}
-		.image, .image:hover {
-			transition: .2s ease-in;
-		}
-	}
-
+.card {
 	&-perspective-left {
 		.image {
 			transform: perspective(400px) rotateY(10deg);
@@ -25,59 +13,76 @@
 		}
 	}
 
+	&-perspective-up {
+		.image {
+			transform: perspective(400px) rotateX(10deg);
+		}
+	}
+
+	&-perspective-down {
+		.image {
+			transform: perspective(400px) rotateX(-10deg);
+		}
+	}
+
+	&-zigzag-left-items {
+		[class=card-zigzag-left]:nth-child(even) {
+			.image {
+				transform: perspective(400px) rotateY(-10deg);
+			}
+		}
+		[class=card-zigzag-left]:nth-child(odd) {
+			.image {
+				transform: perspective(400px) rotateY(10deg);
+			}
+		}
+	}
+
+	&-zigzag-right-items {
+		[class=card-zigzag-right]:nth-child(even) {
+			.image {
+				transform: perspective(400px) rotateY(10deg);
+			}
+		}
+		[class=card-zigzag-right]:nth-child(odd) {
+			.image {
+				transform: perspective(400px) rotateY(-10deg);
+			}
+		}
+	}
+
 	&-default,
 	&-perspective-left,
 	&-perspective-right,
+	&-perspective-up,
+	&-perspective-down,
 	&-zigzag-left,
 	&-zigzag-right {
-		.image {
-			cursor: pointer;
-			padding-bottom: 1rem;
-		}
-		.title, .url {
-			text-align: center;
-		}
-	}
-}
-
-#section_1-items {
-	div[class$='-zigzag-left']:nth-child(even) {
-		.image {
-			transform: perspective(400px) rotateY(-10deg);
-		}
-	}
-	div[class$='-zigzag-left']:nth-child(odd) {
-		.image {
-			transform: perspective(400px) rotateY(10deg);
-		}
+		display: flex;
+		align-items: center;
+		flex-direction: column;
 	}
 
-	div[class$='-zigzag-right']:nth-child(even) {
-		.image {
-			transform: perspective(400px) rotateY(10deg);
-		}
+	&-image {
+		cursor: pointer;
+		padding-bottom: 1rem;
+		object-fit: cover;
+		width: 100%;
 	}
-	div[class$='-zigzag-right']:nth-child(odd) {
-		.image {
-			transform: perspective(400px) rotateY(-10deg);
-		}
+
+	&-image:hover {
+		transform: perspective(0px) rotateY(0deg) !important;
 	}
-}
 
-.experience {
-	&-default {
-		@include flexContainer();
+	&-info {
+		flex-grow: 1;
+	}
 
-		&:not(:first-child) {
-			margin-top: 1rem;
-		}
+	&-image, .card-image:hover {
+		transition: .15s ease-in;
+	}
 
-		.date-span {
-			margin-top: 0;
-		}
-
-		.image {
-			margin-right: 1rem;
-		}
+	&-date-span {
+		margin-top: 0;
 	}
 }

@@ -7,6 +7,22 @@ function planeta_add_section_items(&$index, &$items_fields)
 		'panel' => "section_${index}_panel",
 	));
 
+	Kirki::add_field('planeta_config', array(
+		'type'					=> 'select',
+		'label'					=> esc_html__('Items Preset', 'planeta'),
+		'section'				=> "section_${index}_items",
+		'settings'			=> "section_${index}_card_preset",
+		'default'				=> 'none',
+		'choices'				=> array(
+			'none'					=> esc_html__('None (default)', 'planeta'),
+			'projects'			=> esc_html__('Services/Projects/Mini Sections', 'planeta'),
+			'experience'		=> esc_html__('Experience', 'planeta'),
+			'clients'				=> esc_html__('Clients', 'planeta'),
+			'testimonials'	=> esc_html__('Testimonials', 'planeta'),
+			'posts'					=> esc_html__('Posts', 'planeta'),
+		),
+	));
+
 	foreach($items_fields as $key => $items)
 	{
 		Kirki::add_field('planeta_config', array(

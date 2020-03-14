@@ -13,11 +13,9 @@ foreach($layout as $section):
 	$section_title = get_theme_mod("${section}_title", 'Block Title');
 	$section_subtitle = get_theme_mod("${section}_subtitle", 'Block Subtitle');
 
-	$section_preset = get_theme_mod("${section}_card_preset", 'none');
-	$section_type = get_theme_mod("${section}_${section_preset}_card_type", 'default');
-	$card_class = "${section_preset}-${section_type}";
-
-	$section_items = get_theme_mod("${section}_${section_preset}_items", array());
+	$card_preset = get_theme_mod("${section}_card_preset", 'none');
+	$card_type = get_theme_mod("${section}_card_type", 'default');
+	$section_items = get_theme_mod("${section}_${card_preset}_items", array());
 ?>
 
 	<section id='<?php echo $section; ?>'>
@@ -31,24 +29,24 @@ foreach($layout as $section):
 				<?php echo $section_subtitle; ?>
 			</h3>
 
-			<?php if($section_type != 'none'): ?>
-				<div id='<?php echo $section; ?>-items'>
+			<?php if($card_type != 'none'): ?>
+				<div id='<?php echo $section?>-items' class='card-<?php echo $card_type; ?>-items'>
+
 				<?php
-					if($section_type == 'posts')
+					if($card_type == 'posts')
 					{
 						get_template_part('template-parts/content', 'posts');
 					}else{
 						foreach($section_items as $item)
 						{
 							set_query_var('item', $item);
-							set_query_var('card_class', $card_class);
+							set_query_var('card_type', $card_type);
 							get_template_part('template-parts/frontpage', 'card');
 						}
 					}
 				?>
 				</div>
 				<?php
-					set_query_var('preset', $section_preset);
 					get_template_part('template-parts/frontpage', 'macy');
 				?>
 			<?php endif; ?>

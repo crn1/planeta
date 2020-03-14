@@ -8,7 +8,7 @@ require_once(get_template_directory() . '/inc/customizer/sections_background.php
 require_once(get_template_directory() . '/inc/customizer/sections_items.php');
 require_once(get_template_directory() . '/inc/customizer/sections_appearance.php');
 
-function supplier_add_frontpage_sections($num_sections = 15, $card_types = array(), $items_fields = array())
+function supplier_add_frontpage_sections($num_sections = 15, &$items_fields = array())
 {
 	for($index = 1; $index <= $num_sections; $index++)
 	{
@@ -20,10 +20,10 @@ function supplier_add_frontpage_sections($num_sections = 15, $card_types = array
 		planeta_add_section_heading($index);
 		planeta_add_section_background($index);
 		planeta_add_section_items($index, $items_fields);
-		planeta_add_section_appearance($index, $card_types);
+		planeta_add_section_appearance($index);
 	}
 }
 
-supplier_add_frontpage_sections($number_of_frontpage_sections, $card_types, $items_fields);
+supplier_add_frontpage_sections($number_of_frontpage_sections, $items_fields);
 
 ?>

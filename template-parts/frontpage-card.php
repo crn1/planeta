@@ -1,53 +1,50 @@
 <?php
 	$item = get_query_var('item');
-	$card_class = get_query_var('card_class');
-	$item = array_merge(array(
-		'title'							=> 'Block Title',
-		'description'				=> 'Lorem ipsum dolor sit amet',
-		'url'								=> '',
-		'url_tab'						=> '',
-		'image'							=> '',
-		'date_span'					=> '',
-		'author'						=> '',
-		'author_profession' => '',
-	), $item); ?>
+	$card_type = get_query_var('card_type');
+?>
 
-<div class='<?php echo $card_class; ?>'>
+<div class='card-<?php echo $card_type; ?>'>
 
 <?php
-	if($item['image'])
+	if(array_key_exists('image', $item))
 	{
 		$image_url = wp_get_attachment_image_src($item['image'], 'large')[0];
-		echo "<img src='${image_url}' class='image' />";
+		echo "<img src='${image_url}' class='card-image' />";
 	} ?>
 
-	<div class='info'>
+	<div class='card-info'>
 
 	<?php
-		echo "<h3 class='title'>${item['title']}</h3>";
-
-		if($item['date_span'])
+		if(array_key_exists('title', $item))
 		{
-			echo "<p class='date-span'>${item['date_span']}</p>";
+			echo "<h3 class='card-title'>${item['title']}</h3>";
 		}
 
-		echo "<p class='description'>${item['description']}</p>";
+		if(array_key_exists('date-span', $item))
+		{
+			echo "<p class='card-date-span'>${item['date_span']}</p>";
+		}
 
-		if($item['url'])
+		if(array_key_exists('description', $item))
+		{
+			echo "<p class='card-description'>${item['description']}</p>";
+		}
+
+		if(array_key_exists('url', $item))
 		{
 			$read_more = esc_html__('Read More...', 'planeta');
 			$url_tab = $item['url_tab'] ? '_blank' : '';
-			echo "<p class='url'><a href='${item['url']}' target='${url_tab}'>${read_more}</a></p>";
+			echo "<p class='card-url'><a href='${item['url']}' target='${url_tab}'>${read_more}</a></p>";
 		}
 
-		if($item['author'])
+		if(array_key_exists('author', $item))
 		{
-			echo "<p class='author'>${item['author']}</p>";
+			echo "<p class='card-author'>${item['author']}</p>";
 		}
 
-		if($item['author_profession'])
+		if(array_key_exists('author_profession', $item))
 		{
-			echo "<p class='author-profession'>${item['author_profession']}</p>";
+			echo "<p class='card-author-profession'>${item['author_profession']}</p>";
 		} ?>
 
 	</div>
