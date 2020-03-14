@@ -1,6 +1,6 @@
 jQuery(document).ready(function($)
 {
-	$('[class*="default"]').find('.image').on('click', function(event)
+	$('.card').find('.image').on('click', function(event)
 	{
 		event.preventDefault();
 		window.location.href = $(this).parent().find('.url').find('a').attr('href');

@@ -233,7 +233,6 @@ Kirki::add_field('planeta_config', array(
 	),
 ));
 
-
 Kirki::add_field('planeta_config', array(
 	'type'			=> 'slider',
 	'label'			=> esc_html__('Section Subtitle Padding Bottom (vh)', 'planeta'),
@@ -250,6 +249,102 @@ Kirki::add_field('planeta_config', array(
 			'element'		=> '.section-subtitle',
 			'units'			=> 'vh',
 			'property'	=> 'padding-bottom',
+		),
+	),
+));
+
+Kirki::add_field('planeta_config', array(
+	'type' 						=> 'radio-buttonset',
+	'settings'				=> 'frontpage_card_type',
+	'label'						=> esc_html__('Card Type', 'planeta'),
+	'section'					=> 'frontpage_section',
+	'default'					=> 'none',
+	'choices'					=> array(
+		'none'						=> esc_html__('None', 'planeta'),
+		'reveal'					=> esc_html__('Reveal', 'planeta'),
+		'scroll'					=> esc_html__('Scroll', 'planeta'),
+	),
+));
+
+Kirki::add_field('planeta_config', array(
+	'type'					=> 'select',
+	'label'					=> esc_html__('Effect Type', 'planeta'),
+	'section'				=> 'frontpage_section',
+	'settings'			=> 'frontpage_card_effect_reveal',
+	'default'				=> 'fadeIn',
+	'choices'				=> $animate_css_list,
+	'active_callback'	=> array(
+		array(
+			'setting'				=> 'frontpage_card_type',
+			'operator'			=> '==',
+			'value'					=> 'reveal'
+		),
+	),
+));
+
+Kirki::add_field('planeta_config', array(
+	'type'					=> 'select',
+	'label'					=> esc_html__('Effect Type', 'planeta'),
+	'section'				=> 'frontpage_section',
+	'settings'			=> 'frontpage_card_effect_scroll',
+	'default'				=> 'blurOut',
+	'choices'				=> $lax_js_list_labels,
+	'active_callback'	=> array(
+		array(
+			'setting'				=> 'frontpage_card_type',
+			'operator'			=> '==',
+			'value'					=> 'scroll'
+		),
+	),
+));
+
+foreach($lax_js_list as $key => $lax_item)
+{
+	Kirki::add_field('planeta_config', array(
+		'type'					=> 'slider',
+		'label'					=> esc_html__('Effect Strength', 'planeta'),
+		'section'				=> 'frontpage_section',
+		'settings'			=> 'frontpage_card_strength_' . $key,
+		'default'				=> $lax_item['default'],
+		'choices'				=> $lax_item['choices'],
+		'active_callback'	=> array(
+			array(
+				'setting'				=> 'frontpage_card_type',
+				'operator'			=> '==',
+				'value'					=> 'scroll'
+			),
+			array(
+				'setting'				=> 'frontpage_card_effect_scroll',
+				'operator'			=> '==',
+				'value'					=> $key,
+			),
+		),
+	));
+}
+
+Kirki::add_field('planeta_config', array(
+	'type' 						=> 'slider',
+	'settings'				=> 'frontpage_card_timing',
+	'label'						=> esc_html__('Timing (in seconds)', 'planeta'),
+	'section'					=> 'frontpage_section',
+	'default'					=> 1,
+	'choices'					=> array(
+		'min'							=> 0.1,
+		'max'							=> 7,
+		'step'						=> 0.1,
+	),
+	'output'					=> array(
+		array(
+			'element'					=> '.card',
+			'property'				=> 'animation-duration',
+			'units'						=> 's',
+		),
+	),
+	'active_callback' => array(
+		array(
+			'setting'				=> 'frontpage_card_type',
+			'operator'			=> '==',
+			'value'					=> 'reveal',
 		),
 	),
 ));

@@ -15,6 +15,7 @@ foreach($layout as $section):
 
 	$card_preset = get_theme_mod("${section}_card_preset", 'none');
 	$card_type = get_theme_mod("${section}_card_type", 'default');
+	set_query_var('card_type', $card_type);
 	$section_items = get_theme_mod("${section}_${card_preset}_items", array());
 ?>
 
@@ -40,7 +41,6 @@ foreach($layout as $section):
 						foreach($section_items as $item)
 						{
 							set_query_var('item', $item);
-							set_query_var('card_type', $card_type);
 							get_template_part('template-parts/frontpage', 'card');
 						}
 					}

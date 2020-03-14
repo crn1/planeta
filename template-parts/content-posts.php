@@ -2,9 +2,12 @@
 
 $card_type = get_query_var('card_type');
 $read_more = esc_html__('Read More...', 'planeta');
+$card_classes = get_query_var('card_classes');
+$card_lax = get_query_var('card_lax');
+
 if(have_posts()): while(have_posts()): the_post(); ?>
 
-<div class='card-<?php echo $card_type; ?>'>
+<div class='card card-<?php echo $card_type; ?> <?php echo $card_classes; ?>' <?php echo $card_lax; ?>>
 
 	<?php if(has_post_thumbnail($post->ID)): ?>
 		<img class='card-image' src='<?php the_post_thumbnail_url(); ?>' />

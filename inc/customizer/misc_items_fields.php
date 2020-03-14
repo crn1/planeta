@@ -36,8 +36,6 @@ $items_fields = array(
 			'default'							=> 'Front-end Developer',
 		),
 	),
-
-	'posts'								=> array(),
 );
 
 ?>

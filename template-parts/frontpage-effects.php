@@ -31,11 +31,29 @@
 	{
 		$subtitle_effect = get_theme_mod('frontpage_subtitle_effect_scroll', 'blurOut');
 		$subtitle_classes = ' lax';
-		$subtitle_strength = get_theme_mod("frontpage_title_strength_${subtitle_effect}", -1);
+		$subtitle_strength = get_theme_mod("frontpage_subtitle_strength_${subtitle_effect}", -1);
 		$subtitle_strength = $subtitle_strength != -1 ? '-' . $subtitle_strength : '';
 		$subtitle_lax = "data-lax-preset='${subtitle_effect}${subtitle_strength}'";
 	}
 	set_query_var('subtitle_classes', $subtitle_classes);
 	set_query_var('subtitle_lax', $subtitle_lax);
 
+	//Card Effects
+	//=============
+	$card_classes = '';
+	$card_lax = '';
+	if(get_theme_mod('frontpage_card_type', 'none') == 'reveal')
+	{
+		$card_effect = get_theme_mod('frontpage_card_effect_reveal', 'fadeIn');
+		$card_classes = ' animated ' . $card_effect;
+	}else if(get_theme_mod('frontpage_card_type', 'none') == 'scroll')
+	{
+		$card_effect = get_theme_mod('frontpage_card_effect_scroll', 'blurOut');
+		$card_classes = ' lax';
+		$card_strength = get_theme_mod("frontpage_card_strength_${card_effect}", -1);
+		$card_strength = $card_strength != -1 ? '-' . $card_strength : '';
+		$card_lax = "data-lax-preset='${card_effect}${card_strength}'";
+	}
+	set_query_var('card_classes', $card_classes);
+	set_query_var('card_lax', $card_lax);
 ?>
