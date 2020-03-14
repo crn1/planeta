@@ -20,10 +20,9 @@ function planeta_add_section_background($index)
 			'background-size'				=> 'cover',
 			'background-attachment'	=> 'scroll',
 		),
-		'transport'							=> 'auto',
 		'output'								=>	array(
 			array(
-				'element'								=> "#section-${index}",
+				'element'								=> "#section_${index}",
 			)
 		),
 	));

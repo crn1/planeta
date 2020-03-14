@@ -9,9 +9,9 @@ function planeta_add_section_appearance(&$index)
 
 	Kirki::add_field('planeta_config', array(
 		'type'				=> 'radio-buttonset',
-		'label'				=> esc_html__('Card Title Align', 'planeta'),
+		'label'				=> esc_html__('Section Title Align', 'planeta'),
 		'section'			=> "section_${index}_card",
-		'settings'		=> "section_${index}_card_title_align",
+		'settings'		=> "section_${index}_title_align",
 		'default'			=> 'left',
 		'choices'			=> array(
 			'left'				=> esc_html__('Left', 'planeta'),
@@ -20,7 +20,7 @@ function planeta_add_section_appearance(&$index)
 		),
 		'output'			=> array(
 			array(
-				'element'			=> "#section_${index} .card-title",
+				'element'			=> "#section_${index} .section-title",
 				'property'		=> 'text-align',
 			),
 		),
@@ -28,9 +28,9 @@ function planeta_add_section_appearance(&$index)
 
 	Kirki::add_field('planeta_config', array(
 		'type'				=> 'radio-buttonset',
-		'label'				=> esc_html__('Read More Button Align', 'planeta'),
+		'label'				=> esc_html__('Section Subtitle Align', 'planeta'),
 		'section'			=> "section_${index}_card",
-		'settings'		=> "section_${index}_card_url_align",
+		'settings'		=> "section_${index}_subtitle_align",
 		'default'			=> 'left',
 		'choices'			=> array(
 			'left'				=> esc_html__('Left', 'planeta'),
@@ -39,7 +39,7 @@ function planeta_add_section_appearance(&$index)
 		),
 		'output'			=> array(
 			array(
-				'element'			=> "#section_${index} .card-url",
+				'element'			=> "#section_${index} .section-subtitle",
 				'property'		=> 'text-align',
 			),
 		),
@@ -127,9 +127,9 @@ function planeta_add_section_appearance(&$index)
 
 	Kirki::add_field('planeta_config', array(
 		'type'				=> 'radio-buttonset',
-		'label'				=> esc_html__('Section Title Align', 'planeta'),
+		'label'				=> esc_html__('Card Title Align', 'planeta'),
 		'section'			=> "section_${index}_card",
-		'settings'		=> "section_${index}_title_align",
+		'settings'		=> "section_${index}_card_title_align",
 		'default'			=> 'left',
 		'choices'			=> array(
 			'left'				=> esc_html__('Left', 'planeta'),
@@ -138,7 +138,11 @@ function planeta_add_section_appearance(&$index)
 		),
 		'output'			=> array(
 			array(
-				'element'			=> "#section_${index} .section-title",
+				'element'			=> "#section_${index} .card-title",
+				'property'		=> 'text-align',
+			),
+			array(
+				'element'			=> "#section_${index} .card-date-span",
 				'property'		=> 'text-align',
 			),
 		),
@@ -146,9 +150,9 @@ function planeta_add_section_appearance(&$index)
 
 	Kirki::add_field('planeta_config', array(
 		'type'				=> 'radio-buttonset',
-		'label'				=> esc_html__('Section Subtitle Align', 'planeta'),
+		'label'				=> esc_html__('Read More Button Align', 'planeta'),
 		'section'			=> "section_${index}_card",
-		'settings'		=> "section_${index}_subtitle_align",
+		'settings'		=> "section_${index}_card_url_align",
 		'default'			=> 'left',
 		'choices'			=> array(
 			'left'				=> esc_html__('Left', 'planeta'),
@@ -157,7 +161,7 @@ function planeta_add_section_appearance(&$index)
 		),
 		'output'			=> array(
 			array(
-				'element'			=> "#section_${index} .section-subtitle",
+				'element'			=> "#section_${index} .card-url",
 				'property'		=> 'text-align',
 			),
 		),

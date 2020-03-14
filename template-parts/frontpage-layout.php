@@ -29,11 +29,11 @@ foreach($layout as $section):
 				<?php echo $section_subtitle; ?>
 			</h3>
 
-			<?php if($card_type != 'none'): ?>
+			<?php if($card_preset != 'none'): ?>
 				<div id='<?php echo $section?>-items' class='card-<?php echo $card_type; ?>-items'>
 
 				<?php
-					if($card_type == 'posts')
+					if($card_preset == 'posts')
 					{
 						get_template_part('template-parts/content', 'posts');
 					}else{

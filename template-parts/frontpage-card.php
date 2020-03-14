@@ -20,7 +20,7 @@
 			echo "<h3 class='card-title'>${item['title']}</h3>";
 		}
 
-		if(array_key_exists('date-span', $item))
+		if(array_key_exists('date_span', $item))
 		{
 			echo "<p class='card-date-span'>${item['date_span']}</p>";
 		}
