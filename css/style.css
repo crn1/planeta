@@ -1,18 +1,18 @@
-.card-perspective-left .image {
+.card-perspective-left .card-image {
   transform: perspective(400px) rotateY(10deg); }
-.card-perspective-right .image {
+.card-perspective-right .card-image {
   transform: perspective(400px) rotateY(-10deg); }
-.card-perspective-up .image {
+.card-perspective-up .card-image {
   transform: perspective(400px) rotateX(10deg); }
-.card-perspective-down .image {
+.card-perspective-down .card-image {
   transform: perspective(400px) rotateX(-10deg); }
-.card-zigzag-left-items [class=card-zigzag-left]:nth-child(even) .image {
+.card-zigzag-left-items [class=card-zigzag-left]:nth-child(even) .card-image {
   transform: perspective(400px) rotateY(-10deg); }
-.card-zigzag-left-items [class=card-zigzag-left]:nth-child(odd) .image {
+.card-zigzag-left-items [class=card-zigzag-left]:nth-child(odd) .card-image {
   transform: perspective(400px) rotateY(10deg); }
-.card-zigzag-right-items [class=card-zigzag-right]:nth-child(even) .image {
+.card-zigzag-right-items [class=card-zigzag-right]:nth-child(even) .card-image {
   transform: perspective(400px) rotateY(10deg); }
-.card-zigzag-right-items [class=card-zigzag-right]:nth-child(odd) .image {
+.card-zigzag-right-items [class=card-zigzag-right]:nth-child(odd) .card-image {
   transform: perspective(400px) rotateY(-10deg); }
 .card-default, .card-perspective-left, .card-perspective-right, .card-perspective-up, .card-perspective-down, .card-zigzag-left, .card-zigzag-right {
   display: flex;
@@ -21,8 +21,7 @@
 .card-image {
   cursor: pointer;
   padding-bottom: 1rem;
-  object-fit: cover;
-  width: 100%; }
+  object-fit: cover; }
 .card-image:hover {
   transform: perspective(0px) rotateY(0deg) !important; }
 .card-info {
