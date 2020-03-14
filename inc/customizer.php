@@ -36,7 +36,7 @@ require_once(get_template_directory() . '/inc/customizer/module_portfolio.php');
 //require_once(get_template_directory() . '/inc/customizer/module_social_media.php');
 
 //Homepage sections
-require_once(get_template_directory() . '/inc/customizer/sections_generator.php');
 require_once(get_template_directory() . '/inc/customizer/sections_layout.php');
+require_once(get_template_directory() . '/inc/customizer/sections_generator.php');
 
 ?>

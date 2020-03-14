@@ -1,11 +1,37 @@
-.projects-default .title, .projects-default .url {
+.projects-zigzag-left .image:hover, .projects-zigzag-right .image:hover, .projects-perspective-left .image:hover, .projects-perspective-right .image:hover {
+  transform: perspective(0px) rotateY(0deg) !important; }
+.projects-zigzag-left .image, .projects-zigzag-left .image:hover, .projects-zigzag-right .image, .projects-zigzag-right .image:hover, .projects-perspective-left .image, .projects-perspective-left .image:hover, .projects-perspective-right .image, .projects-perspective-right .image:hover {
+  transition: .2s ease-in; }
+.projects-perspective-left .image {
+  transform: perspective(400px) rotateY(10deg); }
+.projects-perspective-right .image {
+  transform: perspective(400px) rotateY(-10deg); }
+.projects-default .image, .projects-perspective-left .image, .projects-perspective-right .image, .projects-zigzag-left .image, .projects-zigzag-right .image {
+  cursor: pointer;
+  padding-bottom: 1rem; }
+.projects-default .title, .projects-default .url, .projects-perspective-left .title, .projects-perspective-left .url, .projects-perspective-right .title, .projects-perspective-right .url, .projects-zigzag-left .title, .projects-zigzag-left .url, .projects-zigzag-right .title, .projects-zigzag-right .url {
   text-align: center; }
-.projects-default-left .title, .projects-default-left .url {
-  text-align: left; }
-.projects-default-right .title, .projects-default-right .url {
-  text-align: right; }
-.projects-default .image, .projects-default-left .image, .projects-default-right .image {
-  cursor: pointer; }
+
+#section_1-items div[class$='-zigzag-left']:nth-child(even) .image {
+  transform: perspective(400px) rotateY(-10deg); }
+#section_1-items div[class$='-zigzag-left']:nth-child(odd) .image {
+  transform: perspective(400px) rotateY(10deg); }
+#section_1-items div[class$='-zigzag-right']:nth-child(even) .image {
+  transform: perspective(400px) rotateY(10deg); }
+#section_1-items div[class$='-zigzag-right']:nth-child(odd) .image {
+  transform: perspective(400px) rotateY(-10deg); }
+
+.experience-default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; }
+  .experience-default:not(:first-child) {
+    margin-top: 1rem; }
+  .experience-default .date-span {
+    margin-top: 0; }
+  .experience-default .image {
+    margin-right: 1rem; }
 
 .alignleft {
   text-align: left;

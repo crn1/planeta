@@ -1,29 +1,83 @@
+@import 'modules/flex';
+
 .projects {
-
-	&-default {
-		.title, .url {
-			text-align: center;
+	&-zigzag-left,
+	&-zigzag-right,
+	&-perspective-left,
+	&-perspective-right {
+		.image:hover {
+			transform: perspective(0px) rotateY(0deg) !important;
+		}
+		.image, .image:hover {
+			transition: .2s ease-in;
 		}
 	}
 
-	&-default-left {
-		.title, .url {
-			text-align: left;
+	&-perspective-left {
+		.image {
+			transform: perspective(400px) rotateY(10deg);
 		}
 	}
 
-	&-default-right {
-		.title, .url {
-			text-align: right;
+	&-perspective-right {
+		.image {
+			transform: perspective(400px) rotateY(-10deg);
 		}
 	}
 
 	&-default,
-	&-default-left,
-	&-default-right {
+	&-perspective-left,
+	&-perspective-right,
+	&-zigzag-left,
+	&-zigzag-right {
 		.image {
 			cursor: pointer;
+			padding-bottom: 1rem;
+		}
+		.title, .url {
+			text-align: center;
+		}
+	}
+}
+
+#section_1-items {
+	div[class$='-zigzag-left']:nth-child(even) {
+		.image {
+			transform: perspective(400px) rotateY(-10deg);
+		}
+	}
+	div[class$='-zigzag-left']:nth-child(odd) {
+		.image {
+			transform: perspective(400px) rotateY(10deg);
 		}
 	}
 
+	div[class$='-zigzag-right']:nth-child(even) {
+		.image {
+			transform: perspective(400px) rotateY(10deg);
+		}
+	}
+	div[class$='-zigzag-right']:nth-child(odd) {
+		.image {
+			transform: perspective(400px) rotateY(-10deg);
+		}
+	}
+}
+
+.experience {
+	&-default {
+		@include flexContainer();
+
+		&:not(:first-child) {
+			margin-top: 1rem;
+		}
+
+		.date-span {
+			margin-top: 0;
+		}
+
+		.image {
+			margin-right: 1rem;
+		}
+	}
 }

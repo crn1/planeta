@@ -4,38 +4,53 @@
 	$item = array_merge(array(
 		'title'							=> 'Block Title',
 		'description'				=> 'Lorem ipsum dolor sit amet',
-		'url'								=> 'http://example.org',
+		'url'								=> '',
 		'url_tab'						=> '',
 		'image'							=> '',
 		'date_span'					=> '',
 		'author'						=> '',
 		'author_profession' => '',
-	), $item);
+	), $item); ?>
 
-	echo "<div class='${card_class}'>";
+<div class='<?php echo $card_class; ?>'>
 
+<?php
 	if($item['image'])
 	{
 		$image_url = wp_get_attachment_image_src($item['image'], 'large')[0];
 		echo "<img src='${image_url}' class='image' />";
-	}
+	} ?>
 
-	echo "<h3 class='title'>${item['title']}</h3>";
+	<div class='info'>
 
-	echo $item['date_span'] && "<p class='date-span'>${item['date_span']}</p>";
+	<?php
+		echo "<h3 class='title'>${item['title']}</h3>";
 
-	echo "<p class='description'>${item['description']}</p>";
+		if($item['date_span'])
+		{
+			echo "<p class='date-span'>${item['date_span']}</p>";
+		}
 
-	if($item['url'])
-	{
-		$url_tab = $item['url_tab'] ? '_blank' : '';
-		echo "<p><a href='${item['url']}' class='url' target='${url_tab}'>Promeni me!</a></p>";
-	}
+		echo "<p class='description'>${item['description']}</p>";
 
-	echo $item['author'] && "<p class='author'>${item['author']}</p>";
+		if($item['url'])
+		{
+			$read_more = esc_html__('Read More...', 'planeta');
+			$url_tab = $item['url_tab'] ? '_blank' : '';
+			echo "<p class='url'><a href='${item['url']}' target='${url_tab}'>${read_more}</a></p>";
+		}
 
-	echo $item['author_profession'] &&  "<p class='author-profession'>${item['author_profession']}</p>";
+		if($item['author'])
+		{
+			echo "<p class='author'>${item['author']}</p>";
+		}
 
-	echo "</div>"
-?>
+		if($item['author_profession'])
+		{
+			echo "<p class='author-profession'>${item['author_profession']}</p>";
+		} ?>
+
+	</div>
+
+</div>
 
