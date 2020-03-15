@@ -74,6 +74,9 @@ function init_scripts()
 	// Normalize CSS
 	wp_enqueue_style('normalize-css', get_template_directory_uri() . '/css/normalize.min.css', false, '8.0.1', 'all');
 
+	// Line Menus CSS
+	wp_enqueue_style('linemenu-css', get_template_directory_uri() . '/css/linemenus.css', false, '1.0.0', 'all');
+
 	// Animate CSS
 	if(get_theme_mod('frontpage_title_type', 'none') == 'reveal' ||
 		get_theme_mod('frontpage_subtitle_type', 'none') == 'reveal' ||

@@ -1,25 +1,35 @@
 <?php
 
-Kirki::add_section('header_section', array(
+Kirki::add_panel('header_panel', array(
 	'title'       => esc_html__('Header', 'planeta' ),
 	'panel'       => 'modules_panel',
 ));
 
+Kirki::add_section('header_appearance', array(
+	'title'       => esc_html__('Appearance', 'planeta' ),
+	'panel'       => 'header_panel',
+));
+
+Kirki::add_section('header_overlay', array(
+	'title'       => esc_html__('Overlay Background', 'planeta' ),
+	'panel'       => 'header_panel',
+));
+
 Kirki::add_field('planeta_config', array(
 	'type' 				=> 'toggle',
-	'settings'		=> 'header_sticky',
-	'label'				=> esc_html__('Fixed Header', 'planeta'),
-	'section'			=> 'header_section',
+	'settings'		=> 'menu_button_sticky',
+	'label'				=> esc_html__('Sticky Menu Button', 'planeta'),
+	'section'			=> 'header_appearance',
 	'default'			=> false,
 	'output'			=> array(
 		array(
-			'element'				=> '#main-header',
+			'element'				=> '#main-button',
 			'property'			=> 'position',
 			'value_pattern'	=> 'fixed',
 			'exclude'				=> array(false),
 		),
 		array(
-			'element'				=> '#main-header',
+			'element'				=> '#menu-button',
 			'property'			=> 'position',
 			'value_pattern'	=> 'static',
 			'exclude'				=> array(true),
@@ -28,12 +38,20 @@ Kirki::add_field('planeta_config', array(
 ));
 
 Kirki::add_field('planeta_config', array(
+	'type' 					=> 'image',
+	'settings'			=> 'header_logo',
+	'label'					=> esc_html__('Logo', 'planeta'),
+	'section'				=> 'header_appearance',
+	'default'				=> '',
+));
+
+Kirki::add_field('planeta_config', array(
 	'type' 									=> 'background',
-	'settings'							=> 'header_background',
-	'label'									=> esc_html__('Backround', 'planeta'),
-	'section'								=> 'header_section',
+	'settings'							=> 'header_overlay',
+	'label'									=> esc_html__('Overlay Backround', 'planeta'),
+	'section'								=> 'header_overlay',
 	'default'     					=> array(
-		'background-color'			=> 'rgba(0, 0, 0, 0)',
+		'background-color'			=> 'rgba(0, 0, 0, 1)',
 		'background-image'			=> '',
 		'background-repeat'			=> 'repeat',
 		'background-position'		=> 'center center',
@@ -42,29 +60,32 @@ Kirki::add_field('planeta_config', array(
 	),
 	'output'								=> array(
 		array(
-			'element'								=> '#main-header',
+			'element'								=> '#top-menu',
 		),
 	),
 ));
 
 Kirki::add_field('planeta_config', array(
-	'type' 					=> 'image',
-	'settings'			=> 'header_logo',
-	'label'					=> esc_html__('Logo', 'planeta'),
-	'section'				=> 'header_section',
-	'default'				=> '',
-));
-
-Kirki::add_field('planeta_config', array(
-	'type'							=> 'select',
-	'settings'					=> 'header_type',
-	'label'							=> esc_html__('Header Type', 'planeta'),
-	'section'						=> 'header_section',
-	'default'						=> 'header-classic',
-	'choices'						=> array(
-		'header-classic'		=> esc_html__('Classic (default)', 'planeta'),
-		'header-modern'			=> esc_html__('Modern', 'planeta'),
-		'header-planeta'		=> esc_html__('Planeta', 'planeta'),
+	'type'								=> 'select',
+	'settings'						=> 'navbar_type',
+	'label'								=> esc_html__('Navbar Type', 'planeta'),
+	'section'							=> 'header_appearance',
+	'default'							=> 'fullscreen-up',
+	'choices'							=> array(
+		'drawer-left'					=> esc_html__('Drawer (Left)', 'planeta'),
+		'drawer-right'				=> esc_html__('Drawer (Right)', 'planeta'),
+		'circle-left'					=> esc_html__('Circle (Left)', 'planeta'),
+		'circle-right'				=> esc_html__('Circle (Right)', 'planeta'),
+		'polygon-left'				=> esc_html__('Polygon (Left)', 'planeta'),
+		'polygon-right'				=> esc_html__('Polygon (Right)', 'planeta'),
+		'point-left'					=> esc_html__('Point (Left)', 'planeta'),
+		'point-right'					=> esc_html__('Point (Right)', 'planeta'),
+		'parallelogram-left'	=> esc_html__('Parallelogram (Left)', 'planeta'),
+		'parallelogram-right'	=> esc_html__('Parallelogram (Right)', 'planeta'),
+		'fullscreen-up'				=> esc_html__('Fullscreen (Up)', 'planeta'),
+		'fullscreen-down'			=> esc_html__('Fullscreen (Down)', 'planeta'),
+		'fullscreen-left'			=> esc_html__('Fullscreen (Left)', 'planeta'),
+		'fullscreen-right'		=> esc_html__('Fullscreen (Right)', 'planeta'),
 	),
 ));
 
