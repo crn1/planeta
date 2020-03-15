@@ -115,13 +115,6 @@ Kirki::add_field('planeta_config', array(
 		'max'			=> '100',
 		'step'		=> '1',
 	),
-	'active_callback' => array(
-		array(
-			'setting'				=> 'frontpage_title_type',
-			'operator'			=> '!=',
-			'value'					=> 'scroll',
-		),
-	),
 	'output'		=> array(
 		array(
 			'element'		=> '.section-title',
