@@ -18,7 +18,9 @@
 
 	<div id='logo-container'>
 	<?php if($logo_url != ''): ?>
-		<img id='logo' src='<?php echo $logo_url; ?>' />
+		<a href='/'>
+			<img id='logo' src='<?php echo $logo_url; ?>' />
+		</a>
 	<?php endif; ?>
 	</div>
 

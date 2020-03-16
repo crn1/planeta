@@ -6,6 +6,14 @@ Kirki::add_section('404_section', array(
 ));
 
 Kirki::add_field('planeta_config', array(
+	'type' 						=> 'image',
+	'settings'				=> '404_image',
+	'label'						=> esc_html__('Image', 'planeta'),
+	'section'					=> '404_section',
+	'default'					=> '',
+));
+
+Kirki::add_field('planeta_config', array(
 	'type' 						=> 'text',
 	'settings'				=> '404_title',
 	'label'						=> esc_html__('Title', 'planeta'),
