@@ -38,7 +38,7 @@ Kirki::add_field('planeta_config', array(
 	),
 	'output'					=> array(
 		array(
-			'element'			=> '#main-header',
+			'element'			=> '.header-container',
 			'property'		=> 'max-width',
 			'units'				=> 'px',
 		),

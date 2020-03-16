@@ -28,14 +28,6 @@ Kirki::add_field('planeta_config', array(
 ));
 
 Kirki::add_field('planeta_config', array(
-	'type' 					=> 'image',
-	'settings'			=> 'header_logo',
-	'label'					=> esc_html__('Logo', 'planeta'),
-	'section'				=> 'header_appearance',
-	'default'				=> '',
-));
-
-Kirki::add_field('planeta_config', array(
 	'type'								=> 'select',
 	'settings'						=> 'navbar_type',
 	'label'								=> esc_html__('Navbar Type', 'planeta'),

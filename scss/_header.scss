@@ -5,10 +5,16 @@ $drawer-width: 40rem;
 
 #main-header {
 	z-index: 99900;
-	@include flexContainer();
+	@include flexContainer($justify: flex-end);
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 
-	#logo {
-		@include flexContainer($display: inline-flex, $justify: space-between);
+	@media screen and (max-width: 768px) {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+
+	#logo-container {
 		flex-grow: 1;
 	}
 
@@ -42,7 +48,7 @@ $drawer-width: 40rem;
 	&-fullscreen-down,
 	&-fullscreen-left,
 	&-fullscreen-right {
-		position: fixed;
+		position: absolute;
 		z-index: 99990;
 		overflow: hidden;
 		background-color: #000;
@@ -60,6 +66,7 @@ $drawer-width: 40rem;
 
 	&-fullscreen-up {
 		top: -100vh;
+		left: 0;
 		&.active {
 			top: 0;
 		}
@@ -67,6 +74,7 @@ $drawer-width: 40rem;
 
 	&-fullscreen-down {
 		top: 100vh;
+		left: 0;
 		&.active {
 			top: 0;
 		}
@@ -174,5 +182,4 @@ $drawer-width: 40rem;
 	&-circle-right {
 		clip-path: circle(100% at 100% 50%);
 	}
-
 }
