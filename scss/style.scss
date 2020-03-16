@@ -1,4 +1,4 @@
-@import 'modules/flex';
+@import 'not-found';
 @import 'cards';
 @import 'wordpress';
 @import 'containers';
@@ -12,6 +12,10 @@ a {
 	text-decoration: none;
 	position: relative;
 	display: inline-block;
+}
+
+html, body {
+	overflow-x: hidden;
 }
 
 /*a::before {

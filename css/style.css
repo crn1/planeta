@@ -1,3 +1,9 @@
+#not-found-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
 .card-perspective-left .card-image {
   transform: perspective(400px) rotateY(10deg); }
 .card-perspective-right .card-image {
@@ -222,6 +228,9 @@ a {
   text-decoration: none;
   position: relative;
   display: inline-block; }
+
+html, body {
+  overflow-x: hidden; }
 
 /*a::before {
 	content: '';

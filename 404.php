@@ -1,14 +1,22 @@
+<?php
+	$title = get_theme_mod('404_title', '404');
+	$subtitle = get_theme_mod('404_subtitle', 'Page not Found!');
+	$homepage = get_theme_mod('404_homepage', 'Return to Homepage');
+?>
 <?php get_header(); ?>
-	<main>
-		<article class='default-container'>
-			<header>
-				<h2 class='page-title'>
-					404
-				</h2>
-			</header>
-			<h3>
-				Page Not Found!
-			</p>
-		</article>
-	</main>
+<?php get_template_part('template-parts/header', 'navbar'); ?>
+<main id='not-found-container' class='default-container'>
+	<h1 class='page-title'>
+		<?php echo $title; ?>
+	</h1>
+	<h2 class='page-subtitle'>
+		<?php echo $subtitle; ?>
+	</h2>
+	<h2 class='not-found-homepage'>
+		<a href='/'>
+		<?php echo $homepage; ?>
+		</a>
+	</h2>
+</main>
+<?php get_template_part('template-parts/footer', 'notice'); ?>
 <?php get_footer(); ?>

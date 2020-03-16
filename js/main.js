@@ -1,5 +1,11 @@
 jQuery(document).ready(function($)
 {
+	//Min Height of page
+	let headerHeight = $('#main-header').outerHeight()
+	let footerHeight = $('#footer').outerHeight()
+	let mainHeight = 'calc(100vh - ' + headerHeight + 'px - ' + footerHeight + 'px)'
+	$('main').css('min-height', mainHeight)
+
 	// Main Menu
 	$('#menu-button').on('click', function() {
 		$('#top-menu').toggleClass('active')
@@ -26,4 +32,11 @@ jQuery(document).ready(function($)
 		window.requestAnimationFrame(updateLax)
 	}
 	window.requestAnimationFrame(updateLax)
+
+	// Convert card images to links
+	$('.card').find('.image').on('click', function(event)
+	{
+		event.preventDefault();
+		window.location.href = $(this).parent().find('.url').find('a').attr('href');
+	})
 })

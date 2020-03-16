@@ -9,5 +9,6 @@ require_once(get_template_directory() . '/inc/customizer/global-options/typograp
 require_once(get_template_directory() . '/inc/customizer/global-options/typography/section-title.php');
 require_once(get_template_directory() . '/inc/customizer/global-options/typography/section-subtitle.php');
 require_once(get_template_directory() . '/inc/customizer/global-options/typography/page-title.php');
+require_once(get_template_directory() . '/inc/customizer/global-options/typography/page-subtitle.php');
 
 ?>

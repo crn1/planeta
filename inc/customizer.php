@@ -26,6 +26,7 @@ require_once(get_template_directory() . '/inc/customizer/global-options/typograp
 require_once(get_template_directory() . '/inc/customizer/global-options/colors.php');
 
 //Modules
+require_once(get_template_directory() . '/inc/customizer/modules/404.php');
 require_once(get_template_directory() . '/inc/customizer/modules/section.php');
 require_once(get_template_directory() . '/inc/customizer/modules/header.php');
 require_once(get_template_directory() . '/inc/customizer/modules/footer.php');
