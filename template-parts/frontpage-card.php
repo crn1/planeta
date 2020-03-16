@@ -1,11 +1,11 @@
 <?php
 	$item = get_query_var('item');
 	$card_type = get_query_var('card_type');
-	$card_classes = get_query_var('card_classes');
+	$card_aos = get_query_var('card_aos');
 	$card_lax = get_query_var('card_lax');
 ?>
 
-	<div class='card card-<?php echo $card_type; ?> <?php echo $card_classes; ?>' <?php echo $card_lax; ?>>
+	<div class='card card-<?php echo $card_type; ?> <?php echo $card_lax != '' ? 'lax' : ''; ?>' <?php echo $card_lax; ?> <?php echo $card_aos; ?>>
 
 <?php
 	if(array_key_exists('image', $item))

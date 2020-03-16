@@ -13,6 +13,9 @@ jQuery(document).ready(function($)
 		}
 	})
 
+	// AOS JS
+	AOS.init()
+
 	//Fittext
 	//$('.section-title').fitText();
 

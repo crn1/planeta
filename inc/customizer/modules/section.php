@@ -1,7 +1,7 @@
 <?php
 
-require_once(get_template_directory() . '/inc/customizer/misc_animate.php');
-require_once(get_template_directory() . '/inc/customizer/misc_lax.php');
+require_once(get_template_directory() . '/inc/customizer/misc/aos.php');
+require_once(get_template_directory() . '/inc/customizer/misc/lax.php');
 
 Kirki::add_section('frontpage_section', array(
 	'title'       => esc_html__('Frontpage Section', 'planeta'),
@@ -27,7 +27,7 @@ Kirki::add_field('planeta_config', array(
 	'section'				=> 'frontpage_section',
 	'settings'			=> 'frontpage_title_effect_reveal',
 	'default'				=> 'fadeIn',
-	'choices'				=> $animate_css_list,
+	'choices'				=> $aos_list,
 	'active_callback'	=> array(
 		array(
 			'setting'				=> 'frontpage_title_type',
@@ -79,21 +79,14 @@ foreach($lax_js_list as $key => $lax_item)
 
 Kirki::add_field('planeta_config', array(
 	'type' 						=> 'slider',
-	'settings'				=> 'frontpage_title_timing',
-	'label'						=> esc_html__('Timing (in seconds)', 'planeta'),
+	'settings'				=> 'frontpage_title_duration',
+	'label'						=> esc_html__('Duration (milliseconds)', 'planeta'),
 	'section'					=> 'frontpage_section',
-	'default'					=> 1,
+	'default'					=> 400,
 	'choices'					=> array(
-		'min'							=> 0.1,
-		'max'							=> 7,
-		'step'						=> 0.1,
-	),
-	'output'					=> array(
-		array(
-			'element'					=> '.section-title',
-			'property'				=> 'animation-duration',
-			'units'						=> 's',
-		),
+		'min'							=> 50,
+		'max'							=> 3000,
+		'step'						=> 50,
 	),
 	'active_callback' => array(
 		array(
@@ -148,7 +141,7 @@ Kirki::add_field('planeta_config', array(
 	'section'				=> 'frontpage_section',
 	'settings'			=> 'frontpage_subtitle_effect_reveal',
 	'default'				=> 'fadeIn',
-	'choices'				=> $animate_css_list,
+	'choices'				=> $aos_list,
 	'active_callback'	=> array(
 		array(
 			'setting'				=> 'frontpage_subtitle_type',
@@ -201,21 +194,14 @@ foreach($lax_js_list as $key => $lax_item)
 
 Kirki::add_field('planeta_config', array(
 	'type' 						=> 'slider',
-	'settings'				=> 'frontpage_subtitle_timing',
-	'label'						=> esc_html__('Timing (in seconds)', 'planeta'),
+	'settings'				=> 'frontpage_subtitle_duration',
+	'label'						=> esc_html__('Duration (milliseconds)', 'planeta'),
 	'section'					=> 'frontpage_section',
-	'default'					=> 1,
+	'default'					=> 400,
 	'choices'					=> array(
-		'min'							=> 0.1,
-		'max'							=> 7,
-		'step'						=> 0.1,
-	),
-	'output'					=> array(
-		array(
-			'element'					=> '.section-subtitle',
-			'property'				=> 'animation-duration',
-			'units'						=> 's',
-		),
+		'min'							=> 50,
+		'max'							=> 3000,
+		'step'						=> 50,
 	),
 	'active_callback' => array(
 		array(
@@ -265,7 +251,7 @@ Kirki::add_field('planeta_config', array(
 	'section'				=> 'frontpage_section',
 	'settings'			=> 'frontpage_card_effect_reveal',
 	'default'				=> 'fadeIn',
-	'choices'				=> $animate_css_list,
+	'choices'				=> $aos_list,
 	'active_callback'	=> array(
 		array(
 			'setting'				=> 'frontpage_card_type',
@@ -317,21 +303,14 @@ foreach($lax_js_list as $key => $lax_item)
 
 Kirki::add_field('planeta_config', array(
 	'type' 						=> 'slider',
-	'settings'				=> 'frontpage_card_timing',
-	'label'						=> esc_html__('Timing (in seconds)', 'planeta'),
+	'settings'				=> 'frontpage_card_duration',
+	'label'						=> esc_html__('Duration (milliseconds)', 'planeta'),
 	'section'					=> 'frontpage_section',
-	'default'					=> 1,
+	'default'					=> 400,
 	'choices'					=> array(
-		'min'							=> 0.1,
-		'max'							=> 7,
-		'step'						=> 0.1,
-	),
-	'output'					=> array(
-		array(
-			'element'					=> '.card',
-			'property'				=> 'animation-duration',
-			'units'						=> 's',
-		),
+		'min'							=> 50,
+		'max'							=> 3000,
+		'step'						=> 50,
 	),
 	'active_callback' => array(
 		array(

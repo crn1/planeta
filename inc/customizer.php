@@ -20,23 +20,19 @@ Kirki::add_panel('sections_panel', array(
 ));
 
 //Theme Options
-require_once(get_template_directory() . '/inc/customizer/theme_background.php');
-require_once(get_template_directory() . '/inc/customizer/theme_containers.php');
-require_once(get_template_directory() . '/inc/customizer/theme_typography.php');
-require_once(get_template_directory() . '/inc/customizer/theme_colors.php');
-//require_once(get_template_directory() . '/inc/customizer/theme_cursor.php');
+require_once(get_template_directory() . '/inc/customizer/global-options/background.php');
+require_once(get_template_directory() . '/inc/customizer/global-options/containers.php');
+require_once(get_template_directory() . '/inc/customizer/global-options/typography.php');
+require_once(get_template_directory() . '/inc/customizer/global-options/colors.php');
 
 //Modules
-//require_once(get_template_directory() . '/inc/customizer/module_page.php');
-require_once(get_template_directory() . '/inc/customizer/module_section.php');
-require_once(get_template_directory() . '/inc/customizer/module_header.php');
-require_once(get_template_directory() . '/inc/customizer/module_footer.php');
-//require_once(get_template_directory() . '/inc/customizer/module_blog.php');
-require_once(get_template_directory() . '/inc/customizer/module_portfolio.php');
-//require_once(get_template_directory() . '/inc/customizer/module_social_media.php');
+require_once(get_template_directory() . '/inc/customizer/modules/section.php');
+require_once(get_template_directory() . '/inc/customizer/modules/header.php');
+require_once(get_template_directory() . '/inc/customizer/modules/footer.php');
+require_once(get_template_directory() . '/inc/customizer/modules/portfolio.php');
 
 //Homepage sections
-require_once(get_template_directory() . '/inc/customizer/sections_layout.php');
-require_once(get_template_directory() . '/inc/customizer/sections_generator.php');
+require_once(get_template_directory() . '/inc/customizer/sections/layout.php');
+require_once(get_template_directory() . '/inc/customizer/sections/generator.php');
 
 ?>
