@@ -20,7 +20,7 @@
   transform: perspective(400px) rotateY(10deg); }
 .card-zigzag-right-items [class=card-zigzag-right]:nth-child(odd) .card-image {
   transform: perspective(400px) rotateY(-10deg); }
-.card-default, .card-perspective-left, .card-perspective-right, .card-perspective-up, .card-perspective-down, .card-zigzag-left, .card-zigzag-right {
+.card-default, .card-perspective-left, .card-perspective-right, .card-perspective-up, .card-perspective-down, .card-zigzag-left, .card-zigzag-right, .card-swiper {
   display: flex;
   align-items: center;
   flex-direction: column; }

@@ -19,11 +19,25 @@ jQuery(document).ready(function($)
 		}
 	})
 
-	// AOS JS
-	AOS.init()
-
 	//Fittext
 	//$('.section-title').fitText();
+
+	// Convert card images to links
+	$('.card').find('.image').on('click', function(event)
+	{
+		event.preventDefault();
+		window.location.href = $(this).parent().find('.url').find('a').attr('href');
+	})
+
+	$('.swiper-container').each(function() {
+		new Swiper($(this), {
+			navigation: {
+				prevEl: $(this).find('.swiper-button-prev'),
+				nextEl: $(this).find('.swiper-button-next'),
+			},
+			loop: true,
+		});
+	});
 
 	// Laxxx
 	lax.setup()
@@ -33,10 +47,6 @@ jQuery(document).ready(function($)
 	}
 	window.requestAnimationFrame(updateLax)
 
-	// Convert card images to links
-	$('.card').find('.image').on('click', function(event)
-	{
-		event.preventDefault();
-		window.location.href = $(this).parent().find('.url').find('a').attr('href');
-	})
+	// AOS JS
+	AOS.init()
 })
