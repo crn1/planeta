@@ -98,31 +98,6 @@ Kirki::add_field('planeta_config', array(
 ));
 
 Kirki::add_field('planeta_config', array(
-	'type'			=> 'slider',
-	'label'			=> esc_html__('Section Title Padding Top & Bottom (vh)', 'planeta'),
-	'section'		=> 'frontpage_section',
-	'settings'	=> 'frontpage_title_padding',
-	'default'		=> 0,
-	'choices'		=> array(
-		'min'			=> '0',
-		'max'			=> '100',
-		'step'		=> '1',
-	),
-	'output'		=> array(
-		array(
-			'element'		=> '.section-title',
-			'units'			=> 'vh',
-			'property'	=> 'padding-top',
-		),
-		array(
-			'element'		=> '.section-title',
-			'units'			=> 'vh',
-			'property'	=> 'padding-bottom',
-		),
-	),
-));
-
-Kirki::add_field('planeta_config', array(
 	'type' 						=> 'radio-buttonset',
 	'settings'				=> 'frontpage_subtitle_type',
 	'label'						=> esc_html__('Section Subtitle Type', 'planeta'),
@@ -208,26 +183,6 @@ Kirki::add_field('planeta_config', array(
 			'setting'				=> 'frontpage_subtitle_type',
 			'operator'			=> '==',
 			'value'					=> 'reveal',
-		),
-	),
-));
-
-Kirki::add_field('planeta_config', array(
-	'type'			=> 'slider',
-	'label'			=> esc_html__('Section Subtitle Padding Bottom (vh)', 'planeta'),
-	'section'		=> 'frontpage_section',
-	'settings'	=> 'frontpage_subtitle_padding',
-	'default'		=> 15,
-	'choices'		=> array(
-		'min'			=> '0',
-		'max'			=> '100',
-		'step'		=> '1',
-	),
-	'output'		=> array(
-		array(
-			'element'		=> '.section-subtitle',
-			'units'			=> 'vh',
-			'property'	=> 'padding-bottom',
 		),
 	),
 ));
