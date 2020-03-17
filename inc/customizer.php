@@ -8,7 +8,7 @@ Kirki::add_config('planeta_config', array(
 Kirki::add_field('planeta_config', array());
 
 Kirki::add_panel('theme_options_panel', array(
-	'title'       => esc_html__('Theme Options', 'planeta'),
+	'title'       => esc_html__('Global Options', 'planeta'),
 ));
 
 Kirki::add_panel('modules_panel', array(

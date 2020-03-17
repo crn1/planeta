@@ -18,3 +18,7 @@
 	grid-column-gap: 48px;
 	grid-template-columns: 22% 56% 22%;
 }
+
+.video-overlay {
+	z-index: 20 !important;
+}

@@ -64,6 +64,9 @@
   grid-column-gap: 48px;
   grid-template-columns: 22% 56% 22%; }
 
+.video-overlay {
+  z-index: 20 !important; }
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
@@ -83,7 +86,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   max-width: 240px;
   position: fixed;
-  top: 0; }
+  top: 0;
+  z-index: 200; }
   #sidebar-portfolio #sidebar-portfolio-avatar {
     object-fit: cover;
     max-width: 100%;
@@ -223,6 +227,24 @@ footer {
     width: 100%;
     text-align: center; }
 
+.video-background, #body-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 10; }
+
+body .video-background, body #body-video-overlay {
+  position: fixed; }
+body main {
+  position: relative; }
+
+.has-video {
+  position: relative; }
+
 a {
   font-weight: bold;
   text-decoration: none;
@@ -231,6 +253,9 @@ a {
 
 html, body {
   overflow-x: hidden; }
+
+main {
+  z-index: 100; }
 
 /*a::before {
 	content: '';

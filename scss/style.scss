@@ -6,6 +6,7 @@
 @import 'sidebars';
 @import 'header';
 @import 'footer';
+@import 'background';
 
 a {
 	font-weight: bold;
@@ -16,6 +17,11 @@ a {
 
 html, body {
 	overflow-x: hidden;
+}
+
+main {
+	//Because of video!
+	z-index: 100;
 }
 
 /*a::before {
