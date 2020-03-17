@@ -1,6 +1,6 @@
 <?php
 
-function planeta_add_section_heading($index)
+function planeta_add_section_heading(&$index)
 {
 	Kirki::add_section("section_${index}_heading", array(
 		'title' => esc_html__("Heading", 'planeta'),

@@ -1,6 +1,6 @@
 <?php
 
-function planeta_add_background($section, $panel, $bg_output, $video_overlay)
+function planeta_add_background($section, $panel, $bg_output)
 {
 	Kirki::add_section("${section}_background", array(
 		'title' => esc_html__("Background", 'planeta'),
@@ -65,6 +65,21 @@ function planeta_add_background($section, $panel, $bg_output, $video_overlay)
 	));
 
 	Kirki::add_field('planeta_config', array(
+		'type'									=> 'image',
+		'label'									=> esc_html__('Fallback Image', 'planeta'),
+		'section'								=> "${section}_background",
+		'settings'							=> "${section}_fallback_image_url",
+		'default'								=> '',
+		'active_callback'				=> array(
+			array(
+				'setting'								=> "${section}_bg_type",
+				'operator'							=> '==',
+				'value'									=> 'video',
+			),
+		),
+	));
+
+	Kirki::add_field('planeta_config', array(
 		'type'									=> 'color',
 		'label'									=> esc_html__('Color Overlay', 'planeta'),
 		'section'								=> "${section}_background",
@@ -82,7 +97,7 @@ function planeta_add_background($section, $panel, $bg_output, $video_overlay)
 		),
 		'output'								=>	array(
 			array(
-				'element'								=> $video_overlay,
+				'element'								=> "#${section}-video-overlay",
 				'property'							=> 'background-color',
 			)
 		),

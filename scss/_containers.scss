@@ -1,6 +1,8 @@
 .default-container {
 	width: 100%;
 	margin: 0 auto;
+	z-index: 100;
+	position: relative;
 
   &:before {
     content: '';
@@ -17,8 +19,4 @@
 	display: grid;
 	grid-column-gap: 48px;
 	grid-template-columns: 22% 56% 22%;
-}
-
-.video-overlay {
-	z-index: 20 !important;
 }

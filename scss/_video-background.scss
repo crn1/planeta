@@ -1,4 +1,4 @@
-.video-background, #body-video-overlay {
+.video-background, div[id$='-video-overlay'] {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -9,16 +9,14 @@
 	z-index: 10;
 }
 
-body {
-	.video-background, #body-video-overlay {
-		position: fixed;
-	}
-
-	main {
-		position: relative;
-	}
+.video-overlay {
+	z-index: 20 !important;
 }
 
 .has-video {
 	position: relative;
+}
+
+body > .video-background {
+	position: fixed;
 }

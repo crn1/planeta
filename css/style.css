@@ -51,7 +51,9 @@
 
 .default-container {
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  z-index: 100;
+  position: relative; }
   .default-container:before {
     content: '';
     padding-left: 1em; }
@@ -63,9 +65,6 @@
   display: grid;
   grid-column-gap: 48px;
   grid-template-columns: 22% 56% 22%; }
-
-.video-overlay {
-  z-index: 20 !important; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0; }
@@ -227,7 +226,7 @@ footer {
     width: 100%;
     text-align: center; }
 
-.video-background, #body-video-overlay {
+.video-background, div[id$='-video-overlay'] {
   position: absolute;
   top: 0;
   left: 0;
@@ -237,13 +236,14 @@ footer {
   object-fit: cover;
   z-index: 10; }
 
-body .video-background, body #body-video-overlay {
-  position: fixed; }
-body main {
-  position: relative; }
+.video-overlay {
+  z-index: 20 !important; }
 
 .has-video {
   position: relative; }
+
+body > .video-background {
+  position: fixed; }
 
 a {
   font-weight: bold;
@@ -254,8 +254,9 @@ a {
 html, body {
   overflow-x: hidden; }
 
-main {
-  z-index: 100; }
+section[id^='section_'] {
+  display: flex;
+  align-items: center; }
 
 /*a::before {
 	content: '';

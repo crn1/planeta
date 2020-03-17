@@ -21,9 +21,16 @@ foreach($layout as $section):
 	set_query_var('card_type', $card_type);
 
 	$section_items = get_theme_mod("${section}_${card_preset}_items", array());
+
+	$video = get_theme_mod("${section}_bg_type", 'static') == 'video' ? 'has-video' : '';
 ?>
 
-	<section id='<?php echo $section; ?>'>
+	<section id='<?php echo $section; ?>' class='<?php echo $video; ?>'>
+
+		<?php
+			set_query_var('section', $section);
+			get_template_part('template-parts/content', 'background'); ?>
+
 		<div class='default-container'>
 
 		<h2 class='section-title <?php echo $title_lax_class; ?>' <?php echo $title_lax; ?> <?php echo $title_aos; ?>>

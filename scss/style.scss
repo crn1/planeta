@@ -6,7 +6,7 @@
 @import 'sidebars';
 @import 'header';
 @import 'footer';
-@import 'background';
+@import 'video-background';
 
 a {
 	font-weight: bold;
@@ -19,9 +19,9 @@ html, body {
 	overflow-x: hidden;
 }
 
-main {
-	//Because of video!
-	z-index: 100;
+section[id^='section_'] {
+	display: flex;
+	align-items: center;
 }
 
 /*a::before {
