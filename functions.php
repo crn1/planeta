@@ -77,10 +77,6 @@ function init_scripts()
 	// Macy Masonry
 	wp_enqueue_script('masonry-script', get_template_directory_uri() . '/js/macy.min.js', array(), '2.5.1');
 
-	// Swiper
-	wp_enqueue_style('swiper-css', get_template_directory_uri() . '/css/swiper.min.css', false, '5.3.6', 'all');
-	wp_enqueue_script('swiper-script', get_template_directory_uri() . '/js/swiper.min.js', array(), '5.3.6');
-
 	// Fittext
 	//wp_enqueue_script('fittext-script', get_template_directory_uri() . '/js/fittext.min.js', array('jquery'), '1.2.0');
 

@@ -22,7 +22,6 @@ function planeta_add_section_appearance(&$index)
 			'perspective-down'		=> esc_html__('Perspective Down', 'planeta'),
 			'zigzag-left'					=> esc_html__('ZigZag Left', 'planeta'),
 			'zigzag-right'				=> esc_html__('ZigZag Right', 'planeta'),
-			'swiper'							=> esc_html__('Swiper', 'planeta'),
 		),
 	));
 
@@ -36,13 +35,6 @@ function planeta_add_section_appearance(&$index)
 			'min'						=> '1',
 			'max'						=> '6',
 			'step'					=> '1',
-		),
-		'active_callback' => array(
-			array(
-				'setting'					=> "section_${index}_card_type",
-				'operator'				=> '!=',
-				'value'						=> 'swiper',
-			),
 		),
 		'output'				=> array(
 			array(

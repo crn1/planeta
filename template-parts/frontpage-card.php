@@ -6,11 +6,9 @@
 
 	$card_lax = get_query_var('card_lax');
 	$lax = $card_lax != '' ? 'lax' : '';
-
-	$swiper = $card_type == 'swiper' ? 'swiper-slide' : "card-${card_type}";
 ?>
 
-	<div class='card <?php echo $swiper; ?> <?php echo $lax; ?>' <?php echo $card_lax; ?> <?php echo $card_aos; ?>>
+	<div class='card card-<?php echo $card_type; ?> <?php echo $lax; ?>' <?php echo $card_lax; ?> <?php echo $card_aos; ?>>
 
 <?php
 	if(array_key_exists('image', $item))

@@ -29,16 +29,6 @@ jQuery(document).ready(function($)
 		window.location.href = $(this).parent().find('.url').find('a').attr('href');
 	})
 
-	$('.swiper-container').each(function() {
-		new Swiper($(this), {
-			navigation: {
-				prevEl: $(this).find('.swiper-button-prev'),
-				nextEl: $(this).find('.swiper-button-next'),
-			},
-			loop: true,
-		});
-	});
-
 	// Laxxx
 	lax.setup()
 	const updateLax = () => {

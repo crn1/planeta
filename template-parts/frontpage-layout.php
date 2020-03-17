@@ -21,8 +21,6 @@ foreach($layout as $section):
 	set_query_var('card_type', $card_type);
 
 	$section_items = get_theme_mod("${section}_${card_preset}_items", array());
-
-	$swiper = $card_type == 'swiper' ? "swiper-container" : "card-${card_type}-items";
 ?>
 
 	<section id='<?php echo $section; ?>'>
@@ -37,11 +35,7 @@ foreach($layout as $section):
 			</h3>
 
 			<?php if($card_preset != 'none'): ?>
-				<div id='<?php echo $section?>-items' class='<?php echo $swiper; ?>'>
-
-				<?php if($card_type == 'swiper'): ?>
-					<div class='swiper-wrapper'>
-				<?php endif; ?>
+				<div id='<?php echo $section?>-items' class='card-<?php echo $card_type; ?>-items'>
 
 				<?php
 					if($card_preset == 'posts')
@@ -56,11 +50,7 @@ foreach($layout as $section):
 					}
 				?>
 
-				<?php if($card_type == 'swiper'): ?>
-					</div>
-						<div class='swiper-button-prev'></div>
-						<div class='swiper-button-next'></div>
-				<?php else: get_template_part('template-parts/frontpage', 'macy'); endif; ?>
+				<?php get_template_part('template-parts/frontpage', 'macy'); ?>
 
 				</div>
 
