@@ -30,13 +30,19 @@ jQuery(document).ready(function($)
 	})
 
 	// Laxxx
-	lax.setup()
-	const updateLax = () => {
-		lax.update(window.scrollY)
+	if(typeof lax != 'undefined')
+	{
+		lax.setup()
+		const updateLax = () => {
+			lax.update(window.scrollY)
+			window.requestAnimationFrame(updateLax)
+		}
 		window.requestAnimationFrame(updateLax)
 	}
-	window.requestAnimationFrame(updateLax)
 
 	// AOS JS
-	AOS.init()
+	if(typeof AOS != 'undefined')
+	{
+		AOS.init()
+	}
 })
