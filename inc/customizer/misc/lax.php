@@ -1,6 +1,6 @@
 <?php
 
-$lax_js_list_labels = array(
+$lax_labels = array(
 	'linger'			=> esc_html__('Linger', 'planeta'),
 	'lazy'				=> esc_html__('Lazy', 'planeta'),
 	'eager'				=> esc_html__('Eager', 'planeta'),
@@ -27,7 +27,7 @@ $lax_js_list_labels = array(
 	'speedy'			=> esc_html__('Speedy', 'planeta'),
 );
 
-$lax_js_list = array(
+$lax_list = array(
 	'lazy'				=> array(
 		'default'			=> 40,
 		'choices'			=> array(
