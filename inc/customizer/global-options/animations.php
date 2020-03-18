@@ -3,7 +3,7 @@
 require_once(get_template_directory() . '/inc/customizer/misc/aos.php');
 require_once(get_template_directory() . '/inc/customizer/misc/lax.php');
 
-function planeta_add_animations($section, $section_title, &$aos_list, &$lax_labels, &$lax_list)
+function planeta_add_animations($section, $section_title, &$aos_list, &$lax_list, &$lax_labels)
 {
 	$section = $section . '_anims';
 
@@ -83,7 +83,7 @@ function planeta_add_animations($section, $section_title, &$aos_list, &$lax_labe
 
 	Kirki::add_field('planeta_config', array(
 		'type' 						=> 'slider',
-		'settings'				=> "${section}_strength_${key}",
+		'settings'				=> "${section}_duration",
 		'section'					=> $section,
 		'label'						=> esc_html__('Duration (milliseconds)', 'planeta'),
 		'default'					=> 400,
@@ -100,6 +100,46 @@ function planeta_add_animations($section, $section_title, &$aos_list, &$lax_labe
 			),
 		),
 	));
+
+	Kirki::add_field('planeta_config', array(
+		'type' 						=> 'slider',
+		'settings'				=> "${section}_delay",
+		'section'					=> $section,
+		'label'						=> esc_html__('Delay (milliseconds)', 'planeta'),
+		'default'					=> 0,
+		'choices'					=> array(
+			'min'							=> 0,
+			'max'							=> 3000,
+			'step'						=> 50,
+		),
+		'active_callback' => array(
+			array(
+				'setting'				=> "${section}_trigger",
+				'operator'			=> '==',
+				'value'					=> 'aos',
+			),
+		),
+	));
+
+	Kirki::add_field('planeta_config', array(
+		'type' 						=> 'select',
+		'settings'				=> "${section}_easing",
+		'section'					=> $section,
+		'label'						=> esc_html__('Easing Function', 'planeta'),
+		'default'					=> 'linear',
+		'choices'					=> array(
+			'linear'					=> esc_html__('Linear (default)', 'planeta'),
+		),
+		'active_callback' => array(
+			array(
+				'setting'				=> "${section}_trigger",
+				'operator'			=> '==',
+				'value'					=> 'aos',
+			),
+		),
+	));
+
+	//todo in future: AOS mirroring and once
 }
 
 Kirki::add_panel('animations_panel', array(
@@ -109,6 +149,6 @@ Kirki::add_panel('animations_panel', array(
 
 planeta_add_animations('section_title', 'Section Title', $aos_list, $lax_list, $lax_labels);
 planeta_add_animations('section_subtitle', 'Section Subtitle', $aos_list, $lax_list, $lax_labels);
-planeta_add_animations('cards', 'Cards', $aos_list, $lax_list, $lax_labels);
+planeta_add_animations('card', 'Cards', $aos_list, $lax_list, $lax_labels);
 
 ?>

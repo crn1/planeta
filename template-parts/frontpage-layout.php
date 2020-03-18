@@ -3,12 +3,12 @@
 $layout = get_theme_mod('sections_layout', array());
 
 get_template_part('template-parts/frontpage', 'animations');
-$title_aos = get_query_var('title_aos');
-$title_lax = get_query_var('title_lax');
+$title_aos = get_query_var('section_title_aos');
+$title_lax = get_query_var('section_title_lax');
 $title_lax_class = $title_lax != '' ? 'lax' : '';
 
-$subtitle_aos = get_query_var('subtitle_aos');
-$subtitle_lax = get_query_var('subtitle_lax');
+$subtitle_aos = get_query_var('section_subtitle_aos');
+$subtitle_lax = get_query_var('section_subtitle_lax');
 $subtitle_lax_class = $subtitle_lax != '' ? 'lax' : '';
 
 foreach($layout as $section):
