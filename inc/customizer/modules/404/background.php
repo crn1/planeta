@@ -3,8 +3,8 @@
 require_once(get_template_directory() . '/inc/customizer/video-background.php');
 
 planeta_add_video_background(
-	$section = 'global',
-	$panel = 'theme_options_panel',
+	$section = '404',
+	$panel = '404_panel',
 	$bg_output = 'body',
 );
 

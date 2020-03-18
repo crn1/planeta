@@ -9,5 +9,9 @@
 	<body <?php body_class(); ?>>
 
 		<?php
-			set_query_var('section', 'global');
+			if(is_404()) {
+				set_query_var('section', '404');
+			}else{
+				set_query_var('section', 'global');
+			}
 			get_template_part('template-parts/content', 'background'); ?>

@@ -1,6 +1,6 @@
 <?php
 
-function planeta_add_background($section, $panel, $bg_output)
+function planeta_add_video_background($section, $panel, $bg_output)
 {
 	Kirki::add_section("${section}_background", array(
 		'title' => esc_html__("Background", 'planeta'),

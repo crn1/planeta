@@ -1,8 +1,10 @@
 <?php
 
 $card_type = get_query_var('card_type');
-$card_aos = get_query_var('card_aos');
 
+set_query_var('animation_name', 'card');
+get_template_part('template-parts/content', 'animations');
+$card_aos = get_query_var('card_aos');
 $card_lax = get_query_var('card_lax');
 $lax = $card_lax != '' ? 'lax' : '';
 

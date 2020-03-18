@@ -233,17 +233,25 @@ footer {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: 10; }
+  object-fit: cover; }
 
-.video-overlay {
+div[id$='-video-overlay'] {
+  z-index: 40 !important; }
+
+.video-background {
+  z-index: 30; }
+
+#global-video-overlay {
   z-index: 20 !important; }
+
+#global-video-background {
+  z-index: 10 !important; }
+
+#global-video-overlay, #global-video-background {
+  position: fixed; }
 
 .has-video {
   position: relative; }
-
-body > .video-background {
-  position: fixed; }
 
 a {
   font-weight: bold;

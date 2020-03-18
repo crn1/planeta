@@ -10,7 +10,7 @@
 ?>
 <?php if($video): ?>
 <div class='video-overlay' id='<?php echo $section; ?>-video-overlay'></div>
-	<video autoplay loop muted class='video-background' poster='<?php echo $img_url; ?>'>
+	<video autoplay loop muted id='<?php echo $section; ?>-video-background' class='video-background' poster='<?php echo $img_url; ?>'>
 		<?php if($mp4_url != ''): ?>
 			<source src='<?php echo $mp4_url; ?>' type='video/mp4'>
 		<?php endif; ?>
