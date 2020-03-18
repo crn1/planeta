@@ -2,7 +2,7 @@
 
 $layout = get_theme_mod('sections_layout', array());
 
-get_template_part('template-parts/frontpage', 'effects');
+get_template_part('template-parts/frontpage', 'animations');
 $title_aos = get_query_var('title_aos');
 $title_lax = get_query_var('title_lax');
 $title_lax_class = $title_lax != '' ? 'lax' : '';

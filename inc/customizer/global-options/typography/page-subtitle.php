@@ -1,13 +1,13 @@
 <?php
 
 Kirki::add_section('typography_page_subtitle', array(
-	'subtitle'       => esc_html__('Page subtitle', 'planeta' ),
+	'title'       => esc_html__('Page Subtitle', 'planeta' ),
 	'panel'       => 'typography_panel',
 ));
 
 Kirki::add_field('planeta_config', array(
 	'type'        => 'typography',
-	'label'       => esc_html__('Page subtitle', 'planeta'),
+	'label'       => esc_html__('Page Subtitle', 'planeta'),
 	'section'     => 'typography_page_subtitle',
 	'settings'    => 'typography_page_subtitle',
 	'default'			=> 'none',
@@ -17,14 +17,14 @@ Kirki::add_field('planeta_config', array(
 	),
 	'output'      => array(
 		array(
-			'element' 		=> '.page-subsubtitle',
+			'element' 		=> '.page-subtitle',
 		),
 	),
 ));
 
 Kirki::add_field('planeta_config', array(
 	'type'        => 'slider',
-	'label'       => esc_html__('Page subtitle Size (rem)', 'planeta'),
+	'label'       => esc_html__('Page Subtitle Size (rem)', 'planeta'),
 	'section'     => 'typography_page_subtitle',
 	'settings'    => 'typography_page_subtitle_size',
 	'default'     => 2,

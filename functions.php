@@ -81,18 +81,18 @@ function init_scripts()
 	//wp_enqueue_script('fittext-script', get_template_directory_uri() . '/js/fittext.min.js', array('jquery'), '1.2.0');
 
 	// AOS CSS and JS
-	if(get_theme_mod('frontpage_title_type', 'none') == 'reveal' ||
-		get_theme_mod('frontpage_subtitle_type', 'none') == 'reveal' ||
-		get_theme_mod('frontpage_card_type', 'none') == 'reveal')
+	if(get_theme_mod('animations_title_type', 'none') == 'reveal' ||
+		get_theme_mod('animations_subtitle_type', 'none') == 'reveal' ||
+		get_theme_mod('animations_card_type', 'none') == 'reveal')
 	{
 		wp_enqueue_style('aos-css', get_template_directory_uri() . '/css/aos.css', false, '3.0.0', 'all');
 		wp_enqueue_script('aos-script', get_template_directory_uri() . '/js/aos.js', true, '3.0.0', 'all');
 	}
 
 	// Laxxx
-	if(get_theme_mod('frontpage_title_type', 'none') == 'scroll' ||
-		get_theme_mod('frontpage_subtitle_type', 'none') == 'scroll' ||
-		get_theme_mod('frontpage_card_type', 'none') == 'scroll')
+	if(get_theme_mod('animations_title_type', 'none') == 'scroll' ||
+		get_theme_mod('animations_subtitle_type', 'none') == 'scroll' ||
+		get_theme_mod('animations_card_type', 'none') == 'scroll')
 	{
 		wp_enqueue_script('lax-script', get_template_directory_uri() . '/js/lax.min.js');
 	}

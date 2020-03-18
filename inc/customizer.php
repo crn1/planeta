@@ -19,15 +19,15 @@ Kirki::add_panel('sections_panel', array(
 	'title'       => esc_html__('Frontpage Sections', 'planeta'),
 ));
 
-//Theme Options
+//Global Options
 require_once(get_template_directory() . '/inc/customizer/global-options/background.php');
+require_once(get_template_directory() . '/inc/customizer/global-options/animations.php');
 require_once(get_template_directory() . '/inc/customizer/global-options/containers.php');
 require_once(get_template_directory() . '/inc/customizer/global-options/typography.php');
 require_once(get_template_directory() . '/inc/customizer/global-options/colors.php');
 
 //Modules
 require_once(get_template_directory() . '/inc/customizer/modules/404.php');
-require_once(get_template_directory() . '/inc/customizer/modules/section.php');
 require_once(get_template_directory() . '/inc/customizer/modules/header.php');
 require_once(get_template_directory() . '/inc/customizer/modules/footer.php');
 require_once(get_template_directory() . '/inc/customizer/modules/portfolio.php');
