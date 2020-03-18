@@ -19,6 +19,7 @@
 		margin-right: 1rem;
 		box-sizing: border-box;
 
+
 		&:before {
 			content: '';
 			padding-left: 1em;
@@ -27,6 +28,10 @@
 		&:after {
 			content: '';
 			padding-right: 1em;
+		}
+
+		#sidebar-portfolio-name, #sidebar-portfolio-profession {
+			text-align: center;
 		}
 	}
 }

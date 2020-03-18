@@ -101,6 +101,8 @@ h1, h2, h3, h4, h5, h6 {
     #sidebar-portfolio #sidebar-portfolio-info:after {
       content: '';
       padding-right: 1em; }
+    #sidebar-portfolio #sidebar-portfolio-info #sidebar-portfolio-name, #sidebar-portfolio #sidebar-portfolio-info #sidebar-portfolio-profession {
+      text-align: center; }
 
 .sidebar-left {
   display: inline-grid; }
@@ -115,34 +117,28 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar-right {
   list-style-type: none; }
 
-#main-header {
-  z-index: 99900;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: row;
-  padding-top: 2rem;
-  padding-bottom: 2rem; }
-  @media screen and (max-width: 768px) {
-    #main-header {
-      padding-top: 1rem;
-      padding-bottom: 1rem; } }
-  #main-header #logo-container {
-    flex-grow: 1; }
-  #main-header i {
-    cursor: pointer; }
+#logo-container, #menu-button {
+  margin: calc(16px + (64 - 16) * (100vw - 320px) / 640);
+  z-index: 99999;
+  top: 0; }
+
+#logo-container {
+  left: 0;
+  position: absolute; }
 
 #menu-button {
-  z-index: 99999;
+  right: 0;
   cursor: pointer;
   border: none;
-  height: 48px;
-  width: 48px;
+  width: calc(48px + (60 - 48) * (100vw - 320px) / 640);
+  height: calc(48px + (60 - 48) * (100vw - 320px) / 640);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column; }
+  #menu-button i {
+    cursor: pointer; }
 
 .menu-circle-left, .menu-circle-right, .menu-drawer-left, .menu-drawer-right, .menu-polygon-left, .menu-polygon-right, .menu-point-left, .menu-point-right, .menu-parallelogram-left, .menu-parallelogram-right, .menu-fullscreen-up, .menu-fullscreen-down, .menu-fullscreen-left, .menu-fullscreen-right {
   position: absolute;

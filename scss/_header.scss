@@ -3,34 +3,29 @@
 $transition-time: 0.17s ease-in;
 $drawer-width: 40rem;
 
-#main-header {
-	z-index: 99900;
-	@include flexContainer($justify: flex-end);
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+#logo-container, #menu-button {
+	margin: calc(16px + (64 - 16) * (100vw - 320px) / 640);
+	z-index: 99999;
+	top: 0;
+}
 
-	@media screen and (max-width: 768px) {
-		padding-top: 1rem;
-		padding-bottom: 1rem;
-	}
+#logo-container {
+	left: 0;
+	position: absolute;
+}
 
-	#logo-container {
-		flex-grow: 1;
-	}
+#menu-button {
+	right: 0;
+	cursor: pointer;
+	border: none;
+	width: calc(48px + (60 - 48) * (100vw - 320px) / 640);
+	height: calc(48px + (60 - 48) * (100vw - 320px) / 640);
+	border-radius: 50%;
+	@include flexContainer($direction: column);
 
 	i {
 		cursor: pointer;
 	}
-}
-
-#menu-button {
-	z-index: 99999;
-	cursor: pointer;
-	border: none;
-	height: 48px;
-	width: 48px;
-	border-radius: 50%;
-	@include flexContainer($direction: column);
 }
 
 .menu {

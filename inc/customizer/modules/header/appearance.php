@@ -21,7 +21,7 @@ Kirki::add_field('planeta_config', array(
 		array(
 			'element'				=> '#menu-button',
 			'property'			=> 'position',
-			'value_pattern'	=> 'static',
+			'value_pattern'	=> 'absolute',
 			'exclude'				=> array(true),
 		),
 	)
