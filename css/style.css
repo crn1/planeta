@@ -117,6 +117,9 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar-right {
   list-style-type: none; }
 
+#top-menu {
+  position: fixed; }
+
 #logo-container, #menu-button {
   margin: calc(16px + (64 - 16) * (100vw - 320px) / 640);
   z-index: 99999;

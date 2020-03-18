@@ -3,6 +3,10 @@
 $transition-time: 0.17s ease-in;
 $drawer-width: 40rem;
 
+#top-menu {
+	position: fixed;
+}
+
 #logo-container, #menu-button {
 	margin: calc(16px + (64 - 16) * (100vw - 320px) / 640);
 	z-index: 99999;

@@ -14,6 +14,7 @@ Kirki::add_field('planeta_config', array(
 	'default'     => array(
 		'text-transform'    => 'none',
 		'text-align'    		=> 'left',
+		'color'    					=> '#FFFFFF',
 	),
 	'output'      => array(
 		array(

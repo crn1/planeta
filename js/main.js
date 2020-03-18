@@ -12,10 +12,10 @@ jQuery(document).ready(function($)
 		if($('#top-menu').hasClass('active'))
 		{
 			$('#menu-button').children('i').html('close')
-			$('body').css('overflow', 'hidden')
+			$('html').css('overflow', 'hidden')
 		}else{
 			$('#menu-button').children('i').html('menu')
-			$('body').css('overflow', 'visible')
+			$('html').css('overflow', 'visible')
 		}
 	})
 
