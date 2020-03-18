@@ -52,11 +52,6 @@ function register_widgets()
 	));
 
 	register_sidebar(array(
-		'name'	=> 'Portfolio',
-		'id'		=> 'portfolio-sidebar',
-	));
-
-	register_sidebar(array(
 		'name'	=> 'Extended Footer',
 		'id'		=> 'extended-footer',
 	));

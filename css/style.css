@@ -80,30 +80,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
   padding-bottom: 0; }
 
-#sidebar-portfolio {
-  height: 100vh;
-  width: 100%;
-  max-width: 240px;
-  position: fixed;
-  top: 0;
-  z-index: 200; }
-  #sidebar-portfolio #sidebar-portfolio-avatar {
-    object-fit: cover;
-    max-width: 100%;
-    box-sizing: border-box; }
-  #sidebar-portfolio #sidebar-portfolio-info {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    box-sizing: border-box; }
-    #sidebar-portfolio #sidebar-portfolio-info:before {
-      content: '';
-      padding-left: 1em; }
-    #sidebar-portfolio #sidebar-portfolio-info:after {
-      content: '';
-      padding-right: 1em; }
-    #sidebar-portfolio #sidebar-portfolio-info #sidebar-portfolio-name, #sidebar-portfolio #sidebar-portfolio-info #sidebar-portfolio-profession {
-      text-align: center; }
-
 .sidebar-left {
   display: inline-grid; }
 
