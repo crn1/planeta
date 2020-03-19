@@ -149,6 +149,7 @@ Kirki::add_panel('animations_panel', array(
 
 planeta_add_animations('section_title', 'Section Title', $aos_list, $lax_list, $lax_labels);
 planeta_add_animations('section_subtitle', 'Section Subtitle', $aos_list, $lax_list, $lax_labels);
+planeta_add_animations('page_title', 'Page Title', $aos_list, $lax_list, $lax_labels);
 planeta_add_animations('card', 'Cards', $aos_list, $lax_list, $lax_labels);
 
 ?>

@@ -64,7 +64,8 @@
 .content-container {
   display: grid;
   grid-column-gap: 48px;
-  grid-template-columns: 22% 56% 22%; }
+  grid-template-columns: 22% 56% 22%;
+  align-items: start; }
 
 .page-title-container {
   background-position: center;
@@ -103,6 +104,9 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar-left,
 .sidebar-right {
   list-style-type: none; }
+  .sidebar-left li:not(:first-child),
+  .sidebar-right li:not(:first-child) {
+    padding-top: 1rem; }
 
 #top-menu {
   position: fixed; }

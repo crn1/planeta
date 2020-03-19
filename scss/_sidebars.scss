@@ -15,4 +15,7 @@
 .sidebar-left,
 .sidebar-right {
 	list-style-type: none;
+	& li:not(:first-child) {
+		padding-top: 1rem;
+	}
 }

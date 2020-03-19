@@ -76,17 +76,19 @@ function init_scripts()
 	//wp_enqueue_script('fittext-script', get_template_directory_uri() . '/js/fittext.min.js', array('jquery'), '1.2.0');
 
 	// AOS CSS and JS
-	if(get_theme_mod('section_title_anims_trigger', 'none') == 'aos' ||
-		get_theme_mod('section_subtitle_anims_trigger', 'none') == 'aos' ||
-		get_theme_mod('card_anims_trigger', 'none') == 'aos')
+	if(get_theme_mod('section_title_anims_trigger', 'none') == 'aos' or
+		get_theme_mod('section_subtitle_anims_trigger', 'none') == 'aos' or
+		get_theme_mod('card_anims_trigger', 'none') == 'aos' or
+		get_theme_mod('page_title_anims_trigger', 'none') == 'aos')
 	{
 		wp_enqueue_style('aos-css', get_template_directory_uri() . '/css/aos.css', false, '3.0.0', 'all');
 		wp_enqueue_script('aos-script', get_template_directory_uri() . '/js/aos.js', true, '3.0.0', 'all');
 	}
 
 	// Laxxx
-	if(get_theme_mod('section_title_anims_trigger', 'none') == 'lax' ||
-		get_theme_mod('section_subtitle_anims_trigger', 'none') == 'lax' ||
+	if(get_theme_mod('section_title_anims_trigger', 'none') == 'lax' or
+		get_theme_mod('section_subtitle_anims_trigger', 'none') == 'lax' or
+		get_theme_mod('page_title_anims_trigger', 'none') == 'lax' or
 		get_theme_mod('card_anims_trigger', 'none') == 'lax')
 	{
 		wp_enqueue_script('lax-script', get_template_directory_uri() . '/js/lax.min.js');
