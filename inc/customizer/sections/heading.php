@@ -8,6 +8,14 @@ function planeta_add_section_heading(&$index)
 	));
 
 	Kirki::add_field('planeta_config', array(
+		'type'			=> 'text',
+		'label'			=> esc_html__('Name', 'planeta'),
+		'section'		=> "section_${index}_heading",
+		'settings'	=> "section_${index}_name",
+		'default'		=> esc_html__('Section', 'planeta'),
+	));
+
+	Kirki::add_field('planeta_config', array(
 		'type'			=> 'textarea',
 		'label'			=> esc_html__('Title', 'planeta'),
 		'section'		=> "section_${index}_heading",

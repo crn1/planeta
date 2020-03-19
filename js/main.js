@@ -6,10 +6,27 @@ jQuery(document).ready(function($)
 	let mainHeight = 'calc(100vh - ' + headerHeight + 'px - ' + footerHeight + 'px)'
 	$('main').css('min-height', mainHeight)
 
+	$('.top-navbar-item').on('click', function(event)
+	{
+		event.preventDefault();
+		$.scrollTo('#' + $(this).attr('data-section-id'), 2000);
+	})
+
+	// Move top-navbar-items to top-navbar
+	$(window).on('load resize', function()
+	{
+		if($(window).width() < 960)
+		{
+			$('#top-menu').appendTo('#menu-container');
+		}else{
+			$('#top-menu').prependTo('#nav-container');
+		}
+	});
+
 	// Main Menu
 	$('#menu-button').on('click', function() {
-		$('#top-menu').toggleClass('active')
-		if($('#top-menu').hasClass('active'))
+		$('#menu-container').toggleClass('active')
+		if($('#menu-container').hasClass('active'))
 		{
 			$('#menu-button').children('i').html('close')
 			$('html').css('overflow', 'hidden')

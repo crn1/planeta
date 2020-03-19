@@ -1,30 +1,32 @@
 <?php
 
 Kirki::add_section('header_appearance', array(
-	'title'       => esc_html__('Appearance', 'planeta' ),
+	'title'       => esc_html__('Appearance', 'planeta'),
 	'panel'       => 'header_panel',
 ));
 
 Kirki::add_field('planeta_config', array(
 	'type' 				=> 'toggle',
-	'settings'		=> 'menu_button_sticky',
-	'label'				=> esc_html__('Sticky Menu Button', 'planeta'),
+	'settings'		=> 'navbar_sticky',
+	'label'				=> esc_html__('Sticky Navbar', 'planeta'),
 	'section'			=> 'header_appearance',
 	'default'			=> false,
 	'output'			=> array(
 		array(
-			'element'				=> '#main-button',
+			'element'				=> '.header-container',
 			'property'			=> 'position',
 			'value_pattern'	=> 'fixed',
 			'exclude'				=> array(false),
 		),
-		array(
-			'element'				=> '#menu-button',
-			'property'			=> 'position',
-			'value_pattern'	=> 'absolute',
-			'exclude'				=> array(true),
-		),
-	)
+	),
+));
+
+Kirki::add_field('planeta_config', array(
+	'type' 				=> 'toggle',
+	'settings'		=> 'show_sections_nav',
+	'label'				=> esc_html__('Show Section Menu', 'planeta'),
+	'section'			=> 'header_appearance',
+	'default'			=> false,
 ));
 
 Kirki::add_field('planeta_config', array(

@@ -27,63 +27,6 @@ Kirki::add_field('planeta_config', array(
 
 Kirki::add_field('planeta_config', array(
 	'type' 						=> 'slider',
-	'settings'				=> 'header_container',
-	'label'						=> esc_html__('Header Container Width (px)', 'planeta'),
-	'section'					=> 'containers_section',
-	'default'					=> 1440,
-	'choices'					=> array(
-		'min'							=> 600,
-		'max'							=> 1920,
-		'step'						=> 10,
-	),
-	'output'					=> array(
-		array(
-			'element'			=> '.header-container',
-			'property'		=> 'max-width',
-			'units'				=> 'px',
-		),
-	),
-));
-
-Kirki::add_field('planeta_config', array(
-	'type' 						=> 'slider',
-	'settings'				=> 'portfolio_container',
-	'label'						=> esc_html__('Portfolio Container Width (in pixels)', 'planeta'),
-	'section'					=> 'containers_section',
-	'default'					=> 300,
-	'choices'					=> array(
-		'min'							=> 300,
-		'max'							=> 600,
-		'step'						=> 2,
-	),
-	'output'					=> array(
-		array(
-			'element'			=> '#sidebar-portfolio',
-			'property'		=> 'max-width',
-			'units'				=> 'px',
-		),
-		array(
-			'element'			=> '#sidebar-portfolio-avatar-container',
-			'property'		=> 'min-height',
-			'units'				=> 'px',
-		),
-		array(
-			'element'				=> '.main-container',
-			'value_pattern' => 'calc(100% - $px)',
-			'property'			=> 'width',
-		),
-	),
-	'active_callback'				=> array(
-		array(
-			'setting'								=> 'portfolio_enable',
-			'operator'							=> '==',
-			'value'									=> true,
-		),
-	),
-));
-
-Kirki::add_field('planeta_config', array(
-	'type' 						=> 'slider',
 	'settings'				=> 'content_container',
 	'label'						=> esc_html__('Page/Blog Sidebar Container Width (in %)', 'planeta'),
 	'section'					=> 'containers_section',

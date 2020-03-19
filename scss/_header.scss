@@ -4,31 +4,55 @@ $transition-time: 0.17s ease-in;
 $drawer-width: 40rem;
 
 #top-menu {
-	position: fixed;
+	display: flex;
+	flex-direction: row;
+
+	@media screen and (max-width: 959px)
+	{
+		flex-direction: column;
+		a {
+			text-align: center;
+		}
+	}
 }
 
-#logo-container, #menu-button {
-	margin: calc(16px + (64 - 16) * (100vw - 320px) / 640);
+.header-container {
+	@include flexContainer($justify: space-between);
+	padding: calc(16px + (48 - 16) * (100vw - 320px) / 640);
 	z-index: 99999;
 	top: 0;
-}
-
-#logo-container {
 	left: 0;
 	position: absolute;
+	width: 100%;
+	box-sizing: border-box;
+
+	#logo-container {
+		margin: 0 !important;
+	}
+
+	#nav-container {
+		flex-grow: 1;
+		display: inline-flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
 }
 
 #menu-button {
-	right: 0;
+	@include flexContainer($display: inline-flex, $direction: column);
 	cursor: pointer;
 	border: none;
 	width: calc(48px + (60 - 48) * (100vw - 320px) / 640);
 	height: calc(48px + (60 - 48) * (100vw - 320px) / 640);
 	border-radius: 50%;
-	@include flexContainer($direction: column);
 
 	i {
 		cursor: pointer;
+	}
+
+	@media screen and (min-width: 960px)
+	{
+		display: none;
 	}
 }
 
@@ -47,7 +71,7 @@ $drawer-width: 40rem;
 	&-fullscreen-down,
 	&-fullscreen-left,
 	&-fullscreen-right {
-		position: absolute;
+		position: fixed;
 		z-index: 99990;
 		overflow: hidden;
 		background-color: #000;

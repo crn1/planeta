@@ -124,33 +124,52 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 1rem; }
 
 #top-menu {
-  position: fixed; }
+  display: flex;
+  flex-direction: row; }
+  @media screen and (max-width: 959px) {
+    #top-menu {
+      flex-direction: column; }
+      #top-menu a {
+        text-align: center; } }
 
-#logo-container, #menu-button {
-  margin: calc(16px + (64 - 16) * (100vw - 320px) / 640);
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: calc(16px + (48 - 16) * (100vw - 320px) / 640);
   z-index: 99999;
-  top: 0; }
-
-#logo-container {
+  top: 0;
   left: 0;
-  position: absolute; }
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box; }
+  .header-container #logo-container {
+    margin: 0 !important; }
+  .header-container #nav-container {
+    flex-grow: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end; }
 
 #menu-button {
-  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   cursor: pointer;
   border: none;
   width: calc(48px + (60 - 48) * (100vw - 320px) / 640);
   height: calc(48px + (60 - 48) * (100vw - 320px) / 640);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; }
+  border-radius: 50%; }
   #menu-button i {
     cursor: pointer; }
+  @media screen and (min-width: 960px) {
+    #menu-button {
+      display: none; } }
 
 .menu-circle-left, .menu-circle-right, .menu-drawer-left, .menu-drawer-right, .menu-polygon-left, .menu-polygon-right, .menu-point-left, .menu-point-right, .menu-parallelogram-left, .menu-parallelogram-right, .menu-fullscreen-up, .menu-fullscreen-down, .menu-fullscreen-left, .menu-fullscreen-right {
-  position: absolute;
+  position: fixed;
   z-index: 99990;
   overflow: hidden;
   background-color: #000;
@@ -266,8 +285,8 @@ div[id$='-video-overlay'] {
 a {
   font-weight: bold;
   text-decoration: none;
-  position: relative;
-  display: inline-block; }
+  display: inline-block;
+  margin: 1rem; }
 
 html, body {
   overflow-x: hidden; }

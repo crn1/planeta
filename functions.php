@@ -94,6 +94,9 @@ function init_scripts()
 		wp_enqueue_script('lax-script', get_template_directory_uri() . '/js/lax.min.js');
 	}
 
+	// Scroll To
+	wp_enqueue_script('scroll-script', get_template_directory_uri() . '/js/scroll.min.js', array('jquery'), '2.1.2', true);
+
 	// Main Styles and Scripts
 	wp_enqueue_style('main-style', get_template_directory_uri() . '/css/style.css', false, '1.0.0', 'all');
 	wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true);

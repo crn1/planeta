@@ -11,7 +11,7 @@ Kirki::add_field('planeta_config', array(
 	'label'									=> esc_html__('Overlay Backround', 'planeta'),
 	'section'								=> 'header_overlay',
 	'default'     					=> array(
-		'background-color'			=> 'rgba(0, 0, 0, 1)',
+		'background-color'			=> 'rgba(0, 0, 0, 0)',
 		'background-image'			=> '',
 		'background-repeat'			=> 'repeat',
 		'background-position'		=> 'center center',
