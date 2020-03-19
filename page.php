@@ -10,7 +10,7 @@
 			<div class='content-container'>
 				<aside class='sidebar-left'>
 				<?php if(is_active_sidebar('page-left-sidebar')) {
-					dynamic_sidebar('blog-left-sidebar');
+					dynamic_sidebar('page-left-sidebar');
 				} ?>
 				</aside>
 
@@ -21,7 +21,7 @@
 
 				<aside class='sidebar-right'>
 				<?php if(is_active_sidebar('page-right-sidebar')) {
-					dynamic_sidebar('blog-right-sidebar');
+					dynamic_sidebar('page-right-sidebar');
 				} ?>
 				</aside>
 			</div>

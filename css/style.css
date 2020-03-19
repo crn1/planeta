@@ -67,6 +67,21 @@
   grid-template-columns: 22% 56% 22%;
   align-items: start; }
 
+.page-content .post-info {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  padding-top: 1rem; }
+  .page-content .post-info .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .page-content .post-info .user .avatar {
+      padding-right: 0.5rem; }
+
 .page-title-container {
   background-position: center;
   background-repeat: no-repeat;
