@@ -30,6 +30,7 @@ require_once(get_template_directory() . '/inc/customizer/global-options/colors.p
 require_once(get_template_directory() . '/inc/customizer/modules/404.php');
 require_once(get_template_directory() . '/inc/customizer/modules/header.php');
 require_once(get_template_directory() . '/inc/customizer/modules/footer.php');
+require_once(get_template_directory() . '/inc/customizer/modules/page.php');
 
 //Homepage sections
 require_once(get_template_directory() . '/inc/customizer/sections/layout.php');

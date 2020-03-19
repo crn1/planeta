@@ -18,7 +18,7 @@ Kirki::add_field('planeta_config', array(
 	),
 	'output'      => array(
 		array(
-			'element' 		=> '.page-subtitle',
+			'element' 		=> '.page-title',
 		),
 	),
 ));
