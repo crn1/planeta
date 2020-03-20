@@ -8,7 +8,7 @@
 	$page_lax = get_query_var('page_title_lax');
 	$lax = $page_lax != '' ? 'lax' : '';
 
-	$featured_image = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'full') : '';
+	$featured_image = has_post_thumbnail() && !is_search() && !is_archive() ? get_the_post_thumbnail_url(get_the_ID(), 'full') : '';
 ?>
 <div
 		class='page-title-container'

@@ -21,5 +21,5 @@ else if($masonry_num == 6) { $margin = 16; }
 			768: 1,
 		},
 		margin: <?php echo $margin; ?>,
-	});
+	})
 </script>
