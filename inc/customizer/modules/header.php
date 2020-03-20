@@ -1,7 +1,7 @@
 <?php
 
 Kirki::add_panel('header_panel', array(
-	'title'       => esc_html__('Header', 'planeta' ),
+	'title'       => esc_html__('Header', 'planeta'),
 	'panel'       => 'modules_panel',
 ));
 

@@ -1,8 +1,10 @@
 <?php
+	$hover_class = get_theme_mod('typography_links_hover', 'none');
+
 	$navbar_class = get_theme_mod('navbar_type', 'up');
 	$logo_url = get_theme_mod('logo', '');
 
-	function nav_items()
+	function nav_items($hover_class)
 	{
 		if(get_theme_mod('show_sections_nav', false))
 		{
@@ -37,8 +39,8 @@
 
 	<div id='nav-container'>
 		<?php if(is_front_page()): ?>
-			<nav id='top-menu'>
-				<?php nav_items(); ?>
+			<nav id='top-menu' class='<?php echo $hover_class; ?>'>
+				<?php nav_items($hover_class); ?>
 			</nav>
 		<?php endif; ?>
 

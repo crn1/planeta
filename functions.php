@@ -72,6 +72,9 @@ function init_scripts()
 	// Macy Masonry
 	wp_enqueue_script('masonry-script', get_template_directory_uri() . '/js/macy.min.js', array(), '2.5.1');
 
+	// Hover CSS
+	wp_enqueue_style('hover-css', get_template_directory_uri() . '/css/hover.css', false, '1.0.0', 'all');
+
 	// Fittext
 	//wp_enqueue_script('fittext-script', get_template_directory_uri() . '/js/fittext.min.js', array('jquery'), '1.2.0');
 

@@ -19,10 +19,10 @@ Kirki::add_field('planeta_config', array(
 			'element' 	=> '#menu-button',
 			'property' 	=> 'background-color',
 		),
-		array(
+		/*array(
 			'element' 	=> 'a',
 			'property' 	=> 'color',
-		),
+		),*/
 	)
 ));
 
@@ -52,7 +52,7 @@ Kirki::add_field('planeta_config', array(
 		array(
 			'element'			=> '.material-icons',
 			'property'		=> 'color',
-		),
+		),/*
 		array(
 			'element' 	=> 'body',
 			'property'	=> 'color',
@@ -60,7 +60,7 @@ Kirki::add_field('planeta_config', array(
 		array(
 			'element' 	=> '#top-menu',
 			'property' 	=> 'color',
-		),
+		),*/
 	)
 ));
 
