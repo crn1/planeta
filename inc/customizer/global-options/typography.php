@@ -5,7 +5,7 @@ Kirki::add_panel('typography_panel', array(
 	'panel'       => 'theme_options_panel',
 ));
 
-function typography_generator($name, $section, $class)
+function typography_generator($name, $section, $class, $enable_sizing=true)
 {
 	Kirki::add_section("typography_${section}", array(
 		'title'       => esc_html__($name, 'planeta' ),
@@ -34,25 +34,28 @@ function typography_generator($name, $section, $class)
 		),
 	));
 
-	Kirki::add_field('planeta_config', array(
-		'type'        => 'slider',
-		'label'       => esc_html__('Size (rem)', 'planeta'),
-		'section'     => "typography_${section}",
-		'settings'    => "typography_${section}_size",
-		'default'     => 2,
-		'choices'     => array(
-			'min'					=> 0.1,
-			'max'					=> 10,
-			'step'				=> 0.1,
-		),
-		'output'			=> array(
-			array(
-				'element'			=> $class,
-				'units'				=> 'rem',
-				'property'		=> 'font-size',
+	if($enable_sizing)
+	{
+		Kirki::add_field('planeta_config', array(
+			'type'        => 'slider',
+			'label'       => esc_html__('Size (rem)', 'planeta'),
+			'section'     => "typography_${section}",
+			'settings'    => "typography_${section}_size",
+			'default'     => 2,
+			'choices'     => array(
+				'min'					=> 0.1,
+				'max'					=> 10,
+				'step'				=> 0.1,
 			),
-		),
-	));
+			'output'			=> array(
+				array(
+					'element'			=> $class,
+					'units'				=> 'rem',
+					'property'		=> 'font-size',
+				),
+			),
+		));
+	}
 }
 
 Kirki::add_section('typography_main', array(
@@ -66,7 +69,7 @@ Kirki::add_field('planeta_config', array(
 	'section'     => 'typography_main',
 	'settings'    => 'typography_main',
 	'default'     => array(
-		'font-family'    => 'Rubik',
+		'font-family'    => 'inherit',
 		'variant'        => 'regular',
 		'line-height'    => '1.5',
 		'letter-spacing' => '0',
@@ -99,6 +102,7 @@ Kirki::add_field('planeta_config', array(
 	),
 ));
 
+typography_generator('Links', 'links', 'a', false);
 typography_generator('Section Title', 'section_title', '.section-title');
 typography_generator('Section Subtitle', 'section_subtitle', '.section-subtitle');
 typography_generator('Page Title', 'page_title', '.page-title');

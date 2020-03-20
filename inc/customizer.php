@@ -24,7 +24,7 @@ require_once(get_template_directory() . '/inc/customizer/global-options/backgrou
 require_once(get_template_directory() . '/inc/customizer/global-options/animations.php');
 require_once(get_template_directory() . '/inc/customizer/global-options/containers.php');
 require_once(get_template_directory() . '/inc/customizer/global-options/typography.php');
-require_once(get_template_directory() . '/inc/customizer/global-options/colors.php');
+//require_once(get_template_directory() . '/inc/customizer/global-options/colors.php');
 
 //Modules
 require_once(get_template_directory() . '/inc/customizer/modules/404.php');

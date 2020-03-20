@@ -9,7 +9,6 @@
 @import 'video-background';
 
 a {
-	font-weight: bold;
 	text-decoration: none;
 	display: inline-block;
 }
@@ -22,18 +21,3 @@ section[id^='section_'] {
 	display: flex;
 	align-items: center;
 }
-
-/*a::before {
-	content: '';
-	background-color: #D50000;
-	width: calc(100% + 1rem);
-	height: 0;
-	position: absolute;
-	bottom: -4px;
-	left: -10px;
-	transition: all .4s;
-}
-
-a:hover::before {
-	height: calc(100% + 0.5rem);
-}*/
