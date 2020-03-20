@@ -11,7 +11,9 @@ jQuery(document).ready(function($)
 		event.preventDefault()
 		if($('#menu-container').hasClass('active'))
 		{
-			$('#menu-container').toggleClass('active')
+			$('#menu-container').removeClass('active')
+			$('#menu-button').children('i').html('menu')
+			$('html').css('overflow', 'visible')
 		}
 		$.scrollTo('#' + $(this).attr('data-section-id'), 2000)
 	})
