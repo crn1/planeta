@@ -1,5 +1,5 @@
 <?php
-	$navbar_class = get_theme_mod('navbar_type', 'fullscreen-up');
+	$navbar_class = get_theme_mod('navbar_type', 'up');
 	$logo_url = get_theme_mod('logo', '');
 
 	function nav_items()

@@ -66,26 +66,17 @@ $drawer-width: 40rem;
 }
 
 .menu {
-	&-circle-left,
-	&-circle-right,
-	&-drawer-left,
-	&-drawer-right,
-	&-polygon-left,
-	&-polygon-right,
-	&-point-left,
-	&-point-right,
-	&-parallelogram-left,
-	&-parallelogram-right,
-	&-fullscreen-up,
-	&-fullscreen-down,
-	&-fullscreen-left,
-	&-fullscreen-right {
+	&-up,
+	&-down,
+	&-left,
+	&-right {
 		position: fixed;
 		z-index: 99990;
 		overflow: hidden;
 		background-color: #000;
 		@include flexContainer($direction: column);
 		transition: all $transition-time;
+		width: 100vw;
 		height: 100vh;
 
 		@media screen and (max-width: 768px) {
@@ -95,14 +86,7 @@ $drawer-width: 40rem;
 		}
 	}
 
-	&-fullscreen-up,
-	&-fullscreen-down,
-	&-fullscreen-left,
-	&-fullscreen-right {
-		width: 100vw;
-	}
-
-	&-fullscreen-up {
+	&-up {
 		top: -100vh;
 		left: 0;
 		&.active {
@@ -110,7 +94,7 @@ $drawer-width: 40rem;
 		}
 	}
 
-	&-fullscreen-down {
+	&-down {
 		top: 100vh;
 		left: 0;
 		&.active {
@@ -118,7 +102,7 @@ $drawer-width: 40rem;
 		}
 	}
 
-	&-fullscreen-left {
+	&-left {
 		top: 0;
 		left: -100vw;
 		&.active {
@@ -126,98 +110,11 @@ $drawer-width: 40rem;
 		}
 	}
 
-	&-fullscreen-right {
+	&-right {
 		top: 0;
 		left: 100vw;
 		&.active {
 			left: 0;
 		}
-	}
-
-	&-drawer-left,
-	&-drawer-right,
-	&-polygon-left,
-	&-polygon-right,
-	&-parallelogram-left,
-	&-parallelogram-right,
-	&-point-left,
-	&-point-right {
-		top: 0;
-		width: $drawer-width;
-		width: 100vw;
-	}
-
-
-	&-drawer-left,
-	&-polygon-left,
-	&-parallelogram-left,
-	&-point-left {
-		left: -$drawer-width;
-		&.active {
-			left: 0;
-		}
-	}
-
-	&-drawer-right,
-	&-polygon-right,
-	&-parallelogram-right,
-	&-point-right {
-		right: -$drawer-width;
-		&.active {
-			right: 0;
-		}
-	}
-
-	&-polygon-left {
-		clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
-	}
-
-	&-polygon-right {
-		clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
-	}
-
-	&-point-left {
-		clip-path: polygon(0 0, 75% 0, 100% 50%, 75% 100%, 0 100%);
-	}
-
-	&-point-right {
-		clip-path: polygon(25% 0, 100% 0, 100% 100%, 25% 100%, 0 50%);
-	}
-
-	&-parallelogram-left {
-		clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-	}
-
-	&-parallelogram-right {
-		clip-path: polygon(0 0, 75% 0%, 100% 100%, 25% 100%);
-	}
-
-	&-circle-left,
-	&-circle-right {
-		top: 0;
-		width: 100%;
-	}
-
-	&-circle-left {
-		left: -100%;
-		&.active {
-			left: 0;
-		}
-	}
-
-	&-circle-right {
-		right: -100%;
-		&.active {
-			right: 0;
-		}
-	}
-
-	&-circle-left {
-		clip-path: circle(100% at 0% 50%);
-		shape-outside: circle(100% at 0% 50%);
-	}
-
-	&-circle-right {
-		clip-path: circle(100% at 100% 50%);
 	}
 }

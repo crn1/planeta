@@ -8,8 +8,12 @@ jQuery(document).ready(function($)
 
 	$('.top-navbar-item').on('click', function(event)
 	{
-		event.preventDefault();
-		$.scrollTo('#' + $(this).attr('data-section-id'), 2000);
+		event.preventDefault()
+		if($('#menu-container').hasClass('active'))
+		{
+			$('#menu-container').toggleClass('active')
+		}
+		$.scrollTo('#' + $(this).attr('data-section-id'), 2000)
 	})
 
 	// Move top-navbar-items to top-navbar
@@ -17,11 +21,11 @@ jQuery(document).ready(function($)
 	{
 		if($(window).width() < 960)
 		{
-			$('#top-menu').appendTo('#menu-container');
+			$('#top-menu').appendTo('#menu-container')
 		}else{
-			$('#top-menu').prependTo('#nav-container');
+			$('#top-menu').prependTo('#nav-container')
 		}
-	});
+	})
 
 	// Main Menu
 	$('#menu-button').on('click', function() {
@@ -37,13 +41,13 @@ jQuery(document).ready(function($)
 	})
 
 	//Fittext
-	//$('.section-title').fitText();
+	//$('.section-title').fitText()
 
 	// Convert card images to links
 	$('.card').find('.image').on('click', function(event)
 	{
-		event.preventDefault();
-		window.location.href = $(this).parent().find('.url').find('a').attr('href');
+		event.preventDefault()
+		window.location.href = $(this).parent().find('.url').find('a').attr('href')
 	})
 
 	// Laxxx

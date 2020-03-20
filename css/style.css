@@ -173,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
     #menu-button {
       display: none; } }
 
-.menu-circle-left, .menu-circle-right, .menu-drawer-left, .menu-drawer-right, .menu-polygon-left, .menu-polygon-right, .menu-point-left, .menu-point-right, .menu-parallelogram-left, .menu-parallelogram-right, .menu-fullscreen-up, .menu-fullscreen-down, .menu-fullscreen-left, .menu-fullscreen-right {
+.menu-up, .menu-down, .menu-left, .menu-right {
   position: fixed;
   z-index: 99990;
   overflow: hidden;
@@ -183,74 +183,33 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   flex-direction: column;
   transition: all 0.17s ease-in;
+  width: 100vw;
   height: 100vh; }
   @media screen and (max-width: 768px) {
-    .menu-circle-left, .menu-circle-right, .menu-drawer-left, .menu-drawer-right, .menu-polygon-left, .menu-polygon-right, .menu-point-left, .menu-point-right, .menu-parallelogram-left, .menu-parallelogram-right, .menu-fullscreen-up, .menu-fullscreen-down, .menu-fullscreen-left, .menu-fullscreen-right {
+    .menu-up, .menu-down, .menu-left, .menu-right {
       width: 100vw !important;
       clip-path: none !important;
       shape-outside: none !important; } }
-.menu-fullscreen-up, .menu-fullscreen-down, .menu-fullscreen-left, .menu-fullscreen-right {
-  width: 100vw; }
-.menu-fullscreen-up {
+.menu-up {
   top: -100vh;
   left: 0; }
-  .menu-fullscreen-up.active {
+  .menu-up.active {
     top: 0; }
-.menu-fullscreen-down {
+.menu-down {
   top: 100vh;
   left: 0; }
-  .menu-fullscreen-down.active {
+  .menu-down.active {
     top: 0; }
-.menu-fullscreen-left {
+.menu-left {
   top: 0;
   left: -100vw; }
-  .menu-fullscreen-left.active {
+  .menu-left.active {
     left: 0; }
-.menu-fullscreen-right {
+.menu-right {
   top: 0;
   left: 100vw; }
-  .menu-fullscreen-right.active {
+  .menu-right.active {
     left: 0; }
-.menu-drawer-left, .menu-drawer-right, .menu-polygon-left, .menu-polygon-right, .menu-parallelogram-left, .menu-parallelogram-right, .menu-point-left, .menu-point-right {
-  top: 0;
-  width: 40rem;
-  width: 100vw; }
-.menu-drawer-left, .menu-polygon-left, .menu-parallelogram-left, .menu-point-left {
-  left: -40rem; }
-  .menu-drawer-left.active, .menu-polygon-left.active, .menu-parallelogram-left.active, .menu-point-left.active {
-    left: 0; }
-.menu-drawer-right, .menu-polygon-right, .menu-parallelogram-right, .menu-point-right {
-  right: -40rem; }
-  .menu-drawer-right.active, .menu-polygon-right.active, .menu-parallelogram-right.active, .menu-point-right.active {
-    right: 0; }
-.menu-polygon-left {
-  clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%); }
-.menu-polygon-right {
-  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%); }
-.menu-point-left {
-  clip-path: polygon(0 0, 75% 0, 100% 50%, 75% 100%, 0 100%); }
-.menu-point-right {
-  clip-path: polygon(25% 0, 100% 0, 100% 100%, 25% 100%, 0 50%); }
-.menu-parallelogram-left {
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); }
-.menu-parallelogram-right {
-  clip-path: polygon(0 0, 75% 0%, 100% 100%, 25% 100%); }
-.menu-circle-left, .menu-circle-right {
-  top: 0;
-  width: 100%; }
-.menu-circle-left {
-  left: -100%; }
-  .menu-circle-left.active {
-    left: 0; }
-.menu-circle-right {
-  right: -100%; }
-  .menu-circle-right.active {
-    right: 0; }
-.menu-circle-left {
-  clip-path: circle(100% at 0% 50%);
-  shape-outside: circle(100% at 0% 50%); }
-.menu-circle-right {
-  clip-path: circle(100% at 100% 50%); }
 
 #main-footer {
   box-sizing: border-box;
