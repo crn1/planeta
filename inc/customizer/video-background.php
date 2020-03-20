@@ -109,7 +109,7 @@ function planeta_add_video_background($section, $panel, $bg_output)
 		'section'								=> "${section}_background",
 		'settings'							=> "${section}_bg",
 		'default'								=> array(
-			'background-color'			=> '#212121',
+			'background-color'			=> 'rgba(0, 0, 0, 0)',
 			'background-image'			=> '',
 			'background-repeat'			=> 'repeat',
 			'background-positio'		=> 'center center',

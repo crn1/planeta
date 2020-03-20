@@ -1,10 +1,27 @@
-footer {
-	background-color: transparent;
-	padding: 2rem;
+@import 'flex';
 
-	.footer-notice {
-		display: block;
-		width: 100%;
-		text-align: center;
+#main-footer {
+	box-sizing: border-box;
+	background-color: transparent;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	position: relative;
+
+	.default-container {
+		@include flexContainer($direction: column);
+
+		.notice {
+			display: block;
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
+
+#footer-menu {
+	@include flexContainer();
+
+	a:not(:last-child) {
+		margin-right: 1rem;
 	}
 }

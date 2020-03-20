@@ -126,6 +126,9 @@ h1, h2, h3, h4, h5, h6 {
 #top-menu {
   display: flex;
   flex-direction: row; }
+  @media screen and (min-width: 960px) {
+    #top-menu a:not(:last-child) {
+      margin-right: calc(8px + (48 - 8) * (100vw - 320px) / 640); } }
   @media screen and (max-width: 959px) {
     #top-menu {
       flex-direction: column; }
@@ -144,6 +147,8 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   width: 100%;
   box-sizing: border-box; }
+  .header-container #logo-container, .header-container #nav-container {
+    z-index: 100; }
   .header-container #logo-container {
     margin: 0 !important; }
   .header-container #nav-container {
@@ -247,13 +252,29 @@ h1, h2, h3, h4, h5, h6 {
 .menu-circle-right {
   clip-path: circle(100% at 100% 50%); }
 
-footer {
+#main-footer {
+  box-sizing: border-box;
   background-color: transparent;
-  padding: 2rem; }
-  footer .footer-notice {
-    display: block;
-    width: 100%;
-    text-align: center; }
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative; }
+  #main-footer .default-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    #main-footer .default-container .notice {
+      display: block;
+      width: 100%;
+      text-align: center; }
+
+#footer-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; }
+  #footer-menu a:not(:last-child) {
+    margin-right: 1rem; }
 
 .video-background, div[id$='-video-overlay'] {
   position: absolute;
@@ -285,8 +306,7 @@ div[id$='-video-overlay'] {
 a {
   font-weight: bold;
   text-decoration: none;
-  display: inline-block;
-  margin: 1rem; }
+  display: inline-block; }
 
 html, body {
   overflow-x: hidden; }

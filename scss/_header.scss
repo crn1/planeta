@@ -7,8 +7,13 @@ $drawer-width: 40rem;
 	display: flex;
 	flex-direction: row;
 
-	@media screen and (max-width: 959px)
-	{
+	@media screen and (min-width: 960px) {
+		a:not(:last-child) {
+			margin-right: calc(8px + (48 - 8) * (100vw - 320px) / 640);
+		}
+	}
+
+	@media screen and (max-width: 959px) {
 		flex-direction: column;
 		a {
 			text-align: center;
@@ -25,6 +30,10 @@ $drawer-width: 40rem;
 	position: absolute;
 	width: 100%;
 	box-sizing: border-box;
+
+	#logo-container, #nav-container {
+		z-index: 100;
+	}
 
 	#logo-container {
 		margin: 0 !important;

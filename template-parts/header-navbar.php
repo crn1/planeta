@@ -19,12 +19,16 @@
 				'items_wrap'      => '%3$s',
 				'echo'						=> false,
 			);
-			echo  strip_tags(wp_nav_menu($params), '<a>');
+			echo strip_tags(wp_nav_menu($params), '<a>');
 		}
 	}
 ?>
 
-<header class='header-container'>
+<header id='main-header' class='header-container'>
+	<?php
+		set_query_var('section', 'header');
+		get_template_part('template-parts/content', 'background'); ?>
+
 	<?php if($logo_url != ''): ?>
 		<a href='/' id='logo-container'>
 			<img id='logo' src='<?php echo $logo_url; ?>' />
