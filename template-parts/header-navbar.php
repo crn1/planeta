@@ -36,9 +36,11 @@
 	<?php endif; ?>
 
 	<div id='nav-container'>
-		<nav id='top-menu'>
-			<?php nav_items(); ?>
-		</nav>
+		<?php if(is_front_page()): ?>
+			<nav id='top-menu'>
+				<?php nav_items(); ?>
+			</nav>
+		<?php endif; ?>
 
 		<span id='menu-button' class='heading-main-button'>
 			<i class='material-icons'>menu</i>

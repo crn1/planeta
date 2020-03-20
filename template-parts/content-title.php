@@ -1,4 +1,7 @@
 <?php
+	$title = get_query_var('title');
+	if(!isset($title)) { $title = get_the_title(); }
+
 	set_query_var('animation_name', 'page_title');
 	get_template_part('template-parts/content', 'animations');
 	$page_aos = get_query_var('page_title_aos');
@@ -18,7 +21,7 @@
 				class='page-title <?php echo $lax; ?>'
 				<?php echo $page_lax; ?>
 				<?php echo $page_aos; ?>>
-			<?php the_title(); ?>
+			<?php echo $title; ?>
 		</h2>
 	</div>
 </div>
