@@ -25,48 +25,55 @@ foreach($layout as $section):
 
 	$section_items = get_theme_mod("${section}_${card_preset}_items", array());
 
-	$video = get_theme_mod("${section}_bg_type", 'static') == 'video' ? 'has-video' : '';
 ?>
 
-	<section id='<?php echo $section; ?>' class='<?php echo $video; ?>'>
+<section id='<?php echo $section; ?>'>
 
-		<?php
-			set_query_var('section', $section);
-			get_template_part('template-parts/content', 'background'); ?>
+	<?php
+		set_query_var('section', $section);
+		get_template_part('template-parts/content', 'background'); ?>
 
-		<div class='default-container'>
+	<div class='default-container'>
 
-		<h2 class='section-title <?php echo $title_lax_class; ?>' <?php echo $title_lax; ?> <?php echo $title_aos; ?>>
-				<?php echo $section_title; ?>
-			</h2>
+		<h2
+				class='section-title <?php echo $title_lax_class; ?>'
+				<?php echo $title_lax; ?>
+				<?php echo $title_aos; ?>>
+			<?php echo $section_title; ?>
+		</h2>
 
-				<h3 class='section-subtitle <?php echo $subtitle_lax_class; ?>' <?php echo $subtitle_lax; ?> <?php echo $subtitle_aos; ?>>
-				<?php echo $section_subtitle; ?>
-			</h3>
+		<h3
+				class='section-subtitle <?php echo $subtitle_lax_class; ?>'
+				<?php echo $subtitle_lax; ?>
+				<?php echo $subtitle_aos; ?>>
+			<?php echo $section_subtitle; ?>
+		</h3>
 
-			<?php if($card_preset != 'none'): ?>
-				<div id='<?php echo $section?>-items' class='card-<?php echo $card_type; ?>-items'>
+		<?php if($card_preset != 'none'): ?>
+			<div
+					id='<?php echo $section?>-items'
+					class='card-<?php echo $card_type; ?>-items'>
 
-				<?php
-					if($card_preset == 'posts')
+			<?php
+				if($card_preset == 'posts')
+				{
+					get_template_part('template-parts/content', 'posts');
+				}else{
+					foreach($section_items as $item)
 					{
-						get_template_part('template-parts/content', 'posts');
-					}else{
-						foreach($section_items as $item)
-						{
-							set_query_var('item', $item);
-							get_template_part('template-parts/frontpage', 'card');
-						}
+						set_query_var('item', $item);
+						get_template_part('template-parts/frontpage', 'card');
 					}
-				?>
+				}
+			?>
 
-				<?php get_template_part('template-parts/frontpage', 'macy'); ?>
+			<?php get_template_part('template-parts/frontpage', 'macy'); ?>
 
-				</div>
+			</div>
 
-			<?php endif; ?>
+		<?php endif; ?>
 
-		</div>
-	</section>
+	</div>
+</section>
 
 <?php endforeach; ?>

@@ -1,6 +1,6 @@
 <footer id='main-footer'>
 	<?php
-		set_query_var('section', 'footer');
+		set_query_var('section', 'main-footer');
 		get_template_part('template-parts/content', 'background'); ?>
 
 	<div class='default-container'>

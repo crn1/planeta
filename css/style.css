@@ -235,7 +235,7 @@ h1, h2, h3, h4, h5, h6 {
   #footer-menu a:not(:last-child) {
     margin-right: 1rem; }
 
-.video-background, div[id$='-video-overlay'] {
+.video-background, .background-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -244,22 +244,22 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   object-fit: cover; }
 
-div[id$='-video-overlay'] {
+.background-overlay {
   z-index: 40 !important; }
 
 .video-background {
   z-index: 30; }
 
-#global-video-overlay {
+#global-overlay {
   z-index: 20 !important; }
 
 #global-video-background {
   z-index: 10 !important; }
 
-#global-video-overlay, #global-video-background {
+#global-overlay, #global-video-background {
   position: fixed; }
 
-.has-video {
+section {
   position: relative; }
 
 a {
