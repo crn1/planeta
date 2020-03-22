@@ -20,7 +20,7 @@
 				});
 			</script>
 		<?php endif; ?>
-		<small id='footer-menu' class='notice'>
+		<nav id='footer-menu' class='notice'>
 			<?php
 				$params = array(
 					'theme_location' 	=> 'footer-menu',
@@ -29,7 +29,7 @@
 				);
 				echo strip_tags(wp_nav_menu($params), '<a>');
 			?>
-		</small>
+		</nav>
 		<small class='notice'>
 			<?php echo get_theme_mod('footer_copyright', 'Copyright (C) 2020 - Lorem Ipsum. All Rights Reserved.'); ?>
 		</small>

@@ -233,7 +233,8 @@ h1, h2, h3, h4, h5, h6 {
     #main-footer .default-container .notice {
       display: block;
       width: 100%;
-      text-align: center; }
+      text-align: center;
+      font-size: 80%; }
 
 #footer-menu {
   display: flex;
