@@ -25,6 +25,7 @@ require_once(get_template_directory() . '/inc/customizer/global-options/animatio
 require_once(get_template_directory() . '/inc/customizer/global-options/containers.php');
 require_once(get_template_directory() . '/inc/customizer/global-options/typography.php');
 require_once(get_template_directory() . '/inc/customizer/global-options/colors.php');
+require_once(get_template_directory() . '/inc/customizer/global-options/excerpt.php');
 
 //Modules
 require_once(get_template_directory() . '/inc/customizer/modules/404.php');

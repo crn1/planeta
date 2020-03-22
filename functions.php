@@ -59,7 +59,7 @@ function register_widgets()
 add_action('widgets_init', 'register_widgets');
 
 //Excerpt
-add_filter( 'excerpt_length', function($length){ return 25; });
+add_filter( 'excerpt_length', function($length){ return get_theme_mod('excerpt_length', 25); });
 
 function init_scripts()
 {
