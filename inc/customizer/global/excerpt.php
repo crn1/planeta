@@ -2,7 +2,7 @@
 
 Kirki::add_section('excerpt_section', array(
 	'title'	=> esc_html__('Excerpt', 'planeta'),
-	'panel'	=> 'theme_options_panel',
+	'panel'	=> 'global_panel',
 ));
 
 Kirki::add_field('planeta_config', array(

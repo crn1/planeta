@@ -4,7 +4,7 @@ require_once(get_template_directory() . '/inc/customizer/video-background.php');
 
 planeta_add_video_background(
 	$section = 'global',
-	$panel = 'theme_options_panel',
+	$panel = 'global_panel',
 	$bg_output = 'body',
 );
 

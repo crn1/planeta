@@ -7,7 +7,7 @@ Kirki::add_config('planeta_config', array(
 
 Kirki::add_field('planeta_config', array());
 
-Kirki::add_panel('theme_options_panel', array(
+Kirki::add_panel('global_panel', array(
 	'title'       => esc_html__('Global Options', 'planeta'),
 ));
 
@@ -20,12 +20,12 @@ Kirki::add_panel('sections_panel', array(
 ));
 
 //Global Options
-require_once(get_template_directory() . '/inc/customizer/global-options/background.php');
-require_once(get_template_directory() . '/inc/customizer/global-options/animations.php');
-require_once(get_template_directory() . '/inc/customizer/global-options/containers.php');
-require_once(get_template_directory() . '/inc/customizer/global-options/typography.php');
-require_once(get_template_directory() . '/inc/customizer/global-options/colors.php');
-require_once(get_template_directory() . '/inc/customizer/global-options/excerpt.php');
+require_once(get_template_directory() . '/inc/customizer/global/background.php');
+require_once(get_template_directory() . '/inc/customizer/global/animations.php');
+require_once(get_template_directory() . '/inc/customizer/global/containers.php');
+require_once(get_template_directory() . '/inc/customizer/global/typography.php');
+require_once(get_template_directory() . '/inc/customizer/global/colors.php');
+require_once(get_template_directory() . '/inc/customizer/global/excerpt.php');
 
 //Modules
 require_once(get_template_directory() . '/inc/customizer/modules/404.php');

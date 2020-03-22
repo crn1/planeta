@@ -2,7 +2,7 @@
 
 Kirki::add_panel('typography_panel', array(
 	'title'       => esc_html__('Typography', 'planeta' ),
-	'panel'       => 'theme_options_panel',
+	'panel'       => 'global_panel',
 ));
 
 function typography_generator($name, $section, $class, $enable_sizing=true, $enable_hover=false, $enable_fittext=false)

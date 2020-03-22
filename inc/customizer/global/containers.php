@@ -2,7 +2,7 @@
 
 Kirki::add_section('containers_section', array(
 	'title'       => esc_html__('Containers', 'planeta' ),
-	'panel'       => 'theme_options_panel',
+	'panel'       => 'global_panel',
 ));
 
 Kirki::add_field('planeta_config', array(

@@ -144,7 +144,7 @@ function planeta_add_animations($section, $section_title, &$aos_list, &$lax_list
 
 Kirki::add_panel('animations_panel', array(
 	'title'       => esc_html__('Animations', 'planeta'),
-	'panel'       => 'theme_options_panel',
+	'panel'       => 'global_panel',
 ));
 
 planeta_add_animations('section_title', 'Section Title', $aos_list, $lax_list, $lax_labels);
