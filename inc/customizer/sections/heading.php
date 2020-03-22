@@ -16,6 +16,14 @@ function planeta_add_section_heading(&$index)
 	));
 
 	Kirki::add_field('planeta_config', array(
+		'type'			=> 'image',
+		'label'			=> esc_html__('Image/Logo', 'planeta'),
+		'section'		=> "section_${index}_heading",
+		'settings'	=> "section_${index}_logo",
+		'default'		=> '',
+	));
+
+	Kirki::add_field('planeta_config', array(
 		'type'			=> 'textarea',
 		'label'			=> esc_html__('Title', 'planeta'),
 		'section'		=> "section_${index}_heading",

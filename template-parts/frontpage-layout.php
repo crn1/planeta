@@ -25,6 +25,7 @@ foreach($layout as $section):
 
 	$section_items = get_theme_mod("${section}_${card_preset}_items", array());
 
+	$image = get_theme_mod("${section}_logo", '');
 ?>
 
 <section id='<?php echo $section; ?>'>
@@ -35,10 +36,16 @@ foreach($layout as $section):
 
 	<div class='default-container'>
 
+
 		<h2
 				class='section-title <?php echo $title_lax_class; ?>'
 				<?php echo $title_lax; ?>
 				<?php echo $title_aos; ?>>
+
+			<?php if($image != ''): ?>
+				<img src='<?php echo $image; ?>'>
+			<?php endif; ?>
+
 			<?php echo $section_title; ?>
 		</h2>
 
