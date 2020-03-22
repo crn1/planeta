@@ -2,6 +2,7 @@
 	$hover_class = get_theme_mod('typography_links_hover', 'none');
 
 	$navbar_class = get_theme_mod('navbar_type', 'up');
+	$hamburger_class = get_theme_mod('hamburger_class', 'boring');
 	$logo_url = get_theme_mod('logo', '');
 
 	function nav_items($hover_class)
@@ -44,9 +45,14 @@
 			</nav>
 		<?php endif; ?>
 
-		<span id='menu-button' class='heading-main-button'>
-			<i class='material-icons'>menu</i>
-		</span>
+		<button
+				id='menu-button'
+				class='hamburger hamburger--<?php echo $hamburger_class; ?>'
+				type='button'>
+			<span class='hamburger-box'>
+				<span class='hamburger-inner'></span>
+			</span>
+		</button>
 	</div>
 </header>
 

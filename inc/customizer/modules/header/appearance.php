@@ -1,6 +1,5 @@
 <?php
 
-
 Kirki::add_section('header_appearance', array(
 	'title'       => esc_html__('Appearance', 'planeta'),
 	'panel'       => 'header_panel',

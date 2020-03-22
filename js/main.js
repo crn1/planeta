@@ -31,13 +31,12 @@ jQuery(document).ready(function($)
 
 	// Main Menu
 	$('#menu-button').on('click', function() {
+		$('#menu-button').toggleClass('is-active')
 		$('#menu-container').toggleClass('active')
-		if($('#menu-container').hasClass('active'))
+		if($('#menu-container').hasClass('is-active'))
 		{
-			$('#menu-button').children('i').html('close')
 			$('html').css('overflow', 'hidden')
 		}else{
-			$('#menu-button').children('i').html('menu')
 			$('html').css('overflow', 'visible')
 		}
 	})

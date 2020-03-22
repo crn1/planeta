@@ -48,17 +48,9 @@ $drawer-width: 40rem;
 }
 
 #menu-button {
-	@include flexContainer($display: inline-flex, $direction: column);
-	cursor: pointer;
-	border: none;
-	width: calc(48px + (60 - 48) * (100vw - 320px) / 640);
-	height: calc(48px + (60 - 48) * (100vw - 320px) / 640);
-	border-radius: 50%;
+	display: flex;
 
-	i {
-		cursor: pointer;
-	}
-
+	padding: 5px;
 	@media screen and (min-width: 960px)
 	{
 		display: none;

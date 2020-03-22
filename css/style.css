@@ -166,17 +166,8 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: flex-end; }
 
 #menu-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  cursor: pointer;
-  border: none;
-  width: calc(48px + (60 - 48) * (100vw - 320px) / 640);
-  height: calc(48px + (60 - 48) * (100vw - 320px) / 640);
-  border-radius: 50%; }
-  #menu-button i {
-    cursor: pointer; }
+  display: flex;
+  padding: 5px; }
   @media screen and (min-width: 960px) {
     #menu-button {
       display: none; } }
