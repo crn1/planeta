@@ -28,7 +28,7 @@ function planeta_add_section_appearance(&$index)
 		'label'			=> esc_html__('Title Padding Top & Bottom (vh)', 'planeta'),
 		'section'		=> "section_${index}_appearance",
 		'settings'	=> "section_${index}_title_padding",
-		'default'		=> 0,
+		'default'		=> 1,
 		'choices'		=> array(
 			'min'			=> '0',
 			'max'			=> '50',

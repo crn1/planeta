@@ -7,6 +7,7 @@
 	$page_aos = get_query_var('page_title_aos');
 	$page_lax = get_query_var('page_title_lax');
 	$lax = $page_lax != '' ? 'lax' : '';
+	$fittext = get_theme_mod('typography_page_title_fittext', false) ? 'fit-text' : '';
 
 	$featured_image = has_post_thumbnail() && !is_search() && !is_archive() ? get_the_post_thumbnail_url(get_the_ID(), 'full') : '';
 ?>
@@ -18,7 +19,7 @@
 
 	<div class='default-container'>
 		<h2
-				class='page-title <?php echo $lax; ?>'
+				class='page-title <?php echo $lax; ?> <?php echo $fittext; ?>'
 				<?php echo $page_lax; ?>
 				<?php echo $page_aos; ?>>
 			<?php echo $title; ?>

@@ -76,7 +76,7 @@ function init_scripts()
 	wp_enqueue_style('hover-css', get_template_directory_uri() . '/css/hover.css', false, '1.0.0', 'all');
 
 	// Fittext
-	//wp_enqueue_script('fittext-script', get_template_directory_uri() . '/js/fittext.min.js', array('jquery'), '1.2.0');
+	wp_enqueue_script('fittext-script', get_template_directory_uri() . '/js/fittext.min.js', array('jquery'), '1.2.0');
 
 	// AOS CSS and JS
 	if(get_theme_mod('section_title_anims_trigger', 'none') == 'aos' or

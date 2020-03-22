@@ -5,7 +5,7 @@ Kirki::add_panel('typography_panel', array(
 	'panel'       => 'theme_options_panel',
 ));
 
-function typography_generator($name, $section, $class, $enable_sizing=true, $enable_hover=false)
+function typography_generator($name, $section, $class, $enable_sizing=true, $enable_hover=false, $enable_fittext=false)
 {
 	Kirki::add_section("typography_${section}", array(
 		'title'       => esc_html__($name, 'planeta' ),
@@ -44,7 +44,7 @@ function typography_generator($name, $section, $class, $enable_sizing=true, $ena
 			'default'     => 2,
 			'choices'     => array(
 				'min'					=> 0.1,
-				'max'					=> 10,
+				'max'					=> 7,
 				'step'				=> 0.1,
 			),
 			'output'			=> array(
@@ -54,6 +54,17 @@ function typography_generator($name, $section, $class, $enable_sizing=true, $ena
 					'property'		=> 'font-size',
 				),
 			),
+		));
+	}
+
+	if($enable_fittext)
+	{
+		Kirki::add_field('planeta_config', array(
+			'type'        => 'toggle',
+			'label'       => esc_html__('Fit Text', 'planeta'),
+			'section'     => "typography_${section}",
+			'settings'    => "typography_${section}_fittext",
+			'default'     => false,
 		));
 	}
 
@@ -125,22 +136,22 @@ Kirki::add_field('planeta_config', array(
 	'default'     => 16,
 	'choices'     => array(
 		'min'					=> 16,
-		'max'					=> 72,
+		'max'					=> 48,
 		'step'				=> 1,
 	),
 	'output'			=> array(
 		array(
 			'element'				=> array('html', 'body'),
 			'property'			=> 'font-size',
-			'value_pattern' => 'calc(16px + ($ - 16) * (100vw - 320px) / 640)',
+			'value_pattern' => 'calc(16px + ($ - 16) * (100vw - 600px) / 680)',
 		),
 	),
 ));
 
 typography_generator('Links', 'links', 'a', false, true);
-typography_generator('Section Title', 'section_title', '.section-title');
-typography_generator('Section Subtitle', 'section_subtitle', '.section-subtitle');
-typography_generator('Page Title', 'page_title', '.page-title');
-typography_generator('Page Subtitle', 'page_subtitle', '.page-subtitle');
+typography_generator('Section Title', 'section_title', '.section-title', true, false, true);
+typography_generator('Section Subtitle', 'section_subtitle', '.section-subtitle', true, false, true);
+typography_generator('Page Title', 'page_title', '.page-title', true, false, true);
+typography_generator('Page Subtitle', 'page_subtitle', '.page-subtitle', true, false, true);
 
 ?>

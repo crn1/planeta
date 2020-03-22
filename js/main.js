@@ -43,7 +43,17 @@ jQuery(document).ready(function($)
 	})
 
 	//Fittext
-	//$('.section-title').fitText()
+	$(window).on('load resize', function()
+	{
+		let windowWidth = $(window).width()
+		let containerWidth = parseInt($('.default-container').css('max-width'), 10)
+		if(windowWidth <= containerWidth)
+		{
+			$('.fit-text').fitText()
+		}else{
+			//defit text?
+		}
+	})
 
 	// Convert card images to links
 	$('.card').find('.image').on('click', function(event)
