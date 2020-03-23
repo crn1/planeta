@@ -15,16 +15,26 @@ function planeta_add_separator($section, $panel)
 		'default'		=> 'none',
 		'choices'		=> array(
 			'none'				=> esc_html__('None (default)', 'planeta'),
-			'line-left'		=> esc_html__('Line (Left)', 'planeta'),
-			'line-right'	=> esc_html__('Line (Right)', 'planeta'),
+			'line-left'		=> esc_html__('Line Left', 'planeta'),
+			'line-right'	=> esc_html__('Line Right', 'planeta'),
+			'point'				=> esc_html__('Point', 'planeta'),
+			'circle'			=> esc_html__('Circle', 'planeta'),
+			'zigzag-1'		=> esc_html__('Zig Zag 1', 'planeta'),
+			'zigzag-2'		=> esc_html__('Zig Zag 2', 'planeta'),
+			'zigzag-3'		=> esc_html__('Zig Zag 3', 'planeta'),
+			'zigzag-4'		=> esc_html__('Zig Zag 4', 'planeta'),
+			'zigzag-5'		=> esc_html__('Zig Zag 5', 'planeta'),
+			'zigzag-6'		=> esc_html__('Zig Zag 6', 'planeta'),
+			'zigzag-7'		=> esc_html__('Zig Zag 7', 'planeta'),
+			'zigzag-8'		=> esc_html__('Zig Zag 8', 'planeta'),
 		),
 	));
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__('Angle (%)', 'planeta'),
+		'label'			=> esc_html__('Strength (%)', 'planeta'),
 		'section'		=> "${section}_separator",
-		'settings'	=> "${section}_separator_angle",
+		'settings'	=> "${section}_separator_strength",
 		'default'		=> 10,
 		'choices'		=> array(
 			'min'				=> 0,
@@ -34,8 +44,8 @@ function planeta_add_separator($section, $panel)
 		'active_callback'	=> array(
 			array(
 				'setting'					=> "${section}_separator",
-				'operator'				=> 'contains',
-				'value'						=> array('line-left', 'line-right'),
+				'operator'				=> '!=',
+				'value'						=> 'none',
 			)
 		),
 	));
