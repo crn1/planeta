@@ -6,18 +6,6 @@ jQuery(document).ready(function($)
 	let mainHeight = 'calc(100vh - ' + headerHeight + 'px - ' + footerHeight + 'px)'
 	$('main').css('min-height', mainHeight)
 
-	$('.top-navbar-item').on('click', function(event)
-	{
-		event.preventDefault()
-		if($('#menu-container').hasClass('active'))
-		{
-			$('#menu-container').removeClass('active')
-			$('#menu-button').children('i').html('menu')
-			$('html').css('overflow', 'visible')
-		}
-		$.scrollTo('#' + $(this).attr('data-section-id'), 2000)
-	})
-
 	// Move top-navbar-items to top-navbar
 	$(window).on('load resize', function()
 	{
@@ -27,13 +15,26 @@ jQuery(document).ready(function($)
 		}else{
 			$('#top-menu').prependTo('#nav-container')
 		}
+		$('#top-menu').css('display', 'flex')
+	})
+
+	$('.top-navbar-item').on('click', function(event)
+	{
+		event.preventDefault()
+		if($('#menu-container').hasClass('active'))
+		{
+			$('#menu-button').removeClass('is-active')
+			$('#menu-container').removeClass('active')
+			$('html').css('overflow', 'visible')
+		}
+		$.scrollTo('#' + $(this).attr('data-section-id'), 1700)
 	})
 
 	// Main Menu
 	$('#menu-button').on('click', function() {
-		$('#menu-button').toggleClass('is-active')
 		$('#menu-container').toggleClass('active')
-		if($('#menu-container').hasClass('is-active'))
+		$('#menu-button').toggleClass('is-active')
+		if($('#menu-button').hasClass('is-active'))
 		{
 			$('html').css('overflow', 'hidden')
 		}else{

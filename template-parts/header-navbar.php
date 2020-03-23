@@ -54,4 +54,7 @@
 </header>
 
 <div id='menu-container' class='menu-<?php echo $navbar_class; ?>'>
+	<?php
+		set_query_var('section', 'header');
+		get_template_part('template-parts/content', 'background'); ?>
 </div>
