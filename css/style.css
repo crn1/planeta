@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row; }
   @media screen and (min-width: 960px) {
     #top-menu a:not(:last-child) {
-      margin-right: calc(8px + (48 - 8) * (100vw - 320px) / 640); } }
+      margin-right: calc(8px + (32 - 8) * (100vw - 320px) / 640); } }
   @media screen and (max-width: 959px) {
     #top-menu {
       flex-direction: column; }
@@ -148,15 +148,16 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  padding: calc(16px + (48 - 16) * (100vw - 320px) / 640);
+  box-sizing: border-box;
+  margin-top: calc(16px + (32 - 16) * (100vw - 960px) / 120);
+  margin-bottom: calc(16px + (32 - 16) * (100vw - 960px) / 120);
+  padding-left: calc(16px + (32 - 16) * (100vw - 960px) / 120);
+  padding-right: calc(16px + (32 - 16) * (100vw - 960px) / 120);
   z-index: 99999;
   top: 0;
   left: 0;
   position: absolute;
-  width: 100%;
-  box-sizing: border-box; }
-  .header-container #logo-container, .header-container #nav-container {
-    z-index: 100; }
+  width: 100%; }
   .header-container #logo-container {
     margin: 0 !important; }
   .header-container #nav-container {

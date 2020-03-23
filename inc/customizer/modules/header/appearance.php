@@ -6,17 +6,44 @@ Kirki::add_section('header_appearance', array(
 ));
 
 Kirki::add_field('planeta_config', array(
-	'type' 				=> 'toggle',
-	'settings'		=> 'show_sections_nav',
-	'label'				=> esc_html__('Show Section Menu', 'planeta'),
+	'type' 				=> 'slider',
+	'settings'		=> 'navbar_padding',
+	'label'				=> esc_html__('Padding', 'planeta'),
 	'section'			=> 'header_appearance',
-	'default'			=> false,
+	'default'			=> 32,
+	'choices'			=> array(
+		'min'					=> 16,
+		'max'					=> 48,
+		'step'				=> 1,
+	),
+	'output'			=> array(
+		array(
+			'element'				=> '.header-container',
+			'property'			=> 'margin-top',
+			'value_pattern'	=> 'calc(16px + ($ - 16) * (100vw - 960px) / 120)',
+		),
+		array(
+			'element'				=> '.header-container',
+			'property'			=> 'margin-bottom',
+			'value_pattern'	=> 'calc(16px + ($ - 16) * (100vw - 960px) / 120)',
+		),
+		array(
+			'element'				=> '.header-container',
+			'property'			=> 'padding-left',
+			'value_pattern'	=> 'calc(16px + ($ - 16) * (100vw - 960px) / 120)',
+		),
+		array(
+			'element'				=> '.header-container',
+			'property'			=> 'padding-right',
+			'value_pattern'	=> 'calc(16px + ($ - 16) * (100vw - 960px) / 120)',
+		),
+	),
 ));
 
 Kirki::add_field('planeta_config', array(
 	'type' 				=> 'toggle',
 	'settings'		=> 'navbar_sticky',
-	'label'				=> esc_html__('Sticky Navbar', 'planeta'),
+	'label'				=> esc_html__('Sticky', 'planeta'),
 	'section'			=> 'header_appearance',
 	'default'			=> false,
 	'output'			=> array(
@@ -27,6 +54,14 @@ Kirki::add_field('planeta_config', array(
 			'exclude'				=> array(false),
 		),
 	),
+));
+
+Kirki::add_field('planeta_config', array(
+	'type' 				=> 'toggle',
+	'settings'		=> 'show_sections_nav',
+	'label'				=> esc_html__('Show Sections Menu', 'planeta'),
+	'section'			=> 'header_appearance',
+	'default'			=> false,
 ));
 
 Kirki::add_field('planeta_config', array(

@@ -28,9 +28,6 @@
 ?>
 
 <header id='main-header' class='header-container'>
-	<?php
-		set_query_var('section', 'main-header');
-		get_template_part('template-parts/content', 'background'); ?>
 
 	<?php if($logo_url != ''): ?>
 		<a href='/' id='logo-container'>
