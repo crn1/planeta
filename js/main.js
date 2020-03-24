@@ -13,6 +13,9 @@ jQuery(document).ready(function($)
 		{
 			$('#top-menu').appendTo('#menu-container')
 		}else{
+			$('#menu-button').removeClass('is-active')
+			$('#menu-container').removeClass('active')
+			$('html').css('overflow', 'visible')
 			$('#top-menu').prependTo('#nav-container')
 		}
 		$('#top-menu').css('display', 'flex')
