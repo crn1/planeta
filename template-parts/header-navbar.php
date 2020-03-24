@@ -4,10 +4,11 @@
 	$navbar_class = get_theme_mod('navbar_type', 'up');
 	$hamburger_class = get_theme_mod('hamburger_class', 'boring');
 	$logo_url = get_theme_mod('logo', '');
+	$logo_text = get_theme_mod('logo_text', '');
 
 	function nav_items($hover_class)
 	{
-		if(get_theme_mod('show_sections_nav', false))
+		if(get_theme_mod('show_sections_nav', false) && is_front_page())
 		{
 			$layout = get_theme_mod('sections_layout', array());
 			foreach($layout as $section)
@@ -36,12 +37,10 @@
 	<?php endif; ?>
 
 	<div id='nav-container'>
-		<?php if(is_front_page()): ?>
-			<nav id='top-menu' class='<?php echo $hover_class; ?>'>
-				<?php nav_items($hover_class); ?>
-				<?php get_template_part('template-parts/content', 'social'); ?>
-			</nav>
-		<?php endif; ?>
+		<nav id='top-menu' class='<?php echo $hover_class; ?>'>
+			<?php nav_items($hover_class); ?>
+			<?php get_template_part('template-parts/content', 'social'); ?>
+		</nav>
 
 		<button
 				id='menu-button'

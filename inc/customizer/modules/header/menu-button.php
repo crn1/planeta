@@ -6,6 +6,34 @@ Kirki::add_section('header_menu_button', array(
 ));
 
 Kirki::add_field('planeta_config', array(
+	'type'			=> 'toggle',
+	'settings'	=> 'hamburger_sharp',
+	'label'			=> esc_html__('Sharp', 'planeta'),
+	'section'		=> 'header_menu_button',
+	'default'		=> false,
+	'output'		=> array(
+		array(
+			'element'				=> '.hamburger-inner',
+			'property'			=> 'border-radius',
+			'value_pattern'	=> '0px',
+			'exclude'				=> array(false),
+		),
+		array(
+			'element'				=> '.hamburger-inner:before',
+			'property'			=> 'border-radius',
+			'value_pattern'	=> '0px',
+			'exclude'				=> array(false),
+		),
+		array(
+			'element'				=> '.hamburger-inner:after',
+			'property'			=> 'border-radius',
+			'value_pattern'	=> '0px',
+			'exclude'				=> array(false),
+		),
+	),
+));
+
+Kirki::add_field('planeta_config', array(
 	'type'			=> 'select',
 	'settings'	=> 'hamburger_class',
 	'label'			=> esc_html__('Animation', 'planeta'),
