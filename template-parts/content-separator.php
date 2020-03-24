@@ -37,11 +37,11 @@
 				break;
 
 			case 'line-left':
-				echo "clip-path: polygon(0 0, 100% 0, 100% ${strength}%, 0% 100%);";
+				echo "clip-path: polygon(0 0, 100% 0, 100% 100%, 0% ${strength}%);";
 				break;
 
 			case 'line-right':
-				echo "clip-path: polygon(0 0, 100% 0, 100% 100%, 0% ${strength}%);";
+				echo "clip-path: polygon(0 0, 100% 0, 100% ${strength}%, 0% 100%);";
 				break;
 
 			case 'point':
