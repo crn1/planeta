@@ -2,6 +2,11 @@
 
 $transition-time: 0.17s ease-in;
 
+.top-navbar-item, .social-item {
+	display: inline-flex !important;
+	align-items: center !important;
+}
+
 #top-menu {
 	display: none; //Here with reason, see main.js
 	flex-direction: row;
@@ -15,8 +20,9 @@ $transition-time: 0.17s ease-in;
 
 	@media screen and (max-width: 959px) {
 		flex-direction: column;
-		a {
+		& > a {
 			text-align: center;
+			display: inline-block !important;
 			&:not(:last-child) {
 				margin-right: 0px !important;
 				margin-bottom: 24px;

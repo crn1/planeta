@@ -75,6 +75,9 @@ function init_scripts()
 	// Hover CSS
 	wp_enqueue_style('hover-css', get_template_directory_uri() . '/css/hover.css', false, '1.0.0', 'all');
 
+	// IcoFont CSS
+	wp_enqueue_style('icofont-css', get_template_directory_uri() . '/css/icofont.min.css', false, '1.0.0', 'all');
+
 	// Hamburgers CSS
 	wp_enqueue_style('hamburgers-css', get_template_directory_uri() . '/css/hamburgers.min.css', false, '1.1.3', 'all');
 

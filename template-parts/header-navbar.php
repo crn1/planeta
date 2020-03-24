@@ -39,6 +39,7 @@
 		<?php if(is_front_page()): ?>
 			<nav id='top-menu' class='<?php echo $hover_class; ?>'>
 				<?php nav_items($hover_class); ?>
+				<?php get_template_part('template-parts/content', 'social'); ?>
 			</nav>
 		<?php endif; ?>
 

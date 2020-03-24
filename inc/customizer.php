@@ -32,6 +32,7 @@ require_once(get_template_directory() . '/inc/customizer/modules/404.php');
 require_once(get_template_directory() . '/inc/customizer/modules/header.php');
 require_once(get_template_directory() . '/inc/customizer/modules/footer.php');
 require_once(get_template_directory() . '/inc/customizer/modules/page.php');
+require_once(get_template_directory() . '/inc/customizer/modules/social-media.php');
 
 //Homepage sections
 require_once(get_template_directory() . '/inc/customizer/sections/layout.php');
