@@ -27,6 +27,8 @@ function planeta_add_separator($section, $panel)
 			'zigzag-6'		=> esc_html__('Zig Zag 6', 'planeta'),
 			'zigzag-7'		=> esc_html__('Zig Zag 7', 'planeta'),
 			'zigzag-8'		=> esc_html__('Zig Zag 8', 'planeta'),
+			'paper-left'	=> esc_html__('Paper Left', 'planeta'),
+			'paper-right'	=> esc_html__('Paper Right', 'planeta'),
 		),
 	));
 

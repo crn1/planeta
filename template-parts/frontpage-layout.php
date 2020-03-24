@@ -38,7 +38,6 @@ foreach($layout as $section):
 
 	<div class='default-container'>
 
-
 		<h2
 				class='section-title <?php echo $title_lax_class; ?> <?php echo $title_fittext; ?>'
 				<?php echo $title_lax; ?>

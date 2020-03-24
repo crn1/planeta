@@ -54,42 +54,52 @@
 
 			case 'zigzag-1':
 				$zigzag = generate_zigzag(5, $strength);
-				echo "clip-path:polygon(${zigzag}	100% 0, 0 0);";
+				echo "clip-path: polygon(${zigzag}	100% 0, 0 0);";
 				break;
 
 			case 'zigzag-2':
 				$zigzag = generate_zigzag(5, $strength, true);
-				echo "clip-path:polygon(${zigzag}	100% 0, 0 0);";
+				echo "clip-path: polygon(${zigzag}	100% 0, 0 0);";
 				break;
 
 			case 'zigzag-3':
 				$zigzag = generate_zigzag(4, $strength);
-				echo "clip-path:polygon(${zigzag}	100% 0, 0 0);";
+				echo "clip-path: polygon(${zigzag}	100% 0, 0 0);";
 				break;
 
 			case 'zigzag-4':
 				$zigzag = generate_zigzag(4, $strength, true);
-				echo "clip-path:polygon(${zigzag}	100% 0, 0 0);";
+				echo "clip-path: polygon(${zigzag}	100% 0, 0 0);";
 				break;
 
 			case 'zigzag-5':
 				$zigzag = generate_zigzag(2, $strength);
-				echo "clip-path:polygon(${zigzag}	100% 0, 0 0);";
+				echo "clip-path: polygon(${zigzag}	100% 0, 0 0);";
 				break;
 
 			case 'zigzag-6':
 				$zigzag = generate_zigzag(2, $strength, true);
-				echo "clip-path:polygon(${zigzag}	100% 0, 0 0);";
+				echo "clip-path: polygon(${zigzag}	100% 0, 0 0);";
 				break;
 
 			case 'zigzag-7':
 				$zigzag = generate_zigzag(1, $strength);
-				echo "clip-path:polygon(${zigzag}	100% 0, 0 0);";
+				echo "clip-path: polygon(${zigzag}	100% 0, 0 0);";
 				break;
 
 			case 'zigzag-8':
 				$zigzag = generate_zigzag(1, $strength, true);
-				echo "clip-path:polygon(${zigzag}	100% 0, 0 0);";
+				echo "clip-path: polygon(${zigzag}	100% 0, 0 0);";
+				break;
+
+			case 'paper-left':
+				$strength_rev = 100 - $strength;
+				echo "border-radius: 0% 100% 0% 100% / ${strength}% 0% 100% ${strength_rev}%";
+				break;
+
+			case 'paper-right':
+				$strength_rev = 100 - $strength;
+				echo "border-radius: 100% 0% 100% 0% / 0% ${strength}% ${strength_rev}% 100%";
 				break;
 
 			default:
