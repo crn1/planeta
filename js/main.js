@@ -81,4 +81,10 @@ jQuery(document).ready(function($)
 	{
 		AOS.init()
 	}
+
+	//Sticky Sidebars
+	if(typeof StickySidebar != 'undefined')
+	{
+		$('.sidebar').stickySidebar()
+	}
 })

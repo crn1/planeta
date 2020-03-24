@@ -1,13 +1,7 @@
 @import 'flex';
 
-.sidebar-left {
-	display: inline-grid;
-}
-
-.page-content {
-	display: inline-grid;
-}
-
+.sidebar-left,
+.page-content,
 .sidebar-right {
 	display: inline-grid;
 }
@@ -18,4 +12,14 @@
 	& li:not(:first-child) {
 		padding-top: 1rem;
 	}
+}
+
+.sidebar{
+	will-change: min-height;
+}
+
+.sidebar__inner{
+	transform: translate(0, 0);
+	transform: translate3d(0, 0, 0);
+	will-change: position, transform;
 }

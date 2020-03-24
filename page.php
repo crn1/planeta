@@ -10,10 +10,12 @@
 
 		<div class='default-container'>
 			<div class='content-container'>
-				<aside class='sidebar-left'>
-				<?php if(is_active_sidebar('page-left-sidebar')) {
-					dynamic_sidebar('page-left-sidebar');
-				} ?>
+				<aside class='sidebar sidebar-left'>
+					<div class='sidebar__inner'>
+						<?php if(is_active_sidebar('page-left-sidebar')) {
+							dynamic_sidebar('page-left-sidebar');
+						} ?>
+					</div>
 				</aside>
 
 				<div class='page-content'>
@@ -21,10 +23,12 @@
 					<?php wp_link_pages(); ?>
 				</div>
 
-				<aside class='sidebar-right'>
-				<?php if(is_active_sidebar('page-right-sidebar')) {
-					dynamic_sidebar('page-right-sidebar');
-				} ?>
+				<aside class='sidebar sidebar-right'>
+					<div class='sidebar__inner'>
+						<?php if(is_active_sidebar('page-right-sidebar')) {
+							dynamic_sidebar('page-right-sidebar');
+						} ?>
+					</div>
 				</aside>
 			</div>
 

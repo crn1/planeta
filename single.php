@@ -10,10 +10,12 @@
 
 		<div class='default-container'>
 			<div class='content-container'>
-				<aside class='sidebar-left'>
-				<?php if(is_active_sidebar('page-left-sidebar')) {
-					dynamic_sidebar('page-left-sidebar');
-				} ?>
+				<aside class='sidebar sidebar-left'>
+					<div class='sidebar__inner'>
+						<?php if(is_active_sidebar('blog-left-sidebar')) {
+							dynamic_sidebar('blog-left-sidebar');
+						} ?>
+					</div>
 				</aside>
 
 				<div class='page-content'>
@@ -31,10 +33,12 @@
 					</div>
 				</div>
 
-				<aside class='sidebar-right'>
-				<?php if(is_active_sidebar('page-right-sidebar')) {
-					dynamic_sidebar('page-right-sidebar');
-				} ?>
+				<aside class='sidebar sidebar-right'>
+					<div class='sidebar__inner'>
+						<?php if(is_active_sidebar('blog-right-sidebar')) {
+							dynamic_sidebar('blog-right-sidebar');
+						} ?>
+					</div>
 				</aside>
 			</div>
 

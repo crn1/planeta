@@ -123,12 +123,8 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 0;
   overflow-wrap: break-word; }
 
-.sidebar-left {
-  display: inline-grid; }
-
-.page-content {
-  display: inline-grid; }
-
+.sidebar-left,
+.page-content,
 .sidebar-right {
   display: inline-grid; }
 
@@ -138,6 +134,14 @@ h1, h2, h3, h4, h5, h6 {
   .sidebar-left li:not(:first-child),
   .sidebar-right li:not(:first-child) {
     padding-top: 1rem; }
+
+.sidebar {
+  will-change: min-height; }
+
+.sidebar__inner {
+  transform: translate(0, 0);
+  transform: translate3d(0, 0, 0);
+  will-change: position, transform; }
 
 .top-navbar-item, .social-item {
   display: inline-flex !important;
