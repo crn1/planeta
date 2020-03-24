@@ -4,7 +4,9 @@
 	<article>
 		<?php if(have_posts()): while(have_posts()) : the_post(); ?>
 
-		<?php get_template_part('template-parts/content', 'title'); ?>
+		<?php
+			set_query_var('title', get_the_title());
+			get_template_part('template-parts/content', 'title'); ?>
 
 		<div class='default-container'>
 			<div class='content-container'>

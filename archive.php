@@ -7,7 +7,9 @@
 <?php get_template_part('template-parts/header', 'navbar'); ?>
 <main>
 	<article id='page-container'>
-		<?php get_template_part('template-parts/content', 'title'); ?>
+		<?php
+			set_query_var('title', 'Archive');
+			get_template_part('template-parts/content', 'title'); ?>
 
 		<div class='default-container'>
 			<div id='page-items' class='card-<?php echo $card_type; ?>-items'>

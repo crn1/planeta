@@ -1,6 +1,5 @@
 <?php
 	$title = get_query_var('title');
-	if(!isset($title)) { $title = get_the_title(); }
 
 	set_query_var('animation_name', 'page_title');
 	get_template_part('template-parts/content', 'animations');
