@@ -53,11 +53,13 @@
 	}
 
 	&-image:hover {
-		transform: perspective(0px) rotateY(0deg) !important;
+		transform: perspective(0px) rotateY(0deg) rotateX(0deg) !important;
 	}
 
 	&-info {
-		flex-grow: 1;
+		display: inline-flex;
+		width: 100%;
+		flex-direction: column;
 	}
 
 	&-image, .card-image:hover {

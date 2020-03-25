@@ -29,9 +29,11 @@
   padding-bottom: 1rem;
   object-fit: cover; }
 .card-image:hover {
-  transform: perspective(0px) rotateY(0deg) !important; }
+  transform: perspective(0px) rotateY(0deg) rotateX(0deg) !important; }
 .card-info {
-  flex-grow: 1; }
+  display: inline-flex;
+  width: 100%;
+  flex-direction: column; }
 .card-image, .card .card-image:hover {
   transition: .15s ease-in; }
 .card-date-span {

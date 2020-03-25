@@ -9,7 +9,7 @@ function planeta_add_video_background($section, $panel, $bg_output, $name = 'Bac
 
 	Kirki::add_field('planeta_config', array(
 		'type'									=> 'radio-buttonset',
-		'label'									=> esc_html__('Background Type', 'planeta'),
+		'label'									=> esc_html__('Type', 'planeta'),
 		'section'								=> "${section}_background",
 		'settings'							=> "${section}_bg_type",
 		'default'								=> 'static',

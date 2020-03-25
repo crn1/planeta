@@ -1,8 +1,8 @@
 <?php
-	$section = get_query_var('section');
-	$separator = get_theme_mod("${section}_separator", 'none');
+	$setting = get_query_var('setting');
+	$shape = get_theme_mod($setting . '_shape', 'none');
 
-	if($separator != 'none')
+	if($shape != 'none')
 	{
 		function generate_zigzag($d=5, $strength=90, $is_rev=false)
 		{
@@ -28,10 +28,10 @@
 		}
 
 		echo 'style="';
-		$strength = get_theme_mod("${section}_separator_strength", 10);
+		$strength = get_theme_mod("${setting}_strength", 10);
 		$strength = 100 - $strength;
 
-		switch($separator)
+		switch($shape)
 		{
 			case 'none':
 				break;

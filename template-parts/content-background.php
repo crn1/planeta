@@ -1,9 +1,11 @@
 <?php
 	$section = get_query_var('section');
+	$setting = $section . '_background';
+	set_query_var('setting', $setting);
 
-	//Because you cant call get_template_part twice
+	//Because you can't call get_template_part twice
 	ob_start();
-	get_template_part('template-parts/content', 'separator');
+	get_template_part('template-parts/content', 'shape');
 	$separator = ob_get_contents();
 	ob_end_clean();
 
