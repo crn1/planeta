@@ -20,4 +20,5 @@ html, body {
 section[id^='section_'] {
 	display: flex;
 	align-items: center;
+	z-index: 100;
 }

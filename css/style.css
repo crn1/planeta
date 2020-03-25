@@ -283,6 +283,10 @@ h1, h2, h3, h4, h5, h6 {
 #global-video-background {
   z-index: 10 !important; }
 
+#global-video-background, #404-video-background,
+#global-overlay, #404-overlay {
+  position: fixed !important; }
+
 #global-overlay, #global-video-background {
   position: fixed; }
 
@@ -298,6 +302,7 @@ html, body {
 
 section[id^='section_'] {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  z-index: 100; }
 
 /*# sourceMappingURL=style.css.map */

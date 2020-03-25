@@ -3,9 +3,9 @@
 require_once(get_template_directory() . '/inc/customizer/video-background.php');
 
 planeta_add_video_background(
-	$section = '404',
+	$section = 'not_found',
 	$panel = '404_panel',
-	$bg_output = 'body',
+	$bg_output = '#not_found-overlay',
 );
 
 ?>

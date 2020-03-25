@@ -7,7 +7,7 @@
 
 		<?php
 			if(is_404()) {
-				set_query_var('section', '404');
+				set_query_var('section', 'not_found');
 			}else{
 				set_query_var('section', 'global');
 			}

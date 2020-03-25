@@ -6,7 +6,7 @@
 	//Because you can't call get_template_part twice
 	ob_start();
 	get_template_part('template-parts/content', 'shape');
-	$separator = ob_get_contents();
+	$shape = ob_get_contents();
 	ob_end_clean();
 
 	$video = get_theme_mod("${section}_bg_type", 'static') == 'video' ? true : false;
@@ -17,12 +17,12 @@
 	$img_url = get_theme_mod("${section}_fallback_image_url", '');
 ?>
 <div
-	<?php echo $separator; ?>
+	<?php echo $shape; ?>
 	class='background-overlay'
 	id='<?php echo $section; ?>-overlay'></div>
 <?php if($video): ?>
 <video
-		<?php echo $separator; ?>
+		<?php echo $shape; ?>
 		autoplay loop muted
 		id='<?php echo $section; ?>-video-background'
 		class='video-background'

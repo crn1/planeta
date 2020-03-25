@@ -3,12 +3,13 @@
 function planeta_add_shape($args)
 {
 	$args = array_merge(array(
-		'inline'				=> false,
-		'height'				=> false,
-		'height_output'	=> array(),
-		'section'				=> '',
-		'panel'					=> '',
-		'title'					=> 'Shapes',
+		'inline'					=> false,
+		'height'					=> false,
+		'height_output'		=> array(),
+		'section'					=> '',
+		'panel'						=> '',
+		'outside_output'	=> '',
+		'title'						=> 'Shapes',
 	), $args);
 
 	$section = $args['inline'] ? $args['section'] : $args['section'] . '_shape';
@@ -64,7 +65,7 @@ function planeta_add_shape($args)
 				'setting'					=> $type,
 				'operator'				=> '!=',
 				'value'						=> 'none',
-			)
+			),
 		),
 	));
 
@@ -94,6 +95,34 @@ function planeta_add_shape($args)
 				'step'			=> 1,
 			),
 			'output'		=> $height_output,
+		));
+	}
+
+	if($args['outside_output'] != '')
+	{
+		$color = $args['inline'] ? 'Shape Outside Color (%)' : 'Outside Color (%)';
+		Kirki::add_field('planeta_config', array(
+			'type'			=> 'color',
+			'label'			=> esc_html__($color, 'planeta'),
+			'section'		=> $section,
+			'settings'	=> "${section}_outside_color",
+			'default'		=> 'rgba(0, 0, 0, 0)',
+			'choices'		=> array(
+				'alpha'							=> true,
+			),
+			'active_callback'	=> array(
+				array(
+					'setting'					=> $type,
+					'operator'				=> '!=',
+					'value'						=> 'none',
+				)
+			),
+			'output'		=> array(
+				array(
+					'element'			=> $args['outside_output'],
+					'property'		=> 'background-color',
+				),
+			),
 		));
 	}
 }

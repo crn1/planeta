@@ -97,7 +97,7 @@ function planeta_add_video_background($section, $panel, $bg_output, $name = 'Bac
 		),
 		'output'								=>	array(
 			array(
-				'element'								=> "#${section}-overlay",
+				'element'								=> $bg_output,
 				'property'							=> 'background-color',
 			)
 		),
@@ -107,7 +107,7 @@ function planeta_add_video_background($section, $panel, $bg_output, $name = 'Bac
 		'type'									=> 'background',
 		'label'									=> esc_html__('Background', 'planeta'),
 		'section'								=> "${section}_background",
-		'settings'							=> "${section}_bg",
+		'settings'							=> "${section}_background",
 		'default'								=> array(
 			'background-color'			=> '#212121',
 			'background-image'			=> '',
