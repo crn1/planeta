@@ -6,7 +6,7 @@ require_once(get_template_directory() . '/inc/customizer/misc/items-fields.php')
 require_once(get_template_directory() . '/inc/customizer/sections/heading.php');
 require_once(get_template_directory() . '/inc/customizer/sections/background.php');
 require_once(get_template_directory() . '/inc/customizer/sections/items.php');
-require_once(get_template_directory() . '/inc/customizer/sections/appearance.php');
+require_once(get_template_directory() . '/inc/customizer/sections/heading-appearance.php');
 require_once(get_template_directory() . '/inc/customizer/sections/spacing.php');
 
 function planeta_add_frontpage_sections($num_sections = 15, &$items_fields = array())
@@ -19,8 +19,8 @@ function planeta_add_frontpage_sections($num_sections = 15, &$items_fields = arr
 		));
 
 		planeta_add_section_heading($index);
+		planeta_add_section_heading_appearance($index);
 		planeta_add_section_items($index, $items_fields);
-		planeta_add_section_appearance($index);
 		planeta_add_section_background($index);
 		planeta_add_section_spacing($index);
 	}

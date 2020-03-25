@@ -20,7 +20,6 @@ function typography_generator($name, $section, $class, $enable_sizing=true, $ena
 		'default'			=> 'none',
 		'default'     => array(
 			'text-transform'    => 'none',
-			'text-align'    		=> 'left',
 			'color'    					=> '#FFFFFF',
 			'font-family'    		=> 'Rubik',
 			'variant'        		=> 'regular',

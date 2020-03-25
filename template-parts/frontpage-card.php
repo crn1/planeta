@@ -1,8 +1,6 @@
 <?php
 	$item = get_query_var('item');
 
-	$card_type = get_query_var('card_type');
-
 	$animation_name = get_query_var('animation_name');
 	if(!isset($animation_name)) { $animation_name = 'card'; }
 	set_query_var('animation_name', 'card');
@@ -13,9 +11,10 @@
 	$lax = $card_lax != '' ? 'lax' : '';
 ?>
 
-	<div class='card card-<?php echo $card_type; ?> <?php echo $lax; ?>' <?php echo $card_lax; ?> <?php echo $card_aos; ?>>
+<div class='<?php echo $lax; ?>' <?php echo $card_lax; ?> <?php echo $card_aos; ?>>
 
 <?php
+
 	if(array_key_exists('image', $item))
 	{
 		$image_url = wp_get_attachment_image_src($item['image'], 'large')[0];

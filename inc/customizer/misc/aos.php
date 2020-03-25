@@ -1,6 +1,6 @@
 <?php
 
-$aos_list = array(
+define('AOS_LIST', array(
 	'fade'						=> esc_html__('Fade', 'planeta'),
 	'fade-up'					=> esc_html__('Fade Up', 'planeta'),
 	'fade-down'				=> esc_html__('Fade Down', 'planeta'),
@@ -28,6 +28,6 @@ $aos_list = array(
 	'zoom-out-down'		=> esc_html__('Zoom Out Down', 'planeta'),
 	'zoom-out-left'		=> esc_html__('Zoom Out Left', 'planeta'),
 	'zoom-out-right'	=> esc_html__('Zoom Out Right', 'planeta'),
-);
+));
 
 ?>

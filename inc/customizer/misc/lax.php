@@ -1,6 +1,6 @@
 <?php
 
-$lax_labels = array(
+define('LAX_LABELS', array(
 	'linger'			=> esc_html__('Linger', 'planeta'),
 	'lazy'				=> esc_html__('Lazy', 'planeta'),
 	'eager'				=> esc_html__('Eager', 'planeta'),
@@ -25,9 +25,9 @@ $lax_labels = array(
 	'zoomOut'			=> esc_html__('Zoom Out', 'planeta'),
 	'swing'				=> esc_html__('Swing', 'planeta'),
 	'speedy'			=> esc_html__('Speedy', 'planeta'),
-);
+));
 
-$lax_list = array(
+define('LAX_LIST', array(
 	'lazy'				=> array(
 		'default'			=> 40,
 		'choices'			=> array(
@@ -180,6 +180,6 @@ $lax_list = array(
 			'step'				=> 1,
 		),
 	),
-);
+));
 
 ?>

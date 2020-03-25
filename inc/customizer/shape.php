@@ -4,7 +4,6 @@ function planeta_add_shape($args)
 {
 	$args = array_merge(array(
 		'inline'					=> false,
-		'height'					=> false,
 		'height_output'		=> array(),
 		'section'					=> '',
 		'panel'						=> '',

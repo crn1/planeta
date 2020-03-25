@@ -1,7 +1,5 @@
 <?php
 
-$card_type = get_query_var('card_type');
-
 $animation_name = get_query_var('animation_name');
 if(!isset($animation_name)) { $animation_name = 'card'; }
 set_query_var('animation_name', 'card');
@@ -15,7 +13,7 @@ $read_more = esc_html__('Read More...', 'planeta');
 
 if(have_posts()): while(have_posts()): the_post(); ?>
 
-<div class='card card-<?php echo $card_type; ?> <?php echo $lax; ?>' <?php echo $card_lax; ?> <?php echo $card_aos; ?>>
+<div class='<?php echo $lax; ?>' <?php echo $card_lax; ?> <?php echo $card_aos; ?>>
 
 	<?php if(has_post_thumbnail($post->ID)): ?>
 		<img class='card-image' src='<?php the_post_thumbnail_url(); ?>' />

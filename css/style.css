@@ -4,41 +4,6 @@
   justify-content: center;
   flex-direction: column; }
 
-.card-perspective-left .card-image {
-  transform: perspective(400px) rotateY(10deg); }
-.card-perspective-right .card-image {
-  transform: perspective(400px) rotateY(-10deg); }
-.card-perspective-up .card-image {
-  transform: perspective(400px) rotateX(10deg); }
-.card-perspective-down .card-image {
-  transform: perspective(400px) rotateX(-10deg); }
-.card-zigzag-left-items [class=card-zigzag-left]:nth-child(even) .card-image {
-  transform: perspective(400px) rotateY(-10deg); }
-.card-zigzag-left-items [class=card-zigzag-left]:nth-child(odd) .card-image {
-  transform: perspective(400px) rotateY(10deg); }
-.card-zigzag-right-items [class=card-zigzag-right]:nth-child(even) .card-image {
-  transform: perspective(400px) rotateY(10deg); }
-.card-zigzag-right-items [class=card-zigzag-right]:nth-child(odd) .card-image {
-  transform: perspective(400px) rotateY(-10deg); }
-.card-default, .card-perspective-left, .card-perspective-right, .card-perspective-up, .card-perspective-down, .card-zigzag-left, .card-zigzag-right, .card-swiper {
-  display: flex;
-  align-items: center;
-  flex-direction: column; }
-.card-image {
-  cursor: pointer;
-  padding-bottom: 1rem;
-  object-fit: cover; }
-.card-image:hover {
-  transform: perspective(0px) rotateY(0deg) rotateX(0deg) !important; }
-.card-info {
-  display: inline-flex;
-  width: 100%;
-  flex-direction: column; }
-.card-image, .card .card-image:hover {
-  transition: .15s ease-in; }
-.card-date-span {
-  margin-top: 0; }
-
 .alignleft {
   text-align: left;
   align: left; }
