@@ -1,13 +1,13 @@
 <?php
 
-$animation_name = get_query_var('animation_name');
-if(!isset($animation_name)) { $animation_name = 'card'; }
-set_query_var('animation_name', 'card');
+$section = get_query_var('section');
+$item = get_query_var('item');
 
+set_query_var('animation_name', 'card_info');
 get_template_part('template-parts/content', 'animations');
-$card_aos = get_query_var('card_aos');
-$card_lax = get_query_var('card_lax');
-$lax = $card_lax != '' ? 'lax' : '';
+$info_aos = get_query_var('card_info_aos');
+$info_lax = get_query_var('card_info_lax');
+$i_lax = $info_lax != '' ? 'lax' : '';
 
 $read_more = esc_html__('Read More...', 'planeta');
 
@@ -15,11 +15,28 @@ if(have_posts()): while(have_posts()): the_post(); ?>
 
 <div class='card <?php echo $lax; ?>' <?php echo $card_lax; ?> <?php echo $card_aos; ?>>
 
-	<?php if(has_post_thumbnail($post->ID)): ?>
-		<img class='image' src='<?php the_post_thumbnail_url(); ?>' />
+	<?php if(has_post_thumbnail($post->ID)):
+		set_query_var('animation_name', 'card_image');
+		get_template_part('template-parts/content', 'animations');
+		$image_aos = get_query_var('card_image_aos');
+		$image_lax = get_query_var('card_image_lax');
+		$img_lax = $image_lax != '' ? 'lax' : '';
+
+	?>
+		<img
+			<?php get_template_part('template-parts/content', 'shape'); ?>
+			src='<?php the_post_thumbnail_url(); ?>'
+			class='image <?php echo $img_lax; ?>'
+			<?php echo $image_aos; ?>
+			<?php echo $image_lax; ?>
+		/>
 	<?php endif; ?>
 
-	<div class='card-info'>
+	<div
+			class='info <?php echo $i_lax; ?>'
+			<?php echo $info_aos; ?>
+			<?php echo $info_lax; ?>>
+
 		<h3 class='title'>
 			<?php the_title(); ?>
 		</h3>
