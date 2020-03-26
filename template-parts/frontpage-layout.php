@@ -27,6 +27,8 @@ foreach($layout as $section):
 
 		<?php get_template_part('template-parts/frontpage', 'subtitle'); ?>
 
+		<?php get_template_part('template-parts/frontpage', 'video'); ?>
+
 		<?php if($card_preset != 'none'): ?>
 			<div
 					class='<?php echo $image_align; ?>'

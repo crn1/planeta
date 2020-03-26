@@ -67,6 +67,46 @@ function planeta_add_section_heading_appearance(&$index)
 			),
 		),
 	));
+
+	Kirki::add_field('planeta_config', array(
+		'type'			=> 'slider',
+		'label'			=> esc_html__('Video Width (%)', 'planeta'),
+		'section'		=> "section_${index}_heading_appearance",
+		'settings'	=> "section_${index}_video_width",
+		'default'		=> 100,
+		'choices'		=> array(
+			'min'				=> 1,
+			'max'				=> 100,
+			'step'			=> 1,
+		),
+		'output'		=> array(
+			array(
+				'element'		=> "#section_${index}-heading-video",
+				'property'	=> 'width',
+				'units'			=> '%',
+			),
+		),
+	));
+
+	Kirki::add_field('planeta_config', array(
+		'type'			=> 'slider',
+		'label'			=> esc_html__('Video Padding Bottom (vh)', 'planeta'),
+		'section'		=> "section_${index}_heading_appearance",
+		'settings'	=> "section_${index}_video_padding",
+		'default'		=> 15,
+		'choices'		=> array(
+			'min'			=> 0,
+			'max'			=> 50,
+			'step'		=> 1,
+		),
+		'output'		=> array(
+			array(
+				'element'		=> "#section_${index}-heading-video-container",
+				'units'			=> 'vh',
+				'property'	=> 'padding-bottom',
+			),
+		),
+	));
 }
 
 ?>
