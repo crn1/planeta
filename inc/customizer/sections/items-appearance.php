@@ -17,57 +17,63 @@ function planeta_add_section_items_appearance(&$index)
 		'default'				=> '3',
 		'choices'				=> array(
 			'min'						=> '1',
-			'max'						=> '6',
+			'max'						=> '7',
 			'step'					=> '1',
 		),
 		'output'				=> array(
 			array(
-				'element'				=> array(
-					"#section_${index} .card-default",
-					"#section_${index} .card-perspective-left",
-					"#section_${index} .card-perspective-right",
-					"#section_${index} .card-perspective-up",
-					"#section_${index} .card-perspective-down",
-					"#section_${index} .card-zigzag-left",
-					"#section_${index} .card-zigzag-right",
-				),
+				'element'				=> "#section_${index} .card",
 				'property'			=> 'flex-direction',
 				'value_pattern'	=> 'row',
 				'media_query'		=> '@media screen and (min-width: 769px)',
-			 	'exclude'				=> array('2', '3', '4', '5', '6'),
+			 	'exclude'				=> array('2', '3', '4', '5', '6', '7'),
 			),
 			array(
-				'element'				=> "#section_${index} .card-image",
-				'property'			=> 'margin-right',
-				'value_pattern'	=> '2rem',
-				'media_query'		=> '@media screen and (min-width: 769px)',
-			 	'exclude'				=> array('2', '3', '4', '5', '6'),
-			),
-			array(
-				'element'				=> "#section_${index} .card-image",
-				'property'			=> 'margin-down',
-				'value_pattern'	=> '1rem',
-				'media_query'		=> '@media screen and (max-width: 768px)',
-			),
-			array(
-				'element'				=> "#section_${index} .card-image",
+				'element'				=> "#section_${index} .card > .image",
 				'property'			=> 'max-width',
 				'value_pattern'	=> '33%',
 				'media_query'		=> '@media screen and (min-width: 769px)',
-			 	'exclude'				=> array('2', '3', '4', '5', '6'),
+			 	'exclude'				=> array('2', '3', '4', '5', '6', '7'),
 			),
 			array(
-				'element'				=> "#section_${index} .card-image",
+				'element'				=> "#section_${index} .card > .image",
 				'property'			=> 'max-width',
 				'value_pattern'	=> '100%',
 				'media_query'		=> '@media screen and (max-width: 768px)',
-			 	'exclude'				=> array('2', '3', '4', '5', '6'),
+			 	'exclude'				=> array('2', '3', '4', '5', '6', '7'),
 			),
 			array(
-				'element'				=> "#section_${index} .card-image",
+				'element'				=> "#section_${index} .card > .image",
 				'property'			=> 'max-width',
 				'value_pattern'	=> '100%',
 			 	'exclude'				=> array('1'),
+			),
+			array(
+				'element'				=> "#section_${index} .card > .image",
+				'property'			=> 'margin-bottom',
+				'value_pattern'	=> '2rem',
+			 	'exclude'				=> array('1'),
+			),
+		),
+	));
+
+	Kirki::add_field('planeta_config', array(
+		'type'					=> 'select',
+		'label'					=> esc_html__('Image Align', 'planeta'),
+		'section'				=> "section_${index}_items_appearance",
+		'settings'			=> "section_${index}_image_align",
+		'default'				=> 'all-left',
+		'choices'				=> array(
+			'all-left'				=> esc_html__('All Left', 'planeta'),
+			'all-right'				=> esc_html__('All Right', 'planeta'),
+			'first-left'			=> esc_html__('First Left', 'planeta'),
+			'first-right'			=> esc_html__('First Right', 'planeta'),
+		),
+		'active_callback'	=> array(
+			array(
+				'setting'				=> "section_${index}_masonry_num",
+				'operator'			=> '==',
+				'value'					=> 1,
 			),
 		),
 	));

@@ -9,6 +9,10 @@ foreach($layout as $section):
 
 	$card_preset = get_theme_mod("${section}_card_preset", 'none');
 	$section_items = get_theme_mod("${section}_${card_preset}_items", array());
+
+	$image_align = get_theme_mod("${section}_image_align", 'all-left');
+	$masonry_num = get_theme_mod("${section}_masonry_num", 3);
+	$image_align = $masonry_num == 1 ? $image_align : '';
 ?>
 
 <section id='<?php echo $section; ?>'>
@@ -25,6 +29,7 @@ foreach($layout as $section):
 
 		<?php if($card_preset != 'none'): ?>
 			<div
+					class='<?php echo $image_align; ?>'
 					id='<?php echo $section?>-items'>
 
 			<?php

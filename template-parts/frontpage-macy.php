@@ -9,6 +9,7 @@ else if($masonry_num == 3) { $margin = 64; }
 else if($masonry_num == 4) { $margin = 48; }
 else if($masonry_num == 5) { $margin = 32; }
 else if($masonry_num == 6) { $margin = 16; }
+else if($masonry_num == 7) { $margin = 8; }
 
 ?>
 

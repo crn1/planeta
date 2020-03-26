@@ -1,0 +1,73 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	& > .info {
+		width: 100%;
+	}
+
+	& > .image {
+		@media screen and (max-width: 768px)
+		{
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+@media screen and (min-width: 769px)
+{
+	.all-left {
+		.card > .image {
+			order: 1;
+			margin-right: 3rem;
+		}
+		.card > .info {
+			order: 2;
+		}
+	}
+
+	.all-right {
+		.card > .image {
+			margin-left: 3rem;
+			order: 2;
+		}
+		.card > .info {
+			order: 1;
+		}
+	}
+
+	.first-left {
+		& .card:nth-child(odd) > .image {
+			margin-right: 3rem;
+			order: 1;
+		}
+		& .card:nth-child(odd) > .info {
+			order: 2;
+		}
+		& .card:nth-child(even) > .image {
+			margin-left: 3rem;
+			order: 2;
+		}
+		& .card:nth-child(even) > .info {
+			order: 1;
+		}
+	}
+
+	.first-right {
+		& .card:nth-child(odd) > .image {
+			margin-left: 3rem;
+			order: 2;
+		}
+		& .card:nth-child(odd) > .info {
+			order: 1;
+		}
+		& .card:nth-child(even) > .image {
+			margin-right: 3rem;
+			order: 1;
+		}
+		& .card:nth-child(even) > .info {
+			order: 2;
+		}
+	}
+}
