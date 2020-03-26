@@ -1,6 +1,8 @@
 <?php
 
-function planeta_add_section_items(&$index, &$items_fields)
+require_once(get_template_directory() . '/inc/customizer/misc/items-fields.php');
+
+function planeta_add_section_items(&$index)
 {
 	Kirki::add_section("section_${index}_items", array(
 		'title' => esc_html__("Items", 'planeta'),
@@ -23,7 +25,7 @@ function planeta_add_section_items(&$index, &$items_fields)
 		),
 	));
 
-	foreach($items_fields as $key => $items)
+	foreach(ITEMS_FIELDS as $key => $items)
 	{
 		Kirki::add_field('planeta_config', array(
 			'type'			=> 'repeater',
