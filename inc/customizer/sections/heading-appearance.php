@@ -1,5 +1,68 @@
 <?php
 
+function add_heading_appearance_settings(&$index, $name_smallcaps, $name)
+{
+	Kirki::add_field('planeta_config', array(
+		'type'			=> 'slider',
+		'label'			=> esc_html__("${name} Width (%)", 'planeta'),
+		'section'		=> "section_${index}_heading_appearance",
+		'settings'	=> "section_${index}_${name_smallcaps}_width",
+		'default'		=> 100,
+		'choices'		=> array(
+			'min'				=> 1,
+			'max'				=> 100,
+			'step'			=> 1,
+		),
+		'output'		=> array(
+			array(
+				'element'		=> "#section_${index} .section-${name_smallcaps}",
+				'property'	=> 'width',
+				'units'			=> '%',
+			),
+		),
+	));
+
+	Kirki::add_field('planeta_config', array(
+		'type'			=> 'slider',
+		'label'			=> esc_html__("${name} Margin Top (vh)", 'planeta'),
+		'section'		=> "section_${index}_heading_appearance",
+		'settings'	=> "section_${index}_${name_smallcaps}_margin_top",
+		'default'		=> 0,
+		'choices'		=> array(
+			'min'			=> 0,
+			'max'			=> 30,
+			'step'		=> 1,
+		),
+		'output'		=> array(
+			array(
+				'element'		=> "#section_${index} .section-${name_smallcaps}",
+				'units'			=> 'vh',
+				'property'	=> 'margin-top',
+			),
+		),
+	));
+
+	Kirki::add_field('planeta_config', array(
+		'type'			=> 'slider',
+		'label'			=> esc_html__("${name} Margin Bottom (vh)", 'planeta'),
+		'section'		=> "section_${index}_heading_appearance",
+		'settings'	=> "section_${index}_${name_smallcaps}_margin_bottom",
+		'default'		=> 3,
+		'choices'		=> array(
+			'min'			=> 0,
+			'max'			=> 30,
+			'step'		=> 1,
+		),
+		'output'		=> array(
+			array(
+				'element'		=> "#section_${index} .section-${name_smallcaps}",
+				'units'			=> 'vh',
+				'property'	=> 'margin-bottom',
+			),
+		),
+	));
+}
+
 function planeta_add_section_heading_appearance(&$index)
 {
 	Kirki::add_section("section_${index}_heading_appearance", array(
@@ -23,90 +86,11 @@ function planeta_add_section_heading_appearance(&$index)
 		),
 	));
 
-	Kirki::add_field('planeta_config', array(
-		'type'			=> 'slider',
-		'label'			=> esc_html__('Title Padding Top & Bottom (vh)', 'planeta'),
-		'section'		=> "section_${index}_heading_appearance",
-		'settings'	=> "section_${index}_title_padding",
-		'default'		=> 1,
-		'choices'		=> array(
-			'min'			=> '0',
-			'max'			=> '50',
-			'step'		=> '1',
-		),
-		'output'		=> array(
-			array(
-				'element'		=> "#section_${index} .section-title",
-				'units'			=> 'vh',
-				'property'	=> 'padding-top',
-			),
-			array(
-				'element'		=> "#section_${index} .section-title",
-				'units'			=> 'vh',
-				'property'	=> 'padding-bottom',
-			),
-		),
-	));
-
-	Kirki::add_field('planeta_config', array(
-		'type'			=> 'slider',
-		'label'			=> esc_html__('Subtitle Padding Bottom (vh)', 'planeta'),
-		'section'		=> "section_${index}_heading_appearance",
-		'settings'	=> "section_${index}_subtitle_padding",
-		'default'		=> 15,
-		'choices'		=> array(
-			'min'			=> '0',
-			'max'			=> '50',
-			'step'		=> '1',
-		),
-		'output'		=> array(
-			array(
-				'element'		=> "#section_${index} .section-subtitle",
-				'units'			=> 'vh',
-				'property'	=> 'padding-bottom',
-			),
-		),
-	));
-
-	Kirki::add_field('planeta_config', array(
-		'type'			=> 'slider',
-		'label'			=> esc_html__('Video Width (%)', 'planeta'),
-		'section'		=> "section_${index}_heading_appearance",
-		'settings'	=> "section_${index}_video_width",
-		'default'		=> 100,
-		'choices'		=> array(
-			'min'				=> 1,
-			'max'				=> 100,
-			'step'			=> 1,
-		),
-		'output'		=> array(
-			array(
-				'element'		=> "#section_${index}-heading-video",
-				'property'	=> 'width',
-				'units'			=> '%',
-			),
-		),
-	));
-
-	Kirki::add_field('planeta_config', array(
-		'type'			=> 'slider',
-		'label'			=> esc_html__('Video Padding Bottom (vh)', 'planeta'),
-		'section'		=> "section_${index}_heading_appearance",
-		'settings'	=> "section_${index}_video_padding",
-		'default'		=> 15,
-		'choices'		=> array(
-			'min'			=> 0,
-			'max'			=> 50,
-			'step'		=> 1,
-		),
-		'output'		=> array(
-			array(
-				'element'		=> "#section_${index}-heading-video-container",
-				'units'			=> 'vh',
-				'property'	=> 'padding-bottom',
-			),
-		),
-	));
+	add_heading_appearance_settings($index, 'title', 'Title');
+	add_heading_appearance_settings($index, 'subtitle', 'Subtitle');
+	add_heading_appearance_settings($index, 'logo', 'Image/Logo');
+	add_heading_appearance_settings($index, 'video', 'Video');
 }
+
 
 ?>

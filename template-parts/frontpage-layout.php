@@ -1,7 +1,5 @@
 <?php
 
-set_query_var('animation_name', 'section_title');
-
 $layout = get_theme_mod('sections_layout', array());
 
 foreach($layout as $section):
@@ -27,11 +25,13 @@ foreach($layout as $section):
 
 		<?php get_template_part('template-parts/frontpage', 'subtitle'); ?>
 
+		<?php get_template_part('template-parts/frontpage', 'logo'); ?>
+
 		<?php get_template_part('template-parts/frontpage', 'video'); ?>
 
 		<?php if($card_preset != 'none'): ?>
 			<div
-					class='<?php echo $image_align; ?>'
+					class='section-items <?php echo $image_align; ?>'
 					id='<?php echo $section?>-items'>
 
 			<?php

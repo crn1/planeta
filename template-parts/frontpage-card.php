@@ -6,10 +6,10 @@
 	get_template_part('template-parts/content', 'animations');
 	$info_aos = get_query_var('card_info_aos');
 	$info_lax = get_query_var('card_info_lax');
-	$i_lax = $info_lax != '' ? 'lax' : '';
+	$info_lax_class = $info_lax != '' ? 'lax' : '';
 ?>
 
-<div class='card <?php echo $lax; ?>' <?php echo $card_lax; ?> <?php echo $card_aos; ?>>
+<div class='card'>
 
 <?php
 
@@ -19,21 +19,21 @@
 		get_template_part('template-parts/content', 'animations');
 		$image_aos = get_query_var('card_image_aos');
 		$image_lax = get_query_var('card_image_lax');
-		$img_lax = $image_lax != '' ? 'lax' : '';
+		$image_lax_class = $image_lax != '' ? 'lax' : '';
 
 		$image_src = wp_get_attachment_image_src($item['image'], 'large')[0];
 		set_query_var('setting', "${section}_items_appearance"); ?>
 		<img
 			<?php get_template_part('template-parts/content', 'shape'); ?>
 			src='<?php echo $image_src; ?>'
-			class='image <?php echo $img_lax; ?>'
+			class='image <?php echo $image_lax_class; ?>'
 			<?php echo $image_aos; ?>
 			<?php echo $image_lax; ?>
 		/>
 	<?php endif; ?>
 
 	<div
-			class='info <?php echo $i_lax; ?>'
+			class='info <?php echo $info_lax_class; ?>'
 			<?php echo $info_aos; ?>
 			<?php echo $info_lax; ?>>
 

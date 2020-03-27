@@ -66,14 +66,3 @@
 		margin-right: 16px;
 	}
 }
-
-.heading-video-container {
-	@include flexContainer();
-
-	& > video {
-		@media screen and (max-width: 960px)
-		{
-			width: 100% !important;
-		}
-	}
-}

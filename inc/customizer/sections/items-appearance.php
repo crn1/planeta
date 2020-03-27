@@ -82,6 +82,66 @@ function planeta_add_section_items_appearance(&$index)
 		'inline'				=> true,
 		'section'				=> "section_${index}_items_appearance",
 	));
+
+	Kirki::add_field('planeta_config', array(
+		'type'			=> 'slider',
+		'label'			=> esc_html__('Items Container Width (%)', 'planeta'),
+		'section'		=> "section_${index}_items_appearance",
+		'settings'	=> "section_${index}_items_container_width",
+		'default'		=> 100,
+		'choices'		=> array(
+			'min'				=> 1,
+			'max'				=> 100,
+			'step'			=> 1,
+		),
+		'output'		=> array(
+			array(
+				'element'		=> "#section_${index} .section-items",
+				'property'	=> 'width',
+				'units'			=> '%',
+			),
+		),
+	));
+
+	Kirki::add_field('planeta_config', array(
+		'type'			=> 'slider',
+		'label'			=> esc_html__('Items Margin Top (vh)', 'planeta'),
+		'section'		=> "section_${index}_items_appearance",
+		'settings'	=> "section_${index}_items_container_margin_top",
+		'default'		=> 3,
+		'choices'		=> array(
+			'min'			=> 0,
+			'max'			=> 30,
+			'step'		=> 1,
+		),
+		'output'		=> array(
+			array(
+				'element'		=> "#section_${index} .section-items",
+				'units'			=> 'vh',
+				'property'	=> 'margin-top',
+			),
+		),
+	));
+
+	Kirki::add_field('planeta_config', array(
+		'type'			=> 'slider',
+		'label'			=> esc_html__("Items Margin Bottom (vh)", 'planeta'),
+		'section'		=> "section_${index}_items_appearance",
+		'settings'	=> "section_${index}_container_margin_bottom",
+		'default'		=> 0,
+		'choices'		=> array(
+			'min'			=> 0,
+			'max'			=> 30,
+			'step'		=> 1,
+		),
+		'output'		=> array(
+			array(
+				'element'		=> "#section_${index} .section-items",
+				'units'			=> 'vh',
+				'property'	=> 'margin-bottom',
+			),
+		),
+	));
 }
 
 ?>

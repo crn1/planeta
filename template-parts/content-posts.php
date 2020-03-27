@@ -7,33 +7,32 @@ set_query_var('animation_name', 'card_info');
 get_template_part('template-parts/content', 'animations');
 $info_aos = get_query_var('card_info_aos');
 $info_lax = get_query_var('card_info_lax');
-$i_lax = $info_lax != '' ? 'lax' : '';
+$info_lax_class = $info_lax != '' ? 'lax' : '';
 
 $read_more = esc_html__('Read More...', 'planeta');
 
 if(have_posts()): while(have_posts()): the_post(); ?>
 
-<div class='card <?php echo $lax; ?>' <?php echo $card_lax; ?> <?php echo $card_aos; ?>>
+<div class='card'>
 
 	<?php if(has_post_thumbnail($post->ID)):
 		set_query_var('animation_name', 'card_image');
 		get_template_part('template-parts/content', 'animations');
 		$image_aos = get_query_var('card_image_aos');
 		$image_lax = get_query_var('card_image_lax');
-		$img_lax = $image_lax != '' ? 'lax' : '';
-
+		$image_lax_class = $image_lax != '' ? 'lax' : '';
 	?>
 		<img
 			<?php get_template_part('template-parts/content', 'shape'); ?>
 			src='<?php the_post_thumbnail_url(); ?>'
-			class='image <?php echo $img_lax; ?>'
+			class='image <?php echo $image_lax_class; ?>'
 			<?php echo $image_aos; ?>
 			<?php echo $image_lax; ?>
 		/>
 	<?php endif; ?>
 
 	<div
-			class='info <?php echo $i_lax; ?>'
+			class='info <?php echo $info_lax_class; ?>'
 			<?php echo $info_aos; ?>
 			<?php echo $info_lax; ?>>
 

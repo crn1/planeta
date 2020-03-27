@@ -1,3 +1,4 @@
+@import 'flex';
 @import 'not-found';
 @import 'wordpress';
 @import 'containers';
@@ -18,7 +19,21 @@ html, body {
 }
 
 section[id^='section_'] {
-	display: flex;
-	align-items: center;
 	z-index: 100;
+	position: relative;
+
+	& > .default-container {
+		@include flexContainer($direction: column);
+
+		& > .section-title,
+		& > .section-subtitle,
+		& > .section-logo,
+		& > .section-video,
+		& > .section-items {
+			@media screen and (max-width: 960px)
+			{
+				width: 100% !important;
+			}
+		}
+	}
 }
