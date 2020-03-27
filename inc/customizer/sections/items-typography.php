@@ -41,6 +41,7 @@ function planeta_add_section_items_typography(&$index)
 		'output'			=> array(
 			array(
 				'element'			=> "#section_${index} .primary-text",
+				'property'		=> 'font-size',
 				'units'				=> 'rem',
 			),
 		),
@@ -74,51 +75,13 @@ function planeta_add_section_items_typography(&$index)
 		'default'     => 2,
 		'choices'     => array(
 			'min'					=> 0.1,
-			'max'					=> 3,
-			'step'				=> 0.1,
-		),
-		'output'			=> array(
-			array(
-				'element'			=> "#section_${index} .secondary-text",
-				'units'				=> 'rem',
-			),
-		),
-	));
-
-	Kirki::add_field('planeta_config', array(
-		'type'        => 'typography',
-		'label'       => esc_html__('Tertiary Typography', 'planeta'),
-		'section'			=> "section_${index}_items_typography",
-		'settings'    => "section_${index}_tertiary_typo",
-		'default'			=> 'none',
-		'default'     => array(
-			'text-transform'    => 'none',
-			'color'    					=> '#FFFFFF',
-			'font-family'    		=> 'Rubik',
-			'variant'        		=> 'regular',
-			'text-align'    		=> 'center',
-		),
-		'output'      => array(
-			array(
-				'element'		=> "#section_${index} .tertiary-text",
-			),
-		),
-	));
-
-	Kirki::add_field('planeta_config', array(
-		'type'        => 'slider',
-		'label'       => esc_html__('Tertiary Size (rem)', 'planeta'),
-		'section'			=> "section_${index}_items_typography",
-		'settings'    => "section_${index}_tertiary_size",
-		'default'     => 1,
-		'choices'     => array(
-			'min'					=> 0.1,
 			'max'					=> 7,
 			'step'				=> 0.1,
 		),
 		'output'			=> array(
 			array(
-				'element'			=> "#section_${index} .tertiary-text",
+				'element'			=> "#section_${index} .secondary-text",
+				'property'		=> 'font-size',
 				'units'				=> 'rem',
 			),
 		),
