@@ -2,6 +2,7 @@
 
 $number_of_frontpage_sections = 15;
 
+require_once(get_template_directory() . '/inc/customizer/sections/inside-layout.php');
 require_once(get_template_directory() . '/inc/customizer/sections/heading.php');
 require_once(get_template_directory() . '/inc/customizer/sections/heading-appearance.php');
 require_once(get_template_directory() . '/inc/customizer/sections/heading-typography.php');
@@ -19,6 +20,7 @@ function planeta_add_frontpage_sections($num_sections = 15)
 			'panel' => "sections_panel",
 		));
 
+		planeta_add_section_layout($index);
 		planeta_add_section_heading($index);
 		planeta_add_section_heading_appearance($index);
 		planeta_add_section_heading_typography($index);
