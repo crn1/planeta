@@ -8,7 +8,7 @@ $poster = get_theme_mod("${section}_heading_ogg");
 
 if($mp4 != '' || $webm != '' || $ogg != ''):
 	set_query_var('animation_name', 'section_video');
-	get_template_part('template-parts/content', 'animations');
+	get_template_part('template-parts/content/animations');
 	$aos = get_query_var('section_video_aos');
 	$lax = get_query_var('section_video_lax');
 	$lax_class = $lax != '' ? 'lax' : '';

@@ -19,17 +19,17 @@ if($card_preset != 'none' && (!empty($items) || $card_preset == 'posts')):
 		if($card_preset == 'posts')
 		{
 			if(have_posts()): while(have_posts()): the_post();
-				get_template_part('template-parts/preset-wrapper');
+				get_template_part('template-parts/frontpage/preset/wrapper');
 			endwhile; endif;
 		}else{
 			foreach($items as $item)
 			{
 				set_query_var('item', $item);
-				get_template_part('template-parts/preset-wrapper');
+				get_template_part('template-parts/frontpage/preset/wrapper');
 			}
 		}
 	?>
 </div>
 <?php endif; ?>
 
-<?php get_template_part('template-parts/frontpage', 'macy'); ?>
+<?php get_template_part('template-parts/frontpage/macy'); ?>

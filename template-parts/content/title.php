@@ -2,7 +2,7 @@
 	$title = get_query_var('title');
 
 	set_query_var('animation_name', 'page_title');
-	get_template_part('template-parts/content', 'animations');
+	get_template_part('template-parts/content/animations');
 	$page_aos = get_query_var('page_title_aos');
 	$page_lax = get_query_var('page_title_lax');
 	$lax = $page_lax != '' ? 'lax' : '';

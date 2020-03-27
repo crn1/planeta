@@ -5,7 +5,7 @@
 
 	//Because you can't call get_template_part twice
 	ob_start();
-	get_template_part('template-parts/content', 'shape');
+	get_template_part('template-parts/content/shape');
 	$shape = ob_get_contents();
 	ob_end_clean();
 

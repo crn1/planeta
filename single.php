@@ -1,12 +1,12 @@
 <?php get_header(); ?>
-<?php get_template_part('template-parts/header', 'navbar'); ?>
+<?php get_template_part('template-parts/header'); ?>
 <main>
 	<article>
 		<?php if(have_posts()): while(have_posts()) : the_post(); ?>
 
 		<?php
 			set_query_var('title', get_the_title());
-			get_template_part('template-parts/content', 'title'); ?>
+			get_template_part('template-parts/content/title'); ?>
 
 		<div class='default-container'>
 			<div class='content-container'>
@@ -48,5 +48,4 @@
 		<?php endwhile; endif; ?>
 	</article>
 </main>
-<?php get_template_part('template-parts/footer', 'notice'); ?>
 <?php get_footer(); ?>

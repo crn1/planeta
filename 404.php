@@ -5,7 +5,7 @@
 	$homepage = get_theme_mod('404_homepage', 'Return to Homepage');
 ?>
 <?php get_header(); ?>
-<?php get_template_part('template-parts/header', 'navbar'); ?>
+<?php get_template_part('template-parts/header'); ?>
 <main id='not-found-container' class='default-container'>
 	<?php if($image_url != ''): ?>
 		<img id='logo' src='<?php echo $image_url; ?>' />
@@ -22,5 +22,4 @@
 		</a>
 	</h2>
 </main>
-<?php get_template_part('template-parts/footer', 'notice'); ?>
 <?php get_footer(); ?>

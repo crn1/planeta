@@ -5,7 +5,7 @@ $title = get_theme_mod("${section}_title", 'Block Title');
 
 if(!empty($title)):
 	set_query_var('animation_name', 'section_title');
-	get_template_part('template-parts/content', 'animations');
+	get_template_part('template-parts/content/animations');
 	$aos = get_query_var('section_title_aos');
 	$lax = get_query_var('section_title_lax');
 	$lax_class = $lax != '' ? 'lax' : '';

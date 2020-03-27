@@ -5,7 +5,7 @@ $subtitle = get_theme_mod("${section}_subtitle", 'Block Subtitle');
 
 if(!empty($subtitle)):
 	set_query_var('animation_name', 'section_subtitle');
-	get_template_part('template-parts/content', 'animations');
+	get_template_part('template-parts/content/animations');
 	$aos = get_query_var('section_subtitle_aos');
 	$lax = get_query_var('section_subtitle_lax');
 	$lax_class = $lax != '' ? 'lax' : '';
