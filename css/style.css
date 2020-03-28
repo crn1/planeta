@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #not-found-container {
   display: flex;
   align-items: center;
@@ -120,37 +121,58 @@ h1, h2, h3, h4, h5, h6 {
     .card > .image {
       margin-bottom: 2rem; } }
 
+.card-experience .description {
+  margin-top: 0 !important; }
+
+.card-testimonials {
+  align-items: center; }
+  .card-testimonials .image, .card-testimonials .author, .card-testimonials .excerpt {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important; }
+  .card-testimonials .author-description {
+    margin-top: 0;
+    font-style: italic;
+    font-size: 1rem !important;
+    text-transform: none !important; }
+  .card-testimonials .excerpt:before, .card-testimonials .full-testimonial:before {
+    content: '“'; }
+  .card-testimonials .excerpt:after, .card-testimonials .full-testimonial:after {
+    content: '”'; }
+  .card-testimonials .full-testimonial {
+    margin-top: 0;
+    margin-bottom: 0; }
+
 @media screen and (min-width: 769px) {
   .all-left .card > .image {
     order: 1;
-    margin-right: 3rem; }
+    margin-right: 2rem; }
   .all-left .card > .info {
     order: 2; }
 
   .all-right .card > .image {
-    margin-left: 3rem;
+    margin-left: 2rem;
     order: 2; }
   .all-right .card > .info {
     order: 1; }
 
   .first-left .card:nth-child(odd) > .image {
-    margin-right: 3rem;
+    margin-right: 2rem;
     order: 1; }
   .first-left .card:nth-child(odd) > .info {
     order: 2; }
   .first-left .card:nth-child(even) > .image {
-    margin-left: 3rem;
+    margin-left: 2rem;
     order: 2; }
   .first-left .card:nth-child(even) > .info {
     order: 1; }
 
   .first-right .card:nth-child(odd) > .image {
-    margin-left: 3rem;
+    margin-left: 2rem;
     order: 2; }
   .first-right .card:nth-child(odd) > .info {
     order: 1; }
   .first-right .card:nth-child(even) > .image {
-    margin-right: 3rem;
+    margin-right: 2rem;
     order: 1; }
   .first-right .card:nth-child(even) > .info {
     order: 2; } }
@@ -268,6 +290,9 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   flex-direction: row; }
+  #footer-menu a {
+    color: inherit;
+    font-weight: bold; }
   #footer-menu a:not(:last-child) {
     margin-right: 1rem; }
 

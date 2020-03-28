@@ -26,7 +26,7 @@ define('ITEMS_FIELDS', array(
 	),
 
 	'experience'					=> array(
-		'name'								=> array(
+		'title'								=> array(
 			'type'								=> 'text',
 			'label'								=> esc_html__('Name (Primary Text)', 'planeta'),
 			'default'							=> 'Experience Name',
@@ -44,7 +44,7 @@ define('ITEMS_FIELDS', array(
 	),
 
 	'clients'							=> array(
-		'name'								=> array(
+		'title'								=> array(
 			'type'								=> 'text',
 			'label'								=> esc_html__('Title (Primary Text)', 'planeta'),
 			'default'							=> 'ACME Corp, Inc.',
@@ -57,7 +57,7 @@ define('ITEMS_FIELDS', array(
 	),
 
 	'testimonials' 				=> array(
-		'author'							=> array(
+		'title'								=> array(
 			'type'								=> 'text',
 			'label'								=> esc_html__('Author (Primary Text)', 'planeta'),
 			'default'							=> 'John Doe',

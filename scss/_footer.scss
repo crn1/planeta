@@ -22,6 +22,11 @@
 #footer-menu {
 	@include flexContainer();
 
+	a {
+		color: inherit;
+		font-weight: bold;
+	}
+
 	a:not(:last-child) {
 		margin-right: 1rem;
 	}

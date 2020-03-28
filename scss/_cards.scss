@@ -1,3 +1,5 @@
+@import 'flex';
+
 .card {
 	display: flex;
 	flex-direction: column;
@@ -15,12 +17,48 @@
 	}
 }
 
+.card-experience {
+	.description {
+		margin-top: 0 !important;
+	}
+}
+
+.card-testimonials {
+	align-items: center;
+
+	.image, .author, .excerpt {
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+
+	.author-description {
+		margin-top: 0;
+		font-style: italic;
+		font-size: 1rem !important;
+		text-transform: none !important;
+	}
+
+	.excerpt, .full-testimonial {
+		&:before {
+			content: '“';
+		}
+		&:after {
+			content: '”';
+		}
+	}
+
+	.full-testimonial {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
 @media screen and (min-width: 769px)
 {
 	.all-left {
 		.card > .image {
 			order: 1;
-			margin-right: 3rem;
+			margin-right: 2rem;
 		}
 		.card > .info {
 			order: 2;
@@ -29,7 +67,7 @@
 
 	.all-right {
 		.card > .image {
-			margin-left: 3rem;
+			margin-left: 2rem;
 			order: 2;
 		}
 		.card > .info {
@@ -39,14 +77,14 @@
 
 	.first-left {
 		& .card:nth-child(odd) > .image {
-			margin-right: 3rem;
+			margin-right: 2rem;
 			order: 1;
 		}
 		& .card:nth-child(odd) > .info {
 			order: 2;
 		}
 		& .card:nth-child(even) > .image {
-			margin-left: 3rem;
+			margin-left: 2rem;
 			order: 2;
 		}
 		& .card:nth-child(even) > .info {
@@ -56,14 +94,14 @@
 
 	.first-right {
 		& .card:nth-child(odd) > .image {
-			margin-left: 3rem;
+			margin-left: 2rem;
 			order: 2;
 		}
 		& .card:nth-child(odd) > .info {
 			order: 1;
 		}
 		& .card:nth-child(even) > .image {
-			margin-right: 3rem;
+			margin-right: 2rem;
 			order: 1;
 		}
 		& .card:nth-child(even) > .info {

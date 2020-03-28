@@ -2,9 +2,9 @@
 
 $item = get_query_var('item');
 
-if(array_key_exists('name', $item))
+if(array_key_exists('title', $item))
 {
-	echo "<h3 class='title primary-text'>${item['name']}</h3>";
+	echo "<h3 class='title primary-text'>${item['title']}</h3>";
 }
 
 if(array_key_exists('description', $item))
