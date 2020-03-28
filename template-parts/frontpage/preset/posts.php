@@ -16,8 +16,8 @@
 	<?php the_date(); ?>
 </p>
 
-<p class='url'>
-	<a href='<?php the_permalink(); ?>'>
+<p class='url <?php echo get_theme_mod('typography_links_hover', 'none'); ?>'>
+	<a class='button-link' href='<?php the_permalink(); ?>'>
 		<?php echo esc_html__('Read More...', 'planeta'); ?>
 	</a>
 </p>

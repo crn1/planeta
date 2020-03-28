@@ -41,6 +41,7 @@ function planeta_add_section_heading_typography(&$index)
 		'output'			=> array(
 			array(
 				'element'			=> "#section_${index} .section-title",
+				'property'		=> 'font-size',
 				'units'				=> 'rem',
 			),
 		),
@@ -80,6 +81,7 @@ function planeta_add_section_heading_typography(&$index)
 		'output'			=> array(
 			array(
 				'element'			=> "#section_${index} .section-subtitle",
+				'property'		=> 'font-size',
 				'units'				=> 'rem',
 			),
 		),

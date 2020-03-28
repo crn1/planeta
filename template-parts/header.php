@@ -6,7 +6,7 @@
 	$logo_url = get_theme_mod('logo', '');
 	$logo_text = get_theme_mod('logo_text', '');
 
-	function nav_items($hover_class)
+	function nav_items()
 	{
 		if(get_theme_mod('show_sections_nav', false) && is_front_page())
 		{
@@ -15,7 +15,7 @@
 			{
 				$name = get_theme_mod("${section}_name", 'Section');
 				$slug = sanitize_title($name);
-				echo "<a href='#${slug}' data-section-id='${section}' class='top-navbar-item'>${name}</a>";
+				echo "<a href='#${slug}' data-section-id='${section}' class='button-link top-navbar-item'>${name}</a>";
 			}
 		}else{
 			$params = array(
@@ -38,7 +38,7 @@
 
 	<div id='nav-container'>
 		<nav id='top-menu' class='<?php echo $hover_class; ?>'>
-			<?php nav_items($hover_class); ?>
+			<?php nav_items(); ?>
 			<?php get_template_part('template-parts/content/social'); ?>
 		</nav>
 
