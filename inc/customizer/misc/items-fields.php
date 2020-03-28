@@ -78,6 +78,24 @@ define('ITEMS_FIELDS', array(
 			'default'							=> 'This is full text of testimonial',
 		),
 	),
+
+	'numbers'							=> array(
+		'number'							=> array(
+			'type'								=> 'text',
+			'label'								=> esc_html__('Number (Primary Text)', 'planeta'),
+			'default'							=> '101',
+		),
+		'title'								=> array(
+			'type'								=> 'text',
+			'label'								=> esc_html__('Title (Secondary Text)', 'planeta'),
+			'default'							=> 'Satisfied Clients',
+		),
+		'description'					=> array(
+			'type'								=> 'textarea',
+			'label'								=> esc_html__('Description', 'planeta'),
+			'default'							=> 'Lorem ipsum dolor sit amet',
+		),
+	),
 ));
 
 ?>

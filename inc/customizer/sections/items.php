@@ -21,6 +21,7 @@ function planeta_add_section_items(&$index)
 			'experience'		=> esc_html__('Experience', 'planeta'),
 			'clients'				=> esc_html__('Clients', 'planeta'),
 			'testimonials'	=> esc_html__('Testimonials', 'planeta'),
+			'numbers'				=> esc_html__('Numbers', 'planeta'),
 			'posts'					=> esc_html__('Posts', 'planeta'),
 		),
 	));
