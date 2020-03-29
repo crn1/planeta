@@ -87,4 +87,11 @@ jQuery(document).ready(function($)
 	{
 		$('.sidebar').stickySidebar()
 	}
+
+	// Loading screen
+	$(window).on('load', function()
+	{
+		$('#loading-container').fadeOut(700)
+	})
+
 })

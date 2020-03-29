@@ -66,3 +66,13 @@
 		margin-right: 16px;
 	}
 }
+
+#loading-container {
+	z-index: 99999;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	@include flexContainer($direction: row);
+}

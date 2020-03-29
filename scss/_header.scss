@@ -10,7 +10,7 @@ $transition-time: 0.17s ease-in;
 #top-menu {
 	display: none; //Here with reason, see main.js
 	flex-direction: row;
-	z-index: 99990;
+	z-index: 99900;
 
 	@media screen and (min-width: 960px) {
 		a:not(:last-child) {
@@ -38,7 +38,7 @@ $transition-time: 0.17s ease-in;
 	margin-bottom: 32px;
 	padding-left: 32px;
 	padding-right: 32px;
-	z-index: 99999;
+	z-index: 99990;
 	top: 0;
 	left: 0;
 	position: absolute;
@@ -57,7 +57,7 @@ $transition-time: 0.17s ease-in;
 }
 
 #menu-container {
-	z-index: 99990;
+	z-index: 99900;
 }
 
 #menu-button {
@@ -76,7 +76,7 @@ $transition-time: 0.17s ease-in;
 	&-left,
 	&-right {
 		position: fixed;
-		z-index: 99990;
+		z-index: 99900;
 		overflow: hidden;
 		background-color: #000;
 		@include flexContainer($direction: column);

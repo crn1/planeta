@@ -147,7 +147,7 @@ Kirki::add_field('planeta_config', array(
 	),
 ));
 
-typography_generator('Button Links', 'button_links', '.button-link', false, true);
+typography_generator('Button Links', 'button_links', '.button-link', true, true);
 typography_generator('Section Title', 'section_title', '.section-title', true, false, true);
 typography_generator('Section Subtitle', 'section_subtitle', '.section-subtitle', true, false, true);
 typography_generator('Page Title', 'page_title', '.page-title', true, false, true);
