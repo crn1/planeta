@@ -21,7 +21,6 @@ function planeta_add_section_layout(&$index)
 			'title'			=> esc_html__('Title', 'planeta'),
 			'subtitle'	=> esc_html__('Subtitle', 'planeta'),
 			'logo'			=> esc_html__('Logo/Image', 'planeta'),
-			'video'			=> esc_html__('Video', 'planeta'),
 			'items'			=> esc_html__('Items', 'planeta'),
 		),
 	));

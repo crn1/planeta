@@ -9,7 +9,7 @@ function planeta_add_section_heading_typography(&$index)
 
 	Kirki::add_field('planeta_config', array(
 		'type'        => 'typography',
-		'label'       => esc_html__('Title Typography', 'planeta'),
+		'label'       => esc_html__('Title', 'planeta'),
 		'section'			=> "section_${index}_heading_typography",
 		'settings'    => "section_${index}_title_typo",
 		'default'			=> 'none',
@@ -17,7 +17,7 @@ function planeta_add_section_heading_typography(&$index)
 			'text-transform'    => 'uppercase',
 			'text-align'    		=> 'center',
 			'color'    					=> '#FFFFFF',
-			'font-family'    		=> 'Rubik',
+			'font-family'    		=> 'inherit',
 			'variant'        		=> 'regular',
 		),
 		'output'      => array(
@@ -49,14 +49,14 @@ function planeta_add_section_heading_typography(&$index)
 
 	Kirki::add_field('planeta_config', array(
 		'type'        => 'typography',
-		'label'       => esc_html__('Subtitle Typography', 'planeta'),
+		'label'       => esc_html__('Subtitle', 'planeta'),
 		'section'			=> "section_${index}_heading_typography",
 		'settings'    => "section_${index}_subtitle_typo",
 		'default'			=> 'none',
 		'default'     => array(
 			'text-transform'    => 'none',
 			'color'    					=> '#FFFFFF',
-			'font-family'    		=> 'Rubik',
+			'font-family'    		=> 'inherit',
 			'variant'        		=> 'regular',
 			'text-align'    		=> 'center',
 		),

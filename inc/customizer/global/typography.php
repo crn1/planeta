@@ -122,7 +122,7 @@ Kirki::add_field('planeta_config', array(
 	),
 	'output'      => array(
 		array(
-			'element'				=> array('html', 'body'),
+			'element'				=> 'body',
 		),
 	),
 ));

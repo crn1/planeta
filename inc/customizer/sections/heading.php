@@ -16,7 +16,7 @@ function planeta_add_section_heading(&$index)
 	));
 
 	Kirki::add_field('planeta_config', array(
-		'type'			=> 'text',
+		'type'			=> 'editor',
 		'label'			=> esc_html__('Title', 'planeta'),
 		'section'		=> "section_${index}_heading",
 		'settings'	=> "section_${index}_title",
@@ -24,7 +24,7 @@ function planeta_add_section_heading(&$index)
 	));
 
 	Kirki::add_field('planeta_config', array(
-		'type'			=> 'textarea',
+		'type'			=> 'editor',
 		'label'			=> esc_html__('Subtitle/Content', 'planeta'),
 		'section'		=> "section_${index}_heading",
 		'settings'	=> "section_${index}_subtitle",
@@ -36,30 +36,6 @@ function planeta_add_section_heading(&$index)
 		'label'			=> esc_html__('Image/Logo', 'planeta'),
 		'section'		=> "section_${index}_heading",
 		'settings'	=> "section_${index}_logo",
-		'default'		=> '',
-	));
-
-	Kirki::add_field('planeta_config', array(
-		'type'			=> 'link',
-		'label'			=> esc_html__('Video URL (MP4)', 'planeta'),
-		'section'		=> "section_${index}_heading",
-		'settings'	=> "section_${index}_heading_mp4",
-		'default'		=> '',
-	));
-
-	Kirki::add_field('planeta_config', array(
-		'type'			=> 'link',
-		'label'			=> esc_html__('Video URL (WebM)', 'planeta'),
-		'section'		=> "section_${index}_heading",
-		'settings'	=> "section_${index}_heading_webm",
-		'default'		=> '',
-	));
-
-	Kirki::add_field('planeta_config', array(
-		'type'			=> 'link',
-		'label'			=> esc_html__('Video URL (Ogg)', 'planeta'),
-		'section'		=> "section_${index}_heading",
-		'settings'	=> "section_${index}_heading_ogg",
 		'default'		=> '',
 	));
 }

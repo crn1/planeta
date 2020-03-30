@@ -3,48 +3,62 @@
 function add_heading_appearance_settings(&$index, $name_smallcaps, $name)
 {
 	Kirki::add_field('planeta_config', array(
-		'type'			=> 'slider',
-		'label'			=> esc_html__("${name} Width (%)", 'planeta'),
+		'type'			=> 'number',
+		'label'			=> esc_html__("${name} Spacing Left", 'planeta'),
 		'section'		=> "section_${index}_heading_appearance",
-		'settings'	=> "section_${index}_${name_smallcaps}_width",
-		'default'		=> 100,
+		'settings'	=> "section_${index}_${name_smallcaps}_spacing_left",
+		'default'		=> 0,
 		'choices'		=> array(
-			'min'				=> 1,
-			'max'				=> 100,
+			'min'				=> 0,
+			'max'				=> 1280,
 			'step'			=> 1,
 		),
 		'output'		=> array(
 			array(
 				'element'		=> "#section_${index} .section-${name_smallcaps}",
-				'property'	=> 'width',
-				'units'			=> '%',
+				'property'	=> 'padding-left',
+				'units'			=> 'px',
+			),
+		),
+		'active_callback' => array(
+			array(
+				'setting'			=> "section_${index}_${name_smallcaps}",
+				'operator'		=> '!=',
+				'value'				=> '',
 			),
 		),
 	));
 
 	Kirki::add_field('planeta_config', array(
-		'type'			=> 'slider',
-		'label'			=> esc_html__("${name} Margin Top (vh)", 'planeta'),
+		'type'			=> 'number',
+		'label'			=> esc_html__("${name} Spacing Right", 'planeta'),
 		'section'		=> "section_${index}_heading_appearance",
-		'settings'	=> "section_${index}_${name_smallcaps}_margin_top",
+		'settings'	=> "section_${index}_${name_smallcaps}_spacing_right",
 		'default'		=> 0,
 		'choices'		=> array(
-			'min'			=> 0,
-			'max'			=> 30,
-			'step'		=> 1,
+			'min'				=> 0,
+			'max'				=> 1280,
+			'step'			=> 1,
 		),
 		'output'		=> array(
 			array(
 				'element'		=> "#section_${index} .section-${name_smallcaps}",
-				'units'			=> 'vh',
-				'property'	=> 'margin-top',
+				'property'	=> 'padding-right',
+				'units'			=> 'px',
+			),
+		),
+		'active_callback' => array(
+			array(
+				'setting'			=> "section_${index}_${name_smallcaps}",
+				'operator'		=> '!=',
+				'value'				=> '',
 			),
 		),
 	));
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__("${name} Margin Bottom (vh)", 'planeta'),
+		'label'			=> esc_html__("${name} Spacing Bottom", 'planeta'),
 		'section'		=> "section_${index}_heading_appearance",
 		'settings'	=> "section_${index}_${name_smallcaps}_margin_bottom",
 		'default'		=> 3,
@@ -60,6 +74,13 @@ function add_heading_appearance_settings(&$index, $name_smallcaps, $name)
 				'property'	=> 'margin-bottom',
 			),
 		),
+		'active_callback' => array(
+			array(
+				'setting'			=> "section_${index}_${name_smallcaps}",
+				'operator'		=> '!=',
+				'value'				=> '',
+			),
+		),
 	));
 }
 
@@ -71,25 +92,28 @@ function planeta_add_section_heading_appearance(&$index)
 	));
 
 	Kirki::add_field('planeta_config', array(
-		'type'			=> 'toggle',
-		'label'			=> esc_html__('Fullscreen Section', 'planeta'),
+		'type'			=> 'slider',
+		'label'			=> esc_html__('Minimum Height', 'planeta'),
 		'section'		=> "section_${index}_heading_appearance",
-		'settings'	=> "section_${index}_is_fullscreen",
-		'default'		=> 'false',
+		'settings'	=> "section_${index}_min_height",
+		'default'		=> 0,
 		'output'		=> array(
 			array(
 				'element'				=> "#section_${index}",
 				'property'			=> 'min-height',
-				'value_pattern'	=> '100vh',
-				'exclude'				=> array(false),
+				'units'					=> 'vh',
 			),
+		),
+		'choices'		=> array(
+			'min'				=> 0,
+			'max'				=> 100,
+			'step'			=> 1,
 		),
 	));
 
 	add_heading_appearance_settings($index, 'title', 'Title');
 	add_heading_appearance_settings($index, 'subtitle', 'Subtitle');
 	add_heading_appearance_settings($index, 'logo', 'Image/Logo');
-	add_heading_appearance_settings($index, 'video', 'Video');
 }
 
 
