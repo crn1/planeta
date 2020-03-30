@@ -74,5 +74,13 @@
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	@include flexContainer($direction: row);
+	@include flexContainer($direction: column);
+
+	.logo {
+		margin-bottom: 2rem;
+	}
+
+	.animation {
+		margin-bottom: 1rem;
+	}
 }

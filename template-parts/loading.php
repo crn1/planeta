@@ -1,12 +1,34 @@
 <?php
+
 $render_loading = get_theme_mod('loading_enable', false);
+
 if($render_loading):
-	$image = get_theme_mod('loading_image'); ?>
+	$text = get_theme_mod('loading_text', '');
+	$logo = get_theme_mod('loading_logo', '');
+	$animation = get_theme_mod('loading_animation', ''); ?>
 
 <div id='loading-container'>
-	<img
-		src='<?php echo $image; ?>'
-	/>
+
+	<?php if(!empty($logo)): ?>
+		<img
+			class='logo'
+			src='<?php echo $logo; ?>'
+		/>
+	<?php endif; ?>
+
+	<?php if(!empty($animation)): ?>
+		<img
+			class='animation'
+			src='<?php echo $animation; ?>'
+		/>
+	<?php endif; ?>
+
+	<?php if(!empty($text)): ?>
+		<p class='text'>
+			<?php echo $text; ?>
+		</p>
+	<?php endif; ?>
+
 </div>
 
 <?php endif; ?>
