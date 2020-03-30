@@ -75,11 +75,6 @@ function planeta_add_shape($args)
 				'operator'				=> '!=',
 				'value'						=> 'none',
 			),
-			array(
-				'setting'					=> $type,
-				'operator'				=> '!=',
-				'value'						=> 'fancy',
-			),
 		),
 	));
 

@@ -142,6 +142,9 @@
 				break;
 
 			case 'fancy':
+				$strength = 100 - $strength;
+				$strength /= 100;
+
 				$str_1 = rand(0, 100);
 				$str_1_rev = 100 - $str_1;
 				$str_2 = rand(0, 100);
@@ -151,7 +154,8 @@
 				$str_4 = rand(0, 100);
 				$str_4_rev = 100 - $str_4;
 
-				echo "border-radius: ${str_1}% ${str_1_rev}% ${str_2}% ${str_2_rev}% / ${str_3}% ${str_4}% ${str_4_rev}% ${str_3_rev}%";
+				echo "border-radius: ${str_1}% ${str_1_rev}% ${str_2}% ${str_2_rev}% / ${str_3}% ${str_4}% ${str_4_rev}% ${str_3_rev}%;";
+				echo "transform: scaleX(${strength}) scaleY(${strength});";
 				break;
 
 			default:
