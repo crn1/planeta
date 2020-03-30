@@ -12,7 +12,7 @@ $render_url = $render_title ? !empty($item['url']) : false; ?>
 	$hover_class = get_theme_mod('typography_links_hover', 'none');
 	$url_tab = $item['url_tab'] ? '_blank' : ''; ?>
 
-	<p class='title primary-text <?php echo $hover_class; ?>'>
+	<p class='url primary-text <?php echo $hover_class; ?>'>
 		<a class='button-link' href='<?php echo $item['url']; ?>' target='<?php echo $item['url_tab']; ?>'>
 			<?php echo $item['title'] ?>
 		</a>

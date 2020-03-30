@@ -21,6 +21,7 @@ jQuery(document).ready(function($)
 		$('#top-menu').css('display', 'flex')
 	})
 
+	//Scroll sections
 	$('.top-navbar-item').on('click', function(event)
 	{
 		event.preventDefault()

@@ -20,6 +20,13 @@
 							});
 						</script>
 					<?php endif; ?>
+
+				<?php
+					$render_social = get_theme_mod('social_menu_footer', true);
+					if($render_social): ?>
+						<?php get_template_part('template-parts/content/social'); ?>
+				<?php endif; ?>
+
 					<nav id='footer-menu' class='notice'>
 						<?php
 							$params = array(

@@ -8,6 +8,11 @@
 	position: relative;
 
 	.default-container {
+
+		.social-container {
+			margin-bottom: 1rem;
+		}
+
 		@include flexContainer($direction: column);
 
 		.notice {

@@ -1,4 +1,6 @@
 <?php
+	$render_social = get_theme_mod('social_menu_header', false);
+
 	$hover_class = get_theme_mod('typography_links_hover', 'none');
 
 	$navbar_class = get_theme_mod('navbar_type', 'up');
@@ -39,7 +41,10 @@
 	<div id='nav-container'>
 		<nav id='top-menu' class='<?php echo $hover_class; ?>'>
 			<?php nav_items(); ?>
-			<?php get_template_part('template-parts/content/social'); ?>
+
+			<?php if($render_social): ?>
+				<?php get_template_part('template-parts/content/social'); ?>
+			<?php endif; ?>
 		</nav>
 
 		<button

@@ -32,4 +32,20 @@ Kirki::add_field('planeta_config', array(
 	),
 ));
 
+Kirki::add_field('planeta_config', array(
+	'type' 						=> 'toggle',
+	'settings'				=> 'social_menu_header',
+	'label'						=> esc_html__('Show in Header', 'planeta'),
+	'section'					=> 'social_menu_section',
+	'default'					=> false,
+));
+
+Kirki::add_field('planeta_config', array(
+	'type' 						=> 'toggle',
+	'settings'				=> 'social_menu_footer',
+	'label'						=> esc_html__('Show in Footer', 'planeta'),
+	'section'					=> 'social_menu_section',
+	'default'					=> true,
+));
+
 ?>

@@ -1,7 +1,5 @@
 @import 'flex';
 
-$transition-time: 0.17s ease-in;
-
 .top-navbar-item, .social-item {
 	display: inline-flex !important;
 	align-items: center !important;
@@ -13,7 +11,7 @@ $transition-time: 0.17s ease-in;
 	z-index: 99900;
 
 	@media screen and (min-width: 960px) {
-		a:not(:last-child) {
+		& > a:not(:last-child) {
 			margin-right: 24px;
 		}
 	}
@@ -80,7 +78,7 @@ $transition-time: 0.17s ease-in;
 		overflow: hidden;
 		background-color: #000;
 		@include flexContainer($direction: column);
-		transition: all $transition-time;
+		transition: all 0.17s ease-in;
 		width: 100vw;
 		height: 100vh;
 
