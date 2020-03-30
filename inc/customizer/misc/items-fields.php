@@ -96,6 +96,24 @@ define('ITEMS_FIELDS', array(
 			'default'							=> 'Lorem ipsum dolor sit amet',
 		),
 	),
+
+	'buttons'							=> array(
+		'title'								=> array(
+			'type'								=> 'text',
+			'label'								=> esc_html__('Title (Primary Text)', 'planeta'),
+			'default'							=> 'Read More...',
+		),
+		'url'									=> array(
+			'type'								=> 'text',
+			'label'								=> esc_html__('URL', 'planeta'),
+			'default'							=> esc_html__('http://example.com', 'planeta'),
+		),
+		'url_tab'							=> array(
+			'type'								=> 'checkbox',
+			'label'								=> esc_html__('Open URL in a new tab', 'planeta'),
+			'default'							=> false,
+		),
+	),
 ));
 
 ?>
