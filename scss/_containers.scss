@@ -10,17 +10,14 @@
 }
 
 .content-container {
-	display: grid;
-	grid-column-gap: 48px;
-	grid-template-columns: 226px 700px 226px;
-	width: 1248px;
-	align-items: start;
-	margin: 0 auto;
 	position: relative;
 	z-index: 100;
 }
 
 .page-content {
+	width: 100%;
+	max-width: 700px;
+	margin: 0 auto;
 
 	& > *:first-child {
 		margin-top: 0;
