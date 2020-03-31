@@ -4,7 +4,7 @@ function add_heading_appearance_settings(&$index, $name_smallcaps, $name)
 {
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'number',
-		'label'			=> esc_html__("${name} Spacing Left", 'planeta'),
+		'label'			=> esc_html__("${name} Spacing Left and Right", 'planeta'),
 		'section'		=> "section_${index}_heading_appearance",
 		'settings'	=> "section_${index}_${name_smallcaps}_spacing_left",
 		'default'		=> 0,
@@ -19,28 +19,6 @@ function add_heading_appearance_settings(&$index, $name_smallcaps, $name)
 				'property'	=> 'padding-left',
 				'units'			=> 'px',
 			),
-		),
-		'active_callback' => array(
-			array(
-				'setting'			=> "section_${index}_${name_smallcaps}",
-				'operator'		=> '!=',
-				'value'				=> '',
-			),
-		),
-	));
-
-	Kirki::add_field('planeta_config', array(
-		'type'			=> 'number',
-		'label'			=> esc_html__("${name} Spacing Right", 'planeta'),
-		'section'		=> "section_${index}_heading_appearance",
-		'settings'	=> "section_${index}_${name_smallcaps}_spacing_right",
-		'default'		=> 0,
-		'choices'		=> array(
-			'min'				=> 0,
-			'max'				=> 1280,
-			'step'			=> 1,
-		),
-		'output'		=> array(
 			array(
 				'element'		=> "#section_${index} .section-${name_smallcaps}",
 				'property'	=> 'padding-right',

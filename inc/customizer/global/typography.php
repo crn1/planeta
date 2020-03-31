@@ -5,27 +5,49 @@ Kirki::add_panel('typography_panel', array(
 	'panel'       => 'global_panel',
 ));
 
-function typography_generator($name, $section, $class, $enable_sizing=true, $enable_hover=false, $enable_fittext=false)
+function typography_generator($args)
 {
+	$args = array_merge(array(
+		'name'								=> '',
+		'section'							=> '',
+		'class'								=> '',
+		'enable_sizing'				=> true,
+		'enable_fittext'			=> false,
+		'enable_hover'				=> false,
+		'typography_default'	=> array(
+			'text-transform'			=> 'none',
+			'color'								=> '#ffffff',
+			'font-family'					=> 'rubik',
+			'variant'							=> 'regular',
+			'line-height'					=> '1.5',
+			'letter-spacing'			=> '0',
+		),
+	), $args);
+
+	$section = $args['section'];
+	$class = $args['class'];
+	$name = $args['name'];
+
 	Kirki::add_section("typography_${section}", array(
-		'title'       => esc_html__($name, 'planeta' ),
+		'title'       => esc_html__($name, 'planeta'),
 		'panel'       => 'typography_panel',
 	));
+
+	$typography = array_merge(array(
+			'text-transform'			=> 'none',
+			'color'								=> '#ffffff',
+			'font-family'					=> 'rubik',
+			'variant'							=> 'regular',
+			'line-height'					=> '1.5',
+			'letter-spacing'			=> '0',
+	), $args['typography_default']);
 
 	Kirki::add_field('planeta_config', array(
 		'type'        => 'typography',
 		'label'       => esc_html__('Typography', 'planeta'),
 		'section'     => "typography_${section}",
 		'settings'    => "typography_${section}",
-		'default'			=> 'none',
-		'default'     => array(
-			'text-transform'    => 'none',
-			'color'    					=> '#FFFFFF',
-			'font-family'    		=> 'Rubik',
-			'variant'        		=> 'regular',
-			'line-height'    		=> '1.5',
-			'letter-spacing' 		=> '0',
-		),
+		'default'     => $typography,
 		'output'      => array(
 			array(
 				'element' 		=> $class,
@@ -33,7 +55,7 @@ function typography_generator($name, $section, $class, $enable_sizing=true, $ena
 		),
 	));
 
-	if($enable_sizing)
+	if($args['enable_sizing'])
 	{
 		Kirki::add_field('planeta_config', array(
 			'type'        => 'slider',
@@ -56,7 +78,7 @@ function typography_generator($name, $section, $class, $enable_sizing=true, $ena
 		));
 	}
 
-	if($enable_fittext)
+	if($args['enable_fittext'])
 	{
 		Kirki::add_field('planeta_config', array(
 			'type'        => 'toggle',
@@ -67,7 +89,7 @@ function typography_generator($name, $section, $class, $enable_sizing=true, $ena
 		));
 	}
 
-	if($enable_hover)
+	if($args['enable_hover'])
 	{
 		Kirki::add_field('planeta_config', array(
 			'type'        => 'select',
@@ -147,10 +169,55 @@ Kirki::add_field('planeta_config', array(
 	),
 ));
 
-typography_generator('Button Links', 'button_links', '.button-link', true, true);
-typography_generator('Section Title', 'section_title', '.section-title', true, false, true);
-typography_generator('Section Subtitle', 'section_subtitle', '.section-subtitle', true, false, true);
-typography_generator('Page Title', 'page_title', '.page-title', true, false, true);
-typography_generator('Page Subtitle', 'page_subtitle', '.page-subtitle', true, false, true);
+typography_generator(array(
+	'name' 					=> 'Button Link',
+	'section' 			=> 'button_link',
+	'class'					=> '.button-link',
+	'enable_hover'	=> true,
+));
+
+typography_generator(array(
+	'name' 						=> 'Section Title',
+	'section' 				=> 'section_title',
+	'class'						=> '.section-title',
+	'enable_fittext'	=> true,
+));
+
+typography_generator(array(
+	'name' 						=> 'Section Subtitle',
+	'section' 				=> 'section_subtitle',
+	'class'						=> '.section-subtitle',
+	'enable_fittext'	=> true,
+));
+
+typography_generator(array(
+	'name'								=> 'Page Title',
+	'section'							=> 'page_title',
+	'class'								=> '.page-title',
+	'enable_fittext'			=> true,
+	'typography_default' 	=> array(
+		'text-align'					=> 'center',
+	),
+));
+
+typography_generator(array(
+	'name' 						=> 'Page Subtitle',
+	'section' 				=> 'page_subtitle',
+	'class'						=> '.page-subtitle',
+	'enable_fittext'	=> true,
+	'typography_default' 	=> array(
+		'text-align'					=> 'center',
+	),
+));
+
+typography_generator(array(
+	'name' 						=> 'Page Subtitle',
+	'section' 				=> 'page_subtitle',
+	'class'						=> '.page-subtitle',
+	'enable_fittext'	=> true,
+	'typography_default' 	=> array(
+		'text-align'					=> 'center',
+	),
+));
 
 ?>

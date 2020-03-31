@@ -6,15 +6,15 @@ Kirki::add_section('containers_section', array(
 ));
 
 Kirki::add_field('planeta_config', array(
-	'type' 						=> 'slider',
+	'type' 						=> 'number',
 	'settings'				=> 'default_container',
-	'label'						=> esc_html__('Main Container Width (px)', 'planeta'),
+	'label'						=> esc_html__('Frontpage Container Width', 'planeta'),
 	'section'					=> 'containers_section',
-	'default'					=> 1920,
+	'default'					=> 1500,
 	'choices'					=> array(
 		'min'							=> 600,
 		'max'							=> 1920,
-		'step'						=> 10,
+		'step'						=> 1,
 	),
 	'output'					=> array(
 		array(
@@ -26,21 +26,21 @@ Kirki::add_field('planeta_config', array(
 ));
 
 Kirki::add_field('planeta_config', array(
-	'type' 						=> 'slider',
-	'settings'				=> 'content_container',
-	'label'						=> esc_html__('Page/Blog Sidebar Container Width (in %)', 'planeta'),
+	'type' 						=> 'number',
+	'settings'				=> 'page_container',
+	'label'						=> esc_html__('Page/Post Container Width', 'planeta'),
 	'section'					=> 'containers_section',
-	'default'					=> 23,
+	'default'					=> 700,
 	'choices'					=> array(
-		'min'							=> 1,
-		'max'							=> 49,
+		'min'							=> 600,
+		'max'							=> 1920,
 		'step'						=> 1,
 	),
 	'output'					=> array(
 		array(
-			'element'				=> '.content-container',
-			'property'			=> 'grid-template-columns',
-			'value_pattern'	=> '$% auto $%',
+			'element'			=> '.page-content',
+			'property'		=> 'max-width',
+			'units'				=> 'px',
 		),
 	),
 ));

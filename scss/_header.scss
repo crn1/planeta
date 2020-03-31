@@ -9,6 +9,7 @@
 	display: none; //Here with reason, see main.js
 	flex-direction: row;
 	z-index: 99900;
+	mix-blend-mode: difference;
 
 	@media screen and (min-width: 960px) {
 		& > a:not(:last-child) {

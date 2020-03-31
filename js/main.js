@@ -86,7 +86,9 @@ jQuery(document).ready(function($)
 	//Sticky Sidebars
 	if(typeof StickySidebar != 'undefined')
 	{
-		$('.sidebar').stickySidebar()
+		$('.sidebar').stickySidebar({
+			topSpacing: $('#main-header').outerHeight(true),
+		})
 	}
 
 	// Loading screen
