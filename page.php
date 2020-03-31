@@ -8,7 +8,6 @@
 			set_query_var('title', get_the_title());
 			get_template_part('template-parts/content/title'); ?>
 
-		<div class='default-container'>
 			<div class='content-container'>
 				<aside class='sidebar sidebar-left'>
 					<div class='sidebar__inner'>
@@ -32,6 +31,7 @@
 				</aside>
 			</div>
 
+		<div class='page-container'>
 			<?php comments_template(); ?>
 		</div>
 

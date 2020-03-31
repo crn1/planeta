@@ -6,17 +6,21 @@ Kirki::add_section('page_section', array(
 ));
 
 Kirki::add_field('planeta_config', array(
-	'type' 						=> 'toggle',
-	'settings'				=> 'page_title_is_fullscreen',
-	'label'						=> esc_html__('Fullscreen Title', 'planeta'),
+	'type' 						=> 'slider',
+	'settings'				=> 'page_title_min_height',
+	'label'						=> esc_html__('Title Minimum Height', 'planeta'),
 	'section'					=> 'page_section',
-	'default'					=> false,
+	'default'					=> 33,
+	'choices'					=> array(
+		'min'							=> 0,
+		'max'							=> 100,
+		'step'						=> 1,
+	),
 	'output'					=> array(
 		array(
 			'element'				=> '.page-title-container',
 			'property'			=> 'min-height',
-			'value_pattern'	=> '100vh',
-			'exclude'				=> array(false),
+			'units'					=> 'vh',
 		),
 	),
 ));
@@ -24,31 +28,19 @@ Kirki::add_field('planeta_config', array(
 Kirki::add_field('planeta_config', array(
 	'type' 						=> 'slider',
 	'settings'				=> 'page_title_padding',
-	'label'						=> esc_html__('Title Padding Up & Down (vh)', 'planeta'),
+	'label'						=> esc_html__('Title Spacing Down', 'planeta'),
 	'section'					=> 'page_section',
 	'default'					=> 10,
 	'choices'					=> array(
 		'min'							=> 0,
-		'max'							=> 50,
+		'max'							=> 33,
 		'step'						=> 1,
-	),
-	'active_callback'	=> array(
-		array(
-			'setting'					=> 'page_title_is_fullscreen',
-			'operator'				=> '==',
-			'value'						=> false,
-		),
 	),
 	'output'					=> array(
 		array(
-			'element'				=> '.page-title',
-			'property'			=> 'padding-top',
-			'value_pattern'	=> '$vh',
-		),
-		array(
-			'element'				=> '.page-title',
-			'property'			=> 'padding-bottom',
-			'value_pattern'	=> '$vh',
+			'element'				=> '.page-title-container',
+			'property'			=> 'margin-bottom',
+			'units'					=> 'vh',
 		),
 	),
 ));
@@ -67,23 +59,6 @@ Kirki::add_field('planeta_config', array(
 			'element'				=> '.page-title-overlay',
 			'property'			=> 'background-color',
 		),
-	),
-));
-
-Kirki::add_field('planeta_config', array(
-	'type'						=> 'select',
-	'label'						=> esc_html__('Items Type', 'planeta'),
-	'section'					=> 'page_section',
-	'settings'				=> 'page_card_type',
-	'default'					=> 'default',
-	'choices'					=> array(
-		'default'							=> esc_html__('Default', 'planeta'),
-		'perspective-left'		=> esc_html__('Perspective Left', 'planeta'),
-		'perspective-right'		=> esc_html__('Perspective Right', 'planeta'),
-		'perspective-up'			=> esc_html__('Perspective Up', 'planeta'),
-		'perspective-down'		=> esc_html__('Perspective Down', 'planeta'),
-		'zigzag-left'					=> esc_html__('ZigZag Left', 'planeta'),
-		'zigzag-right'				=> esc_html__('ZigZag Right', 'planeta'),
 	),
 ));
 

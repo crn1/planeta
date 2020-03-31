@@ -38,9 +38,19 @@ Kirki::add_field('planeta_config', array(
 	),
 	'output'					=> array(
 		array(
-			'element'			=> '.page-content',
+			'element'			=> '.page-container',
 			'property'		=> 'max-width',
 			'units'				=> 'px',
+		),
+		array(
+			'element'				=> '.content-container',
+			'property'			=> 'grid-template-columns',
+			'value_pattern'	=> '226px $px 226px',
+		),
+		array(
+			'element'				=> '.content-container',
+			'property'			=> 'width',
+			'value_pattern'	=> 'calc($px + 548px)',
 		),
 	),
 ));
