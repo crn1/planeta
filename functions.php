@@ -1,7 +1,13 @@
 <?php
 
 include_once get_theme_file_path('inc/kirki-installer.php');
-include_once get_theme_file_path('inc/customizer.php');
+
+if(class_exists('Kirki'))
+{
+	include_once get_theme_file_path('inc/customizer.php');
+}else{
+	include_once get_theme_file_path('inc/fallback.php');
+}
 
 //Theme support
 add_theme_support('post-thumbnails');

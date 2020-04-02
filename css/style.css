@@ -1,66 +1,97 @@
 @charset "UTF-8";
+/* line 3, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_not-found.scss */
 #not-found-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
+/* line 1, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_wordpress.scss */
 .alignleft {
   text-align: left;
-  align: left; }
+  align: left;
+}
 
+/* line 6, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_wordpress.scss */
 .alignright {
   text-align: right;
-  align: right; }
+  align: right;
+}
 
+/* line 11, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_wordpress.scss */
 .aligncenter {
   text-align: center;
-  align: center; }
+  align: center;
+}
 
+/* line 21, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_wordpress.scss */
 .size-auto,
 .size-full,
 .size-large,
 .size-medium,
 .size-thumbnail {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+}
 
+/* line 30, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_wordpress.scss */
 .sticky {
-  position: sticky; }
+  position: sticky;
+}
 
+/* line 3, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_containers.scss */
 .default-container, .page-container {
   width: 100%;
   margin: 0 auto;
   z-index: 100;
   position: relative;
-  padding-left: 1rem;
-  padding-right: 1rem; }
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
 
+/* line 12, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_containers.scss */
 .content-container {
   position: relative;
-  z-index: 100; }
+  z-index: 100;
+}
 
+/* line 17, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_containers.scss */
 .page-content {
   width: 100%;
   max-width: 700px;
-  margin: 0 auto; }
-  .page-content > *:first-child {
-    margin-top: 0; }
-  .page-content .post-info {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 2rem;
-    padding-top: 1rem; }
-    .page-content .post-info .user {
-      display: flex;
-      flex-direction: row;
-      align-items: center; }
-      .page-content .post-info .user .avatar {
-        padding-right: 0.5rem; }
+  margin: 0 auto;
+}
 
+/* line 22, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_containers.scss */
+.page-content > *:first-child {
+  margin-top: 0;
+}
+
+/* line 26, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_containers.scss */
+.page-content .post-info {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+/* line 36, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_containers.scss */
+.page-content .post-info .user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* line 41, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_containers.scss */
+.page-content .post-info .user .avatar {
+  padding-right: 0.5rem;
+}
+
+/* line 48, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_containers.scss */
 .page-title-container {
   background-position: center;
   background-repeat: no-repeat;
@@ -70,22 +101,32 @@
   align-items: center;
   position: relative;
   z-index: 100;
-  margin-bottom: 10vh; }
-  .page-title-container .page-title-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%; }
+  margin-bottom: 10vh;
+}
 
+/* line 59, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_containers.scss */
+.page-title-container .page-title-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 68, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_containers.scss */
 .social-container {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 0px; }
-  .social-container a:not(:last-child) {
-    margin-right: 16px; }
+  margin-bottom: 0px;
+}
 
+/* line 73, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_containers.scss */
+.social-container a:not(:last-child) {
+  margin-right: 16px;
+}
+
+/* line 78, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_containers.scss */
 #loading-container {
   z-index: 99999;
   position: absolute;
@@ -96,137 +137,236 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; }
-  #loading-container .logo {
-    margin-bottom: 2rem; }
-  #loading-container .animation {
-    margin-bottom: 1rem; }
+  flex-direction: column;
+}
 
+/* line 87, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_containers.scss */
+#loading-container .logo {
+  margin-bottom: 2rem;
+}
+
+/* line 91, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_containers.scss */
+#loading-container .animation {
+  margin-bottom: 1rem;
+}
+
+/* line 1, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
-  margin: 0; }
+  margin: 0;
+}
 
+/* line 5, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_typography.scss */
 .section-title, .section-subtitle, .page-title {
   line-height: 1 !important;
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0;
   padding-bottom: 0;
-  overflow-wrap: break-word; }
+  overflow-wrap: break-word;
+}
 
+/* line 3, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_sidebars.scss */
 .sidebar {
   will-change: min-height;
   width: 100%;
   max-width: 300px;
-  list-style-type: none; }
-  .sidebar li:not(:first-child) {
-    padding-top: 1rem; }
-  .sidebar-left {
-    float: left; }
-  .sidebar-right {
-    float: left; }
+  list-style-type: none;
+}
 
+/* line 9, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_sidebars.scss */
+.sidebar li:not(:first-child) {
+  padding-top: 1rem;
+}
+
+/* line 13, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_sidebars.scss */
+.sidebar-left {
+  float: left;
+}
+
+/* line 17, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_sidebars.scss */
+.sidebar-right {
+  float: left;
+}
+
+/* line 22, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_sidebars.scss */
 .sidebar__inner {
   transform: translate(0, 0);
   transform: translate3d(0, 0, 0);
-  will-change: position, transform; }
+  will-change: position, transform;
+}
 
+/* line 3, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center; }
-  .card > .info {
-    width: 100%; }
-  @media screen and (max-width: 768px) {
-    .card > .image {
-      margin-bottom: 2rem; } }
+  align-items: center;
+}
 
+/* line 8, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
+.card > .info {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 12, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
+  .card > .image {
+    margin-bottom: 2rem;
+  }
+}
+
+/* line 21, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
 .card-experience .description {
-  margin-top: 0 !important; }
+  margin-top: 0 !important;
+}
 
+/* line 26, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
 .card-testimonials {
-  align-items: center; }
-  .card-testimonials .image, .card-testimonials .author, .card-testimonials .excerpt {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important; }
-  .card-testimonials .author-description {
-    margin-top: 0;
-    font-style: italic;
-    font-size: 1rem !important;
-    text-transform: none !important; }
-  .card-testimonials .excerpt:before, .card-testimonials .full-testimonial:before {
-    content: '“'; }
-  .card-testimonials .excerpt:after, .card-testimonials .full-testimonial:after {
-    content: '”'; }
-  .card-testimonials .full-testimonial {
-    margin-top: 0;
-    margin-bottom: 0; }
+  align-items: center;
+}
 
+/* line 29, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
+.card-testimonials .image, .card-testimonials .author, .card-testimonials .excerpt {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* line 34, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
+.card-testimonials .author-description {
+  margin-top: 0;
+  font-style: italic;
+  font-size: 1rem !important;
+  text-transform: none !important;
+}
+
+/* line 42, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
+.card-testimonials .excerpt:before, .card-testimonials .full-testimonial:before {
+  content: '“';
+}
+
+/* line 45, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
+.card-testimonials .excerpt:after, .card-testimonials .full-testimonial:after {
+  content: '”';
+}
+
+/* line 50, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
+.card-testimonials .full-testimonial {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 57, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
 .card-numbers .number, .card-numbers .title {
-  display: block; }
+  display: block;
+}
+
+/* line 61, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
 .card-numbers .number {
   margin-top: 0;
-  line-height: 1; }
+  line-height: 1;
+}
 
+/* line 68, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
 .card-buttons .url {
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 1; }
+  line-height: 1;
+}
 
 @media screen and (min-width: 769px) {
+  /* line 78, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
   .all-left .card > .image {
     order: 1;
-    margin-right: 2rem; }
+    margin-right: 2rem;
+  }
+  /* line 82, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
   .all-left .card > .info {
-    order: 2; }
-
+    order: 2;
+  }
+  /* line 88, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
   .all-right .card > .image {
     margin-left: 2rem;
-    order: 2; }
+    order: 2;
+  }
+  /* line 92, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
   .all-right .card > .info {
-    order: 1; }
-
+    order: 1;
+  }
+  /* line 98, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
   .first-left .card:nth-child(odd) > .image {
     margin-right: 2rem;
-    order: 1; }
+    order: 1;
+  }
+  /* line 102, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
   .first-left .card:nth-child(odd) > .info {
-    order: 2; }
+    order: 2;
+  }
+  /* line 105, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
   .first-left .card:nth-child(even) > .image {
     margin-left: 2rem;
-    order: 2; }
+    order: 2;
+  }
+  /* line 109, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
   .first-left .card:nth-child(even) > .info {
-    order: 1; }
-
+    order: 1;
+  }
+  /* line 115, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
   .first-right .card:nth-child(odd) > .image {
     margin-left: 2rem;
-    order: 2; }
+    order: 2;
+  }
+  /* line 119, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
   .first-right .card:nth-child(odd) > .info {
-    order: 1; }
+    order: 1;
+  }
+  /* line 122, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
   .first-right .card:nth-child(even) > .image {
     margin-right: 2rem;
-    order: 1; }
+    order: 1;
+  }
+  /* line 126, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_cards.scss */
   .first-right .card:nth-child(even) > .info {
-    order: 2; } }
+    order: 2;
+  }
+}
+
+/* line 3, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
 .top-navbar-item, .social-item {
   display: inline-flex !important;
-  align-items: center !important; }
+  align-items: center !important;
+}
 
+/* line 8, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
 #top-menu {
   display: none;
   flex-direction: row;
-  z-index: 99900; }
-  @media screen and (min-width: 960px) {
-    #top-menu > a:not(:last-child) {
-      margin-right: 24px; } }
-  @media screen and (max-width: 959px) {
-    #top-menu {
-      flex-direction: column; }
-      #top-menu > a {
-        text-align: center;
-        display: inline-block !important; }
-        #top-menu > a:not(:last-child) {
-          margin-right: 0px !important;
-          margin-bottom: 24px; } }
+  z-index: 99900;
+}
 
+@media screen and (min-width: 960px) {
+  /* line 14, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
+  #top-menu > a:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  /* line 8, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
+  #top-menu {
+    flex-direction: column;
+  }
+  /* line 21, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
+  #top-menu > a {
+    text-align: center;
+    display: inline-block !important;
+  }
+  /* line 24, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
+  #top-menu > a:not(:last-child) {
+    margin-right: 0px !important;
+    margin-bottom: 24px;
+  }
+}
+
+/* line 32, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
 .header-container {
   display: flex;
   align-items: center;
@@ -241,25 +381,41 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   position: absolute;
-  width: 100%; }
-  .header-container #logo-container {
-    margin: 0 !important; }
-  .header-container #nav-container {
-    flex-grow: 1;
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-end; }
+  width: 100%;
+}
 
+/* line 45, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
+.header-container #logo-container {
+  margin: 0 !important;
+}
+
+/* line 49, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
+.header-container #nav-container {
+  flex-grow: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* line 57, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
 #menu-container {
-  z-index: 99900; }
+  z-index: 99900;
+}
 
+/* line 61, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
 #menu-button {
   display: flex;
-  padding: 5px; }
-  @media screen and (min-width: 960px) {
-    #menu-button {
-      display: none; } }
+  padding: 5px;
+}
 
+@media screen and (min-width: 960px) {
+  /* line 61, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
+  #menu-button {
+    display: none;
+  }
+}
+
+/* line 72, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
 .menu-up, .menu-down, .menu-left, .menu-right {
   position: fixed;
   z-index: 99900;
@@ -271,63 +427,112 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   transition: all 0.17s ease-in;
   width: 100vw;
-  height: 100vh; }
-  @media screen and (max-width: 768px) {
-    .menu-up, .menu-down, .menu-left, .menu-right {
-      width: 100vw !important;
-      clip-path: none !important;
-      shape-outside: none !important; } }
+  height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 72, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
+  .menu-up, .menu-down, .menu-left, .menu-right {
+    width: 100vw !important;
+    clip-path: none !important;
+    shape-outside: none !important;
+  }
+}
+
+/* line 92, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
 .menu-up {
   top: -100vh;
-  left: 0; }
-  .menu-up.active {
-    top: 0; }
+  left: 0;
+}
+
+/* line 95, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
+.menu-up.active {
+  top: 0;
+}
+
+/* line 100, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
 .menu-down {
   top: 100vh;
-  left: 0; }
-  .menu-down.active {
-    top: 0; }
+  left: 0;
+}
+
+/* line 103, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
+.menu-down.active {
+  top: 0;
+}
+
+/* line 108, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
 .menu-left {
   top: 0;
-  left: -100vw; }
-  .menu-left.active {
-    left: 0; }
+  left: -100vw;
+}
+
+/* line 111, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
+.menu-left.active {
+  left: 0;
+}
+
+/* line 116, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
 .menu-right {
   top: 0;
-  left: 100vw; }
-  .menu-right.active {
-    left: 0; }
+  left: 100vw;
+}
 
+/* line 119, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_header.scss */
+.menu-right.active {
+  left: 0;
+}
+
+/* line 3, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_footer.scss */
 #main-footer {
   box-sizing: border-box;
   background-color: transparent;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  position: relative; }
-  #main-footer .default-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; }
-    #main-footer .default-container .social-container {
-      margin-bottom: 1rem; }
-    #main-footer .default-container .notice {
-      display: block;
-      width: 100%;
-      text-align: center;
-      font-size: 80%; }
+  position: relative;
+}
 
+/* line 10, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_footer.scss */
+#main-footer .default-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* line 12, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_footer.scss */
+#main-footer .default-container .social-container {
+  margin-bottom: 1rem;
+}
+
+/* line 18, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_footer.scss */
+#main-footer .default-container .notice {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 80%;
+}
+
+/* line 27, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_footer.scss */
 #footer-menu {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row; }
-  #footer-menu a {
-    color: inherit;
-    font-weight: bold; }
-  #footer-menu a:not(:last-child) {
-    margin-right: 1rem; }
+  flex-direction: row;
+}
 
+/* line 30, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_footer.scss */
+#footer-menu a {
+  color: inherit;
+  font-weight: bold;
+}
+
+/* line 35, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_footer.scss */
+#footer-menu a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+/* line 1, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_video-background.scss */
 .video-background, .background-overlay {
   position: absolute;
   top: 0;
@@ -335,48 +540,78 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover; }
+  object-fit: cover;
+}
 
+/* line 11, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_video-background.scss */
 .background-overlay {
-  z-index: 40 !important; }
+  z-index: 40 !important;
+}
 
+/* line 15, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_video-background.scss */
 .video-background {
-  z-index: 30; }
+  z-index: 30;
+}
 
+/* line 19, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_video-background.scss */
 #global-overlay {
-  z-index: 20 !important; }
+  z-index: 20 !important;
+}
 
+/* line 23, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_video-background.scss */
 #global-video-background {
-  z-index: 10 !important; }
+  z-index: 10 !important;
+}
 
+/* line 27, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_video-background.scss */
 #global-video-background, #404-video-background,
 #global-overlay, #404-overlay {
-  position: fixed !important; }
+  position: fixed !important;
+}
 
+/* line 32, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/_video-background.scss */
 #global-overlay, #global-video-background {
-  position: fixed; }
+  position: fixed;
+}
 
+/* line 12, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/style.scss */
 a {
   text-decoration: none;
   display: inline-block;
   color: inherit;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
+/* line 19, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/style.scss */
 html, body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
+/* line 23, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/style.scss */
 section[id^='section_'] {
   z-index: 100;
   position: relative;
   display: flex;
-  align-items: center; }
-  section[id^='section_'] > .default-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; }
-    @media screen and (max-width: 960px) {
-      section[id^='section_'] > .default-container > .section-title, section[id^='section_'] > .default-container > .section-subtitle, section[id^='section_'] > .default-container > .section-logo, section[id^='section_'] > .default-container > .section-video, section[id^='section_'] > .default-container > .section-items {
-        width: 100% !important; } }
+  align-items: center;
+}
+
+/* line 29, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/style.scss */
+section[id^='section_'] > .default-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 960px) {
+  /* line 32, ../../laragon/www/WordPress/wp-content/themes/planeta/scss/style.scss */
+  section[id^='section_'] > .default-container > .section-title,
+  section[id^='section_'] > .default-container > .section-subtitle,
+  section[id^='section_'] > .default-container > .section-logo,
+  section[id^='section_'] > .default-container > .section-video,
+  section[id^='section_'] > .default-container > .section-items {
+    width: 100% !important;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
