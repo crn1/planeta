@@ -28,45 +28,30 @@ Kirki::add_field('planeta_config', array(
 Kirki::add_field('planeta_config', array(
 	'type' 						=> 'number',
 	'settings'				=> 'page_container',
-	'label'						=> esc_html__('Page/Post Container Width', 'planeta'),
+	'label'						=> esc_html__('Article Columns', 'planeta'),
 	'section'					=> 'containers_section',
-	'default'					=> 700,
+	'default'					=> 4,
 	'choices'					=> array(
-		'min'							=> 600,
-		'max'							=> 1920,
+		'min'							=> 1,
+		'max'							=> 12,
 		'step'						=> 1,
 	),
 	'output'					=> array(
-		array(
-			'element'			=> '.page-container',
-			'property'		=> 'width',
-			'units'				=> 'px',
-		),
-		array(
-			'element'			=> '.page-content',
-			'property'		=> 'width',
-			'units'				=> 'px',
-		),
 	),
 ));
 
 Kirki::add_field('planeta_config', array(
 	'type' 						=> 'number',
-	'settings'				=> 'page_container',
-	'label'						=> esc_html__('Sidebar Container Width', 'planeta'),
+	'settings'				=> 'sidebar_container',
+	'label'						=> esc_html__('Sidebar Columns', 'planeta'),
 	'section'					=> 'containers_section',
-	'default'					=> 700,
+	'default'					=> 2,
 	'choices'					=> array(
 		'min'							=> 1,
-		'max'							=> 700,
+		'max'							=> 12,
 		'step'						=> 1,
 	),
 	'output'					=> array(
-		array(
-			'element'				=> '.sidebar',
-			'property'			=> 'width',
-			'units'					=> 'px',
-		),
 	),
 ));
 

@@ -14,10 +14,10 @@ function typography_generator($args)
 		'enable_sizing'				=> true,
 		'enable_fittext'			=> false,
 		'enable_hover'				=> false,
-		'typography_default'	=> array(
+		'default_typography'	=> array(
 			'text-transform'			=> 'none',
-			'color'								=> '#ffffff',
-			'font-family'					=> 'rubik',
+			'color'								=> '#000000',
+			'font-family'					=> 'inherit',
 			'variant'							=> 'regular',
 			'line-height'					=> '1.5',
 			'letter-spacing'			=> '0',
@@ -35,12 +35,12 @@ function typography_generator($args)
 
 	$typography = array_merge(array(
 			'text-transform'			=> 'none',
-			'color'								=> '#ffffff',
+			'color'								=> '#000000',
 			'font-family'					=> 'rubik',
 			'variant'							=> 'regular',
 			'line-height'					=> '1.5',
 			'letter-spacing'			=> '0',
-	), $args['typography_default']);
+	), $args['default_typography']);
 
 	Kirki::add_field('planeta_config', array(
 		'type'        => 'typography',
@@ -93,7 +93,7 @@ function typography_generator($args)
 	{
 		Kirki::add_field('planeta_config', array(
 			'type'        => 'select',
-			'label'       => esc_html__('Hover Effect', 'planeta'),
+			'label'       => esc_html__('Style', 'planeta'),
 			'section'     => "typography_${section}",
 			'settings'    => "typography_${section}_hover",
 			'default'     => 'none',
@@ -136,11 +136,11 @@ Kirki::add_field('planeta_config', array(
 	'section'     => 'typography_main',
 	'settings'    => 'typography_main',
 	'default'     => array(
-		'font-family'    => 'inherit',
+		'font-family'    => 'Roboto',
 		'variant'        => 'regular',
 		'line-height'    => '1.5',
 		'letter-spacing' => '0',
-		'color'    			=> '#FFFFFF',
+		'color'    			=> '#000000',
 	),
 	'output'      => array(
 		array(
@@ -195,7 +195,7 @@ typography_generator(array(
 	'section'							=> 'page_title',
 	'class'								=> '.page-title',
 	'enable_fittext'			=> true,
-	'typography_default' 	=> array(
+	'default_typography' 	=> array(
 		'text-align'					=> 'center',
 	),
 ));
@@ -205,7 +205,7 @@ typography_generator(array(
 	'section' 				=> 'page_subtitle',
 	'class'						=> '.page-subtitle',
 	'enable_fittext'	=> true,
-	'typography_default' 	=> array(
+	'default_typography' 	=> array(
 		'text-align'					=> 'center',
 	),
 ));
@@ -215,7 +215,7 @@ typography_generator(array(
 	'section' 				=> 'page_subtitle',
 	'class'						=> '.page-subtitle',
 	'enable_fittext'	=> true,
-	'typography_default' 	=> array(
+	'default_typography' 	=> array(
 		'text-align'					=> 'center',
 	),
 ));

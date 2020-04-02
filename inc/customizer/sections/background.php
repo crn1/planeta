@@ -8,7 +8,7 @@ function planeta_add_section_background($index)
 	planeta_add_video_background(
 		$section 		= "section_${index}",
 		$panel 			= "section_${index}_panel",
-		$bg_output 	= "#section_${index}-overlay",
+		$bg_output 	= "#section_${index}-overlay"
 	);
 
 	planeta_add_shape(array(

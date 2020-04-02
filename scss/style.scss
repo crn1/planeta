@@ -3,11 +3,19 @@
 @import 'wordpress';
 @import 'containers';
 @import 'typography';
-@import 'sidebars';
+@import 'page';
 @import 'cards';
 @import 'header';
 @import 'footer';
 @import 'video-background';
+
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 a {
 	text-decoration: none;

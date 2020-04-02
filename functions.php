@@ -82,7 +82,7 @@ function init_scripts()
 	wp_enqueue_style('hover-css', get_template_directory_uri() . '/css/hover.css', false, '1.0.0', 'all');
 
 	// IcoFont CSS
-	wp_enqueue_style('icofont-css', get_template_directory_uri() . '/css/icofont.min.css', false, '1.0.0', 'all');
+	wp_enqueue_style('icofont-css', get_template_directory_uri() . '/css/icofont.min.css', false, '1.0.1', 'all');
 
 	// Hamburgers CSS
 	wp_enqueue_style('hamburgers-css', get_template_directory_uri() . '/css/hamburgers.min.css', false, '1.1.3', 'all');
@@ -107,7 +107,7 @@ function init_scripts()
 	}
 
 	// Main Styles and Scripts
-	wp_enqueue_style('main-style', get_template_directory_uri() . '/css/style.css', false, '1.0.0', 'all');
+	wp_enqueue_style('main-style', get_template_directory_uri() . '/css/style.css', false, filemtime(get_stylesheet_directory() . '/style.css'), 'all');
 	wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true);
 }
 

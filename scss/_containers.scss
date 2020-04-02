@@ -1,48 +1,12 @@
 @import 'flex';
 
-.default-container, .page-container {
+.default-container {
 	width: 100%;
 	margin: 0 auto;
 	z-index: 100;
 	position: relative;
-	padding-left: 2rem;
+	padding-left: 1rem;
 	padding-right: 1rem;
-}
-
-.content-container {
-	position: relative;
-	z-index: 100;
-}
-
-.page-content {
-	width: 100%;
-	max-width: 700px;
-	margin: 0 auto;
-
-	& > *:first-child {
-		margin-top: 0;
-	}
-
-	.post-info {
-		display: flex;
-		flex-direction: row;
-		flex-grow: 1;
-		align-items: center;
-		justify-content: space-between;
-
-		padding-bottom: 2rem;
-		padding-top: 1rem;
-
-		.user {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-
-			.avatar {
-				padding-right: 0.5rem;
-			}
-		}
-	}
 }
 
 .page-title-container {
