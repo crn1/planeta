@@ -115,23 +115,8 @@ h1, h2, h3, h4, h5, h6 {
     order: 1;
   }
 }
-.page-container .article-container > .info {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.page-container .article-container > .info > .user {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.page-container .article-container > .info > .user > .avatar {
-  margin-right: 0.5rem;
-}
-.page-container .article-container > *:first-child {
-  margin-top: 0;
-  margin-bottom: 2rem;
+.page-container .article-container > *:not(:last-child) {
+  margin-bottom: 3rem;
 }
 .page-container .sidebar {
   flex-basis: 25%;
@@ -389,6 +374,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 #footer-menu a:not(:last-child) {
   margin-right: 1rem;
+}
+.post-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.post-info > .user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.post-info > .user > .avatar {
+  margin-right: 1.5rem;
 }
 .video-background, .background-overlay {
   position: absolute;

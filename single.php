@@ -17,19 +17,8 @@
 		</aside>
 
 		<article class='article-container'>
+			<?php get_template_part('template-parts/content/post-info'); ?>
 			<?php the_content(); ?>
-
-			<div class='info'>
-				<div class='user'>
-				<?php
-					$font_size = get_theme_mod('typography_main_size', 16);
-					echo get_avatar(get_the_author_meta('ID'), $font_size*2);
-					the_author();
-				?>
-				</div>
-				<?php the_date(); ?>
-			</div>
-
 			<?php wp_link_pages(); ?>
 		</article>
 
