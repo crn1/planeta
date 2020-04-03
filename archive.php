@@ -14,9 +14,9 @@
 		<div class='default-container'>
 			<div id='page-items' class='card-<?php echo $card_type; ?>-items'>
 				<?php
-					$card_type = get_theme_mod('page_card_type', 'default');
-					set_query_var('card_type', $card_type);
-					get_template_part('template-parts/content/posts'); ?>
+					if(have_posts()): while(have_posts()): the_post();
+						get_template_part('template-parts/frontpage/preset/wrapper');
+					endwhile; endif; ?>
 			</div>
 
 			<?php
