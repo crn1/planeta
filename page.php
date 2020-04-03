@@ -7,7 +7,7 @@
 		set_query_var('title', get_the_title());
 		get_template_part('template-parts/content/title'); ?>
 
-	<div class='default-container article-container'>
+	<div class='default-container page-container'>
 		<aside class='sidebar sidebar-left'>
 			<span class="sidebar-inner">
 				<?php if(is_active_sidebar('page-left-sidebar')) {
@@ -16,8 +16,9 @@
 			</span>
 		</aside>
 
-		<article>
+		<article class='article-container'>
 			<?php the_content(); ?>
+			<?php wp_link_pages(); ?>
 		</article>
 
 		<aside class='sidebar sidebar-right'>
@@ -30,9 +31,11 @@
 	</div>
 
 	<div class="default-container page-container">
-		<?php wp_link_pages(); ?>
-
-		<?php comments_template(); ?>
+		<div class="sidebar"></div>
+		<div class='article-container'>
+			<?php comments_template(); ?>
+		</div>
+		<div class="sidebar"></div>
 	</div>
 
 	<?php endwhile; endif; ?>

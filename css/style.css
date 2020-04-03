@@ -87,57 +87,66 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 0;
   overflow-wrap: break-word;
 }
-.page-container, .article-container {
+.page-container {
   display: flex;
   flex-wrap: wrap;
-}
-.article-container {
   justify-content: space-between;
   flex-direction: row;
 }
 @media (max-width: 899px) {
-  .article-container {
+  .page-container {
     flex-direction: column;
     flex: 1 0 100%;
   }
+  .page-container > *:not(:last-child) {
+    margin-bottom: 2rem;
+  }
 }
-.article-container article {
+.page-container article, .page-container .sidebar-inner {
+  flex-direction: column;
+}
+.page-container .article-container {
   display: flex;
   flex-basis: 44%;
   flex-direction: column;
 }
-.article-container article > *:first-child {
-  margin-top: 0;
+@media (max-width: 899px) {
+  .page-container .article-container {
+    order: 1;
+  }
 }
-.article-container .sidebar {
-  flex-basis: 25%;
-  list-style-type: none;
-}
-.article-container .sidebar > .sidebar__inner {
-  display: inline-grid;
-  grid-gap: 2rem;
-  transform: translate(0, 0);
-  transform: translate3d(0, 0, 0);
-  will-change: position, transform;
-}
-.page-container {
-  flex-direction: column;
-  justify-content: center;
-}
-.page-container > .info {
+.page-container .article-container > .info {
   display: flex;
   flex-direction: row;
-  flex-basis: 44%;
   align-items: center;
   justify-content: space-between;
 }
-.page-container > .info > .user {
+.page-container .article-container > .info > .user {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.page-container > .info > .user > .avatar {
+.page-container .article-container > .info > .user > .avatar {
   margin-right: 0.5rem;
+}
+.page-container .article-container > *:first-child {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+.page-container .sidebar {
+  flex-basis: 25%;
+  list-style-type: none;
+}
+@media (max-width: 899px) {
+  .page-container .sidebar-left {
+    order: 2;
+  }
+  .page-container .sidebar-right {
+    order: 3;
+  }
+}
+.page-container .sidebar > .sidebar-inner {
+  display: inline-flex;
 }
 .card {
   display: flex;

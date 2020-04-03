@@ -1,63 +1,63 @@
 @import 'breakpoints';
 
-.page-container, .article-container {
+.page-container {
 	display: flex;
 	flex-wrap: wrap;
-}
-
-.article-container {
 	justify-content: space-between;
 	flex-direction: row;
 	@include for-size(tablet-and-down)
 	{
 		flex-direction: column;
 		flex: 1 0 100%;
+		& > *:not(:last-child) {
+			margin-bottom: 2rem;
+		}
 	}
 
-	article {
+	article, .sidebar-inner {
+		flex-direction: column;
+	}
+
+	.article-container {
 		display: flex;
 		flex-basis: 44%;
 		flex-direction: column;
+		@include for-size(tablet-and-down) { order: 1; }
+
+		& > .info {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+
+			& > .user {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+
+				& > .avatar {
+					margin-right: 0.5rem;
+				}
+			}
+		}
 
 		& > *:first-child {
 			margin-top: 0;
+			margin-bottom: 2rem;
 		}
-
 	}
 
 	.sidebar {
 		flex-basis: 25%;
 		list-style-type: none;
-
-		& > .sidebar__inner{
-			display: inline-grid;
-			grid-gap: 2rem;
-			transform: translate(0, 0);
-			transform: translate3d(0, 0, 0);
-			will-change: position, transform;
+		@include for-size(tablet-and-down)
+		{
+			&-left { order: 2; }
+			&-right { order: 3; }
 		}
-	}
-}
 
-.page-container {
-	flex-direction: column;
-	justify-content: center;
-
-	& > .info {
-		display: flex;
-		flex-direction: row;
-		flex-basis: 44%;
-		align-items: center;
-		justify-content: space-between;
-
-		& > .user {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-
-			& > .avatar {
-				margin-right: 0.5rem;
-			}
+		& > .sidebar-inner{
+			display: inline-flex;
 		}
 	}
 }

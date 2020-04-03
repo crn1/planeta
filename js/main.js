@@ -91,7 +91,6 @@ jQuery(document).ready(function($)
 			stickyContainer: '.article-container',
 			stickyFor: 899,
 		})
-		console.log(sticky)
 	}
 
 	// Loading screen
