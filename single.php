@@ -7,9 +7,9 @@
 		set_query_var('title', get_the_title());
 		get_template_part('template-parts/content/title'); ?>
 
-	<div class='default-container page-container'>
+	<div class='default-container article-container'>
 		<aside class='sidebar sidebar-left'>
-			<div class='sidebar__inner'>
+			<div class='sidebar-inner'>
 				<?php if(is_active_sidebar('blog-left-sidebar')) {
 					dynamic_sidebar('blog-left-sidebar');
 				} ?>
@@ -21,7 +21,7 @@
 		</article>
 
 		<aside class='sidebar sidebar-right'>
-			<div class='sidebar__inner'>
+			<div class='sidebar-inner'>
 				<?php if(is_active_sidebar('blog-right-sidebar')) {
 					dynamic_sidebar('blog-right-sidebar');
 				} ?>
@@ -29,7 +29,7 @@
 		</aside>
 	</div>
 
-	<div class="default-container article-container">
+	<div class="default-container page-container">
 		<?php wp_link_pages(); ?>
 
 		<div class='info'>

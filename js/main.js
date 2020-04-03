@@ -84,11 +84,14 @@ jQuery(document).ready(function($)
 	}
 
 	//Sticky Sidebars
-	if(typeof StickySidebar != 'undefined')
+	if(typeof Sticky != 'undefined')
 	{
-		$('.sidebar').stickySidebar({
-			topSpacing: $('#main-header').outerHeight(true),
+		var sticky = new Sticky('.sidebar-inner', {
+			marginTop: $('#main-header').outerHeight(true),
+			stickyContainer: '.article-container',
+			stickyFor: 899,
 		})
+		console.log(sticky)
 	}
 
 	// Loading screen

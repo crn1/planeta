@@ -7,13 +7,13 @@
 		set_query_var('title', get_the_title());
 		get_template_part('template-parts/content/title'); ?>
 
-	<div class='default-container page-container'>
+	<div class='default-container article-container'>
 		<aside class='sidebar sidebar-left'>
-			<div class='sidebar__inner'>
+			<span class="sidebar-inner">
 				<?php if(is_active_sidebar('page-left-sidebar')) {
 					dynamic_sidebar('page-left-sidebar');
 				} ?>
-			</div>
+			</span>
 		</aside>
 
 		<article>
@@ -21,15 +21,15 @@
 		</article>
 
 		<aside class='sidebar sidebar-right'>
-			<div class='sidebar__inner'>
+			<span class="sidebar-inner">
 				<?php if(is_active_sidebar('page-right-sidebar')) {
 					dynamic_sidebar('page-right-sidebar');
 				} ?>
-			</div>
+			</span>
 		</aside>
 	</div>
 
-	<div class="default-container article-container">
+	<div class="default-container page-container">
 		<?php wp_link_pages(); ?>
 
 		<?php comments_template(); ?>
