@@ -12,8 +12,8 @@ if($card_preset != 'none' && (!empty($items) || $card_preset == 'posts')):
 	$image_align = $masonry_num == 1 ? $image_align : ''; ?>
 
 <div
-		class='section-items <?php echo $image_align; ?>'
-		id='<?php echo $section?>-items'>
+		class='items <?php echo $image_align; ?>'
+		id='<?php echo $section; ?>-items'>
 
 	<?php
 		if($card_preset == 'posts')

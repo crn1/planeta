@@ -34,6 +34,7 @@ require_once(get_template_directory() . '/inc/customizer/modules/footer.php');
 require_once(get_template_directory() . '/inc/customizer/modules/page.php');
 require_once(get_template_directory() . '/inc/customizer/modules/loading.php');
 require_once(get_template_directory() . '/inc/customizer/modules/social-media.php');
+require_once(get_template_directory() . '/inc/customizer/modules/related-posts.php');
 
 //Homepage sections
 require_once(get_template_directory() . '/inc/customizer/sections/layout.php');

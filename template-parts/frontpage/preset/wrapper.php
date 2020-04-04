@@ -1,6 +1,6 @@
 <?php
 	$section = get_query_var('section');
-	$card_preset = get_query_var('card_preset');
+	$card_preset = get_query_var('card_preset', 'posts');
 
 	set_query_var('animation_name', 'card_info');
 	get_template_part('template-parts/content/animations');
@@ -26,10 +26,8 @@
 		{
 			$image_src = get_the_post_thumbnail_url();
 		}else{
-			$image_src = wp_get_attachment_image_src($item['image'], 'large')[0];
-		}
+			$image_src = wp_get_attachment_image_src($item['image'], 'large')[0]; } ?>
 
-		set_query_var('setting', "${section}_items_appearance"); ?>
 		<img
 			<?php get_template_part('template-parts/content/shape'); ?>
 			src='<?php echo $image_src; ?>'

@@ -1,6 +1,7 @@
 @import 'flex';
 @import 'not-found';
 @import 'wordpress';
+@import 'breakpoints';
 @import 'containers';
 @import 'typography';
 @import 'page';
@@ -43,7 +44,7 @@ section[id^='section_'] {
 		& > .section-logo,
 		& > .section-video,
 		& > .section-items {
-			@media screen and (max-width: 960px)
+			@include for-size(tablet-and-down)
 			{
 				width: 100% !important;
 			}

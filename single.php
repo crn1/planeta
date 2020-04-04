@@ -9,11 +9,11 @@
 
 	<div class='default-container page-container'>
 		<aside class='sidebar sidebar-left'>
-			<div class='sidebar-inner'>
+			<span class='sidebar-inner'>
 				<?php if(is_active_sidebar('blog-left-sidebar')) {
 					dynamic_sidebar('blog-left-sidebar');
 				} ?>
-			</div>
+			</span>
 		</aside>
 
 		<article class='article-container'>
@@ -23,11 +23,11 @@
 		</article>
 
 		<aside class='sidebar sidebar-right'>
-			<div class='sidebar-inner'>
+			<span class='sidebar-inner'>
 				<?php if(is_active_sidebar('blog-right-sidebar')) {
 					dynamic_sidebar('blog-right-sidebar');
 				} ?>
-			</div>
+			</span>
 		</aside>
 	</div>
 
@@ -38,6 +38,8 @@
 		</div>
 		<div class="sidebar"></div>
 	</div>
+
+	<?php get_template_part('template-parts/content/related-posts'); ?>
 
 	<?php endwhile; endif; ?>
 </main>

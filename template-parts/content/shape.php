@@ -1,5 +1,6 @@
 <?php
-	$setting = get_query_var('setting');
+	$section = get_query_var('section');
+	$setting = $section . '_items_appearance';
 	$shape = get_theme_mod($setting . '_shape', 'none');
 
 	if($shape != 'none')
@@ -66,18 +67,18 @@
 
 			case 'circle-up':
 				$strength = 100 - $strength;
-				echo "clip-path: circle(${strength}vh at 50% 0);";
+				echo "clip-path: circle(${strength}% at 50% 0);";
 				break;
 
 			case 'circle-down':
 				$strength = 100 - $strength;
-				echo "clip-path: circle(${strength}vh at 50% 100%);";
+				echo "clip-path: circle(${strength}% at 50% 100%);";
 				break;
 
 			case 'circle-full':
 				$strength = 100 - $strength;
 				$strength /= 2;
-				echo "clip-path: circle(${strength}vh at 50% 50%);";
+				echo "clip-path: circle(${strength}% at 50% 50%);";
 				break;
 
 			case 'paper-top-left':

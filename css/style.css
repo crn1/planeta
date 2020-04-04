@@ -442,7 +442,7 @@ section[id^='section_'] > .default-container {
   justify-content: center;
   flex-direction: column;
 }
-@media screen and (max-width: 960px) {
+@media (max-width: 899px) {
   section[id^='section_'] > .default-container > .section-title, section[id^='section_'] > .default-container > .section-subtitle, section[id^='section_'] > .default-container > .section-logo, section[id^='section_'] > .default-container > .section-video, section[id^='section_'] > .default-container > .section-items {
     width: 100% !important;
   }
