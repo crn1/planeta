@@ -9,9 +9,6 @@
 	{
 		flex-direction: column;
 		flex: 1 0 100%;
-		& > *:not(:last-child) {
-			margin-bottom: 2rem;
-		}
 	}
 
 	article, .sidebar-inner {
@@ -24,8 +21,21 @@
 		flex-direction: column;
 		@include for-size(tablet-and-down) { order: 1; }
 
-		& > *:not(:last-child) {
+		& > .user-info {
 			margin-bottom: 3rem;
+		}
+
+		& img {
+			object-fit: cover;
+		}
+
+		& * {
+			max-width: 100%;
+			width: initial !important;
+		}
+
+		& > .comments-area {
+			margin-top: 3rem;
 		}
 	}
 
