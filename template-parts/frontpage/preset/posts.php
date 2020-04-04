@@ -2,18 +2,10 @@
 	<?php the_title(); ?>
 </h3>
 
+<?php get_template_part('template-parts/content/post-info'); ?>
+
 <p class='description secondary-text'>
 	<?php the_excerpt(); ?>
-</p>
-
-<p class='author'>
-	<?php the_author(); ?>
-</p>
-
-<img class='avatar' src='<?php echo get_avatar_url($post->ID); ?>' />
-
-<p class='date'>
-	<?php the_date(); ?>
 </p>
 
 <p class='url <?php echo get_theme_mod('typography_links_hover', 'none'); ?>'>

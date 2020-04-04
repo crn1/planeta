@@ -1,31 +1,44 @@
 <?php get_header(); ?>
-<?php
-	$title = esc_html__('Search Results for: ', 'sigma') . get_search_query();
-	set_query_var('title', $title);
-
-	$card_type = get_theme_mod('page_card_type', 'default');
-	set_query_var('card_type', $card_type); ?>
-
 <?php get_template_part('template-parts/header'); ?>
 <main>
-	<article id='page-container'>
-		<?php get_template_part('template-parts/content/title'); ?>
+	<?php if(have_posts()): while(have_posts()) : the_post(); ?>
 
-		<div class='default-container'>
-			<div id='page-items' class='card-<?php echo $card_type; ?>-items'>
-				<?php
-					$card_type = get_theme_mod('page_card_type', 'default');
-					set_query_var('card_type', $card_type);
-					get_template_part('template-parts/content/posts'); ?>
-			</div>
+	<?php
+		$title = esc_html__('Search Results for: ', 'sigma') . get_search_query();
+		set_query_var('title', $title);
+		get_template_part('template-parts/content/title'); ?>
 
-			<?php
-				set_query_var('section', 'page');
-				get_template_part('template-parts/frontpage/macy'); ?>
+	<div class='default-container page-container'>
+		<aside class='sidebar sidebar-left'>
+			<span class="sidebar-inner">
+				<?php if(is_active_sidebar('page-left-sidebar')) {
+					dynamic_sidebar('page-left-sidebar');
+				} ?>
+			</span>
+		</aside>
 
-			<?php previous_posts_link(); ?>
-			<?php next_posts_link(); ?>
+		<article class='article-container'>
+			<?php the_content(); ?>
+			<?php wp_link_pages(); ?>
+		</article>
+
+		<aside class='sidebar sidebar-right'>
+			<span class="sidebar-inner">
+				<?php if(is_active_sidebar('page-right-sidebar')) {
+					dynamic_sidebar('page-right-sidebar');
+				} ?>
+			</span>
+		</aside>
+	</div>
+
+	<div class="default-container page-container">
+		<div class="sidebar"></div>
+		<div class='article-container'>
+			<?php comments_template(); ?>
 		</div>
-	</article>
+		<div class="sidebar"></div>
+	</div>
+
+	<?php endwhile; endif; ?>
 </main>
 <?php get_footer(); ?>
