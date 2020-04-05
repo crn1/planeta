@@ -1,0 +1,15 @@
+@import 'flex';
+
+.post-info {
+	@include flexContainer($justify: space-between);
+
+	& > .user {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		& > .avatar {
+			margin-right: 1.5rem;
+		}
+	}
+}
