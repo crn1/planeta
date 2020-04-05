@@ -18,8 +18,8 @@ else if($masonry_num == 7) { $margin = 8; }
 		container: '#<?php echo $section; ?>-items',
 		columns: <?php echo $masonry_num; ?>,
 		breakAt: {
-			960: <?php echo $masonry_num == 1 ? 1 : 2; ?>,
-			768: 1,
+			900: <?php echo $masonry_num == 1 ? 1 : 2; ?>,
+			600: 1,
 		},
 		margin: <?php echo $margin; ?>,
 	})

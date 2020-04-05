@@ -16,7 +16,7 @@ function planeta_add_section_heading_typography(&$index)
 		'default'     => array(
 			'text-transform'    => 'uppercase',
 			'text-align'    		=> 'center',
-			'color'    					=> '#FFFFFF',
+			'color'    					=> '#000000',
 			'font-family'    		=> 'inherit',
 			'variant'        		=> 'regular',
 		),
@@ -55,7 +55,7 @@ function planeta_add_section_heading_typography(&$index)
 		'default'			=> 'none',
 		'default'     => array(
 			'text-transform'    => 'none',
-			'color'    					=> '#FFFFFF',
+			'color'    					=> '#000000',
 			'font-family'    		=> 'inherit',
 			'variant'        		=> 'regular',
 			'text-align'    		=> 'center',

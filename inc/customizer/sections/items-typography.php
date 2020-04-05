@@ -16,7 +16,7 @@ function planeta_add_section_items_typography(&$index)
 		'default'     => array(
 			'text-transform'    => 'uppercase',
 			'text-align'    		=> 'center',
-			'color'    					=> '#FFFFFF',
+			'color'    					=> '#000000',
 			'font-family'    		=> 'Rubik',
 			'variant'        		=> 'regular',
 		),
@@ -55,7 +55,7 @@ function planeta_add_section_items_typography(&$index)
 		'default'			=> 'none',
 		'default'     => array(
 			'text-transform'    => 'none',
-			'color'    					=> '#FFFFFF',
+			'color'    					=> '#000000',
 			'font-family'    		=> 'Rubik',
 			'variant'        		=> 'regular',
 			'text-align'    		=> 'center',
