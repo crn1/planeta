@@ -41,13 +41,16 @@ section[id^='section_'] {
 
 		& > .section-title,
 		& > .section-subtitle,
-		& > .section-logo,
-		& > .section-video,
-		& > .section-items {
+		& > .section-logo {
 			@include for-size(tablet-and-down)
 			{
 				width: 100% !important;
 			}
+		}
+
+		.section-items {
+			width: 100%;
+
 		}
 	}
 }
