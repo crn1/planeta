@@ -46,13 +46,15 @@
 			get_template_part('template-parts/frontpage/macy'); ?>
 	<?php endif; ?>
 
-	<div class="default-container page-container">
-		<div class="sidebar"></div>
-		<div class="article-container">
-			<?php comments_template(); ?>
+	<?php if(have_comments()): ?>
+		<div class="default-container page-container">
+			<div class="sidebar"></div>
+			<div class="article-container">
+				<?php comments_template(); ?>
+			</div>
+			<div class="sidebar"></div>
 		</div>
-		<div class="sidebar"></div>
-	</div>
+	<?php endif; ?>
 
 	<?php get_template_part('template-parts/content/related-posts'); ?>
 
