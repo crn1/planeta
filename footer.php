@@ -19,15 +19,16 @@
 						?>
 					</nav>
 
-					<?php
-						if(is_active_sidebar('extended-footer')): ?>
-							<div id='extended-footer-items'>
-								<?php dynamic_sidebar('footer-sidebar'); ?>
+					<?php if(is_active_sidebar('extended-footer')):
+						set_query_var('section', 'extended_footer');
+						get_template_part('template-parts/content/background'); ?>
+							<div
+									id='extended_footer-items'
+									class='default-container section-items'>
+								<?php dynamic_sidebar('extended-footer'); ?>
 							</div>
-							<?php
-								set_query_var('section', 'extended_footer');
-								get_template_part('template-parts/frontpage/macy');
-						endif; ?>
+						<?php get_template_part('template-parts/frontpage/macy'); ?>
+					<?php endif; ?>
 
 					<div id="footer-notice">
 						<small>

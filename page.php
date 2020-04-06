@@ -8,34 +8,11 @@
 		get_template_part('template-parts/content/title'); ?>
 
 	<div class='default-container page-container'>
-		<aside class='sidebar sidebar-left'>
-			<span class="sidebar-inner">
-				<?php if(is_active_sidebar('page-left-sidebar')) {
-					dynamic_sidebar('page-left-sidebar');
-				} ?>
-			</span>
-		</aside>
-
 		<article class='article-container'>
 			<?php the_content(); ?>
 			<?php wp_link_pages(); ?>
-		</article>
-
-		<aside class='sidebar sidebar-right'>
-			<span class="sidebar-inner">
-				<?php if(is_active_sidebar('page-right-sidebar')) {
-					dynamic_sidebar('page-right-sidebar');
-				} ?>
-			</span>
-		</aside>
-	</div>
-
-	<div class="default-container page-container">
-		<div class="sidebar"></div>
-		<div class='article-container'>
 			<?php comments_template(); ?>
-		</div>
-		<div class="sidebar"></div>
+		</article>
 	</div>
 
 	<?php endwhile; endif; ?>

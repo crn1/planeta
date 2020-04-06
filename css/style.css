@@ -456,26 +456,29 @@ a {
 html, body {
   overflow-x: hidden;
 }
-section[id^='section_'] {
+section {
   z-index: 100;
-  position: relative;
   display: flex;
   align-items: center;
+  position: relative;
 }
-section[id^='section_'] > .default-container {
+section > .default-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 @media (max-width: 899px) {
-  section[id^='section_'] > .default-container > .section-title, section[id^='section_'] > .default-container > .section-subtitle, section[id^='section_'] > .default-container > .section-logo {
+  section > .default-container > .section-title, section > .default-container > .section-subtitle, section > .default-container > .section-logo {
     width: 100% !important;
   }
 }
-section[id^='section_'] > .default-container .section-items {
+section > .default-container .section-items {
   width: 100%;
 }
-section[id^='section_'] h1, section[id^='section_'] h2, section[id^='section_'] h3, section[id^='section_'] h4, section[id^='section_'] h5, section[id^='section_'] h6 {
+section h1, section h2, section h3, section h4, section h5, section h6 {
   margin: 0;
+}
+.relative {
+  position: relative;
 }

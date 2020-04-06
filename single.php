@@ -10,8 +10,8 @@
 	<div class='default-container page-container'>
 		<aside class='sidebar sidebar-left'>
 			<span class='sidebar-inner'>
-				<?php if(is_active_sidebar('blog-left-sidebar')) {
-					dynamic_sidebar('blog-left-sidebar');
+				<?php if(is_active_sidebar('article-sidebar-left')) {
+					dynamic_sidebar('article-sidebar-right');
 				} ?>
 			</span>
 		</aside>
@@ -24,12 +24,27 @@
 
 		<aside class='sidebar sidebar-right'>
 			<span class='sidebar-inner'>
-				<?php if(is_active_sidebar('blog-right-sidebar')) {
-					dynamic_sidebar('blog-right-sidebar');
+				<?php if(is_active_sidebar('article-sidebar-right')) {
+					dynamic_sidebar('article-sidebar-right');
 				} ?>
 			</span>
 		</aside>
 	</div>
+
+	<?php if(is_active_sidebar('article-bottom-area')): ?>
+		<section id="article_bottom">
+			<?php
+				set_query_var('section', 'article_bottom');
+				get_template_part('template-parts/content/background'); ?>
+			<div
+					id='article_bottom-items'
+					class='default-container section-items'>
+				<?php dynamic_sidebar('article-bottom-area'); ?>
+			</div>
+		</section>
+		<?php
+			get_template_part('template-parts/frontpage/macy'); ?>
+	<?php endif; ?>
 
 	<div class="default-container page-container">
 		<div class="sidebar"></div>

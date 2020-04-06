@@ -26,25 +26,34 @@ if(get_theme_mod('related_posts_enable', false)):
 			set_query_var('section', 'related_posts');
 
 			$title = get_theme_mod('related_posts_title', 'Related Posts');
-			echo "<div id='related_posts' class='default-container'>";
-				echo "<h2>${title}</h2>";
 
 			$image_align = get_theme_mod("related_posts_image_align", 'all-left');
 			$masonry_num = get_theme_mod("related_posts_masonry_num", 3);
 			$image_align = $masonry_num == 1 ? $image_align : ''; ?>
-			<div
-					id='related_posts-items'
-					class='section-items <?php echo $image_align; ?>'>
 
-				<?php
-				while($query->have_posts())
-				{
-					$query->the_post();
-					get_template_part('template-parts/preset/wrapper');
-				} ?>
+			<section id='related_posts'><?php
+				get_template_part('template-parts/content/background'); ?>
 
-				<?php get_template_part('template-parts/frontpage/macy'); ?>
-			</div>
+				<div class='default-container'>
+					<h2>
+						<?php echo $title; ?>
+					</h2>
+
+					<div
+							id='related_posts-items'
+							class='section-items default-container <?php echo $image_align; ?>'>
+						<?php
+							while($query->have_posts())
+							{
+								$query->the_post();
+								get_template_part('template-parts/preset/wrapper');
+							} ?>
+
+						<?php get_template_part('template-parts/frontpage/macy'); ?>
+					</div>
+				</div>
+
+			</section>
 
 <?php
 		endif;

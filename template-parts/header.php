@@ -5,7 +5,7 @@
 	$render_social = get_theme_mod('social_menu_header', false);
 	$hover_class = get_theme_mod('typography_links_hover', 'none');
 	$navbar_class = get_theme_mod('navbar_type', 'up');
-	$hamburger_class = get_theme_mod('hamburger_class', 'boring');
+	$hamburger_class = get_theme_mod('hamburger_class', '3dx');
 
 	function nav_items()
 	{

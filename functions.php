@@ -28,33 +28,18 @@ add_action('after_setup_theme', 'register_menus');
 function register_widgets()
 {
 	register_sidebar(array(
-		'name'	=> 'Blog Left Sidebar',
-		'id'		=> 'blog-left-sidebar',
+		'name'	=> 'Left Article Sidebar',
+		'id'		=> 'article-sidebar-left',
 	));
 
 	register_sidebar(array(
-		'name'	=> 'Blog Right Sidebar',
-		'id'		=> 'blog-right-sidebar',
+		'name'	=> 'Right Article Sidebar',
+		'id'		=> 'article-sidebar-right',
 	));
 
 	register_sidebar(array(
-		'name'	=> 'Page Left Sidebar',
-		'id'		=> 'page-left-sidebar',
-	));
-
-	register_sidebar(array(
-		'name'	=> 'Page Right Sidebar',
-		'id'		=> 'page-right-sidebar',
-	));
-
-	register_sidebar(array(
-		'name'	=> 'Promotion',
-		'id'		=> 'promotion',
-	));
-
-	register_sidebar(array(
-		'name'	=> 'Extended Header',
-		'id'		=> 'extended-header',
+		'name'	=> 'Article Bottom Area',
+		'id'		=> 'article-bottom-area',
 	));
 
 	register_sidebar(array(
