@@ -4,30 +4,11 @@
 					get_template_part('template-parts/content/background'); ?>
 
 				<div class='default-container'>
-					<?php if(is_active_sidebar('extended-footer')): ?>
-						<div id='extended-footer' class='default-container'>
-							<?php dynamic_sidebar('footer-sidebar'); ?>
-						</div>
-						<script>
-							Macy({
-								container: '#extended-footer',
-								columns: <?php echo get_theme_mod('extended_footer_container', 3); ?>,
-								breakAt: {
-									960: <?php echo get_theme_mod('extended_footer_container', 3) == 1 ? 1: 2; ?>,
-									768: 1,
-								},
-								margin: 16,
-							});
-						</script>
-					<?php endif; ?>
-
-				<?php
-					$render_social = get_theme_mod('social_menu_footer', true);
-					if($render_social): ?>
-						<?php get_template_part('template-parts/content/social'); ?>
-				<?php endif; ?>
-
-					<nav id='footer-menu' class='notice'>
+					<?php
+						$hover_class = get_theme_mod('typography_links_hover', 'none'); ?>
+					<nav
+							id='footer-menu'
+							class='<?php echo $hover_class; ?>'>
 						<?php
 							$params = array(
 								'theme_location' 	=> 'footer-menu',
@@ -37,9 +18,35 @@
 							echo strip_tags(wp_nav_menu($params), '<a>');
 						?>
 					</nav>
-					<small class='notice'>
-						<?php echo get_theme_mod('footer_copyright', 'Copyright (C) 2020 - Lorem Ipsum. All Rights Reserved.'); ?>
-					</small>
+
+					<?php
+						if(is_active_sidebar('extended-footer')): ?>
+							<div id='extended-footer-items'>
+								<?php dynamic_sidebar('footer-sidebar'); ?>
+							</div>
+							<?php
+								set_query_var('section', 'extended_footer');
+								get_template_part('template-parts/frontpage/macy');
+						endif; ?>
+
+					<div id="footer-notice">
+						<small>
+							<?php
+								echo get_theme_mod('footer_copyright', 'Copyright (C) 2020 - Lorem Ipsum. All Rights Reserved.'); ?>
+						</small>
+
+							<nav>
+							<?php
+								$params = array(
+									'theme_location' 	=> 'footer-notice-menu',
+									'items_wrap'      => '%3$s',
+									'echo'						=> false,
+								);
+								echo strip_tags(wp_nav_menu($params), '<a>');
+							?>
+						</nav>
+					</div>
+
 				</div>
 			</footer>
 

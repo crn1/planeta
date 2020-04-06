@@ -6,44 +6,22 @@ jQuery(document).ready(function($)
 	let mainHeight = 'calc(100vh - ' + headerHeight + 'px - ' + footerHeight + 'px)'
 	$('main').css('min-height', mainHeight)
 
-	// Move top-navbar-items to top-navbar
-	$(window).on('load resize', function()
-	{
-		if($(window).width() < 960)
-		{
-			$('#top-menu').appendTo('#menu-container')
-		}else{
-			$('#menu-button').removeClass('is-active')
-			$('#menu-container').removeClass('active')
-			$('html').css('overflow', 'visible')
-			$('#top-menu').prependTo('#nav-container')
-		}
-		$('#top-menu').css('display', 'flex')
-	})
-
 	//Scroll sections
-	$('.top-navbar-item').on('click', function(event)
+	$('.top-menu-item').on('click', function(event)
 	{
 		event.preventDefault()
-		if($('#menu-container').hasClass('active'))
+		if($('#top-menu').hasClass('is-active'))
 		{
+			$('#top-menu').removeClass('is-active')
 			$('#menu-button').removeClass('is-active')
-			$('#menu-container').removeClass('active')
-			$('html').css('overflow', 'visible')
 		}
 		$.scrollTo('#' + $(this).attr('data-section-id'), 1700)
 	})
 
 	// Main Menu
 	$('#menu-button').on('click', function() {
-		$('#menu-container').toggleClass('active')
+		$('#top-menu').toggleClass('is-active')
 		$('#menu-button').toggleClass('is-active')
-		if($('#menu-button').hasClass('is-active'))
-		{
-			$('html').css('overflow', 'hidden')
-		}else{
-			$('html').css('overflow', 'visible')
-		}
 	})
 
 	//Fittext

@@ -1,45 +1,69 @@
 @import 'flex';
-
-.top-navbar-item, .social-item {
-	display: inline-flex !important;
-	align-items: center !important;
-}
+@import 'breakpoints';
 
 #top-menu {
-	display: none; //Here with reason, see main.js
-	flex-direction: row;
+	@include flexContainer($direction: column);
+	position: fixed;
 	z-index: 99900;
+	overflow: hidden;
+	background-color: #FFFFFF;
+	transition: all 0.17s ease-in;
+	width: 100vw;
+	height: 100vh;
 
-	@media screen and (min-width: 960px) {
-		& > a:not(:last-child) {
-			margin-right: 24px;
+	& .top-menu-item {
+		text-align: center;
+		display: inline-block !important;
+
+		&:not(:last-child) {
+			margin-bottom: 2rem;
 		}
 	}
 
-	@media screen and (max-width: 959px) {
-		flex-direction: column;
-		& > a {
-			text-align: center;
-			display: inline-block !important;
-			&:not(:last-child) {
-				margin-right: 0px !important;
-				margin-bottom: 24px;
+	&.menu {
+		&-up {
+			top: -100vh;
+			left: 0;
+			&.is-active {
+				top: 0;
+			}
+		}
+
+		&-down {
+			top: 100vh;
+			left: 0;
+			&.is-active {
+				top: 0;
+			}
+		}
+
+		&-left {
+			top: 0;
+			left: -100vw;
+			&.is-active {
+				left: 0;
+			}
+		}
+
+		&-right {
+			top: 0;
+			left: 100vw;
+			&.is-active {
+				left: 0;
 			}
 		}
 	}
 }
 
-.header-container {
+#main-header {
 	@include flexContainer($justify: space-between);
 	box-sizing: border-box;
-	margin-top: 32px;
-	margin-bottom: 32px;
-	padding-left: 32px;
-	padding-right: 32px;
+	margin: 32px 0;
+	padding: 0 32px;
 	z-index: 99990;
 	top: 0;
 	left: 0;
-	position: absolute;
+	position: fixed;
 	width: 100%;
 
 	#logo-container {
@@ -54,70 +78,7 @@
 	}
 }
 
-#menu-container {
-	z-index: 99900;
-}
-
 #menu-button {
 	display: flex;
-
-	padding: 5px;
-	@media screen and (min-width: 960px)
-	{
-		display: none;
-	}
-}
-
-.menu {
-	&-up,
-	&-down,
-	&-left,
-	&-right {
-		position: fixed;
-		z-index: 99900;
-		overflow: hidden;
-		background-color: #000;
-		@include flexContainer($direction: column);
-		transition: all 0.17s ease-in;
-		width: 100vw;
-		height: 100vh;
-
-		@media screen and (max-width: 768px) {
-			width: 100vw !important;
-			clip-path: none !important;
-			shape-outside: none !important;
-		}
-	}
-
-	&-up {
-		top: -100vh;
-		left: 0;
-		&.active {
-			top: 0;
-		}
-	}
-
-	&-down {
-		top: 100vh;
-		left: 0;
-		&.active {
-			top: 0;
-		}
-	}
-
-	&-left {
-		top: 0;
-		left: -100vw;
-		&.active {
-			left: 0;
-		}
-	}
-
-	&-right {
-		top: 0;
-		left: 100vw;
-		&.active {
-			left: 0;
-		}
-	}
+	padding: 0.5rem;
 }
