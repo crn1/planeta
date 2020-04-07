@@ -67,6 +67,21 @@ dl dt {
 .sticky {
   position: sticky;
 }
+#search-form {
+  position: relative;
+  z-index: 100;
+  border-bottom: 2px solid black;
+  display: flex;
+}
+#search-form input[type='text'] {
+  flex-grow: 1;
+  padding: 1rem 0.5rem;
+  border: 0;
+}
+#search-form button {
+  border: 0;
+  background-color: transparent;
+}
 .default-container {
   width: 100%;
   margin: 0 auto;

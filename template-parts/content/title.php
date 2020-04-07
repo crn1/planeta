@@ -22,6 +22,7 @@
 				<?php echo $page_lax; ?>
 				<?php echo $page_aos; ?>>
 			<?php echo $title; ?>
+			<?php get_search_form(); ?>
 		</h2>
 	</div>
 </div>

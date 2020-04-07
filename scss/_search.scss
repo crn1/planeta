@@ -1,0 +1,17 @@
+#search-form {
+	position: relative;
+	z-index: 100;
+	border-bottom: 2px solid black;
+	display: flex;
+
+	input[type='text'] {
+		flex-grow: 1;
+		padding: 1rem 0.5rem;
+		border: 0;
+	}
+
+	button {
+		border: 0;
+		background-color: transparent;
+	}
+}

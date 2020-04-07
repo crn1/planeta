@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 <?php get_template_part('template-parts/header'); ?>
 <main>
-	<?php if(have_posts()): while(have_posts()) : the_post(); ?>
-
 	<?php
-		$title = esc_html__('Search Results for: ', 'sigma') . get_search_query();
+		$title = esc_html__('Search Results for: ', 'sigma');
 		set_query_var('title', $title);
 		get_template_part('template-parts/content/title'); ?>
+
+	<?php if(have_posts()): while(have_posts()) : the_post(); ?>
 
 	<div class='default-container page-container'>
 		<aside class='sidebar sidebar-left'>
