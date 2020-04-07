@@ -1,6 +1,7 @@
 <?php
 
 define('LAX_LABELS', array(
+	'none'				=> esc_html__('None (default)', 'planeta'),
 	'linger'			=> esc_html__('Linger', 'planeta'),
 	'lazy'				=> esc_html__('Lazy', 'planeta'),
 	'eager'				=> esc_html__('Eager', 'planeta'),
