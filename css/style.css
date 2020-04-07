@@ -74,6 +74,7 @@ dl dt {
   display: flex;
 }
 #search-form input[type='text'] {
+  max-width: 100%;
   flex-grow: 1;
   padding: 1rem 0.5rem;
   border: 0;
