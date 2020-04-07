@@ -1,3 +1,5 @@
+@import 'breakpoints';
+
 .section-title, .section-subtitle, .page-title {
 	line-height: 1 !important;
 	margin-top: 0;
@@ -6,3 +8,20 @@
 	padding-bottom: 0;
 	overflow-wrap: break-word;
 }
+
+@mixin header-size($mod, $media-query) {
+	@include for-size($media-query)
+	{
+		h1 { font-size: calc(1rem*$mod*mod*$mod*$mod*$mod); }
+		h2 { font-size: calc(1rem*$mod*mod*$mod*$mod); }
+		h3 { font-size: calc(1rem*$mod*mod*$mod); }
+		h4 { font-size: calc(1rem*$mod*mod); }
+		h5 { font-size: calc(1rem*$mod); }
+		h6 { font-size: 1rem; }
+	}
+}
+
+@include header-size(1.414, desktop-and-up);
+@include header-size(1.333, laptop-only);
+@include header-size(1.333, tablet-only);
+@include header-size(1.333, mobile-only);

@@ -38,7 +38,7 @@ Kirki::add_field('planeta_config', array(
 	'settings'	=> 'hamburger_class',
 	'label'			=> esc_html__('Animation', 'planeta'),
 	'section'		=> 'header_menu_button',
-	'default'		=> 'boring',
+	'default'		=> '3dx',
 	'choices'		=> array(
 		'3dx'					=> esc_html__('3DX', 'planeta'),
 		'3dx-r'				=> esc_html__('3DX Reverse', 'planeta'),

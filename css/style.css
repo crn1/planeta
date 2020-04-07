@@ -128,6 +128,66 @@ dl dt {
   padding-bottom: 0;
   overflow-wrap: break-word;
 }
+@media (min-width: 1200px) {
+  h1 {
+    font-size: calc(1rem*$mod*mod*$mod*$mod*$mod);
+  }
+  h2 {
+    font-size: calc(1rem*$mod*mod*$mod*$mod);
+  }
+  h3 {
+    font-size: calc(1rem*$mod*mod*$mod);
+  }
+  h4 {
+    font-size: calc(1rem*$mod*mod);
+  }
+  h5 {
+    font-size: calc(1rem*$mod);
+  }
+  h6 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  h1 {
+    font-size: calc(1rem*$mod*mod*$mod*$mod*$mod);
+  }
+  h2 {
+    font-size: calc(1rem*$mod*mod*$mod*$mod);
+  }
+  h3 {
+    font-size: calc(1rem*$mod*mod*$mod);
+  }
+  h4 {
+    font-size: calc(1rem*$mod*mod);
+  }
+  h5 {
+    font-size: calc(1rem*$mod);
+  }
+  h6 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  h1 {
+    font-size: calc(1rem*$mod*mod*$mod*$mod*$mod);
+  }
+  h2 {
+    font-size: calc(1rem*$mod*mod*$mod*$mod);
+  }
+  h3 {
+    font-size: calc(1rem*$mod*mod*$mod);
+  }
+  h4 {
+    font-size: calc(1rem*$mod*mod);
+  }
+  h5 {
+    font-size: calc(1rem*$mod);
+  }
+  h6 {
+    font-size: 1rem;
+  }
+}
 .page-container {
   display: flex;
   flex-wrap: wrap;
@@ -401,6 +461,29 @@ dl dt {
 #footer-notice * {
   font-size: 80%;
 }
+section {
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+section > .default-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (max-width: 899px) {
+  section > .default-container > .section-title, section > .default-container > .section-subtitle, section > .default-container > .section-logo {
+    width: 100% !important;
+  }
+}
+section > .default-container .section-items {
+  width: 100%;
+}
+section h1, section h2, section h3, section h4, section h5, section h6, section p {
+  margin: 0;
+}
 .post-info {
   display: flex;
   align-items: center;
@@ -455,29 +538,6 @@ a {
 }
 html, body {
   overflow-x: hidden;
-}
-section {
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-section > .default-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-@media (max-width: 899px) {
-  section > .default-container > .section-title, section > .default-container > .section-subtitle, section > .default-container > .section-logo {
-    width: 100% !important;
-  }
-}
-section > .default-container .section-items {
-  width: 100%;
-}
-section h1, section h2, section h3, section h4, section h5, section h6 {
-  margin: 0;
 }
 .relative {
   position: relative;

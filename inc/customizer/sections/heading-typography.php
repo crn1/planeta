@@ -1,4 +1,5 @@
 <?php
+require_once(get_template_directory() . '/inc/customizer/misc/font-size.php');
 
 function planeta_add_section_heading_typography(&$index)
 {
@@ -12,7 +13,6 @@ function planeta_add_section_heading_typography(&$index)
 		'label'       => esc_html__('Title', 'planeta'),
 		'section'			=> "section_${index}_heading_typography",
 		'settings'    => "section_${index}_title_typo",
-		'default'			=> 'none',
 		'default'     => array(
 			'text-transform'    => 'uppercase',
 			'text-align'    		=> 'center',
@@ -27,24 +27,9 @@ function planeta_add_section_heading_typography(&$index)
 		),
 	));
 
-	Kirki::add_field('planeta_config', array(
-		'type'        => 'slider',
-		'label'       => esc_html__('Title Size (rem)', 'planeta'),
-		'section'			=> "section_${index}_heading_typography",
-		'settings'    => "section_${index}_title_size",
-		'default'     => 2,
-		'choices'     => array(
-			'min'					=> 0.1,
-			'max'					=> 7,
-			'step'				=> 0.1,
-		),
-		'output'			=> array(
-			array(
-				'element'			=> "#section_${index} .section-title",
-				'property'		=> 'font-size',
-				'units'				=> 'rem',
-			),
-		),
+	planeta_generate_font_size_setting(array(
+		'section'								=> "section_${index}_heading_typography",
+		'class'									=> "#section_${index} .section-title",
 	));
 
 	Kirki::add_field('planeta_config', array(
@@ -52,7 +37,6 @@ function planeta_add_section_heading_typography(&$index)
 		'label'       => esc_html__('Subtitle', 'planeta'),
 		'section'			=> "section_${index}_heading_typography",
 		'settings'    => "section_${index}_subtitle_typo",
-		'default'			=> 'none',
 		'default'     => array(
 			'text-transform'    => 'none',
 			'color'    					=> '#000000',
@@ -67,24 +51,9 @@ function planeta_add_section_heading_typography(&$index)
 		),
 	));
 
-	Kirki::add_field('planeta_config', array(
-		'type'        => 'slider',
-		'label'       => esc_html__('Subtitle Size (rem)', 'planeta'),
-		'section'			=> "section_${index}_heading_typography",
-		'settings'    => "section_${index}_subtitle_size",
-		'default'     => 2,
-		'choices'     => array(
-			'min'					=> 0.1,
-			'max'					=> 7,
-			'step'				=> 0.1,
-		),
-		'output'			=> array(
-			array(
-				'element'			=> "#section_${index} .section-subtitle",
-				'property'		=> 'font-size',
-				'units'				=> 'rem',
-			),
-		),
+	planeta_generate_font_size_setting(array(
+		'section'								=> "section_${index}_heading_typography",
+		'class'									=> "#section_${index} .section-subtitle",
 	));
 
 }

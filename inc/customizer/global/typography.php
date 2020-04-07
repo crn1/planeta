@@ -1,7 +1,7 @@
 <?php
 
 Kirki::add_panel('typography_panel', array(
-	'title'       => esc_html__('Typography', 'planeta' ),
+	'title'       => esc_html__('Typography', 'planeta'),
 	'panel'       => 'global_panel',
 ));
 
@@ -12,15 +12,21 @@ function typography_generator($args)
 		'section'							=> '',
 		'class'								=> '',
 		'enable_sizing'				=> true,
-		'enable_fittext'			=> false,
 		'enable_hover'				=> false,
 		'default_typography'	=> array(
+			//POPRAVI ME
 			'text-transform'			=> 'none',
 			'color'								=> '#000000',
 			'font-family'					=> 'inherit',
 			'variant'							=> 'regular',
 			'line-height'					=> '1.5',
 			'letter-spacing'			=> '0',
+		),
+		'size_units'					=> 'rem',
+		'size_choices'				=> array(
+			'min'									=> 0.1,
+			'max'									=> 7,
+			'step'								=> 0.1,
 		),
 	), $args);
 
@@ -36,7 +42,7 @@ function typography_generator($args)
 	$typography = array_merge(array(
 			'text-transform'			=> 'none',
 			'color'								=> '#000000',
-			'font-family'					=> 'rubik',
+			'font-family'					=> 'inherit',
 			'variant'							=> 'regular',
 			'line-height'					=> '1.5',
 			'letter-spacing'			=> '0',
@@ -47,7 +53,7 @@ function typography_generator($args)
 		'label'       => esc_html__('Typography', 'planeta'),
 		'section'     => "typography_${section}",
 		'settings'    => "typography_${section}",
-		'default'     => $typography,
+		'default'			=> $args['default_typography'],
 		'output'      => array(
 			array(
 				'element' 		=> $class,
@@ -59,33 +65,17 @@ function typography_generator($args)
 	{
 		Kirki::add_field('planeta_config', array(
 			'type'        => 'slider',
-			'label'       => esc_html__('Size (rem)', 'planeta'),
+			'label'       => esc_html__('Size', 'planeta'),
 			'section'     => "typography_${section}",
 			'settings'    => "typography_${section}_size",
-			'default'     => 2,
-			'choices'     => array(
-				'min'					=> 0.1,
-				'max'					=> 7,
-				'step'				=> 0.1,
-			),
+			'choices'     => $args['size_choices'],
 			'output'			=> array(
 				array(
-					'element'			=> $class,
-					'units'				=> 'rem',
-					'property'		=> 'font-size',
+					'element'				=> $class,
+					'property'			=> 'font-size',
+					'units'					=> $args['size_units'],
 				),
 			),
-		));
-	}
-
-	if($args['enable_fittext'])
-	{
-		Kirki::add_field('planeta_config', array(
-			'type'        => 'toggle',
-			'label'       => esc_html__('Fit Text', 'planeta'),
-			'section'     => "typography_${section}",
-			'settings'    => "typography_${section}_fittext",
-			'default'     => false,
 		));
 	}
 
@@ -125,49 +115,8 @@ function typography_generator($args)
 	}
 }
 
-Kirki::add_section('typography_main', array(
-	'title'       => esc_html__('Global', 'planeta' ),
-	'panel'       => 'typography_panel',
-));
-
-Kirki::add_field('planeta_config', array(
-	'type'        => 'typography',
-	'label'       => esc_html__('Main Typography', 'planeta'),
-	'section'     => 'typography_main',
-	'settings'    => 'typography_main',
-	'default'     => array(
-		'font-family'    => 'Roboto',
-		'variant'        => 'regular',
-		'line-height'    => '1.5',
-		'letter-spacing' => '0',
-		'color'    			=> '#000000',
-	),
-	'output'      => array(
-		array(
-			'element'				=> 'body',
-		),
-	),
-));
-
-Kirki::add_field('planeta_config', array(
-	'type'        => 'slider',
-	'label'       => esc_html__('Main Typography Size (px)', 'planeta'),
-	'section'     => 'typography_main',
-	'settings'    => 'typography_main_size',
-	'default'     => 16,
-	'choices'     => array(
-		'min'					=> 16,
-		'max'					=> 48,
-		'step'				=> 1,
-	),
-	'output'			=> array(
-		array(
-			'element'				=> array('html', 'body'),
-			'property'			=> 'font-size',
-			'value_pattern' => 'calc(16px + ($ - 16) * (100vw - 600px) / 680)',
-		),
-	),
-));
+require_once(get_template_directory() . '/inc/customizer/global/typography-main.php');
+require_once(get_template_directory() . '/inc/customizer/global/typography-heading.php');
 
 typography_generator(array(
 	'name' 					=> 'Button Link',
@@ -180,21 +129,18 @@ typography_generator(array(
 	'name' 						=> 'Section Title',
 	'section' 				=> 'section_title',
 	'class'						=> '.section-title',
-	'enable_fittext'	=> true,
 ));
 
 typography_generator(array(
 	'name' 						=> 'Section Subtitle',
 	'section' 				=> 'section_subtitle',
 	'class'						=> '.section-subtitle',
-	'enable_fittext'	=> true,
 ));
 
 typography_generator(array(
 	'name'								=> 'Page Title',
 	'section'							=> 'page_title',
 	'class'								=> '.page-title',
-	'enable_fittext'			=> true,
 	'default_typography' 	=> array(
 		'text-align'					=> 'center',
 	),
@@ -204,17 +150,6 @@ typography_generator(array(
 	'name' 						=> 'Page Subtitle',
 	'section' 				=> 'page_subtitle',
 	'class'						=> '.page-subtitle',
-	'enable_fittext'	=> true,
-	'default_typography' 	=> array(
-		'text-align'					=> 'center',
-	),
-));
-
-typography_generator(array(
-	'name' 						=> 'Page Subtitle',
-	'section' 				=> 'page_subtitle',
-	'class'						=> '.page-subtitle',
-	'enable_fittext'	=> true,
 	'default_typography' 	=> array(
 		'text-align'					=> 'center',
 	),

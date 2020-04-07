@@ -12,7 +12,6 @@ function planeta_add_section_items_typography(&$index)
 		'label'       => esc_html__('Primary Typography', 'planeta'),
 		'section'			=> "section_${index}_items_typography",
 		'settings'    => "section_${index}_primary_typo",
-		'default'			=> 'none',
 		'default'     => array(
 			'text-transform'    => 'uppercase',
 			'text-align'    		=> 'center',
@@ -32,7 +31,6 @@ function planeta_add_section_items_typography(&$index)
 		'label'       => esc_html__('Primary Size (rem)', 'planeta'),
 		'section'			=> "section_${index}_items_typography",
 		'settings'    => "section_${index}_primary_size",
-		'default'     => 2,
 		'choices'     => array(
 			'min'					=> 0.1,
 			'max'					=> 7,
@@ -52,7 +50,6 @@ function planeta_add_section_items_typography(&$index)
 		'label'       => esc_html__('Secondary Typography', 'planeta'),
 		'section'			=> "section_${index}_items_typography",
 		'settings'    => "section_${index}_secondary_typo",
-		'default'			=> 'none',
 		'default'     => array(
 			'text-transform'    => 'none',
 			'color'    					=> '#000000',
@@ -72,7 +69,6 @@ function planeta_add_section_items_typography(&$index)
 		'label'       => esc_html__('Secondary Size (rem)', 'planeta'),
 		'section'			=> "section_${index}_items_typography",
 		'settings'    => "section_${index}_secondary_size",
-		'default'     => 2,
 		'choices'     => array(
 			'min'					=> 0.1,
 			'max'					=> 7,

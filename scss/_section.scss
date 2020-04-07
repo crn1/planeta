@@ -1,0 +1,27 @@
+section {
+	z-index: 100;
+	display: flex;
+	align-items: center;
+	position: relative;
+
+	& > .default-container {
+		@include flexContainer($direction: column);
+
+		& > .section-title,
+		& > .section-subtitle,
+		& > .section-logo {
+			@include for-size(tablet-and-down)
+			{
+				width: 100% !important;
+			}
+		}
+
+		.section-items {
+			width: 100%;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6, p {
+		margin: 0;
+	}
+}
