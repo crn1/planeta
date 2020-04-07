@@ -19,15 +19,17 @@
 			class='default-container section-items <?php echo $image_align; ?>'>
 		<?php
 			if(have_posts()): while(have_posts()): the_post();
-				get_template_part('template-parts/frontpage/preset/wrapper');
+				get_template_part('template-parts/preset/wrapper');
 			endwhile; endif; ?>
 		<?php
 			set_query_var('section', 'page');
 			get_template_part('template-parts/frontpage/macy'); ?>
 
+	</div>
+
+	<div class='page-navigation default-container'>
 		<?php previous_posts_link(); ?>
 		<?php next_posts_link(); ?>
-
 	</div>
 
 </main>

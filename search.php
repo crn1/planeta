@@ -1,44 +1,36 @@
 <?php get_header(); ?>
-<?php get_template_part('template-parts/header'); ?>
-<main>
+<?php
+	get_template_part('template-parts/header'); ?>
+
+<main id='page'>
 	<?php
-		$title = esc_html__('Search Results for: ', 'sigma');
-		set_query_var('title', $title);
+		set_query_var('title', 'Search Results for:');
 		get_template_part('template-parts/content/title'); ?>
 
-	<?php if(have_posts()): while(have_posts()) : the_post(); ?>
+		<?php
+			set_query_var('card_preset', 'posts');
+			set_query_var('section', 'page');
 
-	<div class='default-container page-container'>
-		<aside class='sidebar sidebar-left'>
-			<span class="sidebar-inner">
-				<?php if(is_active_sidebar('page-left-sidebar')) {
-					dynamic_sidebar('page-left-sidebar');
-				} ?>
-			</span>
-		</aside>
+			$image_align = get_theme_mod("page_image_align", 'all-left');
+			$masonry_num = get_theme_mod("page_masonry_num", 3);
+			$image_align = $masonry_num == 1 ? $image_align : ''; ?>
+	<div
+			id='page-items'
+			class='default-container section-items <?php echo $image_align; ?>'>
+		<?php
+			if(have_posts()): while(have_posts()): the_post();
+				get_template_part('template-parts/preset/wrapper');
+			endwhile; endif; ?>
+		<?php
+			set_query_var('section', 'page');
+			get_template_part('template-parts/frontpage/macy'); ?>
 
-		<article class='article-container'>
-			<?php the_content(); ?>
-			<?php wp_link_pages(); ?>
-		</article>
-
-		<aside class='sidebar sidebar-right'>
-			<span class="sidebar-inner">
-				<?php if(is_active_sidebar('page-right-sidebar')) {
-					dynamic_sidebar('page-right-sidebar');
-				} ?>
-			</span>
-		</aside>
 	</div>
 
-	<div class="default-container page-container">
-		<div class="sidebar"></div>
-		<div class='article-container'>
-			<?php comments_template(); ?>
-		</div>
-		<div class="sidebar"></div>
+	<div class='page-navigation default-container'>
+		<?php previous_posts_link(); ?>
+		<?php next_posts_link(); ?>
 	</div>
 
-	<?php endwhile; endif; ?>
 </main>
 <?php get_footer(); ?>

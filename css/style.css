@@ -74,14 +74,16 @@ dl dt {
   display: flex;
 }
 #search-form input[type='text'] {
-  max-width: 100%;
+  min-width: 0;
   flex-grow: 1;
   padding: 1rem 0.5rem;
   border: 0;
+  appearance: none;
 }
 #search-form button {
   border: 0;
   background-color: transparent;
+  appearance: none;
 }
 .default-container {
   width: 100%;
