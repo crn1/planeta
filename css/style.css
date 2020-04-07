@@ -267,6 +267,9 @@ dl dt {
 .card > .info {
   width: 100%;
 }
+.card > .info .url {
+  display: inline-block;
+}
 @media screen and (max-width: 768px) {
   .card > .image {
     margin-bottom: 2rem;

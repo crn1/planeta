@@ -8,7 +8,7 @@
 	<?php the_excerpt(); ?>
 </p>
 
-<p class='url <?php echo get_theme_mod('typography_links_hover', 'none'); ?>'>
+<p class='url <?php echo get_theme_mod('typography_button_link_hover', 'none'); ?>'>
 	<a class='button-link' href='<?php the_permalink(); ?>'>
 		<?php echo esc_html__('Read More...', 'planeta'); ?>
 	</a>

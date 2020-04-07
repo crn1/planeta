@@ -7,6 +7,10 @@
 
 	& > .info {
 		width: 100%;
+
+		.url {
+			display: inline-block;
+		}
 	}
 
 	& > .image {

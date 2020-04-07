@@ -9,7 +9,7 @@ $render_url = array_key_exists('url', $item);
 $render_url = $render_title ? !empty($item['url']) : false; ?>
 
 <?php if($render_title && $render_url):
-	$hover_class = get_theme_mod('typography_links_hover', 'none');
+	$hover_class = get_theme_mod('typography_button_link_hover', 'none');
 	$url_tab = $item['url_tab'] ? '_blank' : ''; ?>
 
 	<p class='url primary-text <?php echo $hover_class; ?>'>

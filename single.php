@@ -16,7 +16,9 @@
 			</span>
 		</aside>
 
-		<article class='article-container'>
+		<article
+				id='post-<?php echo the_ID(); ?>
+				class='article-container <?php post_class(); ?>'>
 			<?php get_template_part('template-parts/content/post-info'); ?>
 			<?php the_content(); ?>
 			<?php wp_link_pages(); ?>

@@ -8,7 +8,9 @@
 		get_template_part('template-parts/content/title'); ?>
 
 	<div class='default-container page-container'>
-		<article class='article-container'>
+		<article
+				id='post-<?php echo the_ID(); ?>
+				class='article-container <?php post_class(); ?>'>
 			<?php the_content(); ?>
 			<?php wp_link_pages(); ?>
 			<?php comments_template(); ?>

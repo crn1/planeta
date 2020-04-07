@@ -3,18 +3,18 @@
 	$logo_text = get_theme_mod('logo_text', '');
 
 	$render_social = get_theme_mod('social_menu_header', false);
-	$hover_class = get_theme_mod('typography_links_hover', 'none');
 	$navbar_class = get_theme_mod('navbar_type', 'up');
 	$hamburger_class = get_theme_mod('hamburger_class', '3dx');
 
 	function nav_items()
 	{
+		$hover_class = get_theme_mod('typography_button_link_hover', 'none');
 		$layout = get_theme_mod('sections_layout', array());
 		foreach($layout as $section)
 		{
 			$name = get_theme_mod("${section}_name", 'Section');
 			$slug = sanitize_title($name);
-			echo "<a href='#${slug}' data-section-id='${section}' class='button-link top-menu-item'>${name}</a>";
+			echo "<span class='relative top-menu-item ${hover_class}'><a href='#${slug}' data-section-id='${section}' class='button-link'>${name}</a></span>";
 		}
 	}
 ?>
@@ -38,7 +38,7 @@
 
 <nav
 		id='top-menu'
-		class='menu-<?php echo $navbar_class; ?> <?php echo $hover_class; ?>'>
+		class='menu-<?php echo $navbar_class; ?>'>
 	<?php nav_items(); ?>
 
 	<?php if($render_social): ?>
