@@ -73,7 +73,8 @@ function init_scripts()
 	wp_enqueue_style('icofont-css', get_template_directory_uri() . '/css/icofont.min.css', false, '1.0.1', 'all');
 
 	// Hamburgers CSS
-	wp_enqueue_style('hamburgers-css', get_template_directory_uri() . '/css/hamburgers.min.css', false, '1.1.3', 'all');
+	$hamburger_class = get_theme_mod('hamburger_class', '3dx');
+	wp_enqueue_style('hamburger-css', get_template_directory_uri() . "/css/hamburgers/${hamburger_class}.css", false, 'all');
 
 	// AOS CSS and JS
 	wp_enqueue_style('aos-css', get_template_directory_uri() . '/css/aos.css', false, '3.0.0', 'all');

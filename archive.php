@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php
-	get_template_part('template-parts/header'); ?>
+	get_template_part('template-parts/navbar'); ?>
 
 <main id='page'>
 	<?php
