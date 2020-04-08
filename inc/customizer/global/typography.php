@@ -83,23 +83,44 @@ function typography_generator($args)
 	{
 		Kirki::add_field('planeta_config', array(
 			'type'        => 'select',
-			'label'       => esc_html__('Style', 'planeta'),
+			'label'       => esc_html__('Border/Line Style', 'planeta'),
 			'section'     => "typography_${section}",
 			'settings'    => "typography_${section}_hover",
 			'default'     => 'none',
 			'choices'     => array(
-				'none'       			=> esc_html__('None 1(default)', 'planeta'),
-				'cl-effect-1'			=> esc_html__('None 2(default)', 'planeta'),
-				'cl-effect-3'			=> esc_html__('None dfsaja(default)', 'planeta'),
-				'cl-effect-4'			=> esc_html__('None sa(default)', 'planeta'),
-				'cl-effect-6'			=> esc_html__('None g(default)', 'planeta'),
-				'cl-effect-7'			=> esc_html__('None h(default)', 'planeta'),
-				'cl-effect-8'			=> esc_html__('None z(default)', 'planeta'),
-				'cl-effect-13'		=> esc_html__('None n(default)', 'planeta'),
-				'cl-effect-14'		=> esc_html__('None m(default)', 'planeta'),
-				'cl-effect-18'		=> esc_html__('None o(default)', 'planeta'),
-				'cl-effect-21'		=> esc_html__('None ddffee(default)', 'planeta'),
+				'none'       			=> esc_html__('None (default)', 'planeta'),
+				'brackets-1'			=> esc_html__('Brackets 1', 'planeta'),
+				'brackets-2'			=> esc_html__('Brackets 2', 'planeta'),
+				'brackets-3'			=> esc_html__('Brackets 3', 'planeta'),
+				'brackets-4'			=> esc_html__('Brackets 4', 'planeta'),
+				'brackets-5'			=> esc_html__('Brackets 5', 'planeta'),
+				'brackets-6'			=> esc_html__('Brackets 6', 'planeta'),
+				'underline-1'			=> esc_html__('Underline 1', 'planeta'),
+				'underline-2'			=> esc_html__('Underline 2', 'planeta'),
+				'underline-3'			=> esc_html__('Underline 3', 'planeta'),
+				'underline-4'			=> esc_html__('Underline 4', 'planeta'),
+				'underline-5'			=> esc_html__('Underline 5', 'planeta'),
+				'underline-6'			=> esc_html__('Underline 6', 'planeta'),
+				'box-1'						=> esc_html__('Box 1', 'planeta'),
+				'box-2'						=> esc_html__('Box 2', 'planeta'),
+				'border-switch'		=> esc_html__('Border Switch', 'planeta'),
+				'cross'						=> esc_html__('Cross', 'planeta'),
 			),
+		));
+
+		require_once(get_template_directory() . '/inc/customizer/misc/hover.php');
+		Kirki::add_field('planeta_config', array(
+			'type'        => 'slider',
+			'label'       => esc_html__('Border/Line Size', 'planeta'),
+			'section'     => "typography_${section}",
+			'settings'    => "typography_${section}_border_size",
+			'default'			=> '0.25',
+			'choices'			=> array(
+				'min'					=> '0.05',
+				'max'					=> '1',
+				'step'				=> '0.05',
+			),
+			'output'			=> HOVER_BORDER,
 		));
 	}
 }

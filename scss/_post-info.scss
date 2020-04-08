@@ -1,4 +1,4 @@
-@import 'flex';
+@import 'modules/flex';
 
 .post-info {
 	@include flexContainer($justify: space-between);

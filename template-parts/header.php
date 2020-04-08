@@ -8,13 +8,21 @@
 
 	function nav_items()
 	{
-		$hover_class = get_theme_mod('typography_button_link_hover', 'none');
 		$layout = get_theme_mod('sections_layout', array());
 		foreach($layout as $section)
 		{
 			$name = get_theme_mod("${section}_name", 'Section');
-			$slug = sanitize_title($name);
-			echo "<span class='relative top-menu-item ${hover_class}'><a href='#${slug}' data-section-id='${section}' class='button-link'>${name}</a></span>";
+			$slug = sanitize_title($name); ?>
+			<span
+					class='top-menu-item relative hover-<?php echo get_query_var('hover_class', 'none'); ?>'>
+				<a
+						href='#<?php echo $slug; ?>'
+						data-section-id='<?php echo $section; ?>'
+						class='button-link'>
+					<?php echo $name; ?>
+				</a>
+			</span>
+			<?php
 		}
 	}
 ?>

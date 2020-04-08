@@ -1,0 +1,54 @@
+.hover-cross {
+	position: relative;
+	z-index: 1;
+}
+
+.hover-cross a {
+	padding: 0 0.25rem;
+	-webkit-transition: color 0.27s;
+	-moz-transition: color 0.27s;
+	transition: color 0.27s;
+}
+
+.hover-cross a::before,
+.hover-cross a::after {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 50%;
+	height: 0.25rem;
+	margin-top: -1px;
+	background: #FF0000;
+	content: '';
+	z-index: -1;
+	-webkit-transition: -webkit-transform 0.27s, opacity 0.27s;
+	-moz-transition: -moz-transform 0.27s, opacity 0.27s;
+	transition: transform 0.27s, opacity 0.27s;
+	pointer-events: none;
+}
+
+.hover-cross a::before {
+	-webkit-transform: translateY(-1rem);
+	-moz-transform: translateY(-1rem);
+	transform: translateY(-1rem);
+}
+
+.hover-cross a::after {
+	-webkit-transform: translateY(1rem);
+	-moz-transform: translateY(1rem);
+	transform: translateY(1rem);
+}
+
+.hover-cross a:hover::before,
+.hover-cross a:focus::before {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.hover-cross a:hover::after,
+.hover-cross a:focus::after {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}

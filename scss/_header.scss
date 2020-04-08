@@ -1,5 +1,5 @@
-@import 'flex';
-@import 'breakpoints';
+@import 'modules/flex';
+@import 'modules/breakpoints';
 
 #top-menu {
 	@include flexContainer($direction: column);

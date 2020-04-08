@@ -1,0 +1,33 @@
+.hover-brackets-6 a::before,
+.hover-brackets-6 a::after {
+	display: inline-block;
+	opacity: 0;
+	content: '~';
+	-webkit-transition: -webkit-transform 0.27s, opacity 0.17s;
+	-moz-transition: -moz-transform 0.27s, opacity 0.17s;
+	transition: transform 0.27s, opacity 0.17s;
+}
+
+.hover-brackets-6 a::before {
+	margin-right: 0.5rem;
+	-webkit-transform: translateX(1rem);
+	-moz-transform: translateX(1rem);
+	transform: translateX(1rem);
+}
+
+.hover-brackets-6 a::after {
+	margin-left: 0.5rem;
+	-webkit-transform: translateX(-1rem);
+	-moz-transform: translateX(-1rem);
+	transform: translateX(-1rem);
+}
+
+.hover-brackets-6 a:hover::before,
+.hover-brackets-6 a:hover::after,
+.hover-brackets-6 a:focus::before,
+.hover-brackets-6 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}

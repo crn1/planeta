@@ -1,0 +1,30 @@
+/* Effect 4: bottom border enlarge */
+.hover-underline-2 a {
+	padding: 0 0 0.5rem;
+}
+
+.hover-underline-2 a::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #FF0000;
+	content: '';
+	opacity: 0;
+	-webkit-transition: height 0.27s, opacity 0.27s, -webkit-transform 0.27s;
+	-moz-transition: height 0.27s, opacity 0.27s, -moz-transform 0.27s;
+	transition: height 0.27s, opacity 0.27s, transform 0.27s;
+	-webkit-transform: translateY(-0.5rem);
+	-moz-transform: translateY(-0.5rem);
+	transform: translateY(-0.5rem);
+}
+
+.hover-underline-2 a:hover::after,
+.hover-underline-2 a:focus::after {
+	height: 0.25rem;
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}

@@ -1,0 +1,57 @@
+/* Effect 14: border switch */
+.hover-border-switch a {
+	padding: 0 1rem;
+	height: 3rem;
+	line-height: 3rem;
+}
+
+.hover-border-switch a::before,
+.hover-border-switch a::after {
+	position: absolute;
+	width: 2rem;
+	height: 0.2rem;
+	background: #FF0000;
+	content: '';
+	-webkit-transition: all 0.27s;
+	-moz-transition: all 0.27s;
+	transition: all 0.27s;
+	pointer-events: none;
+}
+
+.hover-border-switch a::before {
+	top: 0;
+	left: 0;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+.hover-border-switch a::after {
+	right: 0;
+	bottom: 0;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	-webkit-transform-origin: 100% 0;
+	-moz-transform-origin: 100% 0;
+	transform-origin: 100% 0;
+}
+
+.hover-border-switch a:hover::before,
+.hover-border-switch a:focus::before {
+	left: 50%;
+	-webkit-transform: rotate(0deg) translateX(-50%);
+	-moz-transform: rotate(0deg) translateX(-50%);
+	transform: rotate(0deg) translateX(-50%);
+}
+
+.hover-border-switch a:hover::after,
+.hover-border-switch a:focus::after {
+	right: 50%;
+	-webkit-transform: rotate(0deg) translateX(50%);
+	-moz-transform: rotate(0deg) translateX(50%);
+	transform: rotate(0deg) translateX(50%);
+}

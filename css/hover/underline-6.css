@@ -1,0 +1,48 @@
+.hover-underline-6 a {
+	padding: 0.5rem 1rem;
+	text-shadow: none;
+	-webkit-transition: color 0.27s;
+	-moz-transition: color 0.27s;
+	transition: color 0.27s;
+}
+
+.hover-underline-6 a::before,
+.hover-underline-6 a::after {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 0.25rem;
+	background: #FF0000;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.27s, -webkit-transform 0.27s;
+	-moz-transition: opacity 0.27s, -moz-transform 0.27s;
+	transition: opacity 0.27s, transform 0.27s;
+	-webkit-transform: translateY(-0.5rem);
+	-moz-transform: translateY(-0.5rem);
+	transform: translateY(-0.5rem);
+}
+
+.hover-underline-6 a::before {
+	top: 0;
+	-webkit-transform: translateY(-0.5rem);
+	-moz-transform: translateY(-0.5rem);
+	transform: translateY(-0.5rem);
+}
+
+.hover-underline-6 a::after {
+	bottom: 0;
+	-webkit-transform: translateY(0.5rem);
+	-moz-transform: translateY(0.5rem);
+	transform: translateY(0.5rem);
+}
+
+.hover-underline-6 a:hover::before,
+.hover-underline-6 a:focus::before,
+.hover-underline-6 a:hover::after,
+.hover-underline-6 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}

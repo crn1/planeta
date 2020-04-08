@@ -1,0 +1,29 @@
+/* Effect 3: bottom line slides/fades in */
+.hover-underline-1 a {
+	padding: 0.5rem 0;
+}
+
+.hover-underline-1 a::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 0.25rem;
+	background: #FF0000;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.27s, -webkit-transform 0.27s;
+	-moz-transition: opacity 0.27s, -moz-transform 0.27s;
+	transition: opacity 0.27s, transform 0.27s;
+	-webkit-transform: translateY(0.5rem);
+	-moz-transform: translateY(0.5rem);
+	transform: translateY(0.5rem);
+}
+
+.hover-underline-1 a:hover::after,
+.hover-underline-1 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0rem);
+	-moz-transform: translateY(0rem);
+	transform: translateY(0rem);
+}
