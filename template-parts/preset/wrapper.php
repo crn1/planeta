@@ -46,7 +46,7 @@
 			<?php echo $info_aos; ?>
 			<?php echo $info_lax; ?>>
 
-	<?php get_template_part("template-parts/preset/${card_preset}"); ?>
+		<?php get_template_part("template-parts/preset/${card_preset}"); ?>
 
 	</div>
 

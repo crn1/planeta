@@ -9,33 +9,34 @@
 
 #footer-menu {
 	@include flexContainer();
+	z-index: 100;
+	position: relative;
 
 	@include for-size(phone-only) {
 		flex-direction: column;
 		justify-content: center;
 	}
 
-	a:not(:last-child) {
+	.button-link:not(:last-child) {
 		margin-right: 1rem;
+		margin-bottom: 1rem;
 
 		@include for-size(phone-only) {
 			text-align: center;
 			margin-right: 0;
-			margin-bottom: 1rem;
 		}
 	}
 }
 
 #footer-notice {
 	@include flexContainer($justify: space-between);
-	padding: 2rem 0;
+	padding: 2rem 0 1rem;
 
-	@include for-size(phone-only) {
+	@include for-size(tablet-and-down) {
 		flex-direction: column;
 		justify-content: center;
 		nav {
 			text-align: center;
-			margin-bottom: 1rem;
 		}
 	}
 

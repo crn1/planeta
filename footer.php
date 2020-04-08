@@ -5,17 +5,18 @@
 
 				<div class='default-container'>
 					<?php
-						$hover_class = get_theme_mod('typography_links_hover', 'none'); ?>
-					<nav
-							id='footer-menu'
-							class='<?php echo $hover_class; ?>'>
+						$hover_class = get_query_var('hover_class'); ?>
+					<nav id='footer-menu'>
 						<?php
 							$params = array(
 								'theme_location' 	=> 'footer-menu',
 								'items_wrap'      => '%3$s',
 								'echo'						=> false,
 							);
-							echo strip_tags(wp_nav_menu($params), '<a>');
+							$menu = strip_tags(wp_nav_menu($params), '<a>');
+							$menu = str_replace('<a', "<span class='relative button-link hover-${hover_class}'><a", $menu);
+							$menu = str_replace('</a>', "</a></span>", $menu);
+							echo $menu;
 						?>
 					</nav>
 

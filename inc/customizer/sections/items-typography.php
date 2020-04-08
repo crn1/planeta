@@ -82,25 +82,6 @@ function planeta_add_section_items_typography(&$index)
 			),
 		),
 	));
-
-	Kirki::add_field('planeta_config', array(
-		'type'        => 'radio-buttonset',
-		'label'       => esc_html__('Button Link Align', 'planeta'),
-		'section'			=> "section_${index}_items_typography",
-		'settings'    => "section_${index}_button_link_align",
-		'default'     => 'left',
-		'choices'     => array(
-			'left'       => esc_html__('Left', 'planeta'),
-			'center'     => esc_html__('Center', 'planeta'),
-			'right'      => esc_html__('Right', 'planeta'),
-		),
-		'output'			=> array(
-			array(
-				'element'			=> "#section_${index}-items .card > .info > .url",
-				'property'		=> 'text-align',
-			),
-		),
-	));
 }
 
 ?>

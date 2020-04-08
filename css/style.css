@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .alignleft {
   text-align: left;
@@ -131,6 +132,7 @@ dl dt {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 #loading-container .logo {
   margin-bottom: 2rem;
@@ -268,6 +270,7 @@ dl dt {
   width: 100%;
 }
 .card > .info .url {
+  text-align: center;
   display: inline-block;
 }
 @media screen and (max-width: 768px) {
@@ -311,7 +314,6 @@ dl dt {
 .card-buttons .url {
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 1;
 }
 @media screen and (min-width: 769px) {
   .all-left .card > .image {
@@ -362,6 +364,7 @@ dl dt {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  flex-wrap: wrap;
   position: fixed;
   z-index: 99900;
   overflow: hidden;
@@ -410,6 +413,7 @@ dl dt {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  flex-wrap: wrap;
   box-sizing: border-box;
   margin: 32px 0;
   padding: 0 32px;
@@ -442,6 +446,9 @@ dl dt {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
+  z-index: 100;
+  position: relative;
 }
 @media (max-width: 599px) {
   #footer-menu {
@@ -449,14 +456,14 @@ dl dt {
     justify-content: center;
   }
 }
-#footer-menu a:not(:last-child) {
+#footer-menu .button-link:not(:last-child) {
   margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 @media (max-width: 599px) {
-  #footer-menu a:not(:last-child) {
+  #footer-menu .button-link:not(:last-child) {
     text-align: center;
     margin-right: 0;
-    margin-bottom: 1rem;
   }
 }
 #footer-notice {
@@ -464,16 +471,16 @@ dl dt {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  padding: 2rem 0;
+  flex-wrap: wrap;
+  padding: 2rem 0 1rem;
 }
-@media (max-width: 599px) {
+@media (max-width: 899px) {
   #footer-notice {
     flex-direction: column;
     justify-content: center;
   }
   #footer-notice nav {
     text-align: center;
-    margin-bottom: 1rem;
   }
 }
 #footer-notice > nav a:not(:last-child) {
@@ -493,6 +500,7 @@ section > .default-container {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 @media (max-width: 899px) {
   section > .default-container > .section-title, section > .default-container > .section-subtitle, section > .default-container > .section-logo {
@@ -510,6 +518,7 @@ section h1, section h2, section h3, section h4, section h5, section h6, section 
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .post-info > .user {
   display: flex;

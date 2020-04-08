@@ -21,6 +21,7 @@ function typography_generator($args)
 			'variant'							=> 'regular',
 			'line-height'					=> '1.5',
 			'letter-spacing'			=> '0',
+			'text-align'					=> 'left',
 		),
 		'size_units'					=> 'rem',
 		'size_choices'				=> array(
@@ -46,6 +47,7 @@ function typography_generator($args)
 			'variant'							=> 'regular',
 			'line-height'					=> '1.5',
 			'letter-spacing'			=> '0',
+			'text-align'					=> 'left',
 	), $args['default_typography']);
 
 	Kirki::add_field('planeta_config', array(
@@ -110,17 +112,22 @@ function typography_generator($args)
 
 		require_once(get_template_directory() . '/inc/customizer/misc/hover.php');
 		Kirki::add_field('planeta_config', array(
-			'type'        => 'slider',
-			'label'       => esc_html__('Border/Line Size', 'planeta'),
-			'section'     => "typography_${section}",
-			'settings'    => "typography_${section}_border_size",
-			'default'			=> '0.25',
-			'choices'			=> array(
-				'min'					=> '0.05',
-				'max'					=> '1',
-				'step'				=> '0.05',
+			'type'						=> 'slider',
+			'label'						=> esc_html__('Border/Line Size', 'planeta'),
+			'section'					=> "typography_${section}",
+			'settings'				=> "typography_${section}_border_size",
+			'default'					=> '0.25',
+			'choices'					=> array(
+				'min'							=> '0.05',
+				'max'							=> '1',
+				'step'						=> '0.05',
 			),
-			'output'			=> HOVER_BORDER,
+			'output'					=> HOVER_BORDER,
+			'active_callback' => array(
+				'setting'				=> "typography_${section}_hover",
+				'operator'			=> "!=",
+				'operator'			=> 'none',
+			),
 		));
 	}
 }
