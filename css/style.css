@@ -124,7 +124,7 @@ dl dt {
 }
 #loading-container {
   z-index: 99990;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;

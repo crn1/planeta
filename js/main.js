@@ -24,19 +24,6 @@ jQuery(document).ready(function($)
 		$('#menu-button').toggleClass('is-active')
 	})
 
-	//Fittext
-	$(window).on('load resize', function()
-	{
-		let windowWidth = $(window).width()
-		let containerWidth = parseInt($('.default-container').css('max-width'), 10)
-		if(windowWidth <= containerWidth)
-		{
-			$('.fit-text').fitText()
-		}else{
-			//defit text?
-		}
-	})
-
 	// Convert card images to links
 	$('.card').find('.image').on('click', function(event)
 	{
