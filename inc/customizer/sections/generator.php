@@ -16,8 +16,8 @@ function planeta_add_frontpage_sections($num_sections = 15)
 	for($index = 1; $index <= $num_sections; $index++)
 	{
 		Kirki::add_panel("section_${index}_panel", array(
-			'title' => esc_html__("Section #${index}", 'planeta'),
-			'panel' => "sections_panel",
+			'title' 		=> esc_html__("Section #${index}", 'planeta'),
+			'panel' 		=> "sections_panel",
 		));
 
 		planeta_add_section_layout($index);

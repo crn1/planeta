@@ -19,6 +19,9 @@ Kirki::add_field('planeta_config', array(
 	'label'			=> esc_html__('Image/Logo', 'planeta'),
 	'section'		=> 'loading_section',
 	'default'		=> '',
+	'choices'     		=> array(
+		'save_as' 				=> 'id',
+	),
 	'active_callback'	=> array(
 		array(
 			'setting'			=> 'loading_enable',
@@ -34,6 +37,9 @@ Kirki::add_field('planeta_config', array(
 	'label'			=> esc_html__('Animation', 'planeta'),
 	'section'		=> 'loading_section',
 	'default'		=> '',
+	'choices'     		=> array(
+		'save_as' 				=> 'id',
+	),
 	'active_callback'	=> array(
 		array(
 			'setting'			=> 'loading_enable',

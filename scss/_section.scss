@@ -1,5 +1,6 @@
+@import 'modules/z-indexes'
 section {
-	z-index: 100;
+	z-index: $z-section-content;
 	display: flex;
 	align-items: center;
 	position: relative;

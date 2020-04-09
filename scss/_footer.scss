@@ -1,5 +1,6 @@
 @import 'modules/flex';
 @import 'modules/breakpoints';
+@import 'modules/z-indexes';
 
 #main-footer {
 	box-sizing: border-box;
@@ -9,7 +10,7 @@
 
 #footer-menu {
 	@include flexContainer();
-	z-index: 100;
+	z-index: $z-section-content;
 	position: relative;
 
 	@include for-size(phone-only) {

@@ -1,9 +1,10 @@
 @import 'modules/flex';
+@import 'modules/z-indexes';
 
 .default-container {
 	width: 100%;
 	margin: 0 auto;
-	z-index: 100;
+	z-index: $z-section-content;
 	position: relative;
 	padding-left: 1rem;
 	padding-right: 1rem;
@@ -17,7 +18,7 @@
 	width: 100vw;
 	align-items: center;
 	position: relative;
-	z-index: 100;
+	z-index: $z-section-content;
 	margin-bottom: 10vh;
 
 	.page-title-overlay {
@@ -40,7 +41,7 @@
 }
 
 #loading-container {
-	z-index: 99999;
+	z-index: $z-absolute-overlay;
 	position: absolute;
 	top: 0;
 	left: 0;

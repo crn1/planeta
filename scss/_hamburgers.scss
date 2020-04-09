@@ -1,3 +1,5 @@
+@import 'modules/transitions';
+
 $hamburger-padding-x           : 15px !default;
 $hamburger-padding-y           : 15px !default;
 $hamburger-layer-width         : 40px !default;
@@ -22,7 +24,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
   cursor: pointer;
 
   transition-property: opacity, filter;
-  transition-duration: 0.15s;
+  transition-duration: $transition-fastest;
   transition-timing-function: linear;
 
 	// Normalize (<button>)
@@ -82,7 +84,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
     border-radius: $hamburger-layer-border-radius;
     position: absolute;
     transition-property: transform;
-    transition-duration: 0.15s;
+    transition-duration: $transition-fastest;
     transition-timing-function: ease;
   }
 

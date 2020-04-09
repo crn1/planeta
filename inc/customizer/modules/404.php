@@ -16,6 +16,9 @@ Kirki::add_field('planeta_config', array(
 	'label'						=> esc_html__('Image', 'planeta'),
 	'section'					=> '404_content',
 	'default'					=> '',
+	'choices'     		=> array(
+		'save_as' 				=> 'id',
+	),
 ));
 
 Kirki::add_field('planeta_config', array(

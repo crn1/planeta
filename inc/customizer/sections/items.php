@@ -40,6 +40,9 @@ function planeta_add_section_items(&$index)
 				'field'						=> 'title',
 				'value'						=> esc_html__('Item', 'planeta'),
 			),
+			'choices'					=> array(
+				'save_as'					=> 'id',
+			),
 			'fields'					=> array_merge(array(
 				'image'						=> array(
 					'type'						=> 'image',

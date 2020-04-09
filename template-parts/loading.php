@@ -4,22 +4,36 @@ $render_loading = get_theme_mod('loading_enable', false);
 
 if($render_loading):
 	$text = get_theme_mod('loading_text', '');
-	$logo = get_theme_mod('loading_logo', '');
-	$animation = get_theme_mod('loading_animation', ''); ?>
+
+	$logo_id = get_theme_mod('loading_logo', '');
+	if(!empty($logo_id))
+	{
+		$logo_url = wp_get_attachment_url($logo_id);
+		$logo_alt = get_post_meta($logo_id, '_wp_attachment_image_alt', true);
+	}
+
+	$animation_id = get_theme_mod('loading_animation', '');
+	if(!empty($animation_id))
+	{
+		$animation_url = wp_get_attachment_url($animation_id);
+		$animation_alt = get_post_meta($animation_id, '_wp_attachment_image_alt', true);
+	} ?>
 
 <div id='loading-container'>
 
-	<?php if(!empty($logo)): ?>
+	<?php if(!empty($logo_id)): ?>
 		<img
 			class='logo'
-			src='<?php echo $logo; ?>'
+			alt='<?php echo $logo_alt; ?>'
+			src='<?php echo $logo_url; ?>'
 		/>
 	<?php endif; ?>
 
-	<?php if(!empty($animation)): ?>
+	<?php if(!empty($animation_id)): ?>
 		<img
 			class='animation'
-			src='<?php echo $animation; ?>'
+			alt='<?php echo $animation_alt; ?>'
+			src='<?php echo $animation_url; ?>'
 		/>
 	<?php endif; ?>
 

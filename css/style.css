@@ -1,3 +1,4 @@
+@import 'modules/trasitions';
 #not-found-container {
   display: flex;
   align-items: center;
@@ -122,7 +123,7 @@ dl dt {
   margin-right: 16px;
 }
 #loading-container {
-  z-index: 99999;
+  z-index: 99990;
   position: absolute;
   top: 0;
   left: 0;
@@ -145,7 +146,7 @@ dl dt {
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
-  transition-duration: 0.15s;
+  transition-duration: 0.17s;
   transition-timing-function: linear;
   font: inherit;
   color: inherit;
@@ -182,7 +183,7 @@ dl dt {
   border-radius: 4px;
   position: absolute;
   transition-property: transform;
-  transition-duration: 0.15s;
+  transition-duration: 0.17s;
   transition-timing-function: ease;
 }
 .hamburger-inner::before, .hamburger-inner::after {
@@ -421,7 +422,7 @@ dl dt {
   flex-direction: column;
   flex-wrap: wrap;
   position: fixed;
-  z-index: 99900;
+  z-index: 99000;
   overflow: hidden;
   background-color: #fff;
   transition: all 0.17s ease-in;
@@ -472,7 +473,7 @@ dl dt {
   box-sizing: border-box;
   margin: 32px 0;
   padding: 0 32px;
-  z-index: 99990;
+  z-index: 99900;
   top: 0;
   left: 0;
   position: fixed;
@@ -544,29 +545,30 @@ dl dt {
 #footer-notice * {
   font-size: 80%;
 }
+@import 'modules/z-indexes'
 section {
   z-index: 100;
   display: flex;
   align-items: center;
   position: relative;
-}
-section > .default-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-@media (max-width: 899px) {
-  section > .default-container > .section-title, section > .default-container > .section-subtitle, section > .default-container > .section-logo {
-    width: 100% !important;
+   > .default-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
-}
-section > .default-container .section-items {
-  width: 100%;
-}
-section h1, section h2, section h3, section h4, section h5, section h6, section p {
-  margin: 0;
+  @media (max-width: 899px) {
+     > .default-container > .section-title,  > .default-container > .section-subtitle,  > .default-container > .section-logo {
+      width: 100% !important;
+    }
+  }
+   > .default-container .section-items {
+    width: 100%;
+  }
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
 }
 .post-info {
   display: flex;

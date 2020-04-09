@@ -16,11 +16,15 @@
 	if(array_key_exists('image', $item) || has_post_thumbnail()):
 
 		$image_src = '';
+		$image_alt = '';
 		if($card_preset == 'posts')
 		{
 			$image_src = get_the_post_thumbnail_url();
+			$image_id = get_post_thumbnail_id(get_the_ID());
+			$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
 		}else{
 			$image_src = wp_get_attachment_image_src($item['image'], 'large')[0]; }
+			$image_alt = get_post_meta($item['image'], '_wp_attachment_image_alt', true);
 
 		if(!empty($image_src)):
 			set_query_var('animation_name', 'card_image');
@@ -32,6 +36,7 @@
 			<img
 				<?php get_template_part('template-parts/content/shape'); ?>
 				src='<?php echo $image_src; ?>'
+				alt='<?php echo $image_alt; ?>'
 				class='image <?php echo $image_lax_class; ?>'
 				<?php echo $image_aos; ?>
 				<?php echo $image_lax; ?>

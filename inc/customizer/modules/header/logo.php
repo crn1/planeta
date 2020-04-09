@@ -11,6 +11,9 @@ Kirki::add_field('planeta_config', array(
 	'label'					=> esc_html__('Logo', 'planeta'),
 	'section'				=> 'header_logo_section',
 	'default'				=> '',
+	'choices'     		=> array(
+		'save_as' 				=> 'id',
+	),
 ));
 
 ?>

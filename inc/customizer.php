@@ -38,7 +38,7 @@ require_once(get_template_directory() . '/inc/customizer/modules/related-posts.p
 require_once(get_template_directory() . '/inc/customizer/modules/article-bottom.php');
 
 //Homepage sections
-require_once(get_template_directory() . '/inc/customizer/sections/layout.php');
 require_once(get_template_directory() . '/inc/customizer/sections/generator.php');
+require_once(get_template_directory() . '/inc/customizer/sections/layout.php');
 
 ?>

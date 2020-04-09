@@ -1,6 +1,8 @@
+@import 'modules/z-indexes';
+
 #search-form {
 	position: relative;
-	z-index: 100;
+	z-index: $z-section-content;
 	border-bottom: 2px solid black;
 	display: flex;
 

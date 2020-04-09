@@ -1,3 +1,5 @@
+@import 'modules/z-indexes.scss';
+
 .video-background, .background-overlay {
 	position: absolute;
 	top: 0;
@@ -9,19 +11,19 @@
 }
 
 .background-overlay {
-	z-index: 40 !important;
+	z-index: $z-section-overlay !important;
 }
 
 .video-background {
-	z-index: 30;
+	z-index: $z-section-video;
 }
 
 #global-overlay {
-	z-index: 20 !important;
+	z-index: $z-global-overlay !important;
 }
 
 #global-video-background {
-	z-index: 10 !important;
+	z-index: $z-global-video !important;
 }
 
 #global-video-background, #404-video-background,
