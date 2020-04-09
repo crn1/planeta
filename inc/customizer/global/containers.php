@@ -7,20 +7,20 @@ Kirki::add_section('containers_section', array(
 
 Kirki::add_field('planeta_config', array(
 	'type' 						=> 'number',
-	'settings'				=> 'default_container',
-	'label'						=> esc_html__('Container Width', 'planeta'),
+	'settings'				=> 'default_container_desktop',
+	'label'						=> esc_html__('Container Max Width', 'planeta'),
 	'section'					=> 'containers_section',
 	'default'					=> 1500,
 	'choices'					=> array(
-		'min'							=> 600,
+		'min'							=> 320,
 		'max'							=> 1920,
 		'step'						=> 1,
 	),
 	'output'					=> array(
 		array(
-			'element'			=> '.default-container',
-			'property'		=> 'max-width',
-			'units'				=> 'px',
+			'element'				=> '.default-container',
+			'property'			=> 'max-width',
+			'units'					=> 'px',
 		),
 	),
 ));

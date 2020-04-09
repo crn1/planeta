@@ -1,6 +1,10 @@
 @import 'modules/breakpoints';
 
-.section-title, .section-subtitle, .page-title {
+.section-title,
+.section-subtitle,
+.page-title,
+.primary-text,
+.secondary-text {
 	line-height: 1 !important;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -23,5 +27,5 @@
 
 @include header-size(1.414, desktop-and-up);
 @include header-size(1.333, laptop-only);
-@include header-size(1.333, tablet-only);
-@include header-size(1.333, mobile-only);
+@include header-size(1.250, tablet-only);
+@include header-size(1.200, mobile-only);
