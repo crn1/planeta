@@ -13,11 +13,13 @@ function planeta_add_section_heading(&$index)
 		'section'		=> "section_${index}_heading",
 		'settings'	=> "section_${index}_name",
 		'default'		=> esc_html__('Section', 'planeta'),
-		'transport'	=> 'postMessage',
-		'js_vars'		=> array(
-			array(
-				'element'		=> "#section_${index}-top-menu-item",
-				'function'	=> 'html',
+		'partial_refresh'	=> array(
+			"section_${index}_name" => array(
+				'selector'							=> "#section_${index}-top-menu-item",
+				'render_callback'				=> function()
+				{
+					return get_theme_mod("section_${index}_name");
+				}
 			),
 		),
 	));
@@ -27,12 +29,14 @@ function planeta_add_section_heading(&$index)
 		'label'			=> esc_html__('Title', 'planeta'),
 		'section'		=> "section_${index}_heading",
 		'settings'	=> "section_${index}_title",
-		'default'		=> esc_html__('Section Title', 'planeta'),
-		'transport'	=> 'postMessage',
-		'js_vars'		=> array(
-			array(
-				'element'		=> "#section_${index} .section-title",
-				'function'	=> 'html',
+		'default'		=> esc_html__('Section itle', 'planeta'),
+		'partial_refresh'	=> array(
+			"section_${index}_title" => array(
+				'selector'				=> "#section_${index} .section-title",
+				'render_callback'	=> function()
+				{
+					return get_theme_mod("section_${index}_title");
+				}
 			),
 		),
 	));
@@ -43,11 +47,13 @@ function planeta_add_section_heading(&$index)
 		'section'		=> "section_${index}_heading",
 		'settings'	=> "section_${index}_subtitle",
 		'default'		=> esc_html__('Lorem ipsum dolor sit amet', 'planeta'),
-		'transport'	=> 'postMessage',
-		'js_vars'		=> array(
-			array(
-				'element'		=> "#section_${index} .section-subtitle",
-				'function'	=> 'html',
+		'partial_refresh'	=> array(
+			"section_${index}_subtitle" => array(
+				'selector'				=> "#section_${index} .section-subtitle",
+				'render_callback'	=> function()
+				{
+					return get_theme_mod("section_${index}_subtitle");
+				}
 			),
 		),
 	));
