@@ -13,6 +13,13 @@ function planeta_add_section_heading(&$index)
 		'section'		=> "section_${index}_heading",
 		'settings'	=> "section_${index}_name",
 		'default'		=> esc_html__('Section', 'planeta'),
+		'transport'	=> 'postMessage',
+		'js_vars'		=> array(
+			array(
+				'element'		=> "#section_${index}-top-menu-item",
+				'function'	=> 'html',
+			),
+		),
 	));
 
 	Kirki::add_field('planeta_config', array(
@@ -21,6 +28,13 @@ function planeta_add_section_heading(&$index)
 		'section'		=> "section_${index}_heading",
 		'settings'	=> "section_${index}_title",
 		'default'		=> esc_html__('Section Title', 'planeta'),
+		'transport'	=> 'postMessage',
+		'js_vars'		=> array(
+			array(
+				'element'		=> "#section_${index} .section-title",
+				'function'	=> 'html',
+			),
+		),
 	));
 
 	Kirki::add_field('planeta_config', array(
@@ -29,6 +43,13 @@ function planeta_add_section_heading(&$index)
 		'section'		=> "section_${index}_heading",
 		'settings'	=> "section_${index}_subtitle",
 		'default'		=> esc_html__('Lorem ipsum dolor sit amet', 'planeta'),
+		'transport'	=> 'postMessage',
+		'js_vars'		=> array(
+			array(
+				'element'		=> "#section_${index} .section-subtitle",
+				'function'	=> 'html',
+			),
+		),
 	));
 
 	Kirki::add_field('planeta_config', array(

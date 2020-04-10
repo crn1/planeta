@@ -122,6 +122,7 @@ function planeta_add_shape($args)
 					'value'						=> 'none',
 				),
 			),
+			'transport'	=> 'auto',
 			'output'		=> array(
 				array(
 					'element'			=> $args['outside_output'],

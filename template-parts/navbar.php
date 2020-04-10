@@ -21,6 +21,7 @@
 			<span
 					class='top-menu-item relative hover-<?php echo get_query_var('hover_class', 'none'); ?>'>
 				<a
+						id='<?php echo $section; ?>-top-menu-item'
 						href='#<?php echo $slug; ?>'
 						data-section-id='<?php echo $section; ?>'
 						class='button-link'>
@@ -43,14 +44,16 @@
 		<?php endif; ?>
 	</a>
 
-	<button
-			id='menu-button'
-			class='hamburger hamburger--<?php echo $hamburger_class; ?>'
-			type='button'>
-		<span class='hamburger-box'>
-			<span class='hamburger-inner'></span>
-		</span>
-	</button>
+	<span id="hamburger-container">
+		<button
+				id='menu-button'
+				class='hamburger hamburger--<?php echo $hamburger_class; ?>'
+				type='button'>
+			<span class='hamburger-box'>
+				<span class='hamburger-inner'></span>
+			</span>
+		</button>
+	</span>
 </header>
 
 <nav

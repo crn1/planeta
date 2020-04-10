@@ -69,6 +69,23 @@ Kirki::add_field('planeta_config', array(
 		'vortex'			=> esc_html__('Vortex', 'planeta'),
 		'vortex-r'		=> esc_html__('Vortex Reverse', 'planeta'),
 	),
+	'partial_refresh'	=> array(
+		'hamburger_class'				=> array(
+			'selector'				=> '#hamburger-container',
+			'render_callback'	=> function()
+			{
+				$hamburger = get_theme_mod('hamburger_class', '3dx');
+				return "<button
+						id='menu-button'
+						class='hamburger hamburger--${hamburger}'
+						type='button'>
+					<span class='hamburger-box'>
+						<span class='hamburger-inner'></span>
+					</span>
+				</button>";
+			}
+		),
+	),
 ));
 
 Kirki::add_field('planeta_config', array(

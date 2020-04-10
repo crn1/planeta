@@ -1,7 +1,7 @@
 <?php
 
 $section = get_query_var('section');
-$title = get_theme_mod("${section}_title", 'Block Title');
+$title = get_theme_mod("${section}_title", 'Section Title');
 
 if(!empty($title)):
 	set_query_var('animation_name', 'section_title');

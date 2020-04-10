@@ -1,7 +1,7 @@
 <?php
 
 $section = get_query_var('section');
-$subtitle = get_theme_mod("${section}_subtitle", 'Block Subtitle');
+$subtitle = get_theme_mod("${section}_subtitle", 'Section Subtitle');
 
 if(!empty($subtitle)):
 	set_query_var('animation_name', 'section_subtitle');
