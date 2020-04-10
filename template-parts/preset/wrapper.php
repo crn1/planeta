@@ -23,8 +23,9 @@
 			$image_id = get_post_thumbnail_id(get_the_ID());
 			$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
 		}else{
-			$image_src = wp_get_attachment_image_src($item['image'], 'large')[0]; }
+			$image_src = wp_get_attachment_image_src($item['image'], 'large')[0];
 			$image_alt = get_post_meta($item['image'], '_wp_attachment_image_alt', true);
+		}
 
 		if(!empty($image_src)):
 			set_query_var('animation_name', 'card_image');
