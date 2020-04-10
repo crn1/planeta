@@ -4,7 +4,7 @@
 ?>
 <div class='post-info'>
 	<div class='user'>
-		<?php echo $avatar; ?> <?php the_date(); ?> - <?php the_author() ?>
+		<?php echo $avatar; ?> <?php the_author(); ?> - <?php the_date(); ?>
 	</div>
 
 	<?php the_category(' / '); ?>

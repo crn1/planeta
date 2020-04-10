@@ -583,7 +583,8 @@ section {
   align-items: center;
 }
 .post-info > .user > .avatar {
-  margin-right: 1.5rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
 }
 .video-background, .background-overlay {
   position: absolute;
