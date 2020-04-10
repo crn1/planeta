@@ -21,6 +21,7 @@ Kirki::add_field('planeta_config', array(
 		'max'							=> 100,
 		'step'						=> 1,
 	),
+	'transport'				=> 'auto',
 	'output'					=> array(
 		array(
 			'element'				=> '.page-title-container',
@@ -41,6 +42,7 @@ Kirki::add_field('planeta_config', array(
 		'max'							=> 33,
 		'step'						=> 1,
 	),
+	'transport'				=> 'auto',
 	'output'					=> array(
 		array(
 			'element'				=> '.page-title-container',
@@ -59,12 +61,21 @@ Kirki::add_field('planeta_config', array(
 	'choices'					=> array(
 		'alpha'						=> true,
 	),
+	'transport'				=> 'auto',
 	'output'					=> array(
 		array(
 			'element'				=> '.page-title-overlay',
 			'property'			=> 'background-color',
 		),
 	),
+));
+
+Kirki::add_field('planeta_config', array(
+	'type' 						=> 'toggle',
+	'label'						=> esc_html__('Enable Search', 'planeta'),
+	'section'					=> 'enable_search_bar',
+	'settings'				=> 'page_title',
+	'default'					=> '1',
 ));
 
 require_once(get_template_directory() . '/inc/customizer/items-appearance.php');

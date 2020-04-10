@@ -10,12 +10,13 @@ Kirki::add_field('planeta_config', array(
 	'settings'		=> 'navbar_padding',
 	'label'				=> esc_html__('Padding', 'planeta'),
 	'section'			=> 'header_appearance',
-	'default'			=> 64,
+	'default'			=> 48,
 	'choices'			=> array(
 		'min'					=> 16,
 		'max'					=> 128,
 		'step'				=> 2,
 	),
+	'transport'		=> 'auto',
 	'output'			=> array(
 		array(
 			'element'				=> '#main-header',

@@ -11,24 +11,27 @@ Kirki::add_field('planeta_config', array(
 	'label'			=> esc_html__('Sharp', 'planeta'),
 	'section'		=> 'header_menu_button',
 	'default'		=> false,
+	'transport'	=> 'auto',
 	'output'		=> array(
 		array(
-			'element'				=> '.hamburger-inner',
+			'element'				=> array(
+				'.hamburger-inner',
+				'.hamburger-inner:before',
+				'.hamburger-inner:after',
+			),
 			'property'			=> 'border-radius',
 			'value_pattern'	=> '0px',
 			'exclude'				=> array(false),
 		),
 		array(
-			'element'				=> '.hamburger-inner:before',
+			'element'				=> array(
+				'.hamburger-inner',
+				'.hamburger-inner:before',
+				'.hamburger-inner:after',
+			),
 			'property'			=> 'border-radius',
-			'value_pattern'	=> '0px',
-			'exclude'				=> array(false),
-		),
-		array(
-			'element'				=> '.hamburger-inner:after',
-			'property'			=> 'border-radius',
-			'value_pattern'	=> '0px',
-			'exclude'				=> array(false),
+			'value_pattern'	=> '4px',
+			'exclude'				=> array(true),
 		),
 	),
 ));
@@ -77,6 +80,7 @@ Kirki::add_field('planeta_config', array(
 	'choices'		=> array(
 		'alpha'			=> true,
 	),
+	'transport'	=> 'auto',
 	'output'		=> array(
 		array(
 			'element'		=> '#menu-button .hamburger-inner',

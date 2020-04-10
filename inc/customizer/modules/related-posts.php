@@ -21,7 +21,7 @@ Kirki::add_field('planeta_config', array(
 Kirki::add_field('planeta_config', array(
 	'type' 						=> 'text',
 	'settings'				=> 'related_posts_title',
-	'label'						=> esc_html__('Section Title', 'planeta'),
+	'label'						=> esc_html__('Title', 'planeta'),
 	'section'					=> 'related_posts_general',
 	'default'					=> 'Related Posts',
 	'active_callback'	=> array(
@@ -29,6 +29,15 @@ Kirki::add_field('planeta_config', array(
 			'setting'				=> 'related_posts_enable',
 			'operator'			=> '==',
 			'value'					=> true,
+		),
+	),
+	'partial_refresh'	=> array(
+		'related_posts_title'	=> array(
+			'selector'						=> '#not-found-container > .page-title',
+			'render_callback'			=> function()
+			{
+				return get_theme_mod('related_posts_title', 'Related Posts');
+			}
 		),
 	),
 ));

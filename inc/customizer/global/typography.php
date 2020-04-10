@@ -13,16 +13,7 @@ function typography_generator($args)
 		'class'								=> '',
 		'enable_sizing'				=> true,
 		'enable_hover'				=> false,
-		'default_typography'	=> array(
-			//POPRAVI ME
-			'text-transform'			=> 'none',
-			'color'								=> '#000000',
-			'font-family'					=> 'inherit',
-			'variant'							=> 'regular',
-			'line-height'					=> '1.5',
-			'letter-spacing'			=> '0',
-			'text-align'					=> 'left',
-		),
+		'default_typography'	=> array(),
 		'size_units'					=> 'rem',
 		'size_choices'				=> array(
 			'min'									=> 0.1,
@@ -56,6 +47,7 @@ function typography_generator($args)
 		'section'     => "typography_${section}",
 		'settings'    => "typography_${section}",
 		'default'			=> $args['default_typography'],
+		'transport'		=> 'auto',
 		'output'      => array(
 			array(
 				'element' 		=> $class,
@@ -71,6 +63,7 @@ function typography_generator($args)
 			'section'     => "typography_${section}",
 			'settings'    => "typography_${section}_size",
 			'choices'     => $args['size_choices'],
+			'transport'		=> 'auto',
 			'output'			=> array(
 				array(
 					'element'				=> $class,
@@ -122,6 +115,7 @@ function typography_generator($args)
 				'max'							=> '1',
 				'step'						=> '0.05',
 			),
+			'transport'				=> 'auto',
 			'output'					=> HOVER_BORDER,
 			'active_callback' => array(
 				'setting'				=> "typography_${section}_hover",

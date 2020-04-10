@@ -14,8 +14,9 @@ Kirki::add_field('planeta_config', array(
 	'choices'					=> array(
 		'min'							=> 320,
 		'max'							=> 1920,
-		'step'						=> 1,
+		'step'						=> 10,
 	),
+	'transport'				=> 'auto',
 	'output'					=> array(
 		array(
 			'element'				=> '.default-container',
@@ -36,6 +37,7 @@ Kirki::add_field('planeta_config', array(
 		'max'							=> 90,
 		'step'						=> 1,
 	),
+	'transport'				=> 'auto',
 	'output'					=> array(
 		array(
 			'element'				=> '.article-container',

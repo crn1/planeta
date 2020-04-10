@@ -27,6 +27,7 @@ function generate_setting($device_name='Desktop', $device='desktop', $media_quer
 		'settings'    => "typography_main_scale_${device}",
 		'default'     => $default_scale,
 		'choices'     => $ratios,
+		'transport'		=> 'auto',
 		'output' 			=> array(
 			array(
 				'element'					=> 'h1',

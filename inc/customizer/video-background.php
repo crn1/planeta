@@ -95,6 +95,7 @@ function planeta_add_video_background($section, $panel, $bg_output, $name = 'Bac
 				'value'									=> 'video',
 			),
 		),
+		'transport'							=> 'auto',
 		'output'								=>	array(
 			array(
 				'element'								=> $bg_output,
@@ -123,6 +124,7 @@ function planeta_add_video_background($section, $panel, $bg_output, $name = 'Bac
 				'value'									=> 'static',
 			),
 		),
+		'transport'							=> 'auto',
 		'output'								=>	array(
 			array(
 				'element'								=> $bg_output,

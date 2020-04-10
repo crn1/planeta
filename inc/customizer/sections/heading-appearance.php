@@ -13,6 +13,7 @@ function add_heading_appearance_settings(&$index, $name_smallcaps, $name)
 			'max'				=> 1280,
 			'step'			=> 1,
 		),
+		'transport'	=> 'auto',
 		'output'		=> array(
 			array(
 				'element'		=> "#section_${index} .section-${name_smallcaps}",
@@ -45,6 +46,7 @@ function add_heading_appearance_settings(&$index, $name_smallcaps, $name)
 			'max'			=> 30,
 			'step'		=> 1,
 		),
+		'transport'	=> 'auto',
 		'output'		=> array(
 			array(
 				'element'		=> "#section_${index} .section-${name_smallcaps}",
@@ -75,6 +77,7 @@ function planeta_add_section_heading_appearance(&$index)
 		'section'		=> "section_${index}_heading_appearance",
 		'settings'	=> "section_${index}_min_height",
 		'default'		=> 0,
+		'transport'	=> 'auto',
 		'output'		=> array(
 			array(
 				'element'				=> "#section_${index}",

@@ -19,6 +19,7 @@ function planeta_add_section_items_typography(&$index)
 			'font-family'    		=> 'Rubik',
 			'variant'        		=> 'regular',
 		),
+		'transport'		=> 'auto',
 		'output'      => array(
 			array(
 				'element'		=> "#section_${index} .primary-text",
@@ -36,6 +37,7 @@ function planeta_add_section_items_typography(&$index)
 			'max'					=> 7,
 			'step'				=> 0.1,
 		),
+		'transport'		=> 'auto',
 		'output'			=> array(
 			array(
 				'element'			=> "#section_${index} .primary-text",
@@ -57,6 +59,7 @@ function planeta_add_section_items_typography(&$index)
 			'variant'        		=> 'regular',
 			'text-align'    		=> 'center',
 		),
+		'transport'		=> 'auto',
 		'output'      => array(
 			array(
 				'element'		=> "#section_${index} .secondary-text",
@@ -74,6 +77,7 @@ function planeta_add_section_items_typography(&$index)
 			'max'					=> 7,
 			'step'				=> 0.1,
 		),
+		'transport'		=> 'auto',
 		'output'			=> array(
 			array(
 				'element'			=> "#section_${index} .secondary-text",

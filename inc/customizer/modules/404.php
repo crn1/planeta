@@ -27,6 +27,15 @@ Kirki::add_field('planeta_config', array(
 	'label'						=> esc_html__('Title', 'planeta'),
 	'section'					=> '404_content',
 	'default'					=> '404',
+	'partial_refresh'	=> array(
+		'404_title'				=> array(
+			'selector'				=> '#not-found-container > .page-title',
+			'render_callback'	=> function()
+			{
+				return get_theme_mod('404_title', '404');
+			}
+		),
+	),
 ));
 
 Kirki::add_field('planeta_config', array(
@@ -35,6 +44,15 @@ Kirki::add_field('planeta_config', array(
 	'label'						=> esc_html__('Subtitle', 'planeta'),
 	'section'					=> '404_content',
 	'default'					=> 'Page not Found!',
+	'partial_refresh'	=> array(
+		'404_subtitle'		=> array(
+			'selector'				=> '#not-found-container > .page-subtitle',
+			'render_callback'	=> function()
+			{
+				return get_theme_mod('404_subtitle', 'Page Not Found!');
+			}
+		),
+	),
 ));
 
 Kirki::add_field('planeta_config', array(
@@ -43,6 +61,15 @@ Kirki::add_field('planeta_config', array(
 	'label'						=> esc_html__('Homepage Caption', 'planeta'),
 	'section'					=> '404_content',
 	'default'					=> 'Return to Homepage',
+	'partial_refresh'	=> array(
+		'404_homepage'		=> array(
+			'selector'				=> '#not-found-container > .not-found-homepage > a',
+			'render_callback'	=> function()
+			{
+				return get_theme_mod('404_homepage', 'Return to Homepage');
+			}
+		),
+	),
 ));
 
 require_once(get_template_directory() . '/inc/customizer/video-background.php');

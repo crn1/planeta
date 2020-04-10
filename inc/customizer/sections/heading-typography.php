@@ -19,9 +19,10 @@ function planeta_add_section_heading_typography(&$index)
 			'font-family'    		=> 'inherit',
 			'variant'        		=> 'regular',
 		),
-		'output'      => array(
+		'transport'		=> 'auto',
+		'output'     	 => array(
 			array(
-				'element'		=> "#section_${index} .section-title",
+				'element'			=> "#section_${index} .section-title",
 			),
 		),
 	));
@@ -36,6 +37,7 @@ function planeta_add_section_heading_typography(&$index)
 			'max'					=> 7,
 			'step'				=> 0.1,
 		),
+		'transport'		=> 'auto',
 		'output'			=> array(
 			array(
 				'element'			=> "#section_${index} .section-title",
@@ -57,6 +59,7 @@ function planeta_add_section_heading_typography(&$index)
 			'variant'        		=> 'regular',
 			'text-align'    		=> 'center',
 		),
+		'transport'		=> 'auto',
 		'output'      => array(
 			array(
 				'element'		=> "#section_${index} .section-subtitle",
@@ -74,6 +77,7 @@ function planeta_add_section_heading_typography(&$index)
 			'max'					=> 7,
 			'step'				=> 0.1,
 		),
+		'transport'		=> 'auto',
 		'output'			=> array(
 			array(
 				'element'			=> "#section_${index} .section-subtitle",

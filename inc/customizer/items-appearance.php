@@ -20,6 +20,7 @@ function planeta_add_items_appearance($section)
 			'max'						=> '7',
 			'step'					=> '1',
 		),
+		'transport'			=> 'auto',
 		'output'				=> array(
 			array(
 				'element'				=> "#${section} .card",
@@ -94,6 +95,7 @@ function planeta_add_items_appearance($section)
 			'max'			=> 30,
 			'step'		=> 1,
 		),
+		'transport'			=> 'auto',
 		'output'		=> array(
 			array(
 				'element'		=> "#${section} .section-items",
@@ -114,6 +116,7 @@ function planeta_add_items_appearance($section)
 			'max'			=> 30,
 			'step'		=> 1,
 		),
+		'transport'			=> 'auto',
 		'output'		=> array(
 			array(
 				'element'		=> "#${section} .section-items",

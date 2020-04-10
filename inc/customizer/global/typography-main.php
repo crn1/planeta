@@ -10,6 +10,7 @@ Kirki::add_field('planeta_config', array(
 	'label'       => esc_html__('Typography', 'planeta'),
 	'section'     => 'typography_main',
 	'settings'    => 'typography_main',
+	'transport'		=> 'auto',
 	'default'     => array(
 		'text-transform'			=> 'none',
 		'color'								=> '#000000',
@@ -31,6 +32,7 @@ Kirki::add_field('planeta_config', array(
 	'section'     => 'typography_main',
 	'settings'    => 'typography_main_size_desktop',
 	'default'     => '22',
+	'transport'		=> 'auto',
 	'choices'     => array(
 		'min'					=> '12',
 		'max'					=> '32',
@@ -52,6 +54,7 @@ Kirki::add_field('planeta_config', array(
 	'section'     => 'typography_main',
 	'settings'    => 'typography_main_size_laptop',
 	'default'     => '20',
+	'transport'		=> 'auto',
 	'choices'     => array(
 		'min'					=> '12',
 		'max'					=> '32',
@@ -73,6 +76,7 @@ Kirki::add_field('planeta_config', array(
 	'section'     => 'typography_main',
 	'settings'    => 'typography_main_size_tablet',
 	'default'     => '18',
+	'transport'		=> 'auto',
 	'choices'     => array(
 		'min'					=> '12',
 		'max'					=> '32',
@@ -94,6 +98,7 @@ Kirki::add_field('planeta_config', array(
 	'section'     => 'typography_main',
 	'settings'    => 'typography_main_size_mobile',
 	'default'     => '16',
+	'transport'		=> 'auto',
 	'choices'     => array(
 		'min'					=> '12',
 		'max'					=> '32',

@@ -92,6 +92,7 @@ function planeta_add_shape($args)
 				'max'				=> 100,
 				'step'			=> 1,
 			),
+			'transport'	=> 'auto',
 			'output'		=> array(
 				array(
 					'element'		=> $args['height_output'],

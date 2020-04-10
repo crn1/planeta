@@ -62,6 +62,15 @@ Kirki::add_field('planeta_config', array(
 			'value'				=> true,
 		),
 	),
+	'partial_refresh'	=> array(
+		'loading_text'		=> array(
+			'selector'				=> '#loading-container > .text',
+			'render_callback'	=> function()
+			{
+				return get_theme_mod('loading_text', '');
+			}
+		),
+	),
 ));
 
 Kirki::add_field('planeta_config', array(

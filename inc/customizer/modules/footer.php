@@ -6,7 +6,7 @@ Kirki::add_panel('footer_panel', array(
 ));
 
 Kirki::add_section('footer_content', array(
-	'title'       => esc_html__('Content', 'planeta' ),
+	'title'       => esc_html__('Content', 'planeta'),
 	'panel'       => 'footer_panel',
 ));
 
@@ -29,6 +29,14 @@ Kirki::add_field('planeta_config', array(
 	'label'						=> esc_html__('Notice', 'planeta'),
 	'section'					=> 'footer_content',
 	'default'					=> 'Copyright (C) 2020 Lorem Ipsum. All rights reserved.',
+	'partial_refresh'	=> array(
+		'footer_content'	=> array(
+			'selector'				=> '#footer-notice > small',
+			'render_callback' => function() {
+				return get_theme_mod('footer_copyright');
+			},
+		),
+	),
 ));
 
 require_once(get_template_directory() . '/inc/customizer/video-background.php');
