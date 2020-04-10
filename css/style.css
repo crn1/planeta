@@ -329,6 +329,9 @@ dl dt {
   text-align: center;
   display: inline-block;
 }
+.card > .info .url > span {
+  display: inline-block;
+}
 @media screen and (max-width: 768px) {
   .card > .image {
     margin-bottom: 2rem;
@@ -366,6 +369,17 @@ dl dt {
 .card-numbers .number {
   margin-top: 0;
   line-height: 1;
+}
+.card-buttons > * {
+  margin-bottom: 1rem !important;
+}
+.card-buttons > .info {
+  width: unset !important;
+}
+@media (min-width: 600px) {
+  .card-buttons:not(:last-child) {
+    margin-right: 1rem !important;
+  }
 }
 .card-buttons .url {
   margin-top: 0;
@@ -504,7 +518,6 @@ dl dt {
   flex-direction: row;
   flex-wrap: wrap;
   z-index: 100;
-  position: relative;
 }
 @media (max-width: 599px) {
   #footer-menu {
@@ -545,30 +558,40 @@ dl dt {
 #footer-notice * {
   font-size: 80%;
 }
-@import 'modules/z-indexes'
 section {
   z-index: 100;
   display: flex;
   align-items: center;
   position: relative;
-   > .default-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+section > .default-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+@media (max-width: 899px) {
+  section > .default-container > .section-title, section > .default-container > .section-subtitle, section > .default-container > .section-logo {
+    width: 100% !important;
+  }
+}
+section > .default-container .section-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  z-index: 100;
+  width: 100%;
+}
+@media (max-width: 599px) {
+  section > .default-container .section-items {
     flex-direction: column;
-    flex-wrap: wrap;
   }
-  @media (max-width: 899px) {
-     > .default-container > .section-title,  > .default-container > .section-subtitle,  > .default-container > .section-logo {
-      width: 100% !important;
-    }
-  }
-   > .default-container .section-items {
-    width: 100%;
-  }
-  h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-  }
+}
+section h1, section h2, section h3, section h4, section h5, section h6, section p {
+  margin: 0;
 }
 .post-info {
   display: flex;

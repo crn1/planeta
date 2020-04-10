@@ -3,6 +3,14 @@
 define('ITEMS_FIELDS', array(
 
 	'projects'						=> array(
+		'image'						=> array(
+			'type'						=> 'image',
+			'label'						=> esc_html__('Image/Logo', 'planeta'),
+			'default'					=> '',
+			'choices'					=> array(
+				'save_as'					=> 'id',
+			),
+		),
 		'title'								=> array(
 			'type'								=> 'text',
 			'label'								=> esc_html__('Title (Primary Text)', 'planeta'),
@@ -26,6 +34,14 @@ define('ITEMS_FIELDS', array(
 	),
 
 	'experience'					=> array(
+		'image'						=> array(
+			'type'						=> 'image',
+			'label'						=> esc_html__('Image/Logo', 'planeta'),
+			'default'					=> '',
+			'choices'					=> array(
+				'save_as'					=> 'id',
+			),
+		),
 		'title'								=> array(
 			'type'								=> 'text',
 			'label'								=> esc_html__('Name (Primary Text)', 'planeta'),
@@ -44,6 +60,14 @@ define('ITEMS_FIELDS', array(
 	),
 
 	'clients'							=> array(
+		'image'						=> array(
+			'type'						=> 'image',
+			'label'						=> esc_html__('Image/Logo', 'planeta'),
+			'default'					=> '',
+			'choices'					=> array(
+				'save_as'					=> 'id',
+			),
+		),
 		'title'								=> array(
 			'type'								=> 'text',
 			'label'								=> esc_html__('Title (Primary Text)', 'planeta'),
@@ -61,6 +85,14 @@ define('ITEMS_FIELDS', array(
 			'type'								=> 'text',
 			'label'								=> esc_html__('Author (Primary Text)', 'planeta'),
 			'default'							=> 'John Doe',
+		),
+		'image'						=> array(
+			'type'						=> 'image',
+			'label'						=> esc_html__('Author Image', 'planeta'),
+			'default'					=> '',
+			'choices'					=> array(
+				'save_as'					=> 'id',
+			),
 		),
 		'author_description'	=> array(
 			'type'								=> 'text',

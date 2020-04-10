@@ -1,4 +1,5 @@
 @import 'modules/flex';
+@import 'modules/breakpoints';
 
 .card {
 	display: flex;
@@ -11,6 +12,10 @@
 		.url {
 			text-align: center;
 			display: inline-block;
+
+			& > span {
+				display: inline-block;
+			}
 		}
 	}
 
@@ -70,6 +75,21 @@
 }
 
 .card-buttons {
+	& > * {
+		margin-bottom: 1rem !important;
+	}
+
+	& > .info {
+		width: unset !important;
+	}
+
+	&:not(:last-child)
+	{
+		@include for-size(tablet-and-up) {
+			margin-right: 1rem !important;
+		}
+	}
+
 	.url {
 		margin-top: 0;
 		margin-bottom: 0;

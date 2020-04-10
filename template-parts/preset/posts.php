@@ -8,8 +8,19 @@
 	<?php the_excerpt(); ?>
 </p>
 
-<p class='url <?php echo get_theme_mod('typography_button_link_hover', 'none'); ?>'>
-	<a class='button-link' href='<?php the_permalink(); ?>'>
-		<?php echo esc_html__('Read More...', 'planeta'); ?>
-	</a>
+<?php
+	$hover_class = get_theme_mod('typography_button_link_hover', 'none');
+	$url_tab = $item['url_tab'] ? '_blank' : ''; ?>
+
+<p class='url'>
+	<span class='relative hover-<?php echo $hover_class; ?>'>
+		<a
+				class='button-link'
+				href='<?php echo the_permalink(); ?>'
+				target='<?php echo $url_tab; ?>'>
+
+			<?php echo esc_html__('Read More...', 'planeta'); ?>
+
+		</a>
+	</span>
 </p>

@@ -40,16 +40,7 @@ function planeta_add_section_items(&$index)
 				'field'						=> 'title',
 				'value'						=> esc_html__('Item', 'planeta'),
 			),
-			'choices'					=> array(
-				'save_as'					=> 'id',
-			),
-			'fields'					=> array_merge(array(
-				'image'						=> array(
-					'type'						=> 'image',
-					'label'						=> esc_html__('Image/Logo', 'planeta'),
-					'default'					=> '',
-				),
-				), $items),
+			'fields'					=> $items,
 			'active_callback' => array(
 				array(
 					'setting'				=> "section_${index}_card_preset",

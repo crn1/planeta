@@ -6,7 +6,7 @@
 				<div class='default-container'>
 					<?php
 						$hover_class = get_query_var('hover_class'); ?>
-					<nav id='footer-menu'>
+					<nav id='footer-menu' class='relative'>
 						<?php
 							$params = array(
 								'theme_location' 	=> 'footer-menu',

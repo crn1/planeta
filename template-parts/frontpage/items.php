@@ -32,4 +32,6 @@ if($card_preset != 'none' && (!empty($items) || $card_preset == 'posts')):
 </div>
 <?php endif; ?>
 
-<?php get_template_part('template-parts/frontpage/macy'); ?>
+<?php if($card_preset != 'buttons'): ?>
+	<?php get_template_part('template-parts/frontpage/macy'); ?>
+<?php endif; ?>
