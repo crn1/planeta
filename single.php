@@ -33,21 +33,6 @@
 		</aside>
 	</div>
 
-	<?php if(is_active_sidebar('article-bottom-area')): ?>
-		<section id="article_bottom">
-			<?php
-				set_query_var('section', 'article_bottom');
-				get_template_part('template-parts/content/background'); ?>
-			<div
-					id='article_bottom-items'
-					class='default-container section-items'>
-				<?php dynamic_sidebar('article-bottom-area'); ?>
-			</div>
-		</section>
-		<?php
-			get_template_part('template-parts/frontpage/macy'); ?>
-	<?php endif; ?>
-
 	<?php if(have_comments()): ?>
 		<div class="default-container page-container">
 			<div class="sidebar"></div>

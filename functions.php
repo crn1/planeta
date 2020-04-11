@@ -37,11 +37,6 @@ function register_widgets()
 	));
 
 	register_sidebar(array(
-		'name'	=> 'Article Bottom Area',
-		'id'		=> 'article-bottom-area',
-	));
-
-	register_sidebar(array(
 		'name'	=> 'Footer (Left)',
 		'id'		=> 'footer-left',
 	));
