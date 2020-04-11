@@ -3,58 +3,63 @@
 @import 'modules/z-indexes';
 
 #main-footer {
+	@include flexContainer($direction: column);
 	box-sizing: border-box;
 	background-color: transparent;
 	position: relative;
-}
+	margin-top: 10vh;
+	padding-top: 10vh;
 
-#footer-menu {
-	@include flexContainer();
-	z-index: $z-section-content;
-	padding-top: 2rem;
-
-	@include for-size(phone-only) {
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	.button-link {
-		margin-top: 1rem;
+	#footer-menu {
+		@include flexContainer();
+		z-index: $z-section-content;
 
 		@include for-size(phone-only) {
-			text-align: center;
-			margin-right: 0;
+			flex-direction: column;
+			justify-content: center;
 		}
 
-		&:not(:last-child) {
-			margin-right: 1rem;
+		.button-link {
+			margin-top: 1rem;
+
+			@include for-size(phone-only) {
+				text-align: center;
+				margin-right: 0;
+			}
+
+			&:not(:last-child) {
+				margin-right: 1rem;
+			}
 		}
 	}
-}
 
-#footer-sidebar-container {
-	display: grid;
-	position: relative;
-	width: 100%;
-	z-index: $z-section-content;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	grid-gap: 1rem;
-	padding-bottom: 2rem;
+	#footer-sidebar-container {
+		display: grid;
+		align-items: center;
+		min-height: 0;
+		position: relative;
+		width: 100%;
+		z-index: $z-section-content;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-gap: 1rem;
+		padding-bottom: 2rem;
 
-	#footer-sidebar-left {
-		text-align: left;
-	}
-
-	#footer-sidebar-right {
-		text-align: right;
-		@include for-size(phone-only)
-		{
+		#footer-sidebar-left {
 			text-align: left;
 		}
-	}
 
-	img {
-		max-width: 100%;
-		object-fit: cover;
+		#footer-sidebar-right {
+			text-align: right;
+
+			@include for-size(phone-only)
+			{
+				text-align: left;
+			}
+		}
+
+		img {
+			max-width: 100%;
+			object-fit: cover;
+		}
 	}
 }
