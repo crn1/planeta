@@ -11,13 +11,13 @@
 		<aside class='sidebar sidebar-left'>
 			<span class='sidebar-inner'>
 				<?php if(is_active_sidebar('article-sidebar-left')) {
-					dynamic_sidebar('article-sidebar-right');
+					dynamic_sidebar('article-sidebar-left');
 				} ?>
 			</span>
 		</aside>
 
 		<article
-				id='post-<?php echo the_ID(); ?>
+				id='post-<?php echo the_ID(); ?>'
 				class='article-container <?php post_class(); ?>'>
 			<?php get_template_part('template-parts/content/post-info'); ?>
 			<?php the_content(); ?>

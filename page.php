@@ -9,7 +9,7 @@
 
 	<div class='default-container page-container'>
 		<article
-				id='post-<?php echo the_ID(); ?>
+				id='post-<?php echo the_ID(); ?>'
 				class='article-container <?php post_class(); ?>'>
 			<?php the_content(); ?>
 			<?php wp_link_pages(); ?>
