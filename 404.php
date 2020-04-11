@@ -8,7 +8,9 @@
 
 	$title = get_theme_mod('404_title', '404');
 	$subtitle = get_theme_mod('404_subtitle', 'Page not Found!');
+
 	$homepage = get_theme_mod('404_homepage', 'Return to Homepage');
+	$hover_class = get_theme_mod('typography_button_link_hover', 'none');
 ?>
 <?php get_header(); ?>
 <?php get_template_part('template-parts/navbar'); ?>
@@ -26,10 +28,12 @@
 	<h2 class='page-subtitle'>
 		<?php echo $subtitle; ?>
 	</h2>
-	<h2 class='not-found-homepage'>
-		<a href='/'>
-		<?php echo $homepage; ?>
-		</a>
-	</h2>
+	<p id='not-found-homepage'>
+		<span class='relative hover-<?php echo $hover_class; ?>'>
+			<a href='/'>
+				<?php echo $homepage; ?>
+			</a>
+		</span>
+	</p>
 </main>
 <?php get_footer(); ?>

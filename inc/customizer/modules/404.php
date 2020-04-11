@@ -63,7 +63,7 @@ Kirki::add_field('planeta_config', array(
 	'default'					=> 'Return to Homepage',
 	'partial_refresh'	=> array(
 		'404_homepage'		=> array(
-			'selector'				=> '#not-found-container > .not-found-homepage > a',
+			'selector'				=> '#not-found-homepage > span > a',
 			'render_callback'	=> function()
 			{
 				return get_theme_mod('404_homepage', 'Return to Homepage');
