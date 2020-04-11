@@ -11,42 +11,50 @@
 #footer-menu {
 	@include flexContainer();
 	z-index: $z-section-content;
+	padding-top: 2rem;
 
 	@include for-size(phone-only) {
 		flex-direction: column;
 		justify-content: center;
 	}
 
-	.button-link:not(:last-child) {
-		margin-right: 1rem;
-		margin-bottom: 1rem;
+	.button-link {
+		margin-top: 1rem;
 
 		@include for-size(phone-only) {
 			text-align: center;
 			margin-right: 0;
 		}
-	}
-}
 
-#footer-notice {
-	@include flexContainer($justify: space-between);
-	padding: 2rem 0 1rem;
-
-	@include for-size(tablet-and-down) {
-		flex-direction: column;
-		justify-content: center;
-		nav {
-			text-align: center;
-		}
-	}
-
-	& > nav {
-		a:not(:last-child) {
+		&:not(:last-child) {
 			margin-right: 1rem;
 		}
 	}
+}
 
-	* {
-		font-size: 80%;
+#footer-sidebar-container {
+	display: grid;
+	position: relative;
+	width: 100%;
+	z-index: $z-section-content;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 1rem;
+	padding-bottom: 2rem;
+
+	#footer-sidebar-left {
+		text-align: left;
+	}
+
+	#footer-sidebar-right {
+		text-align: right;
+		@include for-size(phone-only)
+		{
+			text-align: left;
+		}
+	}
+
+	img {
+		max-width: 100%;
+		object-fit: cover;
 	}
 }

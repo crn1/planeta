@@ -6,6 +6,13 @@
   flex-direction: column;
   flex-wrap: wrap;
 }
+.widget {
+  list-style-type: none;
+}
+.widgettitle {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
 .alignleft {
   text-align: left;
   align: left;
@@ -76,13 +83,15 @@ dl dt {
   display: flex;
 }
 #search-form input[type='text'] {
+  appearance: none;
+  background-color: transparent;
   min-width: 0;
   flex-grow: 1;
-  padding: 1rem 0.5rem;
+  padding: 0.75rem 0.5rem;
   border: 0;
-  appearance: none;
 }
 #search-form button {
+  appearance: none;
   border: 0;
   background-color: transparent;
   appearance: none;
@@ -512,6 +521,7 @@ dl dt {
   flex-direction: row;
   flex-wrap: wrap;
   z-index: 100;
+  padding-top: 2rem;
 }
 @media (max-width: 599px) {
   #footer-menu {
@@ -519,38 +529,41 @@ dl dt {
     justify-content: center;
   }
 }
-#footer-menu .button-link:not(:last-child) {
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+#footer-menu .button-link {
+  margin-top: 1rem;
 }
 @media (max-width: 599px) {
-  #footer-menu .button-link:not(:last-child) {
+  #footer-menu .button-link {
     text-align: center;
     margin-right: 0;
   }
 }
-#footer-notice {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 2rem 0 1rem;
-}
-@media (max-width: 899px) {
-  #footer-notice {
-    flex-direction: column;
-    justify-content: center;
-  }
-  #footer-notice nav {
-    text-align: center;
-  }
-}
-#footer-notice > nav a:not(:last-child) {
+#footer-menu .button-link:not(:last-child) {
   margin-right: 1rem;
 }
-#footer-notice * {
-  font-size: 80%;
+#footer-sidebar-container {
+  display: grid;
+  position: relative;
+  width: 100%;
+  z-index: 100;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  padding-bottom: 2rem;
+}
+#footer-sidebar-container #footer-sidebar-left {
+  text-align: left;
+}
+#footer-sidebar-container #footer-sidebar-right {
+  text-align: right;
+}
+@media (max-width: 599px) {
+  #footer-sidebar-container #footer-sidebar-right {
+    text-align: left;
+  }
+}
+#footer-sidebar-container img {
+  max-width: 100%;
+  object-fit: conver;
 }
 section {
   z-index: 100;

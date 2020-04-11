@@ -18,8 +18,7 @@ add_theme_support('automatic-feed-links');
 function register_menus()
 {
 	register_nav_menus(array(
-		'footer-menu' => 'Main Footer Menu',
-		'footer-notice-menu' => 'Footer Notice Menu',
+		'footer-menu' => 'Footer Menu',
 	));
 }
 add_action('after_setup_theme', 'register_menus');
@@ -43,8 +42,13 @@ function register_widgets()
 	));
 
 	register_sidebar(array(
-		'name'	=> 'Extended Footer',
-		'id'		=> 'extended-footer',
+		'name'	=> 'Footer (Left)',
+		'id'		=> 'footer-left',
+	));
+
+	register_sidebar(array(
+		'name'	=> 'Footer (Right)',
+		'id'		=> 'footer-right',
 	));
 }
 add_action('widgets_init', 'register_widgets');

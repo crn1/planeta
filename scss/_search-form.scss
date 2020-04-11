@@ -7,14 +7,16 @@
 	display: flex;
 
 	input[type='text'] {
+		appearance: none;
+		background-color: transparent;
 		min-width: 0;
 		flex-grow: 1;
-		padding: 1rem 0.5rem;
+		padding: 0.75rem 0.5rem;
 		border: 0;
-		appearance: none;
 	}
 
 	button {
+		appearance: none;
 		border: 0;
 		background-color: transparent;
 		appearance: none;

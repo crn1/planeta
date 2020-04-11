@@ -6,6 +6,7 @@
 				<div class='default-container'>
 					<?php
 						$hover_class = get_query_var('hover_class'); ?>
+
 					<nav id='footer-menu' class='relative'>
 						<?php
 							$params = array(
@@ -20,35 +21,19 @@
 						?>
 					</nav>
 
-					<?php if(is_active_sidebar('extended-footer')):
-						set_query_var('section', 'extended_footer');
-						get_template_part('template-parts/content/background'); ?>
-							<div
-									id='extended_footer-items'
-									class='default-container section-items'>
-								<?php dynamic_sidebar('extended-footer'); ?>
+					<div id='footer-sidebar-container'>
+						<?php if(is_active_sidebar('footer-left')): ?>
+							<div id="footer-sidebar-left">
+								<?php dynamic_sidebar('footer-left'); ?>
 							</div>
-						<?php get_template_part('template-parts/frontpage/macy'); ?>
-					<?php endif; ?>
+						<?php endif; ?>
 
-					<div id="footer-notice">
-						<small>
-							<?php
-								echo get_theme_mod('footer_copyright', 'Copyright (C) 2020 - Lorem Ipsum. All Rights Reserved.'); ?>
-						</small>
-
-							<nav>
-							<?php
-								$params = array(
-									'theme_location' 	=> 'footer-notice-menu',
-									'items_wrap'      => '%3$s',
-									'echo'						=> false,
-								);
-								echo strip_tags(wp_nav_menu($params), '<a>');
-							?>
-						</nav>
+						<?php if(is_active_sidebar('footer-right')): ?>
+							<div id="footer-sidebar-right">
+								<?php dynamic_sidebar('footer-right'); ?>
+							</div>
+						<?php endif; ?>
 					</div>
-
 				</div>
 			</footer>
 

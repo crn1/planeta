@@ -131,7 +131,6 @@ function planeta_add_video_background($section, $panel, $bg_output, $name = 'Bac
 			)
 		),
 	));
-
 }
 
 ?>
