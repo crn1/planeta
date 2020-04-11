@@ -57,7 +57,7 @@ function planeta_add_shape($args)
 		),
 	));
 
-	$strength = $args['inline'] ? 'Shape Strength (%)' : 'Strength (%)';
+	$strength = $args['inline'] ? 'Shape Strength' : 'Strength (%)';
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
 		'label'			=> esc_html__($strength, 'planeta'),

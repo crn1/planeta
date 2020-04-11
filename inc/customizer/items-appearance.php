@@ -20,7 +20,6 @@ function planeta_add_items_appearance($section)
 			'max'						=> '7',
 			'step'					=> '1',
 		),
-		'transport'			=> 'auto',
 		'output'				=> array(
 			array(
 				'element'				=> "#${section} .card",
@@ -59,7 +58,7 @@ function planeta_add_items_appearance($section)
 	));
 
 	Kirki::add_field('planeta_config', array(
-		'type'					=> 'select',
+		'type'					=> 'radio-buttonset',
 		'label'					=> esc_html__('Image Align', 'planeta'),
 		'section'				=> "${section}_items_appearance",
 		'settings'			=> "${section}_image_align",
