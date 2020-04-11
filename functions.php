@@ -9,6 +9,12 @@ if(class_exists('Kirki'))
 	include_once get_theme_file_path('inc/fallback.php');
 }
 
+//Internationalization
+add_action('after_setup_theme', 'planeta_i18n_setup');
+function planeta_i18n_setup(){
+	load_theme_textdomain('planeta', get_template_directory() . '/languages');
+}
+
 //Theme support
 add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
