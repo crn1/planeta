@@ -30,7 +30,9 @@
 	</h2>
 	<p id='not-found-homepage'>
 		<span class='relative hover-<?php echo $hover_class; ?>'>
-			<a href='/'>
+			<a
+					class='button-link'
+					href='/'>
 				<?php echo $homepage; ?>
 			</a>
 		</span>
