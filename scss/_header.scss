@@ -16,9 +16,16 @@
 	& .top-menu-item {
 		text-align: center;
 		display: inline-block !important;
+	}
 
-		&:not(:last-child) {
-			margin-bottom: 2rem;
+	& > .top-menu-item:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	& > .social-container {
+		@include flexContainer();
+		& .top-menu-item:not(:last-child) {
+			margin-right: 1rem;
 		}
 	}
 

@@ -456,8 +456,18 @@ dl dt {
   text-align: center;
   display: inline-block !important;
 }
-#top-menu .top-menu-item:not(:last-child) {
+#top-menu > .top-menu-item:not(:last-child) {
   margin-bottom: 2rem;
+}
+#top-menu > .social-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#top-menu > .social-container .top-menu-item:not(:last-child) {
+  margin-right: 1rem;
 }
 #top-menu.menu-up {
   top: -100vh;
