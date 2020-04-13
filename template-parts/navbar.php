@@ -1,11 +1,5 @@
 <?php
-	$logo_id = get_theme_mod('logo', '');
-	if(!empty($logo_id))
-	{
-		$logo_url = wp_get_attachment_url($logo_id);
-		$logo_alt = get_post_meta($logo_id, '_wp_attachment_image_alt', true);
-	}
-	$logo_text = get_theme_mod('logo_text', '');
+	$reverse = get_theme_mod('navbar_reverse', false);
 
 	$render_social = get_theme_mod('social_menu_header', false);
 	$navbar_class = get_theme_mod('navbar_type', 'up');
@@ -31,18 +25,35 @@
 			<?php
 		}
 	}
+
+	function logo_container()
+	{
+		$logo_id = get_theme_mod('logo', '');
+		if(!empty($logo_id))
+		{
+			$logo_url = wp_get_attachment_url($logo_id);
+			$logo_alt = get_post_meta($logo_id, '_wp_attachment_image_alt', true);
+		}
+		$logo_text = get_theme_mod('logo_text', ''); ?>
+
+		<a href='/' id='logo-container'>
+			<?php if($logo_url != ''): ?>
+				<img
+						id='logo'
+						alt='<?php echo $logo_alt; ?>'
+						src='<?php echo $logo_url; ?>'
+				/>
+			<?php endif; ?>
+		</a>
+
+		<?php
+	}
 ?>
 
 <header id='main-header'>
-	<a href='/' id='logo-container'>
-		<?php if($logo_url != ''): ?>
-			<img
-					id='logo'
-					alt='<?php echo $logo_alt; ?>'
-					src='<?php echo $logo_url; ?>'
-			/>
-		<?php endif; ?>
-	</a>
+	<?php if(!$reverse): ?>
+		<?php logo_container(); ?>
+	<?php endif; ?>
 
 	<span id="hamburger-container">
 		<button
@@ -54,6 +65,10 @@
 			</span>
 		</button>
 	</span>
+
+	<?php if($reverse): ?>
+		<?php logo_container(); ?>
+	<?php endif; ?>
 </header>
 
 <nav
