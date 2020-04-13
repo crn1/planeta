@@ -13,6 +13,7 @@ function typography_generator($args)
 		'class'								=> '',
 		'enable_sizing'				=> true,
 		'enable_hover'				=> false,
+		'default_size'				=> 1,
 		'default_typography'	=> array(),
 		'size_units'					=> 'rem',
 		'size_choices'				=> array(
@@ -46,7 +47,7 @@ function typography_generator($args)
 		'label'       => esc_html__('Typography', 'planeta'),
 		'section'     => "typography_${section}",
 		'settings'    => "typography_${section}",
-		'default'			=> $args['default_typography'],
+		'default'			=> $typography,
 		'transport'		=> 'auto',
 		'output'      => array(
 			array(
@@ -63,6 +64,7 @@ function typography_generator($args)
 			'section'     => "typography_${section}",
 			'settings'    => "typography_${section}_size",
 			'choices'     => $args['size_choices'],
+			'default'			=> $args['default_size'],
 			'transport'		=> 'auto',
 			'output'			=> array(
 				array(
@@ -140,27 +142,31 @@ typography_generator(array(
 	'name' 						=> 'Section Title',
 	'section' 				=> 'section_title',
 	'class'						=> '.section-title',
+	'default_size'		=> 5, //Promeni me!
 ));
 
 typography_generator(array(
 	'name' 						=> 'Section Subtitle',
 	'section' 				=> 'section_subtitle',
 	'class'						=> '.section-subtitle',
+	'default_size'		=> 2, //Promeni me!
 ));
 
 typography_generator(array(
 	'name'								=> 'Page Title',
 	'section'							=> 'page_title',
 	'class'								=> '.page-title',
+	'default_size'				=> 5, //Promeni me!
 	'default_typography' 	=> array(
 		'text-align'					=> 'center',
 	),
 ));
 
 typography_generator(array(
-	'name' 						=> 'Page Subtitle',
-	'section' 				=> 'page_subtitle',
-	'class'						=> '.page-subtitle',
+	'name'								=> 'Page Subtitle',
+	'section'							=> 'page_subtitle',
+	'class'								=> '.page-subtitle',
+	'default_size'				=> 2, //Promeni me!
 	'default_typography' 	=> array(
 		'text-align'					=> 'center',
 	),
