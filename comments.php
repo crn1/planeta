@@ -31,12 +31,6 @@
 		<?php previous_comments_link() ?>
 		<?php next_comments_link() ?>
 
-		<?php if( !comments_open() && get_comments_number() ): ?>
-			<p class="no-comments">
-				Comments are closed
-			</p>
-		<?php endif; ?>
-
 	<?php	endif; ?>
 
 	<?php comment_form(); ?>

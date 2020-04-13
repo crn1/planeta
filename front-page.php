@@ -15,7 +15,7 @@
 
 		<div class='default-container'>
 			<?php
-				$inside_layout = get_theme_mod("${section}_layout", array('title', 'subtitle', 'items'));
+				$inside_layout = get_theme_mod("${section}_layout", array('logo', 'title', 'subtitle', 'items', 'buttons'));
 				foreach($inside_layout as $inside_block)
 				{
 					get_template_part("template-parts/frontpage/${inside_block}");

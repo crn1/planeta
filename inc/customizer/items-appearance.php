@@ -11,7 +11,7 @@ function planeta_add_items_appearance($section)
 
 	Kirki::add_field('planeta_config', array(
 		'type'					=> 'slider',
-		'label'					=> esc_html__('Items Columns', 'planeta'),
+		'label'					=> esc_html__('Columns', 'planeta'),
 		'section'				=> "${section}_items_appearance",
 		'settings'			=> "${section}_masonry_num",
 		'default'				=> '3',
@@ -85,7 +85,7 @@ function planeta_add_items_appearance($section)
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__('Items Margin Top (vh)', 'planeta'),
+		'label'			=> esc_html__('Margin Top (vh)', 'planeta'),
 		'section'		=> "${section}_items_appearance",
 		'settings'	=> "${section}_items_margin_top",
 		'default'		=> 3,
@@ -97,7 +97,7 @@ function planeta_add_items_appearance($section)
 		'transport'			=> 'auto',
 		'output'		=> array(
 			array(
-				'element'		=> "#${section} .section-items",
+				'element'		=> "#${section}-items",
 				'units'			=> 'vh',
 				'property'	=> 'margin-top',
 			),
@@ -106,7 +106,7 @@ function planeta_add_items_appearance($section)
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__("Items Margin Bottom (vh)", 'planeta'),
+		'label'			=> esc_html__("Margin Bottom (vh)", 'planeta'),
 		'section'		=> "${section}_items_appearance",
 		'settings'	=> "${section}_items_margin_bottom",
 		'default'		=> 0,
@@ -118,7 +118,7 @@ function planeta_add_items_appearance($section)
 		'transport'			=> 'auto',
 		'output'		=> array(
 			array(
-				'element'		=> "#${section} .section-items",
+				'element'		=> "#${section}-items",
 				'units'			=> 'vh',
 				'property'	=> 'margin-bottom',
 			),

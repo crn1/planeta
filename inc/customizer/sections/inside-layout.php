@@ -13,15 +13,18 @@ function planeta_add_section_layout(&$index)
 		'section'		=> "section_${index}_layout",
 		'settings'	=> "section_${index}_layout",
 		'default'		=> array(
+			'logo',
 			'title',
 			'subtitle',
 			'items',
+			'buttons',
 		),
 		'choices'		=> array(
+			'logo'			=> esc_html__('Logo/Image', 'planeta'),
 			'title'			=> esc_html__('Title', 'planeta'),
 			'subtitle'	=> esc_html__('Subtitle', 'planeta'),
-			'logo'			=> esc_html__('Logo/Image', 'planeta'),
 			'items'			=> esc_html__('Items', 'planeta'),
+			'buttons'		=> esc_html__('Buttons', 'planeta'),
 		),
 	));
 }
