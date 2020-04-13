@@ -22,8 +22,11 @@ function planeta_add_animations($section, $title, $panel)
 		),
 	));
 
-	require_once(get_template_directory() . '/inc/customizer/animations-lax.php');
 	require_once(get_template_directory() . '/inc/customizer/animations-aos.php');
+	planeta_add_animations_aos($section);
+
+	require_once(get_template_directory() . '/inc/customizer/animations-lax.php');
+	planeta_add_animations_lax($section);
 }
 
 ?>
