@@ -2,7 +2,7 @@
 
 define('ITEMS_FIELDS', array(
 
-	'projects'						=> array(
+	'projects'				=> array(
 		'image'						=> array(
 			'type'						=> 'image',
 			'label'						=> esc_html__('Image/Logo', 'planeta'),
@@ -33,7 +33,7 @@ define('ITEMS_FIELDS', array(
 		),
 	),
 
-	'experience'					=> array(
+	'experience'			=> array(
 		'image'						=> array(
 			'type'						=> 'image',
 			'label'						=> esc_html__('Image/Logo', 'planeta'),
@@ -59,7 +59,7 @@ define('ITEMS_FIELDS', array(
 		),
 	),
 
-	'clients'							=> array(
+	'clients'					=> array(
 		'image'						=> array(
 			'type'						=> 'image',
 			'label'						=> esc_html__('Image/Logo', 'planeta'),
@@ -108,6 +108,27 @@ define('ITEMS_FIELDS', array(
 			'type'								=> 'textarea',
 			'label'								=> esc_html__('Full Testimonial', 'planeta'),
 			'default'							=> 'This is full text of testimonial',
+		),
+	),
+
+	'tech'						=> array(
+		'image'						=> array(
+			'type'						=> 'image',
+			'label'						=> esc_html__('Image/Logo', 'planeta'),
+			'default'					=> '',
+			'choices'					=> array(
+				'save_as'					=> 'id',
+			),
+		),
+		'title'								=> array(
+			'type'								=> 'text',
+			'label'								=> esc_html__('Title (Primary Text)', 'planeta'),
+			'default'							=> 'This is title',
+		),
+		'description'					=> array(
+			'type'								=> 'textarea',
+			'label'								=> esc_html__('Description (Secondary Text)', 'planeta'),
+			'default'							=> 'This is description of a project',
 		),
 	),
 

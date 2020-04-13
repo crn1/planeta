@@ -22,7 +22,7 @@ function planeta_add_section_items(&$index)
 			'clients'				=> esc_html__('Clients', 'planeta'),
 			'testimonials'	=> esc_html__('Testimonials', 'planeta'),
 			'numbers'				=> esc_html__('Numbers', 'planeta'),
-			'buttons'				=> esc_html__('Buttons (Links)', 'planeta'),
+			'tech'					=> esc_html__('Tech Stack', 'planeta'),
 			'posts'					=> esc_html__('Posts', 'planeta'),
 		),
 	));

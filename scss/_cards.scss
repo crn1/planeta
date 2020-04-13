@@ -91,6 +91,19 @@
 	}
 }
 
+.card-tech {
+	& > .info {
+		width: unset !important;
+	}
+
+	&:not(:last-child)
+	{
+		@include for-size(tablet-and-up) {
+			margin-right: 2rem !important;
+		}
+	}
+}
+
 @media screen and (min-width: 769px)
 {
 	.all-left {
