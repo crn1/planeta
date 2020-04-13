@@ -1,4 +1,63 @@
 <?php
+function generate_items_typography($name, $title, &$index)
+{
+	Kirki::add_field('planeta_config', array(
+		'type'        => 'typography',
+		'label'       => $title,
+		'section'			=> "section_${index}_items_typography",
+		'settings'    => "section_${index}_${name}_typography",
+		'default'     => array(
+			'text-transform' 		=> 'none',
+			'text-align'    		=> 'center',
+			'color'    					=> '#000000',
+			'font-family'    		=> 'inherit',
+			'variant'        		=> 'regular',
+		),
+		'transport'		=> 'auto',
+		'output'     	=> array(
+			array(
+				'element'			=> "#section_${index}-items .${name}-text",
+			),
+		),
+	));
+
+	Kirki::add_field('planeta_config', array(
+		'type'        => 'toggle',
+		'label'       => esc_html__('Inherit Size', 'planeta'),
+		'section'			=> "section_${index}_items_typography",
+		'settings'    => "section_${index}_${name}_inherit_size",
+		'default'			=> true,
+	));
+
+	Kirki::add_field('planeta_config', array(
+		'type'        => 'slider',
+		'label'       => esc_html__('Size (rem)', 'planeta'),
+		'section'			=> "section_${index}_items_typography",
+		'settings'    => "section_${index}_${name}_size",
+		'default'			=> 1,
+		'choices'     => array(
+			'min'					=> 0.1,
+			'max'					=> 7,
+			'step'				=> 0.1,
+		),
+		'transport'		=> 'auto',
+		'output'			=> array(
+			array(
+				'element'			=> "#section_${index}-items .${name}-text",
+				'property'		=> 'font-size',
+				'units'				=> 'rem',
+			),
+		),
+		'active_callback'	=> array(
+			array(
+				'setting'    => "section_${index}_${name}_inherit_size",
+				'operator'		=> '!=',
+				'value'				=> true,
+			),
+		),
+	));
+
+}
 
 function planeta_add_section_items_typography(&$index)
 {
@@ -7,85 +66,8 @@ function planeta_add_section_items_typography(&$index)
 		'panel' => "section_${index}_panel",
 	));
 
-	Kirki::add_field('planeta_config', array(
-		'type'        => 'typography',
-		'label'       => esc_html__('Primary Typography', 'planeta'),
-		'section'			=> "section_${index}_items_typography",
-		'settings'    => "section_${index}_primary_typo",
-		'default'     => array(
-			'text-transform'    => 'uppercase',
-			'text-align'    		=> 'center',
-			'color'    					=> '#000000',
-			'font-family'    		=> 'Rubik',
-			'variant'        		=> 'regular',
-		),
-		'transport'		=> 'auto',
-		'output'      => array(
-			array(
-				'element'		=> "#section_${index} .primary-text",
-			),
-		),
-	));
-
-	Kirki::add_field('planeta_config', array(
-		'type'        => 'slider',
-		'label'       => esc_html__('Primary Size (rem)', 'planeta'),
-		'section'			=> "section_${index}_items_typography",
-		'settings'    => "section_${index}_primary_size",
-		'choices'     => array(
-			'min'					=> 0.1,
-			'max'					=> 7,
-			'step'				=> 0.1,
-		),
-		'transport'		=> 'auto',
-		'output'			=> array(
-			array(
-				'element'			=> "#section_${index} .primary-text",
-				'property'		=> 'font-size',
-				'units'				=> 'rem',
-			),
-		),
-	));
-
-	Kirki::add_field('planeta_config', array(
-		'type'        => 'typography',
-		'label'       => esc_html__('Secondary Typography', 'planeta'),
-		'section'			=> "section_${index}_items_typography",
-		'settings'    => "section_${index}_secondary_typo",
-		'default'     => array(
-			'text-transform'    => 'none',
-			'color'    					=> '#000000',
-			'font-family'    		=> 'Rubik',
-			'variant'        		=> 'regular',
-			'text-align'    		=> 'center',
-		),
-		'transport'		=> 'auto',
-		'output'      => array(
-			array(
-				'element'		=> "#section_${index} .secondary-text",
-			),
-		),
-	));
-
-	Kirki::add_field('planeta_config', array(
-		'type'        => 'slider',
-		'label'       => esc_html__('Secondary Size (rem)', 'planeta'),
-		'section'			=> "section_${index}_items_typography",
-		'settings'    => "section_${index}_secondary_size",
-		'choices'     => array(
-			'min'					=> 0.1,
-			'max'					=> 7,
-			'step'				=> 0.1,
-		),
-		'transport'		=> 'auto',
-		'output'			=> array(
-			array(
-				'element'			=> "#section_${index} .secondary-text",
-				'property'		=> 'font-size',
-				'units'				=> 'rem',
-			),
-		),
-	));
+	generate_items_typography('primary', esc_html__('Primary Text', 'planeta'), $index);
+	generate_items_typography('secondary', esc_html__('Secondary Text', 'planeta'), $index);
 }
 
 ?>

@@ -1,19 +1,14 @@
 <?php
 
-function planeta_add_section_heading_typography(&$index)
+function generate_heading_typography($name, $title, &$index)
 {
-	Kirki::add_section("section_${index}_heading_typography", array(
-		'title' => esc_html__('Heading Typography', 'planeta'),
-		'panel' => "section_${index}_panel",
-	));
-
 	Kirki::add_field('planeta_config', array(
 		'type'        => 'typography',
-		'label'       => esc_html__('Title', 'planeta'),
+		'label'       => $title,
 		'section'			=> "section_${index}_heading_typography",
-		'settings'    => "section_${index}_title_typo",
+		'settings'    => "section_${index}_${name}_typography",
 		'default'     => array(
-			'text-transform'    => 'uppercase',
+			'text-transform'    => 'none',
 			'text-align'    		=> 'center',
 			'color'    					=> '#000000',
 			'font-family'    		=> 'inherit',
@@ -22,16 +17,25 @@ function planeta_add_section_heading_typography(&$index)
 		'transport'		=> 'auto',
 		'output'     	 => array(
 			array(
-				'element'			=> "#section_${index} .section-title",
+				'element'			=> "#section_${index} .section-${name}",
 			),
 		),
 	));
 
 	Kirki::add_field('planeta_config', array(
-		'type'        => 'slider',
-		'label'       => esc_html__('Title Size (rem)', 'planeta'),
+		'type'        => 'toggle',
+		'label'       => esc_html__('Inherit Size', 'planeta'),
 		'section'			=> "section_${index}_heading_typography",
-		'settings'    => "section_${index}_title_size",
+		'settings'    => "section_${index}_${name}_inherit_size",
+		'default'			=> true,
+	));
+
+	Kirki::add_field('planeta_config', array(
+		'type'        => 'slider',
+		'label'       => esc_html__('Size (rem)', 'planeta'),
+		'section'			=> "section_${index}_heading_typography",
+		'settings'    => "section_${index}_${name}_size",
+		'default'			=> 1,
 		'choices'     => array(
 			'min'					=> 0.1,
 			'max'					=> 7,
@@ -40,52 +44,31 @@ function planeta_add_section_heading_typography(&$index)
 		'transport'		=> 'auto',
 		'output'			=> array(
 			array(
-				'element'			=> "#section_${index} .section-title",
+				'element'			=> "#section_${index} .section-${name}",
 				'property'		=> 'font-size',
 				'units'				=> 'rem',
 			),
 		),
-	));
-
-	Kirki::add_field('planeta_config', array(
-		'type'        => 'typography',
-		'label'       => esc_html__('Subtitle', 'planeta'),
-		'section'			=> "section_${index}_heading_typography",
-		'settings'    => "section_${index}_subtitle_typo",
-		'default'     => array(
-			'text-transform'    => 'none',
-			'color'    					=> '#000000',
-			'font-family'    		=> 'inherit',
-			'variant'        		=> 'regular',
-			'text-align'    		=> 'center',
-		),
-		'transport'		=> 'auto',
-		'output'      => array(
+		'active_callback'	=> array(
 			array(
-				'element'		=> "#section_${index} .section-subtitle",
+				'setting'    => "section_${index}_${name}_inherit_size",
+				'operator'		=> '!=',
+				'value'				=> true,
 			),
 		),
 	));
 
-	Kirki::add_field('planeta_config', array(
-		'type'        => 'slider',
-		'label'       => esc_html__('Subtitle Size (rem)', 'planeta'),
-		'section'			=> "section_${index}_heading_typography",
-		'settings'    => "section_${index}_subtitle_size",
-		'choices'     => array(
-			'min'					=> 0.1,
-			'max'					=> 7,
-			'step'				=> 0.1,
-		),
-		'transport'		=> 'auto',
-		'output'			=> array(
-			array(
-				'element'			=> "#section_${index} .section-subtitle",
-				'property'		=> 'font-size',
-				'units'				=> 'rem',
-			),
-		),
+}
+
+function planeta_add_section_heading_typography(&$index)
+{
+	Kirki::add_section("section_${index}_heading_typography", array(
+		'title' => esc_html__('Heading Typography', 'planeta'),
+		'panel' => "section_${index}_panel",
 	));
+
+	generate_heading_typography('title', esc_html__('Title', 'planeta'), $index);
+	generate_heading_typography('subtitle', esc_html__('Subtitle', 'planeta'), $index);
 }
 
 ?>

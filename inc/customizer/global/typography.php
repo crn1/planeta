@@ -59,6 +59,14 @@ function typography_generator($args)
 	if($args['enable_sizing'])
 	{
 		Kirki::add_field('planeta_config', array(
+			'type'        => 'toggle',
+			'label'       => esc_html__('Inherit Size', 'planeta'),
+			'section'     => "typography_${section}",
+			'settings'    => "typography_${section}_inherit_size",
+			'default'			=> true,
+		));
+
+		Kirki::add_field('planeta_config', array(
 			'type'        => 'slider',
 			'label'       => esc_html__('Size', 'planeta'),
 			'section'     => "typography_${section}",
@@ -71,6 +79,13 @@ function typography_generator($args)
 					'element'				=> $class,
 					'property'			=> 'font-size',
 					'units'					=> $args['size_units'],
+				),
+			),
+			'active_callback'	=> array(
+				array(
+					'setting'    	=> "typography_${section}_inherit_size",
+					'operator'		=> '!=',
+					'value'				=> true,
 				),
 			),
 		));
