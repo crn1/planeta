@@ -394,15 +394,15 @@ dl dt {
   margin-top: 0;
   margin-bottom: 0;
 }
-.card-tech > .info {
+.card-tech > .info, .card-clients > .info {
   width: unset !important;
 }
 @media (min-width: 600px) {
-  .card-tech:not(:last-child) {
+  .card-tech:not(:last-child), .card-clients:not(:last-child) {
     margin-right: 2rem !important;
   }
 }
-@media screen and (min-width: 769px) {
+@media (max-width: 599px) {
   .all-left .card > .image {
     order: 1;
     margin-right: 2rem;

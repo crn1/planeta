@@ -32,6 +32,6 @@ if($card_preset != 'none' && (!empty($items) || $card_preset == 'posts')):
 </div>
 <?php endif; ?>
 
-<?php if($card_preset != 'tech'): ?>
+<?php if(!in_array($card_preset, array('tech', 'clients'))): ?>
 	<?php get_template_part('template-parts/frontpage/macy'); ?>
 <?php endif; ?>

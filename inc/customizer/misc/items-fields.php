@@ -59,7 +59,7 @@ define('ITEMS_FIELDS', array(
 		),
 	),
 
-	'clients'					=> array(
+	'clients-macy'		=> array(
 		'image'						=> array(
 			'type'						=> 'image',
 			'label'						=> esc_html__('Image/Logo', 'planeta'),
@@ -77,6 +77,17 @@ define('ITEMS_FIELDS', array(
 			'type'								=> 'textarea',
 			'label'								=> esc_html__('Description (Secondary Text)', 'planeta'),
 			'default'							=> 'This is description of a client',
+		),
+	),
+
+	'clients'					=> array(
+		'image'						=> array(
+			'type'						=> 'image',
+			'label'						=> esc_html__('Image/Logo', 'planeta'),
+			'default'					=> '',
+			'choices'					=> array(
+				'save_as'					=> 'id',
+			),
 		),
 	),
 
@@ -129,6 +140,17 @@ define('ITEMS_FIELDS', array(
 			'type'								=> 'textarea',
 			'label'								=> esc_html__('Description (Secondary Text)', 'planeta'),
 			'default'							=> 'This is description of a project',
+		),
+	),
+
+	'gallery'						=> array(
+		'image'						=> array(
+			'type'						=> 'image',
+			'label'						=> esc_html__('Image', 'planeta'),
+			'default'					=> '',
+			'choices'					=> array(
+				'save_as'					=> 'id',
+			),
 		),
 	),
 
