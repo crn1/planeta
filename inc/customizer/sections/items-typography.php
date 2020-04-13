@@ -1,6 +1,15 @@
 <?php
-function generate_items_typography($name, $title, &$index)
+
+function generate_items_typography($name, $title, $inherit_label, &$index)
 {
+	Kirki::add_field('planeta_config', array(
+		'type'        => 'toggle',
+		'label'       => $inherit_label,
+		'section'			=> "section_${index}_items_typography",
+		'settings'    => "section_${index}_${name}_inherit_typography",
+		'default'			=> true,
+	));
+
 	Kirki::add_field('planeta_config', array(
 		'type'        => 'typography',
 		'label'       => $title,
@@ -13,10 +22,16 @@ function generate_items_typography($name, $title, &$index)
 			'font-family'    		=> 'inherit',
 			'variant'        		=> 'regular',
 		),
-		'transport'		=> 'auto',
 		'output'     	=> array(
 			array(
 				'element'			=> "#section_${index}-items .${name}-text",
+			),
+		),
+		'active_callback'	=> array(
+			array(
+				'setting'    	=> "section_${index}_${name}_inherit_typography",
+				'operator'		=> '!=',
+				'value'				=> true,
 			),
 		),
 	));
@@ -66,8 +81,17 @@ function planeta_add_section_items_typography(&$index)
 		'panel' => "section_${index}_panel",
 	));
 
-	generate_items_typography('primary', esc_html__('Primary Text', 'planeta'), $index);
-	generate_items_typography('secondary', esc_html__('Secondary Text', 'planeta'), $index);
+	generate_items_typography(
+		'primary',
+		esc_html__('Primary Text', 'planeta'),
+		esc_html__('Primary Text Inherit Typography', 'planeta'),
+		$index);
+
+	generate_items_typography(
+		'secondary',
+		esc_html__('Secondary Text', 'planeta'),
+		esc_html__('Secondary Text Inherit Typography', 'planeta'),
+		$index);
 }
 
 ?>

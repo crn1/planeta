@@ -1,7 +1,15 @@
 <?php
 
-function generate_heading_typography($name, $title, &$index)
+function generate_heading_typography($name, $title, $inherit_label, &$index)
 {
+	Kirki::add_field('planeta_config', array(
+		'type'        => 'toggle',
+		'label'       => $inherit_label,
+		'section'			=> "section_${index}_heading_typography",
+		'settings'    => "section_${index}_${name}_inherit_typography",
+		'default'			=> true,
+	));
+
 	Kirki::add_field('planeta_config', array(
 		'type'        => 'typography',
 		'label'       => $title,
@@ -14,10 +22,16 @@ function generate_heading_typography($name, $title, &$index)
 			'font-family'    		=> 'inherit',
 			'variant'        		=> 'regular',
 		),
-		'transport'		=> 'auto',
 		'output'     	 => array(
 			array(
 				'element'			=> "#section_${index} .section-${name}",
+			),
+		),
+		'active_callback'	=> array(
+			array(
+				'setting'   => "section_${index}_${name}_inherit_typography",
+				'operator'	=> '!=',
+				'value'			=> true,
 			),
 		),
 	));
@@ -67,8 +81,17 @@ function planeta_add_section_heading_typography(&$index)
 		'panel' => "section_${index}_panel",
 	));
 
-	generate_heading_typography('title', esc_html__('Title', 'planeta'), $index);
-	generate_heading_typography('subtitle', esc_html__('Subtitle', 'planeta'), $index);
+	generate_heading_typography(
+		'title',
+		esc_html__('Title', 'planeta'),
+		esc_html__('Title Inherit Typography', 'planeta'),
+		$index);
+
+	generate_heading_typography(
+		'subtitle',
+		esc_html__('Subtitle', 'planeta'),
+		esc_html__('Subtitle Inherit Typography', 'planeta'),
+		$index);
 }
 
 ?>
