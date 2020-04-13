@@ -2,7 +2,7 @@
 
 Kirki::add_section('loading_section', array(
 	'title'	=> esc_html__('Loading Page', 'planeta'),
-	'panel'	=> 'modules_panel',
+	'panel'	=> 'advanced_panel',
 ));
 
 Kirki::add_field('planeta_config', array(

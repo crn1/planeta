@@ -4,7 +4,7 @@ require_once(get_template_directory() . '/inc/customizer/misc/social.php');
 
 Kirki::add_section('social_menu_section', array(
 	'title'	=> esc_html__('Social Media', 'planeta'),
-	'panel'	=> 'modules_panel',
+	'panel'	=> 'header_panel',
 ));
 
 Kirki::add_field('planeta_config', array(

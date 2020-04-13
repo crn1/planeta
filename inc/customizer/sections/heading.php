@@ -29,7 +29,7 @@ function planeta_add_section_heading(&$index)
 		'label'			=> esc_html__('Title', 'planeta'),
 		'section'		=> "section_${index}_heading",
 		'settings'	=> "section_${index}_title",
-		'default'		=> esc_html__('Section itle', 'planeta'),
+		'default'		=> esc_html__('Section Title', 'planeta'),
 		'partial_refresh'	=> array(
 			"section_${index}_title" => array(
 				'selector'				=> "#section_${index} .section-title",
@@ -46,7 +46,7 @@ function planeta_add_section_heading(&$index)
 		'label'			=> esc_html__('Subtitle/Content', 'planeta'),
 		'section'		=> "section_${index}_heading",
 		'settings'	=> "section_${index}_subtitle",
-		'default'		=> esc_html__('Lorem ipsum dolor sit amet', 'planeta'),
+		'default'		=> esc_html__('This is a section subtitle.', 'planeta'),
 		'partial_refresh'	=> array(
 			"section_${index}_subtitle" => array(
 				'selector'				=> "#section_${index} .section-subtitle",

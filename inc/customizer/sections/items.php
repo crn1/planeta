@@ -24,7 +24,8 @@ function planeta_add_section_items(&$index)
 			'testimonials'	=> esc_html__('Testimonials', 'planeta'),
 			'numbers'				=> esc_html__('Numbers', 'planeta'),
 			'gallery'				=> esc_html__('Gallery', 'planeta'),
-			'tech'					=> esc_html__('Tech Stack', 'planeta'),
+			'tech'					=> esc_html__('Tech Stack (only logos)', 'planeta'),
+			'tech-macy'			=> esc_html__('Tech Stack', 'planeta'),
 			'posts'					=> esc_html__('Posts', 'planeta'),
 		),
 	));

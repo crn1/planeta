@@ -1,8 +1,8 @@
 <?php
 
 Kirki::add_section('excerpt_section', array(
-	'title'	=> esc_html__('Excerpt', 'planeta'),
-	'panel'	=> 'global_panel',
+	'title'			=> esc_html__('Excerpt', 'planeta'),
+	'panel'			=> 'advanced_panel',
 ));
 
 Kirki::add_field('planeta_config', array(

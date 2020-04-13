@@ -4,7 +4,6 @@ require_once(get_template_directory() . '/inc/customizer/video-background.php');
 
 Kirki::add_panel('footer_panel', array(
 	'title'       => esc_html__('Footer', 'planeta'),
-	'panel'       => 'modules_panel',
 ));
 
 Kirki::add_section('footer_spacing', array(

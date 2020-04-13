@@ -122,7 +122,7 @@ define('ITEMS_FIELDS', array(
 		),
 	),
 
-	'tech'						=> array(
+	'tech-macy'						=> array(
 		'image'						=> array(
 			'type'						=> 'image',
 			'label'						=> esc_html__('Image/Logo', 'planeta'),
@@ -140,6 +140,17 @@ define('ITEMS_FIELDS', array(
 			'type'								=> 'textarea',
 			'label'								=> esc_html__('Description (Secondary Text)', 'planeta'),
 			'default'							=> 'This is description of a project',
+		),
+	),
+
+	'tech'						=> array(
+		'image'						=> array(
+			'type'						=> 'image',
+			'label'						=> esc_html__('Image/Logo', 'planeta'),
+			'default'					=> '',
+			'choices'					=> array(
+				'save_as'					=> 'id',
+			),
 		),
 	),
 

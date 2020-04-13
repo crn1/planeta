@@ -13,17 +13,14 @@ section {
 
 		& > .section-title,
 		& > .section-subtitle,
-		& > .section-logo {
-			@include for-size(tablet-and-down)
-			{
-				width: 100% !important;
-			}
+		& > .section-logo,
+		& > .section-items {
+			width: 100% !important;
 		}
 
 		.section-items {
 			@include flexContainer();
 			z-index: $z-section-content;
-			width: 100%;
 
 			@include for-size(phone-only) {
 				flex-direction: column;

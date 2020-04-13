@@ -4,13 +4,9 @@ $number_of_frontpage_sections = 15;
 
 require_once(get_template_directory() . '/inc/customizer/sections/inside-layout.php');
 require_once(get_template_directory() . '/inc/customizer/sections/heading.php');
-require_once(get_template_directory() . '/inc/customizer/sections/heading-appearance.php');
-require_once(get_template_directory() . '/inc/customizer/sections/heading-typography.php');
 require_once(get_template_directory() . '/inc/customizer/sections/items.php');
-require_once(get_template_directory() . '/inc/customizer/sections/items-appearance.php');
-require_once(get_template_directory() . '/inc/customizer/sections/items-typography.php');
 require_once(get_template_directory() . '/inc/customizer/sections/buttons.php');
-require_once(get_template_directory() . '/inc/customizer/sections/buttons-appearance.php');
+require_once(get_template_directory() . '/inc/customizer/sections/appearance.php');
 require_once(get_template_directory() . '/inc/customizer/sections/background.php');
 
 function planeta_add_frontpage_sections($num_sections = 15)
@@ -24,13 +20,9 @@ function planeta_add_frontpage_sections($num_sections = 15)
 
 		planeta_add_section_layout($index);
 		planeta_add_section_heading($index);
-		planeta_add_section_heading_appearance($index);
-		planeta_add_section_heading_typography($index);
 		planeta_add_section_items($index);
-		planeta_add_section_items_appearance($index);
-		planeta_add_section_items_typography($index);
 		planeta_add_section_buttons($index);
-		planeta_add_section_buttons_appearance($index);
+		planeta_add_section_appearance($index);
 		planeta_add_section_background($index);
 	}
 }

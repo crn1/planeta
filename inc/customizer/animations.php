@@ -29,4 +29,15 @@ function planeta_add_animations($section, $title, $panel)
 	planeta_add_animations_lax($section);
 }
 
+Kirki::add_panel('animations_panel', array(
+	'title'       => esc_html__('Animations', 'planeta'),
+));
+
+planeta_add_animations('section_title', 'Section Title', 'animations_panel');
+planeta_add_animations('section_subtitle', 'Section Subtitle', 'animations_panel');
+planeta_add_animations('section_logo', 'Section Image/Logo', 'animations_panel');
+planeta_add_animations('page_title', 'Page Title', 'animations_panel');
+planeta_add_animations('card_image', 'Item Image', 'animations_panel');
+planeta_add_animations('card_info', 'Item Info & Buttons', 'animations_panel');
+
 ?>

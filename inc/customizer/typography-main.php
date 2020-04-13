@@ -10,7 +10,6 @@ Kirki::add_field('planeta_config', array(
 	'label'       => esc_html__('Typography', 'planeta'),
 	'section'     => 'typography_main',
 	'settings'    => 'typography_main',
-	'transport'		=> 'auto',
 	'default'     => array(
 		'text-transform'			=> 'none',
 		'color'								=> '#000000',

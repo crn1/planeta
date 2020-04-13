@@ -2,7 +2,6 @@
 
 Kirki::add_panel('typography_panel', array(
 	'title'       => esc_html__('Typography', 'planeta'),
-	'panel'       => 'global_panel',
 ));
 
 function typography_generator($args)
@@ -157,8 +156,8 @@ function typography_generator($args)
 	}
 }
 
-require_once(get_template_directory() . '/inc/customizer/global/typography-main.php');
-require_once(get_template_directory() . '/inc/customizer/global/typography-heading.php');
+require_once(get_template_directory() . '/inc/customizer/typography-main.php');
+require_once(get_template_directory() . '/inc/customizer/typography-heading.php');
 
 typography_generator(array(
 	'name' 					=> 'Button Link',

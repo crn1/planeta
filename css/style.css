@@ -604,10 +604,8 @@ section > .default-container {
   flex-direction: column;
   flex-wrap: wrap;
 }
-@media (max-width: 899px) {
-  section > .default-container > .section-title, section > .default-container > .section-subtitle, section > .default-container > .section-logo {
-    width: 100% !important;
-  }
+section > .default-container > .section-title, section > .default-container > .section-subtitle, section > .default-container > .section-logo, section > .default-container > .section-items {
+  width: 100% !important;
 }
 section > .default-container .section-items {
   display: flex;
@@ -616,7 +614,6 @@ section > .default-container .section-items {
   flex-direction: row;
   flex-wrap: wrap;
   z-index: 100;
-  width: 100%;
 }
 @media (max-width: 599px) {
   section > .default-container .section-items {
