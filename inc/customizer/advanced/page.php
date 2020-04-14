@@ -1,20 +1,15 @@
 <?php
 
-Kirki::add_panel('page_panel', array(
+Kirki::add_section('page_section', array(
 	'title'						=> esc_html__('Page Options', 'planeta'),
 	'panel'						=> 'advanced_panel',
-));
-
-Kirki::add_section('page_title', array(
-	'title'						=> esc_html__('Title', 'planeta'),
-	'panel'						=> 'page_panel',
 ));
 
 Kirki::add_field('planeta_config', array(
 	'type' 						=> 'slider',
 	'settings'				=> 'page_title_min_height',
 	'label'						=> esc_html__('Title Minimum Height', 'planeta'),
-	'section'					=> 'page_title',
+	'section'					=> 'page_section',
 	'default'					=> 33,
 	'choices'					=> array(
 		'min'							=> 0,
@@ -31,11 +26,11 @@ Kirki::add_field('planeta_config', array(
 	),
 ));
 
-Kirki::add_field('planeta_config', array(
+/*Kirki::add_field('planeta_config', array(
 	'type' 						=> 'slider',
 	'settings'				=> 'page_title_padding',
 	'label'						=> esc_html__('Title Spacing Down', 'planeta'),
-	'section'					=> 'page_title',
+	'section'					=> 'page_section',
 	'default'					=> 10,
 	'choices'					=> array(
 		'min'							=> 0,
@@ -50,14 +45,13 @@ Kirki::add_field('planeta_config', array(
 			'units'					=> 'vh',
 		),
 	),
-));
+));*/
 
 Kirki::add_field('planeta_config', array(
 	'type' 						=> 'color',
-	'settings'				=> 'page_title_overlay',
+	'settings'				=> 'page_title_background',
 	'label'						=> esc_html__('Title Color Overlay', 'planeta'),
-	'section'					=> 'page_title',
-	'default'					=> 'rgba(0, 0, 0, 0)',
+	'section'					=> 'page_section',
 	'choices'					=> array(
 		'alpha'						=> true,
 	),
@@ -65,23 +59,14 @@ Kirki::add_field('planeta_config', array(
 	'output'					=> array(
 		array(
 			'element'				=> '.page-title-overlay',
-			'property'			=> 'background-color',
 		),
 	),
 ));
 
 Kirki::add_field('planeta_config', array(
-	'type' 						=> 'toggle',
-	'label'						=> esc_html__('Enable Search', 'planeta'),
-	'section'					=> 'enable_search_bar',
-	'settings'				=> 'page_title',
-	'default'					=> '1',
-));
-
-Kirki::add_field('planeta_config', array(
 	'type'					=> 'slider',
 	'label'					=> esc_html__('Items Columns', 'planeta'),
-	'section'				=> 'page_general',
+	'section'				=> 'page_section',
 	'settings'			=> 'page_masonry_num',
 	'default'				=> '3',
 	'choices'				=> array(
@@ -129,7 +114,7 @@ Kirki::add_field('planeta_config', array(
 Kirki::add_field('planeta_config', array(
 	'type'					=> 'radio-buttonset',
 	'label'					=> esc_html__('Images Align', 'planeta'),
-	'section'				=> 'page_general',
+	'section'				=> 'page_section',
 	'settings'			=> 'page_image_align',
 	'default'				=> 'all-left',
 	'choices'				=> array(
@@ -145,6 +130,40 @@ Kirki::add_field('planeta_config', array(
 			'value'					=> 1,
 		),
 	),
+));
+
+Kirki::add_field('planeta_config', array(
+	'type'			=> 'toggle',
+	'label'			=> esc_html__('Scroll Snap for Sections', 'planeta'),
+	'section'		=> 'page_section',
+	'settings'	=> 'page_scroll_snap',
+	'default'		=> true,
+	'transport'	=> 'auto',
+	'output'		=> array(
+		array(
+			'element'				=> '#scroll-container',
+			'property'			=> 'scroll-snap-type',
+			'value_pattern'	=> 'none',
+			'exclude'				=> array(true),
+		),
+		array(
+			'element'				=> array(
+				'#scroll-container > section',
+				'#scroll-container > footer',
+			),
+			'property'			=> 'scroll-snap-align',
+			'value_pattern'	=> 'none',
+			'exclude'				=> array(true),
+		),
+	),
+));
+
+Kirki::add_field('planeta_config', array(
+	'type' 						=> 'toggle',
+	'label'						=> esc_html__('Enable Search', 'planeta'),
+	'settings'				=> 'enable_search_bar',
+	'section'					=> 'page_section',
+	'default'					=> '1',
 ));
 
 ?>

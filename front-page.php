@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php get_template_part('template-parts/navbar'); ?>
 
-<main>
+<div id='scroll-container'>
 <?php
 	$layout = get_theme_mod('sections_layout', array());
 
@@ -24,8 +24,8 @@
 		</div>
 
 	</section>
-
 	<?php endforeach; ?>
-</main>
 
-<?php get_footer(); ?>
+	<?php get_footer(); ?>
+</div>
+

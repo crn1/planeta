@@ -150,6 +150,13 @@ dl dt {
 #loading-container .animation {
   margin-bottom: 1rem;
 }
+#scroll-container {
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+}
+#scroll-container > section, #scroll-container > footer {
+  scroll-snap-align: start;
+}
 .hamburger {
   padding: 15px 15px;
   display: inline-block;

@@ -42,7 +42,7 @@ function planeta_add_section_heading(&$index)
 	));
 
 	Kirki::add_field('planeta_config', array(
-		'type'			=> 'textarea',
+		'type'			=> 'editor',
 		'label'			=> esc_html__('Subtitle/Content', 'planeta'),
 		'section'		=> "section_${index}_heading",
 		'settings'	=> "section_${index}_subtitle",

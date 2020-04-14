@@ -18,6 +18,15 @@ jQuery(document).ready(function($)
 		$.scrollTo('#' + $(this).attr('data-section-id'), 1700)
 	})
 
+	//Scroll Container height
+	if($('#wpadminbar').length)
+	{
+		let adminHeight = $('#wpadminbar').outerHeight();
+		$('#scroll-container').css('height', `calc(100vh - ${adminHeight}px)`)
+	}else{
+		$('#scroll-container').css('height', '100vh')
+	}
+
 	// Main Menu
 	$('#menu-button').on('click', function() {
 		$('#top-menu').toggleClass('is-active')

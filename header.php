@@ -1,5 +1,14 @@
+<?php
+	$render_style = '';
+	if(is_front_page()) {
+		$render_style = 'style="overflow-y: none;"';
+	}
+?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> xmlns:fb='http://ogp.me/ns/fb#'>
+<html
+		<?php language_attributes(); ?>
+		xmlns:fb='http://ogp.me/ns/fb#'
+		<?php echo $render_style; ?>>
 
 	<?php get_template_part('template-parts/meta'); ?>
 

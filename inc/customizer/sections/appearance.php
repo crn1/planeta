@@ -80,7 +80,7 @@ function planeta_add_section_appearance(&$index)
 		'label'			=> esc_html__('Container Minimum Height', 'planeta'),
 		'section'		=> "section_${index}_appearance",
 		'settings'	=> "section_${index}_min_height",
-		'default'		=> 10,
+		'default'		=> 100,
 		'transport'	=> 'auto',
 		'output'		=> array(
 			array(
@@ -98,14 +98,14 @@ function planeta_add_section_appearance(&$index)
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__('Container Spacing Between', 'planeta'),
+		'label'			=> esc_html__('Heading Spacing Between', 'planeta'),
 		'section'		=> "section_${index}_appearance",
 		'settings'	=> "section_${index}_items_spacing_between",
-		'default'		=> 0,
+		'default'		=> 2,
 		'transport'	=> 'auto',
 		'output'		=> array(
 			array(
-				'element'				=> "#section_${index} > *",
+				'element'				=> "#section_${index} > .default-container *:not(:last-child)",
 				'property'			=> 'margin-bottom',
 				'units'					=> 'vh',
 			),
