@@ -9,13 +9,12 @@ jQuery(document).ready(function($)
 	//Scroll sections
 	$('.top-menu-item').on('click', function(event)
 	{
-		event.preventDefault()
+		//event.preventDefault()
 		if($('#top-menu').hasClass('is-active'))
 		{
 			$('#top-menu').removeClass('is-active')
 			$('#menu-button').removeClass('is-active')
 		}
-		$.scrollTo('#' + $(this).attr('data-section-id'), 1700)
 	})
 
 	//Scroll Container height
@@ -36,6 +35,7 @@ jQuery(document).ready(function($)
 	// Convert card images to links
 	$('.card').find('.image').on('click', function(event)
 	{
+		//Popravi me
 		event.preventDefault()
 		window.location.href = $(this).parent().find('.url').find('a').attr('href')
 	})
@@ -73,4 +73,8 @@ jQuery(document).ready(function($)
 		$('#loading-container').fadeOut(700)
 	})
 
+	//Scroll to hash
+	$(document.body).animate({
+		'scrollTop':   $(window.location.hash).offset().top
+	}, 0);
 })

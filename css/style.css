@@ -686,6 +686,7 @@ a {
 }
 html, body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 .relative {
   position: relative;

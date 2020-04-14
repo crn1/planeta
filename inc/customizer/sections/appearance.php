@@ -21,12 +21,12 @@ function planeta_add_section_appearance(&$index)
 		'transport'	=> 'auto',
 		'output'		=> array(
 			array(
-				'element'		=> "#section_${index}",
+				'element'		=> "section[data-section-id='section_${index}']",
 				'property'	=> 'padding-left',
 				'units'			=> 'px',
 			),
 			array(
-				'element'		=> "#section_${index}",
+				'element'		=> "section[data-section-id='section_${index}']",
 				'property'	=> 'padding-right',
 				'units'			=> 'px',
 			),
@@ -47,7 +47,7 @@ function planeta_add_section_appearance(&$index)
 		'transport'	=> 'auto',
 		'output'		=> array(
 			array(
-				'element'		=> "#section_${index}",
+				'element'		=> "section[data-section-id='section_${index}']",
 				'units'			=> 'vh',
 				'property'	=> 'padding-top',
 			),
@@ -68,7 +68,7 @@ function planeta_add_section_appearance(&$index)
 		'transport'	=> 'auto',
 		'output'		=> array(
 			array(
-				'element'		=> "#section_${index}",
+				'element'		=> "section[data-section-id='section_${index}']",
 				'units'			=> 'vh',
 				'property'	=> 'padding-bottom',
 			),
@@ -84,7 +84,7 @@ function planeta_add_section_appearance(&$index)
 		'transport'	=> 'auto',
 		'output'		=> array(
 			array(
-				'element'				=> "#section_${index}",
+				'element'				=> "section[data-section-id='section_${index}']",
 				'property'			=> 'min-height',
 				'units'					=> 'vh',
 			),
@@ -105,7 +105,7 @@ function planeta_add_section_appearance(&$index)
 		'transport'	=> 'auto',
 		'output'		=> array(
 			array(
-				'element'				=> "#section_${index} > .default-container *:not(:last-child)",
+				'element'				=> "section[data-section-id='section_${index}'] > .default-container *:not(:last-child)",
 				'property'			=> 'margin-bottom',
 				'units'					=> 'vh',
 			),
@@ -130,34 +130,34 @@ function planeta_add_section_appearance(&$index)
 		),
 		'output'				=> array(
 			array(
-				'element'				=> "#section_${index} .card",
+				'element'				=> "section[data-section-id='section_${index}'] .card",
 				'property'			=> 'flex-direction',
 				'value_pattern'	=> 'row',
 				'media_query'		=> '@media screen and (min-width: 600px)',
 			 	'exclude'				=> array('2', '3', '4', '5', '6', '7'),
 			),
 			array(
-				'element'				=> "#section_${index} .card > .image",
+				'element'				=> "section[data-section-id='section_${index}'] .card > .image",
 				'property'			=> 'max-width',
 				'value_pattern'	=> '33%',
 				'media_query'		=> '@media screen and (min-width: 600px)',
 			 	'exclude'				=> array('2', '3', '4', '5', '6', '7'),
 			),
 			array(
-				'element'				=> "#section_${index} .card > .image",
+				'element'				=> "section[data-section-id='section_${index}'] .card > .image",
 				'property'			=> 'max-width',
 				'value_pattern'	=> '100%',
 				'media_query'		=> '@media screen and (max-width: 599px)',
 			 	'exclude'				=> array('2', '3', '4', '5', '6', '7'),
 			),
 			array(
-				'element'				=> "#section_${index} .card > .image",
+				'element'				=> "section[data-section-id='section_${index}'] .card > .image",
 				'property'			=> 'max-width',
 				'value_pattern'	=> '100%',
 			 	'exclude'				=> array('1'),
 			),
 			array(
-				'element'				=> "#section_${index} .card > .image",
+				'element'				=> "section[data-section-id='section_${index}'] .card > .image",
 				'property'			=> 'margin-bottom',
 				'value_pattern'	=> '2rem',
 			 	'exclude'				=> array('1'),

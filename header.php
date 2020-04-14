@@ -1,7 +1,8 @@
 <?php
-	$render_style = '';
-	if(is_front_page()) {
-		$render_style = 'style="overflow-y: none;"';
+	$scroll_id = '';
+	if(is_front_page() && get_theme_mod('page_scroll_snap', true))
+	{
+		$scroll_id = 'id="scroll-container"';
 	}
 ?>
 <!DOCTYPE html>
@@ -12,7 +13,9 @@
 
 	<?php get_template_part('template-parts/meta'); ?>
 
-	<body <?php body_class(); ?>>
+	<body
+			<?php echo $scroll_id; ?>
+			<?php body_class(); ?>>
 
 		<?php get_template_part('template-parts/loading'); ?>
 

@@ -18,7 +18,7 @@ function planeta_add_section_background($index)
 			"#section_${index}-overlay",
 			"#section_${index}-video-background",
 		),
-		'outside_output'	=> "#section_${index}",
+		'outside_output'	=> "[data-section-id='section_${index}']",
 	));
 }
 

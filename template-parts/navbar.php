@@ -15,8 +15,7 @@
 			<span
 					class='top-menu-item relative hover-<?php echo get_query_var('hover_class', 'none'); ?>'>
 				<a
-						id='<?php echo $section; ?>-top-menu-item'
-						href='#<?php echo $slug; ?>'
+						href='<?php echo get_home_url() . '/#' . $slug; ?>'
 						data-section-id='<?php echo $section; ?>'
 						class='button-link'>
 					<?php echo $name; ?>

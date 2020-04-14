@@ -12,10 +12,10 @@ function planeta_add_section_heading(&$index)
 		'label'			=> esc_html__('Name', 'planeta'),
 		'section'		=> "section_${index}_heading",
 		'settings'	=> "section_${index}_name",
-		'default'		=> esc_html__('Section', 'planeta'),
+		'default'		=> esc_html__("Section ${index}", 'planeta'),
 		'partial_refresh'	=> array(
 			"section_${index}_name" => array(
-				'selector'							=> "#section_${index}-top-menu-item",
+				'selector'							=> ".top-menu-item > a[data-section-id='section_${index}']",
 				'render_callback'				=> function()
 				{
 					return get_theme_mod("section_${index}_name");
@@ -32,7 +32,7 @@ function planeta_add_section_heading(&$index)
 		'default'		=> esc_html__('Section Title', 'planeta'),
 		'partial_refresh'	=> array(
 			"section_${index}_title" => array(
-				'selector'				=> "#section_${index} .section-title",
+				'selector'				=> "section[data-section-id='section_${index}'] .section-title",
 				'render_callback'	=> function()
 				{
 					return get_theme_mod("section_${index}_title");
@@ -49,7 +49,7 @@ function planeta_add_section_heading(&$index)
 		'default'		=> esc_html__('This is a section subtitle.', 'planeta'),
 		'partial_refresh'	=> array(
 			"section_${index}_subtitle" => array(
-				'selector'				=> "#section_${index} .section-subtitle",
+				'selector'				=> "section[data-section-id='section_${index}'] .section-subtitle",
 				'render_callback'	=> function()
 				{
 					return get_theme_mod("section_${index}_subtitle");
