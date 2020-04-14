@@ -84,3 +84,18 @@
 	display: flex;
 	padding: 0.5rem;
 }
+
+#scroll-top-button {
+	z-index: $z-global-menu-overlay;
+	position: fixed;
+	margin-right: 48px;
+	margin-bottom: 48px;
+	right: 0;
+	bottom: 0;
+	cursor: pointer;
+	display: none;
+
+	& > i {
+		font-size: 48px;
+	}
+}

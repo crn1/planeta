@@ -70,11 +70,33 @@ jQuery(document).ready(function($)
 	// Loading screen
 	$(window).on('load', function()
 	{
-		$('#loading-container').fadeOut(700)
+		$('#loading-container').fadeOut(1170)
+	})
+
+	//Scroll to Top Button
+	scrollTopButton = $('#scroll-top-button')
+	$('body').on('scroll', function()
+	{
+		if($('body').scrollTop() >= 20)
+		{
+			scrollTopButton.fadeIn(170);
+		}else{
+			scrollTopButton.fadeOut(170);
+		}
+	})
+
+	scrollTopButton.on('click', function()
+	{
+		$('html, body').animate({
+			scrollTop: 0,
+		}, 0);
 	})
 
 	//Scroll to hash
-	$(document.body).animate({
-		'scrollTop':   $(window.location.hash).offset().top
-	}, 0);
+	if(window.location.hash)
+	{
+		$('body').animate({
+			'scrollTop': $(window.location.hash).offset().top
+		}, 0);
+	}
 })

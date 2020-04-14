@@ -460,7 +460,7 @@ dl dt {
   flex-direction: column;
   flex-wrap: wrap;
   position: fixed;
-  z-index: 99000;
+  z-index: 98000;
   overflow: hidden;
   background-color: #fff;
   transition: all 0.17s ease-in;
@@ -521,7 +521,7 @@ dl dt {
   box-sizing: border-box;
   margin: 32px 0;
   padding: 0 32px;
-  z-index: 99900;
+  z-index: 99000;
   top: 0;
   left: 0;
   position: fixed;
@@ -533,6 +533,19 @@ dl dt {
 #menu-button {
   display: flex;
   padding: 0.5rem;
+}
+#scroll-top-button {
+  z-index: 98000;
+  position: fixed;
+  margin-right: 48px;
+  margin-bottom: 48px;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  display: none;
+}
+#scroll-top-button > i {
+  font-size: 48px;
 }
 #main-footer {
   display: flex;

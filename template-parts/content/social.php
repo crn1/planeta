@@ -1,3 +1,9 @@
+<?php
+
+$render_social = get_theme_mod('social_menu_header', false);
+
+if($render_social): ?>
+
 <div class='social-container'>
 	<?php
 
@@ -17,3 +23,5 @@
 
 	<?php endforeach; ?>
 </div>
+
+<?php endif; ?>

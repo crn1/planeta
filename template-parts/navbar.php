@@ -1,7 +1,6 @@
 <?php
 	$reverse = get_theme_mod('navbar_reverse', false);
 
-	$render_social = get_theme_mod('social_menu_header', false);
 	$navbar_class = get_theme_mod('navbar_type', 'up');
 	$hamburger_class = get_theme_mod('hamburger_class', '3dx');
 
@@ -73,9 +72,10 @@
 <nav
 		id='top-menu'
 		class='menu-<?php echo $navbar_class; ?>'>
-	<?php nav_items(); ?>
 
-	<?php if($render_social): ?>
-		<?php get_template_part('template-parts/content/social'); ?>
-	<?php endif; ?>
+	<?php nav_items(); ?>
+	<?php get_template_part('template-parts/content/social'); ?>
+
 </nav>
+
+<?php get_template_part('template-parts/content/scroll-top-button'); ?>
