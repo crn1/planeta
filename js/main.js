@@ -75,19 +75,49 @@ jQuery(document).ready(function($)
 
 	//Scroll to Top Button
 	scrollTopButton = $('#scroll-top-button')
+	scrollDownButton = $('#scroll-down-button')
+	function updateScrollButtons(element)
+	{
+		if($(element).scrollTop() >= 20)
+		{
+			if(scrollTopButton.length)
+			{
+				scrollTopButton.fadeIn(170)
+			}
+
+			if(scrollDownButton.length)
+			{
+				scrollDownButton.fadeOut(170)
+			}
+		}else{
+			if(scrollTopButton.length)
+			{
+				scrollTopButton.fadeOut(170)
+			}
+
+			if(scrollDownButton.length)
+			{
+				scrollDownButton.fadeIn(170)
+			}
+		}
+	}
 	$('body').on('scroll', function()
 	{
-		if($('body').scrollTop() >= 20)
-		{
-			scrollTopButton.fadeIn(170);
-		}else{
-			scrollTopButton.fadeOut(170);
-		}
+		updateScrollButtons('body')
+	})
+	$(window).on('scroll', function()
+	{
+		console.log('esi se pomeria?')
+		updateScrollButtons('html')
 	})
 
+	//Scroll Top Functionality
 	scrollTopButton.on('click', function()
 	{
-		$('html, body').animate({
+		$('body').animate({
+			scrollTop: 0,
+		}, 0);
+		$(window).animate({
 			scrollTop: 0,
 		}, 0);
 	})

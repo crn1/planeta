@@ -27,6 +27,12 @@
 			?>
 		</div>
 
+		<?php
+			if($section == 'section_1')
+			{
+				get_template_part('template-parts/content/scroll-down-icon');
+			} ?>
+
 	</section>
 	<?php endforeach; ?>
 

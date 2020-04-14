@@ -32,3 +32,16 @@ section {
 		margin: 0;
 	}
 }
+
+#scroll-down-button {
+	z-index: $z-global-menu-overlay;
+	position: absolute;
+	bottom: 32px;
+	display: block;
+	width: 100%;
+	text-align: center;
+
+	& > i {
+		font-size: 48px;
+	}
+}
