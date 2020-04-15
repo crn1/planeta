@@ -88,9 +88,6 @@ function init_scripts()
 	// Laxxx
 	wp_enqueue_script('lax-script', get_template_directory_uri() . '/js/lax.min.js');
 
-	/*// Scroll To JS
-		wp_enqueue_script('scroll-script', get_template_directory_uri() . '/js/scroll.min.js', array('jquery'), '2.1.2', true);*/
-
 	// Sticky Sidebars JS
 	if(is_page() || is_single())
 	{
