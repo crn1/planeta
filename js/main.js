@@ -52,10 +52,7 @@ jQuery(document).ready(function($)
 	}
 
 	// AOS JS
-	if(typeof AOS != 'undefined')
-	{
-		AOS.init()
-	}
+	if(typeof AOS != 'undefined') { AOS.init() }
 
 	//Sticky Sidebars
 	if(typeof Sticky != 'undefined')
@@ -67,12 +64,6 @@ jQuery(document).ready(function($)
 		})
 	}
 
-	// Loading screen
-	$(window).on('load', function()
-	{
-		$('#loading-container').fadeOut(1170)
-	})
-
 	//Scroll to Top Button
 	scrollTopButton = $('#scroll-top-button')
 	scrollDownButton = $('#scroll-down-button')
@@ -80,47 +71,35 @@ jQuery(document).ready(function($)
 	{
 		if($(element).scrollTop() >= 20)
 		{
-			if(scrollTopButton.length)
-			{
-				scrollTopButton.fadeIn(170)
-			}
-
-			if(scrollDownButton.length)
-			{
-				scrollDownButton.fadeOut(170)
-			}
+			if(scrollTopButton.length) { scrollTopButton.fadeIn(170) }
+			if(scrollDownButton.length) { scrollDownButton.fadeOut(170) }
 		}else{
-			if(scrollTopButton.length)
-			{
-				scrollTopButton.fadeOut(170)
-			}
-
-			if(scrollDownButton.length)
-			{
-				scrollDownButton.fadeIn(170)
-			}
+			if(scrollTopButton.length) { scrollTopButton.fadeOut(170) }
+			if(scrollDownButton.length) { scrollDownButton.fadeIn(170) }
 		}
 	}
-	$('body').on('scroll', function()
-	{
-		updateScrollButtons('body')
-	})
-	$(window).on('scroll', function()
-	{
-		console.log('esi se pomeria?')
-		updateScrollButtons('html')
-	})
+
+	$('body').on('scroll load', function() { updateScrollButtons('body') })
+	$(window).on('scroll load', function() { updateScrollButtons(window) })
 
 	//Scroll Top Functionality
 	scrollTopButton.on('click', function()
 	{
-		$('body').animate({
-			scrollTop: 0,
-		}, 0);
-		$(window).animate({
-			scrollTop: 0,
-		}, 0);
+		let scrollContainer = $('#scroll-container');
+		if(scrollContainer.length)
+		{
+			$('#scroll-container').animate({
+				scrollTop: 0,
+			}, 0);
+		}else{
+			$('html').animate({
+				scrollTop: 0,
+			}, 0);
+		}
 	})
+
+	// Loading screen
+	$(window).on('load', function() { $('#loading-container').fadeOut(1170) })
 
 	//Scroll to hash
 	if(window.location.hash)
