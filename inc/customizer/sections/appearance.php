@@ -185,6 +185,40 @@ function planeta_add_section_appearance(&$index)
 			),
 		),
 	));
+
+	Kirki::add_field('planeta_config', array(
+		'type'					=> 'toggle',
+		'label'					=> esc_html__('Inherit Text Color', 'planeta'),
+		'section'				=> "section_${index}_appearance",
+		'settings'			=> "section_${index}_inherit_color",
+		'default'				=> true,
+	));
+
+	Kirki::add_field('planeta_config', array(
+		'type'					=> 'color',
+		'label'					=> esc_html__('Text Color', 'planeta'),
+		'section'				=> "section_${index}_appearance",
+		'settings'			=> "section_${index}_color",
+		'default'				=> true,
+		'choices'				=> array(
+			'alpha'					=> true,
+		),
+		'active_callback' => array(
+			array(
+				'setting'			=> "section_${index}_inherit_color",
+				'operator'		=> '==',
+				'value'				=> false,
+			),
+		),
+		'transport'			=> 'auto',
+		'output'				=> array(
+			array(
+				'element'				=> "section[data-section-id='section_${index}'] > .default-container",
+				'property'			=> 'color',
+				'value_pattern'	=> '$ !important',
+			),
+		),
+	));
 }
 
 ?>

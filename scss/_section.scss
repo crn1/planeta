@@ -16,11 +16,13 @@ section {
 		& > .section-logo,
 		& > .section-items {
 			width: 100% !important;
+			color: inherit;
 		}
 
 		.section-items {
 			@include flexContainer();
 			z-index: $z-section-content;
+			color: inherit;
 
 			@include for-size(phone-only) {
 				flex-direction: column;

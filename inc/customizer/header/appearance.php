@@ -114,3 +114,11 @@ Kirki::add_field('planeta_config', array(
 	'section'		=> 'header_appearance',
 	'default'		=> false,
 ));
+
+Kirki::add_field('planeta_config', array(
+	'type'			=> 'toggle',
+	'settings'	=> 'navbar_reverse',
+	'label'			=> esc_html__('Reverse Logo & Menu Button', 'planeta'),
+	'section'		=> 'header_appearance',
+	'default'		=> false,
+));
