@@ -26,27 +26,6 @@ Kirki::add_field('planeta_config', array(
 	),
 ));
 
-/*Kirki::add_field('planeta_config', array(
-	'type' 						=> 'slider',
-	'settings'				=> 'page_title_padding',
-	'label'						=> esc_html__('Title Spacing Down', 'planeta'),
-	'section'					=> 'page_section',
-	'default'					=> 10,
-	'choices'					=> array(
-		'min'							=> 0,
-		'max'							=> 33,
-		'step'						=> 1,
-	),
-	'transport'				=> 'auto',
-	'output'					=> array(
-		array(
-			'element'				=> '.page-title-container',
-			'property'			=> 'margin-bottom',
-			'units'					=> 'vh',
-		),
-	),
-));*/
-
 Kirki::add_field('planeta_config', array(
 	'type' 						=> 'color',
 	'settings'				=> 'page_title_background',
