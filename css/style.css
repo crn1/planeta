@@ -535,7 +535,7 @@ dl dt {
   padding: 0.5rem;
 }
 #scroll-top-button {
-  z-index: 98000;
+  z-index: 97000;
   position: fixed;
   margin-right: 16px;
   margin-bottom: 16px;
