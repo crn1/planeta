@@ -26,6 +26,49 @@ Kirki::add_field('planeta_config', array(
 ));
 
 Kirki::add_field('planeta_config', array(
+	'type'        => 'toggle',
+	'label'       => esc_html__('Fluid Typography', 'planeta'),
+	'section'     => "typography_main",
+	'settings'    => "typography_main_fluid",
+	'default'			=> true,
+));
+
+Kirki::add_field('planeta_config', array(
+	'type'        => 'slider',
+	'label'       => esc_html__('Size', 'planeta'),
+	'section'     => 'typography_main',
+	'settings'    => 'typography_main_fluid_size',
+	'choices'     => array(
+		'min'					=> '16',
+		'max'					=> '32',
+		'step'				=> '1',
+	),
+	'default'     => '22',
+	'transport'		=> 'auto',
+	'output'			=> array(
+		array(
+			'element' 			=> 'html',
+			'property'			=> 'font-size',
+			'value_pattern'	=> 'calc(16px + ($ - 16) * ((100vw - 600px) / 600))',
+			'media_query'		=> '@media (min-width: 600px) and (max-width: 1199px)',
+		),
+		array(
+			'element' 			=> 'html',
+			'property'			=> 'font-size',
+			'units'					=> 'px',
+			'media_query'		=> '@media (min-width: 1200px)',
+		),
+	),
+	'active_callback'	=> array(
+		array(
+			'setting'					=> 'typography_main_fluid',
+			'operator'				=> '==',
+			'value'						=> true,
+		),
+	),
+));
+
+Kirki::add_field('planeta_config', array(
 	'type'        => 'slider',
 	'label'       => esc_html__('Size on Desktop', 'planeta'),
 	'section'     => 'typography_main',
@@ -33,7 +76,7 @@ Kirki::add_field('planeta_config', array(
 	'default'     => '22',
 	'transport'		=> 'auto',
 	'choices'     => array(
-		'min'					=> '12',
+		'min'					=> '16',
 		'max'					=> '32',
 		'step'				=> '1',
 	),
@@ -43,6 +86,13 @@ Kirki::add_field('planeta_config', array(
 			'property'			=> 'font-size',
 			'units'					=> 'px',
 			'media_query'		=> '@media (min-width: 1200px)',
+		),
+	),
+	'active_callback'	=> array(
+		array(
+			'setting'					=> 'typography_main_fluid',
+			'operator'				=> '==',
+			'value'						=> false,
 		),
 	),
 ));
@@ -55,7 +105,7 @@ Kirki::add_field('planeta_config', array(
 	'default'     => '20',
 	'transport'		=> 'auto',
 	'choices'     => array(
-		'min'					=> '12',
+		'min'					=> '16',
 		'max'					=> '32',
 		'step'				=> '1',
 	),
@@ -65,6 +115,13 @@ Kirki::add_field('planeta_config', array(
 			'property'			=> 'font-size',
 			'units'					=> 'px',
 			'media_query'		=> '@media (min-width: 900px) and (max-width: 1199px)',
+		),
+	),
+	'active_callback'	=> array(
+		array(
+			'setting'					=> 'typography_main_fluid',
+			'operator'				=> '==',
+			'value'						=> false,
 		),
 	),
 ));
@@ -77,7 +134,7 @@ Kirki::add_field('planeta_config', array(
 	'default'     => '18',
 	'transport'		=> 'auto',
 	'choices'     => array(
-		'min'					=> '12',
+		'min'					=> '16',
 		'max'					=> '32',
 		'step'				=> '1',
 	),
@@ -87,6 +144,13 @@ Kirki::add_field('planeta_config', array(
 			'property'			=> 'font-size',
 			'units'					=> 'px',
 			'media_query'		=> '@media (min-width: 600px) and (max-width: 899px)',
+		),
+	),
+	'active_callback'	=> array(
+		array(
+			'setting'					=> 'typography_main_fluid',
+			'operator'				=> '==',
+			'value'						=> false,
 		),
 	),
 ));
@@ -99,7 +163,7 @@ Kirki::add_field('planeta_config', array(
 	'default'     => '16',
 	'transport'		=> 'auto',
 	'choices'     => array(
-		'min'					=> '12',
+		'min'					=> '16',
 		'max'					=> '32',
 		'step'				=> '1',
 	),
@@ -109,6 +173,13 @@ Kirki::add_field('planeta_config', array(
 			'property'			=> 'font-size',
 			'units'					=> 'px',
 			'media_query'		=> '@media (max-width: 599px)',
+		),
+	),
+	'active_callback'	=> array(
+		array(
+			'setting'					=> 'typography_main_fluid',
+			'operator'				=> '==',
+			'value'						=> false,
 		),
 	),
 ));
