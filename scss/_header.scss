@@ -67,8 +67,8 @@
 #main-header {
 	@include flexContainer($justify: space-between);
 	box-sizing: border-box;
-	margin: 32px 0;
-	padding: 0 32px;
+	margin: 16px 0;
+	padding: 0 16px;
 	z-index: $z-global-header;
 	top: 0;
 	left: 0;
@@ -88,8 +88,8 @@
 #scroll-top-button {
 	z-index: $z-global-menu-overlay;
 	position: fixed;
-	margin-right: 48px;
-	margin-bottom: 48px;
+	margin-right: 16px;
+	margin-bottom: 16px;
 	right: 0;
 	bottom: 0;
 	cursor: pointer;

@@ -519,8 +519,8 @@ dl dt {
   flex-direction: row;
   flex-wrap: wrap;
   box-sizing: border-box;
-  margin: 32px 0;
-  padding: 0 32px;
+  margin: 16px 0;
+  padding: 0 16px;
   z-index: 99000;
   top: 0;
   left: 0;
@@ -537,8 +537,8 @@ dl dt {
 #scroll-top-button {
   z-index: 98000;
   position: fixed;
-  margin-right: 48px;
-  margin-bottom: 48px;
+  margin-right: 16px;
+  margin-bottom: 16px;
   right: 0;
   bottom: 0;
   cursor: pointer;
