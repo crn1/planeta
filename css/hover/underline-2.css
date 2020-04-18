@@ -9,7 +9,7 @@
 	left: 0;
 	width: 100%;
 	height: 1px;
-	background: #FF0000;
+	background-color: inherit;
 	content: '';
 	opacity: 0;
 	-webkit-transition: height 0.27s, opacity 0.27s, -webkit-transform 0.27s;

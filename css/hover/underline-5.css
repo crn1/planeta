@@ -10,7 +10,7 @@
 	left: 0;
 	width: 100%;
 	height: 0.25rem;
-	background: #FF0000;
+	background-color: inherit;
 	content: '';
 	-webkit-transition: -webkit-transform 0.27s;
 	-moz-transition: -moz-transform 0.27s;

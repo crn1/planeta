@@ -1,5 +1,6 @@
 @import 'modules/flex';
 @import 'modules/breakpoints';
+@import 'modules/transitions';
 @import 'modules/z-indexes';
 
 #main-footer {
@@ -19,7 +20,7 @@
 			justify-content: center;
 		}
 
-		.button-link {
+		span {
 			margin-top: 1rem;
 
 			@include for-size(phone-only) {

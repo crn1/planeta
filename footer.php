@@ -15,7 +15,7 @@
 								'echo'						=> false,
 							);
 							$menu = strip_tags(wp_nav_menu($params), '<a>');
-							$menu = str_replace('<a', "<span class='relative button-link hover-${hover_class}'><a", $menu);
+							$menu = str_replace('<a', "<span class='relative hover-${hover_class}'><a class='button-link'", $menu);
 							$menu = str_replace('</a>', "</a></span>", $menu);
 							echo $menu;
 						?>

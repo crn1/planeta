@@ -1,4 +1,5 @@
 .hover-box-2 a {
 	padding: 0.5rem 1rem;
-	border: 0.25rem solid #FF0000;
+	border: 0.25rem solid;
+	border-color: inherit;
 }

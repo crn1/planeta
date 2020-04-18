@@ -1,10 +1,12 @@
 @import 'modules/z-indexes';
+@import 'modules/transitions';
 
 #search-form {
 	position: relative;
 	z-index: $z-section-content;
 	border-bottom: 2px solid black;
 	display: flex;
+	transition: all $transition-fast;
 
 	input[type='text'] {
 		appearance: none;
@@ -16,6 +18,7 @@
 	}
 
 	button {
+		transition: all $transition-fast;
 		appearance: none;
 		border: 0;
 		background-color: transparent;

@@ -88,30 +88,4 @@ Kirki::add_field('planeta_config', array(
 	),
 ));
 
-Kirki::add_field('planeta_config', array(
-	'type'			=> 'color',
-	'settings'	=> 'hamburger_color',
-	'label'			=> esc_html__('Color', 'planeta'),
-	'section'		=> 'header_menu_button',
-	'default'		=> '#000000',
-	'choices'		=> array(
-		'alpha'			=> true,
-	),
-	'transport'	=> 'auto',
-	'output'		=> array(
-		array(
-			'element'		=> '#menu-button .hamburger-inner',
-			'property'	=> 'background-color',
-		),
-		array(
-			'element'		=> '#menu-button .hamburger-inner:before',
-			'property'	=> 'background-color',
-		),
-		array(
-			'element'		=> '#menu-button .hamburger-inner:after',
-			'property'	=> 'background-color',
-		),
-	),
-));
-
 ?>

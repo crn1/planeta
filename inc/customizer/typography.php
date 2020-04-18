@@ -153,6 +153,45 @@ function typography_generator($args)
 				'operator'			=> 'none',
 			),
 		));
+
+		Kirki::add_field('planeta_config', array(
+			'type'			=> 'color',
+			'settings'	=> "typography_${section}_border_color",
+			'label'			=> esc_html__('Border/Line Color', 'planeta'),
+			'section'		=> "typography_${section}",
+			'default'		=> '#000000',
+			'transport'	=> 'auto',
+			'output'		=> array(
+				array(
+					'element'					=> array(
+						"${class}:hover::before",
+						"${class}:hover::after",
+					),
+					'property'				=> 'color',
+				),
+				array(
+					'element'					=> array(
+						"${class}:hover::before",
+						"${class}:hover::after",
+					),
+					'property'				=> 'border-color',
+				),
+				array(
+					'element'					=> array(
+						"${class}:hover::before",
+						"${class}:hover::after",
+					),
+					'property'				=> 'background-color',
+				),
+			),
+			'active_callback'	=> array(
+				array(
+					'setting'					=> 'primary_color_enable',
+					'operator'				=> '==',
+					'value'						=> true,
+				),
+			),
+		));
 	}
 }
 

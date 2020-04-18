@@ -10,7 +10,7 @@
 	position: absolute;
 	width: 2rem;
 	height: 0.2rem;
-	background: #FF0000;
+	background-color: inherit;
 	content: '';
 	-webkit-transition: all 0.27s;
 	-moz-transition: all 0.27s;
