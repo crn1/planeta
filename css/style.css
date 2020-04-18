@@ -337,6 +337,7 @@ dl dt {
   flex-wrap: wrap;
 }
 .card > .info {
+  flex-grow: 1;
   width: 100%;
 }
 .card > .info .url {
@@ -347,7 +348,7 @@ dl dt {
 .card > .info .url > span {
   display: inline-block;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 599px) {
   .card > .image {
     margin-bottom: 2rem;
   }
@@ -405,44 +406,44 @@ dl dt {
     margin-right: 2rem !important;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 600px) {
   .all-left .card > .image {
     order: 1;
-    margin-right: 2rem;
+    padding-right: 2rem;
   }
   .all-left .card > .info {
     order: 2;
   }
   .all-right .card > .image {
-    margin-left: 2rem;
+    padding-left: 2rem;
     order: 2;
   }
   .all-right .card > .info {
     order: 1;
   }
   .first-left .card:nth-child(odd) > .image {
-    margin-right: 2rem;
+    padding-right: 2rem;
     order: 1;
   }
   .first-left .card:nth-child(odd) > .info {
     order: 2;
   }
   .first-left .card:nth-child(even) > .image {
-    margin-left: 2rem;
+    padding-left: 2rem;
     order: 2;
   }
   .first-left .card:nth-child(even) > .info {
     order: 1;
   }
   .first-right .card:nth-child(odd) > .image {
-    margin-left: 2rem;
+    padding-left: 2rem;
     order: 2;
   }
   .first-right .card:nth-child(odd) > .info {
     order: 1;
   }
   .first-right .card:nth-child(even) > .image {
-    margin-right: 2rem;
+    padding-right: 2rem;
     order: 1;
   }
   .first-right .card:nth-child(even) > .info {

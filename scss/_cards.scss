@@ -5,6 +5,7 @@
 	@include flexContainer($direction: column);
 
 	& > .info {
+		flex-grow: 1;
 		width: 100%;
 
 		.url {
@@ -19,7 +20,7 @@
 	}
 
 	& > .image {
-		@media screen and (max-width: 768px)
+		@media (max-width: 599px)
 		{
 			margin-bottom: 2rem;
 		}
@@ -105,12 +106,12 @@
 	}
 }
 
-@include for-size(phone-only)
+@include for-size(tablet-and-up)
 {
 	.all-left {
 		.card > .image {
 			order: 1;
-			margin-right: 2rem;
+			padding-right: 2rem;
 		}
 		.card > .info {
 			order: 2;
@@ -119,7 +120,7 @@
 
 	.all-right {
 		.card > .image {
-			margin-left: 2rem;
+			padding-left: 2rem;
 			order: 2;
 		}
 		.card > .info {
@@ -129,14 +130,14 @@
 
 	.first-left {
 		& .card:nth-child(odd) > .image {
-			margin-right: 2rem;
+			padding-right: 2rem;
 			order: 1;
 		}
 		& .card:nth-child(odd) > .info {
 			order: 2;
 		}
 		& .card:nth-child(even) > .image {
-			margin-left: 2rem;
+			padding-left: 2rem;
 			order: 2;
 		}
 		& .card:nth-child(even) > .info {
@@ -146,14 +147,14 @@
 
 	.first-right {
 		& .card:nth-child(odd) > .image {
-			margin-left: 2rem;
+			padding-left: 2rem;
 			order: 2;
 		}
 		& .card:nth-child(odd) > .info {
 			order: 1;
 		}
 		& .card:nth-child(even) > .image {
-			margin-right: 2rem;
+			padding-right: 2rem;
 			order: 1;
 		}
 		& .card:nth-child(even) > .info {
