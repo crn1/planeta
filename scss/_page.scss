@@ -18,6 +18,7 @@
 
 	.article-container {
 		display: flex;
+		max-width: 100%;
 		flex-basis: 44%;
 		flex-direction: column;
 		@include for-size(tablet-and-down) { order: 1; }
@@ -32,7 +33,7 @@
 
 		& * {
 			max-width: 100%;
-			width: initial !important;
+			width: initial;
 		}
 
 		& > .comments-area {

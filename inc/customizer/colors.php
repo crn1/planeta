@@ -235,6 +235,27 @@ Kirki::add_field('planeta_config', array(
 
 Kirki::add_field('planeta_config', array(
 	'type'			=> 'toggle',
+	'settings'	=> 'primary_color_links_hover',
+	'label'			=> esc_html__('Enable on Links', 'planeta'),
+	'section'		=> 'primary_color_section',
+	'default'		=> true,
+	'output'		=> array(
+		array(
+			'element'					=> array(
+				'body a:not(.button-link)',
+			),
+			'property'				=> 'color',
+			'value_pattern' 	=> 'primary_color !important',
+			'pattern_replace'	=> array(
+				'primary_color'		=> 'primary_color',
+			),
+			'exclude'					=> array(false),
+		),
+	),
+));
+
+Kirki::add_field('planeta_config', array(
+	'type'			=> 'toggle',
 	'settings'	=> 'primary_color_button_links_hover',
 	'label'			=> esc_html__('Enable on Button Links (on Hover)', 'planeta'),
 	'section'		=> 'primary_color_section',

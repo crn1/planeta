@@ -33,15 +33,7 @@
 		</aside>
 	</div>
 
-	<?php if(have_comments()): ?>
-		<div class="default-container page-container">
-			<div class="sidebar"></div>
-			<div class="article-container">
-				<?php comments_template(); ?>
-			</div>
-			<div class="sidebar"></div>
-		</div>
-	<?php endif; ?>
+	<?php comments_template(); ?>
 
 	<?php get_template_part('template-parts/content/related-posts'); ?>
 

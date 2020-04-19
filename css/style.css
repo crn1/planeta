@@ -69,6 +69,46 @@ blockquote cite {
 dl dt {
   font-weight: bold;
 }
+#comments h3.comments-title {
+  margin-bottom: 0;
+}
+#comments ul.comment-list {
+  padding: 0;
+  list-style-type: none;
+}
+#comments ul.comment-list li.comment {
+  list-style-type: none;
+  margin-top: 3rem;
+}
+#comments ul.comment-list li.comment article footer.comment-meta div.comment-author {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#comments ul.comment-list li.comment article footer.comment-meta div.comment-author img.avatar {
+  margin-right: 0.5rem;
+  border-radius: 50%;
+}
+#comments ul.comment-list li.comment article footer.comment-meta div.comment-author .says::before {
+  content: ' ';
+  white-space: pre;
+}
+#comments ul.comment-list li.comment article footer.comment-meta div.comment-metadata {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#respond .logged-in-as {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 #protected-post-form {
   border-bottom: 2px solid black;
   display: flex;
@@ -96,6 +136,20 @@ dl dt {
 #protected-post-form > button > i {
   size: 1.5rem;
 }
+input[type='text'], input[type='submit'], textarea {
+  display: block;
+  width: 100% !important;
+  transition: all 0.27s;
+  border: 2px solid;
+  appearance: none;
+  background-color: transparent;
+  min-width: 0;
+  padding: 0.75rem 0.5rem;
+  margin: 0.25rem 0rem 0.75rem;
+}
+input[type='submit'] {
+  cursor: pointer;
+}
 .size-auto, .size-full, .size-large, .size-medium, .size-thumbnail {
   max-width: 100%;
   height: auto;
@@ -117,6 +171,7 @@ dl dt {
   flex-grow: 1;
   padding: 0.75rem 0.5rem;
   border: 0;
+  margin: 0;
 }
 #search-form button {
   cursor: pointer;
@@ -320,6 +375,7 @@ dl dt {
 }
 .page-container .article-container {
   display: flex;
+  max-width: 100%;
   flex-basis: 44%;
   flex-direction: column;
 }
@@ -336,7 +392,7 @@ dl dt {
 }
 .page-container .article-container * {
   max-width: 100%;
-  width: initial !important;
+  width: initial;
 }
 .page-container .article-container > .comments-area {
   margin-top: 3rem;
