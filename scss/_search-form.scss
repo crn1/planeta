@@ -18,6 +18,9 @@
 	}
 
 	button {
+		cursor: pointer;
+		display: inline-flex;
+		align-items: center;
 		transition: all $transition-fast;
 		appearance: none;
 		border: 0;

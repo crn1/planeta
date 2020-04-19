@@ -69,6 +69,33 @@ blockquote cite {
 dl dt {
   font-weight: bold;
 }
+#protected-post-form {
+  border-bottom: 2px solid black;
+  display: flex;
+  transition: all 0.27s;
+}
+#protected-post-form > input[type='password'] {
+  appearance: none;
+  background-color: transparent;
+  min-width: 0;
+  flex-grow: 1;
+  padding: 0.75rem 0.5rem 0.75rem 0rem;
+  border: 0;
+}
+#protected-post-form > button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.27s;
+  appearance: none;
+  border: 0;
+  background-color: transparent;
+  appearance: none;
+}
+#protected-post-form > button > i {
+  size: 1.5rem;
+}
 .size-auto, .size-full, .size-large, .size-medium, .size-thumbnail {
   max-width: 100%;
   height: auto;
@@ -92,6 +119,9 @@ dl dt {
   border: 0;
 }
 #search-form button {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
   transition: all 0.27s;
   appearance: none;
   border: 0;
