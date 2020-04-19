@@ -122,3 +122,110 @@ Kirki::add_field('planeta_config', array(
 	'section'		=> 'header_appearance',
 	'default'		=> false,
 ));
+
+Kirki::add_field('planeta_config', array(
+	'type'			=> 'toggle',
+	'settings'	=> 'header_sensitive_frontpage',
+	'label'			=> esc_html__('Sensitive Colors on Frontpage', 'planeta'),
+	'section'		=> 'header_appearance',
+	'default'		=> false,
+	'transport'	=> 'auto',
+	'output'		=> array(
+		array(
+			'element'				=> array(
+				'body.home #main-header',
+				'body.home #scroll-top-button',
+				'body.home #scroll-down-button',
+			),
+			'property'			=> 'mix-blend-mode',
+			'value_pattern'	=> 'difference',
+			'exclude'				=> array(false),
+		),
+		array(
+			'element'				=> array(
+				'body.home #main-header',
+				'body.home #scroll-top-button',
+				'body.home #scroll-down-button',
+			),
+			'property'			=> 'mix-blend-mode',
+			'value_pattern'	=> 'unset',
+			'exclude'				=> array(true),
+		),
+	),
+));
+
+Kirki::add_field('planeta_config', array(
+	'type'			=> 'toggle',
+	'settings'	=> 'header_sensitive_other_pages',
+	'label'			=> esc_html__('Sensitive Colors on Other Pages', 'planeta'),
+	'section'		=> 'header_appearance',
+	'default'		=> false,
+	'transport'	=> 'auto',
+	'output'		=> array(
+		array(
+			'element'				=> array(
+				'body:not(.home) #main-header',
+				'body:not(.home) #scroll-top-button',
+				'body:not(.home) #scroll-down-button',
+			),
+			'property'			=> 'mix-blend-mode',
+			'value_pattern'	=> 'difference',
+			'exclude'				=> array(false),
+		),
+		array(
+			'element'				=> array(
+				'body:not(.home) #main-header',
+				'body:not(.home) #scroll-top-button',
+				'body:not(.home) #scroll-down-button',
+			),
+			'property'			=> 'mix-blend-mode',
+			'value_pattern'	=> 'unset',
+			'exclude'				=> array(true),
+		),
+	),
+));
+
+Kirki::add_field('planeta_config', array(
+	'type'			=> 'toggle',
+	'settings'	=> 'header_colors_inherit',
+	'label'			=> esc_html__('Inherit Colors from Main Typography', 'planeta'),
+	'section'		=> 'header_appearance',
+	'default'		=> true,
+));
+
+Kirki::add_field('planeta_config', array(
+	'type'			=> 'color',
+	'settings'	=> 'header_colors',
+	'label'			=> esc_html__('Color', 'planeta'),
+	'section'		=> 'header_appearance',
+	'default'		=> '#000000',
+	'choices'		=> array(
+		'alpha'			=> true,
+	),
+	'active_callback'	=> array(
+		array(
+			'setting'					=> 'header_colors_inherit',
+			'operator'				=> '==',
+			'value'						=> false,
+		),
+	),
+	'output'		=> array(
+		array(
+			'element'				=> array(
+				'.hamburger-inner',
+				'.hamburger-inner:before',
+				'.hamburger-inner:after',
+			),
+			'property'			=> 'background-color',
+		),
+		array(
+			'element'				=> array(
+				'#scroll-top-button',
+				'#scroll-down-button',
+			),
+			'property'			=> 'color',
+		),
+	),
+));
+
+?>

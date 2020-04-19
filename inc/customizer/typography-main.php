@@ -12,7 +12,6 @@ Kirki::add_field('planeta_config', array(
 	'settings'    => 'typography_main',
 	'default'     => array(
 		'text-transform'			=> 'none',
-		'color'								=> '#000000',
 		'font-family'					=> 'Rubik',
 		'variant'							=> 'regular',
 		'line-height'					=> '1.5',
@@ -20,7 +19,37 @@ Kirki::add_field('planeta_config', array(
 	),
 	'output'      => array(
 		array(
-			'element' 		=> 'html',
+			'element' 		=> 'body',
+		),
+	),
+));
+
+Kirki::add_field('planeta_config', array(
+	'type'			=> 'color',
+	'settings'	=> 'typography_main_color',
+	'section'		=> 'typography_main',
+	'label'			=> esc_html__('Color', 'planeta'),
+	'default'		=> '#000000',
+	'choices'		=> array(
+		'alpha'			=> true,
+	),
+	'transport'	=> 'auto',
+	'output'		=> array(
+		array(
+			'element'				=> array(
+				'.hamburger-inner',
+				'.hamburger-inner:before',
+				'.hamburger-inner:after',
+			),
+			'property'			=> 'background-color',
+		),
+		array(
+			'element'				=> array(
+				'#scroll-top-button',
+				'#scroll-down-button',
+				'element'					=> 'body',
+			),
+			'property'			=> 'color',
 		),
 	),
 ));

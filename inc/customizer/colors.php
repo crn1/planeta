@@ -44,7 +44,7 @@ Kirki::add_field('planeta_config', array(
 				'#menu-button > .hamburger-box > .hamburger-inner:after',
 			),
 			'property'				=> 'background-color',
-			'value_pattern' 	=> 'primary_color',
+			'value_pattern' 	=> 'primary_color !important',
 			'exclude'					=> array(false),
 			'pattern_replace'	=> array(
 				'primary_color'		=> 'primary_color',
@@ -72,7 +72,7 @@ Kirki::add_field('planeta_config', array(
 				'#scroll-top-button',
 			),
 			'property'				=> 'color',
-			'value_pattern' 	=> 'primary_color',
+			'value_pattern' 	=> 'primary_color !important',
 			'exclude'					=> array(false),
 			'pattern_replace'	=> array(
 				'primary_color'		=> 'primary_color',
@@ -100,7 +100,7 @@ Kirki::add_field('planeta_config', array(
 				'#scroll-down-button',
 			),
 			'property'				=> 'color',
-			'value_pattern' 	=> 'primary_color',
+			'value_pattern' 	=> 'primary_color !important',
 			'exclude'					=> array(false),
 			'pattern_replace'	=> array(
 				'primary_color'		=> 'primary_color',
@@ -128,7 +128,7 @@ Kirki::add_field('planeta_config', array(
 				'#search-form',
 			),
 			'property'				=> 'border-bottom-color',
-			'value_pattern' 	=> 'primary_color',
+			'value_pattern' 	=> 'primary_color !important',
 			'exclude'					=> array(false),
 			'pattern_replace'	=> array(
 				'primary_color'		=> 'primary_color',
@@ -139,7 +139,7 @@ Kirki::add_field('planeta_config', array(
 				'#search-form > button',
 			),
 			'property'				=> 'color',
-			'value_pattern' 	=> 'primary_color',
+			'value_pattern' 	=> 'primary_color !important',
 			'exclude'					=> array(false),
 			'pattern_replace'	=> array(
 				'primary_color'		=> 'primary_color',
@@ -167,7 +167,7 @@ Kirki::add_field('planeta_config', array(
 				'#search-form:hover',
 			),
 			'property'				=> 'border-bottom-color',
-			'value_pattern' 	=> 'primary_color',
+			'value_pattern' 	=> 'primary_color !important',
 			'pattern_replace'	=> array(
 				'primary_color'		=> 'primary_color',
 			),
@@ -178,7 +178,7 @@ Kirki::add_field('planeta_config', array(
 				'#search-form:hover > button',
 			),
 			'property'				=> 'color',
-			'value_pattern' 	=> 'primary_color',
+			'value_pattern' 	=> 'primary_color !important',
 			'pattern_replace'	=> array(
 				'primary_color'		=> 'primary_color',
 			),
