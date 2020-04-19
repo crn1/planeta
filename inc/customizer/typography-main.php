@@ -47,9 +47,17 @@ Kirki::add_field('planeta_config', array(
 			'element'				=> array(
 				'#scroll-top-button',
 				'#scroll-down-button',
-				'element'					=> 'body',
+				'#protected-post-form > button',
+				'#search-form > button',
 			),
 			'property'			=> 'color',
+		),
+		array(
+			'element'				=> array(
+				'#protected-post-form',
+				'#search-form',
+			),
+			'property'			=> 'border-bottom-color',
 		),
 	),
 ));

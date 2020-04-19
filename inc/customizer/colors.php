@@ -196,6 +196,45 @@ Kirki::add_field('planeta_config', array(
 
 Kirki::add_field('planeta_config', array(
 	'type'			=> 'toggle',
+	'settings'	=> 'primary_color_password_form_hover',
+	'label'			=> esc_html__('Enable on Post Password Form (on Hover)', 'planeta'),
+	'section'		=> 'primary_color_section',
+	'default'		=> true,
+	'output'		=> array(
+		array(
+			'element'					=> array(
+				'#protected-post-form:hover',
+			),
+			'property'				=> 'border-bottom-color',
+			'value_pattern' 	=> 'primary_color !important',
+			'pattern_replace'	=> array(
+				'primary_color'		=> 'primary_color',
+			),
+			'exclude'					=> array(false),
+		),
+		array(
+			'element'					=> array(
+				'#protected-post-form:hover > button',
+			),
+			'property'				=> 'color',
+			'value_pattern' 	=> 'primary_color !important',
+			'pattern_replace'	=> array(
+				'primary_color'		=> 'primary_color',
+			),
+			'exclude'					=> array(false),
+		),
+	),
+	'active_callback'	=> array(
+		array(
+			'setting'					=> 'primary_color_enable',
+			'operator'				=> '==',
+			'value'						=> true,
+		),
+	),
+));
+
+Kirki::add_field('planeta_config', array(
+	'type'			=> 'toggle',
 	'settings'	=> 'primary_color_button_links_hover',
 	'label'			=> esc_html__('Enable on Button Links (on Hover)', 'planeta'),
 	'section'		=> 'primary_color_section',
