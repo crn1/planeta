@@ -136,7 +136,7 @@ dl dt {
 #protected-post-form > button > i {
   size: 1.5rem;
 }
-input[type='text'], input[type='submit'], textarea {
+body > *:not(#wpadminbar) input[type='text'], body > *:not(#wpadminbar) input[type='submit'], body > *:not(#wpadminbar) textarea {
   display: block;
   width: 100% !important;
   transition: all 0.27s;

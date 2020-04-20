@@ -125,7 +125,7 @@ Kirki::add_field('planeta_config', array(
 	'output'		=> array(
 		array(
 			'element'					=> array(
-				'body a:not(.button-link)',
+				'body > *:not(#wpadminbar) a:not(.button-link)',
 			),
 			'property'				=> 'color',
 			'value_pattern' 	=> 'primary_color !important',
@@ -200,9 +200,9 @@ Kirki::add_field('planeta_config', array(
 	'output'		=> array(
 		array(
 			'element'					=> array(
-				"body form input[type='text']:hover",
-				"body form textarea:hover",
-				'#search-form:hover',
+				"body > *:not(#wpadminbar) form input[type='text']:hover",
+				"body > *:not(#wpadminbar) form textarea:hover",
+				'body > *:not(#wpadminbar) #search-form:hover',
 			),
 			'property'				=> 'border-color',
 			'value_pattern' 	=> 'primary_color !important',
@@ -213,9 +213,9 @@ Kirki::add_field('planeta_config', array(
 		),
 		array(
 			'element'					=> array(
-				"body form input[type='submit']:hover",
+				"body > *:not(#wpadminbar) form input[type='submit']:hover",
 				'#protected-post-form:hover button',
-				'#search-form:hover button',
+				'body > *:not(#wpadminbar) #search-form:hover button',
 			),
 			'property'				=> 'color',
 			'value_pattern' 	=> 'primary_color !important',
