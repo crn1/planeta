@@ -118,123 +118,6 @@ Kirki::add_field('planeta_config', array(
 
 Kirki::add_field('planeta_config', array(
 	'type'			=> 'toggle',
-	'settings'	=> 'primary_color_search_form',
-	'label'			=> esc_html__('Enable on Search Form', 'planeta'),
-	'section'		=> 'primary_color_section',
-	'default'		=> false,
-	'output'		=> array(
-		array(
-			'element'					=> array(
-				'#search-form',
-			),
-			'property'				=> 'border-bottom-color',
-			'value_pattern' 	=> 'primary_color !important',
-			'exclude'					=> array(false),
-			'pattern_replace'	=> array(
-				'primary_color'		=> 'primary_color',
-			),
-		),
-		array(
-			'element'					=> array(
-				'#search-form > button',
-			),
-			'property'				=> 'color',
-			'value_pattern' 	=> 'primary_color !important',
-			'exclude'					=> array(false),
-			'pattern_replace'	=> array(
-				'primary_color'		=> 'primary_color',
-			),
-		),
-	),
-	'active_callback'	=> array(
-		array(
-			'setting'					=> 'primary_color_enable',
-			'operator'				=> '==',
-			'value'						=> true,
-		),
-	),
-));
-
-Kirki::add_field('planeta_config', array(
-	'type'			=> 'toggle',
-	'settings'	=> 'primary_color_search_form_hover',
-	'label'			=> esc_html__('Enable on Search Form (on Hover)', 'planeta'),
-	'section'		=> 'primary_color_section',
-	'default'		=> true,
-	'output'		=> array(
-		array(
-			'element'					=> array(
-				'#search-form:hover',
-			),
-			'property'				=> 'border-bottom-color',
-			'value_pattern' 	=> 'primary_color !important',
-			'pattern_replace'	=> array(
-				'primary_color'		=> 'primary_color',
-			),
-			'exclude'					=> array(false),
-		),
-		array(
-			'element'					=> array(
-				'#search-form:hover > button',
-			),
-			'property'				=> 'color',
-			'value_pattern' 	=> 'primary_color !important',
-			'pattern_replace'	=> array(
-				'primary_color'		=> 'primary_color',
-			),
-			'exclude'					=> array(false),
-		),
-	),
-	'active_callback'	=> array(
-		array(
-			'setting'					=> 'primary_color_enable',
-			'operator'				=> '==',
-			'value'						=> true,
-		),
-	),
-));
-
-Kirki::add_field('planeta_config', array(
-	'type'			=> 'toggle',
-	'settings'	=> 'primary_color_password_form_hover',
-	'label'			=> esc_html__('Enable on Post Password Form (on Hover)', 'planeta'),
-	'section'		=> 'primary_color_section',
-	'default'		=> true,
-	'output'		=> array(
-		array(
-			'element'					=> array(
-				'#protected-post-form:hover',
-			),
-			'property'				=> 'border-bottom-color',
-			'value_pattern' 	=> 'primary_color !important',
-			'pattern_replace'	=> array(
-				'primary_color'		=> 'primary_color',
-			),
-			'exclude'					=> array(false),
-		),
-		array(
-			'element'					=> array(
-				'#protected-post-form:hover > button',
-			),
-			'property'				=> 'color',
-			'value_pattern' 	=> 'primary_color !important',
-			'pattern_replace'	=> array(
-				'primary_color'		=> 'primary_color',
-			),
-			'exclude'					=> array(false),
-		),
-	),
-	'active_callback'	=> array(
-		array(
-			'setting'					=> 'primary_color_enable',
-			'operator'				=> '==',
-			'value'						=> true,
-		),
-	),
-));
-
-Kirki::add_field('planeta_config', array(
-	'type'			=> 'toggle',
 	'settings'	=> 'primary_color_links_hover',
 	'label'			=> esc_html__('Enable on Links', 'planeta'),
 	'section'		=> 'primary_color_section',
@@ -304,6 +187,42 @@ Kirki::add_field('planeta_config', array(
 			'setting'					=> 'primary_color_enable',
 			'operator'				=> '==',
 			'value'						=> true,
+		),
+	),
+));
+
+Kirki::add_field('planeta_config', array(
+	'type'			=> 'toggle',
+	'settings'	=> 'primary_color_forms',
+	'label'			=> esc_html__('Enable on Forms', 'planeta'),
+	'section'		=> 'primary_color_section',
+	'default'		=> true,
+	'output'		=> array(
+		array(
+			'element'					=> array(
+				"body form input[type='text']:hover",
+				"body form textarea:hover",
+				'#search-form:hover',
+			),
+			'property'				=> 'border-color',
+			'value_pattern' 	=> 'primary_color !important',
+			'pattern_replace'	=> array(
+				'primary_color'		=> 'primary_color',
+			),
+			'exclude'					=> array(false),
+		),
+		array(
+			'element'					=> array(
+				"body form input[type='submit']:hover",
+				'#protected-post-form:hover button',
+				'#search-form:hover button',
+			),
+			'property'				=> 'color',
+			'value_pattern' 	=> 'primary_color !important',
+			'pattern_replace'	=> array(
+				'primary_color'		=> 'primary_color',
+			),
+			'exclude'					=> array(false),
 		),
 	),
 ));
