@@ -124,3 +124,11 @@ function planeta_password_form()
 	</form>";
 	return $output;
 }
+
+//Planeta Welcome Menu
+require_once(get_template_directory() . '/welcome.php');
+function planeta_register_welcome_page() {
+  // add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
+	add_menu_page('Planeta', 'Planeta', 'manage_options', 'planeta_welcome', 'planeta_get_welcome_page', 'dashicons-welcome-widgets-menus', 90);
+}
+add_action('admin_menu', 'planeta_register_welcome_page');
