@@ -98,7 +98,6 @@ function init_scripts()
 	//wp_enqueue_style('main-style', get_template_directory_uri() . '/css/style.css', false, filemtime(get_stylesheet_directory() . '/style.css'), 'all');
 	wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true);
 }
-
 add_action('wp_enqueue_scripts', 'init_scripts');
 
 //Protected Posts
@@ -124,6 +123,14 @@ function planeta_password_form()
 	</form>";
 	return $output;
 }
+
+//Admin Styles
+function init_admin_styles()
+{
+  wp_enqueue_style('admin-styles', get_template_directory_uri() . '/css/admin.css');
+	wp_enqueue_script('admin-script', get_template_directory_uri() . '/js/admin.js', array('jquery'), '1.0.0', true);
+}
+add_action('admin_enqueue_scripts', 'init_admin_styles');
 
 //Planeta Welcome Menu
 require_once(get_template_directory() . '/welcome.php');
