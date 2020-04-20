@@ -44,7 +44,7 @@ Kirki::add_field('planeta_config', array(
 				'#menu-button > .hamburger-box > .hamburger-inner:after',
 			),
 			'property'				=> 'background-color',
-			'value_pattern' 	=> 'primary_color !important',
+			'value_pattern' 	=> 'primary_color',
 			'exclude'					=> array(false),
 			'pattern_replace'	=> array(
 				'primary_color'		=> 'primary_color',
