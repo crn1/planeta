@@ -17,6 +17,7 @@ function planeta_get_welcome_page()
 		<p class='docs-notice'>Lost? Don't panic, read...</p>
 		<a
 				href='http://www.example.com'
+				target='_blank'
 				class='button button-primary'
 				name='Documentation'>
 			Documentation
