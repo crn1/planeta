@@ -8,6 +8,11 @@
 	position: relative;
 	padding-left: 1rem;
 	padding-right: 1rem;
+	max-width: 1500px; //defaultna vrednost
+}
+
+.article-container {
+	max-width: 750px;
 }
 
 .page-title-container {
@@ -65,5 +70,38 @@
 	& > section,
 	& > footer {
 		scroll-snap-align: start;
+	}
+}
+
+#footer-sidebar-container,
+#page-sidebar-container {
+	display: grid;
+	align-items: center;
+	min-height: 0;
+	position: relative;
+	width: 100%;
+	z-index: $z-section-content;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 1rem;
+	padding-bottom: 2rem;
+
+	#footer-sidebar-left,
+	#page-sidebar-left {
+		text-align: left;
+	}
+
+	#footer-sidebar-right,
+	#page-sidebar-right {
+		text-align: right;
+
+		@include for-size(phone-only)
+		{
+			text-align: left;
+		}
+	}
+
+	img {
+		max-width: 100%;
+		object-fit: cover;
 	}
 }

@@ -7,15 +7,29 @@
 		set_query_var('title', get_the_title());
 		get_template_part('template-parts/content/title'); ?>
 
-	<div class='default-container page-container'>
-		<article
-				id='post-<?php echo the_ID(); ?>'
-				class='article-container <?php post_class(); ?>'>
-			<?php the_content(); ?>
-			<?php wp_link_pages(); ?>
-			<?php comments_template(); ?>
-		</article>
-	</div>
+	<article
+			id='post-<?php echo the_ID(); ?>'
+			<?php post_class('article-container default-container'); ?>>
+		<?php the_content(); ?>
+		<?php wp_link_pages(); ?>
+
+		<div id='page-sidebar-container'>
+			<?php if(is_active_sidebar('page-sidebar-left')): ?>
+				<div id="page-sidebar-left">
+					<?php dynamic_sidebar('page-sidebar-left'); ?>
+				</div>
+			<?php endif; ?>
+
+			<?php if(is_active_sidebar('page-sidebar-right')): ?>
+				<div id="page-sidebar-right">
+					<?php dynamic_sidebar('page-sidebar-right'); ?>
+				</div>
+			<?php endif; ?>
+		</div>
+
+		<?php comments_template(); ?>
+	</article>
+
 
 	<?php endwhile; endif; ?>
 </main>

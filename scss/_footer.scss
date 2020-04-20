@@ -33,34 +33,4 @@
 			}
 		}
 	}
-
-	#footer-sidebar-container {
-		display: grid;
-		align-items: center;
-		min-height: 0;
-		position: relative;
-		width: 100%;
-		z-index: $z-section-content;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		grid-gap: 1rem;
-		padding-bottom: 2rem;
-
-		#footer-sidebar-left {
-			text-align: left;
-		}
-
-		#footer-sidebar-right {
-			text-align: right;
-
-			@include for-size(phone-only)
-			{
-				text-align: left;
-			}
-		}
-
-		img {
-			max-width: 100%;
-			object-fit: cover;
-		}
-	}
 }

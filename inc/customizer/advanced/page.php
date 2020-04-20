@@ -10,7 +10,7 @@ Kirki::add_field('planeta_config', array(
 	'settings'				=> 'page_title_min_height',
 	'label'						=> esc_html__('Title Minimum Height', 'planeta'),
 	'section'					=> 'page_section',
-	'default'					=> 33,
+	'default'					=> 75,
 	'choices'					=> array(
 		'min'							=> 0,
 		'max'							=> 100,

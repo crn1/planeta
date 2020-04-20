@@ -33,13 +33,13 @@ add_action('after_setup_theme', 'register_menus');
 function register_widgets()
 {
 	register_sidebar(array(
-		'name'	=> 'Left Article Sidebar',
-		'id'		=> 'article-sidebar-left',
+		'name'	=> 'Left Page/Post Sidebar',
+		'id'		=> 'page-sidebar-left',
 	));
 
 	register_sidebar(array(
-		'name'	=> 'Right Article Sidebar',
-		'id'		=> 'article-sidebar-right',
+		'name'	=> 'Right Page/Post Sidebar',
+		'id'		=> 'page-sidebar-right',
 	));
 
 	register_sidebar(array(

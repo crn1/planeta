@@ -3,37 +3,33 @@
 <main>
 	<?php if(have_posts()): while(have_posts()) : the_post(); ?>
 
-	<?php
-		set_query_var('title', get_the_title());
-		get_template_part('template-parts/content/title'); ?>
+<?php
+	set_query_var('title', get_the_title());
+	get_template_part('template-parts/content/title'); ?>
 
-	<div class='default-container page-container'>
-		<aside class='sidebar sidebar-left'>
-			<span class='sidebar-inner'>
-				<?php if(is_active_sidebar('article-sidebar-left')) {
-					dynamic_sidebar('article-sidebar-left');
-				} ?>
-			</span>
-		</aside>
+	<article
+			id='post-<?php echo the_ID(); ?>'
+			<?php post_class('article-container default-container'); ?>>
+		<?php get_template_part('template-parts/content/post-info'); ?>
+		<?php the_content(); ?>
+		<?php wp_link_pages(); ?>
 
-		<article
-				id='post-<?php echo the_ID(); ?>'
-				class='article-container <?php post_class(); ?>'>
-			<?php get_template_part('template-parts/content/post-info'); ?>
-			<?php the_content(); ?>
-			<?php wp_link_pages(); ?>
-		</article>
+		<div id='page-sidebar-container'>
+			<?php if(is_active_sidebar('page-sidebar-left')): ?>
+				<div id="page-sidebar-left">
+					<?php dynamic_sidebar('page-sidebar-left'); ?>
+				</div>
+			<?php endif; ?>
 
-		<aside class='sidebar sidebar-right'>
-			<span class='sidebar-inner'>
-				<?php if(is_active_sidebar('article-sidebar-right')) {
-					dynamic_sidebar('article-sidebar-right');
-				} ?>
-			</span>
-		</aside>
-	</div>
+			<?php if(is_active_sidebar('page-sidebar-right')): ?>
+				<div id="page-sidebar-right">
+					<?php dynamic_sidebar('page-sidebar-right'); ?>
+				</div>
+			<?php endif; ?>
+		</div>
 
-	<?php comments_template(); ?>
+		<?php comments_template(); ?>
+	</article>
 
 	<?php get_template_part('template-parts/content/related-posts'); ?>
 
