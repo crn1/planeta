@@ -2,25 +2,22 @@
 @import 'modules/transitions';
 @import 'modules/flex';
 
-.sidebars-container,
-.no-sidebars-container {
-	.article-container {
-		& > .user-info {
-			margin-bottom: 2rem;
-		}
+.article-container {
+	& > .user-info {
+		margin-bottom: 2rem;
+	}
 
-		& img {
-			object-fit: cover;
-		}
+	& img {
+		object-fit: cover;
+	}
 
-		& * {
-			max-width: 100%;
-			width: initial;
-		}
+	& * {
+		max-width: 100%;
+		width: initial;
+	}
 
-		& > .comments-area {
-			margin-top: 2rem;
-		}
+	& > .comments-area {
+		margin-top: 2rem;
 	}
 }
 

@@ -105,3 +105,10 @@
 		object-fit: cover;
 	}
 }
+
+#not-found-container {
+	padding: 10vh 0 0;
+	display: flex;
+	min-height: 60vh;
+	align-items: center;
+}
