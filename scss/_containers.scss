@@ -3,8 +3,8 @@
 	margin: 0 auto;
 	z-index: $z-section-content;
 	position: relative;
-	padding-left: 1rem;
-	padding-right: 1rem;
+	padding-left: $spacing-inside-group;
+	padding-right: $spacing-inside-group;
 	max-width: 1500px; //defaultna vrednost
 }
 
@@ -52,11 +52,11 @@
 	@include flexContainer($direction: column);
 
 	.logo {
-		margin-bottom: 2rem;
+		margin-bottom: $spacing-inside-group;
 	}
 
 	.animation {
-		margin-bottom: 1rem;
+		margin-bottom: $spacing-inside-group;
 	}
 }
 
@@ -79,15 +79,14 @@
 	width: 100%;
 	z-index: $z-section-content;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	grid-gap: 1rem;
-	padding-bottom: 2rem;
+	grid-gap: $spacing-groups;
 
 	#page-sidebar-left,
 	#footer-sidebar-left,
 	#page-sidebar-right,
 	#footer-sidebar-right {
 		& > li {
-			margin-bottom: 3rem;
+			margin-bottom: $spacing-groups;
 		}
 	}
 

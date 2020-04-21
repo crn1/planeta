@@ -16,7 +16,7 @@
 		}
 
 		span {
-			margin-top: 1rem;
+			margin-top: $spacing-inside-group;
 
 			@include for-size(phone-only) {
 				text-align: center;
@@ -24,7 +24,7 @@
 			}
 
 			&:not(:last-child) {
-				margin-right: 1rem;
+				margin-right: $spacing-inside-group;
 			}
 		}
 	}

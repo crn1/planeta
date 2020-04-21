@@ -14,13 +14,13 @@
 	}
 
 	& > .top-menu-item:not(:last-child) {
-		margin-bottom: 2rem;
+		margin-bottom: $spacing-groups;
 	}
 
 	& > .social-container {
 		@include flexContainer();
 		& .top-menu-item:not(:last-child) {
-			margin-right: 1rem;
+			margin-right: $spacing-inside-group;
 		}
 	}
 

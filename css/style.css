@@ -9,7 +9,6 @@
   list-style-type: none;
 }
 .widgettitle {
-  margin-top: 1rem;
   margin-bottom: 0;
   line-height: 1.2;
 }
@@ -26,8 +25,8 @@
   align: center;
 }
 .wp-caption {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 .wp-caption-text {
   font-size: 80%;
@@ -43,7 +42,7 @@
   padding-left: 0;
 }
 .widget_archive ul li, .widget_categories ul li, .widget_meta ul li, .widget_nav_menu ul li, .widget_pages ul li, .widget_recent_comments ul li, .widget_recent_entries ul li, .widget_rss ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 .widget_archive ul li ul, .widget_categories ul li ul, .widget_meta ul li ul, .widget_nav_menu ul li ul, .widget_pages ul li ul, .widget_recent_comments ul li ul, .widget_recent_entries ul li ul, .widget_rss ul li ul {
   padding-left: 1rem;
@@ -57,7 +56,7 @@
   font-size: 0.65rem;
 }
 .widget_rss li {
-  margin-bottom: 2rem !important;
+  margin-bottom: 3rem !important;
 }
 .widget_rss li .rss-date {
   font-style: oblique;
@@ -66,7 +65,7 @@
 }
 cite {
   display: block;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 pre {
   white-space: pre-wrap;
@@ -86,10 +85,10 @@ blockquote:before, blockquote:after {
 }
 blockquote:before {
   margin-bottom: 1rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 blockquote::after {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   margin-top: 1rem;
 }
 blockquote p, blockquote cite {
@@ -229,7 +228,7 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
   flex-wrap: wrap;
 }
 #loading-container .logo {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 #loading-container .animation {
   margin-bottom: 1rem;
@@ -249,8 +248,7 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
   width: 100%;
   z-index: 100;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1rem;
-  padding-bottom: 2rem;
+  grid-gap: 3rem;
 }
 #footer-sidebar-container #page-sidebar-left > li, #page-sidebar-container #page-sidebar-left > li, #footer-sidebar-container #footer-sidebar-left > li, #page-sidebar-container #footer-sidebar-left > li, #footer-sidebar-container #page-sidebar-right > li, #page-sidebar-container #page-sidebar-right > li, #footer-sidebar-container #footer-sidebar-right > li, #page-sidebar-container #footer-sidebar-right > li {
   margin-bottom: 3rem;
@@ -266,7 +264,7 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
   align-items: center;
 }
 .hamburger {
-  padding: 15px 15px;
+  padding: 1rem 1rem;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -380,7 +378,7 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
   }
 }
 .article-container > .user-info {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .article-container img {
   object-fit: cover;
@@ -390,7 +388,7 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
   width: initial;
 }
 .article-container > .comments-area {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 .button-link:hover {
   transition: all 0.27s;
@@ -416,7 +414,7 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
 }
 @media (max-width: 599px) {
   .card > .image {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 .card-experience .description {
@@ -469,47 +467,47 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
 }
 @media (min-width: 600px) {
   .card-tech:not(:last-child), .card-clients:not(:last-child) {
-    margin-right: 2rem !important;
+    margin-right: 3rem !important;
   }
 }
 @media (min-width: 600px) {
   .all-left .card > .image {
     order: 1;
-    padding-right: 2rem;
+    padding-right: 3rem;
   }
   .all-left .card > .info {
     order: 2;
   }
   .all-right .card > .image {
-    padding-left: 2rem;
+    padding-left: 3rem;
     order: 2;
   }
   .all-right .card > .info {
     order: 1;
   }
   .first-left .card:nth-child(odd) > .image {
-    padding-right: 2rem;
+    padding-right: 3rem;
     order: 1;
   }
   .first-left .card:nth-child(odd) > .info {
     order: 2;
   }
   .first-left .card:nth-child(even) > .image {
-    padding-left: 2rem;
+    padding-left: 3rem;
     order: 2;
   }
   .first-left .card:nth-child(even) > .info {
     order: 1;
   }
   .first-right .card:nth-child(odd) > .image {
-    padding-left: 2rem;
+    padding-left: 3rem;
     order: 2;
   }
   .first-right .card:nth-child(odd) > .info {
     order: 1;
   }
   .first-right .card:nth-child(even) > .image {
-    padding-right: 2rem;
+    padding-right: 3rem;
     order: 1;
   }
   .first-right .card:nth-child(even) > .info {
@@ -535,7 +533,7 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
   display: inline-block !important;
 }
 #top-menu > .top-menu-item:not(:last-child) {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 #top-menu > .social-container {
   display: flex;

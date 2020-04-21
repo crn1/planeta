@@ -1,6 +1,6 @@
 .article-container {
 	& > .user-info {
-		margin-bottom: 2rem;
+		margin-bottom: $spacing-inside-group;
 	}
 
 	& img {
@@ -13,7 +13,7 @@
 	}
 
 	& > .comments-area {
-		margin-top: 2rem;
+		margin-top: $spacing-groups;
 	}
 }
 

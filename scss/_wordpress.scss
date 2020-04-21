@@ -3,7 +3,6 @@
 }
 
 .widgettitle {
-	margin-top: 1rem;
 	margin-bottom: 0;
 	line-height: 1.2;
 }
@@ -24,8 +23,8 @@
 }
 
 .wp-caption {
-	margin-top: 5rem;
-	margin-bottom: 5rem;
+	margin-top: $spacing-groups;
+	margin-bottom: $spacing-groups;
 }
 .wp-caption-text { font-size: 80%; }
 
@@ -50,9 +49,9 @@
 		list-style-type: none;
 		padding-left: 0;
 		li {
-			margin-bottom: 0.5rem;
+			margin-bottom: $spacing-inside-group;
 			ul {
-				padding-left: 1rem;
+				padding-left: $spacing-inside-group;
 			}
 		}
 	}
@@ -73,7 +72,7 @@
 
 .widget_rss {
 	li {
-		margin-bottom: 2rem !important;
+		margin-bottom: $spacing-groups !important;
 
 		.rss-date {
 			font-style: oblique;
@@ -85,7 +84,7 @@
 
 cite {
 	display: block;
-	margin-top: 2rem;
+	margin-top: $spacing-groups;
 }
 
 pre {
@@ -107,13 +106,13 @@ blockquote {
 	}
 
 	&:before {
-		margin-bottom: 1rem;
-		margin-top: 5rem;
+		margin-bottom: $spacing-inside-group;
+		margin-top: $spacing-groups;
 	}
 
 	&::after {
-		margin-bottom: 5rem;
-		margin-top: 1rem;
+		margin-bottom: $spacing-groups;
+		margin-top: $spacing-inside-group;
 	}
 
 	p, cite {
