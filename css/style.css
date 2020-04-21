@@ -12,6 +12,7 @@
 .widgettitle {
   margin-top: 1rem;
   margin-bottom: 0;
+  line-height: 1.2;
 }
 .alignleft {
   text-align: left;
@@ -31,6 +32,38 @@
 }
 .wp-caption-text {
   font-size: 80%;
+}
+.wp-calendar-table {
+  width: 100% !important;
+}
+.gallery-icon img {
+  transition: all 0.27s;
+}
+.widget_archive ul, .widget_categories ul, .widget_meta ul, .widget_nav_menu ul, .widget_pages ul, .widget_recent_comments ul, .widget_recent_entries ul, .widget_rss ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.widget_archive ul li, .widget_categories ul li, .widget_meta ul li, .widget_nav_menu ul li, .widget_pages ul li, .widget_recent_comments ul li, .widget_recent_entries ul li, .widget_rss ul li {
+  margin-bottom: 0.5rem;
+}
+.widget_archive ul li ul, .widget_categories ul li ul, .widget_meta ul li ul, .widget_nav_menu ul li ul, .widget_pages ul li ul, .widget_recent_comments ul li ul, .widget_recent_entries ul li ul, .widget_rss ul li ul {
+  padding-left: 1rem;
+}
+.widget_recent_entries li a {
+  display: block;
+}
+.widget_recent_entries li .post-date {
+  font-style: oblique;
+  font-weight: normal;
+  font-size: 0.65rem;
+}
+.widget_rss li {
+  margin-bottom: 2rem !important;
+}
+.widget_rss li .rss-date {
+  font-style: oblique;
+  font-weight: normal;
+  font-size: 0.65rem;
 }
 cite {
   display: block;
@@ -69,46 +102,6 @@ blockquote cite {
 dl dt {
   font-weight: bold;
 }
-#comments h3.comments-title {
-  margin-bottom: 0;
-}
-#comments ul.comment-list {
-  padding: 0;
-  list-style-type: none;
-}
-#comments ul.comment-list li.comment {
-  list-style-type: none;
-  margin-top: 3rem;
-}
-#comments ul.comment-list li.comment article footer.comment-meta div.comment-author {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-#comments ul.comment-list li.comment article footer.comment-meta div.comment-author img.avatar {
-  margin-right: 0.5rem;
-  border-radius: 50%;
-}
-#comments ul.comment-list li.comment article footer.comment-meta div.comment-author .says::before {
-  content: ' ';
-  white-space: pre;
-}
-#comments ul.comment-list li.comment article footer.comment-meta div.comment-metadata {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-#respond .logged-in-as {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
 #protected-post-form {
   border-bottom: 2px solid black;
   display: flex;
@@ -136,7 +129,7 @@ dl dt {
 #protected-post-form > button > i {
   size: 1.5rem;
 }
-body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input[type='text'], body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input[type='submit'], body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input[type='search'], body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) button, body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) textarea {
+body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) > input[type='text'], body > *:not(#wpadminbar) li:not([class^='.mejs']) > input[type='text'], body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) > input[type='search'], body > *:not(#wpadminbar) li:not([class^='.mejs']) > input[type='search'], body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) > button, body > *:not(#wpadminbar) li:not([class^='.mejs']) > button, body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) > select, body > *:not(#wpadminbar) li:not([class^='.mejs']) > select, body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input[type='submit'], body > *:not(#wpadminbar) li:not([class^='.mejs']) input[type='submit'], body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) textarea, body > *:not(#wpadminbar) li:not([class^='.mejs']) textarea {
   display: block;
   width: 100% !important;
   max-width: unset;
@@ -148,7 +141,7 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
   padding: 0.75rem 0.5rem;
   margin: 0.25rem 0rem 0.75rem;
 }
-body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input[type='submit'], body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) button {
+body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input[type='submit'], body > *:not(#wpadminbar) li:not([class^='.mejs']) input[type='submit'], body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) button, body > *:not(#wpadminbar) li:not([class^='.mejs']) button {
   cursor: pointer;
 }
 .size-auto, .size-full, .size-large, .size-medium, .size-thumbnail {
@@ -260,16 +253,8 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
   grid-gap: 1rem;
   padding-bottom: 2rem;
 }
-#footer-sidebar-container #footer-sidebar-left, #page-sidebar-container #footer-sidebar-left, #footer-sidebar-container #page-sidebar-left, #page-sidebar-container #page-sidebar-left {
-  text-align: left;
-}
-#footer-sidebar-container #footer-sidebar-right, #page-sidebar-container #footer-sidebar-right, #footer-sidebar-container #page-sidebar-right, #page-sidebar-container #page-sidebar-right {
-  text-align: right;
-}
-@media (max-width: 599px) {
-  #footer-sidebar-container #footer-sidebar-right, #page-sidebar-container #footer-sidebar-right, #footer-sidebar-container #page-sidebar-right, #page-sidebar-container #page-sidebar-right {
-    text-align: left;
-  }
+#footer-sidebar-container #page-sidebar-left > li, #page-sidebar-container #page-sidebar-left > li, #footer-sidebar-container #footer-sidebar-left > li, #page-sidebar-container #footer-sidebar-left > li, #footer-sidebar-container #page-sidebar-right > li, #page-sidebar-container #page-sidebar-right > li, #footer-sidebar-container #footer-sidebar-right > li, #page-sidebar-container #footer-sidebar-right > li {
+  margin-bottom: 3rem;
 }
 #footer-sidebar-container img, #page-sidebar-container img {
   max-width: 100%;
@@ -708,6 +693,51 @@ section h1, section h2, section h3, section h4, section h5, section h6, section 
 }
 #scroll-down-button > i {
   font-size: 48px;
+}
+#comments h3.comments-title {
+  margin-bottom: 0;
+}
+#comments ul.comment-list {
+  padding: 0;
+  list-style-type: none;
+}
+#comments ul.comment-list li.comment {
+  list-style-type: none;
+  margin-top: 3rem;
+}
+#comments ul.comment-list li.comment article footer.comment-meta div.comment-author {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#comments ul.comment-list li.comment article footer.comment-meta div.comment-author img.avatar {
+  margin-right: 0.5rem;
+  border-radius: 50%;
+}
+#comments ul.comment-list li.comment article footer.comment-meta div.comment-author .says::before {
+  content: ' ';
+  white-space: pre;
+}
+#comments ul.comment-list li.comment article footer.comment-meta div.comment-metadata {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#comments ul.comment-list li.comment article footer.comment-meta div.comment-metadata time {
+  font-style: oblique;
+  font-weight: normal;
+  font-size: 0.65rem;
+}
+#respond .logged-in-as {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .post-info {
   display: flex;

@@ -8,6 +8,7 @@
 .widgettitle {
 	margin-top: 1rem;
 	margin-bottom: 0;
+	line-height: 1.2;
 }
 
 .alignleft {
@@ -30,6 +31,60 @@
 	margin-bottom: 5rem;
 }
 .wp-caption-text { font-size: 80%; }
+
+.wp-calendar-table {
+	width: 100% !important;
+}
+
+.gallery-icon img {
+	transition: all $transition-fast;
+}
+
+.widget_archive,
+.widget_categories,
+.widget_meta,
+.widget_nav_menu,
+.widget_pages,
+.widget_recent_comments,
+.widget_recent_entries,
+.widget_rss,
+{
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+		li {
+			margin-bottom: 0.5rem;
+			ul {
+				padding-left: 1rem;
+			}
+		}
+	}
+}
+
+.widget_recent_entries {
+	li {
+		a {
+			display: block;
+		}
+		.post-date {
+			font-style: oblique;
+			font-weight: normal;
+			font-size: 0.65rem;
+		}
+	}
+}
+
+.widget_rss {
+	li {
+		margin-bottom: 2rem !important;
+
+		.rss-date {
+			font-style: oblique;
+			font-weight: normal;
+			font-size: 0.65rem;
+		}
+	}
+}
 
 cite {
 	display: block;
@@ -79,50 +134,7 @@ dl {
 	}
 }
 
-#comments {
-	h3.comments-title {
-		margin-bottom: 0;
-	}
 
-	ul.comment-list {
-		padding: 0;
-		list-style-type: none;
-
-		li.comment {
-			list-style-type: none;
-			margin-top: 3rem;
-
-
-			article {
-				footer.comment-meta {
-					div.comment-author {
-						@include flexContainer($justify: flex-start);
-
-						img.avatar {
-							margin-right: 0.5rem;
-							border-radius: 50%;
-						}
-
-						.says::before {
-							content: ' ';
-							white-space: pre;
-						}
-					}
-
-					div.comment-metadata {
-						@include flexContainer($justify: space-between);
-					}
-				}
-			}
-		}
-	}
-}
-
-#respond {
-	.logged-in-as {
-		@include flexContainer($justify: space-between);
-	}
-}
 
 #protected-post-form {
 	border-bottom: 2px solid black;
@@ -157,13 +169,15 @@ dl {
 
 body > *:not(#wpadminbar)
 {
-	& form:not(#search-form):not(#protected-post-form)
+	form:not(#search-form):not(#protected-post-form),
+	li:not([class^='.mejs'])
 	{
-		input[type='text'],
-		input[type='submit'],
-		input[type='search'],
-		button,
-		textarea {
+		& > input[type='text'],
+		& > input[type='search'],
+		& > button,
+		& > select,
+		& input[type='submit'],
+		& textarea {
 			display: block;
 			width: 100% !important;
 			max-width: unset;

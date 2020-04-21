@@ -202,8 +202,10 @@ Kirki::add_field('planeta_config', array(
 			'element'					=> array(
 				"body > *:not(#wpadminbar) form input[type='text']:hover",
 				"body > *:not(#wpadminbar) form input[type='search']:hover",
+				"body > *:not(#wpadminbar) form select:hover",
 				"body > *:not(#wpadminbar) form textarea:hover",
 				'body > *:not(#wpadminbar) #search-form:hover',
+				'.gallery-icon:hover img',
 			),
 			'property'				=> 'border-color',
 			'value_pattern' 	=> 'primary_color !important',
@@ -218,6 +220,27 @@ Kirki::add_field('planeta_config', array(
 				"body > *:not(#wpadminbar) form button:hover",
 				'#protected-post-form:hover button',
 				'body > *:not(#wpadminbar) #search-form:hover button',
+			),
+			'property'				=> 'color',
+			'value_pattern' 	=> 'primary_color !important',
+			'pattern_replace'	=> array(
+				'primary_color'		=> 'primary_color',
+			),
+			'exclude'					=> array(false),
+		),
+	),
+));
+
+Kirki::add_field('planeta_config', array(
+	'type'			=> 'toggle',
+	'settings'	=> 'primary_color_content',
+	'label'			=> esc_html__('Enable on Post/Form Content', 'planeta'),
+	'section'		=> 'primary_color_section',
+	'default'		=> true,
+	'output'		=> array(
+		array(
+			'element'					=> array(
+				'body > *:not(#wpadminbar) a:not(.button-link)',
 			),
 			'property'				=> 'color',
 			'value_pattern' 	=> 'primary_color !important',

@@ -56,8 +56,16 @@ Kirki::add_field('planeta_config', array(
 			'element'				=> array(
 				'#protected-post-form',
 				'#search-form',
+				'.gallery-icon img',
 			),
-			'property'			=> 'border-bottom-color',
+			'property'			=> 'border-color',
+		),
+		array(
+			'element'				=> array(
+				'.gallery-icon img',
+			),
+			'property'			=> 'border-color',
+			'value_pattern'	=> '$ !important',
 		),
 	),
 ));
