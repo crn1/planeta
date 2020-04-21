@@ -1,0 +1,39 @@
+//Spacing
+$spacing-inside-group:	1rem;
+$spacing-groups:				3rem;
+$spacing-sections:			5rem;
+
+//Transitions
+$transition-fastest: 0.17s;
+$transition-fast:		 0.27s;
+$transition-slow:		 1.17s;
+$transition-slowest: 2.17s;
+
+//Z-Indexes
+$z-global-video:					10;
+$z-global-overlay:				20;
+$z-section-video:					30;
+$z-section-overlay:				40;
+
+$z-section-content:				100;
+
+$z-scroll-top-button:		97000;
+$z-global-menu-overlay:	98000;
+$z-global-header: 			99000;
+
+$z-absolute-overlay: 		99990;
+
+//Flex Container
+@mixin flexContainer(
+		$justify: center,
+		$align: center,
+		$direction: row,
+		$wrap: wrap,
+		$display: flex)
+{
+	display: $display;
+	align-items: $align;
+	justify-content: $justify;
+	flex-direction: $direction;
+	flex-wrap: wrap;
+}
