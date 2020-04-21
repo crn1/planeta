@@ -10,6 +10,16 @@
 
 .article-container {
 	max-width: 750px;
+
+	& * {
+		max-width: 100%;
+		height: auto;
+		width: initial;
+	}
+
+	& > * {
+		margin-bottom: $spacing-groups;
+	}
 }
 
 .page-title-container {
@@ -97,6 +107,7 @@
 }
 
 #not-found-container {
+	@include flexContainer($direction: column);
 	padding: 10vh 0 0;
 	display: flex;
 	min-height: 60vh;

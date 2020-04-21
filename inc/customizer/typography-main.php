@@ -57,6 +57,8 @@ Kirki::add_field('planeta_config', array(
 				'#protected-post-form',
 				'#search-form',
 				'.gallery-icon img',
+				'table th',
+				'table td',
 			),
 			'property'			=> 'border-color',
 		),

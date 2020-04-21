@@ -7,26 +7,14 @@
 	line-height: 1.2;
 }
 
-.alignleft {
-	text-align: left;
-	align: left;
-}
-
-.alignright {
-	text-align: right;
-	align: right;
-}
-
-.aligncenter {
-	text-align: center;
-	align: center;
-}
-
 .wp-caption {
-	margin-top: $spacing-groups;
-	margin-bottom: $spacing-groups;
+	margin-top: $spacing-groups !important;
+	margin-bottom: $spacing-groups !important;
 }
-.wp-caption-text { font-size: 80%; }
+.wp-caption-text {
+	text-align: center;
+	font-size: 80%;
+}
 
 .wp-calendar-table {
 	width: 100% !important;
@@ -34,6 +22,27 @@
 
 .gallery-icon img {
 	transition: all $transition-fast;
+}
+
+//Preuzeto sa WordPress
+img.alignright { float: right; margin: 0 0 $spacing-inside-group $spacing-inside-group }
+img.alignleft { float: left; margin: 0 $spacing-inside-group $spacing-inside-group 0 }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto }
+a img.alignright { float: right; margin: 0 0 $spacing-inside-group $spacing-inside-group }
+a img.alignleft { float: left; margin: 0 $spacing-inside-group $spacing-inside-group 0 }
+a img.aligncenter { display: block; margin-left: auto; margin-right: auto }
+
+.post-nav-links {
+	& .post-page-numbers:first-child {
+		margin-left: $spacing-text;
+	}
+
+	.post-page-numbers {
+		transition: all $transition-fast;
+		display: unset;
+		padding: $spacing-text;
+		border: 2px solid black;
+	}
 }
 
 .widget_archive,
@@ -82,14 +91,17 @@
 	}
 }
 
-cite {
-	display: block;
-	margin-top: $spacing-groups;
-}
-
 pre {
 	white-space: pre-wrap;
 	word-wrap: break-word;
+}
+
+table {
+	th, td {
+		padding: $spacing-text;
+		border: 1px solid;
+		border-color: black;
+	}
 }
 
 blockquote {
@@ -99,9 +111,9 @@ blockquote {
 	&:before, &:after {
 		display: block;
 		content: '';
-		background: #000;
+		background-color: #000;
 		width: 50%;
-		height: 1px;
+		height: 2px;
 		margin: 0 auto;
 	}
 
@@ -118,10 +130,6 @@ blockquote {
 	p, cite {
 		text-align: center;
 	}
-
-	cite {
-		font-size: 1rem;
-	}
 }
 
 dl {
@@ -129,8 +137,6 @@ dl {
 		font-weight: bold;
 	}
 }
-
-
 
 #protected-post-form {
 	border-bottom: 2px solid black;

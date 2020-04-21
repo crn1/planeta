@@ -1,12 +1,10 @@
 @import 'breakpoints';
 @import 'globals';
-@import 'not-found';
 @import 'wordpress';
 @import 'search-form';
 @import 'containers';
 @import 'hamburgers';
 @import 'typography';
-@import 'page';
 @import 'cards';
 @import 'header';
 @import 'footer';
@@ -34,6 +32,10 @@ html, body {
 	overflow-x: hidden;
 	scroll-behavior: smooth;
 	font-size: 16px;
+}
+
+.button-link:hover {
+	transition: all $transition-fast;
 }
 
 .relative {
