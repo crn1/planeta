@@ -1,5 +1,3 @@
-@import 'modules/flex';
-
 #not-found-container {
 	@include flexContainer($direction: column);
 }
