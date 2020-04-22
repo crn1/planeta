@@ -5,7 +5,7 @@
 
 				<div class='default-container'>
 					<?php
-						$hover_class = get_query_var('hover_class'); ?>
+						$hover_class = get_query_var('hover_class', 'hover-none'); ?>
 
 					<nav id='footer-menu' class='relative'>
 						<?php
@@ -15,7 +15,7 @@
 								'echo'						=> false,
 							);
 							$menu = strip_tags(wp_nav_menu($params), '<a>');
-							$menu = str_replace('<a', "<span class='relative hover-${hover_class}'><a class='button-link'", $menu);
+							$menu = str_replace('<a', "<span class='relative ${hover_class}'><a class='button-link'", $menu);
 							$menu = str_replace('</a>', "</a></span>", $menu);
 							echo $menu;
 						?>
