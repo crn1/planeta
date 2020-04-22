@@ -40,6 +40,14 @@
 		height: 100%;
 		width: 100%;
 	}
+
+	.title-tag {
+		margin-bottom: $spacing-inside-group;
+		&:not(last-child)
+		{
+			margin-right: $spacing-inside-group;
+		}
+	}
 }
 
 .social-container {

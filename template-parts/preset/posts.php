@@ -2,7 +2,9 @@
 	<?php the_title(); ?>
 </h3>
 
-<?php get_template_part('template-parts/content/post-info'); ?>
+<?php
+	set_query_var('print_category', false);
+	get_template_part('template-parts/content/post-info'); ?>
 
 <p class='description secondary-text'>
 	<?php the_excerpt(); ?>

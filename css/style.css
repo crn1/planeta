@@ -164,6 +164,18 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
 .sticky {
   position: sticky;
 }
+/*.title-tag {
+ border: 2px solid black;
+ display: inline-block;
+ margin-bottom: $spacing-text;
+ transition: all $transition-fast;
+ &:not(last-child) {
+ margin-right: $spacing-text;
+ }
+ a {
+ padding: $spacing-text;
+ }
+ }*/
 #search-form {
   position: relative;
   z-index: 100;
@@ -227,6 +239,12 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
   left: 0;
   height: 100%;
   width: 100%;
+}
+.page-title-container .title-tag {
+  margin-bottom: 1rem;
+}
+.page-title-container .title-tag:not(last-child) {
+  margin-right: 1rem;
 }
 .social-container {
   display: inline-flex;
@@ -756,6 +774,7 @@ section h1, section h2, section h3, section h4, section h5, section h6, section 
   flex-wrap: wrap;
 }
 .post-info > .user {
+  padding-right: 0.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;

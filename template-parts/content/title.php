@@ -9,6 +9,8 @@
 	$fittext = get_theme_mod('typography_page_title_fittext', false) ? 'fit-text' : '';
 
 	$featured_image = has_post_thumbnail() && !is_search() && !is_archive() ? get_the_post_thumbnail_url(get_the_ID(), 'full') : '';
+
+	$hover_class = get_query_var('hover_class', 'hover-none');
 ?>
 <div
 		class='page-title-container'
@@ -17,6 +19,26 @@
 	<div class='page-title-overlay'></div>
 
 	<div class='default-container'>
+		<?php
+			if(has_tag())
+			{
+				$tags = get_the_tags();
+				foreach($tags as $tag)
+				{
+					$tag_link = get_tag_link( $tag->term_id ); ?>
+					<span
+							class='relative <?php echo $hover_class; ?> title-tag'>
+						<a
+								rel='tag'
+								title='<?php echo $tag->name; ?>'
+								href='<?php echo $tag_link; ?>'
+								class='button-link <?php echo $tag->slug ?>'>
+							<?php echo $tag->name; ?>
+						</a>
+					</span>
+				<?php }
+			}
+		?>
 		<h2
 				class='page-title <?php echo $lax; ?> <?php echo $fittext; ?>'
 				<?php echo $page_lax; ?>

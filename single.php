@@ -10,7 +10,9 @@
 	<article
 			id='post-<?php echo the_ID(); ?>'
 			<?php post_class('article-container default-container'); ?>>
-		<?php get_template_part('template-parts/content/post-info'); ?>
+		<?php
+			set_query_var('print_category', true);
+			get_template_part('template-parts/content/post-info'); ?>
 		<?php the_content(); ?>
 		<?php wp_link_pages(); ?>
 

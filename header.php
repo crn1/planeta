@@ -21,4 +21,5 @@
 
 		<?php
 			$hover_class = get_theme_mod('typography_button_link_hover', 'none');
+			$hover_class = 'hover-' . $hover_class;
 			set_query_var('hover_class', $hover_class);

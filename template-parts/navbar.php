@@ -10,9 +10,10 @@
 		foreach($layout as $section)
 		{
 			$name = get_theme_mod("${section}_name", 'Section');
+			$hover_class = get_query_var('hover_class', 'hover-class');
 			$slug = sanitize_title($name); ?>
 			<span
-					class='top-menu-item relative hover-<?php echo get_query_var('hover_class', 'none'); ?>'>
+					class='top-menu-item relative <?php echo $hover_class; ?>'>
 				<a
 						href='<?php echo get_home_url() . '/#' . $slug; ?>'
 						data-section-id='<?php echo $section; ?>'

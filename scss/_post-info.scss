@@ -2,6 +2,7 @@
 	@include flexContainer($justify: space-between);
 
 	& > .user {
+		padding-right: $spacing-text;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
