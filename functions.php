@@ -9,6 +9,9 @@ if(class_exists('Kirki'))
 	include_once get_theme_file_path('inc/fallback.php');
 }
 
+//Register Custom Post Types
+include_once get_theme_file_path('inc/post-types/testimonial.php');
+
 //Internationalization
 add_action('after_setup_theme', 'planeta_i18n_setup');
 function planeta_i18n_setup(){

@@ -3,22 +3,22 @@
 require_once(get_template_directory() . '/inc/customizer/video-background.php');
 require_once(get_template_directory() . '/inc/customizer/shape.php');
 
-function planeta_add_section_background($index)
+function planeta_add_section_background($name)
 {
 	planeta_add_video_background(
-		$section 		= "section_${index}",
-		$panel 			= "section_${index}_panel",
-		$bg_output 	= "#section_${index}-overlay"
+		$section 		= $name,
+		$panel 			= "${name}_panel",
+		$bg_output 	= "#${name}-overlay"
 	);
 
 	planeta_add_shape(array(
-		'section'				=> "section_${index}_background",
+		'section'				=> "${name}_background",
 		'inline'				=> true,
 		'height_output'	=> array(
-			"#section_${index}-overlay",
-			"#section_${index}-video-background",
+			"#${name}-overlay",
+			"#${name}-video-background",
 		),
-		'outside_output'	=> "[data-section-id='section_${index}']",
+		'outside_output'	=> "#${name}",
 	));
 }
 

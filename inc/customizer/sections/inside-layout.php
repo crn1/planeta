@@ -1,17 +1,17 @@
 <?php
 
-function planeta_add_section_layout(&$index)
+function planeta_add_section_layout($name)
 {
-	Kirki::add_section("section_${index}_layout", array(
+	Kirki::add_section("${name}_layout", array(
 		'title' => esc_html__('Layout', 'planeta'),
-		'panel' => "section_${index}_panel",
+		'panel' => "${name}_panel",
 	));
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'sortable',
 		'label'			=> esc_html__('Layout', 'planeta'),
-		'section'		=> "section_${index}_layout",
-		'settings'	=> "section_${index}_layout",
+		'section'		=> "${name}_layout",
+		'settings'	=> "${name}_layout",
 		'default'		=> array(
 			'logo',
 			'title',

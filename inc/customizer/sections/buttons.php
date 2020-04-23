@@ -1,17 +1,17 @@
 <?php
 
-function planeta_add_section_buttons(&$index)
+function planeta_add_section_buttons($name)
 {
-	Kirki::add_section("section_${index}_buttons", array(
+	Kirki::add_section("${name}_buttons", array(
 		'title' => esc_html__('Buttons', 'planeta'),
-		'panel' => "section_${index}_panel",
+		'panel' => "${name}_panel",
 	));
 
 	Kirki::add_field('planeta_config', array(
 		'type'						=> 'repeater',
-		'section'					=> "section_${index}_buttons",
-		'settings'				=> "section_${index}_buttons",
-		'label'						=> esc_html__('Items', 'planeta'),
+		'section'					=> "${name}_buttons",
+		'settings'				=> "${name}_buttons",
+		'label'						=> esc_html__('Buttons', 'planeta'),
 		'default'					=> array(),
 		'row_label'				=> array(
 			'type'						=> 'field',

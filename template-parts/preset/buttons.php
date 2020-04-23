@@ -9,11 +9,11 @@ $render_url = array_key_exists('url', $item);
 $render_url = $render_title ? !empty($item['url']) : false; ?>
 
 <?php if($render_title && $render_url):
-	$hover_class = get_theme_mod('typography_button_link_hover', 'none');
+	$hover_class = get_query_var('hover_class', 'hover-none');
 	$url_tab = $item['url_tab'] ? '_blank' : ''; ?>
 
 	<p class='url'>
-		<span class='relative hover-<?php echo $hover_class; ?>'>
+		<span class='relative <?php echo $hover_class; ?>'>
 			<a
 					class='button-link'
 					href='<?php echo $item['url']; ?>'

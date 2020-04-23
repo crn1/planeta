@@ -1,32 +1,26 @@
 <?php
 
-$number_of_frontpage_sections = 15;
-
 require_once(get_template_directory() . '/inc/customizer/sections/inside-layout.php');
 require_once(get_template_directory() . '/inc/customizer/sections/heading.php');
-require_once(get_template_directory() . '/inc/customizer/sections/items.php');
 require_once(get_template_directory() . '/inc/customizer/sections/buttons.php');
 require_once(get_template_directory() . '/inc/customizer/sections/appearance.php');
 require_once(get_template_directory() . '/inc/customizer/sections/background.php');
 
-function planeta_add_frontpage_sections($num_sections = 15)
+function planeta_add_frontpage_section($name, $title)
 {
-	for($index = 1; $index <= $num_sections; $index++)
-	{
-		Kirki::add_panel("section_${index}_panel", array(
-			'title' 		=> esc_html__("Section #${index}", 'planeta'),
-			'panel' 		=> "sections_panel",
-		));
+	Kirki::add_panel("${name}_panel", array(
+		'title' 		=> esc_html__($title, 'planeta'),
+		'panel' 		=> "sections_panel",
+	));
 
-		planeta_add_section_layout($index);
-		planeta_add_section_heading($index);
-		planeta_add_section_items($index);
-		planeta_add_section_buttons($index);
-		planeta_add_section_appearance($index);
-		planeta_add_section_background($index);
-	}
+	planeta_add_section_layout($name, $title);
+	planeta_add_section_heading($name, $title);
+	planeta_add_section_buttons($name);
+	planeta_add_section_appearance($name);
+	planeta_add_section_background($name);
 }
 
-planeta_add_frontpage_sections($number_of_frontpage_sections);
+planeta_add_frontpage_section('posts', 'Posts');
+planeta_add_frontpage_section('contact', 'Contact Us');
 
 ?>
