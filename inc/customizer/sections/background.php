@@ -8,17 +8,17 @@ function planeta_add_section_background($name)
 	planeta_add_video_background(
 		$section 		= $name,
 		$panel 			= "${name}_panel",
-		$bg_output 	= "#${name}-overlay"
+		$bg_output 	= "section[data-section-id='${name}'] .background-overlay"
 	);
 
 	planeta_add_shape(array(
 		'section'				=> "${name}_background",
 		'inline'				=> true,
 		'height_output'	=> array(
-			"#${name}-overlay",
-			"#${name}-video-background",
+			"section[data-section-id='${name}'] .background-overlay",
+			"section[data-section-id='${name}'] .video-background",
 		),
-		'outside_output'	=> "#${name}",
+		'outside_output'	=> "section[data-section-id='${name}']",
 	));
 }
 

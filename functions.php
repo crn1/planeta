@@ -11,6 +11,13 @@ if(class_exists('Kirki'))
 
 //Register Custom Post Types
 include_once get_theme_file_path('inc/post-types/testimonial.php');
+include_once get_theme_file_path('inc/post-types/project.php');
+include_once get_theme_file_path('inc/post-types/client.php');
+include_once get_theme_file_path('inc/post-types/tech.php');
+include_once get_theme_file_path('inc/post-types/gallery.php');
+include_once get_theme_file_path('inc/post-types/service.php');
+include_once get_theme_file_path('inc/post-types/team.php');
+include_once get_theme_file_path('inc/post-types/number.php');
 
 //Internationalization
 add_action('after_setup_theme', 'planeta_i18n_setup');

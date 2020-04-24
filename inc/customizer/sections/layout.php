@@ -12,8 +12,15 @@ Kirki::add_field('planeta_config', array(
 	'settings'		=> 'sections_layout',
 	'default'			=> array(),
 	'choices'			=> array(
-		'posts'						=> esc_html__('Posts', 'planeta'),
-		'contact'					=> esc_html__('Contact Us', 'planeta'),
+		'post'						=> esc_html__('Posts', 'planeta'),
+		'testimonial'			=> esc_html__('Testimonials', 'planeta'),
+		'project'					=> esc_html__('Projects', 'planeta'),
+		'number'					=> esc_html__('Numbers', 'planeta'),
+		'service'					=> esc_html__('Services', 'planeta'),
+		'gallery'					=> esc_html__('Gallery', 'planeta'),
+		'team'						=> esc_html__('Team', 'planeta'),
+		'client'					=> esc_html__('Clients', 'planeta'),
+		'tech'						=> esc_html__('Tech Stack', 'planeta'),
 	),
 ));
 

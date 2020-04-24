@@ -32,7 +32,7 @@ function planeta_add_section_heading($name, $title)
 		'default'		=> esc_html__('Section Title', 'planeta'),
 		'partial_refresh'	=> array(
 			"${name}_title" => array(
-				'selector'				=> "#${name} .section-title",
+				'selector'				=> "section[data-section-id='${name}'] .section-title",
 				'render_callback'	=> function()
 				{
 					return get_theme_mod("${name}_title");
@@ -49,7 +49,7 @@ function planeta_add_section_heading($name, $title)
 		'default'		=> esc_html__('This is a section subtitle.', 'planeta'),
 		'partial_refresh'	=> array(
 			"${name}_subtitle" => array(
-				'selector'					=> "#${name} .section-subtitle",
+				'selector'					=> "section[data-section-id='${name}'] .section-subtitle",
 				'render_callback'		=> function()
 				{
 					return get_theme_mod("${name}_subtitle");

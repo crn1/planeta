@@ -24,11 +24,7 @@
 	z-index: $z-global-video !important;
 }
 
-#global-video-background, #404-video-background,
-#global-overlay, #404-overlay {
+#global-video-background,
+#global-overlay {
 	position: fixed !important;
-}
-
-#global-overlay, #global-video-background {
-	position: fixed;
 }

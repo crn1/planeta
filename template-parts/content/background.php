@@ -3,7 +3,7 @@
 	$setting = $section . '_background';
 	set_query_var('setting', $setting);
 
-	//Because you can't call get_template_part twice
+	//Because you can't call get_template_part twice (?)
 	ob_start();
 	get_template_part('template-parts/content/shape');
 	$shape = ob_get_contents();
@@ -18,13 +18,11 @@
 ?>
 <div
 	<?php echo $shape; ?>
-	class='background-overlay'
-	id='<?php echo $section; ?>-overlay'></div>
+	class='background-overlay'></div>
 <?php if($video): ?>
 <video
 		<?php echo $shape; ?>
 		autoplay loop muted
-		id='<?php echo $section; ?>-video-background'
 		class='video-background'
 		poster='<?php echo $img; ?>'>
 

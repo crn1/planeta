@@ -20,7 +20,31 @@ function planeta_add_frontpage_section($name, $title)
 	planeta_add_section_background($name);
 }
 
-planeta_add_frontpage_section('posts', 'Posts');
-planeta_add_frontpage_section('contact', 'Contact Us');
+$posts = esc_html__('Posts', 'planeta');
+planeta_add_frontpage_section('post', $posts);
+
+$testimonials = esc_html__('Testimonials', 'planeta');
+planeta_add_frontpage_section('testimonial', $testimonials);
+
+$projects = esc_html__('Projects', 'planeta');
+planeta_add_frontpage_section('project', $projects);
+
+$posts = esc_html__('Numbers', 'planeta');
+planeta_add_frontpage_section('number', $posts);
+
+$projects = esc_html__('Services', 'planeta');
+planeta_add_frontpage_section('service', $projects);
+
+$posts = esc_html__('Gallery', 'planeta');
+planeta_add_frontpage_section('gallery', $posts);
+
+$testimonials = esc_html__('Team', 'planeta');
+planeta_add_frontpage_section('team', $testimonials);
+
+$projects = esc_html__('Clients', 'planeta');
+planeta_add_frontpage_section('client', $projects);
+
+$projects = esc_html__('Tech Stack', 'planeta');
+planeta_add_frontpage_section('tech', $projects);
 
 ?>

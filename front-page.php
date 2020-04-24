@@ -6,12 +6,14 @@
 
 	foreach($layout as $key => $section):
 		$name = get_theme_mod("${section}_name", 'Section');
+		$slug = sanitize_title($name);
 		set_query_var('section', $section);
 	?>
 
 	<section
-			id='<?php echo $section; ?>'
-			name='<?php echo $name; ?>'>
+			id='<?php echo $slug; ?>'
+			name='<?php echo $name; ?>'
+			data-section-id='<?php echo $section; ?>'>
 		<?php
 			get_template_part('template-parts/content/background'); ?>
 

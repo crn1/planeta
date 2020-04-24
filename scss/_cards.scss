@@ -71,21 +71,21 @@
 	}
 }
 
-.card-buttons {
-	& > .info {
-		width: unset !important;
+.section-buttons {
+	@include flexContainer();
+
+	span {
+		margin-bottom: $spacing-inside-group;
+		@include for-size(phone-only) {
+			@include flexContainer();
+		}
 	}
 
-	&:not(:last-child)
+	span:not(:last-child)
 	{
 		@include for-size(tablet-and-up) {
 			margin-right: $spacing-inside-group !important;
 		}
-	}
-
-	.url {
-		margin-top: 0;
-		margin-bottom: 0;
 	}
 }
 

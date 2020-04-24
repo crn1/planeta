@@ -480,17 +480,29 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
   margin-top: 0;
   line-height: 1;
 }
-.card-buttons > .info {
-  width: unset !important;
+.section-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-@media (min-width: 600px) {
-  .card-buttons:not(:last-child) {
-    margin-right: 1rem !important;
+.section-buttons span {
+  margin-bottom: 1rem;
+}
+@media (max-width: 599px) {
+  .section-buttons span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
-.card-buttons .url {
-  margin-top: 0;
-  margin-bottom: 0;
+@media (min-width: 600px) {
+  .section-buttons span:not(:last-child) {
+    margin-right: 1rem !important;
+  }
 }
 .card-tech > .info, .card-clients > .info {
   width: unset !important;
@@ -804,11 +816,8 @@ section h1, section h2, section h3, section h4, section h5, section h6, section 
 #global-video-background {
   z-index: 10 !important;
 }
-#global-video-background, #404-video-background, #global-overlay, #404-overlay {
+#global-video-background, #global-overlay {
   position: fixed !important;
-}
-#global-overlay, #global-video-background {
-  position: fixed;
 }
 *, *:after, *::before {
   -webkit-box-sizing: border-box;
