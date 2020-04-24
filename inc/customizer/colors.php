@@ -135,6 +135,13 @@ Kirki::add_field('planeta_config', array(
 			'exclude'					=> array(false),
 		),
 	),
+	'active_callback'	=> array(
+		array(
+			'setting'					=> 'primary_color_enable',
+			'operator'				=> '==',
+			'value'						=> true,
+		),
+	),
 ));
 
 Kirki::add_field('planeta_config', array(
@@ -230,6 +237,13 @@ Kirki::add_field('planeta_config', array(
 			'exclude'					=> array(false),
 		),
 	),
+	'active_callback'	=> array(
+		array(
+			'setting'					=> 'primary_color_enable',
+			'operator'				=> '==',
+			'value'						=> true,
+		),
+	),
 ));
 
 Kirki::add_field('planeta_config', array(
@@ -273,6 +287,13 @@ Kirki::add_field('planeta_config', array(
 				'primary_color'		=> 'primary_color',
 			),
 			'exclude'					=> array(false),
+		),
+	),
+	'active_callback'	=> array(
+		array(
+			'setting'					=> 'primary_color_enable',
+			'operator'				=> '==',
+			'value'						=> true,
 		),
 	),
 ));
