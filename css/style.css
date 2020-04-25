@@ -297,6 +297,31 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
   min-height: 60vh;
   align-items: center;
 }
+#main-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  background-color: transparent;
+  position: relative;
+  margin-top: 10vh;
+  padding-top: 10vh;
+}
+#main-footer #footer-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  z-index: 100;
+}
+#main-footer #footer-menu span {
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
+  margin-bottom: 1rem;
+}
 .hamburger {
   padding: 1rem 1rem;
   display: inline-block;
@@ -476,21 +501,9 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
   flex-wrap: wrap;
 }
 .section-buttons span {
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
   margin-bottom: 1rem;
-}
-@media (max-width: 599px) {
-  .section-buttons span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-@media (min-width: 600px) {
-  .section-buttons span:not(:last-child) {
-    margin-right: 1rem !important;
-  }
 }
 .card-tech > .info, .card-clients > .info {
   width: unset !important;
@@ -637,44 +650,6 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
 }
 #scroll-top-button > i {
   font-size: 48px;
-}
-#main-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  background-color: transparent;
-  position: relative;
-  margin-top: 10vh;
-  padding-top: 10vh;
-}
-#main-footer #footer-menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  z-index: 100;
-}
-@media (max-width: 599px) {
-  #main-footer #footer-menu {
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-#main-footer #footer-menu span {
-  margin-top: 1rem;
-}
-@media (max-width: 599px) {
-  #main-footer #footer-menu span {
-    text-align: center;
-    margin-right: 0;
-  }
-}
-#main-footer #footer-menu span:not(:last-child) {
-  margin-right: 1rem;
 }
 section {
   z-index: 100;

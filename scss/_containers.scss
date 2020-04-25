@@ -121,3 +121,23 @@
 	min-height: 60vh;
 	align-items: center;
 }
+
+#main-footer {
+	@include flexContainer($direction: column);
+	box-sizing: border-box;
+	background-color: transparent;
+	position: relative;
+	margin-top: 10vh;
+	padding-top: 10vh;
+
+	#footer-menu {
+		@include flexContainer();
+		z-index: $z-section-content;
+
+		span {
+			margin-left: $spacing-inside-group/2 !important;
+			margin-right: $spacing-inside-group/2 !important;
+			margin-bottom: $spacing-inside-group;
+		}
+	}
+}

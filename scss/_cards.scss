@@ -17,7 +17,7 @@
 	}
 
 	& > .image {
-		@media (max-width: 599px)
+		@include for-size(phone-only)
 		{
 			margin-bottom: $spacing-inside-group;
 		}
@@ -75,17 +75,9 @@
 	@include flexContainer();
 
 	span {
+		margin-left: $spacing-inside-group/2 !important;
+		margin-right: $spacing-inside-group/2 !important;
 		margin-bottom: $spacing-inside-group;
-		@include for-size(phone-only) {
-			@include flexContainer();
-		}
-	}
-
-	span:not(:last-child)
-	{
-		@include for-size(tablet-and-up) {
-			margin-right: $spacing-inside-group !important;
-		}
 	}
 }
 
