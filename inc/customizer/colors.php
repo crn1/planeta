@@ -209,6 +209,7 @@ Kirki::add_field('planeta_config', array(
 			'element'					=> array(
 				"body > *:not(#wpadminbar) form input[type='text']:hover",
 				"body > *:not(#wpadminbar) form input[type='search']:hover",
+				"body > *:not(#wpadminbar) form input[type='email']:hover",
 				"body > *:not(#wpadminbar) form select:hover",
 				"body > *:not(#wpadminbar) form textarea:hover",
 				'body > *:not(#wpadminbar) #search-form:hover',

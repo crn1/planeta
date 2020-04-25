@@ -7,7 +7,7 @@
 		<i class='icofont-search-1'></i>
 	</button>
 	<input
-			type='text'
+			type='search'
 			required
 			placeholder="<?php echo esc_attr_x( 'Search', 'placeholder' ) ?>"
 			value='<?php echo get_search_query(); ?>'

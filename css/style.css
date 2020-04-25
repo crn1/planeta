@@ -171,7 +171,7 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
   display: flex;
   transition: all 0.27s;
 }
-#search-form input[type='text'] {
+#search-form input[type='search'] {
   appearance: none;
   background-color: transparent;
   min-width: 0;
