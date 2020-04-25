@@ -152,110 +152,15 @@ function planeta_add_section_appearance($name)
 	));
 
 	Kirki::add_field('planeta_config', array(
-		'type'					=> 'slider',
-		'label'					=> esc_html__('Items Columns', 'planeta'),
+		'type'					=> 'radio-buttonset',
+		'label'					=> esc_html__('Number of Item Columns', 'planeta'),
 		'section'				=> "${name}_appearance",
 		'settings'			=> "${name}_masonry_num",
 		'default'				=> '3',
 		'choices'				=> array(
-			'min'						=> '1',
-			'max'						=> '7',
-			'step'					=> '1',
-		),
-		'output'				=> array(
-			array(
-				'element'				=> "section[data-section-id='${name}'] .card",
-				'property'			=> 'flex-direction',
-				'value_pattern'	=> 'row',
-				'media_query'		=> '@media screen and (min-width: 600px)',
-			 	'exclude'				=> array('2', '3', '4', '5', '6', '7'),
-			),
-			array(
-				'element'				=> "section[data-section-id='${name}'] .card > .image",
-				'property'			=> 'max-width',
-				'value_pattern'	=> '33%',
-				'media_query'		=> '@media screen and (min-width: 600px)',
-			 	'exclude'				=> array('2', '3', '4', '5', '6', '7'),
-			),
-			array(
-				'element'				=> "section[data-section-id='${name}'] .card > .image",
-				'property'			=> 'max-width',
-				'value_pattern'	=> '100%',
-				'media_query'		=> '@media screen and (max-width: 599px)',
-			 	'exclude'				=> array('2', '3', '4', '5', '6', '7'),
-			),
-			array(
-				'element'				=> "section[data-section-id='${name}'] .card > .image",
-				'property'			=> 'max-width',
-				'value_pattern'	=> '100%',
-			 	'exclude'				=> array('1'),
-			),
-			array(
-				'element'				=> "section[data-section-id='${name}'] .card > .image",
-				'property'			=> 'margin-bottom',
-				'value_pattern'	=> '2rem',
-			 	'exclude'				=> array('1'),
-			),
-			array(
-				'element'				=> "section[data-section-id='${name}'] .card > .info",
-				'property'			=> 'max-width',
-				'value_pattern'	=> '67%',
-				'media_query'		=> '@media screen and (min-width: 600px)',
-			 	'exclude'				=> array('2', '3', '4', '5', '6', '7'),
-			),
-		),
-		'active_callback'	=> array(
-			array(
-				'setting'				=> "${name}_card_preset",
-				'operator'			=> '!=',
-				'value'					=> 'none',
-			),
-			array(
-				'setting'				=> "${name}_card_preset",
-				'operator'			=> '!=',
-				'value'					=> 'clients',
-			),
-			array(
-				'setting'				=> "${name}_card_preset",
-				'operator'			=> '!=',
-				'value'					=> 'tech',
-			),
-		),
-	));
-
-	Kirki::add_field('planeta_config', array(
-		'type'					=> 'radio-buttonset',
-		'label'					=> esc_html__('Image Align', 'planeta'),
-		'section'				=> "${name}_appearance",
-		'settings'			=> "${name}_image_align",
-		'default'				=> 'all-left',
-		'choices'				=> array(
-			'all-left'				=> esc_html__('All Left', 'planeta'),
-			'all-right'				=> esc_html__('All Right', 'planeta'),
-			'first-left'			=> esc_html__('First Left', 'planeta'),
-			'first-right'			=> esc_html__('First Right', 'planeta'),
-		),
-		'active_callback'	=> array(
-			array(
-				'setting'				=> "${name}_masonry_num",
-				'operator'			=> '==',
-				'value'					=> 1,
-			),
-			array(
-				'setting'				=> "${name}_card_preset",
-				'operator'			=> '!=',
-				'value'					=> 'none',
-			),
-			array(
-				'setting'				=> "${name}_card_preset",
-				'operator'			=> '!=',
-				'value'					=> 'clients',
-			),
-			array(
-				'setting'				=> "${name}_card_preset",
-				'operator'			=> '!=',
-				'value'					=> 'tech',
-			),
+			'2'							=> esc_html__('Two', 'planeta'),
+			'3'							=> esc_html__('Three', 'planeta'),
+			'4'							=> esc_html__('Four', 'planeta'),
 		),
 	));
 }

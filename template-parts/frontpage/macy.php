@@ -3,13 +3,12 @@
 $section = get_query_var('section');
 $masonry_num = get_theme_mod("${section}_masonry_num", 3);
 
-$margin = 48;
-if($masonry_num == 2) { $margin = 64; }
-else if($masonry_num == 3) { $margin = 48; }
-else if($masonry_num == 4) { $margin = 40; }
-else if($masonry_num == 5) { $margin = 32; }
-else if($masonry_num == 6) { $margin = 16; }
-else if($masonry_num == 7) { $margin = 8; }
+switch($masonry_num)
+{
+	case 2: $margin = 64; break;
+	case 3: $margin = 48; break;
+	case 4: $margin = 40; break;
+}
 
 ?>
 
@@ -18,7 +17,7 @@ else if($masonry_num == 7) { $margin = 8; }
 		container: '#<?php echo $section; ?>-items',
 		columns: <?php echo $masonry_num; ?>,
 		breakAt: {
-			900: <?php echo $masonry_num == 1 ? 1 : 2; ?>,
+			900: 2,
 			600: 1,
 		},
 		margin: <?php echo $margin; ?>,

@@ -513,50 +513,6 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
     margin-right: 2.5rem !important;
   }
 }
-@media (min-width: 600px) {
-  .all-left .card > .image {
-    order: 1;
-    padding-right: 2.5rem;
-  }
-  .all-left .card > .info {
-    order: 2;
-  }
-  .all-right .card > .image {
-    padding-left: 2.5rem;
-    order: 2;
-  }
-  .all-right .card > .info {
-    order: 1;
-  }
-  .first-left .card:nth-child(odd) > .image {
-    padding-right: 2.5rem;
-    order: 1;
-  }
-  .first-left .card:nth-child(odd) > .info {
-    order: 2;
-  }
-  .first-left .card:nth-child(even) > .image {
-    padding-left: 2.5rem;
-    order: 2;
-  }
-  .first-left .card:nth-child(even) > .info {
-    order: 1;
-  }
-  .first-right .card:nth-child(odd) > .image {
-    padding-left: 2.5rem;
-    order: 2;
-  }
-  .first-right .card:nth-child(odd) > .info {
-    order: 1;
-  }
-  .first-right .card:nth-child(even) > .image {
-    padding-right: 2.5rem;
-    order: 1;
-  }
-  .first-right .card:nth-child(even) > .info {
-    order: 2;
-  }
-}
 #top-menu {
   display: flex;
   align-items: center;
