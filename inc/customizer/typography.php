@@ -133,7 +133,6 @@ function typography_generator($args)
 			),
 		));
 
-		require_once(get_template_directory() . '/inc/customizer/misc/hover.php');
 		Kirki::add_field('planeta_config', array(
 			'type'						=> 'slider',
 			'label'						=> esc_html__('Border/Line Size', 'planeta'),
@@ -146,11 +145,61 @@ function typography_generator($args)
 				'step'						=> '0.05',
 			),
 			'transport'				=> 'auto',
-			'output'					=> HOVER_BORDER,
-			'active_callback' => array(
-				'setting'				=> "typography_${section}_hover",
-				'operator'			=> "!=",
-				'operator'			=> 'none',
+			'output'					=> array(
+				array(
+					'element'				=> array(
+						".hover-border-switch a::before",
+						".hover-border-switch a::after",
+						".hover-cross a::before",
+						".hover-cross a::after",
+					),
+					'units'					=> 'rem',
+					'property'			=> 'height',
+				),
+				array(
+					'element'				=> array(
+						".hover-box-1 a::before",
+						".hover-box-1 a::after",
+					),
+					'units'					=> 'rem',
+					'property'			=> 'border-width',
+				),
+				array(
+					'element'				=> array(
+						".hover-box-2 a",
+					),
+					'units'					=> 'rem',
+					'property'			=> 'border-width',
+				),
+				array(
+					'element'				=> array(
+						".hover-underline-1 a::after",
+						".hover-underline-2 a:hover::after",
+						".hover-underline-2 a:focus::after",
+						".hover-underline-3 a::before",
+						".hover-underline-4 a::before",
+						".hover-underline-4 a::after",
+						".hover-underline-5 a::before",
+						".hover-underline-5 a::after",
+						".hover-underline-6 a::before",
+						".hover-underline-6 a::after",
+					),
+					'units'					=> 'rem',
+					'property'			=> 'height',
+				),
+				array(
+					'element'				=> array(
+						".hover-underline-3 a::after",
+						".hover-underline-4 a::after",
+					),
+					'units'					=> 'rem',
+					'property'			=> 'width',
+				),
+			),
+			'active_callback'		=> array(
+				'setting'						=> "typography_${section}_hover",
+				'operator'					=> "!=",
+				'operator'					=> 'none',
 			),
 		));
 
