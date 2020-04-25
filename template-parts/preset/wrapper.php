@@ -24,7 +24,9 @@
 			$image_lax_class = $image_lax != '' ? 'lax' : ''; ?>
 
 			<img
-				<?php get_template_part('template-parts/content/shape'); ?>
+				<?php
+					set_query_var('shape_section', "${section}_image");
+					get_template_part('template-parts/content/shape'); ?>
 				src='<?php echo $image_src; ?>'
 				alt='<?php echo $image_alt; ?>'
 				class='image <?php echo $image_lax_class; ?>'

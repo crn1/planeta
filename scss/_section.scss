@@ -23,6 +23,10 @@ section {
 			@include for-size(phone-only) {
 				flex-direction: column;
 			}
+
+			.image {
+				max-width: 100%;
+			}
 		}
 	}
 

@@ -4,7 +4,6 @@ require_once(get_template_directory() . '/inc/customizer/sections/inside-layout.
 require_once(get_template_directory() . '/inc/customizer/sections/heading.php');
 require_once(get_template_directory() . '/inc/customizer/sections/buttons.php');
 require_once(get_template_directory() . '/inc/customizer/sections/appearance.php');
-require_once(get_template_directory() . '/inc/customizer/sections/background.php');
 
 function planeta_add_frontpage_section($name, $title)
 {
@@ -17,7 +16,31 @@ function planeta_add_frontpage_section($name, $title)
 	planeta_add_section_heading($name, $title);
 	planeta_add_section_buttons($name);
 	planeta_add_section_appearance($name);
-	planeta_add_section_background($name);
+
+	require_once(get_template_directory() . '/inc/customizer/video-background.php');
+	planeta_add_video_background(
+		$section 		= $name,
+		$panel 			= "${name}_panel",
+		$bg_output 	= "section[data-section-id='${name}'] .background-overlay"
+	);
+
+	require_once(get_template_directory() . '/inc/customizer/shape.php');
+	planeta_add_shape(array(
+		'title'					=> 'Background Shape',
+		'section'				=> $name,
+		'panel'					=> "${name}_panel",
+		'height_output'	=> array(
+			"section[data-section-id='${name}'] .background-overlay",
+			"section[data-section-id='${name}'] .video-background",
+		),
+		'outside_output'	=> "section[data-section-id='${name}']",
+	));
+
+	planeta_add_shape(array(
+		'title'					=> 'Images Shape',
+		'section'				=> "${name}_image",
+		'panel'					=> "${name}_panel",
+	));
 }
 
 $posts = esc_html__('Posts', 'planeta');

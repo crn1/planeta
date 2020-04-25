@@ -12,7 +12,7 @@ function planeta_add_shape($args)
 	), $args);
 
 	$section = $args['inline'] ? $args['section'] : $args['section'] . '_shape';
-	$type = $args['inline'] ? $section . '_shape' : $section;
+	$type = $args['inline'] ? "${section}_shape" : $section;
 
 	if(!$args['inline'])
 	{
@@ -57,10 +57,9 @@ function planeta_add_shape($args)
 		),
 	));
 
-	$strength = $args['inline'] ? 'Shape Strength' : 'Strength (%)';
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__($strength, 'planeta'),
+		'label'			=> esc_html__('Strength', 'planeta'),
 		'section'		=> $section,
 		'settings'	=> "${section}_strength",
 		'default'		=> 10,
@@ -80,10 +79,9 @@ function planeta_add_shape($args)
 
 	if(!empty($args['height_output']))
 	{
-		$height = $args['inline'] ? 'Shape Height (%)' : 'Height';
 		Kirki::add_field('planeta_config', array(
 			'type'			=> 'slider',
-			'label'			=> esc_html__($height, 'planeta'),
+			'label'			=> esc_html__('Shape Height (%)', 'planeta'),
 			'section'		=> $section,
 			'settings'	=> "${section}_height",
 			'default'		=> 100,

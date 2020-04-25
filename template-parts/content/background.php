@@ -1,7 +1,5 @@
 <?php
 	$section = get_query_var('section');
-	$setting = $section . '_background';
-	set_query_var('setting', $setting);
 
 	//Because you can't call get_template_part twice (?)
 	ob_start();

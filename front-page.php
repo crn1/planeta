@@ -15,6 +15,7 @@
 			name='<?php echo $name; ?>'
 			data-section-id='<?php echo $section; ?>'>
 		<?php
+			set_query_var('shape_section', $section);
 			get_template_part('template-parts/content/background'); ?>
 
 		<div class='default-container'>

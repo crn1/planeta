@@ -22,25 +22,22 @@ if(get_theme_mod('related_posts_enable', false)):
 		));
 
 		if($query->have_posts()):
-			set_query_var('card_preset', 'posts');
-			set_query_var('section', 'related_posts');
+			set_query_var('section', 'post');
 
 			$title = get_theme_mod('related_posts_title', 'Related Posts');
 
-			$image_align = get_theme_mod("related_posts_image_align", 'all-left');
-			$masonry_num = get_theme_mod("related_posts_masonry_num", 3);
+			$image_align = get_theme_mod("posts_image_align", 'all-left');
+			$masonry_num = get_theme_mod("posts_masonry_num", 3);
 			$image_align = $masonry_num == 1 ? $image_align : ''; ?>
 
-			<section id='related_posts'><?php
-				get_template_part('template-parts/content/background'); ?>
-
+			<section id='post' data-section-id='post'>
 				<div class='default-container'>
-					<h2>
+					<h2 class='section-title'>
 						<?php echo $title; ?>
 					</h2>
 
 					<div
-							id='related_posts-items'
+							id='post-items'
 							class='section-items default-container <?php echo $image_align; ?>'>
 						<?php
 							while($query->have_posts())
