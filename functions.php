@@ -19,9 +19,16 @@ include_once get_theme_file_path('inc/post-types/service.php');
 include_once get_theme_file_path('inc/post-types/team.php');
 include_once get_theme_file_path('inc/post-types/number.php');
 
+//Register Contact Form
+include_once get_theme_file_path('inc/contact-form.php');
+
+//Protected Posts
+include_once get_theme_file_path('inc/protected-posts.php');
+
 //Internationalization
 add_action('after_setup_theme', 'planeta_i18n_setup');
-function planeta_i18n_setup(){
+function planeta_i18n_setup()
+{
 	load_theme_textdomain('planeta', get_template_directory() . '/languages');
 }
 
@@ -109,30 +116,6 @@ function init_scripts()
 	wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'init_scripts');
-
-//Protected Posts
-add_filter('the_password_form', 'planeta_password_form');
-function planeta_password_form()
-{
-	global $post;
-	$site_url = get_option('siteurl');
-	$enter_password = esc_html__('Enter Password', 'planeta');
-	$output = "<form
-			id='protected-post-form'
-			action='${site_url}/wp-login.php?action=postpass'
-			method='POST'>
-		<input
-			type='password'
-			required
-			placeholder='${enter_password}'
-			name='post_password'
-		/>
-		<button type='submit'>
-			<i class='icofont-simple-right'></i>
-		</button>
-	</form>";
-	return $output;
-}
 
 //Admin Styles
 function init_admin_styles()

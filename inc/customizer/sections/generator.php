@@ -47,4 +47,7 @@ planeta_add_frontpage_section('client', $projects);
 $projects = esc_html__('Tech Stack', 'planeta');
 planeta_add_frontpage_section('tech', $projects);
 
+$projects = esc_html__('Contact Form', 'planeta');
+planeta_add_frontpage_section('contact', $projects);
+
 ?>

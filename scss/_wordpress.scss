@@ -174,8 +174,9 @@ body > *:not(#wpadminbar)
 	form:not(#search-form):not(#protected-post-form),
 	li:not([class^='.mejs'])
 	{
-		& > input[type='text'],
+		& input[type='text'],
 		& > input[type='search'],
+		& input[type='email'],
 		& > button,
 		& > select,
 		& input[type='submit'],
@@ -211,18 +212,3 @@ body > *:not(#wpadminbar)
 .sticky {
 	position: sticky;
 }
-
-/*.title-tag {
-	border: 2px solid black;
-	display: inline-block;
-	margin-bottom: $spacing-text;
-	transition: all $transition-fast;
-
-	&:not(last-child) {
-		margin-right: $spacing-text;
-	}
-
-	a {
-		padding: $spacing-text;
-	}
-}*/

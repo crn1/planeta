@@ -142,7 +142,7 @@ dl dt {
 #protected-post-form > button > i {
   size: 1.5rem;
 }
-body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) > input[type='text'], body > *:not(#wpadminbar) li:not([class^='.mejs']) > input[type='text'], body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) > input[type='search'], body > *:not(#wpadminbar) li:not([class^='.mejs']) > input[type='search'], body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) > button, body > *:not(#wpadminbar) li:not([class^='.mejs']) > button, body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) > select, body > *:not(#wpadminbar) li:not([class^='.mejs']) > select, body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input[type='submit'], body > *:not(#wpadminbar) li:not([class^='.mejs']) input[type='submit'], body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) textarea, body > *:not(#wpadminbar) li:not([class^='.mejs']) textarea {
+body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input[type='text'], body > *:not(#wpadminbar) li:not([class^='.mejs']) input[type='text'], body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) > input[type='search'], body > *:not(#wpadminbar) li:not([class^='.mejs']) > input[type='search'], body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input[type='email'], body > *:not(#wpadminbar) li:not([class^='.mejs']) input[type='email'], body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) > button, body > *:not(#wpadminbar) li:not([class^='.mejs']) > button, body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) > select, body > *:not(#wpadminbar) li:not([class^='.mejs']) > select, body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input[type='submit'], body > *:not(#wpadminbar) li:not([class^='.mejs']) input[type='submit'], body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) textarea, body > *:not(#wpadminbar) li:not([class^='.mejs']) textarea {
   display: block;
   width: 100% !important;
   max-width: unset;
@@ -164,18 +164,6 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
 .sticky {
   position: sticky;
 }
-/*.title-tag {
- border: 2px solid black;
- display: inline-block;
- margin-bottom: $spacing-text;
- transition: all $transition-fast;
- &:not(last-child) {
- margin-right: $spacing-text;
- }
- a {
- padding: $spacing-text;
- }
- }*/
 #search-form {
   position: relative;
   z-index: 100;
