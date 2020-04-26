@@ -122,6 +122,7 @@ function planeta_register_post_type_team()
 		'exclude_from_search'		=> true,
 		'publicly_queryable'		=> false,
 		'show_in_nav_menus'			=> false,
+		'show_in_menu'					=> false,
 		'show_in_rest'					=> false,
 		'register_meta_box_cb'	=> 'planeta_add_metabox_team',
 		'supports'							=> array(
@@ -131,6 +132,14 @@ function planeta_register_post_type_team()
 	register_post_type('team', $args_teams);
 }
 add_action('init', 'planeta_register_post_type_team');
+
+//Add to Submenu
+add_submenu_page(
+	'planeta_welcome',
+	esc_html__('Team', 'planeta'),
+	esc_html__('Team', 'planeta'),
+	'manage_options',
+	'edit.php?post_type=team');
 
 add_filter('manage_team_posts_columns', 'planeta_team_columns');
 function planeta_team_columns($columns)

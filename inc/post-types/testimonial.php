@@ -168,10 +168,10 @@ function planeta_register_post_type_testimonial()
 	$args_testimonials = array(
 		'labels'								=> $labels_testimonials,
 		'public'								=> true,
-		'menu_icon'							=> 'dashicons-format-quote',
 		'exclude_from_search'		=> true,
 		'publicly_queryable'		=> false,
 		'show_in_nav_menus'			=> false,
+		'show_in_menu'					=> false,
 		'show_in_rest'					=> false,
 		'register_meta_box_cb'	=> 'planeta_add_metabox_testimonial',
 		'supports'							=> array(
@@ -181,6 +181,14 @@ function planeta_register_post_type_testimonial()
 	register_post_type('testimonial', $args_testimonials);
 }
 add_action('init', 'planeta_register_post_type_testimonial');
+
+//Add to Submenu
+add_submenu_page(
+	'planeta_welcome',
+	esc_html__('Testimonials', 'planeta'),
+	esc_html__('Testimonials', 'planeta'),
+	'manage_options',
+	'edit.php?post_type=testimonial');
 
 add_filter('manage_testimonial_posts_columns', 'planeta_testimonial_columns');
 function planeta_testimonial_columns($columns)

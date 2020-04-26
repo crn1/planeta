@@ -73,6 +73,12 @@ planeta_add_frontpage_section('tech', $tech);
 $contact = esc_html__('Contact Form', 'planeta');
 planeta_add_frontpage_section('contact', $contact);
 
+$pricing = esc_html__('Pricing', 'planeta');
+planeta_add_frontpage_section('price', $pricing);
+
+$features = esc_html__('Features', 'planeta');
+planeta_add_frontpage_section('feature', $feature);
+
 $generic_1 = esc_html__('Generic Sections #1', 'planeta');
 planeta_add_frontpage_section('generic-1', $generic_1);
 

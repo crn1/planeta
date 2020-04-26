@@ -86,11 +86,11 @@ function planeta_register_post_type_generic_template($index)
 	$args_generic = array(
 		'labels'								=> $labels_generic,
 		'public'								=> true,
-		'menu_icon'							=> 'dashicons-format-aside',
 		'exclude_from_search'		=> true,
 		'publicly_queryable'		=> false,
 		'show_in_nav_menus'			=> false,
 		'show_in_rest'					=> false,
+		'show_in_menu'					=> false,
 		'register_meta_box_cb'	=> "planeta_add_metabox_generic_${index}",
 		'supports'							=> array(
 			'title',
@@ -100,11 +100,36 @@ function planeta_register_post_type_generic_template($index)
 	);
 	register_post_type("generic-${index}", $args_generic);
 }
+
 function planeta_register_post_type_generic_1() { planeta_register_post_type_generic_template(1); }
 function planeta_register_post_type_generic_2() { planeta_register_post_type_generic_template(2); }
 function planeta_register_post_type_generic_3() { planeta_register_post_type_generic_template(3); }
 add_action('init', 'planeta_register_post_type_generic_1');
 add_action('init', 'planeta_register_post_type_generic_2');
 add_action('init', 'planeta_register_post_type_generic_3');
+
+//Add to Submenu
+add_submenu_page(
+	'planeta_welcome',
+	esc_html__('Generic Section #1', 'planeta'),
+	esc_html__('Generic Section #1', 'planeta'),
+	'manage_options',
+	'edit.php?post_type=generic-1');
+
+//Add to Submenu
+add_submenu_page(
+	'planeta_welcome',
+	esc_html__('Generic Section #2', 'planeta'),
+	esc_html__('Generic Section #2', 'planeta'),
+	'manage_options',
+	'edit.php?post_type=generic-2');
+
+//Add to Submenu
+add_submenu_page(
+	'planeta_welcome',
+	esc_html__('Generic Section #3', 'planeta'),
+	esc_html__('Generic Section #3', 'planeta'),
+	'manage_options',
+	'edit.php?post_type=generic-3');
 
 ?>

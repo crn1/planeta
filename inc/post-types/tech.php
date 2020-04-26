@@ -15,10 +15,10 @@ function planeta_register_post_type_tech()
 	$args_techs = array(
 		'labels'								=> $labels_techs,
 		'public'								=> true,
-		'menu_icon'							=> 'dashicons-lightbulb',
 		'exclude_from_search'		=> true,
 		'publicly_queryable'		=> false,
 		'show_in_nav_menus'			=> false,
+		'show_in_menu'					=> false,
 		'show_in_rest'					=> false,
 		'supports'							=> array(
 			'title',
@@ -28,6 +28,14 @@ function planeta_register_post_type_tech()
 	register_post_type('tech', $args_techs);
 }
 add_action('init', 'planeta_register_post_type_tech');
+
+//Add to Submenu
+add_submenu_page(
+	'planeta_welcome',
+	esc_html__('Tech Stack', 'planeta'),
+	esc_html__('Tech Stack', 'planeta'),
+	'manage_options',
+	'edit.php?post_type=tech');
 
 add_filter('manage_tech_posts_columns', 'planeta_tech_columns');
 function planeta_tech_columns($columns)

@@ -117,10 +117,10 @@ function planeta_register_post_type_project()
 	$args_projects = array(
 		'labels'								=> $labels_projects,
 		'public'								=> true,
-		'menu_icon'							=> 'dashicons-analytics',
 		'exclude_from_search'		=> true,
 		'publicly_queryable'		=> false,
 		'show_in_nav_menus'			=> false,
+		'show_in_menu'					=> false,
 		'show_in_rest'					=> false,
 		'register_meta_box_cb'	=> 'planeta_add_metabox_project',
 		'supports'							=> array(
@@ -130,6 +130,14 @@ function planeta_register_post_type_project()
 	register_post_type('project', $args_projects);
 }
 add_action('init', 'planeta_register_post_type_project');
+
+//Add to Submenu
+add_submenu_page(
+	'planeta_welcome',
+	esc_html__('Projects', 'planeta'),
+	esc_html__('Projects', 'planeta'),
+	'manage_options',
+	'edit.php?post_type=project');
 
 add_filter('manage_project_posts_columns', 'planeta_project_columns');
 function planeta_project_columns($columns)

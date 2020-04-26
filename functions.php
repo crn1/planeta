@@ -13,7 +13,21 @@ if(class_exists('Kirki'))
 require_once(get_template_directory() . '/welcome.php');
 function planeta_register_welcome_page() {
   // add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
-	add_menu_page('Planeta', 'Planeta', 'manage_options', 'planeta_welcome', 'planeta_get_welcome_page', 'dashicons-welcome-widgets-menus', 90);
+	add_menu_page(
+		'Planeta',
+		'Planeta',
+		'manage_options',
+		'planeta_welcome',
+		'planeta_get_welcome_page',
+		'dashicons-admin-site-alt', 2);
+
+	add_submenu_page(
+		'planeta_welcome',
+		'Welcome',
+		'Welcome',
+		'manage_options',
+		'planeta_welcome',
+		'planeta_get_welcome_page', 0);
 }
 
 add_action('admin_menu', 'planeta_register_welcome_page');
@@ -26,6 +40,8 @@ include_once get_theme_file_path('inc/post-types/gallery.php');
 include_once get_theme_file_path('inc/post-types/service.php');
 include_once get_theme_file_path('inc/post-types/team.php');
 include_once get_theme_file_path('inc/post-types/number.php');
+include_once get_theme_file_path('inc/post-types/feature.php');
+include_once get_theme_file_path('inc/post-types/price.php');
 include_once get_theme_file_path('inc/post-types/generic.php');
 
 //Register Contact Form

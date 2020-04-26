@@ -117,10 +117,10 @@ function planeta_register_post_type_service()
 	$args_services = array(
 		'labels'								=> $labels_services,
 		'public'								=> true,
-		'menu_icon'							=> 'dashicons-hammer',
 		'exclude_from_search'		=> true,
 		'publicly_queryable'		=> false,
 		'show_in_nav_menus'			=> false,
+		'show_in_menu'					=> false,
 		'show_in_rest'					=> false,
 		'register_meta_box_cb'	=> 'planeta_add_metabox_service',
 		'supports'							=> array(
@@ -130,6 +130,14 @@ function planeta_register_post_type_service()
 	register_post_type('service', $args_services);
 }
 add_action('init', 'planeta_register_post_type_service');
+
+//Add to Submenu
+add_submenu_page(
+	'planeta_welcome',
+	esc_html__('Services', 'planeta'),
+	esc_html__('Services', 'planeta'),
+	'manage_options',
+	'edit.php?post_type=service');
 
 add_filter('manage_service_posts_columns', 'planeta_service_columns');
 function planeta_service_columns($columns)

@@ -15,10 +15,10 @@ function planeta_register_post_type_gallery()
 	$args_gallerys = array(
 		'labels'								=> $labels_gallerys,
 		'public'								=> true,
-		'menu_icon'							=> 'dashicons-images-alt2',
 		'exclude_from_search'		=> true,
 		'publicly_queryable'		=> false,
 		'show_in_nav_menus'			=> false,
+		'show_in_menu'					=> false,
 		'show_in_rest'					=> false,
 		'supports'							=> array(
 			'thumbnail',
@@ -28,6 +28,14 @@ function planeta_register_post_type_gallery()
 	register_post_type('gallery', $args_gallerys);
 }
 add_action('init', 'planeta_register_post_type_gallery');
+
+//Add to Submenu
+add_submenu_page(
+	'planeta_welcome',
+	esc_html__('Gallery', 'planeta'),
+	esc_html__('Gallery', 'planeta'),
+	'manage_options',
+	'edit.php?post_type=gallery');
 
 add_filter('manage_gallery_posts_columns', 'planeta_gallery_columns');
 function planeta_gallery_columns($columns)

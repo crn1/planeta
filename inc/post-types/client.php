@@ -15,10 +15,10 @@ function planeta_register_post_type_client()
 	$args_clients = array(
 		'labels'								=> $labels_clients,
 		'public'								=> true,
-		'menu_icon'							=> 'dashicons-cart',
 		'exclude_from_search'		=> true,
 		'publicly_queryable'		=> false,
 		'show_in_nav_menus'			=> false,
+		'show_in_menu'					=> false,
 		'show_in_rest'					=> false,
 		'supports'							=> array(
 			'title',
@@ -28,6 +28,14 @@ function planeta_register_post_type_client()
 	register_post_type('client', $args_clients);
 }
 add_action('init', 'planeta_register_post_type_client');
+
+//Add to Submenu
+add_submenu_page(
+	'planeta_welcome',
+	esc_html__('Clients', 'planeta'),
+	esc_html__('Clients', 'planeta'),
+	'manage_options',
+	'edit.php?post_type=client');
 
 add_filter('manage_client_posts_columns', 'planeta_client_columns');
 function planeta_client_columns($columns)
