@@ -52,25 +52,34 @@ planeta_add_frontpage_section('testimonial', $testimonials);
 $projects = esc_html__('Projects', 'planeta');
 planeta_add_frontpage_section('project', $projects);
 
-$posts = esc_html__('Numbers', 'planeta');
-planeta_add_frontpage_section('number', $posts);
+$numbers = esc_html__('Numbers', 'planeta');
+planeta_add_frontpage_section('number', $numbers);
 
-$projects = esc_html__('Services', 'planeta');
-planeta_add_frontpage_section('service', $projects);
+$services = esc_html__('Services', 'planeta');
+planeta_add_frontpage_section('service', $services);
 
-$posts = esc_html__('Gallery', 'planeta');
-planeta_add_frontpage_section('gallery', $posts);
+$gallery = esc_html__('Gallery', 'planeta');
+planeta_add_frontpage_section('gallery', $gallery);
 
-$testimonials = esc_html__('Team', 'planeta');
-planeta_add_frontpage_section('team', $testimonials);
+$team = esc_html__('Team', 'planeta');
+planeta_add_frontpage_section('team', $team);
 
-$projects = esc_html__('Clients', 'planeta');
-planeta_add_frontpage_section('client', $projects);
+$clients = esc_html__('Clients', 'planeta');
+planeta_add_frontpage_section('client', $clients);
 
-$projects = esc_html__('Tech Stack', 'planeta');
-planeta_add_frontpage_section('tech', $projects);
+$tech = esc_html__('Tech Stack', 'planeta');
+planeta_add_frontpage_section('tech', $tech);
 
-$projects = esc_html__('Contact Form', 'planeta');
-planeta_add_frontpage_section('contact', $projects);
+$contact = esc_html__('Contact Form', 'planeta');
+planeta_add_frontpage_section('contact', $contact);
+
+$generic_1 = esc_html__('Generic Sections #1', 'planeta');
+planeta_add_frontpage_section('generic-1', $generic_1);
+
+$generic_2 = esc_html__('Generic Sections #2', 'planeta');
+planeta_add_frontpage_section('generic-2', $generic_2);
+
+$generic_3 = esc_html__('Generic Sections #3', 'planeta');
+planeta_add_frontpage_section('generic-3', $generic_3);
 
 ?>

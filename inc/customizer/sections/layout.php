@@ -22,6 +22,9 @@ Kirki::add_field('planeta_config', array(
 		'client'					=> esc_html__('Clients', 'planeta'),
 		'tech'						=> esc_html__('Tech Stack', 'planeta'),
 		'contact'					=> esc_html__('Contact Form', 'planeta'),
+		'generic-1'				=> esc_html__('Generic Sections #1', 'planeta'),
+		'generic-2'				=> esc_html__('Generic Sections #2', 'planeta'),
+		'generic-3'				=> esc_html__('Generic Sections #3', 'planeta'),
 	),
 ));
 

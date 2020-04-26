@@ -43,7 +43,11 @@
 			<?php echo $info_aos; ?>
 			<?php echo $info_lax; ?>>
 
-		<?php get_template_part("template-parts/preset/${section}"); ?>
+		<?php if(strpos($section, 'generic-') === 0): ?>
+			<?php get_template_part('template-parts/preset/generic'); ?>
+		<?php else: ?>
+			<?php get_template_part("template-parts/preset/${section}"); ?>
+		<?php endif; ?>
 
 	</div>
 
