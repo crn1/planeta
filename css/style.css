@@ -90,8 +90,7 @@ table th, table td {
   border-color: black;
 }
 blockquote {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 blockquote:before, blockquote:after {
   display: block;
