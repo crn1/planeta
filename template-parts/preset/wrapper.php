@@ -11,7 +11,7 @@
 <div class='card card-<?php echo $section; ?>'>
 
 <?php
-	if(!in_array($section, array('number', 'testimonial'))):
+	if(!in_array($section, array('number', 'testimonial', 'price'))):
 		$image_src = get_the_post_thumbnail_url();
 		$image_id = get_post_thumbnail_id(get_the_ID());
 		$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);

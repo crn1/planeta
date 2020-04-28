@@ -77,7 +77,7 @@ section {
 		}
 
 		.number-of-what {
-			font-size: 1rem;
+			font-size: $variant-normal;
 		}
 	}
 }
@@ -178,11 +178,62 @@ section {
 	}
 
 	.testimonial-author-name {
-		font-size: 1.2rem;
+		font-size: $variant-mark;
+		font-weight: bold;
 	}
 
 	.testimonial-author-description {
-		font-size: 0.75rem;
+		font-size: $variant-small;
 		font-style: oblique;
+	}
+}
+
+.card-price {
+	@include flexContainer($direction: column);
+
+	.price-image {
+		width: unset;
+	}
+
+	.price-title {
+		font-size: $variant-mark;
+		font-weight: bold;
+	}
+
+	.price-tag {
+		word-break: break-all;
+		font-size: $variant-large;
+		line-height: 1;
+		padding-bottom: $spacing-text;
+		border-bottom: 2px solid;
+
+		& > span {
+			display: block;
+		}
+
+		& > span:not(:last-child)
+		{
+			padding-bottom: $spacing-text;
+		}
+	}
+
+	.price-title,
+	.price-tag,
+	.price-before,
+	.price-tag,
+	.price-after,
+	.card-url {
+		text-align: center;
+	}
+
+	.price-before,
+	.price-after {
+		display: block;
+		font-size: $variant-small;
+		font-weight: normal;
+	}
+
+	.price-highlight {
+		font-size: $variant-extra-large;
 	}
 }

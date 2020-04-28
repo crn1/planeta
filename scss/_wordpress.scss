@@ -211,3 +211,28 @@ body > *:not(#wpadminbar)
 .sticky {
 	position: sticky;
 }
+
+ol {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	counter-reset: planeta-counter;
+
+	li {
+		counter-increment: planeta-counter;
+		margin-bottom: $spacing-text;
+
+		&::before {
+			content: counter(planeta-counter);
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 2rem;
+			height: 2rem;
+			border: 2px solid;
+			border-radius: 50%;
+			margin-right: $spacing-text;
+			transition: all $transition-fast;
+		}
+	}
+}

@@ -163,6 +163,28 @@ body > *:not(#wpadminbar) form:not(#search-form):not(#protected-post-form) input
 .sticky {
   position: sticky;
 }
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  counter-reset: planeta-counter;
+}
+ol li {
+  counter-increment: planeta-counter;
+  margin-bottom: 0.5rem;
+}
+ol li::before {
+  content: counter(planeta-counter);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  transition: all 0.27s;
+}
 #search-form {
   position: relative;
   z-index: 100;
@@ -705,10 +727,49 @@ section h1, section h2, section h3, section h4, section h5, section h6, section 
 }
 .card-testimonial .testimonial-author-name {
   font-size: 1.2rem;
+  font-weight: bold;
 }
 .card-testimonial .testimonial-author-description {
   font-size: 0.75rem;
   font-style: oblique;
+}
+.card-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.card-price .price-image {
+  width: unset;
+}
+.card-price .price-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.card-price .price-tag {
+  word-break: break-all;
+  font-size: 3rem;
+  line-height: 1;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid;
+}
+.card-price .price-tag > span {
+  display: block;
+}
+.card-price .price-tag > span:not(:last-child) {
+  padding-bottom: 0.5rem;
+}
+.card-price .price-title, .card-price .price-tag, .card-price .price-before, .card-price .price-tag, .card-price .price-after, .card-price .card-url {
+  text-align: center;
+}
+.card-price .price-before, .card-price .price-after {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+.card-price .price-highlight {
+  font-size: 4rem;
 }
 #comments h3.comments-title {
   margin-bottom: 0;

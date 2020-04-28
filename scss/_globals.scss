@@ -1,14 +1,22 @@
 //Spacing
 $spacing-text:					0.5rem;
-$spacing-inside-group:	1rem;
+$spacing-inside-group:		1rem;
 $spacing-groups:				2.5rem;
-$spacing-sections:			5rem;
+$spacing-sections:				5rem;
 
 //Transitions
-$transition-fastest: 0.17s;
-$transition-fast:		 0.27s;
-$transition-slow:		 1.17s;
-$transition-slowest: 2.17s;
+$transition-fastest:		 0.17s;
+$transition-fast:				 0.27s;
+$transition-slow:				 1.17s;
+$transition-slowest:		 2.17s;
+
+//Font-Sizes
+$variant-extra-small:		0.5rem;
+$variant-small:					0.75rem;
+$variant-normal:					1rem;
+$variant-mark:					1.2rem;
+$variant-large:						3rem;
+$variant-extra-large:			4rem;
 
 //Z-Indexes
 $z-global-video:					10;
