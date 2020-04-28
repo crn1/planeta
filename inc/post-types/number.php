@@ -6,10 +6,18 @@ function planeta_metabox_number_display()
 	$number_value = get_post_meta($post->ID, 'number_value', true);
 	$number_of_what = get_post_meta($post->ID, 'number_of_what', true);
 	$number_description = get_post_meta($post->ID, 'number_description', true);
+	$number_url = get_post_meta($post->ID, 'number_url', true);
+	$number_url_text = get_post_meta($post->ID, 'number_url_text', true);
+	if(empty($number_url_text))
+	{
+		$number_url_text = esc_html__('Read More...', 'planeta');
+	}
 
-	$number = esc_html__('Number', 'planeta');
+	$number = esc_html__('Number & Unit', 'planeta');
 	$of_what = esc_html__('Of What?', 'planeta');
 	$description = esc_html__('Description', 'planeta');
+	$url = esc_html__('Button URL', 'planeta');
+	$url_text = esc_html__('Button URL Text', 'planeta');
 ?>
 	<fieldset>
 		<legend class='screen-reader-text'>Number Information</legend>
@@ -22,7 +30,7 @@ function planeta_metabox_number_display()
 					<input
 						required
 						size='30'
-						type='number'
+						type='text'
 						name='number_value'
 						class='widefat'
 						value='<?php echo $number_value; ?>'
@@ -35,6 +43,7 @@ function planeta_metabox_number_display()
 				</td>
 				<td>
 					<input
+						required
 						size='30'
 						type='text'
 						name='number_of_what'
@@ -55,6 +64,34 @@ function planeta_metabox_number_display()
 							'quicktags'			=> false,
 							'teeny'					=> true,
 						)); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $url; ?>
+				</td>
+				<td>
+					<input
+						size='30'
+						type='url'
+						name='number_url'
+						class='widefat'
+						value='<?php echo $number_url; ?>'
+					/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $url_text; ?>
+				</td>
+				<td>
+					<input
+						size='30'
+						type='text'
+						name='number_url_text'
+						class='widefat'
+						value='<?php echo $number_url_text; ?>'
+					/>
 				</td>
 			</tr>
 		</table>
@@ -98,6 +135,14 @@ function planeta_metabox_number_save($post_id)
 		{
 			update_post_meta($post_id, 'number_description', $_POST['number_description']);
 		}
+		if(array_key_exists('number_url', $_POST))
+		{
+			update_post_meta($post_id, 'number_url', $_POST['number_url']);
+		}
+		if(array_key_exists('number_url_text', $_POST))
+		{
+			update_post_meta($post_id, 'number_url_text', $_POST['number_url_text']);
+		}
 	}
 }
 add_action('save_post', 'planeta_metabox_number_save');
@@ -113,6 +158,7 @@ function planeta_register_post_type_number()
 		'search_items'					=> esc_html__('Search Items', 'planeta'),
 		'not_found'							=> esc_html__('No numbers found.', 'planeta'),
 		'not_found_in_trash'		=> esc_html__('No numbers found in Trash.', 'planeta'),
+		'item_updated'					=> esc_html__('Number updated.', 'planeta'),
 	);
 	$args_numbers = array(
 		'labels'								=> $labels_numbers,

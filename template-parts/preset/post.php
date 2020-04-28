@@ -1,25 +1,29 @@
-<h3 class='title primary-text'>
-	<?php the_title(); ?>
+<?php
+$title = get_the_title();
+if(!empty($title)): ?>
+<h3 class='card-title'>
+	<?php echo $title; ?>
+	<?php
+		set_query_var('print_category', false);
+		get_template_part('template-parts/content/post-info'); ?>
 </h3>
+<?php endif; ?>
 
 <?php
-	set_query_var('print_category', false);
-	get_template_part('template-parts/content/post-info'); ?>
-
-<p class='description secondary-text'>
-	<?php the_excerpt(); ?>
+$excerpt = get_the_excerpt();
+if(!empty($excerpt)): ?>
+<p>
+	<?php echo $excerpt; ?>
 </p>
+<?php endif; ?>
 
-<?php
-	$hover_class = get_theme_mod('typography_button_link_hover', 'none');
-	$url_tab = $item['url_tab'] ? '_blank' : ''; ?>
+<?php $hover_class = get_query_var('hover_class', 'hover-none'); ?>
 
-<p class='url'>
-	<span class='relative hover-<?php echo $hover_class; ?>'>
+<p class='card-url'>
+	<span class='relative <?php echo $hover_class; ?>'>
 		<a
 				class='button-link'
-				href='<?php echo the_permalink(); ?>'
-				target='<?php echo $url_tab; ?>'>
+				href='<?php echo the_permalink(); ?>'>
 
 			<?php echo esc_html__('Read More...', 'planeta'); ?>
 

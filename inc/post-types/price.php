@@ -93,6 +93,7 @@ function planeta_register_post_type_price()
 		'search_items'					=> esc_html__('Search Items', 'planeta'),
 		'not_found'							=> esc_html__('No prices found.', 'planeta'),
 		'not_found_in_trash'		=> esc_html__('No prices found in Trash.', 'planeta'),
+		'item_updated'					=> esc_html__('Price updated.', 'planeta'),
 	);
 	$args_prices = array(
 		'labels'								=> $labels_prices,

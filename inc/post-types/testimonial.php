@@ -164,6 +164,7 @@ function planeta_register_post_type_testimonial()
 		'search_items'					=> esc_html__('Search Items', 'planeta'),
 		'not_found'							=> esc_html__('No testimonials found.', 'planeta'),
 		'not_found_in_trash'		=> esc_html__('No testimonials found in Trash.', 'planeta'),
+		'item_updated'					=> esc_html__('Testimonial updated.', 'planeta'),
 	);
 	$args_testimonials = array(
 		'labels'								=> $labels_testimonials,

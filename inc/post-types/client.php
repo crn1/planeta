@@ -11,6 +11,7 @@ function planeta_register_post_type_client()
 		'search_items'					=> esc_html__('Search Items', 'planeta'),
 		'not_found'							=> esc_html__('No clients found.', 'planeta'),
 		'not_found_in_trash'		=> esc_html__('No clients found in Trash.', 'planeta'),
+		'item_updated'					=> esc_html__('Client updated.', 'planeta'),
 	);
 	$args_clients = array(
 		'labels'								=> $labels_clients,

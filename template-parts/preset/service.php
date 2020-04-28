@@ -6,15 +6,20 @@
 	$hover_class = get_query_var('hover_class', 'hover-none');
 ?>
 
-<h3 class='service-title'>
+<?php if(!empty($service_title)): ?>
+<h3 class='service-title card-title'>
 	<?php echo $service_title; ?>
 </h3>
+<?php endif; ?>
 
-<p class='service-description'>
+<?php if(!empty($service_description)): ?>
+<p>
 	<?php echo $service_description; ?>
 </p>
+<?php endif; ?>
 
-<p class='service-url url'>
+<?php if(!empty($service_url)): ?>
+<p class='service-url card-url'>
 	<span class='relative <?php echo $hover_class; ?>'>
 		<a
 				class='button-link'
@@ -25,3 +30,4 @@
 		</a>
 	</span>
 </p>
+<?php endif; ?>

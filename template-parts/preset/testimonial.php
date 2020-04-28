@@ -5,18 +5,44 @@
 	$testimonial_full = get_post_meta($post->ID, 'testimonial_full', true);
 ?>
 
-<div class='testimonial-author-container'>
-	<h3 class='testimonial-author-name'>
-		<?php echo $author_name; ?>
-	</h3>
+<?php if(!empty($testimonial_excerpt)): ?>
+<h3 class='card-title testimonial-excerpt'>
+	<?php echo $testimonial_excerpt; ?>
+</h3>
+<?php endif; ?>
 
-	<p class='testimonial-author-description'>
-		<?php echo $author_about; ?>
-	</p>
-</div>
-
-<p class='testimonial-excerpt'><?php echo $testimonial_excerpt; ?></p>
-
+<?php if(!empty($testimonial_full)): ?>
 <p class='testimonial-full'>
 	<?php echo $testimonial_full; ?>
 </p>
+<?php endif; ?>
+
+<div class='testimonial-author-container'>
+
+<?php
+	$image_src = get_the_post_thumbnail_url();
+	$image_id = get_post_thumbnail_id(get_the_ID());
+	$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
+	if(!empty($image_src)): ?>
+		<img
+			src='<?php echo $image_src; ?>'
+			alt='<?php echo $image_alt; ?>'
+			class='testimonial-avatar'
+		/>
+	<?php endif; ?>
+
+	<span class='testimonial-author-info'>
+		<?php if(!empty($author_name)): ?>
+		<p class='testimonial-author-name'>
+			<?php echo $author_name; ?>
+		</p>
+		<?php endif; ?>
+
+		<?php if(!empty($author_about)): ?>
+		<p class='testimonial-author-description'>
+			<?php echo $author_about; ?>
+		</p>
+		<?php endif; ?>
+	</span>
+</div>

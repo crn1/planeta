@@ -44,6 +44,8 @@ function planeta_metabox_generic_template($index)
 function planeta_add_metabox_generic_1() { planeta_metabox_generic_template(1); }
 function planeta_add_metabox_generic_2() { planeta_metabox_generic_template(2); }
 function planeta_add_metabox_generic_3() { planeta_metabox_generic_template(3); }
+function planeta_add_metabox_generic_4() { planeta_metabox_generic_template(4); }
+function planeta_add_metabox_generic_5() { planeta_metabox_generic_template(5); }
 
 function planeta_metabox_generic_save_template($post_id, $index)
 {
@@ -67,9 +69,13 @@ function planeta_metabox_generic_save_template($post_id, $index)
 function planeta_metabox_generic_1_save($post_id) { planeta_metabox_generic_save_template($post_id, 1); }
 function planeta_metabox_generic_2_save($post_id) { planeta_metabox_generic_save_template($post_id, 2); }
 function planeta_metabox_generic_3_save($post_id) { planeta_metabox_generic_save_template($post_id, 3); }
+function planeta_metabox_generic_4_save($post_id) { planeta_metabox_generic_save_template($post_id, 4); }
+function planeta_metabox_generic_5_save($post_id) { planeta_metabox_generic_save_template($post_id, 5); }
 add_action('save_post', "planeta_metabox_generic_1_save");
 add_action('save_post', "planeta_metabox_generic_2_save");
 add_action('save_post', "planeta_metabox_generic_3_save");
+add_action('save_post', "planeta_metabox_generic_4_save");
+add_action('save_post', "planeta_metabox_generic_5_save");
 
 function planeta_register_post_type_generic_template($index)
 {
@@ -82,6 +88,7 @@ function planeta_register_post_type_generic_template($index)
 		'search_items'					=> esc_html__('Search Items', 'planeta'),
 		'not_found'							=> esc_html__('No sections found.', 'planeta'),
 		'not_found_in_trash'		=> esc_html__('No sections found in Trash.', 'planeta'),
+		'item_updated'					=> esc_html__('Section updated.', 'planeta'),
 	);
 	$args_generic = array(
 		'labels'								=> $labels_generic,
@@ -104,9 +111,13 @@ function planeta_register_post_type_generic_template($index)
 function planeta_register_post_type_generic_1() { planeta_register_post_type_generic_template(1); }
 function planeta_register_post_type_generic_2() { planeta_register_post_type_generic_template(2); }
 function planeta_register_post_type_generic_3() { planeta_register_post_type_generic_template(3); }
+function planeta_register_post_type_generic_4() { planeta_register_post_type_generic_template(4); }
+function planeta_register_post_type_generic_5() { planeta_register_post_type_generic_template(5); }
 add_action('init', 'planeta_register_post_type_generic_1');
 add_action('init', 'planeta_register_post_type_generic_2');
 add_action('init', 'planeta_register_post_type_generic_3');
+add_action('init', 'planeta_register_post_type_generic_4');
+add_action('init', 'planeta_register_post_type_generic_5');
 
 //Add to Submenu
 add_submenu_page(
@@ -131,5 +142,21 @@ add_submenu_page(
 	esc_html__('Generic Section #3', 'planeta'),
 	'manage_options',
 	'edit.php?post_type=generic-3');
+
+//Add to Submenu
+add_submenu_page(
+	'planeta_welcome',
+	esc_html__('Generic Section #4', 'planeta'),
+	esc_html__('Generic Section #4', 'planeta'),
+	'manage_options',
+	'edit.php?post_type=generic-4');
+
+//Add to Submenu
+add_submenu_page(
+	'planeta_welcome',
+	esc_html__('Generic Section #5', 'planeta'),
+	esc_html__('Generic Section #5', 'planeta'),
+	'manage_options',
+	'edit.php?post_type=generic-5');
 
 ?>

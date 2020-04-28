@@ -54,3 +54,8 @@
 #welcome-container > .docs-container > .docs-notice {
 	font-style: oblique;
 }
+
+/* Fix Kirki bug */
+#accordion-section-dummy_section {
+	display: none !important;
+}

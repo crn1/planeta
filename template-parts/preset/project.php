@@ -14,7 +14,7 @@
 	<?php echo $description; ?>
 </p>
 
-<p class='project-url url'>
+<p class='project-url card-url'>
 	<span class='relative <?php echo $hover_class; ?>'>
 		<a
 				class='button-link'

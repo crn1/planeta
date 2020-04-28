@@ -11,6 +11,7 @@ function planeta_register_post_type_feature()
 		'search_items'					=> esc_html__('Search Items', 'planeta'),
 		'not_found'							=> esc_html__('No features found.', 'planeta'),
 		'not_found_in_trash'		=> esc_html__('No features found in Trash.', 'planeta'),
+		'item_updated'					=> esc_html__('Feature updated.', 'planeta'),
 	);
 	$args_features = array(
 		'labels'								=> $labels_features,

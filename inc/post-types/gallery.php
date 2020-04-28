@@ -11,6 +11,7 @@ function planeta_register_post_type_gallery()
 		'search_items'					=> esc_html__('Search Items', 'planeta'),
 		'not_found'							=> esc_html__('No images found.', 'planeta'),
 		'not_found_in_trash'		=> esc_html__('No iamges found in Trash.', 'planeta'),
+		'item_updated'					=> esc_html__('Image updated.', 'planeta'),
 	);
 	$args_gallerys = array(
 		'labels'								=> $labels_gallerys,

@@ -141,3 +141,100 @@
 		}
 	}
 }
+
+#top-menu {
+	@include flexContainer($direction: column);
+	position: fixed;
+	z-index: $z-global-menu-overlay;
+	overflow: hidden;
+	background-color: #FFFFFF;
+	transition: all $transition-fastest ease-in;
+	width: 100vw;
+	height: 100vh;
+
+	& .top-menu-item {
+		text-align: center;
+		display: inline-block !important;
+	}
+
+	& > .top-menu-item:not(:last-child) {
+		margin-bottom: $spacing-groups;
+	}
+
+	& > .social-container {
+		@include flexContainer();
+		& .top-menu-item:not(:last-child) {
+			margin-right: $spacing-inside-group;
+		}
+	}
+
+	&.menu {
+		&-up {
+			top: -100vh;
+			left: 0;
+			&.is-active {
+				top: 0;
+			}
+		}
+
+		&-down {
+			top: 100vh;
+			left: 0;
+			&.is-active {
+				top: 0;
+			}
+		}
+
+		&-left {
+			top: 0;
+			left: -100vw;
+			&.is-active {
+				left: 0;
+			}
+		}
+
+		&-right {
+			top: 0;
+			left: 100vw;
+			&.is-active {
+				left: 0;
+			}
+		}
+	}
+}
+
+#main-header {
+	@include flexContainer($justify: space-between);
+	box-sizing: border-box;
+	margin: 16px 0;
+	padding: 0 16px;
+	z-index: $z-global-header;
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+
+	#logo-container {
+		margin: 0 !important;
+	}
+}
+
+#menu-button {
+	display: flex;
+	padding: 0.5rem;
+}
+
+#scroll-top-button {
+	z-index: $z-scroll-top-button;
+	position: fixed;
+	margin-right: 16px;
+	margin-bottom: 16px;
+	right: 0;
+	bottom: 0;
+	cursor: pointer;
+	display: none;
+
+	& > i {
+		font-size: 48px;
+	}
+}

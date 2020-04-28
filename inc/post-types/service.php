@@ -113,6 +113,7 @@ function planeta_register_post_type_service()
 		'search_items'					=> esc_html__('Search Items', 'planeta'),
 		'not_found'							=> esc_html__('No services found.', 'planeta'),
 		'not_found_in_trash'		=> esc_html__('No services found in Trash.', 'planeta'),
+		'item_updated'					=> esc_html__('Service updated.', 'planeta'),
 	);
 	$args_services = array(
 		'labels'								=> $labels_services,

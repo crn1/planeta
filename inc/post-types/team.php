@@ -62,15 +62,121 @@ function planeta_metabox_team_display()
 	</fieldset>
 <?php }
 
+function planeta_metabox_team_social_display()
+{
+	global $post;
+	$member_social_facebook = get_post_meta($post->ID, 'member_social_facebook', true);
+	$member_social_twitter = get_post_meta($post->ID, 'member_social_twitter', true);
+	$member_social_instagram = get_post_meta($post->ID, 'member_social_instagram', true);
+	$member_social_linkedin = get_post_meta($post->ID, 'member_social_linkedin', true);
+	$member_social_skype = get_post_meta($post->ID, 'member_social_skype', true);
+	$member_social_github = get_post_meta($post->ID, 'member_social_github', true);
+
+	$member_social_info = esc_html__('Member Social Media', 'planeta');
+
+?>
+
+	<fieldset>
+	<legend class='screen-reader-text'>
+		<?php echo $member_social_info; ?>
+	</legend>
+		<table class='form-table'>
+			<tr>
+				<td class='first'>Facebook</td>
+				<td>
+					<input
+						size='30'
+						type='url'
+						name='member_social_facebook'
+						class='widefat'
+						value='<?php echo $member_social_facebook; ?>'
+					/>
+				</td>
+			</tr>
+			<tr>
+				<td class='first'>Twitter</td>
+				<td>
+					<input
+						size='30'
+						type='url'
+						name='member_social_twitter'
+						class='widefat'
+						value='<?php echo $member_social_twitter; ?>'
+					/>
+				</td>
+			</tr>
+			<tr>
+				<td class='first'>Instagram</td>
+				<td>
+					<input
+						size='30'
+						type='url'
+						name='member_social_instagram'
+						class='widefat'
+						value='<?php echo $member_social_instagram; ?>'
+					/>
+				</td>
+			</tr>
+			<tr>
+				<td class='first'>LinkedIn</td>
+				<td>
+					<input
+						size='30'
+						type='url'
+						name='member_social_linkedin'
+						class='widefat'
+						value='<?php echo $member_social_linkedin; ?>'
+					/>
+				</td>
+			</tr>
+			<tr>
+				<td class='first'>Skype</td>
+				<td>
+					<input
+						size='30'
+						type='url'
+						name='member_social_skype'
+						class='widefat'
+						value='<?php echo $member_social_skype; ?>'
+					/>
+				</td>
+			</tr>
+			<tr>
+				<td class='first'>GitHub</td>
+				<td>
+					<input
+						size='30'
+						type='url'
+						name='member_social_github'
+						class='widefat'
+						value='<?php echo $member_social_github; ?>'
+					/>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+
+<?php
+}
+
+
 function planeta_add_metabox_team()
 {
 	add_meta_box(
 		'planeta_metabox_team',
-		'Team Information',
+		esc_html__('Member Information', 'planeta'),
 		'planeta_metabox_team_display',
 		'team',
 		'advanced',
 		'high'
+	);
+	add_meta_box(
+		'planeta_metabox_team_social',
+		esc_html__('Member Social Media', 'planeta'),
+		'planeta_metabox_team_social_display',
+		'team',
+		'advanced',
+		'low'
 	);
 }
 
@@ -99,6 +205,30 @@ function planeta_metabox_team_save($post_id)
 		{
 			update_post_meta($post_id, 'member_description', $_POST['member_description']);
 		}
+		if(array_key_exists('member_social_facebook', $_POST))
+		{
+			update_post_meta($post_id, 'member_social_facebook', $_POST['member_social_facebook']);
+		}
+		if(array_key_exists('member_social_twitter', $_POST))
+		{
+			update_post_meta($post_id, 'member_social_twitter', $_POST['member_social_twitter']);
+		}
+		if(array_key_exists('member_social_instagram', $_POST))
+		{
+			update_post_meta($post_id, 'member_social_instagram', $_POST['member_social_instagram']);
+		}
+		if(array_key_exists('member_social_linkedin', $_POST))
+		{
+			update_post_meta($post_id, 'member_social_linkedin', $_POST['member_social_linkedin']);
+		}
+		if(array_key_exists('member_social_skype', $_POST))
+		{
+			update_post_meta($post_id, 'member_social_skype', $_POST['member_social_skype']);
+		}
+		if(array_key_exists('member_social_github', $_POST))
+		{
+			update_post_meta($post_id, 'member_social_github', $_POST['member_social_github']);
+		}
 	}
 }
 add_action('save_post', 'planeta_metabox_team_save');
@@ -114,6 +244,7 @@ function planeta_register_post_type_team()
 		'search_items'					=> esc_html__('Search Items', 'planeta'),
 		'not_found'							=> esc_html__('No members found.', 'planeta'),
 		'not_found_in_trash'		=> esc_html__('No members found in Trash.', 'planeta'),
+		'item_updated'					=> esc_html__('Member updated.', 'planeta'),
 	);
 	$args_teams = array(
 		'labels'								=> $labels_teams,

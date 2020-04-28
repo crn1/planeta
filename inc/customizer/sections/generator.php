@@ -1,9 +1,19 @@
 <?php
 
-require_once(get_template_directory() . '/inc/customizer/sections/inside-layout.php');
-require_once(get_template_directory() . '/inc/customizer/sections/heading.php');
-require_once(get_template_directory() . '/inc/customizer/sections/buttons.php');
-require_once(get_template_directory() . '/inc/customizer/sections/appearance.php');
+//Adding dummy section and later hiding it because of Kirki bug
+Kirki::add_section('dummy_section', array(
+	'title' 		=> esc_html__(' ', 'planeta'),
+	'panel' 		=> 'sections_panel',
+));
+
+Kirki::add_field('planeta_config', array(
+	'type'					=> 'custom',
+	'label'					=> esc_html__(' ', 'planeta'),
+	'section'				=> 'dummy_section',
+	'settings'			=> 'dummy_setting',
+	'default'				=> ' ',
+));
+// End of adding dummy section
 
 function planeta_add_frontpage_section($name, $title)
 {
@@ -17,14 +27,12 @@ function planeta_add_frontpage_section($name, $title)
 	planeta_add_section_buttons($name);
 	planeta_add_section_appearance($name);
 
-	require_once(get_template_directory() . '/inc/customizer/video-background.php');
 	planeta_add_video_background(
 		$section 		= $name,
 		$panel 			= "${name}_panel",
 		$bg_output 	= "section[data-section-id='${name}'] .background-overlay"
 	);
 
-	require_once(get_template_directory() . '/inc/customizer/shape.php');
 	planeta_add_shape(array(
 		'title'					=> 'Background Shape',
 		'section'				=> $name,
@@ -33,7 +41,7 @@ function planeta_add_frontpage_section($name, $title)
 			"section[data-section-id='${name}'] .background-overlay",
 			"section[data-section-id='${name}'] .video-background",
 		),
-		'outside_output'	=> "section[data-section-id='${name}']",
+	'outside_output'	=> "section[data-section-id='${name}']",
 	));
 
 	planeta_add_shape(array(
@@ -46,8 +54,8 @@ function planeta_add_frontpage_section($name, $title)
 $posts = esc_html__('Posts', 'planeta');
 planeta_add_frontpage_section('post', $posts);
 
-$testimonials = esc_html__('Testimonials', 'planeta');
-planeta_add_frontpage_section('testimonial', $testimonials);
+//$testimonials = esc_html__('Testimonials', 'planeta');
+//planeta_add_frontpage_section('testimonial', $testimonials);
 
 $projects = esc_html__('Projects', 'planeta');
 planeta_add_frontpage_section('project', $projects);
@@ -77,7 +85,7 @@ $pricing = esc_html__('Pricing', 'planeta');
 planeta_add_frontpage_section('price', $pricing);
 
 $features = esc_html__('Features', 'planeta');
-planeta_add_frontpage_section('feature', $feature);
+planeta_add_frontpage_section('feature', $features);
 
 $generic_1 = esc_html__('Generic Sections #1', 'planeta');
 planeta_add_frontpage_section('generic-1', $generic_1);
@@ -87,5 +95,11 @@ planeta_add_frontpage_section('generic-2', $generic_2);
 
 $generic_3 = esc_html__('Generic Sections #3', 'planeta');
 planeta_add_frontpage_section('generic-3', $generic_3);
+
+$generic_4 = esc_html__('Generic Sections #4', 'planeta');
+planeta_add_frontpage_section('generic-4', $generic_4);
+
+$generic_5 = esc_html__('Generic Sections #5', 'planeta');
+planeta_add_frontpage_section('generic-5', $generic_5);
 
 ?>

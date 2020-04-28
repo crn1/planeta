@@ -113,6 +113,7 @@ function planeta_register_post_type_project()
 		'search_items'					=> esc_html__('Search Items', 'planeta'),
 		'not_found'							=> esc_html__('No projects found.', 'planeta'),
 		'not_found_in_trash'		=> esc_html__('No projects found in Trash.', 'planeta'),
+		'item_updated'					=> esc_html__('Project updated.', 'planeta'),
 	);
 	$args_projects = array(
 		'labels'								=> $labels_projects,

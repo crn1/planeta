@@ -250,13 +250,17 @@ Kirki::add_field('planeta_config', array(
 Kirki::add_field('planeta_config', array(
 	'type'			=> 'toggle',
 	'settings'	=> 'primary_color_content',
-	'label'			=> esc_html__('Enable on Post/Form Content', 'planeta'),
+	'label'			=> esc_html__('Enable on Content', 'planeta'),
 	'section'		=> 'primary_color_section',
 	'default'		=> true,
 	'output'		=> array(
 		array(
 			'element'					=> array(
 				'body > *:not(#wpadminbar) a:not(.button-link)',
+				'.card-number .number-value',
+				'.card-image',
+				'.card-testimonial .testimonial-excerpt::before',
+				'.card-testimonial .testimonial-excerpt::after',
 			),
 			'property'				=> 'color',
 			'value_pattern' 	=> 'primary_color !important',
@@ -267,8 +271,8 @@ Kirki::add_field('planeta_config', array(
 		),
 		array(
 			'element'					=> array(
-				'body > *:not(#wpadminbar) blockquote:before',
-				'body > *:not(#wpadminbar) blockquote:after',
+				'body > *:not(#wpadminbar) blockquote::before',
+				'body > *:not(#wpadminbar) blockquote::after',
 			),
 			'property'				=> 'background-color',
 			'value_pattern' 	=> 'primary_color !important',
@@ -281,6 +285,8 @@ Kirki::add_field('planeta_config', array(
 			'element'					=> array(
 				'.post-page-numbers:hover',
 				'.post-page-numbers.current',
+				'.card-number .number-container',
+				'.card-testimonial .testimonial-excerpt',
 			),
 			'property'				=> 'border-color',
 			'value_pattern' 	=> 'primary_color !important',

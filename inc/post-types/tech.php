@@ -11,6 +11,7 @@ function planeta_register_post_type_tech()
 		'search_items'					=> esc_html__('Search Items', 'planeta'),
 		'not_found'							=> esc_html__('No items found.', 'planeta'),
 		'not_found_in_trash'		=> esc_html__('No items found in Trash.', 'planeta'),
+		'item_updated'					=> esc_html__('Item updated.', 'planeta'),
 	);
 	$args_techs = array(
 		'labels'								=> $labels_techs,

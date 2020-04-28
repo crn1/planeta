@@ -2,7 +2,7 @@
 
 Kirki::add_section('sections_layout', array(
 	'title'       => esc_html__('Frontpage Layout', 'planeta'),
-	'panel'     	=> esc_html__('sections_panel', 'planeta'),
+	'priority'		=> 1,
 ));
 
 Kirki::add_field('planeta_config', array(
@@ -25,6 +25,8 @@ Kirki::add_field('planeta_config', array(
 		'generic-1'				=> esc_html__('Generic Sections #1', 'planeta'),
 		'generic-2'				=> esc_html__('Generic Sections #2', 'planeta'),
 		'generic-3'				=> esc_html__('Generic Sections #3', 'planeta'),
+		'generic-4'				=> esc_html__('Generic Sections #4', 'planeta'),
+		'generic-5'				=> esc_html__('Generic Sections #5', 'planeta'),
 	),
 ));
 
