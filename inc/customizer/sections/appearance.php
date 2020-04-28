@@ -16,7 +16,7 @@ function planeta_add_section_appearance($name)
 		'choices'		=> array(
 			'min'				=> 0,
 			'max'				=> 1280,
-			'step'			=> 1,
+			'step'			=> 10,
 		),
 		'transport'	=> 'auto',
 		'output'		=> array(

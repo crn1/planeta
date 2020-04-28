@@ -241,6 +241,7 @@ ol li::before {
   position: relative;
   z-index: 100;
   margin-bottom: 10vh;
+  background-blend-mode: multiply;
 }
 .page-title-container .page-title-overlay {
   position: absolute;
@@ -436,6 +437,26 @@ ol li::before {
 }
 #scroll-top-button > i {
   font-size: 48px;
+}
+.post-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+.post-info > .user {
+  padding-right: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.post-info > .user > .avatar {
+  margin-right: 0.5rem;
+  border-radius: 50%;
 }
 .hamburger {
   padding: 1rem 1rem;
@@ -815,26 +836,6 @@ section h1, section h2, section h3, section h4, section h5, section h6, section 
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
-}
-.post-info {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-  font-size: 0.75rem;
-  font-weight: normal;
-}
-.post-info > .user {
-  padding-right: 0.5rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.post-info > .user > .avatar {
-  margin-right: 0.5rem;
-  border-radius: 50%;
 }
 .video-background, .background-overlay {
   position: absolute;

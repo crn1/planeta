@@ -7,17 +7,11 @@
 		set_query_var('title', 'Search Results for:');
 		get_template_part('template-parts/content/title'); ?>
 
-		<?php
-			set_query_var('card_preset', 'posts');
-			set_query_var('section', 'page');
-
-			$image_align = get_theme_mod("page_image_align", 'all-left');
-			$masonry_num = get_theme_mod("page_masonry_num", 3);
-			$image_align = $masonry_num == 1 ? $image_align : ''; ?>
 	<div
 			id='page-items'
 			class='default-container section-items <?php echo $image_align; ?>'>
 		<?php
+			set_query_var('section', 'page');
 			if(have_posts()): while(have_posts()): the_post();
 				get_template_part('template-parts/preset/wrapper');
 			endwhile; endif; ?>

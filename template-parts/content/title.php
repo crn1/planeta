@@ -6,7 +6,6 @@
 	$page_aos = get_query_var('page_title_aos');
 	$page_lax = get_query_var('page_title_lax');
 	$lax = $page_lax != '' ? 'lax' : '';
-	$fittext = get_theme_mod('typography_page_title_fittext', false) ? 'fit-text' : '';
 
 	$featured_image = has_post_thumbnail() && !is_search() && !is_archive() ? get_the_post_thumbnail_url(get_the_ID(), 'full') : '';
 
@@ -18,9 +17,11 @@
 
 	<div class='page-title-overlay'></div>
 
-	<div class='default-container'>
+	<?php
+		$article_container = is_single() || is_page() ? 'article-container' : ''; ?>
+	<div class='<?php echo $article_container; ?> default-container'>
 		<?php
-			if(has_tag())
+			if(has_tag() && !is_archive() && !is_search())
 			{
 				$tags = get_the_tags();
 				foreach($tags as $tag)
@@ -40,7 +41,7 @@
 			}
 		?>
 		<h2
-				class='page-title <?php echo $lax; ?> <?php echo $fittext; ?>'
+				class='page-title <?php echo $lax; ?>'
 				<?php echo $page_lax; ?>
 				<?php echo $page_aos; ?>>
 			<?php echo $title; ?>

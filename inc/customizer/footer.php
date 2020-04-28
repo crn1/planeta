@@ -77,7 +77,7 @@ Kirki::add_field('planeta_config', array(
 planeta_add_video_background(
 	$section = 'footer',
 	$panel = 'footer_panel',
-	$bg_output = '#main-footer-overlay'
+	$bg_output = '#main-footer .backround-overlay'
 );
 
 ?>

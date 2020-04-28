@@ -37,7 +37,8 @@ Kirki::add_field('planeta_config', array(
 	'transport'				=> 'auto',
 	'output'					=> array(
 		array(
-			'element'				=> '.page-title-overlay',
+			'element'				=> '.page-title-container',
+			'property'			=> 'background-color',
 		),
 	),
 ));
@@ -66,14 +67,6 @@ Kirki::add_field('planeta_config', array(
 			'exclude'				=> array(true),
 		),
 	),
-));
-
-Kirki::add_field('planeta_config', array(
-	'type' 						=> 'toggle',
-	'label'						=> esc_html__('Enable Search', 'planeta'),
-	'settings'				=> 'enable_search_bar',
-	'section'					=> 'page_section',
-	'default'					=> '1',
 ));
 
 ?>
