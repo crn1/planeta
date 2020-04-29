@@ -101,19 +101,19 @@ function planeta_add_section_appearance($name)
 		'label'			=> esc_html__('Heading Spacing Between', 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_items_spacing_between",
-		'default'		=> 2,
+		'default'		=> 2.5,
 		'transport'	=> 'auto',
 		'output'		=> array(
 			array(
 				'element'				=> "section[data-section-id='${name}'] > .default-container > *:not(:last-child)",
 				'property'			=> 'margin-bottom',
-				'units'					=> 'vh',
+				'units'					=> 'rem',
 			),
 		),
 		'choices'		=> array(
 			'min'				=> 0,
-			'max'				=> 100,
-			'step'			=> 1,
+			'max'				=> 50,
+			'step'			=> 0.5,
 		),
 	));
 

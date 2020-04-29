@@ -98,10 +98,10 @@ Kirki::add_field('planeta_config', array(
 	'settings'	=> 'navbar_type',
 	'label'			=> esc_html__('Navbar Style', 'planeta'),
 	'section'		=> 'header_appearance',
-	'default'		=> 'down',
+	'default'		=> 'top',
 	'choices'		=> array(
-		'up'				=> esc_html__('Slide Up', 'planeta'),
-		'down'			=> esc_html__('Slide Down', 'planeta'),
+		'top'				=> esc_html__('Slide Top', 'planeta'),
+		'bottom'		=> esc_html__('Slide Bottom', 'planeta'),
 		'left'			=> esc_html__('Slide Left', 'planeta'),
 		'right'			=> esc_html__('Slide Right', 'planeta'),
 	),

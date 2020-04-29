@@ -43,7 +43,8 @@ Kirki::add_field('planeta_config', array(
 	),
 ));
 
-Kirki::add_field('planeta_config', array(
+//Disabld until solution is found
+/*Kirki::add_field('planeta_config', array(
 	'type'			=> 'toggle',
 	'label'			=> esc_html__('Scroll Snap for Sections', 'planeta'),
 	'section'		=> 'page_section',
@@ -67,6 +68,6 @@ Kirki::add_field('planeta_config', array(
 			'exclude'				=> array(true),
 		),
 	),
-));
+));*/
 
 ?>

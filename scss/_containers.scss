@@ -43,10 +43,15 @@
 	}
 
 	.title-tag {
-		margin-bottom: $spacing-inside-group;
+		margin-bottom: $spacing-text;
 		&:not(last-child)
 		{
-			margin-right: $spacing-inside-group;
+			margin-right: $spacing-text;
+		}
+
+		.button-link {
+			border: 2px solid !important;
+			padding: $spacing-text/2 $spacing-text !important;
 		}
 	}
 }
@@ -170,7 +175,7 @@
 	}
 
 	&.menu {
-		&-up {
+		&-top {
 			top: -100vh;
 			left: 0;
 			&.is-active {
@@ -178,7 +183,7 @@
 			}
 		}
 
-		&-down {
+		&-bottom {
 			top: 100vh;
 			left: 0;
 			&.is-active {
@@ -256,5 +261,14 @@
 			margin-right: 0.5rem;
 			border-radius: 50%;
 		}
+	}
+}
+
+.page-navigation {
+	.previous-link {
+		float: left;
+	}
+	.next-link {
+		float: right;
 	}
 }

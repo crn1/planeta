@@ -1,7 +1,7 @@
 <?php
 	$reverse = get_theme_mod('navbar_reverse', false);
 
-	$navbar_class = get_theme_mod('navbar_type', 'up');
+	$navbar_class = get_theme_mod('navbar_type', 'top');
 	$hamburger_class = get_theme_mod('hamburger_class', '3dx');
 
 	function nav_items()

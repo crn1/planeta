@@ -1,6 +1,7 @@
 			<footer id='main-footer'>
 				<?php
 					set_query_var('section', 'footer');
+					set_query_var('shape_section', 'footer');
 					get_template_part('template-parts/content/background'); ?>
 
 				<div class='default-container'>

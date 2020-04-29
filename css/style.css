@@ -251,10 +251,14 @@ ol li::before {
   width: 100%;
 }
 .page-title-container .title-tag {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .page-title-container .title-tag:not(last-child) {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
+}
+.page-title-container .title-tag .button-link {
+  border: 2px solid !important;
+  padding: 0.25rem 0.5rem !important;
 }
 .social-container {
   display: inline-flex;
@@ -375,18 +379,18 @@ ol li::before {
 #top-menu > .social-container .top-menu-item:not(:last-child) {
   margin-right: 1rem;
 }
-#top-menu.menu-up {
+#top-menu.menu-top {
   top: -100vh;
   left: 0;
 }
-#top-menu.menu-up.is-active {
+#top-menu.menu-top.is-active {
   top: 0;
 }
-#top-menu.menu-down {
+#top-menu.menu-bottom {
   top: 100vh;
   left: 0;
 }
-#top-menu.menu-down.is-active {
+#top-menu.menu-bottom.is-active {
   top: 0;
 }
 #top-menu.menu-left {
@@ -457,6 +461,12 @@ ol li::before {
 .post-info > .user > .avatar {
   margin-right: 0.5rem;
   border-radius: 50%;
+}
+.page-navigation .previous-link {
+  float: left;
+}
+.page-navigation .next-link {
+  float: right;
 }
 .hamburger {
   padding: 1rem 1rem;
@@ -587,7 +597,6 @@ section > .default-container {
 }
 section > .default-container > .section-title, section > .default-container > .section-subtitle, section > .default-container > .section-logo, section > .default-container > .section-items {
   width: 100% !important;
-  color: inherit;
 }
 section h1, section h2, section h3, section h4, section h5, section h6, section p {
   margin: 0;
@@ -622,8 +631,9 @@ section h1, section h2, section h3, section h4, section h5, section h6, section 
 }
 .card-info > * {
   width: 100%;
+  margin: 0;
 }
-.card-info > *:not(last-child) {
+.card-info > *:not(:last-child) {
   margin-bottom: 1rem;
 }
 .card {
@@ -873,7 +883,8 @@ a {
   font-weight: bold;
 }
 html, body {
-  overflow-x: hidden;
+  /*Disabled until solution is found*/
+  /*overflow-x: hidden;*/
   scroll-behavior: smooth;
   font-size: 16px;
 }

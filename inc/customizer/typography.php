@@ -138,11 +138,11 @@ function typography_generator($args)
 			'label'						=> esc_html__('Border/Line Size', 'planeta'),
 			'section'					=> "typography_${section}",
 			'settings'				=> "typography_${section}_border_size",
-			'default'					=> '0.25',
+			'default'					=> 2,
 			'choices'					=> array(
-				'min'							=> '0.05',
-				'max'							=> '1',
-				'step'						=> '0.05',
+				'min'							=> 1,
+				'max'							=> 12,
+				'step'						=> 1,
 			),
 			'transport'				=> 'auto',
 			'output'					=> array(
@@ -153,7 +153,7 @@ function typography_generator($args)
 						".hover-cross a::before",
 						".hover-cross a::after",
 					),
-					'units'					=> 'rem',
+					'units'					=> 'px',
 					'property'			=> 'height',
 				),
 				array(
@@ -161,14 +161,14 @@ function typography_generator($args)
 						".hover-box-1 a::before",
 						".hover-box-1 a::after",
 					),
-					'units'					=> 'rem',
+					'units'					=> 'px',
 					'property'			=> 'border-width',
 				),
 				array(
 					'element'				=> array(
 						".hover-box-2 a",
 					),
-					'units'					=> 'rem',
+					'units'					=> 'px',
 					'property'			=> 'border-width',
 				),
 				array(
@@ -184,7 +184,7 @@ function typography_generator($args)
 						".hover-underline-6 a::before",
 						".hover-underline-6 a::after",
 					),
-					'units'					=> 'rem',
+					'units'					=> 'px',
 					'property'			=> 'height',
 				),
 				array(
@@ -192,7 +192,7 @@ function typography_generator($args)
 						".hover-underline-3 a::after",
 						".hover-underline-4 a::after",
 					),
-					'units'					=> 'rem',
+					'units'					=> 'px',
 					'property'			=> 'width',
 				),
 			),

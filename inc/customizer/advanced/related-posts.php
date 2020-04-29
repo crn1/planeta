@@ -37,24 +37,4 @@ Kirki::add_field('planeta_config', array(
 	),
 ));
 
-Kirki::add_field('planeta_config', array(
-	'type' 						=> 'slider',
-	'settings'				=> 'related_posts_number',
-	'label'						=> esc_html__('Maximum Posts', 'planeta'),
-	'section'					=> 'related_posts_section',
-	'default'					=> 4,
-	'choices'					=> array(
-		'min'							=> 1,
-		'max'							=> 21,
-		'step'						=> 1,
-	),
-	'active_callback'	=> array(
-		array(
-			'setting'				=> 'related_posts_enable',
-			'operator'			=> '==',
-			'value'					=> true,
-		),
-	),
-));
-
 ?>

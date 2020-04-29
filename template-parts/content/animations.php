@@ -22,7 +22,7 @@ if(get_theme_mod("${section}_trigger", 'none') == 'aos')
 		data-aos-anchor-placement='${temp_anchor}'
 		data-aos-once='${temp_once}'
 		data-aos-mirror='${temp_mirror}'";
-} else if(get_theme_mod("${section}_trigger", 'none') == 'lax')
+}else if(get_theme_mod("${section}_trigger", 'none') == 'lax')
 {
 	$temp_lax = "data-lax-preset='";
 	for($i = 1; $i <= 3; $i++)
