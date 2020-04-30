@@ -13,32 +13,14 @@ function planeta_add_section_heading($name, $title)
 		'section'		=> "${name}_heading",
 		'settings'	=> "${name}_name",
 		'default'		=> esc_html__($title, 'planeta'),
-		'partial_refresh'	=> array(
-			"${name}_name" => array(
-				'selector'							=> ".top-menu-item > a[data-section-id='${name}']",
-				'render_callback'				=> function()
-				{
-					return get_theme_mod("${name}_name");
-				}
-			),
-		),
 	));
 
 	Kirki::add_field('planeta_config', array(
-		'type'			=> 'textarea',
+		'type'			=> 'editor',
 		'label'			=> esc_html__('Title', 'planeta'),
 		'section'		=> "${name}_heading",
 		'settings'	=> "${name}_title",
 		'default'		=> esc_html__('Section Title', 'planeta'),
-		'partial_refresh'	=> array(
-			"${name}_title" => array(
-				'selector'				=> "section[data-section-id='${name}'] .section-title",
-				'render_callback'	=> function()
-				{
-					return get_theme_mod("${name}_title");
-				}
-			),
-		),
 	));
 
 	Kirki::add_field('planeta_config', array(
@@ -47,15 +29,6 @@ function planeta_add_section_heading($name, $title)
 		'section'		=> "${name}_heading",
 		'settings'	=> "${name}_subtitle",
 		'default'		=> esc_html__('This is a section subtitle.', 'planeta'),
-		'partial_refresh'	=> array(
-			"${name}_subtitle" => array(
-				'selector'					=> "section[data-section-id='${name}'] .section-subtitle",
-				'render_callback'		=> function()
-				{
-					return get_theme_mod("${name}_subtitle");
-				}
-			),
-		),
 	));
 
 	Kirki::add_field('planeta_config', array(

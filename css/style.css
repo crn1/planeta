@@ -288,13 +288,6 @@ ol li::before {
 #loading-container .animation {
   margin-bottom: 1rem;
 }
-#scroll-container {
-  overflow-y: scroll;
-  scroll-snap-type: y proximity;
-}
-#scroll-container > section, #scroll-container > footer {
-  scroll-snap-align: start;
-}
 #footer-sidebar-container, #page-sidebar-container {
   display: grid;
   align-items: center;

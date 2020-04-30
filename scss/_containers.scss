@@ -84,16 +84,6 @@
 	}
 }
 
-#scroll-container {
-	overflow-y: scroll;
-	scroll-snap-type: y proximity;
-
-	& > section,
-	& > footer {
-		scroll-snap-align: start;
-	}
-}
-
 #footer-sidebar-container,
 #page-sidebar-container {
 	display: grid;

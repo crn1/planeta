@@ -136,30 +136,6 @@ Kirki::add_field('planeta_config', array(
 			),
 			'exclude'					=> array(false),
 		),
-		array(
-			'element'					=> array(
-				'.button-link:hover::before',
-				'.button-link:hover::after',
-			),
-			'property'				=> 'border-color',
-			'value_pattern' 	=> 'primary_color !important',
-			'pattern_replace'	=> array(
-				'primary_color'		=> 'primary_color',
-			),
-			'exclude'					=> array(false),
-		),
-		array(
-			'element'					=> array(
-				'.button-link:hover::before',
-				'.button-link:hover::after',
-			),
-			'property'				=> 'background-color',
-			'value_pattern' 	=> 'primary_color !important',
-			'pattern_replace'	=> array(
-				'primary_color'		=> 'primary_color',
-			),
-			'exclude'					=> array(false),
-		),
 	),
 	'active_callback'	=> array(
 		array(

@@ -202,45 +202,6 @@ function typography_generator($args)
 				'operator'					=> 'none',
 			),
 		));
-
-		Kirki::add_field('planeta_config', array(
-			'type'			=> 'color',
-			'settings'	=> "typography_${section}_border_color",
-			'label'			=> esc_html__('Border/Line Color', 'planeta'),
-			'section'		=> "typography_${section}",
-			'default'		=> '#000000',
-			'transport'	=> 'auto',
-			'output'		=> array(
-				array(
-					'element'					=> array(
-						"${class}:hover::before",
-						"${class}:hover::after",
-					),
-					'property'				=> 'color',
-				),
-				array(
-					'element'					=> array(
-						"${class}:hover::before",
-						"${class}:hover::after",
-					),
-					'property'				=> 'border-color',
-				),
-				array(
-					'element'					=> array(
-						"${class}:hover::before",
-						"${class}:hover::after",
-					),
-					'property'				=> 'background-color',
-				),
-			),
-			'active_callback'	=> array(
-				array(
-					'setting'					=> 'primary_color_enable',
-					'operator'				=> '==',
-					'value'						=> true,
-				),
-			),
-		));
 	}
 }
 
@@ -258,31 +219,21 @@ typography_generator(array(
 	'name' 						=> 'Section Title',
 	'section' 				=> 'section_title',
 	'class'						=> '.section-title',
-	'default_size'		=> 5, //Promeni me!
+	'default_size'		=> 4, //Promeni me!
 ));
 
 typography_generator(array(
 	'name' 						=> 'Section Subtitle',
 	'section' 				=> 'section_subtitle',
 	'class'						=> '.section-subtitle',
-	'default_size'		=> 2, //Promeni me!
+	'default_size'		=> 1.2, //Promeni me!
 ));
 
 typography_generator(array(
 	'name'								=> 'Page Title',
 	'section'							=> 'page_title',
 	'class'								=> '.page-title',
-	'default_size'				=> 5, //Promeni me!
-	'default_typography' 	=> array(
-		'text-align'					=> 'center',
-	),
-));
-
-typography_generator(array(
-	'name'								=> 'Page Subtitle',
-	'section'							=> 'page_subtitle',
-	'class'								=> '.page-subtitle',
-	'default_size'				=> 2, //Promeni me!
+	'default_size'				=> 4, //Promeni me!
 	'default_typography' 	=> array(
 		'text-align'					=> 'center',
 	),

@@ -28,6 +28,8 @@
 	function logo_container()
 	{
 		$logo_id = get_theme_mod('logo', '');
+		$logo_url = '';
+		$logo_alt = '';
 		if(!empty($logo_id))
 		{
 			$logo_url = wp_get_attachment_url($logo_id);

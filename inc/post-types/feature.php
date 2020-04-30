@@ -83,7 +83,7 @@ function planeta_add_metabox_feature()
 {
 	add_meta_box(
 		'planeta_metabox_feature',
-		esc_html__('feature Information', 'planeta'),
+		esc_html__('Feature Information', 'planeta'),
 		'planeta_metabox_feature_display',
 		'feature',
 		'advanced',
@@ -163,8 +163,8 @@ add_action('init', 'planeta_register_post_type_feature');
 //Add to Submenu
 add_submenu_page(
 	'planeta_welcome',
-	esc_html__('features', 'planeta'),
-	esc_html__('features', 'planeta'),
+	esc_html__('Features', 'planeta'),
+	esc_html__('Features', 'planeta'),
 	'manage_options',
 	'edit.php?post_type=feature');
 
