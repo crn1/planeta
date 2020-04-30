@@ -582,6 +582,17 @@ ol li::before {
     font-size: 1rem;
   }
 }
+#scroll-down-button {
+  z-index: 98000;
+  position: absolute;
+  bottom: 32px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+#scroll-down-button > i {
+  font-size: 48px;
+}
 section {
   z-index: 100;
   display: flex;
@@ -681,12 +692,12 @@ section h1, section h2, section h3, section h4, section h5, section h6, section 
 }
 .card-team .member-social-container {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column-reverse;
   flex-wrap: wrap;
   margin-bottom: 0;
 }
@@ -710,17 +721,6 @@ section h1, section h2, section h3, section h4, section h5, section h6, section 
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
   justify-content: center;
-}
-#scroll-down-button {
-  z-index: 98000;
-  position: absolute;
-  bottom: 32px;
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-#scroll-down-button > i {
-  font-size: 48px;
 }
 #testimonial-items {
   position: relative;
@@ -883,8 +883,7 @@ a {
   font-weight: bold;
 }
 html, body {
-  /*Disabled until solution is found*/
-  /*overflow-x: hidden;*/
+  overflow-x: hidden;
   scroll-behavior: smooth;
   font-size: 16px;
 }

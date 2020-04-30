@@ -1,3 +1,16 @@
+#scroll-down-button {
+	z-index: $z-global-menu-overlay;
+	position: absolute;
+	bottom: 32px;
+	display: block;
+	width: 100%;
+	text-align: center;
+
+	& > i {
+		font-size: 48px;
+	}
+}
+
 section {
 	z-index: $z-section-content;
 	display: flex;
@@ -102,9 +115,9 @@ section {
 
 	.member-social-container {
 		position: absolute;
-		top: 0;
+		bottom: 0;
 		right: 0;
-		@include flexContainer($direction: column);
+		@include flexContainer($direction: column-reverse);
 		margin-bottom: 0;
 
 		a {
@@ -129,19 +142,6 @@ section {
 	grid-gap: $spacing-inside-group;
 	grid-template-columns: repeat(auto-fit, minmax($spacing-sections, 1fr));
 	justify-content: center;
-}
-
-#scroll-down-button {
-	z-index: $z-global-menu-overlay;
-	position: absolute;
-	bottom: 32px;
-	display: block;
-	width: 100%;
-	text-align: center;
-
-	& > i {
-		font-size: 48px;
-	}
 }
 
 #testimonial-items {

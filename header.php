@@ -1,6 +1,6 @@
 <?php
 	$scroll_id = '';
-	if(is_front_page() && get_theme_mod('page_scroll_snap', true))
+	if(is_front_page())
 	{
 		$scroll_id = 'id="scroll-container"';
 	}

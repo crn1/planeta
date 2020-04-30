@@ -163,6 +163,35 @@ function planeta_add_section_appearance($name)
 			'4'							=> esc_html__('Four', 'planeta'),
 		),
 	));
+
+	Kirki::add_field('planeta_config', array(
+		'type'			=> 'slider',
+		'label'			=> esc_html__('ZigZag Spacing', 'planeta'),
+		'section'		=> "${name}_appearance",
+		'settings'	=> "${name}_items_zigzag_spacing_two",
+		'default'		=> 0,
+		'choices'		=> array(
+			'min'				=> 0,
+			'max'				=> 30,
+			'step'			=> 0.5,
+		),
+		'active_callback'				=> array(
+			array(
+				'setting'								=> "${name}_masonry_num",
+				'operator'							=> '==',
+				'value'									=> '2',
+			),
+		),
+		'output'		=> array(
+			array(
+				'element'				=> array(
+					"section[data-section-id='${name}'] .card:not(:first-child)",
+				),
+				'property'			=> 'padding-top',
+				'units'					=> 'rem',
+			),
+		),
+	));
 }
 
 ?>
