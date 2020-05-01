@@ -13,8 +13,9 @@ $section = get_query_var('section'); ?>
 
 	<?php
 		$args = array(
-			'post_type'   => $section,
-			'post_status' => 'publish',
+			'post_type'   		=> $section,
+			'post_status' 		=> 'publish',
+			'posts_per_page'	=> $section == 'post' ? null : -1,
 		);
 		$query = new WP_Query($args);
 

@@ -49,6 +49,9 @@ Kirki::add_field('planeta_config', array(
 				'#scroll-down-button',
 				'#protected-post-form > button',
 				'#search-form > button',
+				'#section-contact-form input',
+				'#section-contact-form textarea',
+				'#search-form input[type="search"]',
 				'body',
 			),
 			'property'			=> 'color',
@@ -66,6 +69,8 @@ Kirki::add_field('planeta_config', array(
 		array(
 			'element'				=> array(
 				'.gallery-icon img',
+				'#section-contact-form input',
+				'#section-contact-form textarea',
 			),
 			'property'			=> 'border-color',
 			'value_pattern'	=> '$ !important',

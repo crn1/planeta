@@ -142,6 +142,10 @@ section {
 	grid-gap: $spacing-inside-group;
 	grid-template-columns: repeat(auto-fit, minmax($spacing-sections, 1fr));
 	justify-content: center;
+
+	.card-image {
+		border: 0;
+	}
 }
 
 #testimonial-items {

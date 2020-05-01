@@ -715,6 +715,9 @@ section h1, section h2, section h3, section h4, section h5, section h6, section 
   grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
   justify-content: center;
 }
+#tech-items .card-image, #client-items .card-image {
+  border: 0;
+}
 #testimonial-items {
   position: relative;
 }

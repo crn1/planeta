@@ -107,7 +107,7 @@ function planeta_add_section_appearance($name)
 			array(
 				'element'				=> "section[data-section-id='${name}'] > .default-container > *:not(:last-child)",
 				'property'			=> 'margin-bottom',
-				'units'					=> 'rem',
+				'units'					=> 'vh',
 			),
 		),
 		'choices'		=> array(
@@ -130,7 +130,7 @@ function planeta_add_section_appearance($name)
 		'label'					=> esc_html__('Text Color', 'planeta'),
 		'section'				=> "${name}_appearance",
 		'settings'			=> "${name}_color",
-		'default'				=> true,
+		'default'				=> '#FFFFFF',
 		'choices'				=> array(
 			'alpha'					=> true,
 		),
@@ -144,7 +144,11 @@ function planeta_add_section_appearance($name)
 		'transport'			=> 'auto',
 		'output'				=> array(
 			array(
-				'element'				=> "section[data-section-id='${name}'] > .default-container",
+				'element'				=> array(
+					"section[data-section-id='${name}'] .section-title",
+					"section[data-section-id='${name}'] .section-subtitle",
+					"section[data-section-id='${name}'] .section-items",
+				),
 				'property'			=> 'color',
 				'value_pattern'	=> '$ !important',
 			),
@@ -166,7 +170,7 @@ function planeta_add_section_appearance($name)
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__('ZigZag Spacing', 'planeta'),
+		'label'			=> esc_html__('Items Top Spacing', 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_items_zigzag_spacing_two",
 		'default'		=> 0,
@@ -188,7 +192,7 @@ function planeta_add_section_appearance($name)
 					"section[data-section-id='${name}'] .card:not(:first-child)",
 				),
 				'property'			=> 'padding-top',
-				'units'					=> 'rem',
+				'units'					=> 'vh',
 			),
 		),
 	));

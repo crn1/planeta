@@ -40,7 +40,6 @@ include_once get_theme_file_path('inc/post-types/gallery.php');
 include_once get_theme_file_path('inc/post-types/service.php');
 include_once get_theme_file_path('inc/post-types/team.php');
 include_once get_theme_file_path('inc/post-types/number.php');
-include_once get_theme_file_path('inc/post-types/feature.php');
 include_once get_theme_file_path('inc/post-types/price.php');
 include_once get_theme_file_path('inc/post-types/generic.php');
 

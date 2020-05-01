@@ -18,7 +18,6 @@ Kirki::add_field('planeta_config', array(
 		'number'					=> esc_html__('Numbers', 'planeta'),
 		'service'					=> esc_html__('Services', 'planeta'),
 		'price'						=> esc_html__('Pricing', 'planeta'),
-		'feature'					=> esc_html__('Features', 'planeta'),
 		'gallery'					=> esc_html__('Gallery', 'planeta'),
 		'team'						=> esc_html__('Team', 'planeta'),
 		'client'					=> esc_html__('Clients', 'planeta'),
