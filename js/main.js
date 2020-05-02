@@ -70,17 +70,9 @@ jQuery(document).ready(function($)
 	//Scroll Top Functionality
 	scrollTopButton.on('click', function()
 	{
-		let scrollContainer = $('#scroll-container');
-		if(scrollContainer.length)
-		{
-			$('#scroll-container').animate({
-				scrollTop: 0,
-			}, 0);
-		}else{
-			$('html, body').animate({
-				scrollTop: 0,
-			}, 0);
-		}
+		$('html, body').animate({
+			scrollTop: 0,
+		}, 0);
 	})
 
 	// Loading screen
