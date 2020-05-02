@@ -56,7 +56,6 @@ function planeta_metabox_testimonial_text_display()
 	$testimonial_full = get_post_meta($post->ID, 'testimonial_full', true);
 
 	$excerpt = esc_html__('Excerpt', 'planeta');
-	$outstanding = esc_html__('Outstanding!', 'planeta');
 
 	$about = esc_html__('About', 'planeta');
 	$web_developer = esc_html__('Web Developer', 'planeta');
@@ -67,7 +66,7 @@ function planeta_metabox_testimonial_text_display()
 		<table class='form-table'>
 			<tr>
 				<td class='first'>
-					<?php echo $outstanding; ?>
+					<?php echo $excerpt; ?>
 				</td>
 				<td>
 					<input
@@ -76,7 +75,6 @@ function planeta_metabox_testimonial_text_display()
 						type='text'
 						name='testimonial_excerpt'
 						class='widefat'
-						placeholder='<?php echo $outstanding; ?>'
 						value='<?php echo $testimonial_excerpt; ?>'
 					/>
 				</td>

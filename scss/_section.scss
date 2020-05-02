@@ -116,7 +116,7 @@ section {
 
 	.member-social-container {
 		position: absolute;
-		bottom: 0;
+		top: 0;
 		right: 0;
 		@include flexContainer($direction: column-reverse);
 		margin-bottom: 0;
@@ -155,7 +155,7 @@ section {
 .card-testimonial {
 
 	.testimonial-excerpt {
-		@include flexContainer();
+		display: inline-flex;
 		padding-bottom: $spacing-text;
 		text-align: center;
 		border-bottom: 2px solid;
@@ -177,8 +177,10 @@ section {
 	}
 
 	.testimonial-avatar {
-		max-width: 20%;
+		width: 96px;
+		height: 96px;
 		border-radius: 50%;
+		object-fit: cover;
 		margin-right: $spacing-inside-group;
 	}
 
