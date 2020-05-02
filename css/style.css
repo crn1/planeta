@@ -512,7 +512,7 @@ ol li::before {
 .hamburger-inner::after {
   bottom: -10px;
 }
-.section-title, .section-subtitle, .page-title, .primary-text, .secondary-text {
+.section-title, .section-subtitle, .page-title {
   line-height: 1 !important;
   margin-top: 0;
   margin-bottom: 0;
@@ -888,7 +888,7 @@ a {
   color: inherit;
   font-weight: bold;
 }
-html, body {
+html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-size: 16px;
