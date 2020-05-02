@@ -7,7 +7,7 @@
 <div class='post-info'>
 	<div class='user'>
 		<?php echo $avatar; ?> <?php the_author(); ?>
-		<?php echo !empty($date) ? '— ' : ' '; echo $date; ?>
+		<?php echo !empty($date) ? " ─ " : ''; echo $date; ?>
 	</div>
 
 	<?php if($print_category): ?>

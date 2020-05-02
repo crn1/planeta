@@ -1,36 +1,36 @@
 //Spacing
-$spacing-text:					0.5rem;
-$spacing-inside-group:		1rem;
-$spacing-groups:				2.5rem;
-$spacing-sections:				5rem;
+$spacing-text:						0.5rem;
+$spacing-inside-group:			1rem;
+$spacing-groups:					2.5rem;
+$spacing-sections:					5rem;
 
 //Transitions
-$transition-fastest:		 0.17s;
-$transition-fast:				 0.27s;
-$transition-slow:				 1.17s;
-$transition-slowest:		 2.17s;
+$transition-fastest:			 0.17s;
+$transition-fast:					 0.27s;
+$transition-slow:					 1.17s;
+$transition-slowest:			 2.17s;
 
 //Font-Sizes
-$variant-extra-small:		0.5rem;
-$variant-small:					0.75rem;
-$variant-normal:					1rem;
-$variant-mark:					1.2rem;
-$variant-large:						3rem;
-$variant-extra-large:			4rem;
+$variant-extra-small:			0.5rem;
+$variant-small:					 0.75rem;
+$variant-normal:						1rem;
+$variant-mark:						1.2rem;
+$variant-large:							3rem;
+$variant-extra-large:				4rem;
 
 //Z-Indexes
-$z-global-video:					10;
-$z-global-overlay:				20;
-$z-section-video:					30;
-$z-section-overlay:				40;
+$z-global-video:						 10;
+$z-global-overlay:					 20;
+$z-section-video:						 30;
+$z-section-overlay:			     40;
 
-$z-section-content:				100;
+$z-section-content:					100;
 
-$z-scroll-top-button:		97000;
-$z-global-menu-overlay:	98000;
-$z-global-header: 			99000;
+$z-scroll-top-button:			97000;
+$z-global-menu-overlay:		98000;
+$z-global-header:					99000;
 
-$z-absolute-overlay: 		99990;
+$z-absolute-overlay:			99990;
 
 //Flex Container
 @mixin flexContainer(
@@ -45,4 +45,61 @@ $z-absolute-overlay: 		99990;
 	justify-content: $justify;
 	flex-direction: $direction;
 	flex-wrap: wrap;
+}
+
+@mixin for-size($size) {
+  @if $size == phone-only
+	{
+    @media (max-width: 599px) { @content; }
+  }
+
+	@else if $size == tablet-and-down
+	{
+    @media (max-width: 899px) { @content; }
+  }
+
+	@else if $size == tablet-only
+	{
+    @media (min-width: 600px) and (max-width: 899px) { @content; }
+  }
+
+	@else if $size == tablet-and-up
+	{
+    @media (min-width: 600px) { @content; }
+  }
+
+	@else if $size == laptop-and-down
+	{
+    @media (max-width: 1199px) { @content; }
+  }
+
+	@else if $size == laptop-only
+	{
+    @media (min-width: 900px) and (max-width: 1199px) { @content; }
+  }
+
+	@else if $size == laptop-and-up
+	{
+    @media (min-width: 900) { @content; }
+  }
+
+	@else if $size == desktop-and-down
+	{
+    @media (max-width: 1799px) { @content; }
+  }
+
+	@else if $size == desktop-only
+	{
+    @media (min-width: 1200px) and (max-width: 1799px) { @content; }
+  }
+
+	@else if $size == desktop-and-up
+	{
+    @media (min-width: 1200px) { @content; }
+  }
+
+	@else if $size == tv-only
+	{
+    @media (min-width: 1800px) { @content; }
+  }
 }

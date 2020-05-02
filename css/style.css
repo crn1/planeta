@@ -401,22 +401,27 @@ ol li::before {
   left: 0;
 }
 #main-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  margin: 16px 0;
-  padding: 0 16px;
-  z-index: 99000;
-  top: 0;
-  left: 0;
   position: fixed;
-  width: 100%;
+  z-index: 99000;
 }
-#main-header #logo-container {
-  margin: 0 !important;
+#logo-container {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+}
+#logo-container.reverse {
+  right: 16px;
+  left: unset;
+}
+#hamburger-container {
+  z-index: 99000;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+}
+#hamburger-container.reverse {
+  left: 16px;
+  right: unset;
 }
 #menu-button {
   display: flex;
@@ -576,12 +581,17 @@ ol li::before {
   }
 }
 #scroll-down-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   z-index: 98000;
   position: absolute;
-  bottom: 32px;
-  display: block;
-  width: 100%;
-  text-align: center;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
 }
 #scroll-down-button > i {
   font-size: 48px;

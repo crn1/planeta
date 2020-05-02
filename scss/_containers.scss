@@ -200,18 +200,30 @@
 }
 
 #main-header {
-	@include flexContainer($justify: space-between);
-	box-sizing: border-box;
-	margin: 16px 0;
-	padding: 0 16px;
-	z-index: $z-global-header;
-	top: 0;
-	left: 0;
 	position: fixed;
-	width: 100%;
+	z-index: $z-global-header;
+}
 
-	#logo-container {
-		margin: 0 !important;
+#logo-container {
+	position: fixed;
+	top: 16px;
+	left: 16px;
+
+	&.reverse {
+		right: 16px;
+		left: unset;
+	}
+}
+
+#hamburger-container {
+	z-index: $z-global-header;
+	position: fixed;
+	top: 16px;
+	right: 16px;
+
+	&.reverse {
+		left: 16px;
+		right: unset;
 	}
 }
 

@@ -1,11 +1,5 @@
 jQuery(document).ready(function($)
 {
-	//Min Height of page
-	let headerHeight = $('#main-header').outerHeight()
-	let footerHeight = $('#footer').outerHeight()
-	let mainHeight = 'calc(100vh - ' + headerHeight + 'px - ' + footerHeight + 'px)'
-	$('main').css('min-height', mainHeight)
-
 	//Scroll sections
 	$('.top-menu-item').on('click', function(event)
 	{
@@ -17,15 +11,6 @@ jQuery(document).ready(function($)
 		}
 	})
 
-	//Scroll Container height
-	if($('#wpadminbar').length)
-	{
-		let adminHeight = $('#wpadminbar').outerHeight();
-		$('#scroll-container').css('height', `calc(100vh - ${adminHeight}px)`)
-	}else{
-		$('#scroll-container').css('height', '100vh')
-	}
-
 	// Main Menu
 	$('#menu-button').on('click', function() {
 		$('#top-menu').toggleClass('is-active')
@@ -33,11 +18,11 @@ jQuery(document).ready(function($)
 	})
 
 	// Convert card images to links
-	$('.card').find('.image').on('click', function(event)
+	$('.card-image').on('click', function(event)
 	{
 		//Popravi me
 		event.preventDefault()
-		window.location.href = $(this).parent().find('.url').find('a').attr('href')
+		window.location.href = $(this).parent().find('.card-url').find('a').attr('href')
 	})
 
 	// Laxxx
@@ -54,19 +39,9 @@ jQuery(document).ready(function($)
 	// AOS JS
 	if(typeof AOS != 'undefined') { AOS.init() }
 
-	//Sticky Sidebars
-	if(typeof Sticky != 'undefined')
-	{
-		var sticky = new Sticky('.sidebar-inner', {
-			marginTop: $('#main-header').outerHeight(true),
-			stickyContainer: '.article-container',
-			stickyFor: 899,
-		})
-	}
-
 	//Scroll to Top Button
-	scrollTopButton = $('#scroll-top-button')
-	scrollDownButton = $('#scroll-down-button')
+	let scrollTopButton = $('#scroll-top-button')
+	let scrollDownButton = $('#scroll-down-button')
 	function updateScrollButtons(element)
 	{
 		if($(element).scrollTop() >= 20)
@@ -78,6 +53,16 @@ jQuery(document).ready(function($)
 			if(scrollDownButton.length) { scrollDownButton.fadeIn(170) }
 		}
 	}
+
+	scrollDownButton.on('click', function() {
+		let secondSection = $('body > section:nth-of-type(2)')
+		if(secondSection.length)
+		{
+			$('html, body').animate({
+				'scrollTop': secondSection.offset().top
+			}, 0);
+		}
+	})
 
 	$('body').on('scroll load', function() { updateScrollButtons('body') })
 	$(window).on('scroll load', function() { updateScrollButtons(window) })
@@ -92,7 +77,7 @@ jQuery(document).ready(function($)
 				scrollTop: 0,
 			}, 0);
 		}else{
-			$('html').animate({
+			$('html, body').animate({
 				scrollTop: 0,
 			}, 0);
 		}
@@ -104,7 +89,7 @@ jQuery(document).ready(function($)
 	//Scroll to hash
 	if(window.location.hash)
 	{
-		$('body').animate({
+		$('html, body').animate({
 			'scrollTop': $(window.location.hash).offset().top
 		}, 0);
 	}

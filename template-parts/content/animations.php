@@ -22,6 +22,8 @@ if(get_theme_mod("${section}_trigger", 'none') == 'aos')
 		data-aos-anchor-placement='${temp_anchor}'
 		data-aos-once='${temp_once}'
 		data-aos-mirror='${temp_mirror}'";
+	$temp_aos = trim($temp_aos);
+
 }else if(get_theme_mod("${section}_trigger", 'none') == 'lax')
 {
 	$temp_lax = "data-lax-preset='";
@@ -36,6 +38,7 @@ if(get_theme_mod("${section}_trigger", 'none') == 'aos')
 		$temp_lax .= $temp_effect . $temp_strength;
 		$temp_lax .= $i != 3 ? ' ' : '';
 	}
+	$temp_lax = trim($temp_lax);
 	$temp_lax .= "'";
 }
 

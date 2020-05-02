@@ -130,10 +130,10 @@ Kirki::add_field('planeta_config', array(
 	'settings'	=> 'scroll_down_bottom',
 	'label'			=> esc_html__('Scroll Down Icon Spacing', 'planeta'),
 	'section'		=> 'scroll_down_section',
-	'default'		=> 32,
+	'default'		=> 48,
 	'choices'		=> array(
 		'min'				=> 0,
-		'max'				=> 100,
+		'max'				=> 128,
 		'step'			=> 1,
 	),
 	'transport'	=> 'auto',
@@ -141,7 +141,14 @@ Kirki::add_field('planeta_config', array(
 		array(
 			'element'				=> '#scroll-down-button',
 			'property'			=> 'bottom',
+			'value_pattern'	=> 'calc(16px + ($ - 16) * ((100vw - 600px) / 600))',
+			'media_query'		=> '@media (min-width: 600px) and (max-width: 1199px)',
+		),
+		array(
+			'element'				=> '#scroll-down-button',
+			'property'			=> 'bottom',
 			'units'					=> 'px',
+			'media_query'		=> '@media (min-width: 1200px)',
 		),
 	),
 	'active_callback'	=> array(
