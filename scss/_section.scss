@@ -36,7 +36,7 @@ section {
 
 .card-image {
 	object-fit: cover;
-	max-width: 100%;
+	width: 100%;
 	max-height: 512px;
 	border-bottom: 2px solid;
 	margin-bottom: $spacing-inside-group;
@@ -115,14 +115,11 @@ section {
 	}
 
 	.member-social-container {
-		position: absolute;
-		top: 0;
-		right: 0;
-		@include flexContainer($direction: column-reverse);
-		margin-bottom: 0;
+		@include flexContainer();
 
 		a {
-			padding: $spacing-text !important;
+			padding-left: $spacing-text !important;
+			padding-right: $spacing-text !important;
 		}
 	}
 

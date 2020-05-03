@@ -49,7 +49,7 @@ $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
 
 	<?php if(!empty($price_after)): ?>
 	<span class='price-after'>
-		<?php echo $price_before; ?>
+		<?php echo $price_after; ?>
 	</span>
 	<?php endif; ?>
 </p>

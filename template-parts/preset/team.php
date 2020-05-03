@@ -23,12 +23,6 @@
 </p>
 <?php endif; ?>
 
-<?php if(!empty($description)): ?>
-<p class='member-description'>
-	<?php echo $description; ?>
-</p>
-<?php endif; ?>
-
 <?php
 if(
 	!empty($facebook_url) ||
@@ -82,4 +76,10 @@ if(
 		</a>
 	<?php endif; ?>
 </span>
+<?php endif; ?>
+
+<?php if(!empty($description)): ?>
+<p class='member-description'>
+	<?php echo $description; ?>
+</p>
 <?php endif; ?>
