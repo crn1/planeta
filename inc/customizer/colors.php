@@ -1,7 +1,7 @@
 <?php
 
 Kirki::add_section('primary_color_section', array(
-	'title'	=> esc_html__('Primary Color', 'planeta'),
+	'title'	=> esc_html__('Colors', 'planeta'),
 ));
 
 Kirki::add_field('planeta_config', array(

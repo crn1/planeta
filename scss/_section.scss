@@ -36,8 +36,8 @@ section {
 
 .card-image {
 	object-fit: cover;
-	width: 100%;
 	max-height: 512px;
+	max-width: 100%;
 	border-bottom: 2px solid;
 	margin-bottom: $spacing-inside-group;
 }
