@@ -169,16 +169,17 @@ function planeta_add_section_appearance($name)
 	));
 
 	Kirki::add_field('planeta_config', array(
-		'type'			=> 'slider',
-		'label'			=> esc_html__('Items Top Spacing', 'planeta'),
+		'type'			=> 'number',
+		'label'			=> esc_html__('Additional Items Spacing', 'planeta'),
 		'section'		=> "${name}_appearance",
-		'settings'	=> "${name}_items_zigzag_spacing_two",
+		'settings'	=> "${name}_items_additional_spacing",
 		'default'		=> 0,
 		'choices'		=> array(
 			'min'				=> 0,
-			'max'				=> 30,
-			'step'			=> 0.5,
+			'max'				=> 300,
+			'step'			=> 10,
 		),
+		'transport'	=> 'auto',
 		'active_callback'				=> array(
 			array(
 				'setting'								=> "${name}_masonry_num",
@@ -188,11 +189,16 @@ function planeta_add_section_appearance($name)
 		),
 		'output'		=> array(
 			array(
-				'element'				=> array(
-					"section[data-section-id='${name}'] .card:not(:first-child)",
-				),
+				'element'				=> "section[data-section-id='${name}'] .card:not(:first-child)",
 				'property'			=> 'padding-top',
-				'units'					=> 'vh',
+				'value_pattern'	=> 'calc(0px + $ * (100vw - 900px) / 300)',
+				'media_query'		=> '@media (min-width: 900px) and (max-width: 1199px)',
+			),
+			array(
+				'element'				=> "section[data-section-id='${name}'] .card:not(:first-child)",
+				'property'			=> 'padding-top',
+				'units'					=> 'px',
+				'media_query'		=> '@media (min-width: 1200px)',
 			),
 		),
 	));
