@@ -31,12 +31,16 @@ function planeta_register_post_type_tech()
 add_action('init', 'planeta_register_post_type_tech');
 
 //Add to Submenu
+function planeta_add_tech_submenu()
+{
 add_submenu_page(
 	'planeta_welcome',
 	esc_html__('Tech Stack', 'planeta'),
 	esc_html__('Tech Stack', 'planeta'),
 	'manage_options',
 	'edit.php?post_type=tech');
+}
+add_action('admin_menu', 'planeta_add_tech_submenu');
 
 add_filter('manage_tech_posts_columns', 'planeta_tech_columns');
 function planeta_tech_columns($columns)

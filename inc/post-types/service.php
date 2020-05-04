@@ -133,12 +133,16 @@ function planeta_register_post_type_service()
 add_action('init', 'planeta_register_post_type_service');
 
 //Add to Submenu
+function planeta_add_service_submenu()
+{
 add_submenu_page(
 	'planeta_welcome',
 	esc_html__('Services', 'planeta'),
 	esc_html__('Services', 'planeta'),
 	'manage_options',
 	'edit.php?post_type=service');
+}
+add_action('admin_menu', 'planeta_add_service_submenu');
 
 add_filter('manage_service_posts_columns', 'planeta_service_columns');
 function planeta_service_columns($columns)

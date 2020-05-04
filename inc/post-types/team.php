@@ -265,12 +265,16 @@ function planeta_register_post_type_team()
 add_action('init', 'planeta_register_post_type_team');
 
 //Add to Submenu
+function planeta_add_team_submenu()
+{
 add_submenu_page(
 	'planeta_welcome',
 	esc_html__('Team', 'planeta'),
 	esc_html__('Team', 'planeta'),
 	'manage_options',
 	'edit.php?post_type=team');
+}
+add_action('admin_menu', 'planeta_add_team_submenu');
 
 add_filter('manage_team_posts_columns', 'planeta_team_columns');
 function planeta_team_columns($columns)

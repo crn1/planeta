@@ -182,12 +182,16 @@ function planeta_register_post_type_testimonial()
 add_action('init', 'planeta_register_post_type_testimonial');
 
 //Add to Submenu
+function planeta_add_testimonial_submenu()
+{
 add_submenu_page(
 	'planeta_welcome',
 	esc_html__('Testimonials', 'planeta'),
 	esc_html__('Testimonials', 'planeta'),
 	'manage_options',
 	'edit.php?post_type=testimonial');
+}
+add_action('admin_menu', 'planeta_add_testimonial_submenu');
 
 add_filter('manage_testimonial_posts_columns', 'planeta_testimonial_columns');
 function planeta_testimonial_columns($columns)

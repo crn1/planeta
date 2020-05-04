@@ -243,12 +243,16 @@ function planeta_register_post_type_price()
 add_action('init', 'planeta_register_post_type_price');
 
 //Add to Submenu
+function planeta_add_price_submenu()
+{
 add_submenu_page(
 	'planeta_welcome',
 	esc_html__('Pricing', 'planeta'),
 	esc_html__('Pricing', 'planeta'),
 	'manage_options',
 	'edit.php?post_type=price');
+}
+add_action('admin_menu', 'planeta_add_price_submenu');
 
 add_filter('manage_price_posts_columns', 'planeta_price_columns');
 function planeta_price_columns($columns)

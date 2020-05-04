@@ -31,12 +31,16 @@ function planeta_register_post_type_client()
 add_action('init', 'planeta_register_post_type_client');
 
 //Add to Submenu
+function planeta_add_client_submenu()
+{
 add_submenu_page(
 	'planeta_welcome',
 	esc_html__('Clients', 'planeta'),
 	esc_html__('Clients', 'planeta'),
 	'manage_options',
 	'edit.php?post_type=client');
+}
+add_action('admin_menu', 'planeta_add_client_submenu');
 
 add_filter('manage_client_posts_columns', 'planeta_client_columns');
 function planeta_client_columns($columns)

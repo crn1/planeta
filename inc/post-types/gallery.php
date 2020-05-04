@@ -31,12 +31,16 @@ function planeta_register_post_type_gallery()
 add_action('init', 'planeta_register_post_type_gallery');
 
 //Add to Submenu
+function planeta_add_gallery_submenu()
+{
 add_submenu_page(
 	'planeta_welcome',
 	esc_html__('Gallery', 'planeta'),
 	esc_html__('Gallery', 'planeta'),
 	'manage_options',
 	'edit.php?post_type=gallery');
+}
+add_action('admin_menu', 'planeta_add_gallery_submenu');
 
 add_filter('manage_gallery_posts_columns', 'planeta_gallery_columns');
 function planeta_gallery_columns($columns)

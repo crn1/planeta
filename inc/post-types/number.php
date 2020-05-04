@@ -176,12 +176,16 @@ function planeta_register_post_type_number()
 add_action('init', 'planeta_register_post_type_number');
 
 //Add to Submenu
+function planeta_add_number_submenu()
+{
 add_submenu_page(
 	'planeta_welcome',
 	esc_html__('Numbers', 'planeta'),
 	esc_html__('Numbers', 'planeta'),
 	'manage_options',
 	'edit.php?post_type=number');
+}
+add_action('admin_menu', 'planeta_add_number_submenu');
 
 add_filter('manage_number_posts_columns', 'planeta_number_columns');
 function planeta_number_columns($columns)
