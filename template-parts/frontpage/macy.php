@@ -1,7 +1,7 @@
 <?php
 
 $section = get_query_var('section');
-$masonry_num = get_theme_mod("${section}_masonry_num", 3);
+$masonry_num = get_theme_mod("${section}_masonry_num", 2);
 
 switch($masonry_num)
 {

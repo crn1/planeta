@@ -126,15 +126,15 @@ Kirki::add_field('planeta_config', array(
 ));
 
 Kirki::add_field('planeta_config', array(
-	'type' 			=> 'slider',
+	'type' 			=> 'number',
 	'settings'	=> 'scroll_down_bottom',
 	'label'			=> esc_html__('Scroll Down Icon Spacing', 'planeta'),
 	'section'		=> 'scroll_down_section',
-	'default'		=> 48,
+	'default'		=> 110,
 	'choices'		=> array(
 		'min'				=> 0,
-		'max'				=> 128,
-		'step'			=> 1,
+		'max'				=> 300,
+		'step'			=> 10,
 	),
 	'transport'	=> 'auto',
 	'output'		=> array(

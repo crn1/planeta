@@ -1,7 +1,7 @@
 <?php
 
 Kirki::add_section('primary_color_section', array(
-	'title'	=> esc_html__('Colors', 'planeta'),
+	'title'	=> esc_html__('Primary Color', 'planeta'),
 ));
 
 Kirki::add_field('planeta_config', array(
@@ -93,7 +93,7 @@ Kirki::add_field('planeta_config', array(
 	'settings'	=> 'primary_color_scroll_down',
 	'label'			=> esc_html__('Enable on Scroll Down Button', 'planeta'),
 	'section'		=> 'primary_color_section',
-	'default'		=> true,
+	'default'		=> false,
 	'output'		=> array(
 		array(
 			'element'					=> array(

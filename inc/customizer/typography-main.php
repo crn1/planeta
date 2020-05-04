@@ -12,7 +12,7 @@ Kirki::add_field('planeta_config', array(
 	'settings'    => 'typography_main',
 	'default'     => array(
 		'text-transform'			=> 'none',
-		'font-family'					=> 'Rubik',
+		'font-family'					=> 'Titillium Web',
 		'variant'							=> 'regular',
 		'line-height'					=> '1.5',
 		'letter-spacing'			=> '0',

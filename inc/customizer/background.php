@@ -10,10 +10,10 @@ Kirki::add_field('planeta_config', array(
 	'section'								=> "global_background",
 	'settings'							=> "global_background",
 	'default'								=> array(
-		'default'								=> 'rgba(0, 0, 0, 0)',
+		'background-color'			=> 'rgba(0, 0, 0, 0)',
 		'background-image'			=> '',
 		'background-repeat'			=> 'repeat',
-		'background-positio'		=> 'center center',
+		'background-position'		=> 'center center',
 		'background-size'				=> 'cover',
 		'background-attachment'	=> 'scroll',
 	),

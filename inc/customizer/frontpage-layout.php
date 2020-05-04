@@ -2,7 +2,7 @@
 
 Kirki::add_section('sections_layout', array(
 	'title'       => esc_html__('Frontpage Layout', 'planeta'),
-	'priority'		=> 1,
+	'priority'		=> 2,
 ));
 
 Kirki::add_field('planeta_config', array(

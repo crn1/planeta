@@ -38,7 +38,7 @@ function typography_generator($args)
 			'variant'							=> 'regular',
 			'line-height'					=> '1.5',
 			'letter-spacing'			=> '0',
-			'text-align'					=> 'left',
+			'text-align'					=> 'center',
 	), $args['default_typography']);
 
 	Kirki::add_field('planeta_config', array(
@@ -46,7 +46,7 @@ function typography_generator($args)
 		'label'       => esc_html__('Inherit Typography', 'planeta'),
 		'section'     => "typography_${section}",
 		'settings'    => "typography_${section}_inherit_typography",
-		'default'			=> true,
+		'default'			=> false,
 	));
 
 	Kirki::add_field('planeta_config', array(
@@ -216,17 +216,17 @@ typography_generator(array(
 ));
 
 typography_generator(array(
-	'name' 						=> 'Section Title',
-	'section' 				=> 'section_title',
-	'class'						=> '.section-title',
-	'default_size'		=> 4, //Promeni me!
+	'name'								=> 'Section Title',
+	'section'							=> 'section_title',
+	'class'								=> '.section-title',
+	'default_size'				=> 4, //Promeni me!
 ));
 
 typography_generator(array(
-	'name' 						=> 'Section Subtitle',
-	'section' 				=> 'section_subtitle',
-	'class'						=> '.section-subtitle',
-	'default_size'		=> 1.2, //Promeni me!
+	'name'								=> 'Section Subtitle',
+	'section'							=> 'section_subtitle',
+	'class'								=> '.section-subtitle',
+	'default_size'				=> 1.2, //Promeni me!
 ));
 
 typography_generator(array(
@@ -234,9 +234,6 @@ typography_generator(array(
 	'section'							=> 'page_title',
 	'class'								=> '.page-title',
 	'default_size'				=> 4, //Promeni me!
-	'default_typography' 	=> array(
-		'text-align'					=> 'center',
-	),
 ));
 
 ?>

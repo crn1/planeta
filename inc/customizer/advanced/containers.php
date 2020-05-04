@@ -28,7 +28,7 @@ Kirki::add_field('planeta_config', array(
 
 Kirki::add_field('planeta_config', array(
 	'type' 						=> 'number',
-	'settings'				=> 'container_sidebar',
+	'settings'				=> 'container_article',
 	'label'						=> esc_html__('Post Container Width', 'planeta'),
 	'section'					=> 'containers_section',
 	'default'					=> 700,

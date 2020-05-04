@@ -98,10 +98,10 @@ function planeta_add_section_appearance($name)
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__('Heading Spacing Between', 'planeta'),
+		'label'			=> esc_html__('Container Spacing Between', 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_items_spacing_between",
-		'default'		=> 2.5,
+		'default'		=> 5,
 		'transport'	=> 'auto',
 		'output'		=> array(
 			array(
@@ -155,53 +155,50 @@ function planeta_add_section_appearance($name)
 		),
 	));
 
-	Kirki::add_field('planeta_config', array(
-		'type'					=> 'radio-buttonset',
-		'label'					=> esc_html__('Number of Item Columns', 'planeta'),
-		'section'				=> "${name}_appearance",
-		'settings'			=> "${name}_masonry_num",
-		'default'				=> '3',
-		'choices'				=> array(
-			'2'							=> esc_html__('Two', 'planeta'),
-			'3'							=> esc_html__('Three', 'planeta'),
-			'4'							=> esc_html__('Four', 'planeta'),
-		),
-	));
+	if(!in_array($name, array('client', 'tech', 'contact')))
+	{
+		Kirki::add_field('planeta_config', array(
+			'type'					=> 'radio-buttonset',
+			'label'					=> esc_html__('Number of Item Columns', 'planeta'),
+			'section'				=> "${name}_appearance",
+			'settings'			=> "${name}_masonry_num",
+			'default'				=> '2',
+			'choices'				=> array(
+				'two'							=> esc_html__('2', 'planeta'),
+				'three'						=> esc_html__('3', 'planeta'),
+				'four'						=> esc_html__('4', 'planeta'),
+			),
+		));
 
-	Kirki::add_field('planeta_config', array(
-		'type'			=> 'number',
-		'label'			=> esc_html__('Additional Items Spacing', 'planeta'),
-		'section'		=> "${name}_appearance",
-		'settings'	=> "${name}_items_additional_spacing",
-		'default'		=> 0,
-		'choices'		=> array(
-			'min'				=> 0,
-			'max'				=> 300,
-			'step'			=> 10,
-		),
-		'transport'	=> 'auto',
-		'active_callback'				=> array(
-			array(
-				'setting'								=> "${name}_masonry_num",
-				'operator'							=> '==',
-				'value'									=> '2',
+		Kirki::add_field('planeta_config', array(
+			'type'			=> 'number',
+			'label'			=> esc_html__('Additional Items Spacing', 'planeta'),
+			'section'		=> "${name}_appearance",
+			'settings'	=> "${name}_items_additional_spacing",
+			'default'		=> 300,
+			'choices'		=> array(
+				'min'				=> 0,
+				'max'				=> 300,
+				'step'			=> 10,
 			),
-		),
-		'output'		=> array(
-			array(
-				'element'				=> "section[data-section-id='${name}'] .card:not(:first-child)",
-				'property'			=> 'padding-top',
-				'value_pattern'	=> 'calc(0px + $ * (100vw - 900px) / 300)',
-				'media_query'		=> '@media (min-width: 900px) and (max-width: 1199px)',
+			'transport'	=> 'auto',
+			'active_callback'				=> array(
+				array(
+					'setting'								=> "${name}_masonry_num",
+					'operator'							=> '==',
+					'value'									=> '2',
+				),
 			),
-			array(
-				'element'				=> "section[data-section-id='${name}'] .card:not(:first-child)",
-				'property'			=> 'padding-top',
-				'units'					=> 'px',
-				'media_query'		=> '@media (min-width: 1200px)',
+			'output'		=> array(
+				array(
+					'element'				=> "section[data-section-id='${name}'] .card:not(:first-child)",
+					'property'			=> 'padding-top',
+					'units'					=> 'px',
+					'media_query'		=> '@media (min-width: 900px)',
+				),
 			),
-		),
-	));
+		));
+	}
 }
 
 ?>

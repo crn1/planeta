@@ -717,13 +717,18 @@ section h1, section h2, section h3, section h4, section h5, section h6, section 
   margin-bottom: 1rem;
 }
 #tech-items, #client-items {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  display: flex;
+  align-items: center;
   justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 #tech-items .card-image, #client-items .card-image {
+  max-width: 96px;
   border: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 #testimonial-items {
   position: relative;

@@ -5,6 +5,8 @@ Kirki::add_config('planeta_config', array(
 	'option_type'	=> 'theme_mod',
 ));
 
+require_once(get_template_directory() . '/inc/customizer/presets.php');
+
 //Frontpage Layout
 require_once(get_template_directory() . '/inc/customizer/frontpage-layout.php');
 

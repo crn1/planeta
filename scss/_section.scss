@@ -136,13 +136,14 @@ section {
 }
 
 #tech-items, #client-items {
-	display: grid;
-	grid-gap: $spacing-inside-group;
-	grid-template-columns: repeat(auto-fit, minmax($spacing-sections, 1fr));
-	justify-content: center;
+	@include flexContainer();
 
 	.card-image {
+		max-width: 96px;
 		border: 0;
+		margin-left: $spacing-inside-group;
+		margin-right: $spacing-inside-group;
+		margin-bottom: $spacing-inside-group;
 	}
 }
 
