@@ -20,7 +20,7 @@ if(!empty($excerpt)): ?>
 <?php $hover_class = get_query_var('hover_class', 'hover-none'); ?>
 
 <p class='card-url'>
-	<span class='relative <?php echo $hover_class; ?>'>
+	<span class='relative <?php echo sanitize_html_class($hover_class); ?>'>
 		<a
 				class='button-link'
 				href='<?php echo the_permalink(); ?>'>

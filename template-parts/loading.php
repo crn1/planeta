@@ -24,22 +24,22 @@ if($render_loading):
 	<?php if(!empty($logo_id)): ?>
 		<img
 			class='logo'
-			alt='<?php echo $logo_alt; ?>'
-			src='<?php echo $logo_url; ?>'
+			alt='<?php echo esc_attr($logo_alt); ?>'
+			src='<?php echo esc_url($logo_url); ?>'
 		/>
 	<?php endif; ?>
 
 	<?php if(!empty($animation_id)): ?>
 		<img
 			class='animation'
-			alt='<?php echo $animation_alt; ?>'
-			src='<?php echo $animation_url; ?>'
+			alt='<?php echo esc_attr($animation_alt); ?>'
+			src='<?php echo esc_url($animation_url); ?>'
 		/>
 	<?php endif; ?>
 
 	<?php if(!empty($text)): ?>
 		<p class='text'>
-			<?php echo $text; ?>
+			<?php echo esc_html($text); ?>
 		</p>
 	<?php endif; ?>
 

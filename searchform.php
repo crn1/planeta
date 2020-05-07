@@ -9,7 +9,7 @@
 	<input
 			type='search'
 			required
-			placeholder="<?php echo esc_attr_x( 'Search', 'placeholder' ) ?>"
+			placeholder='<?php esc_attr_e('Search', 'planeta'); ?>'
 			value='<?php echo get_search_query(); ?>'
 			name='s' />
 </form>

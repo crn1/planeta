@@ -29,7 +29,7 @@ function planeta_metabox_generic_display()
 						type='url'
 						name='generic_url'
 						class='widefat'
-						value='<?php echo $generic_url; ?>'
+						value='<?php echo esc_url($generic_url); ?>'
 					/>
 				</td>
 			</tr>
@@ -44,7 +44,7 @@ function planeta_metabox_generic_display()
 						type='text'
 						name='generic_url_text'
 						class='widefat'
-						value='<?php echo $generic_url_text; ?>'
+						value='<?php echo esc_attr($generic_url_text); ?>'
 					/>
 				</td>
 			</tr>

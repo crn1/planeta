@@ -30,7 +30,7 @@ function planeta_metabox_price_display()
 						type='text'
 						name='price_tag'
 						class='widefat'
-						value='<?php echo $price_tag; ?>'
+						value='<?php echo esc_attr($price_tag); ?>'
 					/>
 				</td>
 			</tr>
@@ -44,7 +44,7 @@ function planeta_metabox_price_display()
 						type='text'
 						name='price_before'
 						class='widefat'
-						value='<?php echo $price_before; ?>'
+						value='<?php echo esc_attr($price_before); ?>'
 					/>
 				</td>
 			</tr>
@@ -58,7 +58,7 @@ function planeta_metabox_price_display()
 						type='text'
 						name='price_after'
 						class='widefat'
-						value='<?php echo $price_after; ?>'
+						value='<?php echo esc_attr($price_after); ?>'
 					/>
 				</td>
 			</tr>
@@ -126,7 +126,7 @@ function planeta_metabox_price_url_display()
 						type='url'
 						name='price_url'
 						class='widefat'
-						value='<?php echo $price_url; ?>'
+						value='<?php echo esc_attr($price_url); ?>'
 					/>
 				</td>
 			</tr>
@@ -140,7 +140,7 @@ function planeta_metabox_price_url_display()
 						type='text'
 						name='price_url_text'
 						class='widefat'
-						value='<?php echo $price_url_text; ?>'
+						value='<?php echo esc_attr($price_url_text); ?>'
 					/>
 				</td>
 			</tr>
@@ -271,12 +271,12 @@ function custom_price_column($column, $post_id)
 	{
 		case 'price_tag':
 			$price_tag = get_post_meta($post->ID, 'price_tag', true);
-			echo $price_tag;
+			echo esc_html($price_tag);
 			break;
 
 		case 'price_description':
 			$price_tag = get_post_meta($post->ID, 'price_description', true);
-			echo $price_tag;
+			echo esc_html($price_tag);
 			break;
 	}
 }

@@ -25,7 +25,7 @@ function planeta_metabox_service_display()
 						type='text'
 						name='service_title'
 						class='widefat'
-						value='<?php echo $service_title; ?>'
+						value='<?php echo esc_attr($service_title); ?>'
 					/>
 				</td>
 			</tr>
@@ -53,7 +53,7 @@ function planeta_metabox_service_display()
 						type='url'
 						name='service_url'
 						class='widefat'
-						value='<?php echo $service_url; ?>'
+						value='<?php echo esc_url($service_url); ?>'
 					/>
 				</td>
 			</tr>
@@ -162,12 +162,12 @@ function custom_service_column($column, $post_id)
 	{
 		case 'service_title':
 			$service_title = get_post_meta($post->ID, 'service_title', true);
-			echo $service_title;
+			echo esc_html($service_title);
 			break;
 
 		case 'service_description':
 			$service_description = get_post_meta($post->ID, 'service_description', true);
-			echo $service_description;
+			echo esc_hmtl($service_description);
 			break;
 	}
 }

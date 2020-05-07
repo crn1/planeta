@@ -1,8 +1,8 @@
 <?php
-	$shape_section = get_query_var('shape_section', '');
+	$shape_section = esc_html(get_query_var('shape_section', ''));
 	if(!empty($shape_section))
 	{
-		$shape = get_theme_mod("${shape_section}_shape", 'none');
+		$shape = esc_html(get_theme_mod("${shape_section}_shape", 'none'));
 
 		//Reset Shape Section
 		set_query_var('shape_section', '');
@@ -10,7 +10,7 @@
 		if($shape != 'none')
 		{
 			echo 'style="';
-			$strength = get_theme_mod("${shape_section}_shape_strength", 10);
+			$strength = absint(intval(get_theme_mod("${shape_section}_shape_strength", 10)));
 
 			switch($shape)
 			{

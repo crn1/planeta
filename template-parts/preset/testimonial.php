@@ -7,13 +7,13 @@
 
 <?php if(!empty($testimonial_excerpt)): ?>
 <h3 class='card-title testimonial-excerpt'>
-	<?php echo $testimonial_excerpt; ?>
+	<?php echo esc_html($testimonial_excerpt); ?>
 </h3>
 <?php endif; ?>
 
 <?php if(!empty($testimonial_full)): ?>
 <p class='testimonial-full'>
-	<?php echo $testimonial_full; ?>
+	<?php echo esc_html($testimonial_full); ?>
 </p>
 <?php endif; ?>
 
@@ -26,8 +26,8 @@
 
 	if(!empty($image_src)): ?>
 		<img
-			src='<?php echo $image_src; ?>'
-			alt='<?php echo $image_alt; ?>'
+			src='<?php echo esc_url($image_src); ?>'
+			alt='<?php echo esc_attr($image_alt); ?>'
 			class='testimonial-avatar'
 		/>
 	<?php endif; ?>
@@ -35,13 +35,13 @@
 	<span class='testimonial-author-info'>
 		<?php if(!empty($author_name)): ?>
 		<p class='testimonial-author-name'>
-			<?php echo $author_name; ?>
+			<?php echo esc_html($author_name); ?>
 		</p>
 		<?php endif; ?>
 
 		<?php if(!empty($author_about)): ?>
 		<p class='testimonial-author-description'>
-			<?php echo $author_about; ?>
+			<?php echo esc_html($author_about); ?>
 		</p>
 		<?php endif; ?>
 	</span>

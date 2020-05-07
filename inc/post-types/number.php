@@ -33,7 +33,7 @@ function planeta_metabox_number_display()
 						type='text'
 						name='number_value'
 						class='widefat'
-						value='<?php echo $number_value; ?>'
+						value='<?php echo esc_attr($number_value); ?>'
 					/>
 				</td>
 			</tr>
@@ -48,7 +48,7 @@ function planeta_metabox_number_display()
 						type='text'
 						name='number_of_what'
 						class='widefat'
-						value='<?php echo $number_of_what; ?>'
+						value='<?php echo esc_attr($number_of_what); ?>'
 					/>
 				</td>
 			</tr>
@@ -76,7 +76,7 @@ function planeta_metabox_number_display()
 						type='url'
 						name='number_url'
 						class='widefat'
-						value='<?php echo $number_url; ?>'
+						value='<?php echo esc_url($number_url); ?>'
 					/>
 				</td>
 			</tr>
@@ -90,7 +90,7 @@ function planeta_metabox_number_display()
 						type='text'
 						name='number_url_text'
 						class='widefat'
-						value='<?php echo $number_url_text; ?>'
+						value='<?php echo esc_attr($number_url_text); ?>'
 					/>
 				</td>
 			</tr>
@@ -206,17 +206,17 @@ function custom_number_column($column, $post_id)
 	{
 		case 'number_value':
 			$number_value = get_post_meta($post->ID, 'number_value', true);
-			echo $number_value;
+			echo esc_html($number_value);
 			break;
 
 		case 'number_of_what':
 			$number_of_what = get_post_meta($post->ID, 'number_of_what', true);
-			echo $number_of_what;
+			echo esc_html($number_of_what);
 			break;
 
 		case 'number_description':
 			$number_description = get_post_meta($post->ID, 'number_description', true);
-			echo $number_description;
+			echo esc_html($number_description);
 			break;
 	}
 }

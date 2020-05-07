@@ -20,13 +20,13 @@ if(!empty($items)): ?>
 				$hover_class = get_query_var('hover_class', 'hover-none');
 				$url_tab = $item['url_tab'] ? '_blank' : ''; ?>
 
-				<span class='relative <?php echo $hover_class; ?>'>
+				<span class='relative <?php echo sanitize_html_class($hover_class); ?>'>
 					<a
 							class='button-link'
-							href='<?php echo $item['url']; ?>'
-							target='<?php echo $url_tab; ?>'>
+							href='<?php echo esc_url($item['url']); ?>'
+							target='<?php echo esc_attr($url_tab); ?>'>
 
-						<?php echo $item['title'] ?>
+						<?php echo esc_html($item['title']); ?>
 
 					</a>
 				</span>

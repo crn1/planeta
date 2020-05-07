@@ -23,15 +23,15 @@ $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
 
 <?php if(!empty($image_src)): ?>
 	<img
-		src='<?php echo $image_src; ?>'
-		alt='<?php echo $image_alt; ?>'
+		src='<?php echo esc_url($image_src); ?>'
+		alt='<?php echo esc_attr($image_alt); ?>'
 		class='price-image'
 	/>
 <?php endif; ?>
 
 <?php if(!empty($price_title)): ?>
 <h3 class='price-title card-title'>
-	<?php echo $price_title; ?>
+	<?php echo esc_html($price_title); ?>
 </h3>
 <?php endif; ?>
 
@@ -39,17 +39,17 @@ $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
 <p class='price-tag'>
 	<?php if(!empty($price_before)): ?>
 	<span class='price-before'>
-		<?php echo $price_before; ?>
+		<?php echo esc_html($price_before); ?>
 	</span>
 	<?php endif; ?>
 
 	<span class='<?php echo $price_highlight == 'on' ? 'price-highlight' : ''; ?>'>
-		<?php echo $price_tag; ?>
+		<?php echo esc_html($price_tag); ?>
 	</span>
 
 	<?php if(!empty($price_after)): ?>
 	<span class='price-after'>
-		<?php echo $price_after; ?>
+		<?php echo esc_html($price_after); ?>
 	</span>
 	<?php endif; ?>
 </p>
@@ -57,18 +57,18 @@ $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
 
 <?php if(!empty($price_description)): ?>
 <p class='price-description'>
-	<?php echo $price_description; ?>
+	<?php echo esc_html($price_description); ?>
 </p>
 <?php endif; ?>
 
 <?php if(!empty($price_url) && !empty($price_url_text)): ?>
 <p class='card-url'>
-	<span class='relative <?php echo $hover_class; ?>'>
+	<span class='relative <?php echo sanitize_html_class($hover_class); ?>'>
 		<a
 				class='button-link'
-				href='<?php echo $price_url; ?>'>
+				href='<?php echo esc_url($price_url); ?>'>
 
-			<?php echo $price_url_text; ?>
+			<?php echo esc_html($price_url_text); ?>
 
 		</a>
 	</span>

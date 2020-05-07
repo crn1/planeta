@@ -28,12 +28,12 @@ if(get_theme_mod('related_posts_enable', false)):
 			<section id='post' data-section-id='post'>
 				<div class='default-container'>
 					<h2 class='section-title'>
-						<?php echo $title; ?>
+						<?php echo esc_html($title); ?>
 					</h2>
 
 					<div
 							id='post-items'
-							class='section-items default-container <?php echo $image_align; ?>'>
+							class='section-items default-container <?php echo sanitize_html_class($image_align); ?>'>
 						<?php
 							while($query->have_posts())
 							{

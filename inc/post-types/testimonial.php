@@ -26,7 +26,7 @@ function planeta_metabox_testimonial_author_display()
 						name='author_name'
 						class='widefat'
 						placeholder='<?php echo $john_doe; ?>'
-						value='<?php echo $author_name; ?>'
+						value='<?php echo esc_attr($author_name); ?>'
 					/>
 				</td>
 			</tr>
@@ -41,7 +41,7 @@ function planeta_metabox_testimonial_author_display()
 						name='author_about'
 						class='widefat'
 						placeholder='<?php echo $web_developer; ?>'
-						value='<?php echo $author_about; ?>'
+						value='<?php echo esc_attr($author_about); ?>'
 					/>
 				</td>
 			</tr>
@@ -75,7 +75,7 @@ function planeta_metabox_testimonial_text_display()
 						type='text'
 						name='testimonial_excerpt'
 						class='widefat'
-						value='<?php echo $testimonial_excerpt; ?>'
+						value='<?php echo esc_attr($testimonial_excerpt); ?>'
 					/>
 				</td>
 			</tr>
@@ -211,12 +211,12 @@ function custom_testimonial_column($column, $post_id)
 	{
 		case 'author_name':
 			$author_name = get_post_meta($post->ID, 'author_name', true);
-			echo $author_name;
+			echo esc_html($author_name);
 			break;
 
 		case 'testimonial_excerpt':
 			$testimonial_excerpt = get_post_meta($post->ID, 'testimonial_excerpt', true);
-			echo $testimonial_excerpt;
+			echo esc_html($testimonial_excerpt);
 			break;
 	}
 }

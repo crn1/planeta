@@ -8,7 +8,7 @@ if(have_comments() && comments_open()): ?>
 		<?php
 			$thoughts = esc_html__('Thoughts on this post', 'planeta'); ?>
 		<h3 class='comments-title'>
-			<?php echo $thoughts; ?>
+			<?php echo esc_html($thoughts); ?>
 		</h3>
 
 		<ul class="comment-list">

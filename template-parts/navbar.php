@@ -11,12 +11,12 @@ function nav_items()
 			$hover_class = get_query_var('hover_class', 'hover-class');
 			$slug = sanitize_title($name); ?>
 			<span
-					class='top-menu-item relative <?php echo $hover_class; ?>'>
+					class='top-menu-item relative <?php echo sanitize_html_class($hover_class); ?>'>
 				<a
 						href='<?php echo get_home_url() . '/#' . $slug; ?>'
-						data-section-id='<?php echo $section; ?>'
+						data-section-id='<?php echo esc_attr($section); ?>'
 						class='button-link'>
-					<?php echo $name; ?>
+					<?php echo esc_html($name); ?>
 				</a>
 			</span>
 		<?php
@@ -39,14 +39,14 @@ function logo_container()
 	$logo_text = get_theme_mod('logo_text', ''); ?>
 
 	<a
-			<?php echo $logo_reverse; ?>
+			<?php echo esc_attr($logo_reverse); ?>
 			href='/'
 			id='logo-container'>
 		<?php if($logo_url != ''): ?>
 			<img
 					id='logo'
-					alt='<?php echo $logo_alt; ?>'
-					src='<?php echo $logo_url; ?>'
+					alt='<?php echo esc_attr($logo_alt); ?>'
+					src='<?php echo esc_url($logo_url); ?>'
 			/>
 		<?php endif; ?>
 	</a>
@@ -64,11 +64,11 @@ $hamburger_class = 'hamburger--' . get_theme_mod('hamburger_class', '3dx');
 	<?php logo_container(); ?>
 
 	<span
-			<?php echo $hamburger_reverse; ?>
+			<?php echo esc_attr($hamburger_reverse); ?>
 			id="hamburger-container">
 		<button
 				id='menu-button'
-				class='hamburger <?php echo $hamburger_class; ?>'
+				class='hamburger <?php echo sanitize_html_class($hamburger_class); ?>'
 				type='button'>
 			<span class='hamburger-box'>
 				<span class='hamburger-inner'></span>
@@ -80,7 +80,7 @@ $hamburger_class = 'hamburger--' . get_theme_mod('hamburger_class', '3dx');
 <?php $navbar_class = 'menu-' . get_theme_mod('navbar_type', 'top'); ?>
 <nav
 		id='top-menu'
-		class='<?php echo $navbar_class; ?>'>
+		class='<?php echo sanitize_html_class($navbar_class); ?>'>
 
 	<?php nav_items(); ?>
 	<?php get_template_part('template-parts/content/social'); ?>

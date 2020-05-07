@@ -13,13 +13,13 @@
 
 <?php if(!empty($name)): ?>
 <h3 class='member-title'>
-	<?php echo $name; ?>
+	<?php echo esc_html($name); ?>
 </h3>
 <?php endif; ?>
 
 <?php if(!empty($position)): ?>
 <p class='member-position'>
-	<?php echo $position; ?>
+	<?php echo esc_html($position); ?>
 </p>
 <?php endif; ?>
 
@@ -36,42 +36,42 @@ if(
 	<?php if(!empty($facebook_url)): ?>
 		<a
 				class='button-link'
-				href='<?php echo $facebook_url; ?>'>
+				href='<?php echo esc_url($facebook_url); ?>'>
 			<i class='icofont-facebook'></i>
 		</a>
 	<?php endif; ?>
 	<?php if(!empty($twitter_url)): ?>
 		<a
 				class='button-link'
-				href='<?php echo $twitter_url; ?>'>
+				href='<?php echo esc_url($twitter_url); ?>'>
 			<i class='icofont-twitter'></i>
 		</a>
 	<?php endif; ?>
 	<?php if(!empty($instagram_url)): ?>
 		<a
 				class='button-link'
-				href='<?php echo $instagram_url; ?>'>
+				href='<?php echo esc_url($instagram_url); ?>'>
 			<i class='icofont-instagram'></i>
 		</a>
 	<?php endif; ?>
 	<?php if(!empty($linkedin_url)): ?>
 		<a
 				class='button-link'
-				href='<?php echo $linkedin_url; ?>'>
+				href='<?php echo esc_url($linkedin_url); ?>'>
 			<i class='icofont-linkedin'></i>
 		</a>
 	<?php endif; ?>
 	<?php if(!empty($skype_url)): ?>
 		<a
 				class='button-link'
-				href='<?php echo $skype_url; ?>'>
+				href='<?php echo esc_url($skype_url); ?>'>
 			<i class='icofont-skype'></i>
 		</a>
 	<?php endif; ?>
 	<?php if(!empty($github_url)): ?>
 		<a
 				class='button-link'
-				href='<?php echo $github_url; ?>'>
+				href='<?php echo esc_url($github_url); ?>'>
 			<i class='icofont-github'></i>
 		</a>
 	<?php endif; ?>
@@ -80,6 +80,6 @@ if(
 
 <?php if(!empty($description)): ?>
 <p class='member-description'>
-	<?php echo $description; ?>
+	<?php echo esc_html($description); ?>
 </p>
 <?php endif; ?>

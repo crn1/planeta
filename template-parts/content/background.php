@@ -15,26 +15,26 @@
 	$img = get_theme_mod("${section}_fallback_image_url", '');
 ?>
 <div
-	<?php echo $shape; ?>
+	<?php echo esc_attr($shape); ?>
 	class='background-overlay'></div>
 <?php if($video): ?>
 <video
-		<?php echo $shape; ?>
+		<?php echo esc_attr($shape); ?>
 		autoplay loop muted
 		class='video-background'
-		poster='<?php echo $img; ?>'>
+		poster='<?php echo esc_url($img); ?>'>
 
 	<?php if($mp4 != ''): ?>
 		<source
-				src='<?php echo $mp4; ?>' type='video/mp4'>
+				src='<?php echo esc_url($mp4); ?>' type='video/mp4'>
 	<?php endif; ?>
 
 	<?php if($webm != ''): ?>
-		<source src='<?php echo $webm; ?>' type='video/webm'>
+		<source src='<?php echo esc_url($webm); ?>' type='video/webm'>
 	<?php endif; ?>
 
 	<?php if($ogg != ''): ?>
-		<source src='<?php echo $ogg; ?>' type='video/mp4'>
+		<source src='<?php echo esc_url($ogg); ?>' type='video/mp4'>
 	<?php endif; ?>
 
 </video>

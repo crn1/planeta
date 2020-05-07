@@ -8,7 +8,7 @@ $section = get_query_var('section'); ?>
 <?php else: ?>
 
 <div
-		id='<?php echo $section; ?>-items'
+		id='<?php echo esc_attr($section); ?>-items'
 		class='section-items'>
 
 	<?php

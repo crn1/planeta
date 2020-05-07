@@ -18,22 +18,22 @@
 	<?php if(!empty($image_id)): ?>
 		<img
 				id='logo'
-				alt='<?php echo $image_alt; ?>'
-				src='<?php echo $image_url; ?>'
+				alt='<?php echo esc_attr($image_alt); ?>'
+				src='<?php echo esc_url($image_url); ?>'
 		/>
 	<?php endif; ?>
 	<h1 class='page-title'>
-		<?php echo $title; ?>
+		<?php echo esc_html($title); ?>
 	</h1>
 	<h2 class='page-subtitle'>
-		<?php echo $subtitle; ?>
+		<?php echo esc_html($subtitle); ?>
 	</h2>
 	<p id='not-found-homepage'>
-		<span class='relative hover-<?php echo $hover_class; ?>'>
+		<span class='relative hover-<?php echo esc_attr($hover_class); ?>'>
 			<a
 					class='button-link'
 					href='/'>
-				<?php echo $homepage; ?>
+				<?php echo esc_html($homepage); ?>
 			</a>
 		</span>
 	</p>

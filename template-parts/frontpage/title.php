@@ -9,14 +9,13 @@ if(!empty($title)):
 	$aos = get_query_var('section_title_aos');
 	$lax = get_query_var('section_title_lax');
 	$lax_class = $lax != '' ? 'lax' : '';
-	$fittext = get_theme_mod('typography_section_title_fittext', false) ? 'fit-text' : '';
 ?>
 
 <h2
-		class='section-title <?php echo $lax_class; ?> <?php echo $fittext; ?>'
-		<?php echo $lax; ?>
-		<?php echo $aos; ?>>
-	<?php echo $title; ?>
+		class='section-title <?php echo sanitize_html_class($lax_class); ?>'
+		<?php echo esc_attr($lax); ?>
+		<?php echo esc_attr($aos); ?>>
+	<?php echo esc_html($title); ?>
 </h2>
 
 <?php endif; ?>

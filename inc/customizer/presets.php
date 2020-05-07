@@ -113,7 +113,7 @@ Kirki::add_field('planeta_config', array(
 				'service_subtitle'											=> get_theme_mod('service_subtitle', ''),
 				'service_name'													=> get_theme_mod('service_name', esc_html__('Services', 'planeta')),
 				'tech_title'														=> get_theme_mod('tech_title', esc_html__('Recognize any of these?', 'planeta')),
-				'tech_subtitle'													=> get_theme_mod('tech_subtitle', esc_html__('We use them all!')),
+				'tech_subtitle'													=> get_theme_mod('tech_subtitle', esc_html__('We use them all!', 'planeta')),
 				'tech_layout'														=> array(
 					'title',
 					'items',

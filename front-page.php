@@ -11,9 +11,9 @@
 	?>
 
 	<section
-			id='<?php echo $slug; ?>'
-			name='<?php echo $name; ?>'
-			data-section-id='<?php echo $section; ?>'>
+			id='<?php echo esc_attr($slug); ?>'
+			name='<?php echo esc_attr($name); ?>'
+			data-section-id='<?php echo esc_attr($section); ?>'>
 		<?php
 			set_query_var('shape_section', $section);
 			get_template_part('template-parts/content/background'); ?>

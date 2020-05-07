@@ -56,7 +56,7 @@ function planeta_metabox_project_url_display()
 						type='url'
 						name='project_url'
 						class='widefat'
-						value='<?php echo $project_url; ?>'
+						value='<?php echo esc_url($project_url); ?>'
 					/>
 				</td>
 			</tr>
@@ -71,7 +71,7 @@ function planeta_metabox_project_url_display()
 						type='text'
 						name='project_url_text'
 						class='widefat'
-						value='<?php echo $project_url_text; ?>'
+						value='<?php echo esc_url($project_url_text); ?>'
 					/>
 				</td>
 			</tr>
@@ -187,7 +187,7 @@ function custom_project_column($column, $post_id)
 	{
 		case 'project_description':
 			$project_description = get_post_meta($post->ID, 'project_description', true);
-			echo $project_description;
+			echo esc_html($project_description);
 			break;
 	}
 }

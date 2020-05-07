@@ -25,7 +25,7 @@ function planeta_metabox_team_display()
 						type='text'
 						name='member_name'
 						class='widefat'
-						value='<?php echo $member_name; ?>'
+						value='<?php echo esc_attr($member_name); ?>'
 					/>
 				</td>
 			</tr>
@@ -40,7 +40,7 @@ function planeta_metabox_team_display()
 						type='text'
 						name='member_position'
 						class='widefat'
-						value='<?php echo $member_position; ?>'
+						value='<?php echo esc_attr($member_position); ?>'
 					/>
 				</td>
 			</tr>
@@ -89,7 +89,7 @@ function planeta_metabox_team_social_display()
 						type='url'
 						name='member_social_facebook'
 						class='widefat'
-						value='<?php echo $member_social_facebook; ?>'
+						value='<?php echo esc_url($member_social_facebook); ?>'
 					/>
 				</td>
 			</tr>
@@ -101,7 +101,7 @@ function planeta_metabox_team_social_display()
 						type='url'
 						name='member_social_twitter'
 						class='widefat'
-						value='<?php echo $member_social_twitter; ?>'
+						value='<?php echo esc_url($member_social_twitter); ?>'
 					/>
 				</td>
 			</tr>
@@ -113,7 +113,7 @@ function planeta_metabox_team_social_display()
 						type='url'
 						name='member_social_instagram'
 						class='widefat'
-						value='<?php echo $member_social_instagram; ?>'
+						value='<?php echo esc_url($member_social_instagram); ?>'
 					/>
 				</td>
 			</tr>
@@ -125,7 +125,7 @@ function planeta_metabox_team_social_display()
 						type='url'
 						name='member_social_linkedin'
 						class='widefat'
-						value='<?php echo $member_social_linkedin; ?>'
+						value='<?php echo esc_url($member_social_linkedin); ?>'
 					/>
 				</td>
 			</tr>
@@ -137,7 +137,7 @@ function planeta_metabox_team_social_display()
 						type='url'
 						name='member_social_skype'
 						class='widefat'
-						value='<?php echo $member_social_skype; ?>'
+						value='<?php echo esc_url($member_social_skype); ?>'
 					/>
 				</td>
 			</tr>
@@ -149,7 +149,7 @@ function planeta_metabox_team_social_display()
 						type='url'
 						name='member_social_github'
 						class='widefat'
-						value='<?php echo $member_social_github; ?>'
+						value='<?php echo esc_url($member_social_github); ?>'
 					/>
 				</td>
 			</tr>
@@ -295,17 +295,17 @@ function custom_team_column($column, $post_id)
 	{
 		case 'member_name':
 			$member_name = get_post_meta($post->ID, 'member_name', true);
-			echo $member_name;
+			echo esc_html($member_name);
 			break;
 
 		case 'member_position':
 			$member_position = get_post_meta($post->ID, 'member_position', true);
-			echo $member_position;
+			echo esc_html($member_position);
 			break;
 
 		case 'member_description':
 			$member_description = get_post_meta($post->ID, 'member_description', true);
-			echo $member_description;
+			echo esc_html($member_description);
 			break;
 	}
 }

@@ -13,13 +13,13 @@
 ?>
 <div
 		class='page-title-container'
-		style="background-image: url('<?php echo $featured_image; ?>');">
+		style="background-image: url('<?php echo esc_url($featured_image); ?>');">
 
 	<div class='page-title-overlay'></div>
 
 	<?php
 		$article_container = is_single() || is_page() ? 'article-container' : ''; ?>
-	<div class='<?php echo $article_container; ?> default-container'>
+	<div class='<?php echo sanitize_html_class($article_container); ?> default-container'>
 		<?php
 			if(has_tag() && !is_archive() && !is_search())
 			{
@@ -28,23 +28,23 @@
 				{
 					$tag_link = get_tag_link( $tag->term_id ); ?>
 					<span
-							class='relative <?php echo $hover_class; ?> title-tag'>
+							class='relative <?php echo sanitize_html_class($hover_class); ?> title-tag'>
 						<a
 								rel='tag'
-								title='<?php echo $tag->name; ?>'
-								href='<?php echo $tag_link; ?>'
-								class='button-link <?php echo $tag->slug ?>'>
-							<?php echo $tag->name; ?>
+								title='<?php echo esc_attr($tag->name); ?>'
+								href='<?php echo esc_url($tag_link); ?>'
+								class='button-link <?php echo sanitize_html_class($tag->slug); ?>'>
+							<?php echo esc_html($tag->name); ?>
 						</a>
 					</span>
 				<?php }
 			}
 		?>
 		<h2
-				class='page-title <?php echo $lax; ?>'
-				<?php echo $page_lax; ?>
-				<?php echo $page_aos; ?>>
-			<?php echo $title; ?>
+				class='page-title <?php echo sanitize_html_class($lax); ?>'
+				<?php echo esc_attr($page_lax); ?>
+				<?php echo esc_attr($page_aos); ?>>
+			<?php echo esc_html($title); ?>
 			<?php if(is_search()): ?>
 				<?php get_search_form(); ?>
 			<?php endif; ?>

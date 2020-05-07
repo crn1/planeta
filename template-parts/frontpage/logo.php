@@ -12,10 +12,10 @@ if(!empty($src)):
 ?>
 
 <img
-	src='<?php echo $src; ?>'
-	class='section-logo <?php echo $lax_class; ?>'
-	<?php echo $lax; ?>
-	<?php echo $aos; ?>
+	src='<?php echo esc_url($src); ?>'
+	class='section-logo <?php echo sanitize_html_class($lax_class); ?>'
+	<?php echo esc_attr($lax); ?>
+	<?php echo esc_attr($aos); ?>
 />
 
 <?php endif; ?>

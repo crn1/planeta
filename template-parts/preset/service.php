@@ -8,22 +8,22 @@
 
 <?php if(!empty($service_title)): ?>
 <h3 class='service-title card-title'>
-	<?php echo $service_title; ?>
+	<?php echo esc_html($service_title); ?>
 </h3>
 <?php endif; ?>
 
 <?php if(!empty($service_description)): ?>
 <p>
-	<?php echo $service_description; ?>
+	<?php echo esc_html($service_description); ?>
 </p>
 <?php endif; ?>
 
 <?php if(!empty($service_url)): ?>
 <p class='service-url card-url'>
-	<span class='relative <?php echo $hover_class; ?>'>
+	<span class='relative <?php echo sanitize_html_class($hover_class); ?>'>
 		<a
 				class='button-link'
-				href='<?php echo $service_url; ?>'>
+				href='<?php echo esc_url($service_url); ?>'>
 
 			<?php echo esc_html__('Read More...', 'planeta'); ?>
 

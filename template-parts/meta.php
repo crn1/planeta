@@ -6,9 +6,9 @@
 	<meta property='og:description' content='Wordpress and React.js Boilerplate' />
 	<meta property='og:image' content='CHANGE_ME' />
 	<meta property='og:image:width' content='CHANGE_ME' />
-	<meta property='og:image:height' content='CHANGE_ME' />-->
-	<meta property='og:url' content='<?php echo($url); ?>'>
-	<meta property='og:title' content='Project RedSigma'>
+	<meta property='og:image:height' content='CHANGE_ME' />
+	<meta property='og:url' content='<?php //echo $url; ?>'>-->
+	<meta property='og:title' content='Planeta'>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>

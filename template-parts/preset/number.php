@@ -13,28 +13,28 @@ $hover_class = get_query_var('hover_class', 'hover-none');
 <h3 class='number-container'>
 	<?php if(!empty($number_value)): ?>
 		<span class='card-title number-value'>
-			<?php echo $number_value ?>
+			<?php echo esc_html($number_value); ?>
 		</span>
 	<?php endif; ?>
 
 	<?php if(!empty($number_value)): ?>
 	<span class='number-of-what'>
-		<?php echo $number_of_what; ?>
+		<?php echo esc_html($number_of_what); ?>
 	</span>
 	<?php endif; ?>
 </h3>
 
 <?php if(!empty($number_value)): ?>
 <p class='number-description'>
-	<?php echo $number_description; ?>
+	<?php echo esc_html($number_description); ?>
 </p>
 <?php endif; ?>
 
 <?php if(!empty($number_url) && !empty($number_url_text)): ?>
 <p class='number-url card-url'>
-	<span class='relative <?php echo $hover_class; ?>'>
-		<a class='button-link' href='<?php echo $number_url; ?>'>
-			<?php echo $number_url_text; ?>
+	<span class='relative <?php echo sanitize_html_class($hover_class); ?>'>
+		<a class='button-link' href='<?php echo esc_url($number_url); ?>'>
+			<?php echo esc_html($number_url_text); ?>
 		</a>
 	</span>
 </p>
