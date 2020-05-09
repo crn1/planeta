@@ -164,10 +164,41 @@ function planeta_add_section_appearance($name)
 			'settings'			=> "${name}_masonry_num",
 			'default'				=> '2',
 			'choices'				=> array(
-				'two'							=> esc_html__('2', 'planeta'),
-				'three'						=> esc_html__('3', 'planeta'),
-				'four'						=> esc_html__('4', 'planeta'),
+				'2'							=> esc_html__('Two', 'planeta'),
+				'3'							=> esc_html__('Three', 'planeta'),
+				'4'							=> esc_html__('Four', 'planeta'),
 			),
+			'output'				=> array(
+				array(
+					'element'				=> "#${name}-items",
+					'property'			=> 'grid-template-columns',
+					'value_pattern'	=> "repeat(4, calc(25% - 2.5rem*3/4))",
+					'media_query'		=> '@media (min-width: 1200px)',
+					'exclude'				=> array('2', '3'),
+				),
+				array(
+					'element'				=> "#${name}-items",
+					'property'			=> 'grid-template-columns',
+					'value_pattern'	=> "repeat(3, calc(100%/3 - 2.5rem*2/3))",
+					'media_query'		=> '@media (min-width: 1200px)',
+					'exclude'				=> array('2', '4'),
+				),
+				array(
+					'element'				=> "#${name}-items",
+					'property'			=> 'grid-template-columns',
+					'value_pattern'	=> "repeat(3, calc(100%/3 - 2.5rem/2))",
+					'media_query'		=> '@media (min-width: 1200px)',
+					'exclude'				=> array('3', '4'),
+				),
+			),
+		));
+
+		Kirki::add_field('planeta_config', array(
+			'type'			=> 'toggle',
+			'label'			=> esc_html__('Enable Masonry', 'planeta'),
+			'section'		=> "${name}_appearance",
+			'settings'	=> "${name}_enable_masonry",
+			'default'		=> false,
 		));
 
 		Kirki::add_field('planeta_config', array(
@@ -187,6 +218,11 @@ function planeta_add_section_appearance($name)
 					'setting'								=> "${name}_masonry_num",
 					'operator'							=> '==',
 					'value'									=> '2',
+				),
+				array(
+					'setting'								=> "${name}_enable_masonry",
+					'operator'							=> '==',
+					'value'									=> true,
 				),
 			),
 			'output'		=> array(

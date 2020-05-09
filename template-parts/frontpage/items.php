@@ -26,7 +26,9 @@ $section = get_query_var('section'); ?>
 </div>
 <?php //endif; ?>
 
-<?php if(!in_array($section, array('tech', 'client'))): ?>
+<?php
+$enable_masonry = get_theme_mod("${section}_enable_masonry", false);
+if($enable_masonry): ?>
 	<?php get_template_part('template-parts/frontpage/macy'); ?>
 <?php endif; ?>
 

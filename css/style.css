@@ -613,26 +613,47 @@ section > .default-container > .section-title, section > .default-container > .s
   width: 100% !important;
 }
 section h1, section h2, section h3, section h4, section h5, section h6, section p {
+  word-break: break-all;
   margin: 0;
+}
+section span {
+  word-break: break-all;
+}
+.card-image-container {
+  text-align: center;
 }
 .card-image {
   object-fit: cover;
-  max-height: 512px;
-  max-width: 100%;
+  width: 100%;
   border-bottom: 2px solid;
   margin-bottom: 1rem;
+  height: 512px;
+}
+@media (max-width: 599px) {
+  .card-image {
+    height: 256px;
+  }
 }
 .card-title {
   line-height: 1;
 }
 .section-items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
   z-index: 100;
   color: inherit;
+  grid-template-columns: repeat(4, calc(25% - $spacing-groups*3/4));
+  grid-gap: 2.5rem;
+  max-width: 100%;
+}
+@media (max-width: 1199px) {
+  .section-items {
+    grid-template-columns: repeat(2, calc(50% - 2.5rem/2));
+  }
+}
+@media (max-width: 599px) {
+  .section-items {
+    grid-template-columns: 100%;
+  }
 }
 .card-info {
   display: flex;
@@ -650,15 +671,17 @@ section h1, section h2, section h3, section h4, section h5, section h6, section 
 .card-info > *:not(:last-child) {
   margin-bottom: 1rem;
 }
-.card {
+.section-buttons {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
 }
-.card-experience .description {
-  margin-top: 0 !important;
+.section-buttons span {
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
+  margin-bottom: 1rem;
 }
 .card-number .number-container {
   display: flex;
@@ -666,6 +689,7 @@ section h1, section h2, section h3, section h4, section h5, section h6, section 
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
+  text-align: center;
   min-height: 0;
   width: 100%;
   border-bottom: 2px solid;
@@ -704,24 +728,13 @@ section h1, section h2, section h3, section h4, section h5, section h6, section 
   padding-left: 0.5rem !important;
   padding-right: 0.5rem !important;
 }
-.section-buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.section-buttons span {
-  margin-left: 0.5rem !important;
-  margin-right: 0.5rem !important;
-  margin-bottom: 1rem;
-}
 #tech-items, #client-items {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  grid-gap: unset;
 }
 #tech-items .card-image, #client-items .card-image {
   max-width: 96px;
@@ -729,6 +742,16 @@ section h1, section h2, section h3, section h4, section h5, section h6, section 
   margin-left: 1rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
+}
+#tech-items .card-image, #client-items .card-image, #service-items .card-image {
+  height: unset;
+  width: unset;
+}
+@media (max-width: 599px) {
+  #tech-items .card-image, #client-items .card-image, #service-items .card-image {
+    height: unset;
+    width: unset;
+  }
 }
 #testimonial-items {
   position: relative;
@@ -785,7 +808,6 @@ section h1, section h2, section h3, section h4, section h5, section h6, section 
   font-weight: bold;
 }
 .card-price .price-tag {
-  word-break: break-all;
   font-size: 3rem;
   line-height: 1;
   padding-bottom: 0.5rem;

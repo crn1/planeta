@@ -30,16 +30,29 @@ section {
 	}
 
 	h1, h2, h3, h4, h5, h6, p {
+		word-break: break-all;
 		margin: 0;
 	}
+
+	span {
+		word-break: break-all;
+	}
+}
+
+.card-image-container {
+	text-align: center;
 }
 
 .card-image {
 	object-fit: cover;
-	max-height: 512px;
-	max-width: 100%;
+	width: 100%;
 	border-bottom: 2px solid;
 	margin-bottom: $spacing-inside-group;
+	height: 512px;
+	@include for-size(phone-only)
+	{
+		height: 256px;
+	}
 }
 
 .card-title {
@@ -47,9 +60,22 @@ section {
 }
 
 .section-items {
-	@include flexContainer();
+	display: grid;
 	z-index: $z-section-content;
 	color: inherit;
+	grid-template-columns: repeat(4, calc(25% - $spacing-groups*3/4));
+	grid-gap: $spacing-groups;
+	max-width: 100%;
+
+	@include for-size(laptop-and-down)
+	{
+		grid-template-columns: repeat(2, calc(50% - 2.5rem/2));
+	}
+
+	@include for-size(phone-only)
+	{
+		grid-template-columns: 100%;
+	}
 }
 
 .card-info {
@@ -67,19 +93,20 @@ section {
 	}
 }
 
-.card {
-	@include flexContainer($direction: column);
-}
+.section-buttons {
+	@include flexContainer();
 
-.card-experience {
-	.description {
-		margin-top: 0 !important;
+	span {
+		margin-left: $spacing-inside-group/2 !important;
+		margin-right: $spacing-inside-group/2 !important;
+		margin-bottom: $spacing-inside-group;
 	}
 }
 
 .card-number {
 	.number-container {
 		@include flexContainer($direction: column);
+		text-align: center;
 		min-height: 0;
 		width: 100%;
 		border-bottom: 2px solid;
@@ -125,18 +152,9 @@ section {
 
 }
 
-.section-buttons {
-	@include flexContainer();
-
-	span {
-		margin-left: $spacing-inside-group/2 !important;
-		margin-right: $spacing-inside-group/2 !important;
-		margin-bottom: $spacing-inside-group;
-	}
-}
-
 #tech-items, #client-items {
 	@include flexContainer();
+	grid-gap: unset;
 
 	.card-image {
 		max-width: 96px;
@@ -147,9 +165,25 @@ section {
 	}
 }
 
+#tech-items,
+#client-items,
+#service-items {
+	.card-image
+	{
+		height: unset;
+		width: unset;
+		@include for-size(phone-only)
+		{
+			height: unset;
+			width: unset;
+		}
+	}
+}
+
 #testimonial-items {
 	position: relative;
 }
+
 .card-testimonial {
 
 	.testimonial-excerpt {
@@ -206,7 +240,6 @@ section {
 	}
 
 	.price-tag {
-		word-break: break-all;
 		font-size: $variant-large;
 		line-height: 1;
 		padding-bottom: $spacing-text;

@@ -23,16 +23,18 @@
 			$image_lax = get_query_var('card_image_lax');
 			$image_lax_class = $image_lax != '' ? 'lax' : ''; ?>
 
-			<img
-				<?php
-					set_query_var('shape_section', "${section}_image");
-					get_template_part('template-parts/content/shape'); ?>
-				src='<?php echo esc_url($image_src); ?>'
-				alt='<?php echo esc_attr($image_alt); ?>'
-				class='card-image <?php echo sanitize_html_class($image_lax_class); ?>'
-				<?php echo esc_attr($image_aos); ?>
-				<?php echo esc_attr($image_lax); ?>
-			/>
+			<div class='card-image-container'>
+				<img
+					<?php
+						set_query_var('shape_section', "${section}_image");
+						get_template_part('template-parts/content/shape'); ?>
+					src='<?php echo esc_url($image_src); ?>'
+					alt='<?php echo esc_attr($image_alt); ?>'
+					class='card-image <?php echo sanitize_html_class($image_lax_class); ?>'
+					<?php echo esc_attr($image_aos); ?>
+					<?php echo esc_attr($image_lax); ?>
+				/>
+			</div>
 
 <?php
 	endif;

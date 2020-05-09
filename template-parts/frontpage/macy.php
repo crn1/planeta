@@ -2,6 +2,7 @@
 
 $section = get_query_var('section');
 $masonry_num = get_theme_mod("${section}_masonry_num", 2);
+$masonry_num = intval($masonry_num);
 
 switch($masonry_num)
 {

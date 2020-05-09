@@ -6,7 +6,7 @@
 ?>
 <div class='post-info'>
 	<div class='user'>
-		<?php echo esc_html($avatar); ?> <?php the_author(); ?>
+		<?php echo $avatar; ?> <?php the_author(); ?>
 		<?php echo !empty($date) ? " ─ " : ''; echo esc_html($date); ?>
 	</div>
 

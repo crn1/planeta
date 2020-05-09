@@ -24,8 +24,8 @@ if($render): ?>
 			return "<i alt='${alt}' class='icofont-simple-up'></i>";
 		}
 	}else{
-		$icon_class = get_theme_mod('scroll_top_icon', 'simple-up');
-		echo esc_html("<i class='icofont-${icon_class}'></i>");
+		$icon_class = sanitize_html_class(get_theme_mod('scroll_top_icon', 'simple-up'));
+		echo "<i class='icofont-${icon_class}'></i>";
 	}
 ?>
 
