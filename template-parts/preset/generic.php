@@ -23,7 +23,7 @@ if(!empty($content)): ?>
 				class='button-link'
 				href='<?php echo the_permalink(); ?>'>
 
-			<?php echo esc_html__('Read More...', 'planeta'); ?>
+			<?php echo get_query_var('read_more', 'Read More...'); ?>
 
 		</a>
 	</span>

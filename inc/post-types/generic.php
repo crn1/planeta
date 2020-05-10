@@ -4,14 +4,8 @@ function planeta_metabox_generic_display()
 {
 	global $post;
 	$generic_url = get_post_meta($post->ID, 'generic_url', true);
-	$generic_url_text = get_post_meta($post->ID, 'generic_url_text', true);
-	if(empty($generic_url_text))
-	{
-		$generic_url_text = esc_html__('Read More...', 'planeta');
-	}
 
 	$url = esc_html__('Button URL', 'planeta');
-	$url_text = esc_html__('Button URL Text', 'planeta');
 ?>
 	<fieldset>
 		<legend class='screen-reader-text'>
@@ -30,21 +24,6 @@ function planeta_metabox_generic_display()
 						name='generic_url'
 						class='widefat'
 						value='<?php echo esc_url($generic_url); ?>'
-					/>
-				</td>
-			</tr>
-			<tr>
-				<td class='first'>
-					<?php echo $url_text; ?>
-				</td>
-				<td>
-					<input
-						required
-						size='30'
-						type='text'
-						name='generic_url_text'
-						class='widefat'
-						value='<?php echo esc_attr($generic_url_text); ?>'
 					/>
 				</td>
 			</tr>
@@ -85,10 +64,6 @@ function planeta_metabox_generic_save_template($post_id, $index)
 		if(array_key_exists('generic_url', $_POST))
 		{
 			update_post_meta($post_id, 'generic_url', $_POST['generic_url']);
-		}
-		if(array_key_exists('generic_url_text', $_POST))
-		{
-			update_post_meta($post_id, 'generic_url_text', $_POST['generic_url_text']);
 		}
 	}
 }

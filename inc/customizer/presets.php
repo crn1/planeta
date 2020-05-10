@@ -13,10 +13,10 @@ Kirki::add_field('planeta_config', array(
 	'default'				=> 'none',
 	'choices'				=> array(
 		'none'					=> esc_html__('None (default)', 'planeta'),
-		'planeta'				=> esc_html__('Planeta', 'planeta'),
+		'retrowave'			=> esc_html__('Retrowave', 'planeta'),
 	),
 	'preset'      	=> array(
-		'planeta'    		=> array(
+		'retrowave'    		=> array(
 			'settings' 			=> array(
 
 				//General

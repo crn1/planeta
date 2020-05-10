@@ -1,4 +1,5 @@
 <?php
+
 $title = get_the_title();
 if(!empty($title)): ?>
 <h3 class='card-title'>
@@ -25,7 +26,7 @@ if(!empty($excerpt)): ?>
 				class='button-link'
 				href='<?php echo the_permalink(); ?>'>
 
-			<?php echo esc_html__('Read More...', 'planeta'); ?>
+			<?php echo get_query_var('read_more', 'Read More...'); ?>
 
 		</a>
 	</span>

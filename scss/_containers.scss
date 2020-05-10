@@ -42,6 +42,10 @@
 		width: 100%;
 	}
 
+	.page-title {
+		text-align: left;
+	}
+
 	.title-tag {
 		margin-bottom: $spacing-text;
 		&:not(last-child)
@@ -54,6 +58,7 @@
 			padding: $spacing-text/2 $spacing-text !important;
 		}
 	}
+
 }
 
 .social-container {

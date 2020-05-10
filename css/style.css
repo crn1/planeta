@@ -250,6 +250,9 @@ ol li::before {
   height: 100%;
   width: 100%;
 }
+.page-title-container .page-title {
+  text-align: left;
+}
 .page-title-container .title-tag {
   margin-bottom: 0.5rem;
 }

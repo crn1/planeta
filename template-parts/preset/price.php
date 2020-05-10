@@ -8,11 +8,6 @@ $price_highlight = get_post_meta($post->ID, 'price_highlight', true);
 $price_description = get_post_meta($post->ID, 'price_description', true);
 
 $price_url = get_post_meta(get_the_ID(), 'price_url', true);
-$price_url_text = get_post_meta(get_the_ID(), 'price_url_text', true);
-if(empty($price_url_text))
-{
-	$price_url_text = esc_html__('Read More...', 'planeta');
-}
 $hover_class = get_query_var('hover_class', 'hover-none');
 
 $image_src = get_the_post_thumbnail_url();
@@ -61,14 +56,14 @@ $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
 </p>
 <?php endif; ?>
 
-<?php if(!empty($price_url) && !empty($price_url_text)): ?>
+<?php if(!empty($price_url)): ?>
 <p class='card-url'>
 	<span class='relative <?php echo sanitize_html_class($hover_class); ?>'>
 		<a
 				class='button-link'
 				href='<?php echo esc_url($price_url); ?>'>
 
-			<?php echo esc_html($price_url_text); ?>
+			<?php echo get_query_var('read_more', 'Read More...'); ?>
 
 		</a>
 	</span>

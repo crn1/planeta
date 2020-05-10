@@ -47,7 +47,7 @@
 
 		<?php if(strpos($section, 'generic-') === 0): ?>
 			<?php get_template_part('template-parts/preset/generic'); ?>
-		<?php else: ?>
+		<?php elseif(!in_array($section, array('client', 'contact', 'gallery', 'tech'))): ?>
 			<?php get_template_part("template-parts/preset/${section}"); ?>
 		<?php endif; ?>
 

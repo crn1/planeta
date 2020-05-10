@@ -7,17 +7,11 @@ function planeta_metabox_number_display()
 	$number_of_what = get_post_meta($post->ID, 'number_of_what', true);
 	$number_description = get_post_meta($post->ID, 'number_description', true);
 	$number_url = get_post_meta($post->ID, 'number_url', true);
-	$number_url_text = get_post_meta($post->ID, 'number_url_text', true);
-	if(empty($number_url_text))
-	{
-		$number_url_text = esc_html__('Read More...', 'planeta');
-	}
 
 	$number = esc_html__('Number & Unit', 'planeta');
 	$of_what = esc_html__('Of What?', 'planeta');
 	$description = esc_html__('Description', 'planeta');
 	$url = esc_html__('Button URL', 'planeta');
-	$url_text = esc_html__('Button URL Text', 'planeta');
 ?>
 	<fieldset>
 		<legend class='screen-reader-text'>Number Information</legend>
@@ -80,20 +74,6 @@ function planeta_metabox_number_display()
 					/>
 				</td>
 			</tr>
-			<tr>
-				<td>
-					<?php echo $url_text; ?>
-				</td>
-				<td>
-					<input
-						size='30'
-						type='text'
-						name='number_url_text'
-						class='widefat'
-						value='<?php echo esc_attr($number_url_text); ?>'
-					/>
-				</td>
-			</tr>
 		</table>
 	</fieldset>
 <?php }
@@ -138,10 +118,6 @@ function planeta_metabox_number_save($post_id)
 		if(array_key_exists('number_url', $_POST))
 		{
 			update_post_meta($post_id, 'number_url', $_POST['number_url']);
-		}
-		if(array_key_exists('number_url_text', $_POST))
-		{
-			update_post_meta($post_id, 'number_url_text', $_POST['number_url_text']);
 		}
 	}
 }

@@ -13,3 +13,7 @@
 			$hover_class = get_theme_mod('typography_button_link_hover', 'none');
 			$hover_class = 'hover-' . $hover_class;
 			set_query_var('hover_class', $hover_class);
+
+			$read_more = esc_html__('Read More...', 'planeta');
+			set_query_var('read_more', $read_more);
+		?>
