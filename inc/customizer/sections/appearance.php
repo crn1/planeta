@@ -186,7 +186,7 @@ function planeta_add_section_appearance($name)
 				array(
 					'element'				=> "#${name}-items",
 					'property'			=> 'grid-template-columns',
-					'value_pattern'	=> "repeat(3, calc(100%/3 - 2.5rem/2))",
+					'value_pattern'	=> "repeat(2, calc(100%/2 - 2.5rem*1/2))",
 					'media_query'		=> '@media (min-width: 1200px)',
 					'exclude'				=> array('3', '4'),
 				),

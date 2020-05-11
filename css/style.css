@@ -616,11 +616,11 @@ section > .default-container > .section-title, section > .default-container > .s
   width: 100% !important;
 }
 section h1, section h2, section h3, section h4, section h5, section h6, section p {
-  word-break: break-all;
+  word-break: break-word;
   margin: 0;
 }
 section span {
-  word-break: break-all;
+  word-break: break-word;
 }
 .card-image-container {
   text-align: center;

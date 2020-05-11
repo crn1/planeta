@@ -5,11 +5,9 @@ function planeta_metabox_service_display()
 	global $post;
 	$service_title = get_post_meta($post->ID, 'service_title', true);
 	$service_description = get_post_meta($post->ID, 'service_description', true);
-	$service_url = get_post_meta($post->ID, 'service_url', true);
 
 	$title = esc_html__('Title', 'planeta');
 	$description = esc_html__('Description', 'planeta');
-	$url = esc_html__('URL', 'planeta');
 ?>
 	<fieldset>
 		<legend class='screen-reader-text'>Service Information</legend>
@@ -41,20 +39,6 @@ function planeta_metabox_service_display()
 							'quicktags'			=> false,
 							'teeny'					=> true,
 						)); ?>
-				</td>
-			</tr>
-			<tr>
-				<td class='first'>
-					<?php echo $url; ?>
-				</td>
-				<td>
-					<input
-						size='30'
-						type='url'
-						name='service_url'
-						class='widefat'
-						value='<?php echo esc_url($service_url); ?>'
-					/>
 				</td>
 			</tr>
 		</table>
@@ -93,10 +77,6 @@ function planeta_metabox_service_save($post_id)
 		if(array_key_exists('service_description', $_POST))
 		{
 			update_post_meta($post_id, 'service_description', $_POST['service_description']);
-		}
-		if(array_key_exists('service_url', $_POST))
-		{
-			update_post_meta($post_id, 'service_url', $_POST['service_url']);
 		}
 	}
 }
