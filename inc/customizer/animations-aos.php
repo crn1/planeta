@@ -2,7 +2,6 @@
 
 function planeta_add_animations_aos($section)
 {
-
 	Kirki::add_field('planeta_config', array(
 		'type'					=> 'select',
 		'label'					=> esc_html__('Animation Type', 'planeta'),
