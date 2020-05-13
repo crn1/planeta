@@ -24,7 +24,6 @@ $section = get_query_var('section'); ?>
 		endwhile; endif;
 	?>
 </div>
-<?php //endif; ?>
 
 <?php
 $enable_masonry = get_theme_mod("${section}_enable_masonry", false);
@@ -33,4 +32,3 @@ if($enable_masonry): ?>
 <?php endif; ?>
 
 <?php endif; ?>
-

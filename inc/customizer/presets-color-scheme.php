@@ -67,40 +67,40 @@ Kirki::add_field('planeta_config', array(
 	),
 	'preset'      	=> array(
 		'vulcano-light' 	=> array(
-			'settings' 				=> planeta_generate_color_scheme('#D50000', '#FFF9FB', '#000000'),
+			'settings' 				=> planeta_generate_color_scheme('#D50000', '#FFFFFF', '#000000'),
 		),
 		'vulcano-dark' 		=> array(
-			'settings' 				=> planeta_generate_color_scheme('#D50000', '#252627', '#FFFFFF'),
+			'settings' 				=> planeta_generate_color_scheme('#D50000', '#212121', '#FFFFFF'),
 		),
 		'tiger-light' 	=> array(
-			'settings' 				=> planeta_generate_color_scheme('#FD6A02', '#FFFBDB', '#000000'),
+			'settings' 				=> planeta_generate_color_scheme('#FD6A02', '#FFFFFF', '#000000'),
 		),
 		'tiger-dark' 		=> array(
-			'settings' 				=> planeta_generate_color_scheme('#FD6A02', '#020122', '#FFFFFF'),
+			'settings' 				=> planeta_generate_color_scheme('#FD6A02', '#212121', '#FFFFFF'),
 		),
 		'cyber-light' 	=> array(
-			'settings' 				=> planeta_generate_color_scheme('#FFD300', '#FDFFFC', '#000000'),
+			'settings' 				=> planeta_generate_color_scheme('#FFD300', '#FFFFFF', '#000000'),
 		),
 		'cyber-dark' 		=> array(
-			'settings' 				=> planeta_generate_color_scheme('#FFD300', '#161925', '#FFFFFF'),
+			'settings' 				=> planeta_generate_color_scheme('#FFD300', '#212121', '#FFFFFF'),
 		),
 		'neon-light' 	=> array(
 			'settings' 				=> planeta_generate_color_scheme('#39FF14', '#FFFFFF', '#000000'),
 		),
 		'neon-dark' 		=> array(
-			'settings' 				=> planeta_generate_color_scheme('#39FF14', '#2A2E2B', '#FFFFFF'),
+			'settings' 				=> planeta_generate_color_scheme('#39FF14', '#212121', '#FFFFFF'),
 		),
 		'sky-light' 			=> array(
-			'settings' 				=> planeta_generate_color_scheme('#01BFEE', '#EBFFFE', '#000000'),
+			'settings' 				=> planeta_generate_color_scheme('#01BFEE', '#FFFFFF', '#000000'),
 		),
 		'sky-dark' 				=> array(
-			'settings' 				=> planeta_generate_color_scheme('#01BFEE', '#000713', '#FFFFFF'),
+			'settings' 				=> planeta_generate_color_scheme('#01BFEE', '#212121', '#FFFFFF'),
 		),
 		'retrowave-light' => array(
-			'settings' 				=> planeta_generate_color_scheme('#FF2795', '#FDFDE8', '#000000'),
+			'settings' 				=> planeta_generate_color_scheme('#FF2795', '#FFFFFF', '#000000'),
 		),
 		'retrowave-dark' 	=> array(
-			'settings' 				=> planeta_generate_color_scheme('#FF2795', '#3C3C3B', '#FFFFFF'),
+			'settings' 				=> planeta_generate_color_scheme('#FF2795', '#212121', '#FFFFFF'),
 		),
 	),
 ));

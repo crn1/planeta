@@ -7,7 +7,7 @@ function planeta_add_animations_aos($section)
 		'label'					=> esc_html__('Animation Type', 'planeta'),
 		'settings'			=> "${section}_aos_type",
 		'section'				=> $section,
-		'default'				=> 'fade-in',
+		'default'				=> 'fade',
 		'choices'				=> array(
 			'fade'						=> esc_html__('Fade', 'planeta'),
 			'fade-up'					=> esc_html__('Fade Up', 'planeta'),
@@ -104,7 +104,7 @@ function planeta_add_animations_aos($section)
 
 	Kirki::add_field('planeta_config', array(
 		'type' 						=> 'toggle',
-		'settings'				=> "${section}_aos_advanced_opt",
+		'settings'				=> "${section}_aos_advanced_options",
 		'section'					=> $section,
 		'label'						=> esc_html__('Advanced Options', 'planeta'),
 		'default'					=> false,
@@ -135,7 +135,7 @@ function planeta_add_animations_aos($section)
 				'value'					=> 'aos',
 			),
 			array(
-				'setting'				=> "${section}_aos_advanced_opt",
+				'setting'				=> "${section}_aos_advanced_options",
 				'operator'			=> '==',
 				'value'					=> true,
 			),

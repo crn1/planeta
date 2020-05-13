@@ -2,7 +2,7 @@
 
 function planeta_add_animations($section, $title, $panel)
 {
-	$section = $section . '_anims';
+	$section .= '_anims';
 
 	Kirki::add_section($section, array(
 		'title'       => esc_html__($title, 'planeta'),
