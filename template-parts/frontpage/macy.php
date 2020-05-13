@@ -16,11 +16,11 @@ switch($masonry_num)
 <script>
 	Macy({
 		container: '#<?php echo esc_js($section); ?>-items',
-		columns: <?php echo intval(esc_js($masonry_num)); ?>,
+		columns: <?php echo intval(json_encode($masonry_num)); ?>,
 		breakAt: {
 			900: 2,
 			600: 1,
 		},
-		margin: <?php echo intval(esc_js($margin)); ?>,
+		margin: <?php echo intval(json_encode($margin)); ?>,
 	})
 </script>

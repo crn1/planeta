@@ -13,8 +13,8 @@ if(!empty($title)):
 
 <h2
 		class='section-title <?php echo sanitize_html_class($lax_class); ?>'
-		<?php echo esc_attr($lax); ?>
-		<?php echo esc_attr($aos); ?>>
+		<?php echo $lax; ?>
+		<?php echo $aos; ?>>
 	<?php echo esc_html($title); ?>
 </h2>
 

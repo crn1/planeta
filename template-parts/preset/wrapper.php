@@ -31,8 +31,8 @@
 					src='<?php echo esc_url($image_src); ?>'
 					alt='<?php echo esc_attr($image_alt); ?>'
 					class='card-image <?php echo sanitize_html_class($image_lax_class); ?>'
-					<?php echo esc_attr($image_aos); ?>
-					<?php echo esc_attr($image_lax); ?>
+					<?php echo $image_aos; ?>
+					<?php echo $image_lax; ?>
 				/>
 			</div>
 
@@ -42,8 +42,8 @@
 
 	<div
 			class='card-info <?php echo sanitize_html_class($info_lax_class); ?>'
-			<?php echo esc_attr($info_aos); ?>
-			<?php echo esc_attr($info_lax); ?>>
+			<?php echo $info_aos; ?>
+			<?php echo $info_lax; ?>>
 
 		<?php if(strpos($section, 'generic-') === 0): ?>
 			<?php get_template_part('template-parts/preset/generic'); ?>

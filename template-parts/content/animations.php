@@ -14,6 +14,15 @@ if(get_theme_mod("${section}_trigger", 'none') == 'aos')
 	$temp_anchor 		= get_theme_mod("${section}_anchor", 'top-bottom');
 	$temp_once 			= get_theme_mod("${section}_once", 'false');
 	$temp_mirror 		= get_theme_mod("${section}_mirror", 'false');
+
+	$temp_effect 		= esc_attr($temp_effect);
+	$temp_duration 	= esc_attr($temp_duration);
+	$temp_delay 		= esc_attr($temp_delay);
+	$temp_easing 		= esc_attr($temp_easing);
+	$temp_anchor 		= esc_attr($temp_anchor);
+	$temp_once 			= esc_attr($temp_once);
+	$temp_mirror 		= esc_attr($temp_mirror);
+
 	$temp_aos = "
 		data-aos='${temp_effect}'
 		data-aos-duration='${temp_duration}'
@@ -30,9 +39,11 @@ if(get_theme_mod("${section}_trigger", 'none') == 'aos')
 	for($i = 1; $i <= 3; $i++)
 	{
 		$temp_effect = get_theme_mod("${section}_lax_type_${i}", 'none');
-		if($temp_effect == 'none') { continue; }
+		$temp_effect = esc_attr($temp_effect);
+		if($temp_effect === 'none') { continue; }
 
 		$temp_strength = get_theme_mod("${section}_strength_${temp_effect}_${i}", -1);
+		$temp_strength = esc_attr($temp_strength);
 		$temp_strength = $temp_strength != -1 ? '-' . $temp_strength : '';
 
 		$temp_lax .= $temp_effect . $temp_strength;
