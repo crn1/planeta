@@ -138,9 +138,9 @@ function typography_generator($args)
 			'label'						=> esc_html__('Border/Line Size', 'planeta'),
 			'section'					=> "typography_${section}",
 			'settings'				=> "typography_${section}_border_size",
-			'default'					=> 2,
+			'default'					=> 4,
 			'choices'					=> array(
-				'min'							=> 1,
+				'min'							=> 0,
 				'max'							=> 12,
 				'step'						=> 1,
 			),
@@ -160,15 +160,18 @@ function typography_generator($args)
 					'element'				=> array(
 						".hover-box-1 a::before",
 						".hover-box-1 a::after",
+						".hover-box-2 a",
+						".card-image",
 					),
 					'units'					=> 'px',
 					'property'			=> 'border-width',
 				),
 				array(
 					'element'				=> array(
-						".hover-box-2 a",
+						".testimonial-excerpt",
+						".number-container",
 					),
-					'units'					=> 'px',
+					'value_pattern'	=> '$px !important',
 					'property'			=> 'border-width',
 				),
 				array(
