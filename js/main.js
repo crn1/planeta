@@ -17,12 +17,12 @@ jQuery(document).ready(function($)
 		$('#menu-button').toggleClass('is-active')
 	})
 
-	// Convert card images to links
-	$('.card-image').on('click', function(event)
+	//Image link
+	$('.card-url').parent().parent().find('.card-image').css('cursor', 'pointer')
+	$('.card-url').parent().parent().find('.card-image').on('click', function(event)
 	{
-		//Popravi me
 		event.preventDefault()
-		window.location.href = $(this).parent().find('.card-url').find('a').attr('href')
+		window.location.href = $(this).parent().parent().find('.button-link').attr('href')
 	})
 
 	// Laxxx
