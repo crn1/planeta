@@ -9,42 +9,6 @@ if(class_exists('Kirki'))
 	include_once get_theme_file_path('inc/fallback.php');
 }
 
-//Planeta Welcome Menu
-require_once(get_template_directory() . '/welcome.php');
-function planeta_register_welcome_page() {
-  // add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
-	add_menu_page(
-		'Planeta',
-		'Planeta',
-		'manage_options',
-		'planeta_welcome',
-		'planeta_get_welcome_page',
-		'dashicons-admin-site-alt', 2);
-
-	add_submenu_page(
-		'planeta_welcome',
-		'Welcome',
-		'Welcome',
-		'manage_options',
-		'planeta_welcome',
-		'planeta_get_welcome_page', 0);
-}
-
-add_action('admin_menu', 'planeta_register_welcome_page');
-//Register Custom Post Types
-include_once get_theme_file_path('inc/post-types/testimonial.php');
-include_once get_theme_file_path('inc/post-types/project.php');
-include_once get_theme_file_path('inc/post-types/client.php');
-include_once get_theme_file_path('inc/post-types/tech.php');
-include_once get_theme_file_path('inc/post-types/service.php');
-include_once get_theme_file_path('inc/post-types/team.php');
-include_once get_theme_file_path('inc/post-types/number.php');
-include_once get_theme_file_path('inc/post-types/price.php');
-include_once get_theme_file_path('inc/post-types/generic.php');
-
-//Register Contact Form
-include_once get_theme_file_path('inc/contact-form.php');
-
 //Protected Posts
 include_once get_theme_file_path('inc/protected-posts.php');
 
@@ -139,11 +103,3 @@ function init_scripts()
 	wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'init_scripts');
-
-//Admin Styles
-function init_admin_styles()
-{
-  wp_enqueue_style('admin-styles', get_template_directory_uri() . '/css/admin.css');
-	wp_enqueue_script('admin-script', get_template_directory_uri() . '/js/admin.js', array('jquery'), '1.0.0', true);
-}
-add_action('admin_enqueue_scripts', 'init_admin_styles');
