@@ -41,7 +41,7 @@ function planeta_add_animations_lax($section)
 			'active_callback'	=> array(
 				array(
 					'setting'				=> "${section}_trigger",
-					'operator'			=> '==',
+					'operator'			=> '===',
 					'value'					=> 'lax'
 				),
 			),
@@ -59,12 +59,12 @@ function planeta_add_animations_lax($section)
 				'active_callback'	=> array(
 					array(
 						'setting'				=> "${section}_trigger",
-						'operator'			=> '==',
+						'operator'			=> '===',
 						'value'					=> 'lax'
 					),
 					array(
 						'setting'				=> "${section}_lax_type_${i}",
-						'operator'			=> '==',
+						'operator'			=> '===',
 						'value'					=> $key,
 					),
 				),

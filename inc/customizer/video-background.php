@@ -28,7 +28,7 @@ function planeta_add_video_background($section, $panel, $bg_output, $name = 'Bac
 		'active_callback'				=> array(
 			array(
 				'setting'								=> "${section}_bg_type",
-				'operator'							=> '==',
+				'operator'							=> '===',
 				'value'									=> 'video',
 			),
 		),
@@ -43,7 +43,7 @@ function planeta_add_video_background($section, $panel, $bg_output, $name = 'Bac
 		'active_callback'				=> array(
 			array(
 				'setting'								=> "${section}_bg_type",
-				'operator'							=> '==',
+				'operator'							=> '===',
 				'value'									=> 'video',
 			),
 		),
@@ -58,7 +58,7 @@ function planeta_add_video_background($section, $panel, $bg_output, $name = 'Bac
 		'active_callback'				=> array(
 			array(
 				'setting'								=> "${section}_bg_type",
-				'operator'							=> '==',
+				'operator'							=> '===',
 				'value'									=> 'video',
 			),
 		),
@@ -73,7 +73,7 @@ function planeta_add_video_background($section, $panel, $bg_output, $name = 'Bac
 		'active_callback'				=> array(
 			array(
 				'setting'								=> "${section}_bg_type",
-				'operator'							=> '==',
+				'operator'							=> '===',
 				'value'									=> 'video',
 			),
 		),
@@ -91,7 +91,7 @@ function planeta_add_video_background($section, $panel, $bg_output, $name = 'Bac
 		'active_callback'				=> array(
 			array(
 				'setting'								=> "${section}_bg_type",
-				'operator'							=> '==',
+				'operator'							=> '===',
 				'value'									=> 'video',
 			),
 		),
@@ -120,7 +120,7 @@ function planeta_add_video_background($section, $panel, $bg_output, $name = 'Bac
 		'active_callback'				=> array(
 			array(
 				'setting'								=> "${section}_bg_type",
-				'operator'							=> '==',
+				'operator'							=> '===',
 				'value'									=> 'static',
 			),
 		),

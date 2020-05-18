@@ -29,7 +29,7 @@
 		</div>
 
 		<?php
-			if($key == 0)
+			if($key === 0)
 			{
 				get_template_part('template-parts/content/scroll-down-icon');
 			} ?>

@@ -40,7 +40,7 @@ function planeta_add_animations_aos($section)
 		'active_callback'	=> array(
 			array(
 				'setting'				=> "${section}_trigger",
-				'operator'			=> '==',
+				'operator'			=> '===',
 				'value'					=> 'aos'
 			),
 		),
@@ -60,7 +60,7 @@ function planeta_add_animations_aos($section)
 		'active_callback' => array(
 			array(
 				'setting'				=> "${section}_trigger",
-				'operator'			=> '==',
+				'operator'			=> '===',
 				'value'					=> 'aos',
 			),
 		),
@@ -96,7 +96,7 @@ function planeta_add_animations_aos($section)
 		'active_callback' => array(
 			array(
 				'setting'				=> "${section}_trigger",
-				'operator'			=> '==',
+				'operator'			=> '===',
 				'value'					=> 'aos',
 			),
 		),
@@ -111,7 +111,7 @@ function planeta_add_animations_aos($section)
 		'active_callback' => array(
 			array(
 				'setting'				=> "${section}_trigger",
-				'operator'			=> '==',
+				'operator'			=> '===',
 				'value'					=> 'aos',
 			),
 		),
@@ -131,12 +131,12 @@ function planeta_add_animations_aos($section)
 		'active_callback' => array(
 			array(
 				'setting'				=> "${section}_trigger",
-				'operator'			=> '==',
+				'operator'			=> '===',
 				'value'					=> 'aos',
 			),
 			array(
 				'setting'				=> "${section}_aos_advanced_options",
-				'operator'			=> '==',
+				'operator'			=> '===',
 				'value'					=> true,
 			),
 		),
@@ -157,12 +157,12 @@ function planeta_add_animations_aos($section)
 		'active_callback' => array(
 			array(
 				'setting'				=> "${section}_trigger",
-				'operator'			=> '==',
+				'operator'			=> '===',
 				'value'					=> 'aos',
 			),
 			array(
 				'setting'				=> "${section}_aos_advanced_opt",
-				'operator'			=> '==',
+				'operator'			=> '===',
 				'value'					=> true,
 			),
 		),
@@ -188,12 +188,12 @@ function planeta_add_animations_aos($section)
 		'active_callback' => array(
 			array(
 				'setting'				=> "${section}_trigger",
-				'operator'			=> '==',
+				'operator'			=> '===',
 				'value'					=> 'aos',
 			),
 			array(
 				'setting'				=> "${section}_aos_advanced_opt",
-				'operator'			=> '==',
+				'operator'			=> '===',
 				'value'					=> true,
 			),
 		),
@@ -208,12 +208,12 @@ function planeta_add_animations_aos($section)
 		'active_callback' => array(
 			array(
 				'setting'				=> "${section}_trigger",
-				'operator'			=> '==',
+				'operator'			=> '===',
 				'value'					=> 'aos',
 			),
 			array(
 				'setting'				=> "${section}_aos_advanced_opt",
-				'operator'			=> '==',
+				'operator'			=> '===',
 				'value'					=> true,
 			),
 		),
@@ -228,12 +228,12 @@ function planeta_add_animations_aos($section)
 		'active_callback' => array(
 			array(
 				'setting'				=> "${section}_trigger",
-				'operator'			=> '==',
+				'operator'			=> '===',
 				'value'					=> 'aos',
 			),
 			array(
 				'setting'				=> "${section}_aos_advanced_opt",
-				'operator'			=> '==',
+				'operator'			=> '===',
 				'value'					=> true,
 			),
 		),

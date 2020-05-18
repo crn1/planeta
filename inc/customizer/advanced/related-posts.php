@@ -22,7 +22,7 @@ Kirki::add_field('planeta_config', array(
 	'active_callback'	=> array(
 		array(
 			'setting'				=> 'related_posts_enable',
-			'operator'			=> '==',
+			'operator'			=> '===',
 			'value'					=> true,
 		),
 	),

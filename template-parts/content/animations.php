@@ -5,7 +5,7 @@ $name = get_query_var('animation_name');
 $section = $name . '_anims';
 $temp_aos = '';
 $temp_lax = '';
-if(get_theme_mod("${section}_trigger", 'none') == 'aos')
+if(get_theme_mod("${section}_trigger", 'none') === 'aos')
 {
 	$temp_effect 		= get_theme_mod("${section}_aos_type", 'fade-in');
 	$temp_duration 	= get_theme_mod("${section}_duration", '400');
@@ -33,7 +33,7 @@ if(get_theme_mod("${section}_trigger", 'none') == 'aos')
 		data-aos-mirror='${temp_mirror}'";
 	$temp_aos = trim($temp_aos);
 
-}else if(get_theme_mod("${section}_trigger", 'none') == 'lax')
+}else if(get_theme_mod("${section}_trigger", 'none') === 'lax')
 {
 	$temp_lax = "data-lax-preset='";
 	for($i = 1; $i <= 3; $i++)

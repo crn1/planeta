@@ -217,7 +217,7 @@ Kirki::add_field('planeta_config', array(
 	'active_callback'	=> array(
 		array(
 			'setting'					=> 'header_colors_inherit',
-			'operator'				=> '==',
+			'operator'				=> '===',
 			'value'						=> false,
 		),
 	),

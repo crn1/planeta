@@ -38,7 +38,7 @@ $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
 	</span>
 	<?php endif; ?>
 
-	<span class='<?php echo $price_highlight == 'on' ? 'price-highlight' : ''; ?>'>
+	<span class='<?php echo $price_highlight === 'on' ? 'price-highlight' : ''; ?>'>
 		<?php echo esc_html($price_tag); ?>
 	</span>
 

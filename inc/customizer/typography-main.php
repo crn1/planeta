@@ -146,7 +146,7 @@ Kirki::add_field('planeta_config', array(
 	'active_callback'	=> array(
 		array(
 			'setting'					=> 'typography_main_fluid',
-			'operator'				=> '==',
+			'operator'				=> '===',
 			'value'						=> true,
 		),
 	),
@@ -175,7 +175,7 @@ Kirki::add_field('planeta_config', array(
 	'active_callback'	=> array(
 		array(
 			'setting'					=> 'typography_main_fluid',
-			'operator'				=> '==',
+			'operator'				=> '===',
 			'value'						=> false,
 		),
 	),
@@ -204,7 +204,7 @@ Kirki::add_field('planeta_config', array(
 	'active_callback'	=> array(
 		array(
 			'setting'					=> 'typography_main_fluid',
-			'operator'				=> '==',
+			'operator'				=> '===',
 			'value'						=> false,
 		),
 	),
@@ -233,7 +233,7 @@ Kirki::add_field('planeta_config', array(
 	'active_callback'	=> array(
 		array(
 			'setting'					=> 'typography_main_fluid',
-			'operator'				=> '==',
+			'operator'				=> '===',
 			'value'						=> false,
 		),
 	),
@@ -262,7 +262,7 @@ Kirki::add_field('planeta_config', array(
 	'active_callback'	=> array(
 		array(
 			'setting'					=> 'typography_main_fluid',
-			'operator'				=> '==',
+			'operator'				=> '===',
 			'value'						=> false,
 		),
 	),

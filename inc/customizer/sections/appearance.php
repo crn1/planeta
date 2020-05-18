@@ -137,7 +137,7 @@ function planeta_add_section_appearance($name)
 		'active_callback' => array(
 			array(
 				'setting'			=> "${name}_inherit_color",
-				'operator'		=> '==',
+				'operator'		=> '===',
 				'value'				=> false,
 			),
 		),
@@ -216,12 +216,12 @@ function planeta_add_section_appearance($name)
 			'active_callback'				=> array(
 				array(
 					'setting'								=> "${name}_masonry_num",
-					'operator'							=> '==',
+					'operator'							=> '===',
 					'value'									=> '2',
 				),
 				array(
 					'setting'								=> "${name}_enable_masonry",
-					'operator'							=> '==',
+					'operator'							=> '===',
 					'value'									=> true,
 				),
 			),

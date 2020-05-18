@@ -25,7 +25,7 @@ Kirki::add_field('planeta_config', array(
 	'active_callback'	=> array(
 		array(
 			'setting'			=> 'loading_enable',
-			'operator'		=> '==',
+			'operator'		=> '===',
 			'value'				=> true,
 		),
 	),
@@ -43,7 +43,7 @@ Kirki::add_field('planeta_config', array(
 	'active_callback'	=> array(
 		array(
 			'setting'			=> 'loading_enable',
-			'operator'		=> '==',
+			'operator'		=> '===',
 			'value'				=> true,
 		),
 	),
@@ -58,7 +58,7 @@ Kirki::add_field('planeta_config', array(
 	'active_callback'	=> array(
 		array(
 			'setting'			=> 'loading_enable',
-			'operator'		=> '==',
+			'operator'		=> '===',
 			'value'				=> true,
 		),
 	),
@@ -82,7 +82,7 @@ Kirki::add_field('planeta_config', array(
 	'active_callback'	=> array(
 		array(
 			'setting'					=> 'loading_enable',
-			'operator'				=> '==',
+			'operator'				=> '===',
 			'value'						=> true,
 		),
 	),

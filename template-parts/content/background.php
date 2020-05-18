@@ -7,7 +7,7 @@
 	$shape = ob_get_contents();
 	ob_end_clean();
 
-	$video = get_theme_mod("${section}_bg_type", 'static') == 'video' ? true : false;
+	$video = get_theme_mod("${section}_bg_type", 'static') === 'video' ? true : false;
 
 	$mp4 = get_theme_mod("${section}_video_url_mp4", '');
 	$webm = get_theme_mod("${section}_video_url_webm", '');

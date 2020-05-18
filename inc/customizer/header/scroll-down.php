@@ -22,7 +22,7 @@ Kirki::add_field('planeta_config', array(
 	'active_callback'	=> array(
 		array(
 			'setting'					=> 'scroll_down_enable',
-			'operator'				=> '==',
+			'operator'				=> '===',
 			'value'						=> true,
 		),
 	),
@@ -59,12 +59,12 @@ Kirki::add_field('planeta_config', array(
 	'active_callback'	=> array(
 		array(
 			'setting'				=> 'scroll_down_enable',
-			'operator'			=> '==',
+			'operator'			=> '===',
 			'value'					=> true,
 		),
 		array(
 			'setting'				=> 'scroll_down_enable_custom',
-			'operator'			=> '==',
+			'operator'			=> '===',
 			'value'					=> false,
 		),
 	),
@@ -114,12 +114,12 @@ Kirki::add_field('planeta_config', array(
 	'active_callback'	=> array(
 		array(
 			'setting'				=> 'scroll_down_enable',
-			'operator'			=> '==',
+			'operator'			=> '===',
 			'value'					=> true,
 		),
 		array(
 			'setting'				=> 'scroll_down_enable_custom',
-			'operator'			=> '==',
+			'operator'			=> '===',
 			'value'					=> true,
 		),
 	),
@@ -154,7 +154,7 @@ Kirki::add_field('planeta_config', array(
 	'active_callback'	=> array(
 		array(
 			'setting'				=> 'scroll_down_enable',
-			'operator'			=> '==',
+			'operator'			=> '===',
 			'value'					=> true,
 		),
 	),
