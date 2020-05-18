@@ -38,15 +38,21 @@ function typography_generator($args)
 			'variant'							=> 'regular',
 			'line-height'					=> '1.5',
 			'letter-spacing'			=> '0',
-			'text-align'					=> 'center',
 	), $args['default_typography']);
+
+	if($section !== 'button_link')
+	{
+		$typography = array_merge($typography, array(
+			'text-align'					=> 'center',
+		));
+	}
 
 	Kirki::add_field('planeta_config', array(
 		'type'        => 'toggle',
 		'label'       => esc_html__('Inherit Typography', 'planeta'),
 		'section'     => "typography_${section}",
 		'settings'    => "typography_${section}_inherit_typography",
-		'default'			=> false,
+		'default'			=> $section === 'button_link' ? true : false,
 	));
 
 	Kirki::add_field('planeta_config', array(
