@@ -24,15 +24,15 @@
 
 					<div id='footer-sidebar-container'>
 						<?php if(is_active_sidebar('footer-left')): ?>
-							<div id="footer-sidebar-left">
+							<ul id="footer-sidebar-left">
 								<?php dynamic_sidebar('footer-left'); ?>
-							</div>
+							</ul>
 						<?php endif; ?>
 
 						<?php if(is_active_sidebar('footer-right')): ?>
-							<div id="footer-sidebar-right">
+							<ul id="footer-sidebar-right">
 								<?php dynamic_sidebar('footer-right'); ?>
-							</div>
+							</ul>
 						<?php endif; ?>
 					</div>
 				</div>

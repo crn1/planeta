@@ -301,6 +301,10 @@ ol li::before {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 2.5rem;
 }
+#footer-sidebar-container #page-sidebar-left, #page-sidebar-container #page-sidebar-left, #footer-sidebar-container #footer-sidebar-left, #page-sidebar-container #footer-sidebar-left, #footer-sidebar-container #page-sidebar-right, #page-sidebar-container #page-sidebar-right, #footer-sidebar-container #footer-sidebar-right, #page-sidebar-container #footer-sidebar-right {
+  margin: 0;
+  padding: 0;
+}
 #footer-sidebar-container #page-sidebar-left > li, #page-sidebar-container #page-sidebar-left > li, #footer-sidebar-container #footer-sidebar-left > li, #page-sidebar-container #footer-sidebar-left > li, #footer-sidebar-container #page-sidebar-right > li, #page-sidebar-container #page-sidebar-right > li, #footer-sidebar-container #footer-sidebar-right > li, #page-sidebar-container #footer-sidebar-right > li {
   margin-bottom: 2.5rem;
 }
@@ -832,6 +836,9 @@ section span {
 }
 .card-price .price-highlight {
   font-size: 4rem;
+}
+.card-post .card-title {
+  margin-bottom: 0;
 }
 #comments h3.comments-title {
   margin-bottom: 0;

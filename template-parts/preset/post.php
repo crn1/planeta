@@ -4,11 +4,12 @@ $title = get_the_title();
 if(!empty($title)): ?>
 <h3 class='card-title'>
 	<?php echo $title; ?>
-	<?php
-		set_query_var('print_category', false);
-		get_template_part('template-parts/content/post-info'); ?>
 </h3>
 <?php endif; ?>
+
+<?php
+	set_query_var('print_category', false);
+	get_template_part('template-parts/content/post-info'); ?>
 
 <?php
 $excerpt = get_the_excerpt();

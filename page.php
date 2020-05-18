@@ -15,21 +15,20 @@
 
 		<div id='page-sidebar-container'>
 			<?php if(is_active_sidebar('page-sidebar-left')): ?>
-				<div id="page-sidebar-left">
+				<ul id="page-sidebar-left">
 					<?php dynamic_sidebar('page-sidebar-left'); ?>
-				</div>
+				</ul>
 			<?php endif; ?>
 
 			<?php if(is_active_sidebar('page-sidebar-right')): ?>
-				<div id="page-sidebar-right">
+				<ul id="page-sidebar-right">
 					<?php dynamic_sidebar('page-sidebar-right'); ?>
-				</div>
+				</ul>
 			<?php endif; ?>
 		</div>
 
 		<?php comments_template(); ?>
 	</article>
-
 
 	<?php endwhile; endif; ?>
 </main>

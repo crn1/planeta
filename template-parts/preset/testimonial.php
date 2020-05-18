@@ -32,7 +32,7 @@
 		/>
 	<?php endif; ?>
 
-	<span class='testimonial-author-info'>
+	<div class='testimonial-author-info'>
 		<?php if(!empty($author_name)): ?>
 		<p class='testimonial-author-name'>
 			<?php echo esc_html($author_name); ?>
@@ -44,5 +44,5 @@
 			<?php echo esc_html($author_about); ?>
 		</p>
 		<?php endif; ?>
-	</span>
+	</div>
 </div>

@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html
-		<?php language_attributes(); ?>
-		xmlns:fb='http://ogp.me/ns/fb#'>
-
+<html <?php language_attributes(); ?>>
 	<?php get_template_part('template-parts/meta'); ?>
 
 	<body <?php body_class(); ?>>

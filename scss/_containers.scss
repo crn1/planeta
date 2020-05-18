@@ -104,6 +104,8 @@
 	#footer-sidebar-left,
 	#page-sidebar-right,
 	#footer-sidebar-right {
+		margin: 0;
+		padding: 0;
 		& > li {
 			margin-bottom: $spacing-groups;
 		}

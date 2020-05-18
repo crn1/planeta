@@ -275,3 +275,9 @@ section {
 		font-size: $variant-extra-large;
 	}
 }
+
+.card-post {
+	.card-title {
+		margin-bottom: 0;
+	}
+}

@@ -5,14 +5,18 @@
 	$layout = get_theme_mod('sections_layout', array());
 
 	foreach($layout as $key => $section):
-		$name = get_theme_mod("${section}_name", 'Section');
-		$slug = sanitize_title($name);
 		set_query_var('section', $section);
 	?>
 
 	<section
-			id='<?php echo esc_attr($slug); ?>'
-			name='<?php echo esc_attr($name); ?>'
+		<?php
+			$name = get_theme_mod("${section}_name", 'Section');
+			$escaped_name = esc_attr($slug);
+			echo !empty($escaped_slug) ? "name='${escaped_name}'" : ''; ?>
+		<?php
+			$slug = sanitize_title($name);
+			$escaped_slug = esc_attr($slug);
+			echo !empty($escaped_slug) ? "id='${escaped_slug}'" : ''; ?>
 			data-section-id='<?php echo esc_attr($section); ?>'>
 		<?php
 			set_query_var('shape_section', $section);
