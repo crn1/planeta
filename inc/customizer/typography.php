@@ -117,7 +117,7 @@ function typography_generator($args)
 			'label'       => esc_html__('Border/Line Style', 'planeta'),
 			'section'     => "typography_${section}",
 			'settings'    => "typography_${section}_hover",
-			'default'     => 'none',
+			'default'     => 'box-1',
 			'choices'     => array(
 				'none'       			=> esc_html__('None (default)', 'planeta'),
 				'brackets-1'			=> esc_html__('Brackets 1', 'planeta'),
