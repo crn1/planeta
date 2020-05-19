@@ -126,6 +126,7 @@ Kirki::add_field('planeta_config', array(
 		array(
 			'element'					=> array(
 				'.button-link:hover',
+				'.button-link.active',
 				'.hover-brackets-1 > .button-link:hover::before',
 				'.hover-brackets-1 > .button-link:hover::after',
 				'.hover-brackets-2 > .button-link:hover::before',
@@ -162,8 +163,14 @@ Kirki::add_field('planeta_config', array(
 				'.hover-underline-6 > .button-link:hover::after',
 				'.hover-border-switch > .button-link:hover::before',
 				'.hover-border-switch > .button-link:hover::after',
-				'.hover-cross > .button-link:hover::before',
-				'.hover-cross > .button-link:hover::after',
+				'.hover-underline-3 > .button-link.active::before',
+				'.hover-underline-3 > .button-link.active::after',
+				'.hover-underline-4 > .button-link.active::before',
+				'.hover-underline-4 > .button-link.active::after',
+				'.hover-underline-5 > .button-link.active::before',
+				'.hover-underline-5 > .button-link.active::after',
+				'.hover-border-switch > .button-link.active::before',
+				'.hover-border-switch > .button-link.active::after',
 			),
 			'property'				=> 'background-color',
 			'value_pattern' 	=> 'primary_color !important',
@@ -176,6 +183,8 @@ Kirki::add_field('planeta_config', array(
 			'element'					=> array(
 				'.hover-box-1 > .button-link:hover',
 				'.hover-box-2 > .button-link:hover',
+				'.hover-box-1 > .button-link.active',
+				'.hover-box-2 > .button-link.hover',
 			),
 			'property'				=> 'border-color',
 			'value_pattern' 	=> 'primary_color !important',

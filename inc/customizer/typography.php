@@ -135,7 +135,6 @@ function typography_generator($args)
 				'box-1'						=> esc_html__('Box 1', 'planeta'),
 				'box-2'						=> esc_html__('Box 2', 'planeta'),
 				'border-switch'		=> esc_html__('Border Switch', 'planeta'),
-				'cross'						=> esc_html__('Cross', 'planeta'),
 			),
 		));
 

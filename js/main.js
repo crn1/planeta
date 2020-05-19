@@ -1,5 +1,21 @@
 jQuery(document).ready(function($)
 {
+	//Active links
+	var loc = window.location.href;
+	$('.button-link').each(function()
+	{
+		$(this).toggleClass('active', $(this).attr('href') === loc)
+	});
+
+	$('.button-link').on('click', function()
+	{
+		$('.button-link').each(function()
+		{
+			$(this).removeClass('active')
+		});
+		$(this).addClass('active')
+	})
+
 	//Scroll sections
 	$('.top-menu-item').on('click', function(event)
 	{
