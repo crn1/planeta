@@ -344,7 +344,7 @@ ol li::before {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   position: fixed;
   z-index: 98000;
   overflow-y: scroll;

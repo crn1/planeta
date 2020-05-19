@@ -136,7 +136,7 @@
 }
 
 #top-menu {
-	@include flexContainer($direction: column, $wrap: nowrap);
+	@include flexContainer($direction: column);
 	position: fixed;
 	z-index: $z-global-menu-overlay;
 	overflow-y: scroll;

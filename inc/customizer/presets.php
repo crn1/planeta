@@ -48,7 +48,7 @@ Kirki::add_field('planeta_config', array(
 				'testimonial_name'									=> get_theme_mod('testimonial_name', esc_html__('Testimonials', 'planeta')),
 				'number_title'											=> get_theme_mod('number_title', esc_html__('Not to brag, but...', 'planeta')),
 				'number_subtitle'										=> get_theme_mod('number_subtitle', ''),
-				'number_name'												=> get_theme_mod('number_name', esc_html__('Numbers', 'planeta')),
+				'number_name'												=> '',
 				'service_title'											=> get_theme_mod('service_title', esc_html__('Some services that you might find useful...', 'planeta')),
 				'service_subtitle'									=> get_theme_mod('service_subtitle', ''),
 				'service_name'											=> get_theme_mod('service_name', esc_html__('Services', 'planeta')),
@@ -59,7 +59,7 @@ Kirki::add_field('planeta_config', array(
 					'items',
 					'subtitle',
 				),
-				'tech_name'													=> get_theme_mod('tech_name', esc_html__('Tech Stack', 'planeta')),
+				'tech_name'													=> '',
 				'team_title'												=> get_theme_mod('team_title', esc_html__('The Crazy Ones', 'planeta')),
 				'team_subtitle'											=> get_theme_mod('team_subtitle', ''),
 				'team_name'													=> get_theme_mod('team_name', esc_html__('Team', 'planeta')),
@@ -68,7 +68,7 @@ Kirki::add_field('planeta_config', array(
 				'contact_name'											=> get_theme_mod('contact_name', esc_html__('Contact Us', 'planeta')),
 				'post_title'												=> get_theme_mod('post_title', esc_html__('What we wrote lately?', 'planeta')),
 				'post_subtitle'											=> get_theme_mod('post_subtitle', ''),
-				'post_name'													=> get_theme_mod('post_name', esc_html__('Posts', 'planeta')),
+				'post_name'													=> get_theme_mod('post_name', esc_html__('News', 'planeta')),
 
 				//Section Items
 				'team_masonry_num'									=> '4',
