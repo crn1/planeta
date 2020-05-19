@@ -263,15 +263,6 @@ ol li::before {
   border: 2px solid !important;
   padding: 0.25rem 0.5rem !important;
 }
-.social-container {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 0px;
-}
-.social-container a:not(:last-child) {
-  margin-right: 16px;
-}
 #loading-container {
   z-index: 99990;
   position: fixed;
@@ -353,31 +344,42 @@ ol li::before {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   position: fixed;
   z-index: 98000;
-  overflow: hidden;
+  overflow-y: scroll;
   background-color: #fff;
   transition: all 0.17s ease-in;
   width: 100vw;
   height: 100vh;
 }
-#top-menu .top-menu-item {
-  text-align: center;
-  display: inline-block !important;
-}
-#top-menu > .top-menu-item:not(:last-child) {
+#top-menu > div:not(:last-child) {
   margin-bottom: 1rem;
 }
-#top-menu > .social-container {
+#top-menu .social-container, #top-menu #header-menu {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
-#top-menu > .social-container .top-menu-item:not(:last-child) {
-  margin-right: 1rem;
+#top-menu .social-container span, #top-menu #header-menu span {
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+#top-menu #onepage-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#top-menu #onepage-menu span:not(:last-child) {
+  margin-bottom: 1rem;
+}
+#top-menu #header-menu a {
+  font-size: 1rem !important;
 }
 #top-menu.menu-top {
   top: -100vh;

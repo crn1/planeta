@@ -1,28 +1,50 @@
 <?php
 
-function nav_items()
+function header_menu()
 {
-	$layout = get_theme_mod('sections_layout', array());
-	foreach($layout as $section)
-	{
-		$name = get_theme_mod("${section}_name", 'Section');
-		if(!empty($name))
-		{
-			$hover_class = get_query_var('hover_class', 'hover-class');
-			$slug = sanitize_title($name); ?>
-			<span
-					class='top-menu-item relative <?php echo sanitize_html_class($hover_class); ?>'>
-				<a
-						href='<?php echo get_home_url() . '/#' . $slug; ?>'
-						data-section-id='<?php echo esc_attr($section); ?>'
-						class='button-link'>
-					<?php echo esc_html($name); ?>
-				</a>
-			</span>
+	$hover_class = get_query_var('hover_class', 'hover-none'); ?>
+
+	<div id='header-menu' class='relative'>
 		<?php
-		}
-	}
-}
+			$params = array(
+				'theme_location' 	=> 'header-menu',
+				'items_wrap'      => '%3$s',
+				'echo'						=> false,
+			);
+			$menu = strip_tags(wp_nav_menu($params), '<a>');
+			$menu = str_replace('<a', "<span class='relative ${hover_class}'><a class='button-link'", $menu);
+			$menu = str_replace('</a>', "</a></span>", $menu);
+			echo $menu;
+		?>
+	</div>
+<?php }
+
+function nav_items()
+{ ?>
+	<div id='onepage-menu'>
+		<?php
+		$layout = get_theme_mod('sections_layout', array());
+		foreach($layout as $section)
+		{
+			$name = get_theme_mod("${section}_name", 'Section');
+			if(!empty($name))
+			{
+				$hover_class = get_query_var('hover_class', 'hover-class');
+				$slug = sanitize_title($name); ?>
+				<span
+						class='relative <?php echo sanitize_html_class($hover_class); ?>'>
+					<a
+							href='<?php echo get_home_url() . '/#' . $slug; ?>'
+							data-section-id='<?php echo esc_attr($section); ?>'
+							class='button-link'>
+						<?php echo esc_html($name); ?>
+					</a>
+				</span>
+			<?php
+			}
+		} ?>
+	</div>
+<?php }
 
 function logo_container()
 {
@@ -84,6 +106,7 @@ $hamburger_class = 'hamburger--' . get_theme_mod('hamburger_class', '3dx');
 
 	<?php nav_items(); ?>
 	<?php get_template_part('template-parts/content/social'); ?>
+	<?php echo header_menu(); ?>
 </nav>
 
 <?php get_template_part('template-parts/content/scroll-top-button'); ?>

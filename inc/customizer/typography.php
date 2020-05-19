@@ -185,6 +185,7 @@ function typography_generator($args)
 						".hover-underline-2 a:hover::after",
 						".hover-underline-2 a:focus::after",
 						".hover-underline-3 a::before",
+						".hover-underline-3 a::after",
 						".hover-underline-4 a::before",
 						".hover-underline-4 a::after",
 						".hover-underline-5 a::before",

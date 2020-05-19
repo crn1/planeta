@@ -18,7 +18,7 @@
 						@include flexContainer($justify: flex-start);
 
 						img.avatar {
-							margin-right: 0.5rem;
+							margin-right: $spacing-text;
 							border-radius: 50%;
 						}
 

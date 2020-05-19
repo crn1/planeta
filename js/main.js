@@ -17,7 +17,7 @@ jQuery(document).ready(function($)
 	})
 
 	//Scroll sections
-	$('.top-menu-item').on('click', function(event)
+	$('#onepage-menu span').on('click', function(event)
 	{
 		//event.preventDefault()
 		if($('#top-menu').hasClass('is-active'))

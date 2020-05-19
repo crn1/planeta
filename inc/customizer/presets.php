@@ -42,6 +42,7 @@ Kirki::add_field('planeta_config', array(
 				'generic-1_name'										=> get_theme_mod('generic-1_name', esc_html__('Who We Are?', 'planeta')),
 				'project_title'											=> get_theme_mod('project_title', esc_html__('Some things we did...', 'planeta')),
 				'project_subtitle'									=> get_theme_mod('project_subtitle', ''),
+				'project_name'											=> get_theme_mod('project_name', esc_html__('Projects', 'planeta')),
 				'testimonial_title'									=> get_theme_mod('testimonial_title', esc_html__('What they have said?', 'planeta')),
 				'testimonial_subtitle'							=> get_theme_mod('testimonial_subtitle', ''),
 				'testimonial_name'									=> get_theme_mod('testimonial_name', esc_html__('Testimonials', 'planeta')),

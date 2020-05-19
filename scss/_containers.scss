@@ -5,7 +5,7 @@
 	position: relative;
 	padding-left: $spacing-inside-group;
 	padding-right: $spacing-inside-group;
-	max-width: 1500px; //defaultna vrednost
+	max-width: 1500px;
 }
 
 .article-container {
@@ -59,16 +59,6 @@
 		}
 	}
 
-}
-
-.social-container {
-	display: inline-flex;
-	flex-direction: row;
-	align-items: center;
-	margin-bottom: 0px;
-	a:not(:last-child) {
-		margin-right: 16px;
-	}
 }
 
 #loading-container {
@@ -146,29 +136,37 @@
 }
 
 #top-menu {
-	@include flexContainer($direction: column);
+	@include flexContainer($direction: column, $wrap: nowrap);
 	position: fixed;
 	z-index: $z-global-menu-overlay;
-	overflow: hidden;
+	overflow-y: scroll;
 	background-color: #FFFFFF;
 	transition: all $transition-fastest ease-in;
 	width: 100vw;
 	height: 100vh;
 
-	& .top-menu-item {
-		text-align: center;
-		display: inline-block !important;
-	}
-
-	& > .top-menu-item:not(:last-child) {
+	& > div:not(:last-child) {
 		margin-bottom: $spacing-inside-group;
 	}
 
-	& > .social-container {
+	.social-container, #header-menu {
 		@include flexContainer();
-		& .top-menu-item:not(:last-child) {
-			margin-right: $spacing-inside-group;
+		span {
+			margin-bottom: $spacing-inside-group;
+			margin-left: $spacing-inside-group/2;
+			margin-right: $spacing-inside-group/2;
 		}
+	}
+
+	#onepage-menu {
+		@include flexContainer($direction: column);
+		span:not(:last-child) {
+			margin-bottom: $spacing-inside-group;
+		}
+	}
+
+	#header-menu a {
+		font-size: 1rem !important;
 	}
 
 	&.menu {
@@ -267,7 +265,7 @@
 		align-items: center;
 
 		& > .avatar {
-			margin-right: 0.5rem;
+			margin-right: $spacing-text;
 			border-radius: 50%;
 		}
 	}

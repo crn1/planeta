@@ -44,7 +44,7 @@ $z-absolute-overlay:			99990;
 	align-items: $align;
 	justify-content: $justify;
 	flex-direction: $direction;
-	flex-wrap: wrap;
+	flex-wrap: $wrap;
 }
 
 @mixin for-size($size) {
