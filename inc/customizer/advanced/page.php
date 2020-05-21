@@ -43,31 +43,4 @@ Kirki::add_field('planeta_config', array(
 	),
 ));
 
-//Disabld until solution is found
-/*Kirki::add_field('planeta_config', array(
-	'type'			=> 'toggle',
-	'label'			=> esc_html__('Scroll Snap for Sections', 'planeta'),
-	'section'		=> 'page_section',
-	'settings'	=> 'page_scroll_snap',
-	'default'		=> true,
-	'transport'	=> 'auto',
-	'output'		=> array(
-		array(
-			'element'				=> '#scroll-container',
-			'property'			=> 'scroll-snap-type',
-			'value_pattern'	=> 'none',
-			'exclude'				=> array(true),
-		),
-		array(
-			'element'				=> array(
-				'#scroll-container > section',
-				'#scroll-container > footer',
-			),
-			'property'			=> 'scroll-snap-align',
-			'value_pattern'	=> 'none',
-			'exclude'				=> array(true),
-		),
-	),
-));*/
-
 ?>

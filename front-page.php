@@ -11,12 +11,7 @@
 	<section
 		<?php
 			$name = get_theme_mod("${section}_name", 'Section');
-			$escaped_name = esc_attr($slug);
-			echo !empty($escaped_slug) ? "name='${escaped_name}'" : ''; ?>
-		<?php
-			$slug = sanitize_title($name);
-			$escaped_slug = esc_attr($slug);
-			echo !empty($escaped_slug) ? "id='${escaped_slug}'" : ''; ?>
+			echo !empty($name) ? "id='" . esc_attr(sanitize_title($name)) . "'" : ''; ?>
 			data-section-id='<?php echo esc_attr($section); ?>'>
 		<?php
 			set_query_var('shape_section', $section);

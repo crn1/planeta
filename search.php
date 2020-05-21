@@ -3,9 +3,13 @@
 	get_template_part('template-parts/navbar'); ?>
 
 <main id='page'>
-	<?php
-		set_query_var('title', 'Search Results for:');
-		get_template_part('template-parts/content/title'); ?>
+
+	<div class='search-title-container default-container'>
+		<h2>
+			<?php esc_html_e('Search Results for:', 'planeta'); ?>
+		</h2>
+		<?php get_search_form(); ?>
+	</div>
 
 	<div
 			id='post-items'

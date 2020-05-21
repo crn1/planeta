@@ -3,6 +3,7 @@
 	z-index: $z-section-content;
 	border-bottom: 2px solid black;
 	display: flex;
+	width: 100%;
 	transition: all $transition-fast;
 
 	input[type='search'] {

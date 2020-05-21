@@ -3,9 +3,11 @@
 	get_template_part('template-parts/navbar'); ?>
 
 <main id='page'>
-	<?php
-		set_query_var('title', get_the_archive_title());
-		get_template_part('template-parts/content/title'); ?>
+	<div class='search-title-container default-container'>
+		<h2>
+			<?php the_archive_title(); ?>
+		</h2>
+	</div>
 
 	<div
 			id='post-items'

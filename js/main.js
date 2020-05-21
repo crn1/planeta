@@ -93,12 +93,4 @@ jQuery(document).ready(function($)
 
 	// Loading screen
 	$(window).on('load', function() { $('#loading-container').fadeOut(1170) })
-
-	//Scroll to hash
-	if(window.location.hash)
-	{
-		$('html, body').animate({
-			'scrollTop': $(window.location.hash).offset().top
-		}, 0);
-	}
 })
