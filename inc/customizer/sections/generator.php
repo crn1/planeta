@@ -54,9 +54,6 @@ function planeta_add_frontpage_section($name, $title)
 $posts = esc_html__('Posts', 'planeta');
 planeta_add_frontpage_section('post', $posts);
 
-//$testimonials = esc_html__('Testimonials', 'planeta');
-//planeta_add_frontpage_section('testimonial', $testimonials);
-
 $projects = esc_html__('Projects', 'planeta');
 planeta_add_frontpage_section('project', $projects);
 
@@ -65,9 +62,6 @@ planeta_add_frontpage_section('number', $numbers);
 
 $services = esc_html__('Services', 'planeta');
 planeta_add_frontpage_section('service', $services);
-
-$gallery = esc_html__('Gallery', 'planeta');
-planeta_add_frontpage_section('gallery', $gallery);
 
 $team = esc_html__('Team', 'planeta');
 planeta_add_frontpage_section('team', $team);

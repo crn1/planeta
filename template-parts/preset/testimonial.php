@@ -20,7 +20,7 @@
 <div class='testimonial-author-container'>
 
 <?php
-	$image_src = get_the_post_thumbnail_url();
+	$image_src = get_the_post_thumbnail_url(get_the_ID(), 'thumbnail');
 	$image_id = get_post_thumbnail_id(get_the_ID());
 	$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
 

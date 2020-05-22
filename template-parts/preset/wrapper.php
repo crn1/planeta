@@ -12,7 +12,8 @@
 
 <?php
 	if(!in_array($section, array('number', 'testimonial', 'price'))):
-		$image_src = get_the_post_thumbnail_url();
+		$image_size = in_array($section, array('client', 'tech')) ? 'medium' : 'large';
+		$image_src = get_the_post_thumbnail_url(get_the_ID(), $image_size);
 		$image_id = get_post_thumbnail_id(get_the_ID());
 		$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
 
