@@ -19,7 +19,7 @@ switch($masonry_num)
 		columns: <?php echo intval(json_encode($masonry_num)); ?>,
 		breakAt: {
 			900: 2,
-			600: 1,
+			500: 1,
 		},
 		margin: <?php echo intval(json_encode($margin)); ?>,
 	})

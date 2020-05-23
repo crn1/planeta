@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-	<?php get_template_part('template-parts/meta'); ?>
+	<head>
+		<meta charset='<?php bloginfo('charset'); ?>'>
+		<meta name='viewport' content='minimum-scale=1, width=device-width, initial-scale=1, shrink-to-fit=no' />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<?php wp_head(); ?>
+	</head>
 
 	<body <?php body_class(); ?>>
 

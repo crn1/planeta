@@ -35,7 +35,7 @@ function planeta_add_section_heading($name, $title)
 				'selector'				=> "section[data-section-id='${name}'] .section-title",
 				'render_callback'	=> function()
 				{
-					return get_theme_mod("${name}_title");
+					return esc_textarea(get_theme_mod("${name}_title", 'Section Title'));
 				}
 			),
 		),
@@ -52,7 +52,7 @@ function planeta_add_section_heading($name, $title)
 				'selector'				=> "section[data-section-id='${name}'] .section-subtitle",
 				'render_callback'	=> function()
 				{
-					return get_theme_mod("${name}_subtitle");
+					return esc_textarea(get_theme_mod("${name}_subtitle", 'Section Title'));
 				}
 			),
 		),

@@ -141,8 +141,8 @@ Kirki::add_field('planeta_config', array(
 		array(
 			'element'				=> '#scroll-down-button',
 			'property'			=> 'bottom',
-			'value_pattern'	=> 'calc(16px + ($ - 16) * ((100vw - 600px) / 600))',
-			'media_query'		=> '@media (min-width: 600px) and (max-width: 1199px)',
+			'value_pattern'	=> 'calc(16px + ($ - 16) * ((100vw - 500px) / 700))',
+			'media_query'		=> '@media (min-width: 500px) and (max-width: 1199px)',
 		),
 		array(
 			'element'				=> '#scroll-down-button',

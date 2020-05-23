@@ -155,8 +155,9 @@
 		margin-bottom: $spacing-inside-group;
 	}
 
-	.social-container, #header-menu {
+	#header-menu {
 		@include flexContainer();
+		font-size: $variant-small;
 		span {
 			margin-bottom: $spacing-inside-group;
 			margin-left: $spacing-inside-group/2;
@@ -164,15 +165,12 @@
 		}
 	}
 
+
 	#onepage-menu {
 		@include flexContainer($direction: column);
 		span:not(:last-child) {
 			margin-bottom: $spacing-inside-group;
 		}
-	}
-
-	#header-menu a {
-		font-size: 1rem !important;
 	}
 
 	&.menu {
@@ -206,6 +204,18 @@
 			&.is-active {
 				left: 0;
 			}
+		}
+	}
+}
+
+.social-container {
+	span {
+		margin-bottom: $spacing-inside-group;
+		margin-left: $spacing-inside-group;
+		margin-right: $spacing-inside-group;
+
+		a {
+			font-size: 36px;
 		}
 	}
 }

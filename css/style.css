@@ -368,14 +368,15 @@ ol li::before {
 #top-menu > div:not(:last-child) {
   margin-bottom: 1rem;
 }
-#top-menu .social-container, #top-menu #header-menu {
+#top-menu #header-menu {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  font-size: 0.75rem;
 }
-#top-menu .social-container span, #top-menu #header-menu span {
+#top-menu #header-menu span {
   margin-bottom: 1rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -389,9 +390,6 @@ ol li::before {
 }
 #top-menu #onepage-menu span:not(:last-child) {
   margin-bottom: 1rem;
-}
-#top-menu #header-menu a {
-  font-size: 1rem !important;
 }
 #top-menu.menu-top {
   top: -100vh;
@@ -420,6 +418,14 @@ ol li::before {
 }
 #top-menu.menu-right.is-active {
   left: 0;
+}
+.social-container span {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.social-container span a {
+  font-size: 36px;
 }
 #main-header {
   position: fixed;
@@ -581,7 +587,7 @@ ol li::before {
     font-size: 1rem;
   }
 }
-@media (min-width: 600px) and (max-width: 899px) {
+@media (min-width: 500px) and (max-width: 899px) {
   h1 {
     font-size: calc(1rem*$mod*mod*$mod*$mod*$mod);
   }
@@ -650,9 +656,14 @@ section span {
   margin-bottom: 1rem;
   height: 512px;
 }
-@media (max-width: 599px) {
+@media (min-width: 500px) and (max-width: 1199px) {
   .card-image {
-    height: 256px;
+    height: calc(208px + 208 * ((100vw - 500px) / 700));
+  }
+}
+@media (max-width: 499px) {
+  .card-image {
+    height: 208px;
   }
 }
 .card-title {
@@ -671,7 +682,7 @@ section span {
     grid-template-columns: repeat(2, calc(50% - 2.5rem/2));
   }
 }
-@media (max-width: 599px) {
+@media (max-width: 499px) {
   .section-items {
     grid-template-columns: 100%;
   }
@@ -745,9 +756,10 @@ section span {
   flex-direction: row;
   flex-wrap: wrap;
 }
-.card-team .member-social-container a {
-  padding-left: 0.5rem !important;
-  padding-right: 0.5rem !important;
+.card-team .member-social-container .button-link {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 24px;
 }
 #tech-items, #client-items {
   display: flex;
@@ -758,17 +770,27 @@ section span {
   grid-gap: unset;
 }
 #tech-items .card-image, #client-items .card-image {
-  max-width: 96px;
   border: 0;
   margin-left: 1rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
+  max-width: 96px;
+}
+@media (max-width: 499px) {
+  #tech-items .card-image, #client-items .card-image {
+    max-width: 48px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1199px) {
+  #tech-items .card-image, #client-items .card-image {
+    max-width: calc(48px + 48 * ((100vw - 500px) / 700));
+  }
 }
 #tech-items .card-image, #client-items .card-image, #service-items .card-image {
   height: unset;
   width: unset;
 }
-@media (max-width: 599px) {
+@media (max-width: 499px) {
   #tech-items .card-image, #client-items .card-image, #service-items .card-image {
     height: unset;
     width: unset;
@@ -800,11 +822,22 @@ section span {
   font-style: oblique;
 }
 .card-testimonial .testimonial-avatar {
-  width: 96px;
-  height: 96px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 1rem;
+  width: 96px;
+  height: 96px;
+}
+@media (min-width: 500px) and (max-width: 1199px) {
+  .card-testimonial .testimonial-avatar {
+    height: calc(48px + 48 * ((100vw - 500px) / 700));
+  }
+}
+@media (max-width: 499px) {
+  .card-testimonial .testimonial-avatar {
+    width: 48px;
+    height: 48px;
+  }
 }
 .card-testimonial .testimonial-author-name {
   font-size: 1.2rem;

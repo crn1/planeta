@@ -8,32 +8,6 @@ function planeta_add_section_appearance($name)
 	));
 
 	Kirki::add_field('planeta_config', array(
-		'type'			=> 'number',
-		'label'			=> esc_html__("Container Padding", 'planeta'),
-		'section'		=> "${name}_appearance",
-		'settings'	=> "${name}_container_padding",
-		'default'		=> 0,
-		'choices'		=> array(
-			'min'				=> 0,
-			'max'				=> 1280,
-			'step'			=> 10,
-		),
-		'transport'	=> 'auto',
-		'output'		=> array(
-			array(
-				'element'		=> "section[data-section-id='${name}']",
-				'property'	=> 'padding-left',
-				'units'			=> 'px',
-			),
-			array(
-				'element'		=> "section[data-section-id='${name}']",
-				'property'	=> 'padding-right',
-				'units'			=> 'px',
-			),
-		),
-	));
-
-	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
 		'label'			=> esc_html__("Container Spacing Top", 'planeta'),
 		'section'		=> "${name}_appearance",

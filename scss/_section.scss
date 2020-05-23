@@ -49,9 +49,13 @@ section {
 	border-bottom: 2px solid;
 	margin-bottom: $spacing-inside-group;
 	height: 512px;
+	@media (min-width: 500px) and (max-width: 1199px)
+	{
+		height: calc(208px + 208 * ((100vw - 500px) / 700));
+	}
 	@include for-size(phone-only)
 	{
-		height: 256px;
+		height: 208px;
 	}
 }
 
@@ -144,9 +148,10 @@ section {
 	.member-social-container {
 		@include flexContainer();
 
-		a {
-			padding-left: $spacing-text !important;
-			padding-right: $spacing-text !important;
+		.button-link {
+			padding-left: $spacing-text;
+			padding-right: $spacing-text;
+			font-size: 24px;
 		}
 	}
 
@@ -157,11 +162,16 @@ section {
 	grid-gap: unset;
 
 	.card-image {
-		max-width: 96px;
 		border: 0;
 		margin-left: $spacing-inside-group;
 		margin-right: $spacing-inside-group;
 		margin-bottom: $spacing-inside-group;
+		max-width: 96px;
+		@include for-size(phone-only) { max-width: 48px; }
+		@media (min-width: 500px) and (max-width: 1199px)
+		{
+			max-width: calc(48px + 48 * ((100vw - 500px) / 700));
+		}
 	}
 }
 
@@ -209,11 +219,20 @@ section {
 	}
 
 	.testimonial-avatar {
-		width: 96px;
-		height: 96px;
 		border-radius: 50%;
 		object-fit: cover;
 		margin-right: $spacing-inside-group;
+		width: 96px;
+		height: 96px;
+		@media (min-width: 500px) and (max-width: 1199px)
+		{
+			height: calc(48px + 48 * ((100vw - 500px) / 700));
+		}
+		@include for-size(phone-only)
+		{
+			width: 48px;
+			height: 48px;
+		}
 	}
 
 	.testimonial-author-name {

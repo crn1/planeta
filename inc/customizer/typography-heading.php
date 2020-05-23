@@ -71,7 +71,7 @@ function generate_setting($device_name='Desktop', $device='desktop', $media_quer
 
 generate_setting();
 generate_setting('Laptop', 'laptop', '(min-width: 900px) and (max-width: 1199px)', '1.333');
-generate_setting('Tablet', 'tablet', '(min-width: 600px) and (max-width: 899px)', '1.250');
-generate_setting('Smartphone', 'mobile', '(max-width: 599px)', '1.200');
+generate_setting('Tablet', 'tablet', '(min-width: 500px) and (max-width: 899px)', '1.250');
+generate_setting('Smartphone', 'mobile', '(max-width: 499px)', '1.200');
 
 ?>

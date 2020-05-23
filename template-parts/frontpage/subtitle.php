@@ -15,7 +15,7 @@ if(!empty($subtitle)):
 		class='section-subtitle <?php echo sanitize_html_class($lax_class); ?>'
 		<?php echo $lax; ?>
 		<?php echo $aos; ?>>
-	<?php echo esc_html($subtitle); ?>
+	<?php echo esc_textarea($subtitle); ?>
 </h3>
 
 <?php endif; ?>

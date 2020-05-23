@@ -222,6 +222,7 @@ typography_generator(array(
 	'section' 			=> 'button_link',
 	'class'					=> '.button-link',
 	'enable_hover'	=> true,
+	'enable_sizing'	=> false,
 ));
 
 typography_generator(array(
