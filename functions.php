@@ -1,16 +1,54 @@
 <?php
 
-include_once get_theme_file_path('inc/kirki-installer.php');
+//TGM Activation Plugin
+require_once get_template_directory() . '/inc/tgm/class-tgm-plugin-activation.php';
+add_action('tgmpa_register', 'planeta_register_required_plugins');
+function planeta_register_required_plugins()
+{
+	$plugins = array(
+		array(
+			'name'					=> 'Planeta Core',
+			'slug'					=> 'planeta-core',
+			'required'			=> true,
+			'source'				=> 'planeta-core.zip',
+			'version'				=> '1.0.0',
+		),
+		array(
+			'name'					=> 'Kirki Customizer Framework',
+			'slug'					=> 'kirki',
+			'required'			=> true,
+			'version'				=> '3.1.3',
+		),
+		array(
+			'name'					=> 'One Click Demo Import',
+			'slug'					=> 'one-click-demo-import',
+			'version'				=> '5.2.6',
+		),
+	);
 
+	$config = array(
+		'id'						=> 'planeta',
+		'default_path'	=> get_template_directory() . '/inc/tgm/plugins/',
+		'menu'					=> 'tgmpa-install-plugins',
+		'has_notices'		=> true,
+		'dismissable'		=> true,
+		'is_automatic'	=> true,
+		//'message'				=> 'Install the plugins',
+	);
+
+	tgmpa($plugins, $config);
+}
+
+//Fallback function for Kirki
 if(class_exists('Kirki'))
 {
-	include_once get_theme_file_path('inc/customizer.php');
+	include_once get_template_directory() . '/inc/customizer.php';
 }else{
-	include_once get_theme_file_path('inc/fallback.php');
+	include_once get_template_directory() . '/inc/kirki-fallback.php';
 }
 
 //Protected Posts
-include_once get_theme_file_path('inc/protected-posts.php');
+include_once get_template_directory() . '/inc/protected-posts.php';
 
 //Internationalization
 add_action('after_setup_theme', 'planeta_i18n_setup');
@@ -62,6 +100,7 @@ add_action('widgets_init', 'register_widgets');
 //Excerpt
 add_filter( 'excerpt_length', function($length){ return get_theme_mod('excerpt_length', 25); });
 
+add_action('wp_enqueue_scripts', 'init_scripts');
 function init_scripts()
 {
 	// Wordpress Required Styles
@@ -103,4 +142,3 @@ function init_scripts()
 	//wp_enqueue_style('main-style', get_template_directory_uri() . '/css/style.css', false, filemtime(get_stylesheet_directory() . '/style.css'), 'all');
 	wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true);
 }
-add_action('wp_enqueue_scripts', 'init_scripts');
