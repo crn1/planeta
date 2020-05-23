@@ -22,7 +22,7 @@ function planeta_register_required_plugins()
 		array(
 			'name'					=> 'One Click Demo Import',
 			'slug'					=> 'one-click-demo-import',
-			'version'				=> '5.2.6',
+			'version'				=> '2.5.2',
 		),
 	);
 
@@ -33,7 +33,6 @@ function planeta_register_required_plugins()
 		'has_notices'		=> true,
 		'dismissable'		=> true,
 		'is_automatic'	=> true,
-		//'message'				=> 'Install the plugins',
 	);
 
 	tgmpa($plugins, $config);
@@ -61,6 +60,20 @@ function planeta_i18n_setup()
 add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
 add_theme_support('automatic-feed-links');
+
+add_action('comment_form_before', 'planeta_enqueue_comments_reply');
+function planeta_enqueue_comments_reply()
+{
+	if(get_option('thread_comments'))
+	{
+		wp_enqueue_script('comment-reply');
+	}
+}
+
+if(!isset($content_width))
+{
+	$content_width = get_theme_mod('container_article', 700);
+}
 
 //Register all menus
 function register_menus()

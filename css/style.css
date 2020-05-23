@@ -9,6 +9,9 @@
   margin-top: 2.5rem !important;
   margin-bottom: 2.5rem !important;
 }
+.bypostauthor, .gallery-caption {
+  display: block;
+}
 .wp-caption-text {
   text-align: center;
   font-size: 80%;
@@ -184,6 +187,35 @@ ol li::before {
   border-radius: 50%;
   margin-right: 0.5rem;
   transition: all 0.27s;
+}
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
 }
 #search-form {
   position: relative;
