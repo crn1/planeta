@@ -326,6 +326,8 @@ Kirki::add_field('planeta_config', array(
 				'#protected-post-form:hover',
 				'#section-contact-form input[type="submit"]:hover',
 				'.gallery-icon:hover img',
+				".wp-block-search input[type='search']:hover",
+				".wp-block-search button:hover",
 			),
 			'property'				=> 'border-color',
 			'value_pattern' 	=> 'primary_color !important',

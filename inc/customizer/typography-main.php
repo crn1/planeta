@@ -68,6 +68,8 @@ Kirki::add_field('planeta_config', array(
 				'#section-contact-form input',
 				'#section-contact-form textarea',
 				'#search-form input[type="search"]',
+				".wp-block-search input[type='search']",
+				".wp-block-search button",
 				'body',
 				'.button-link',
 				'.hover-brackets-1 > .button-link::before',
@@ -99,6 +101,7 @@ Kirki::add_field('planeta_config', array(
 		),
 		array(
 			'element'				=> array(
+				'.post-page-numbers',
 				'.gallery-icon img',
 				'#section-contact-form input',
 				'#section-contact-form textarea',

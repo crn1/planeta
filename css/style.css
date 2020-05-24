@@ -55,7 +55,7 @@ a img.aligncenter {
   transition: all 0.27s;
   display: unset;
   padding: 0.5rem;
-  border: 2px solid black;
+  border: 2px solid;
 }
 .widget_archive ul, .widget_categories ul, .widget_meta ul, .widget_nav_menu ul, .widget_pages ul, .widget_recent_comments ul, .widget_recent_entries ul, .widget_rss ul {
   list-style-type: none;

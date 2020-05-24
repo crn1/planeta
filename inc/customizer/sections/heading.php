@@ -25,7 +25,7 @@ function planeta_add_section_heading($name, $title)
 	));
 
 	Kirki::add_field('planeta_config', array(
-		'type'			=> 'editor',
+		'type'			=> 'textarea',
 		'label'			=> esc_html__('Title', 'planeta'),
 		'section'		=> "${name}_heading",
 		'settings'	=> "${name}_title",
@@ -35,14 +35,14 @@ function planeta_add_section_heading($name, $title)
 				'selector'				=> "section[data-section-id='${name}'] .section-title",
 				'render_callback'	=> function()
 				{
-					return esc_textarea(get_theme_mod("${name}_title", 'Section Title'));
+					return get_theme_mod("${name}_title");
 				}
 			),
 		),
 	));
 
 	Kirki::add_field('planeta_config', array(
-		'type'			=> 'editor',
+		'type'			=> 'textarea',
 		'label'			=> esc_html__('Subtitle/Content', 'planeta'),
 		'section'		=> "${name}_heading",
 		'settings'	=> "${name}_subtitle",
@@ -52,7 +52,7 @@ function planeta_add_section_heading($name, $title)
 				'selector'				=> "section[data-section-id='${name}'] .section-subtitle",
 				'render_callback'	=> function()
 				{
-					return esc_textarea(get_theme_mod("${name}_subtitle", 'Section Title'));
+					return get_theme_mod("${name}_subtitle");
 				}
 			),
 		),

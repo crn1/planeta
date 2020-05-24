@@ -15,7 +15,7 @@ if(!empty($title)):
 		class='section-title <?php echo sanitize_html_class($lax_class); ?>'
 		<?php echo $lax; ?>
 		<?php echo $aos; ?>>
-	<?php echo esc_textarea($title); ?>
+	<?php echo esc_html($title); ?>
 </h2>
 
 <?php endif; ?>
