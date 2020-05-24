@@ -1,6 +1,6 @@
 <?php
 
-require_once(get_template_directory() . '/inc/customizer/video-background.php');
+require_once get_template_directory() . '/inc/customizer/video-background.php';
 
 Kirki::add_panel('footer_panel', array(
 	'title'       => esc_html__('Footer', 'planeta'),
@@ -81,7 +81,7 @@ planeta_add_video_background(
 );
 
 planeta_add_shape(array(
-	'title'					=> 'Background Shape',
+	'title'					=> esc_html__('Background Shape', 'planeta'),
 	'section'				=> 'footer',
 	'panel'					=> "footer_panel",
 	'height_output'	=> array(

@@ -5,7 +5,7 @@ function planeta_add_animations($section, $title, $panel)
 	$section .= '_anims';
 
 	Kirki::add_section($section, array(
-		'title'       => esc_html__($title, 'planeta'),
+		'title'       => $title,
 		'panel'       => $panel,
 	));
 
@@ -22,10 +22,10 @@ function planeta_add_animations($section, $title, $panel)
 		),
 	));
 
-	require_once(get_template_directory() . '/inc/customizer/animations-aos.php');
+	require_once get_template_directory() . '/inc/customizer/animations-aos.php';
 	planeta_add_animations_aos($section);
 
-	require_once(get_template_directory() . '/inc/customizer/animations-lax.php');
+	require_once get_template_directory() . '/inc/customizer/animations-lax.php';
 	planeta_add_animations_lax($section);
 }
 
@@ -33,11 +33,11 @@ Kirki::add_panel('animations_panel', array(
 	'title'       => esc_html__('Animations', 'planeta'),
 ));
 
-planeta_add_animations('section_title', 'Section Title', 'animations_panel');
-planeta_add_animations('section_subtitle', 'Section Subtitle', 'animations_panel');
-planeta_add_animations('section_logo', 'Section Image/Logo', 'animations_panel');
-planeta_add_animations('page_title', 'Page Title', 'animations_panel');
-planeta_add_animations('card_image', 'Item Image', 'animations_panel');
-planeta_add_animations('card_info', 'Item Info & Buttons', 'animations_panel');
+planeta_add_animations('section_title', esc_html__('Section Title', 'planeta'), 'animations_panel');
+planeta_add_animations('section_subtitle', esc_html__('Section Subtitle', 'planeta'), 'animations_panel');
+planeta_add_animations('section_logo', esc_html__('Section Image/Logo', 'planeta'), 'animations_panel');
+planeta_add_animations('page_title', esc_html__('Page Title', 'planeta'), 'animations_panel');
+planeta_add_animations('card_image', esc_html__('Item Image', 'planeta'), 'animations_panel');
+planeta_add_animations('card_info', esc_html__('Item Info & Buttons', 'planeta'), 'animations_panel');
 
 ?>

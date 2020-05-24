@@ -1,6 +1,6 @@
 <?php
 
-require_once(get_template_directory() . '/inc/customizer/animations-lax-list.php');
+require_once get_template_directory() . '/inc/customizer/animations-lax-list.php';
 
 function planeta_add_animations_lax($section)
 {

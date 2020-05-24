@@ -27,7 +27,7 @@ function typography_generator($args)
 	$name = $args['name'];
 
 	Kirki::add_section("typography_${section}", array(
-		'title'       => esc_html__($name, 'planeta'),
+		'title'       => $name,
 		'panel'       => 'typography_panel',
 	));
 
@@ -214,11 +214,11 @@ function typography_generator($args)
 	}
 }
 
-require_once(get_template_directory() . '/inc/customizer/typography-main.php');
-require_once(get_template_directory() . '/inc/customizer/typography-heading.php');
+require_once get_template_directory() . '/inc/customizer/typography-main.php';
+require_once get_template_directory() . '/inc/customizer/typography-heading.php';
 
 typography_generator(array(
-	'name' 					=> 'Button Link',
+	'name' 					=> esc_html__('Button Link', 'planeta'),
 	'section' 			=> 'button_link',
 	'class'					=> '.button-link',
 	'enable_hover'	=> true,
@@ -226,21 +226,21 @@ typography_generator(array(
 ));
 
 typography_generator(array(
-	'name'								=> 'Section Title',
+	'name'								=> esc_html__('Section Title', 'planeta'),
 	'section'							=> 'section_title',
 	'class'								=> '.section-title',
 	'default_size'				=> 4, //Promeni me!
 ));
 
 typography_generator(array(
-	'name'								=> 'Section Subtitle',
+	'name'								=> esc_html__('Section Subtitle', 'planeta'),
 	'section'							=> 'section_subtitle',
 	'class'								=> '.section-subtitle',
 	'default_size'				=> 1.2, //Promeni me!
 ));
 
 typography_generator(array(
-	'name'								=> 'Page Title',
+	'name'								=> esc_html__('Page Title', 'planeta'),
 	'section'							=> 'page_title',
 	'class'								=> '.page-title',
 	'default_size'				=> 4, //Promeni me!

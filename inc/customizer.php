@@ -24,7 +24,6 @@ require_once get_template_directory() . '/inc/customizer/sections/generator.php'
 require_once get_template_directory() . '/inc/customizer/animations.php';
 require_once get_template_directory() . '/inc/customizer/typography.php';
 require_once get_template_directory() . '/inc/customizer/colors.php';
-require_once get_template_directory() . '/inc/customizer/background.php';
 require_once get_template_directory() . '/inc/customizer/header.php';
 require_once get_template_directory() . '/inc/customizer/footer.php';
 

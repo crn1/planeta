@@ -8,7 +8,7 @@ Kirki::add_section('dummy_section', array(
 
 Kirki::add_field('planeta_config', array(
 	'type'					=> 'custom',
-	'label'					=> esc_html__(' ', 'planeta'),
+	'label'					=> ' ',
 	'section'				=> 'dummy_section',
 	'settings'			=> 'dummy_setting',
 	'default'				=> ' ',
@@ -18,7 +18,7 @@ Kirki::add_field('planeta_config', array(
 function planeta_add_frontpage_section($name, $title)
 {
 	Kirki::add_panel("${name}_panel", array(
-		'title' 		=> esc_html__($title, 'planeta'),
+		'title' 		=> $title,
 		'panel' 		=> "sections_panel",
 	));
 
@@ -34,7 +34,7 @@ function planeta_add_frontpage_section($name, $title)
 	);
 
 	planeta_add_shape(array(
-		'title'					=> 'Background Shape',
+		'title'					=> esc_html__('Background Shape', 'planeta'),
 		'section'				=> $name,
 		'panel'					=> "${name}_panel",
 		'height_output'	=> array(
@@ -45,7 +45,7 @@ function planeta_add_frontpage_section($name, $title)
 	));
 
 	planeta_add_shape(array(
-		'title'					=> 'Images Shape',
+		'title'					=> esc_html__('Images Shape', 'planeta'),
 		'section'				=> "${name}_image",
 		'panel'					=> "${name}_panel",
 	));

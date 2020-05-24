@@ -61,6 +61,18 @@ add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
 add_theme_support('automatic-feed-links');
 
+//Custom Background
+$defaults = array(
+	'default-color'          => '#212121',
+	'default-image'          => '',
+	'default-repeat'         => 'repeat',
+	'default-position-x'     => 'left',
+	'default-position-y'     => 'top',
+	'default-size'           => 'auto',
+	'default-attachment'     => 'scroll',
+);
+add_theme_support('custom-background', $defaults);
+
 add_action('comment_form_before', 'planeta_enqueue_comments_reply');
 function planeta_enqueue_comments_reply()
 {

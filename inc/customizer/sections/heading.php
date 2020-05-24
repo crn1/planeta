@@ -12,7 +12,7 @@ function planeta_add_section_heading($name, $title)
 		'label'			=> esc_html__('Name', 'planeta'),
 		'section'		=> "${name}_heading",
 		'settings'	=> "${name}_name",
-		'default'		=> esc_html__($title, 'planeta'),
+		'default'		=> esc_html__('Section', 'planeta'),
 		'partial_refresh'	=> array(
 			"${name}_name"		=> array(
 				'selector'				=> "a[data-section-id='${name}']",
