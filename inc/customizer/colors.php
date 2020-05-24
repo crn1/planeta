@@ -1,9 +1,5 @@
 <?php
 
-Kirki::add_section('primary_color_section', array(
-	'title'	=> esc_html__('Primary Color', 'planeta'),
-));
-
 function planeta_generate_color_scheme($primary_color, $background_color, $text_color)
 {
 	return array(
@@ -52,7 +48,7 @@ Kirki::add_field('planeta_config', array(
 	'type'					=> 'select',
 	'label'					=> esc_html__('Color Scheme', 'planeta'),
 	'settings'			=> 'colors_scheme',
-	'section'				=> 'primary_color_section',
+	'section'				=> 'colors',
 	'default'				=> 'none',
 	'choices'				=> array(
 		'none'						=> esc_html__('None (default)', 'planeta'),
@@ -113,7 +109,7 @@ Kirki::add_field('planeta_config', array(
 	'type'			=> 'toggle',
 	'settings'	=> 'primary_color_enable',
 	'label'			=> esc_html__('Enable Primary Color', 'planeta'),
-	'section'		=> 'primary_color_section',
+	'section'		=> 'colors',
 	'default'		=> false,
 ));
 
@@ -121,7 +117,7 @@ Kirki::add_field('planeta_config', array(
 	'type'			=> 'color',
 	'settings'	=> 'primary_color',
 	'label'			=> esc_html__('Primary Color', 'planeta'),
-	'section'		=> 'primary_color_section',
+	'section'		=> 'colors',
 	'default'		=> '#000000',
 	'choices'		=> array(
 		'alpha'			=> true,
@@ -139,7 +135,7 @@ Kirki::add_field('planeta_config', array(
 	'type'			=> 'toggle',
 	'settings'	=> 'primary_color_menu_button',
 	'label'			=> esc_html__('Enable on Menu Button', 'planeta'),
-	'section'		=> 'primary_color_section',
+	'section'		=> 'colors',
 	'default'		=> true,
 	'output'		=> array(
 		array(
@@ -169,7 +165,7 @@ Kirki::add_field('planeta_config', array(
 	'type'			=> 'toggle',
 	'settings'	=> 'primary_color_scroll_top',
 	'label'			=> esc_html__('Enable on Scroll Top Button', 'planeta'),
-	'section'		=> 'primary_color_section',
+	'section'		=> 'colors',
 	'default'		=> true,
 	'output'		=> array(
 		array(
@@ -197,7 +193,7 @@ Kirki::add_field('planeta_config', array(
 	'type'			=> 'toggle',
 	'settings'	=> 'primary_color_scroll_down',
 	'label'			=> esc_html__('Enable on Scroll Down Button', 'planeta'),
-	'section'		=> 'primary_color_section',
+	'section'		=> 'colors',
 	'default'		=> false,
 	'output'		=> array(
 		array(
@@ -225,7 +221,7 @@ Kirki::add_field('planeta_config', array(
 	'type'			=> 'toggle',
 	'settings'	=> 'primary_color_button_links_hover',
 	'label'			=> esc_html__('Enable on Button Links (on Hover)', 'planeta'),
-	'section'		=> 'primary_color_section',
+	'section'		=> 'colors',
 	'default'		=> true,
 	'output'		=> array(
 		array(
@@ -312,7 +308,7 @@ Kirki::add_field('planeta_config', array(
 	'type'			=> 'toggle',
 	'settings'	=> 'primary_color_forms',
 	'label'			=> esc_html__('Enable on Forms', 'planeta'),
-	'section'		=> 'primary_color_section',
+	'section'		=> 'colors',
 	'default'		=> true,
 	'output'		=> array(
 		array(
@@ -364,7 +360,7 @@ Kirki::add_field('planeta_config', array(
 	'type'			=> 'toggle',
 	'settings'	=> 'primary_color_content',
 	'label'			=> esc_html__('Enable on Content', 'planeta'),
-	'section'		=> 'primary_color_section',
+	'section'		=> 'colors',
 	'default'		=> true,
 	'output'		=> array(
 		array(
