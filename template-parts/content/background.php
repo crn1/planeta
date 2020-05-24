@@ -15,11 +15,11 @@
 	$img = get_theme_mod("${section}_fallback_image_url", '');
 ?>
 <div
-	<?php echo esc_attr($shape); ?>
+	<?php echo $shape; ?>
 	class='background-overlay'></div>
 <?php if($video): ?>
 <video
-		<?php echo esc_attr($shape); ?>
+		<?php echo $shape; ?>
 		autoplay loop muted
 		class='video-background'
 		poster='<?php echo esc_url($img); ?>'>
