@@ -533,6 +533,9 @@ ol li::before {
 .page-navigation .next-link {
   float: right;
 }
+.no-results {
+  text-align: center;
+}
 .hamburger {
   padding: 1rem 1rem;
   display: inline-block;
@@ -776,9 +779,6 @@ section span {
 }
 .card-team {
   position: relative;
-}
-.card-team .card-image, .card-team .info > * {
-  margin-bottom: 1rem;
 }
 .card-team .member-title {
   text-align: center;

@@ -11,26 +11,21 @@ if(get_theme_mod("${section}_trigger", 'none') === 'aos')
 	$temp_duration 	= get_theme_mod("${section}_duration", '400');
 	$temp_delay 		= get_theme_mod("${section}_delay", '0');
 	$temp_easing 		= get_theme_mod("${section}_easing", 'linear');
-	$temp_anchor 		= get_theme_mod("${section}_anchor", 'top-bottom');
-	$temp_once 			= get_theme_mod("${section}_once", 'false');
-	$temp_mirror 		= get_theme_mod("${section}_mirror", 'false');
+	$temp_anchor 		= get_theme_mod("${section}_anchor", 'center-bottom');
 
 	$temp_effect 		= esc_attr($temp_effect);
 	$temp_duration 	= esc_attr($temp_duration);
 	$temp_delay 		= esc_attr($temp_delay);
 	$temp_easing 		= esc_attr($temp_easing);
 	$temp_anchor 		= esc_attr($temp_anchor);
-	$temp_once 			= esc_attr($temp_once);
-	$temp_mirror 		= esc_attr($temp_mirror);
 
 	$temp_aos = "
 		data-aos='${temp_effect}'
 		data-aos-duration='${temp_duration}'
 		data-aos-delay='${temp_delay}'
 		data-aos-easing='${temp_easing}'
-		data-aos-anchor-placement='${temp_anchor}'
-		data-aos-once='${temp_once}'
-		data-aos-mirror='${temp_mirror}'";
+		data-aos-once='true'
+		data-aos-anchor-placement='${temp_anchor}'";
 	$temp_aos = trim($temp_aos);
 
 }else if(get_theme_mod("${section}_trigger", 'none') === 'lax')

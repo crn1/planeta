@@ -103,21 +103,6 @@ function planeta_add_animations_aos($section)
 	));
 
 	Kirki::add_field('planeta_config', array(
-		'type' 						=> 'toggle',
-		'settings'				=> "${section}_aos_advanced_options",
-		'section'					=> $section,
-		'label'						=> esc_html__('Advanced Options', 'planeta'),
-		'default'					=> false,
-		'active_callback' => array(
-			array(
-				'setting'				=> "${section}_trigger",
-				'operator'			=> '===',
-				'value'					=> 'aos',
-			),
-		),
-	));
-
-	Kirki::add_field('planeta_config', array(
 		'type' 						=> 'slider',
 		'settings'				=> "${section}_delay",
 		'section'					=> $section,
@@ -134,11 +119,6 @@ function planeta_add_animations_aos($section)
 				'operator'			=> '===',
 				'value'					=> 'aos',
 			),
-			array(
-				'setting'				=> "${section}_aos_advanced_options",
-				'operator'			=> '===',
-				'value'					=> true,
-			),
 		),
 	));
 
@@ -148,7 +128,7 @@ function planeta_add_animations_aos($section)
 		'settings'				=> "${section}_offset",
 		'section'					=> $section,
 		'label'						=> esc_html__('Offset', 'planeta'),
-		'default'					=> 120,
+		'default'					=> 0,
 		'choices'					=> array(
 			'min'							=> 0,
 			'max'							=> 1280,
@@ -160,11 +140,6 @@ function planeta_add_animations_aos($section)
 				'operator'			=> '===',
 				'value'					=> 'aos',
 			),
-			array(
-				'setting'				=> "${section}_aos_advanced_options",
-				'operator'			=> '===',
-				'value'					=> true,
-			),
 		),
 	));
 
@@ -173,7 +148,7 @@ function planeta_add_animations_aos($section)
 		'settings'				=> "${section}_anchor",
 		'section'					=> $section,
 		'label'						=> esc_html__('Anchor Placement', 'planeta'),
-		'default'					=> 'top-center',
+		'default'					=> 'center-bottom',
 		'choices'					=> array(
 			'top-bottom'			=> esc_html__('Top Bottom', 'planeta'),
 			'top-center'			=> esc_html__('Top Center', 'planeta'),
@@ -185,46 +160,6 @@ function planeta_add_animations_aos($section)
 			'bottom-center'		=> esc_html__('Bottom Center', 'planeta'),
 			'bottom-top'			=> esc_html__('Bottom Top', 'planeta'),
 		),
-		'active_callback' => array(
-			array(
-				'setting'				=> "${section}_trigger",
-				'operator'			=> '===',
-				'value'					=> 'aos',
-			),
-			array(
-				'setting'				=> "${section}_aos_advanced_options",
-				'operator'			=> '===',
-				'value'					=> true,
-			),
-		),
-	));
-
-	Kirki::add_field('planeta_config', array(
-		'type' 						=> 'toggle',
-		'settings'				=> "${section}_once",
-		'section'					=> $section,
-		'label'						=> esc_html__('Once', 'planeta'),
-		'default'					=> false,
-		'active_callback' => array(
-			array(
-				'setting'				=> "${section}_trigger",
-				'operator'			=> '===',
-				'value'					=> 'aos',
-			),
-			array(
-				'setting'				=> "${section}_aos_advanced_options",
-				'operator'			=> '===',
-				'value'					=> true,
-			),
-		),
-	));
-
-	Kirki::add_field('planeta_config', array(
-		'type' 						=> 'toggle',
-		'settings'				=> "${section}_mirror",
-		'section'					=> $section,
-		'label'						=> esc_html__('Mirror', 'planeta'),
-		'default'					=> false,
 		'active_callback' => array(
 			array(
 				'setting'				=> "${section}_trigger",
