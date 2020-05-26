@@ -1,7 +1,7 @@
 <?php
 $items = get_theme_mod('social_menu_items', array());
 if(count($items)): ?>
-<div class='social-container'>
+<div id='social-container'>
 	<?php
 	foreach($items as $item): ?>
 		<span

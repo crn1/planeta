@@ -161,7 +161,7 @@ function planeta_add_animations_aos($section)
 				'value'					=> 'aos',
 			),
 			array(
-				'setting'				=> "${section}_aos_advanced_opt",
+				'setting'				=> "${section}_aos_advanced_options",
 				'operator'			=> '===',
 				'value'					=> true,
 			),
@@ -192,7 +192,7 @@ function planeta_add_animations_aos($section)
 				'value'					=> 'aos',
 			),
 			array(
-				'setting'				=> "${section}_aos_advanced_opt",
+				'setting'				=> "${section}_aos_advanced_options",
 				'operator'			=> '===',
 				'value'					=> true,
 			),
@@ -212,7 +212,7 @@ function planeta_add_animations_aos($section)
 				'value'					=> 'aos',
 			),
 			array(
-				'setting'				=> "${section}_aos_advanced_opt",
+				'setting'				=> "${section}_aos_advanced_options",
 				'operator'			=> '===',
 				'value'					=> true,
 			),
@@ -232,7 +232,7 @@ function planeta_add_animations_aos($section)
 				'value'					=> 'aos',
 			),
 			array(
-				'setting'				=> "${section}_aos_advanced_opt",
+				'setting'				=> "${section}_aos_advanced_options",
 				'operator'			=> '===',
 				'value'					=> true,
 			),

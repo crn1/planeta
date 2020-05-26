@@ -208,7 +208,10 @@
 	}
 }
 
-.social-container {
+#social-container {
+	@include flexContainer($display: inline-flex);
+	z-index: $z-global-menu-overlay;
+
 	span {
 		margin-bottom: $spacing-inside-group;
 		margin-left: $spacing-inside-group;
@@ -258,8 +261,8 @@
 	position: fixed;
 	margin-right: 16px;
 	margin-bottom: 16px;
-	right: 0;
-	bottom: 0;
+	right: 16px;
+	bottom: 16px;
 	cursor: pointer;
 	display: none;
 

@@ -8,7 +8,7 @@ if(!empty($subtitle)):
 	get_template_part('template-parts/content/animations');
 	$aos = get_query_var('section_subtitle_aos');
 	$lax = get_query_var('section_subtitle_lax');
-	$lax_class = $lax != '' ? 'lax' : '';
+	$lax_class = !empty($lax) ? 'lax' : '';
 ?>
 
 <h3

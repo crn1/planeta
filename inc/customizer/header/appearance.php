@@ -19,77 +19,11 @@ Kirki::add_field('planeta_config', array(
 	'transport'		=> 'auto',
 	'output'			=> array(
 		array(
-			'element'				=> '#logo-container',
-			'property'			=> 'left',
-			'value_pattern'	=> 'calc(16px + ($ - 16) * ((100vw - 500px) / 700))',
-			'media_query'		=> '@media (min-width: 500px) and (max-width: 1199px)',
-		),
-		array(
-			'element'				=> '#logo-container.reverse',
-			'property'			=> 'right',
-			'value_pattern'	=> 'calc(16px + ($ - 16) * ((100vw - 500px) / 700))',
-			'media_query'		=> '@media (min-width: 500px) and (max-width: 1199px)',
-		),
-		array(
-			'element'				=> '#hamburger-container',
-			'property'			=> 'right',
-			'value_pattern'	=> 'calc(16px + ($ - 16) * ((100vw - 500px) / 700))',
-			'media_query'		=> '@media (min-width: 500px) and (max-width: 1199px)',
-		),
-		array(
-			'element'				=> '#hamburger-container.reverse',
-			'property'			=> 'left',
-			'value_pattern'	=> 'calc(16px + ($ - 16) * ((100vw - 500px) / 700))',
-			'media_query'		=> '@media (min-width: 500px) and (max-width: 1199px)',
-		),
-		array(
-			'element'				=> '#scroll-top-button',
-			'property'			=> 'bottom',
-			'value_pattern'	=> 'calc(16px + ($ - 16) * ((100vw - 500px) / 700))',
-			'media_query'		=> '@media (min-width: 500px) and (max-width: 1199px)',
-		),
-		array(
-			'element'				=> '#scroll-top-button',
-			'property'			=> 'bottom',
-			'units'					=> 'px',
-			'media_query'		=> '@media (min-width: 1200px)',
-		),
-		array(
-			'element'				=> '#scroll-top-button',
-			'property'			=> 'right',
-			'value_pattern'	=> 'calc(16px + ($ - 16) * ((100vw - 500px) / 700))',
-			'media_query'		=> '@media (min-width: 500px) and (max-width: 1199px)',
-		),
-		array(
-			'element'				=> '#scroll-top-button',
-			'property'			=> 'right',
-			'units'					=> 'px',
-			'media_query'		=> '@media (min-width: 1200px)',
-		),
-		array(
 			'element'				=> array(
 				'#logo-container',
-				'#hamburger-container',
+				'#hamburger-container.reverse',
 			),
-			'property'			=> 'top',
-			'value_pattern'	=> 'calc(16px + ($ - 16) * ((100vw - 500px) / 700))',
-			'media_query'		=> '@media (min-width: 500px) and (max-width: 1199px)',
-		),
-		array(
-			'element'				=> array(
-				'#logo-container',
-				'#hamburger-container',
-			),
-			'property'			=> 'top',
-			'units'					=> 'px',
-			'media_query'		=> '@media (min-width: 1200px)',
-		),
-		array(
-			'element'				=> array(
-				'#logo-container.reverse',
-				'#hamburger-container',
-			),
-			'property'			=> 'right',
+			'property'			=> 'left',
 			'units'					=> 'px',
 			'media_query'		=> '@media (min-width: 1200px)',
 		),
@@ -99,8 +33,62 @@ Kirki::add_field('planeta_config', array(
 				'#hamburger-container.reverse',
 			),
 			'property'			=> 'left',
+			'value_pattern'	=> 'calc(16px + ($ - 16) * ((100vw - 500px) / 700))',
+			'media_query'		=> '@media (min-width: 500px) and (max-width: 1199px)',
+		),
+		array(
+			'element'				=> array(
+				'#logo-container.reverse',
+				'#hamburger-container',
+				'#scroll-top-button',
+			),
+			'property'			=> 'right',
 			'units'					=> 'px',
 			'media_query'		=> '@media (min-width: 1200px)',
+		),
+		array(
+			'element'				=> array(
+				'#logo-container.reverse',
+				'#hamburger-container',
+				'#scroll-top-button',
+			),
+			'property'			=> 'right',
+			'value_pattern'	=> 'calc(16px + ($ - 16) * ((100vw - 500px) / 700))',
+			'media_query'		=> '@media (min-width: 500px) and (max-width: 1199px)',
+		),
+		array(
+			'element'				=> array(
+				'#scroll-top-button',
+			),
+			'property'			=> 'bottom',
+			'units'					=> 'px',
+			'media_query'		=> '@media (min-width: 1200px)',
+		),
+		array(
+			'element'				=> array(
+				'#scroll-top-button',
+			),
+			'property'			=> 'bottom',
+			'value_pattern'	=> 'calc(16px + ($ - 16) * ((100vw - 500px) / 700))',
+			'media_query'		=> '@media (min-width: 500px) and (max-width: 1199px)',
+		),
+		array(
+			'element'				=> array(
+				'#logo-container',
+				'#hamburger-container',
+			),
+			'property'			=> 'top',
+			'units'					=> 'px',
+			'media_query'		=> '@media (min-width: 1200px)',
+		),
+		array(
+			'element'				=> array(
+				'#logo-container',
+				'#hamburger-container',
+			),
+			'property'			=> 'top',
+			'value_pattern'	=> 'calc(16px + ($ - 16) * ((100vw - 500px) / 700))',
+			'media_query'		=> '@media (min-width: 500px) and (max-width: 1199px)',
 		),
 	),
 ));

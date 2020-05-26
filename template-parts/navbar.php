@@ -105,7 +105,9 @@ $hamburger_class = 'hamburger--' . get_theme_mod('hamburger_class', '3dx');
 		class='<?php echo sanitize_html_class($navbar_class); ?>'>
 
 	<?php nav_items(); ?>
+
 	<?php get_template_part('template-parts/content/social'); ?>
+
 	<?php echo header_menu(); ?>
 </nav>
 

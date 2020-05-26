@@ -451,12 +451,20 @@ ol li::before {
 #top-menu.menu-right.is-active {
   left: 0;
 }
-.social-container span {
+#social-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  z-index: 98000;
+}
+#social-container span {
   margin-bottom: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
-.social-container span a {
+#social-container span a {
   font-size: 36px;
 }
 #main-header {
@@ -491,8 +499,8 @@ ol li::before {
   position: fixed;
   margin-right: 16px;
   margin-bottom: 16px;
-  right: 0;
-  bottom: 0;
+  right: 16px;
+  bottom: 16px;
   cursor: pointer;
   display: none;
 }
@@ -668,7 +676,7 @@ section > .default-container {
   flex-direction: column;
   flex-wrap: wrap;
 }
-section > .default-container > .section-title, section > .default-container > .section-subtitle, section > .default-container > .section-logo, section > .default-container > .section-items {
+section > .default-container > .section-title, section > .default-container > .section-subtitle, section > .default-container > .section-items {
   width: 100% !important;
 }
 section h1, section h2, section h3, section h4, section h5, section h6, section p {
