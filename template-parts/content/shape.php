@@ -150,13 +150,13 @@
 					$strength = 100 - $strength;
 					$strength /= 100;
 
-					$str_1 = rand(0, 100);
+					$str_1 = rand(15, 65);
 					$str_1_rev = 100 - $str_1;
-					$str_2 = rand(0, 100);
+					$str_2 = rand(15, 65);
 					$str_2_rev = 100 - $str_2;
-					$str_3 = rand(0, 100);
+					$str_3 = rand(15, 65);
 					$str_3_rev = 100 - $str_3;
-					$str_4 = rand(0, 100);
+					$str_4 = rand(15, 65);
 					$str_4_rev = 100 - $str_4;
 
 					echo "border-radius: ${str_1}% ${str_1_rev}% ${str_2}% ${str_2_rev}% / ${str_3}% ${str_4}% ${str_4_rev}% ${str_3_rev}%;";
