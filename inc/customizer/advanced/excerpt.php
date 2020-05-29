@@ -12,8 +12,8 @@ Kirki::add_field('planeta_config', array(
 	'section'		=> 'excerpt_section',
 	'default'		=> 25,
 	'choices'		=> array(
-		'min'				=> 1,
-		'max'				=> 120,
+		'min'				=> 0,
+		'max'				=> 100,
 		'step'			=> 1,
 	),
 ));

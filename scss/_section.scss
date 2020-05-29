@@ -40,6 +40,7 @@ section {
 
 .card-image-container {
 	text-align: center;
+	position: relative;
 }
 
 .card-image {
@@ -82,6 +83,8 @@ section {
 }
 
 .card-info {
+	position: relative;
+	z-index: $z-section-content;
 	@include flexContainer($direction: column);
 	flex-grow: 1;
 	width: 100%;

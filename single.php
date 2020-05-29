@@ -15,6 +15,9 @@
 		<?php the_content(); ?>
 		<?php wp_link_pages(); ?>
 
+		<?php
+			get_template_part('template-parts/content/tags'); ?>
+
 		<div id='page-sidebar-container'>
 			<?php if(is_active_sidebar('page-sidebar-left')): ?>
 				<ul id="page-sidebar-left">

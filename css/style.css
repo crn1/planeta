@@ -691,6 +691,7 @@ section span {
 }
 .card-image-container {
   text-align: center;
+  position: relative;
 }
 .card-image {
   object-fit: cover;
@@ -731,6 +732,8 @@ section span {
   }
 }
 .card-info {
+  position: relative;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
