@@ -22,10 +22,10 @@
 				src='<?php echo esc_url($image_url); ?>'
 		/>
 	<?php endif; ?>
-	<h1 class='page-title'>
+	<h1 class='not-found-title'>
 		<?php echo esc_html($title); ?>
 	</h1>
-	<h2 class='page-subtitle'>
+	<h2 class='not-found-subtitle'>
 		<?php echo esc_html($subtitle); ?>
 	</h2>
 	<p id='not-found-homepage'>

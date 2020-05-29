@@ -7,6 +7,15 @@
 	line-height: 1.2;
 }
 
+.wp-block-image {
+	margin: 0;
+}
+
+figcaption {
+	text-align: center;
+	font-size: $variant-small;
+}
+
 .wp-caption {
 	margin-top: $spacing-groups !important;
 	margin-bottom: $spacing-groups !important;
