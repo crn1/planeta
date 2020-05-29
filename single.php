@@ -17,11 +17,8 @@
 
 		<?php
 			get_template_part('template-parts/content/tags'); ?>
-
-		<div class='page-post-navigation'>
-			<?php previous_post_link('%link', esc_html__('Previous Post', 'planeta')); ?>
-			<?php next_post_link('%link', esc_html__('Next Post', 'planeta')); ?>
-		</div>
+		<?php
+			get_template_part('template-parts/content/post-navigation'); ?>
 
 		<div id='page-sidebar-container'>
 			<?php if(is_active_sidebar('page-sidebar-left')): ?>

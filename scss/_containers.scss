@@ -32,7 +32,7 @@
 		}
 	}
 
-	.page-post-navigation {
+	.post-navigation-container {
 		@include flexContainer($justify: space-between);
 	}
 }

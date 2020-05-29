@@ -264,6 +264,22 @@ ol li::before {
 .article-container > * {
   margin-bottom: 2.5rem;
 }
+.article-container .title-tag {
+  margin-bottom: 0.5rem;
+  border: 2px solid !important;
+  padding: 0.25rem 0.5rem !important;
+  font-size: 0.75rem;
+}
+.article-container .title-tag:not(last-child) {
+  margin-right: 0.5rem;
+}
+.article-container .page-post-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .page-title-container {
   background-position: center;
   background-repeat: no-repeat;
@@ -285,15 +301,6 @@ ol li::before {
 }
 .page-title-container .page-title {
   text-align: left;
-}
-.page-title-container .title-tag {
-  margin-bottom: 0.5rem;
-  border: 2px solid !important;
-  padding: 0.25rem 0.5rem !important;
-  font-size: 0.75rem;
-}
-.page-title-container .title-tag:not(last-child) {
-  margin-right: 0.5rem;
 }
 .search-title-container {
   min-height: 40vh;

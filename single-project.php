@@ -16,6 +16,10 @@
 
 		<?php
 			get_template_part('template-parts/content/tags'); ?>
+		<?php
+			set_query_var('post_nav_prev_title', esc_html__('Previous Project', 'planeta'));
+			set_query_var('post_nav_next_title', esc_html__('Next Project', 'planeta'));
+			get_template_part('template-parts/content/post-navigation'); ?>
 
 		<div id='page-sidebar-container'>
 			<?php if(is_active_sidebar('page-sidebar-left')): ?>

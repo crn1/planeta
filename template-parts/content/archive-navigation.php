@@ -1,4 +1,4 @@
-<div class='page-navigation'>
+<div class='archive-navigation'>
 	<?php $hover_class = get_query_var('hover_class', 'hover-none'); ?>
 
 	<span class='previous-link relative <?php echo esc_attr($hover_class); ?>'>
