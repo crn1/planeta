@@ -31,6 +31,10 @@
 			margin-right: $spacing-text;
 		}
 	}
+
+	.page-post-navigation {
+		@include flexContainer($justify: space-between);
+	}
 }
 
 .page-title-container {

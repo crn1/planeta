@@ -1,6 +1,9 @@
 <?php
 	if(has_tag() && !is_archive() && !is_search())
-	{
+	{ ?>
+		<p class='tags-container'>
+	<?php
+
 		$tags = get_the_tags();
 		foreach($tags as $tag)
 		{
@@ -12,6 +15,8 @@
 					class='title-tag button-link <?php echo sanitize_html_class($tag->slug); ?>'>
 				<?php echo esc_html($tag->name); ?>
 			</a>
-		<?php }
+		<?php } ?>
+		</p>
+	<?php
 	}
 ?>
