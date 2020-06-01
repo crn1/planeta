@@ -45,35 +45,35 @@ function typography_generator($args)
 		$typography = array_merge($typography, array(
 			'text-align'					=> 'center',
 		));
+
+		Kirki::add_field('planeta_config', array(
+			'type'        => 'toggle',
+			'label'       => esc_html__('Inherit Typography', 'planeta'),
+			'section'     => "typography_${section}",
+			'settings'    => "typography_${section}_inherit_typography",
+			'default'			=> $section === 'button_link' ? true : false,
+		));
+
+		Kirki::add_field('planeta_config', array(
+			'type'        => 'typography',
+			'label'       => esc_html__('Typography', 'planeta'),
+			'section'     => "typography_${section}",
+			'settings'    => "typography_${section}",
+			'default'			=> $typography,
+			'output'      => array(
+				array(
+					'element' 		=> $class,
+				),
+			),
+			'active_callback'	=> array(
+				array(
+					'setting'    	=> "typography_${section}_inherit_typography",
+					'operator'		=> '!=',
+					'value'				=> true,
+				),
+			),
+		));
 	}
-
-	Kirki::add_field('planeta_config', array(
-		'type'        => 'toggle',
-		'label'       => esc_html__('Inherit Typography', 'planeta'),
-		'section'     => "typography_${section}",
-		'settings'    => "typography_${section}_inherit_typography",
-		'default'			=> $section === 'button_link' ? true : false,
-	));
-
-	Kirki::add_field('planeta_config', array(
-		'type'        => 'typography',
-		'label'       => esc_html__('Typography', 'planeta'),
-		'section'     => "typography_${section}",
-		'settings'    => "typography_${section}",
-		'default'			=> $typography,
-		'output'      => array(
-			array(
-				'element' 		=> $class,
-			),
-		),
-		'active_callback'	=> array(
-			array(
-				'setting'    	=> "typography_${section}_inherit_typography",
-				'operator'		=> '!=',
-				'value'				=> true,
-			),
-		),
-	));
 
 	if($args['enable_sizing'])
 	{
