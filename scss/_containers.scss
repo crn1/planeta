@@ -21,17 +21,6 @@
 		margin-bottom: $spacing-groups;
 	}
 
-	.title-tag {
-		margin-bottom: $spacing-text;
-		border: 2px solid !important;
-		padding: $spacing-text/2 $spacing-text !important;
-		font-size: $variant-small;
-		&:not(last-child)
-		{
-			margin-right: $spacing-text;
-		}
-	}
-
 	.post-navigation-container {
 		@include flexContainer($justify: space-between);
 	}
