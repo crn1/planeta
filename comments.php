@@ -2,7 +2,7 @@
 
 if(post_password_required()) { return; }
 
-if(have_comments() && comments_open()): ?>
+if(have_comments()): ?>
 
 	<div id='comments'>
 		<?php
@@ -37,22 +37,26 @@ if(have_comments() && comments_open()): ?>
 		<?php previous_comments_link() ?>
 		<?php next_comments_link() ?>
 
-		<?php
-			$admin_url = admin_url('profile.php');
-			$logout_url = wp_logout_url(apply_filters('the_permalink', get_permalink()));
-
-			$args = array(
-				'comment_notes_before' 	=> '',
-				'class_submit'      		=> 'button-link',
-				'logged_in_as' 					=> "<p class='logged-in-as'>
-					<span>
-						Logged in as <a href='${admin_url}'>${user_identity}</a>.
-					</span>
-					<a href='${logout_url}' title='Log out of this account'>Log out</a>
-				</p>",
-			);
-			comment_form($args);
-		?>
 	</div>
 
 <?php endif; ?>
+
+<?php
+	if(comments_open())
+	{
+		$admin_url = admin_url('profile.php');
+		$logout_url = wp_logout_url(apply_filters('the_permalink', get_permalink()));
+
+		$args = array(
+			'comment_notes_before' 	=> '',
+			'class_submit'      		=> 'button-link',
+			'logged_in_as' 					=> "<p class='logged-in-as'>
+				<span>
+					Logged in as <a href='${admin_url}'>${user_identity}</a>.
+				</span>
+				<a href='${logout_url}' title='Log out of this account'>Log out</a>
+			</p>",
+		);
+		comment_form($args);
+	}
+?>

@@ -9,7 +9,7 @@ if(!empty($title)): ?>
 
 <?php
 $excerpt = get_the_excerpt();
-if(!empty($excerpt) && get_theme_mod('excerpt_length', 0) > 0): ?>
+if(!empty($excerpt) && get_theme_mod('excerpt_length', 25) > 0): ?>
 <p>
 	<?php echo $excerpt; ?>
 </p>

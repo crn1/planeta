@@ -10,9 +10,9 @@ if(have_posts()): ?>
 			the_post();
 			get_template_part('template-parts/preset/wrapper');
 		endwhile; ?>
-		<?php
-			get_template_part('template-parts/content/archive-navigation'); ?>
 	</div>
+	<?php
+		get_template_part('template-parts/content/archive-navigation'); ?>
 <?php
 else: ?>
 	<h2 class='no-results'>
