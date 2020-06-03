@@ -12,7 +12,7 @@ function planeta_add_section_appearance($name)
 		'label'			=> esc_html__("Container Spacing Top", 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_container_spacing_top",
-		'default'		=> 3,
+		'default'		=> 10,
 		'choices'		=> array(
 			'min'			=> 3,
 			'max'			=> 30,
@@ -54,7 +54,7 @@ function planeta_add_section_appearance($name)
 		'label'			=> esc_html__('Container Minimum Height', 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_min_height",
-		'default'		=> 100,
+		'default'		=> 50,
 		'transport'	=> 'auto',
 		'output'		=> array(
 			array(
@@ -79,8 +79,8 @@ function planeta_add_section_appearance($name)
 		'transport'	=> 'auto',
 		'output'		=> array(
 			array(
-				'element'				=> "section[data-section-id='${name}'] > .default-container > *:not(:last-child)",
-				'property'			=> 'margin-bottom',
+				'element'				=> "section[data-section-id='${name}'] > .default-container > *:not(:first-child)",
+				'property'			=> 'margin-top',
 				'units'					=> 'vh',
 			),
 		),
@@ -92,14 +92,17 @@ function planeta_add_section_appearance($name)
 	));
 
 	Kirki::add_field('planeta_config', array(
-		'type'					=> 'color',
-		'label'					=> esc_html__('Item Image Color Overlay', 'planeta'),
+		'type'					=> 'slider',
+		'label'					=> esc_html__('Number of Items', 'planeta'),
 		'section'				=> "${name}_appearance",
-		'settings'			=> "${name}_filters",
-		'default'				=> 'rgba(0, 0, 0, 0)',
-		'transport'			=> 'auto',
+		'settings'			=> "${name}_number_of_items",
+		'tooltip'				=> esc_html__('Set this option to zero to display unlimited items', 'planeta'),
+		'description'		=> esc_html__('Set this option to zero to display unlimited items', 'planeta'),
+		'default'				=> 0,
 		'choices'				=> array(
-			'alpha'					=> true,
+			'min'						=> 0,
+			'max'						=> 40,
+			'step'					=> 1,
 		),
 	));
 
