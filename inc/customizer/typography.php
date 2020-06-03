@@ -11,7 +11,6 @@ function typography_generator($args)
 		'section'							=> '',
 		'class'								=> '',
 		'enable_sizing'				=> true,
-		'enable_hover'				=> false,
 		'default_size'				=> 1,
 		'default_typography'	=> array(),
 		'size_units'					=> 'rem',
@@ -37,43 +36,37 @@ function typography_generator($args)
 			'font-family'					=> 'inherit',
 			'variant'							=> 'regular',
 			'line-height'					=> '1.5',
+			'text-align'					=> 'center',
 			'letter-spacing'			=> '0',
 	), $args['default_typography']);
 
-	if($section !== 'button_link')
-	{
-		$typography = array_merge($typography, array(
-			'text-align'					=> 'center',
-		));
+	Kirki::add_field('planeta_config', array(
+		'type'        => 'toggle',
+		'label'       => esc_html__('Inherit Typography', 'planeta'),
+		'section'     => "typography_${section}",
+		'settings'    => "typography_${section}_inherit_typography",
+		'default'			=> $section === 'button_link' ? true : false,
+	));
 
-		Kirki::add_field('planeta_config', array(
-			'type'        => 'toggle',
-			'label'       => esc_html__('Inherit Typography', 'planeta'),
-			'section'     => "typography_${section}",
-			'settings'    => "typography_${section}_inherit_typography",
-			'default'			=> $section === 'button_link' ? true : false,
-		));
-
-		Kirki::add_field('planeta_config', array(
-			'type'        => 'typography',
-			'label'       => esc_html__('Typography', 'planeta'),
-			'section'     => "typography_${section}",
-			'settings'    => "typography_${section}",
-			'default'			=> $typography,
-			'output'      => array(
-				array(
-					'element' 		=> $class,
-				),
+	Kirki::add_field('planeta_config', array(
+		'type'        => 'typography',
+		'label'       => esc_html__('Typography', 'planeta'),
+		'section'     => "typography_${section}",
+		'settings'    => "typography_${section}",
+		'default'			=> $typography,
+		'output'      => array(
+			array(
+				'element' 		=> $class,
 			),
-			'active_callback'	=> array(
-				array(
-					'setting'    	=> "typography_${section}_inherit_typography",
-					'operator'		=> '!=',
-					'value'				=> true,
-				),
+		),
+		'active_callback'	=> array(
+			array(
+				'setting'    	=> "typography_${section}_inherit_typography",
+				'operator'		=> '!=',
+				'value'				=> true,
 			),
-		));
-	}
+		),
+	));
 
 	if($args['enable_sizing'])
 	{
@@ -109,141 +102,30 @@ function typography_generator($args)
 			),
 		));
 	}
-
-	if($args['enable_hover'])
-	{
-		Kirki::add_field('planeta_config', array(
-			'type'        => 'select',
-			'label'       => esc_html__('Border/Line Style', 'planeta'),
-			'section'     => "typography_${section}",
-			'settings'    => "typography_${section}_hover",
-			'default'     => 'box-1',
-			'choices'     => array(
-				'none'       			=> esc_html__('None (default)', 'planeta'),
-				'brackets-1'			=> esc_html__('Brackets 1', 'planeta'),
-				'brackets-2'			=> esc_html__('Brackets 2', 'planeta'),
-				'brackets-3'			=> esc_html__('Brackets 3', 'planeta'),
-				'brackets-4'			=> esc_html__('Brackets 4', 'planeta'),
-				'brackets-5'			=> esc_html__('Brackets 5', 'planeta'),
-				'brackets-6'			=> esc_html__('Brackets 6', 'planeta'),
-				'underline-1'			=> esc_html__('Underline 1', 'planeta'),
-				'underline-2'			=> esc_html__('Underline 2', 'planeta'),
-				'underline-3'			=> esc_html__('Underline 3', 'planeta'),
-				'underline-4'			=> esc_html__('Underline 4', 'planeta'),
-				'underline-5'			=> esc_html__('Underline 5', 'planeta'),
-				'underline-6'			=> esc_html__('Underline 6', 'planeta'),
-				'box-1'						=> esc_html__('Box 1', 'planeta'),
-				'box-2'						=> esc_html__('Box 2', 'planeta'),
-				'border-switch'		=> esc_html__('Border Switch', 'planeta'),
-			),
-		));
-
-		Kirki::add_field('planeta_config', array(
-			'type'						=> 'slider',
-			'label'						=> esc_html__('Border/Line Size', 'planeta'),
-			'section'					=> "typography_${section}",
-			'settings'				=> "typography_${section}_border_size",
-			'default'					=> 4,
-			'choices'					=> array(
-				'min'							=> 0,
-				'max'							=> 12,
-				'step'						=> 1,
-			),
-			'transport'				=> 'auto',
-			'output'					=> array(
-				array(
-					'element'				=> array(
-						".hover-border-switch a::before",
-						".hover-border-switch a::after",
-						".hover-cross a::before",
-						".hover-cross a::after",
-					),
-					'units'					=> 'px',
-					'property'			=> 'height',
-				),
-				array(
-					'element'				=> array(
-						".hover-box-1 a::before",
-						".hover-box-1 a::after",
-						".hover-box-2 a",
-						".card-image",
-					),
-					'units'					=> 'px',
-					'property'			=> 'border-width',
-				),
-				array(
-					'element'				=> array(
-						".testimonial-excerpt",
-						".number-container",
-					),
-					'value_pattern'	=> '$px !important',
-					'property'			=> 'border-width',
-				),
-				array(
-					'element'				=> array(
-						".hover-underline-1 a::after",
-						".hover-underline-2 a:hover::after",
-						".hover-underline-2 a:focus::after",
-						".hover-underline-3 a::before",
-						".hover-underline-3 a::after",
-						".hover-underline-4 a::before",
-						".hover-underline-4 a::after",
-						".hover-underline-5 a::before",
-						".hover-underline-5 a::after",
-						".hover-underline-6 a::before",
-						".hover-underline-6 a::after",
-					),
-					'units'					=> 'px',
-					'property'			=> 'height',
-				),
-				array(
-					'element'				=> array(
-						".hover-underline-3 a::after",
-						".hover-underline-4 a::after",
-					),
-					'units'					=> 'px',
-					'property'			=> 'width',
-				),
-			),
-			'active_callback'		=> array(
-				'setting'						=> "typography_${section}_hover",
-				'operator'					=> "!=",
-				'operator'					=> 'none',
-			),
-		));
-	}
 }
 
 require_once get_template_directory() . '/inc/customizer/typography-main.php';
 require_once get_template_directory() . '/inc/customizer/typography-heading.php';
 
 typography_generator(array(
-	'name' 					=> esc_html__('Button Link', 'planeta'),
-	'section' 			=> 'button_link',
-	'class'					=> '.button-link',
-	'enable_hover'	=> true,
-	'enable_sizing'	=> false,
-));
-
-typography_generator(array(
 	'name'								=> esc_html__('Section Title', 'planeta'),
 	'section'							=> 'section_title',
 	'class'								=> '.section-title',
-	'default_size'				=> 4, //Promeni me!
+	'default_size'				=> 4,
 ));
 
 typography_generator(array(
 	'name'								=> esc_html__('Section Subtitle', 'planeta'),
 	'section'							=> 'section_subtitle',
 	'class'								=> '.section-subtitle',
-	'default_size'				=> 1.2, //Promeni me!
+	'default_size'				=> 1.2,
 ));
 
 typography_generator(array(
 	'name'								=> esc_html__('Page Title', 'planeta'),
 	'section'							=> 'page_title',
 	'class'								=> '.page-title',
-	'default_size'				=> 4, //Promeni me!
+	'default_size'				=> 4,
 ));
 
 ?>

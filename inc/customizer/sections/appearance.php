@@ -92,6 +92,18 @@ function planeta_add_section_appearance($name)
 	));
 
 	Kirki::add_field('planeta_config', array(
+		'type'					=> 'color',
+		'label'					=> esc_html__('Item Image Color Overlay', 'planeta'),
+		'section'				=> "${name}_appearance",
+		'settings'			=> "${name}_filters",
+		'default'				=> 'rgba(0, 0, 0, 0)',
+		'transport'			=> 'auto',
+		'choices'				=> array(
+			'alpha'					=> true,
+		),
+	));
+
+	Kirki::add_field('planeta_config', array(
 		'type'					=> 'toggle',
 		'label'					=> esc_html__('Inherit Text Color', 'planeta'),
 		'section'				=> "${name}_appearance",

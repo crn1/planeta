@@ -38,5 +38,6 @@ require_once get_template_directory() . '/inc/customizer/advanced/404.php';
 require_once get_template_directory() . '/inc/customizer/advanced/related-posts.php';
 require_once get_template_directory() . '/inc/customizer/advanced/page.php';
 require_once get_template_directory() . '/inc/customizer/advanced/contact-form.php';
+require_once get_template_directory() . '/inc/customizer/advanced/button-links.php';
 
 ?>

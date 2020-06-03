@@ -38,12 +38,9 @@ section {
 	}
 }
 
-.card-image-container {
-	text-align: center;
-	position: relative;
-}
-
 .card-image {
+	display: block;
+	margin: auto;
 	object-fit: cover;
 	width: 100%;
 	border-bottom: 2px solid;

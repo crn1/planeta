@@ -13,7 +13,7 @@
 		<?php get_template_part('template-parts/loading'); ?>
 
 		<?php
-			$hover_class = get_theme_mod('typography_button_link_hover', 'none');
+			$hover_class = get_theme_mod('button_links_hover', 'box-1');
 			$hover_class = 'hover-' . $hover_class;
 			set_query_var('hover_class', $hover_class);
 
