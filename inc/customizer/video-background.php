@@ -77,6 +77,9 @@ function planeta_add_video_background($section, $panel, $bg_output, $name = 'Bac
 				'value'									=> 'video',
 			),
 		),
+		'choices'								=> array(
+			'save_as'									=> 'id',
+		)
 	));
 
 	Kirki::add_field('planeta_config', array(

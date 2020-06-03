@@ -12,7 +12,8 @@
 	$mp4 = get_theme_mod("${section}_video_url_mp4", '');
 	$webm = get_theme_mod("${section}_video_url_webm", '');
 	$ogg = get_theme_mod("${section}_video_url_ogg", '');
-	$img = get_theme_mod("${section}_fallback_image_url", '');
+	$img_id = get_theme_mod("${section}_fallback_image_url", '');
+	$img_url = !empty($img_id) ? wp_get_attachment_url($img_id) : '';
 ?>
 <div
 	<?php echo $shape; ?>
@@ -22,7 +23,7 @@
 		<?php echo $shape; ?>
 		autoplay loop muted
 		class='video-background'
-		poster='<?php echo esc_url($img); ?>'>
+		poster='<?php echo esc_url($img_url); ?>'>
 
 	<?php if($mp4 != ''): ?>
 		<source

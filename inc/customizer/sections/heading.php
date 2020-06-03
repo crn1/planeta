@@ -64,6 +64,9 @@ function planeta_add_section_heading($name, $title)
 		'section'		=> "${name}_heading",
 		'settings'	=> "${name}_logo",
 		'default'		=> '',
+		'choices'		=> array(
+			'save_as'		=> 'id',
+		),
 	));
 }
 
