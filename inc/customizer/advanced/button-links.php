@@ -28,6 +28,8 @@ Kirki::add_field('planeta_config', array(
 		'underline-6'			=> esc_html__('Underline 6', 'planeta'),
 		'box-1'						=> esc_html__('Box 1', 'planeta'),
 		'box-2'						=> esc_html__('Box 2', 'planeta'),
+		'box-3'						=> esc_html__('Box 3', 'planeta'),
+		'box-4'						=> esc_html__('Box 4', 'planeta'),
 		'border-switch'		=> esc_html__('Border Switch', 'planeta'),
 	),
 ));

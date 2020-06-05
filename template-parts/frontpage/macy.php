@@ -6,7 +6,7 @@ $masonry_num = intval($masonry_num);
 
 switch($masonry_num)
 {
-	case 2: $margin = 64; break;
+	case 2: $margin = 96; break;
 	case 3: $margin = 48; break;
 	case 4: $margin = 40; break;
 }

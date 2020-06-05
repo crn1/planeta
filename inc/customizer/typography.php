@@ -54,6 +54,7 @@ function typography_generator($args)
 		'section'     => "typography_${section}",
 		'settings'    => "typography_${section}",
 		'default'			=> $typography,
+		'transport'		=> 'auto',
 		'output'      => array(
 			array(
 				'element' 		=> $class,

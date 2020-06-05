@@ -31,7 +31,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
-	width: 100vw;
+	width: 100%;
 	align-items: center;
 	position: relative;
 	z-index: $z-section-content;
@@ -45,17 +45,12 @@
 		height: 100%;
 		width: 100%;
 	}
-
-	.page-title {
-		text-align: left;
-	}
 }
 
 .search-title-container {
 	min-height: 40vh;
 	@include flexContainer($direction: column, $align: flex-start);
 	h2 {
-		text-align: left;
 		margin: 0;
 	}
 }
@@ -225,7 +220,6 @@
 	position: fixed;
 	top: 16px;
 	left: 16px;
-
 }
 
 #hamburger-container {
