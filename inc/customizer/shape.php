@@ -59,7 +59,7 @@ function planeta_add_shape($args)
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__('Strength', 'planeta'),
+		'label'			=> esc_html__('Shape Strength', 'planeta'),
 		'section'		=> $section,
 		'settings'	=> "${section}_strength",
 		'default'		=> 10,
@@ -103,10 +103,9 @@ function planeta_add_shape($args)
 
 	if(!empty($args['outside_output']))
 	{
-		$color = $args['inline'] ? esc_html__('Shape Outside Color (%)', 'planeta') : esc_html__('Outside Color (%)', 'planeta');
 		Kirki::add_field('planeta_config', array(
 			'type'			=> 'color',
-			'label'			=> $color,
+			'label'			=> esc_html__('Color Outside of the Shape', 'planeta'),
 			'section'		=> $section,
 			'settings'	=> "${section}_outside_color",
 			'default'		=> 'rgba(0, 0, 0, 0)',

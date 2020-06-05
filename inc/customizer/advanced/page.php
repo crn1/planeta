@@ -1,14 +1,15 @@
 <?php
 
 Kirki::add_section('page_section', array(
-	'title'						=> esc_html__('Page Options', 'planeta'),
+	'title'						=> esc_html__('Post/Page Appearance', 'planeta'),
 	'panel'						=> 'advanced_panel',
 ));
 
 Kirki::add_field('planeta_config', array(
 	'type' 						=> 'slider',
 	'settings'				=> 'page_title_min_height',
-	'label'						=> esc_html__('Title Minimum Height', 'planeta'),
+	'label'						=> esc_html__('Title Minimum Height (vh)', 'planeta'),
+	'description'			=> esc_html__('The minimum height of post, page and project title', 'planeta'),
 	'section'					=> 'page_section',
 	'default'					=> 75,
 	'choices'					=> array(

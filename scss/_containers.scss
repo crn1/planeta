@@ -226,10 +226,6 @@
 	top: 16px;
 	left: 16px;
 
-	&.reverse {
-		right: 16px;
-		left: unset;
-	}
 }
 
 #hamburger-container {
@@ -237,11 +233,6 @@
 	position: fixed;
 	top: 16px;
 	right: 16px;
-
-	&.reverse {
-		left: 16px;
-		right: unset;
-	}
 }
 
 #menu-button {

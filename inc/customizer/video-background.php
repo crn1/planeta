@@ -5,6 +5,7 @@ function planeta_add_video_background($section, $panel, $bg_output, $name = 'Bac
 	Kirki::add_section("${section}_background", array(
 		'title' => $name,
 		'panel' => $panel,
+		'description'	=> esc_html__("Please note that using video as a background impacts site's performance. For better user experience, please use external CDN and don't serve videos from your server. For more information read the documentation.", 'planeta'),
 	));
 
 	Kirki::add_field('planeta_config', array(

@@ -1,14 +1,14 @@
 <?php
 
 Kirki::add_section('scroll_top_section', array(
-	'title'       => esc_html__('Scroll Top Button', 'planeta'),
+	'title'       => esc_html__('Scroll to the Top Button', 'planeta'),
 	'panel'       => 'header_panel',
 ));
 
 Kirki::add_field('planeta_config', array(
 	'type' 			=> 'toggle',
 	'settings'	=> 'scroll_top_enable',
-	'label'			=> esc_html__('Enable Scroll Top Button', 'planeta'),
+	'label'			=> esc_html__('Enable Scroll to the Top Button', 'planeta'),
 	'section'		=> 'scroll_top_section',
 	'default'		=> true,
 ));

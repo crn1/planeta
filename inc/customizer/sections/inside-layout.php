@@ -9,7 +9,7 @@ function planeta_add_section_layout($name)
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'sortable',
-		'label'			=> esc_html__('Layout', 'planeta'),
+		'label'			=> esc_html__('Inside Layout', 'planeta'),
 		'section'		=> "${name}_layout",
 		'settings'	=> "${name}_layout",
 		'default'		=> array(

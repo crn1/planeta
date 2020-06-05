@@ -1,8 +1,8 @@
 <?php
 
 Kirki::add_section('button_links_section', array(
-	'title'	=> esc_html__('Button Links', 'planeta'),
-	'panel'	=> 'advanced_panel',
+	'title'				=> esc_html__('Buttons Appearance', 'planeta'),
+	'panel'				=> 'advanced_panel',
 ));
 
 Kirki::add_field('planeta_config', array(
@@ -10,6 +10,7 @@ Kirki::add_field('planeta_config', array(
 	'label'       => esc_html__('Border/Line Style', 'planeta'),
 	'section'     => 'button_links_section',
 	'settings'    => 'button_links_hover',
+	'description'	=> esc_html__('Set the style of button', 'planeta'),
 	'default'     => 'box-1',
 	'choices'     => array(
 		'none'       			=> esc_html__('None (default)', 'planeta'),
@@ -33,9 +34,10 @@ Kirki::add_field('planeta_config', array(
 
 Kirki::add_field('planeta_config', array(
 	'type'						=> 'slider',
-	'label'						=> esc_html__('Border/Line Size', 'planeta'),
+	'label'						=> esc_html__('Border/Line Width (px)', 'planeta'),
 	'section'     		=> 'button_links_section',
 	'settings'    		=> 'button_links_border_size',
+	'description'			=> esc_html__('Note that this option will also set border width for the section images.', 'planeta'),
 	'default'					=> 4,
 	'choices'					=> array(
 		'min'							=> 0,

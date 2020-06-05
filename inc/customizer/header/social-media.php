@@ -1,8 +1,9 @@
 <?php
 
 Kirki::add_section('social_menu_section', array(
-	'title'	=> esc_html__('Social Media', 'planeta'),
-	'panel'	=> 'header_panel',
+	'title'				=> esc_html__('Social Media', 'planeta'),
+	'panel'				=> 'header_panel',
+	'description'	=> esc_html__('All social media items are displayed in the main menu', 'planeta'),
 ));
 
 Kirki::add_field('planeta_config', array(

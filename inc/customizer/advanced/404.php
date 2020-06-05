@@ -20,6 +20,7 @@ Kirki::add_field('planeta_config', array(
 	'type' 						=> 'text',
 	'settings'				=> '404_title',
 	'label'						=> esc_html__('Title', 'planeta'),
+	'description'			=> esc_html__('Displayed below the image', 'planeta'),
 	'section'					=> '404_section',
 	'default'					=> '404',
 	'partial_refresh'	=> array(
@@ -37,6 +38,7 @@ Kirki::add_field('planeta_config', array(
 	'type' 						=> 'textarea',
 	'settings'				=> '404_subtitle',
 	'label'						=> esc_html__('Subtitle', 'planeta'),
+	'description'			=> esc_html__('Displayed below the title', 'planeta'),
 	'section'					=> '404_section',
 	'default'					=> 'Page not Found!',
 	'partial_refresh'	=> array(

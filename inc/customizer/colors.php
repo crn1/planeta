@@ -115,7 +115,7 @@ Kirki::add_field('planeta_config', array(
 Kirki::add_field('planeta_config', array(
 	'type'			=> 'toggle',
 	'settings'	=> 'primary_color_button_links_hover',
-	'label'			=> esc_html__('Enable on Button Links (on Hover)', 'planeta'),
+	'label'			=> esc_html__('Enable on Buttons (on Hover)', 'planeta'),
 	'section'		=> 'colors',
 	'default'		=> true,
 	'output'		=> array(

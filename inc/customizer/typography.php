@@ -80,7 +80,7 @@ function typography_generator($args)
 
 		Kirki::add_field('planeta_config', array(
 			'type'        => 'slider',
-			'label'       => esc_html__('Size', 'planeta'),
+			'label'       => esc_html__('Size (rem)', 'planeta'),
 			'section'     => "typography_${section}",
 			'settings'    => "typography_${section}_size",
 			'choices'     => $args['size_choices'],

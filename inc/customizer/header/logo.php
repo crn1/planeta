@@ -8,7 +8,7 @@ Kirki::add_section('header_logo_section', array(
 Kirki::add_field('planeta_config', array(
 	'type' 					=> 'image',
 	'settings'			=> 'logo',
-	'label'					=> esc_html__('Logo', 'planeta'),
+	'label'					=> esc_html__('Header Logo', 'planeta'),
 	'section'				=> 'header_logo_section',
 	'default'				=> '',
 	'choices'     		=> array(

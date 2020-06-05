@@ -9,7 +9,7 @@ function planeta_add_section_appearance($name)
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__("Container Spacing Top", 'planeta'),
+		'label'			=> esc_html__("Container Spacing Top (vh)", 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_container_spacing_top",
 		'default'		=> 10,
@@ -30,7 +30,7 @@ function planeta_add_section_appearance($name)
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__("Container Spacing Bottom", 'planeta'),
+		'label'			=> esc_html__("Container Spacing Bottom (vh)", 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_container_spacing_bottom",
 		'default'		=> 3,
@@ -51,7 +51,7 @@ function planeta_add_section_appearance($name)
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__('Container Minimum Height', 'planeta'),
+		'label'			=> esc_html__('Container Minimum Height (vh)', 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_min_height",
 		'default'		=> 50,
@@ -72,7 +72,7 @@ function planeta_add_section_appearance($name)
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__('Container Spacing Between', 'planeta'),
+		'label'			=> esc_html__('Container Spacing Between (vh)', 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_items_spacing_between",
 		'default'		=> 5,
@@ -96,7 +96,6 @@ function planeta_add_section_appearance($name)
 		'label'					=> esc_html__('Number of Items', 'planeta'),
 		'section'				=> "${name}_appearance",
 		'settings'			=> "${name}_number_of_items",
-		'tooltip'				=> esc_html__('Set this option to zero to display unlimited items', 'planeta'),
 		'description'		=> esc_html__('Set this option to zero to display unlimited items', 'planeta'),
 		'default'				=> 0,
 		'choices'				=> array(
@@ -110,6 +109,7 @@ function planeta_add_section_appearance($name)
 		'type'					=> 'toggle',
 		'label'					=> esc_html__('Inherit Text Color', 'planeta'),
 		'section'				=> "${name}_appearance",
+		'description'		=> esc_html__("Inherit secrtion's text color from the main typography (Customizer -> Typography -> Main Typography)", 'planeta'),
 		'settings'			=> "${name}_inherit_color",
 		'default'				=> true,
 	));
@@ -183,16 +183,17 @@ function planeta_add_section_appearance($name)
 		));
 
 		Kirki::add_field('planeta_config', array(
-			'type'			=> 'toggle',
-			'label'			=> esc_html__('Enable Masonry', 'planeta'),
-			'section'		=> "${name}_appearance",
-			'settings'	=> "${name}_enable_masonry",
-			'default'		=> false,
+			'type'				=> 'toggle',
+			'label'				=> esc_html__('Enable Masonry', 'planeta'),
+			'section'			=> "${name}_appearance",
+			'settings'		=> "${name}_enable_masonry",
+			'description' => esc_html__("Enabling masonry impacts the site's performance", 'planeta'),
+			'default'			=> false,
 		));
 
 		Kirki::add_field('planeta_config', array(
 			'type'			=> 'number',
-			'label'			=> esc_html__('Additional Items Spacing', 'planeta'),
+			'label'			=> esc_html__('Additional Items Spacing (px)', 'planeta'),
 			'section'		=> "${name}_appearance",
 			'settings'	=> "${name}_items_additional_spacing",
 			'default'		=> 300,

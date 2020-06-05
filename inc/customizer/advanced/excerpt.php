@@ -6,15 +6,17 @@ Kirki::add_section('excerpt_section', array(
 ));
 
 Kirki::add_field('planeta_config', array(
-	'type'			=> 'slider',
-	'settings'	=> 'excerpt_length',
-	'label'			=> esc_html__('Length', 'planeta'),
-	'section'		=> 'excerpt_section',
-	'default'		=> 25,
-	'choices'		=> array(
-		'min'				=> 0,
-		'max'				=> 100,
-		'step'			=> 1,
+	'type'				=> 'slider',
+	'settings'		=> 'excerpt_length',
+	'section'			=> 'excerpt_section',
+	'label'				=> esc_html__('Excerpt Length', 'planeta'),
+	'description'	=> esc_html__('Note that excerpt length also applies to a description of projects which, if enabled, are displayed on the frontpage.', 'planeta'),
+	'tooltip'			=> esc_html__('If for some reason excerpt is not displayed on frontpage, try to set the excerpt manually in the post/project editor.', 'planeta'),
+	'default'			=> 25,
+	'choices'			=> array(
+		'min'					=> 0,
+		'max'					=> 100,
+		'step'				=> 1,
 	),
 ));
 

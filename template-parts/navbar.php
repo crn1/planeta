@@ -48,8 +48,6 @@ function nav_items()
 
 function logo_container()
 {
-	$reverse = get_theme_mod('navbar_reverse', false);
-	$logo_reverse =	!$reverse ? '' : 'class="reverse"';
 	$logo_id = get_theme_mod('logo', '');
 	$logo_url = '';
 	$logo_alt = '';
@@ -61,7 +59,6 @@ function logo_container()
 	$logo_text = get_theme_mod('logo_text', ''); ?>
 
 	<a
-			<?php echo esc_attr($logo_reverse); ?>
 			href='/'
 			id='logo-container'>
 		<?php if($logo_url != ''): ?>
@@ -78,15 +75,12 @@ function logo_container()
 ?>
 
 <?php
-$reverse = get_theme_mod('navbar_reverse', false);
-$hamburger_reverse = $reverse ? 'class="reverse"' : '';
 $hamburger_class = 'hamburger--' . get_theme_mod('hamburger_class', '3dx');
 ?>
 <header id='main-header'>
 	<?php logo_container(); ?>
 
 	<span
-			<?php echo esc_attr($hamburger_reverse); ?>
 			id="hamburger-container">
 		<button
 				id='menu-button'

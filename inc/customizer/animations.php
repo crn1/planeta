@@ -12,6 +12,7 @@ function planeta_add_animations($section, $title, $panel)
 	Kirki::add_field('planeta_config', array(
 		'type' 						=> 'radio-buttonset',
 		'settings'				=> "${section}_trigger",
+		'tooltip'					=> esc_html__('This theme supports two types of animations, depending on their trigger. The first type is triggered when the user scrolls to an animated object and it is triggered only once. The second type adjusts an animated object depending on the scroll position and can be triggered multiple times.', 'planeta'),
 		'section'					=> $section,
 		'label'						=> esc_html__('Trigger Type', 'planeta'),
 		'default'					=> 'none',

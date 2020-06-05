@@ -3,16 +3,18 @@
 function planeta_add_section_heading($name, $title)
 {
 	Kirki::add_section("${name}_heading", array(
-		'title' => esc_html__('Heading', 'planeta'),
-		'panel' => "${name}_panel",
+		'title' 			=> esc_html__('Heading', 'planeta'),
+		'panel' 			=> "${name}_panel",
+		'description' => esc_html__('Set the main content of the section', 'planeta'),
 	));
 
 	Kirki::add_field('planeta_config', array(
-		'type'			=> 'text',
-		'label'			=> esc_html__('Name', 'planeta'),
-		'section'		=> "${name}_heading",
-		'settings'	=> "${name}_name",
-		'default'		=> esc_html__('Section', 'planeta'),
+		'type'				=> 'text',
+		'label'				=> esc_html__('Menu Name', 'planeta'),
+		'section'			=> "${name}_heading",
+		'settings'		=> "${name}_name",
+		'description' => esc_html__('This text is displayed in the main menu', 'planeta'),
+		'default'			=> esc_html__('Section', 'planeta'),
 		'partial_refresh'	=> array(
 			"${name}_name"		=> array(
 				'selector'				=> "a[data-section-id='${name}']",

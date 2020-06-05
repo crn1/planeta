@@ -127,7 +127,7 @@ function planeta_add_animations_aos($section)
 		'type' 						=> 'number',
 		'settings'				=> "${section}_offset",
 		'section'					=> $section,
-		'label'						=> esc_html__('Offset', 'planeta'),
+		'label'						=> esc_html__('Offset (px)', 'planeta'),
 		'default'					=> 0,
 		'choices'					=> array(
 			'min'							=> 0,

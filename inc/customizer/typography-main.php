@@ -125,6 +125,7 @@ Kirki::add_field('planeta_config', array(
 Kirki::add_field('planeta_config', array(
 	'type'        => 'toggle',
 	'label'       => esc_html__('Fluid Typography', 'planeta'),
+	'description'	=> esc_html__('This theme ships with integrated fluid typography. You can enable it here. For more information please read the documentation.', 'planeta'),
 	'section'     => "typography_main",
 	'settings'    => "typography_main_fluid",
 	'default'			=> true,

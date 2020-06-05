@@ -6,11 +6,12 @@ Kirki::add_section('scroll_down_section', array(
 ));
 
 Kirki::add_field('planeta_config', array(
-	'type' 			=> 'toggle',
-	'settings'	=> 'scroll_down_enable',
-	'label'			=> esc_html__('Enable Scroll Down Icon', 'planeta'),
-	'section'		=> 'scroll_down_section',
-	'default'		=> true,
+	'type' 				=> 'toggle',
+	'settings'		=> 'scroll_down_enable',
+	'description'	=> esc_html__("The scroll-down button is always displayed in the first section, so it's position depends on the first section's height", 'planeta'),
+	'label'				=> esc_html__('Enable Scroll Down Button', 'planeta'),
+	'section'			=> 'scroll_down_section',
+	'default'			=> true,
 ));
 
 Kirki::add_field('planeta_config', array(
@@ -128,7 +129,7 @@ Kirki::add_field('planeta_config', array(
 Kirki::add_field('planeta_config', array(
 	'type' 			=> 'number',
 	'settings'	=> 'scroll_down_bottom',
-	'label'			=> esc_html__('Scroll Down Icon Spacing', 'planeta'),
+	'label'			=> esc_html__('Scroll Down Icon Spacing (px)', 'planeta'),
 	'section'		=> 'scroll_down_section',
 	'default'		=> 110,
 	'choices'		=> array(
