@@ -17,6 +17,7 @@ iframe {
   margin: 0;
 }
 figcaption {
+  width: 100% !important;
   text-align: center;
   font-size: 0.75rem;
 }
@@ -291,7 +292,7 @@ ol li::before {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  width: 100vw;
+  width: 100%;
   align-items: center;
   position: relative;
   z-index: 100;
@@ -305,9 +306,6 @@ ol li::before {
   height: 100%;
   width: 100%;
 }
-.page-title-container .page-title {
-  text-align: left;
-}
 .search-title-container {
   min-height: 40vh;
   display: flex;
@@ -317,7 +315,6 @@ ol li::before {
   flex-wrap: wrap;
 }
 .search-title-container h2 {
-  text-align: left;
   margin: 0;
 }
 #loading-container {
@@ -489,19 +486,11 @@ ol li::before {
   top: 16px;
   left: 16px;
 }
-#logo-container.reverse {
-  right: 16px;
-  left: unset;
-}
 #hamburger-container {
   z-index: 99000;
   position: fixed;
   top: 16px;
   right: 16px;
-}
-#hamburger-container.reverse {
-  left: 16px;
-  right: unset;
 }
 #menu-button {
   display: flex;
@@ -702,16 +691,14 @@ section h1, section h2, section h3, section h4, section h5, section h6, section 
 section span {
   word-break: break-word;
 }
-.card-image-container {
-  text-align: center;
-  position: relative;
-}
 .card-image {
+  display: block;
+  margin: auto;
   object-fit: cover;
   width: 100%;
   border-bottom: 2px solid;
   margin-bottom: 1rem;
-  height: 512px;
+  height: 350px;
 }
 @media (min-width: 500px) and (max-width: 1199px) {
   .card-image {

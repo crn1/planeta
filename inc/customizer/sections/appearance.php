@@ -96,10 +96,10 @@ function planeta_add_section_appearance($name)
 		'label'					=> esc_html__('Number of Items', 'planeta'),
 		'section'				=> "${name}_appearance",
 		'settings'			=> "${name}_number_of_items",
-		'description'		=> esc_html__('Set this option to zero to display unlimited items', 'planeta'),
-		'default'				=> 0,
+		'description'		=> esc_html__('Set this option to minus one to display unlimited items', 'planeta'),
+		'default'				=> -1,
 		'choices'				=> array(
-			'min'						=> 0,
+			'min'						=> -1,
 			'max'						=> 40,
 			'step'					=> 1,
 		),
