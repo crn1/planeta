@@ -15,7 +15,7 @@ $section = get_query_var('section'); ?>
 		$args = array(
 			'post_type'   		=> $section,
 			'post_status' 		=> 'publish',
-			'posts_per_page'	=> intval(get_theme_mod("${section}_number_of_items")),
+			'posts_per_page'	=> intval(get_theme_mod("${section}_number_of_items", 0)),
 		);
 		$query = new WP_Query($args);
 
