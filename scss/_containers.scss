@@ -58,10 +58,11 @@
 #loading-container {
 	z-index: $z-absolute-overlay;
 	position: fixed;
-	top: 0;
+	top: 100vh;
 	left: 0;
 	width: 100vw;
 	height: 100vh;
+	transition: all $transition-fastest ease-in;
 	@include flexContainer($direction: column);
 
 	.logo {
@@ -70,6 +71,10 @@
 
 	.animation {
 		margin-bottom: $spacing-inside-group;
+	}
+
+	&.active {
+		top: 0;
 	}
 }
 
@@ -160,39 +165,37 @@
 			margin-bottom: $spacing-inside-group;
 		}
 	}
+}
 
-	&.menu {
-		&-top {
-			top: -100vh;
-			left: 0;
-			&.is-active {
-				top: 0;
-			}
-		}
+.menu-top {
+	top: -100vh;
+	left: 0;
+	&.active {
+		top: 0;
+	}
+}
 
-		&-bottom {
-			top: 100vh;
-			left: 0;
-			&.is-active {
-				top: 0;
-			}
-		}
+.menu-bottom {
+	top: 100vh;
+	left: 0;
+	&.active {
+		top: 0;
+	}
+}
 
-		&-left {
-			top: 0;
-			left: -100vw;
-			&.is-active {
-				left: 0;
-			}
-		}
+.menu-left {
+	top: 0;
+	left: -100vw;
+	&.active {
+		left: 0;
+	}
+}
 
-		&-right {
-			top: 0;
-			left: 100vw;
-			&.is-active {
-				left: 0;
-			}
-		}
+.menu-right {
+	top: 0;
+	left: 100vw;
+	&.active {
+		left: 0;
 	}
 }
 

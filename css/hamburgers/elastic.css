@@ -9,12 +9,12 @@
     top: 20px;
     transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
-.hamburger--elastic.is-active .hamburger-inner {
+.hamburger--elastic.active .hamburger-inner {
   transform: translate3d(0, 10px, 0) rotate(135deg);
   transition-delay: 0.075s; }
-  .hamburger--elastic.is-active .hamburger-inner::before {
+  .hamburger--elastic.active .hamburger-inner::before {
     transition-delay: 0s;
     opacity: 0; }
-  .hamburger--elastic.is-active .hamburger-inner::after {
+  .hamburger--elastic.active .hamburger-inner::after {
     transform: translate3d(0, -20px, 0) rotate(-270deg);
     transition-delay: 0.075s; }

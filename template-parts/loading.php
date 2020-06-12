@@ -19,7 +19,7 @@ if($render_loading):
 		$animation_alt = get_post_meta($animation_id, '_wp_attachment_image_alt', true);
 	} ?>
 
-<div id='loading-container'>
+<div id='loading-container' class='active'>
 
 	<?php if(!empty($logo_id)): ?>
 		<img

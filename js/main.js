@@ -20,17 +20,17 @@ jQuery(document).ready(function($)
 	$('#onepage-menu span').on('click', function(event)
 	{
 		//event.preventDefault()
-		if($('#top-menu').hasClass('is-active'))
+		if($('#top-menu').hasClass('active'))
 		{
-			$('#top-menu').removeClass('is-active')
-			$('#menu-button').removeClass('is-active')
+			$('#top-menu').removeClass('active')
+			$('#menu-button').removeClass('active')
 		}
 	})
 
 	// Main Menu
 	$('#menu-button').on('click', function() {
-		$('#top-menu').toggleClass('is-active')
-		$('#menu-button').toggleClass('is-active')
+		$('#top-menu').toggleClass('active')
+		$('#menu-button').toggleClass('active')
 	})
 
 	//Image link
@@ -92,5 +92,8 @@ jQuery(document).ready(function($)
 	})
 
 	// Loading screen
-	$(window).on('load', function() { $('#loading-container').fadeOut(1170) })
+	$(window).on('load', function()
+	{
+		$('#loading-container').removeClass('active')
+	})
 })

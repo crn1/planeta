@@ -10,14 +10,14 @@
   .hamburger--vortex-r .hamburger-inner::after {
     transition-property: bottom, transform; }
 
-.hamburger--vortex-r.is-active .hamburger-inner {
+.hamburger--vortex-r.active .hamburger-inner {
   transform: rotate(-765deg);
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
-  .hamburger--vortex-r.is-active .hamburger-inner::before, .hamburger--vortex-r.is-active .hamburger-inner::after {
+  .hamburger--vortex-r.active .hamburger-inner::before, .hamburger--vortex-r.active .hamburger-inner::after {
     transition-delay: 0s; }
-  .hamburger--vortex-r.is-active .hamburger-inner::before {
+  .hamburger--vortex-r.active .hamburger-inner::before {
     top: 0;
     opacity: 0; }
-  .hamburger--vortex-r.is-active .hamburger-inner::after {
+  .hamburger--vortex-r.active .hamburger-inner::after {
     bottom: 0;
     transform: rotate(-90deg); }
