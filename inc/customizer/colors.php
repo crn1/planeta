@@ -59,7 +59,7 @@ Kirki::add_field('planeta_config', array(
 Kirki::add_field('planeta_config', array(
 	'type'			=> 'toggle',
 	'settings'	=> 'primary_color_scroll_top',
-	'label'			=> esc_html__('Enable on Scroll Top Button', 'planeta'),
+	'label'			=> esc_html__('Enable on Scroll to the Top Button', 'planeta'),
 	'section'		=> 'colors',
 	'default'		=> true,
 	'output'		=> array(

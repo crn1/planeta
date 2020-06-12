@@ -3,7 +3,7 @@
 Kirki::add_section('containers_section', array(
 	'title'       => esc_html__('Containers', 'planeta' ),
 	'panel'       => 'advanced_panel',
-	'description'	=> esc_html__("Set the width of theme's containers.", 'planeta'),
+	'description'	=> esc_html__("Set the width of the theme's containers.", 'planeta'),
 ));
 
 Kirki::add_field('planeta_config', array(

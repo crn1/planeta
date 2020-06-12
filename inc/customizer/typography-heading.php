@@ -1,7 +1,7 @@
 <?php
 
 Kirki::add_section('typography_heading', array(
-	'title'       => esc_html__('General Headings', 'planeta'),
+	'title'       => esc_html__('Typography Scaling', 'planeta'),
 	'panel'       => 'typography_panel',
 ));
 

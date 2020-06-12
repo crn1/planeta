@@ -24,6 +24,12 @@ function planeta_register_required_plugins()
 			'slug'					=> 'one-click-demo-import',
 			'version'				=> '2.5.2',
 		),
+		array(
+			'name'					=> 'Envato Market',
+			'slug'					=> 'envato-market',
+			'source'				=> 'envato-market.zip',
+			'version'				=> '2.0.3',
+		),
 	);
 
 	$config = array(
