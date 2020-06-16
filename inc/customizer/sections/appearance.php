@@ -9,7 +9,7 @@ function planeta_add_section_appearance($name)
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__("Container Spacing Top (vh)", 'planeta'),
+		'label'			=> esc_html__("Container Spacing Top (rem)", 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_container_spacing_top",
 		'default'		=> 10,
@@ -22,7 +22,7 @@ function planeta_add_section_appearance($name)
 		'output'		=> array(
 			array(
 				'element'		=> "section[data-section-id='${name}']",
-				'units'			=> 'vh',
+				'units'			=> 'rem',
 				'property'	=> 'padding-top',
 			),
 		),
@@ -30,7 +30,7 @@ function planeta_add_section_appearance($name)
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__("Container Spacing Bottom (vh)", 'planeta'),
+		'label'			=> esc_html__("Container Spacing Bottom (rem)", 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_container_spacing_bottom",
 		'default'		=> 3,
@@ -43,7 +43,7 @@ function planeta_add_section_appearance($name)
 		'output'		=> array(
 			array(
 				'element'		=> "section[data-section-id='${name}']",
-				'units'			=> 'vh',
+				'units'			=> 'rem',
 				'property'	=> 'padding-bottom',
 			),
 		),
@@ -51,7 +51,7 @@ function planeta_add_section_appearance($name)
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__('Container Minimum Height (vh)', 'planeta'),
+		'label'			=> esc_html__('Container Minimum Height (rem)', 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_min_height",
 		'default'		=> 50,
@@ -60,7 +60,7 @@ function planeta_add_section_appearance($name)
 			array(
 				'element'				=> "section[data-section-id='${name}']",
 				'property'			=> 'min-height',
-				'units'					=> 'vh',
+				'units'					=> 'rem',
 			),
 		),
 		'choices'		=> array(
@@ -72,7 +72,7 @@ function planeta_add_section_appearance($name)
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__('Container Spacing Between (vh)', 'planeta'),
+		'label'			=> esc_html__('Container Spacing Between (rem)', 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_items_spacing_between",
 		'default'		=> 5,
@@ -81,7 +81,7 @@ function planeta_add_section_appearance($name)
 			array(
 				'element'				=> "section[data-section-id='${name}'] > .default-container > *:not(:first-child)",
 				'property'			=> 'margin-top',
-				'units'					=> 'vh',
+				'units'					=> 'rem',
 			),
 		),
 		'choices'		=> array(
