@@ -51,7 +51,7 @@ function planeta_add_section_appearance($name)
 
 	Kirki::add_field('planeta_config', array(
 		'type'			=> 'slider',
-		'label'			=> esc_html__('Container Minimum Height (rem)', 'planeta'),
+		'label'			=> esc_html__('Container Minimum Height (vh)', 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_min_height",
 		'default'		=> 50,
@@ -60,7 +60,7 @@ function planeta_add_section_appearance($name)
 			array(
 				'element'				=> "section[data-section-id='${name}']",
 				'property'			=> 'min-height',
-				'units'					=> 'rem',
+				'units'					=> 'vh',
 			),
 		),
 		'choices'		=> array(
