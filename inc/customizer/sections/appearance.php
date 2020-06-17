@@ -14,9 +14,9 @@ function planeta_add_section_appearance($name)
 		'settings'	=> "${name}_container_spacing_top",
 		'default'		=> 10,
 		'choices'		=> array(
-			'min'			=> 3,
+			'min'			=> 1,
 			'max'			=> 30,
-			'step'		=> 1,
+			'step'		=> 0.5,
 		),
 		'transport'	=> 'auto',
 		'output'		=> array(
@@ -33,11 +33,11 @@ function planeta_add_section_appearance($name)
 		'label'			=> esc_html__("Container Spacing Bottom (rem)", 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_container_spacing_bottom",
-		'default'		=> 3,
+		'default'		=> 1,
 		'choices'		=> array(
-			'min'			=> 3,
+			'min'			=> 0,
 			'max'			=> 30,
-			'step'		=> 1,
+			'step'		=> 0.5,
 		),
 		'transport'	=> 'auto',
 		'output'		=> array(
@@ -86,7 +86,7 @@ function planeta_add_section_appearance($name)
 		),
 		'choices'		=> array(
 			'min'				=> 0,
-			'max'				=> 50,
+			'max'				=> 30,
 			'step'			=> 0.5,
 		),
 	));
