@@ -223,6 +223,7 @@ section {
 		@media (min-width: 500px) and (max-width: 1199px)
 		{
 			height: calc(48px + 48 * ((100vw - 500px) / 700));
+			width: calc(48px + 48 * ((100vw - 500px) / 700));
 		}
 		@include for-size(phone-only)
 		{
