@@ -12,9 +12,9 @@ function planeta_add_section_appearance($name)
 		'label'			=> esc_html__("Container Spacing Top (rem)", 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_container_spacing_top",
-		'default'		=> 10,
+		'default'		=> 1,
 		'choices'		=> array(
-			'min'			=> 1,
+			'min'			=> 0,
 			'max'			=> 30,
 			'step'		=> 0.5,
 		),
