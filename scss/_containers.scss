@@ -80,7 +80,7 @@
 
 #scroll-down-button {
 	@include flexContainer($display: inline-flex);
-	z-index: $z-global-menu-overlay;
+	z-index: $z-scroll-top-button;
 	position: absolute;
 	bottom: 16px;
 	left: 50%;
