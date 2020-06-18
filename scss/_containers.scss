@@ -78,6 +78,20 @@
 	}
 }
 
+#scroll-down-button {
+	@include flexContainer($display: inline-flex);
+	z-index: $z-global-menu-overlay;
+	position: absolute;
+	bottom: 16px;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+
+	& > i {
+		font-size: 48px;
+	}
+}
+
 #footer-sidebar-container,
 #page-sidebar-container {
 	display: grid;

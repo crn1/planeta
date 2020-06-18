@@ -2,6 +2,9 @@
 <?php get_template_part('template-parts/navbar'); ?>
 
 <?php
+	get_template_part('template-parts/content/scroll-down-icon'); ?>
+
+<?php
 	$layout = get_theme_mod('sections_layout', array());
 
 	foreach($layout as $key => $section):
@@ -26,12 +29,6 @@
 				}
 			?>
 		</div>
-
-		<?php
-			if($key === 0)
-			{
-				get_template_part('template-parts/content/scroll-down-icon');
-			} ?>
 
 	</section>
 	<?php endforeach; ?>
