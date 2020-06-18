@@ -2,7 +2,7 @@
 
 //Adding dummy section and later hiding it because of Kirki bug
 Kirki::add_section('dummy_section', array(
-	'title' 		=> esc_html__(' ', 'planeta'),
+	'title' 		=> ' ',
 	'panel' 		=> 'sections_panel',
 ));
 
