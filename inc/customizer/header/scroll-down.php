@@ -8,7 +8,6 @@ Kirki::add_section('scroll_down_section', array(
 Kirki::add_field('planeta_config', array(
 	'type' 				=> 'toggle',
 	'settings'		=> 'scroll_down_enable',
-	'description'	=> esc_html__("The scroll-down button is always displayed in the first section, so it's position depends on the first section's height", 'planeta'),
 	'label'				=> esc_html__('Enable Scroll Down Button', 'planeta'),
 	'section'			=> 'scroll_down_section',
 	'default'			=> true,
