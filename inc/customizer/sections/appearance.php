@@ -12,7 +12,7 @@ function planeta_add_section_appearance($name)
 		'label'			=> esc_html__("Container Spacing Top (rem)", 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_container_spacing_top",
-		'default'		=> 1,
+		'default'		=> 5,
 		'choices'		=> array(
 			'min'			=> 0,
 			'max'			=> 30,
@@ -33,7 +33,7 @@ function planeta_add_section_appearance($name)
 		'label'			=> esc_html__("Container Spacing Bottom (rem)", 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_container_spacing_bottom",
-		'default'		=> 1,
+		'default'		=> 5,
 		'choices'		=> array(
 			'min'			=> 0,
 			'max'			=> 30,
@@ -54,7 +54,7 @@ function planeta_add_section_appearance($name)
 		'label'			=> esc_html__('Container Minimum Height (vh)', 'planeta'),
 		'section'		=> "${name}_appearance",
 		'settings'	=> "${name}_min_height",
-		'default'		=> 50,
+		'default'		=> 0,
 		'transport'	=> 'auto',
 		'output'		=> array(
 			array(
